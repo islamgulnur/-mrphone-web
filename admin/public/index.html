@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr. Phone – Admin</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<header class="admin-header">
+  <h1>Mr. Phone – Admin</h1>
+  <button id="publish-btn" class="btn-publish" type="button">Veröffentlichen (GitHub Pages)</button>
+</header>
+
+<nav class="admin-tabs">
+  <button class="tab-btn active" type="button" data-tab="angebote">Angebote</button>
+</nav>
+
+<main>
+  <section id="tab-angebote" class="tab-panel">
+    <div class="panel-grid">
+
+      <form id="angebot-form" class="card-form">
+        <h2 id="form-title">Neues Angebot anlegen</h2>
+        <input type="hidden" id="angebot-id" value="">
+
+        <label>Modell
+          <input type="text" id="f-modell" required placeholder="z. B. iPhone 15">
+        </label>
+        <label>Speicher
+          <input type="text" id="f-speicher" placeholder="z. B. 128GB">
+        </label>
+        <label>Farbe
+          <input type="text" id="f-farbe" placeholder="z. B. Blau">
+        </label>
+        <label>Zustand
+          <select id="f-zustand">
+            <option value="gebraucht">Gebraucht</option>
+            <option value="neu">Neu</option>
+          </select>
+        </label>
+        <label>Preis (€)
+          <input type="number" id="f-preis" step="0.01" min="0" required>
+        </label>
+        <label>Altpreis (€, optional)
+          <input type="number" id="f-altpreis" step="0.01" min="0">
+        </label>
+        <label>Datum
+          <input type="date" id="f-datum">
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="f-aktiv" checked>
+          Aktiv (auf der Website sichtbar)
+        </label>
+        <label>Bild (vom Rechner oder Handy)
+          <input type="file" id="f-bild" accept="image/*">
+        </label>
+        <img id="f-bild-preview" class="bild-preview" hidden alt="Vorschau">
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Speichern</button>
+          <button type="button" id="form-cancel" class="btn-secondary" hidden>Abbrechen</button>
+        </div>
+      </form>
+
+      <div class="list-wrap">
+        <h2>Alle Angebote</h2>
+        <div id="angebote-list" class="angebote-list"></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="publish-log" class="publish-log" hidden></div>
+
+<script src="admin.js"></script>
+</body>
+</html>

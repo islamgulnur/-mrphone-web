@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.mr-phone-frankfurt.de/sitemap.xml
