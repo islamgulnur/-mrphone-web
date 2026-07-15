@@ -368,6 +368,33 @@ section {
   .hero-image-wrap { margin-inline: 0; max-width: 100%; }
 }
 
+/* ---------- Hero-Intro-Animation (nur Startseite, siehe .hero-home) ---------- */
+.hero-home .hero-image-wrap {
+  opacity: 0;
+  transform: scale(0.96) translateY(10px);
+  animation: heroImageIn 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  animation-delay: 0.05s;
+}
+.hero-home .hero-badge,
+.hero-home .hero-content h1,
+.hero-home .hero-lead,
+.hero-home .hero-content .cta-row {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: heroTextIn 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+.hero-home .hero-badge { animation-delay: 0.1s; }
+.hero-home .hero-content h1 { animation-delay: 0.2s; }
+.hero-home .hero-lead { animation-delay: 0.34s; }
+.hero-home .hero-content .cta-row { animation-delay: 0.48s; }
+
+@keyframes heroImageIn {
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes heroTextIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* ---------- Leistungs-Kacheln ---------- */
 .tile-grid {
   display: grid;
@@ -407,6 +434,67 @@ section {
   justify-content: center;
   margin-bottom: 1rem;
   font-size: 1.5rem;
+}
+
+/* ---------- Unser Sortiment: Kategorie-Kacheln ---------- */
+.kategorie-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 560px) {
+  .kategorie-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 900px) {
+  .kategorie-grid { grid-template-columns: repeat(5, 1fr); }
+}
+
+.kategorie-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1.6rem 1rem;
+  background: linear-gradient(155deg, rgba(38, 38, 41, 0.96), rgba(20, 20, 22, 0.96));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  text-align: center;
+  color: var(--white);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.kategorie-tile:hover,
+.kategorie-tile:focus-visible {
+  transform: translateY(-4px);
+  border-color: rgba(141, 198, 63, 0.55);
+  box-shadow: 0 14px 30px rgba(141, 198, 63, 0.22), var(--shadow-hover);
+}
+
+.kategorie-tile svg {
+  width: 30px;
+  height: 30px;
+  color: var(--green);
+  transition: filter 0.2s ease;
+}
+
+.kategorie-tile:hover svg,
+.kategorie-tile:focus-visible svg {
+  filter: drop-shadow(0 0 7px rgba(141, 198, 63, 0.75));
+}
+
+.kategorie-tile span {
+  font-weight: 600;
+  font-size: 0.88rem;
+  line-height: 1.3;
+}
+
+.sortiment-seo-text {
+  max-width: 760px;
+  margin: 2.2rem auto 0;
+  text-align: center;
+  color: var(--gray-600);
+  font-size: 0.95rem;
 }
 
 .tile h3 { margin-bottom: 0.5rem; }
@@ -778,15 +866,38 @@ section {
 .reveal {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: opacity, transform;
 }
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+  will-change: auto;
+}
+
+/* Gruppen-Reveal: Container selbst bleibt statisch, Kinder erscheinen gestaffelt */
+.reveal-stagger {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .reveal-stagger.is-visible > * {
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 1;
+  transform: translateY(0);
 }
+.reveal-stagger.is-visible > *:nth-child(1) { transition-delay: 0.02s; }
+.reveal-stagger.is-visible > *:nth-child(2) { transition-delay: 0.08s; }
+.reveal-stagger.is-visible > *:nth-child(3) { transition-delay: 0.14s; }
+.reveal-stagger.is-visible > *:nth-child(4) { transition-delay: 0.2s; }
+.reveal-stagger.is-visible > *:nth-child(5) { transition-delay: 0.26s; }
+.reveal-stagger.is-visible > *:nth-child(6) { transition-delay: 0.32s; }
+.reveal-stagger.is-visible > *:nth-child(7) { transition-delay: 0.38s; }
+.reveal-stagger.is-visible > *:nth-child(8) { transition-delay: 0.44s; }
 
 /* =========================================================
    Hero v2 – dunkler Bild-Hero mit Ken-Burns & Wortanimation
@@ -1074,6 +1185,76 @@ section {
   border-color: rgba(141, 198, 63, 0.5);
 }
 
+.angebot-card[hidden] { display: none; }
+
+/* ---------- Sortiment: Kategorie-Filter ---------- */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  color: var(--gray-600);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.filter-btn:hover { border-color: var(--green); color: var(--black); }
+
+.filter-btn.active {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+.filter-row-secondary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.filter-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--gray-600);
+}
+
+.filter-inline select {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.7rem;
+  font: inherit;
+  font-size: 0.88rem;
+  color: var(--black);
+  background: var(--white);
+}
+
+.filter-inline select:focus-visible { outline: 2px solid var(--green); outline-offset: 1px; }
+
+.empty-hint {
+  color: var(--gray-600);
+  font-size: 0.95rem;
+  max-width: 60ch;
+  padding: 1.4rem 1.6rem;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+}
+.empty-hint a { color: var(--green-dark); font-weight: 600; text-decoration: underline; }
+.empty-hint a:hover { color: var(--green); }
+
 .angebot-media {
   aspect-ratio: 1 / 1;
   overflow: hidden;
@@ -1156,9 +1337,20 @@ section {
     scroll-behavior: auto !important;
   }
 
-  .reveal {
+  .reveal,
+  .reveal-stagger > * {
     opacity: 1 !important;
     transform: none !important;
+  }
+
+  .hero-home .hero-image-wrap,
+  .hero-home .hero-badge,
+  .hero-home .hero-content h1,
+  .hero-home .hero-lead,
+  .hero-home .hero-content .cta-row {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
   }
 
   .hero-v2-title .word,
@@ -1175,3 +1367,333 @@ section {
     animation: none !important;
   }
 }
+
+/* =========================================================
+   Ankaufsrechner (handy-ankauf-frankfurt.html)
+   ========================================================= */
+.rechner-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-hover);
+  padding: clamp(1.4rem, 4vw, 2.4rem);
+}
+
+.rechner-progress {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.25rem;
+  margin-bottom: 2rem;
+}
+
+.rechner-progress-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  text-align: center;
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--gray-400);
+  background: transparent;
+  border: none;
+  padding: 0.5rem 0.2rem;
+  min-height: 44px;
+  cursor: default;
+  border-radius: var(--radius-sm);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* Verbindungslinie zwischen den Kreisen */
+.rechner-progress-step:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -50%;
+  width: 100%;
+  height: 2px;
+  background: var(--gray-200);
+  z-index: 0;
+  transition: background-color 0.3s ease;
+}
+.rechner-progress-step.done:not(:first-child)::before,
+.rechner-progress-step.active:not(:first-child)::before {
+  background: var(--green);
+}
+
+.rechner-progress-circle {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid var(--gray-200);
+  color: var(--gray-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.rechner-progress-num { font-weight: 800; }
+.rechner-progress-check {
+  display: none;
+  width: 16px;
+  height: 16px;
+  color: var(--white);
+}
+
+/* Offene (noch nicht erreichte) Schritte */
+.rechner-progress-label { transition: color 0.2s ease, font-weight 0.2s ease; }
+
+/* Erreichbare Schritte: klickbar */
+.rechner-progress-step.erreichbar {
+  cursor: pointer;
+}
+.rechner-progress-step.erreichbar:hover .rechner-progress-circle,
+.rechner-progress-step.erreichbar:focus-visible .rechner-progress-circle {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(141, 198, 63, 0.3);
+}
+.rechner-progress-step:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+/* Nicht erreichbare Schritte: gedimmt, nicht klickbar */
+.rechner-progress-step:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+/* Aktiver Schritt: grüner Kreis mit Glow, weiße Zahl */
+.rechner-progress-step.active .rechner-progress-circle {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--white);
+  box-shadow: 0 0 0 5px rgba(141, 198, 63, 0.22);
+}
+.rechner-progress-step.active .rechner-progress-label {
+  color: var(--black);
+  font-weight: 800;
+}
+
+/* Abgeschlossener Schritt: grüner Kreis, weißes Häkchen */
+.rechner-progress-step.done .rechner-progress-circle {
+  background: var(--green);
+  border-color: var(--green);
+}
+.rechner-progress-step.done .rechner-progress-num { display: none; }
+.rechner-progress-step.done .rechner-progress-check { display: block; }
+.rechner-progress-step.done .rechner-progress-label {
+  color: var(--gray-600);
+  font-weight: 700;
+}
+
+.rechner-step h2,
+.rechner-ergebnis h2 { margin-bottom: 1.4rem; }
+
+.rechner-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: none;
+  border: none;
+  color: var(--gray-600);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+}
+.rechner-back:hover { color: var(--black); }
+
+.rechner-kategorie-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 560px) { .rechner-kategorie-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 900px) { .rechner-kategorie-grid { grid-template-columns: repeat(5, 1fr); } }
+
+.rechner-kategorie-btn {
+  cursor: pointer;
+  font: inherit;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.rechner-kategorie-btn.active {
+  border-color: var(--green);
+  box-shadow: 0 14px 30px rgba(141, 198, 63, 0.22), var(--shadow-hover);
+}
+
+.rechner-marken-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.rechner-chip {
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  color: var(--gray-600);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+.rechner-chip:hover { border-color: var(--green); color: var(--black); }
+.rechner-chip.active { background: var(--black); color: var(--white); border-color: var(--black); }
+
+.rechner-search { display: block; margin-bottom: 1rem; }
+.rechner-search input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-size: 1rem;
+  background: var(--white);
+}
+.rechner-search input:focus-visible { outline: 2px solid var(--green); outline-offset: 1px; }
+
+.rechner-modell-liste {
+  display: grid;
+  gap: 0.6rem;
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 0.2rem;
+}
+
+.rechner-modell-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.18s ease, background-color 0.18s ease;
+}
+.rechner-modell-btn:hover,
+.rechner-modell-btn.active { border-color: var(--green); background: rgba(141, 198, 63, 0.08); }
+.rechner-modell-btn .modell-marke { color: var(--gray-600); font-weight: 500; font-size: 0.85rem; }
+
+.rechner-varianten-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
+
+.rechner-variante-btn {
+  padding: 1rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+.rechner-variante-btn:hover,
+.rechner-variante-btn.active { border-color: var(--green); transform: translateY(-2px); }
+
+.rechner-zustand-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 700px) { .rechner-zustand-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); } }
+
+.rechner-zustand-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  background: var(--white);
+  cursor: pointer;
+  transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+.rechner-zustand-btn:hover,
+.rechner-zustand-btn.active {
+  border-color: var(--green);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+.rechner-zustand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  background: rgba(141, 198, 63, 0.14);
+  color: var(--green-dark);
+}
+.rechner-zustand-icon svg { width: 17px; height: 17px; }
+.rechner-zustand-btn strong { display: block; margin-bottom: 0.3rem; font-size: 1.05rem; }
+.rechner-zustand-btn span { color: var(--gray-600); font-size: 0.88rem; }
+
+.rechner-ergebnis { text-align: center; }
+.rechner-ergebnis-label { font-weight: 600; color: var(--gray-600); margin-bottom: 0.2rem; }
+.rechner-ergebnis-preis {
+  font-size: clamp(2.4rem, 7vw, 3.6rem);
+  font-weight: 800;
+  color: var(--green-dark);
+  margin: 0 0 0.3rem;
+  text-shadow: 0 0 26px rgba(141, 198, 63, 0.35);
+}
+.rechner-ergebnis-sub { color: var(--gray-600); margin-bottom: 1.6rem; }
+.rechner-ergebnis .btn { width: 100%; max-width: 420px; margin-inline: auto; }
+.rechner-hinweis { max-width: 480px; margin: 1rem auto 0; font-size: 0.88rem; color: var(--gray-600); }
+.rechner-hinweis-kategorie { max-width: 480px; margin: 0.6rem auto 0; font-size: 0.85rem; font-style: italic; color: var(--green-dark); }
+.rechner-disclaimer { max-width: 560px; margin: 1.4rem auto 0; font-size: 0.78rem; color: var(--gray-400); }
+
+.rechner-fallback {
+  text-align: center;
+  margin-top: 1.6rem;
+  font-size: 0.9rem;
+  color: var(--gray-600);
+}
+.rechner-fallback a { color: var(--green-dark); font-weight: 600; text-decoration: underline; }
+
+/* ---------- Vorteils-Leiste (Ankauf) ---------- */
+.vorteile-leiste {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+@media (min-width: 700px) { .vorteile-leiste { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1000px) { .vorteile-leiste { grid-template-columns: repeat(5, 1fr); } }
+
+.vorteil-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.2rem 0.8rem;
+}
+.vorteil-icon { font-size: 1.6rem; }
+.vorteil-item span:last-child { font-weight: 600; font-size: 0.9rem; }

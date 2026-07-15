@@ -1,0 +1,33 @@
+/* Scroll-gesteuerte 3D-Smartphone-Hintergrundanimation (nur index.html) */
+.phone-scene { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.phone-stage { position: absolute; inset: 0; perspective: 1500px; }
+.phone-track { position: absolute; top: 0; left: 0; width: 0; height: 0; opacity: 0; transform-style: preserve-3d; will-change: transform; --phone-w: 150px; --phone-h: 304px; transform-origin: calc(var(--phone-w) / 2) calc(var(--phone-h) / 2); }
+.phone-idle { position: relative; transform-style: preserve-3d; animation: phoneIdleFloat 7s ease-in-out infinite; }
+.phone-3d { position: relative; width: var(--phone-w); height: var(--phone-h); transform-style: preserve-3d; --phone-d: 16px; }
+.phone-face { position: absolute; inset: 0; border-radius: 26px; backface-visibility: hidden; }
+.phone-front { transform: translateZ(calc(var(--phone-d) / 2)); background: linear-gradient(155deg, #2a2a2e 0%, #222225 55%, #1c1c1f 100%); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.05), 0 0 85px 14px rgba(141, 198, 63, 0.45); }
+.phone-back { transform: rotateY(180deg) translateZ(calc(var(--phone-d) / 2)); background: linear-gradient(200deg, #262629 0%, #201f22 100%); box-shadow: 0 0 85px 14px rgba(141, 198, 63, 0.45); }
+.phone-edge { position: absolute; background: #232326; }
+.phone-edge-top, .phone-edge-bottom { left: 0; width: 100%; height: var(--phone-d); border-radius: 26px 26px 0 0; }
+.phone-edge-top { top: 0; transform-origin: top center; transform: rotateX(90deg) translateZ(calc(var(--phone-d) / 2)); }
+.phone-edge-bottom { bottom: 0; transform-origin: bottom center; transform: rotateX(-90deg) translateZ(calc(var(--phone-d) / 2)); border-radius: 0 0 26px 26px; }
+.phone-edge-left, .phone-edge-right { top: 0; width: var(--phone-d); height: 100%; }
+.phone-edge-left { left: 0; transform-origin: left center; transform: rotateY(-90deg) translateZ(calc(var(--phone-d) / 2)); }
+.phone-edge-right { right: 0; transform-origin: right center; transform: rotateY(90deg) translateZ(calc(var(--phone-d) / 2)); }
+.phone-screen-glow { position: absolute; inset: 12px; border-radius: 18px; background: radial-gradient(ellipse at 50% 38%, rgba(141, 198, 63, 0.75) 0%, rgba(141, 198, 63, 0.28) 45%, rgba(141, 198, 63, 0) 74%); }
+.phone-highlight { position: absolute; inset: 0; border-radius: 26px; background: linear-gradient(115deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0) 100%); }
+.phone-camera-island { position: absolute; top: 20px; left: 18px; width: 60px; height: 60px; border-radius: 18px; background: linear-gradient(160deg, #2c2c30, #1d1d20); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06), 0 2px 6px rgba(0, 0, 0, 0.35); display: grid; grid-template-columns: repeat(2, 1fr); place-items: center; gap: 5px; padding: 6px; }
+.phone-lens { width: 19px; height: 19px; border-radius: 50%; background: radial-gradient(circle at 35% 32%, #4a4a4f 0%, #141416 65%, #0a0a0b 100%); box-shadow: inset 0 0 0 2px rgba(141, 198, 63, 0.4); }
+.phone-lens:nth-child(3) { grid-column: 1 / 3; justify-self: start; margin-left: 1px; }
+@keyframes phoneIdleFloat { 0%, 100% { transform: translateY(0) rotateZ(0deg); } 50% { transform: translateY(-10px) rotateZ(1.2deg); } }
+
+/* Statischer Modus: Mobile & prefers-reduced-motion */
+.phone-scene--static { position: absolute; top: 0; left: 0; right: 0; bottom: auto; height: 180vh; }
+.phone-scene--static .phone-track { opacity: 0.4; transform: translate3d(80vw, 108vh, 0) rotateX(-8deg) rotateY(-20deg) rotateZ(-6deg) scale(0.42); }
+@media (max-width: 480px) {
+  .phone-scene--static .phone-track { transform: translate3d(76vw, 118vh, 0) rotateX(-8deg) rotateY(-20deg) rotateZ(-6deg) scale(0.35); }
+}
+
+/* Text-Sektionen leicht transluzent, damit die Animation gedimmt durchscheint (nur Startseite) */
+body.has-phone-scene .hero-home, body.has-phone-scene .bg-dark { background: rgba(26, 26, 26, 0.9); }
+body.has-phone-scene #unser-sortiment { background: rgba(247, 247, 246, 0.9); }

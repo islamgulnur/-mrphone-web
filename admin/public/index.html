@@ -10,15 +10,26 @@
 
 <header class="admin-header">
   <h1>Mr. Phone – Admin</h1>
-  <button id="publish-btn" class="btn-publish" type="button">Veröffentlichen (GitHub Pages)</button>
+  <button id="publish-btn" class="btn-publish" type="button" data-scope-group="verkauf">Verkauf veröffentlichen (GitHub Pages)</button>
+  <button id="publish-ankauf-btn" class="btn-publish" type="button" data-scope-group="ankauf" hidden>Ankaufspreise veröffentlichen (GitHub Pages)</button>
 </header>
 
-<nav class="admin-tabs">
+<nav class="admin-scope-tabs">
+  <button class="scope-btn active" type="button" data-scope="verkauf">Verkauf</button>
+  <button class="scope-btn" type="button" data-scope="ankauf">Ankauf</button>
+</nav>
+
+<nav class="admin-tabs" data-scope-group="verkauf">
   <button class="tab-btn active" type="button" data-tab="angebote">Angebote</button>
+  <button class="tab-btn" type="button" data-tab="bestand">Bestand</button>
+</nav>
+
+<nav class="admin-tabs" data-scope-group="ankauf" hidden>
+  <button class="tab-btn active" type="button" data-tab="ankauf">Ankaufspreise</button>
 </nav>
 
 <main>
-  <section id="tab-angebote" class="tab-panel">
+  <section id="tab-angebote" class="tab-panel active">
     <div class="panel-grid">
 
       <form id="angebot-form" class="card-form">
@@ -69,6 +80,238 @@
         <div id="angebote-list" class="angebote-list"></div>
       </div>
 
+    </div>
+  </section>
+
+  <section id="tab-bestand" class="tab-panel">
+    <div class="panel-grid">
+
+      <form id="bestand-form" class="card-form">
+        <h2 id="bestand-form-title">Neues Gerät anlegen</h2>
+        <input type="hidden" id="b-id" value="">
+
+        <label>Marke
+          <select id="b-marke"></select>
+        </label>
+        <label>Modell (aus Gerätekatalog)
+          <select id="b-modell-katalog"></select>
+        </label>
+        <label>Modell (Freitext – bei „Sonstiges Modell" oder zur Korrektur)
+          <input type="text" id="b-modell" required placeholder="z. B. iPhone 13">
+        </label>
+        <label id="b-variante-wrap" hidden>Variante (aus Katalog, optional)
+          <select id="b-variante-katalog">
+            <option value="">– keine Angabe –</option>
+          </select>
+        </label>
+        <label>Speicher
+          <input type="text" id="b-speicher" placeholder="z. B. 128GB">
+        </label>
+        <label>Farbe
+          <input type="text" id="b-farbe" placeholder="z. B. Schwarz">
+        </label>
+        <label>Kategorie
+          <select id="b-kategorie" required>
+            <option value="smartphones">Smartphones</option>
+            <option value="tablets">Tablets &amp; iPads</option>
+            <option value="smartwatches">Smartwatches</option>
+            <option value="laptops">Laptops &amp; Notebooks</option>
+            <option value="pcs">PCs</option>
+            <option value="monitore">Monitore</option>
+            <option value="kopfhoerer">Kopfhörer &amp; Audio</option>
+            <option value="kameras">Kameras</option>
+            <option value="konsolen">Spielekonsolen</option>
+            <option value="zubehoer">Zubehör</option>
+          </select>
+        </label>
+        <label>Zustand
+          <select id="b-zustand">
+            <option value="gebraucht">Gebraucht</option>
+            <option value="neu">Neu</option>
+          </select>
+        </label>
+        <label>Preis (€, optional – leer lassen für „Preis auf Anfrage")
+          <input type="number" id="b-preis" step="0.01" min="0">
+        </label>
+        <label>Datum
+          <input type="date" id="b-datum">
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="b-aktiv" checked>
+          Aktiv (im Sortiment auf der Website sichtbar)
+        </label>
+        <label>Bild (vom Rechner oder Handy)
+          <input type="file" id="b-bild" accept="image/*">
+        </label>
+        <img id="b-bild-preview" class="bild-preview" hidden alt="Vorschau">
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Speichern</button>
+          <button type="button" id="bestand-form-cancel" class="btn-secondary" hidden>Abbrechen</button>
+        </div>
+      </form>
+
+      <div class="list-wrap">
+        <div class="list-wrap-header">
+          <h2>Alle Geräte im Bestand</h2>
+          <select id="bestand-filter-kategorie" class="filter-select">
+            <option value="alle">Alle Kategorien</option>
+            <option value="smartphones">Smartphones</option>
+            <option value="tablets">Tablets &amp; iPads</option>
+            <option value="smartwatches">Smartwatches</option>
+            <option value="laptops">Laptops &amp; Notebooks</option>
+            <option value="pcs">PCs</option>
+            <option value="monitore">Monitore</option>
+            <option value="kopfhoerer">Kopfhörer &amp; Audio</option>
+            <option value="kameras">Kameras</option>
+            <option value="konsolen">Spielekonsolen</option>
+            <option value="zubehoer">Zubehör</option>
+          </select>
+        </div>
+        <div id="bestand-list" class="angebote-list"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="tab-ankauf" class="tab-panel" data-scope-panel="ankauf" hidden>
+    <div class="ankauf-toolbar">
+      <input type="search" id="ankauf-suche" placeholder="Modell oder Marke suchen…" class="filter-select ankauf-suche-input">
+      <select id="ankauf-filter-kategorie" class="filter-select">
+        <option value="alle">Alle Kategorien</option>
+        <option value="smartphones">Smartphones</option>
+        <option value="tablets">Tablets &amp; iPads</option>
+        <option value="smartwatches">Smartwatches</option>
+        <option value="laptops">Laptops &amp; Notebooks</option>
+        <option value="pcs">PCs</option>
+        <option value="monitore">Monitore</option>
+        <option value="kopfhoerer">Kopfhörer &amp; Audio</option>
+        <option value="kameras">Kameras</option>
+        <option value="konsolen">Spielekonsolen</option>
+        <option value="zubehoer">Zubehör</option>
+      </select>
+      <select id="ankauf-filter-marke" class="filter-select">
+        <option value="alle">Alle Marken</option>
+      </select>
+      <select id="ankauf-filter-preisquelle" class="filter-select">
+        <option value="alle">Alle Preisquellen</option>
+        <option value="auto">Nur „auto"</option>
+        <option value="manuell">Nur „manuell"</option>
+      </select>
+      <button type="button" id="ankauf-neu-btn" class="btn-primary">+ Neues Gerät</button>
+      <button type="button" id="ankauf-massenanpassung-btn" class="btn-secondary">Massen-Anpassung…</button>
+    </div>
+
+    <div id="ankauf-massenanpassung-panel" class="card-form massenanpassung-panel" hidden>
+      <h2>Massen-Anpassung</h2>
+      <p class="empty-hint">Wirkt auf alle Geräte, die aktuell den obigen Filtern entsprechen (Kategorie/Marke/Preisquelle/Suche).</p>
+      <div class="massenanpassung-grid">
+        <label>Richtung
+          <select id="ma-richtung">
+            <option value="erhoehen">Anheben</option>
+            <option value="senken">Senken</option>
+          </select>
+        </label>
+        <label>Wert
+          <input type="number" id="ma-wert" min="0" step="1" value="5">
+        </label>
+        <label>Einheit
+          <select id="ma-einheit">
+            <option value="prozent">%</option>
+            <option value="euro">€</option>
+          </select>
+        </label>
+        <button type="button" id="ma-vorschau-btn" class="btn-secondary">Vorschau berechnen</button>
+      </div>
+      <div id="ma-vorschau-ergebnis" hidden>
+        <p id="ma-vorschau-text"></p>
+        <div class="varianten-tabelle-wrap">
+          <table class="varianten-tabelle">
+            <thead><tr><th>Gerät</th><th>Variante</th><th>Alt</th><th>Neu</th></tr></thead>
+            <tbody id="ma-vorschau-body"></tbody>
+          </table>
+        </div>
+        <div class="form-actions">
+          <button type="button" id="ma-anwenden-btn" class="btn-primary">Änderung übernehmen</button>
+          <button type="button" id="ma-abbrechen-btn" class="btn-secondary">Abbrechen</button>
+        </div>
+      </div>
+    </div>
+
+    <form id="ankauf-form" class="card-form ankauf-form" hidden>
+      <h2 id="ankauf-form-title">Neues Gerät anlegen</h2>
+      <input type="hidden" id="ak-id" value="">
+
+      <div class="ankauf-form-grid">
+        <label>Kategorie
+          <select id="ak-kategorie" required>
+            <option value="smartphones">Smartphones</option>
+            <option value="tablets">Tablets &amp; iPads</option>
+            <option value="smartwatches">Smartwatches</option>
+            <option value="laptops">Laptops &amp; Notebooks</option>
+            <option value="pcs">PCs</option>
+            <option value="monitore">Monitore</option>
+            <option value="kopfhoerer">Kopfhörer &amp; Audio</option>
+            <option value="kameras">Kameras</option>
+            <option value="konsolen">Spielekonsolen</option>
+            <option value="zubehoer">Zubehör</option>
+          </select>
+        </label>
+        <label>Marke
+          <input type="text" id="ak-marke" list="katalog-marken-liste" placeholder="z. B. Apple">
+          <datalist id="katalog-marken-liste"></datalist>
+        </label>
+        <label>Modell
+          <input type="text" id="ak-modell" required placeholder="z. B. iPhone 15">
+        </label>
+        <label>Erscheinungsjahr
+          <input type="number" id="ak-jahr" min="2000" max="2100" placeholder="z. B. 2024">
+        </label>
+        <label>UVP Neupreis (€)
+          <input type="number" id="ak-uvp" min="0" step="1" placeholder="z. B. 999">
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="ak-beliebt">
+          Beliebt (im Rechner oben angepinnt)
+        </label>
+      </div>
+
+      <h3>Varianten &amp; Preise</h3>
+      <div class="varianten-tabelle-wrap">
+        <table class="varianten-tabelle">
+          <thead>
+            <tr>
+              <th>Bezeichnung</th>
+              <th>Neu &amp; versiegelt (€)</th>
+              <th>Wie neu (€)</th>
+              <th>Sehr gut (€)</th>
+              <th>Gut (€)</th>
+              <th>Defekt (€)</th>
+              <th>Quelle</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="ak-varianten-body"></tbody>
+        </table>
+      </div>
+      <button type="button" id="ak-variante-hinzufuegen" class="btn-small btn-secondary">+ Variante hinzufügen</button>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Speichern</button>
+        <button type="button" id="ankauf-form-cancel" class="btn-secondary">Abbrechen</button>
+        <button type="button" id="ankauf-form-duplizieren" class="btn-secondary" hidden>Duplizieren</button>
+        <button type="button" id="ankauf-form-neu-berechnen" class="btn-secondary" hidden>Auto-Preise neu berechnen</button>
+      </div>
+    </form>
+
+    <div class="list-wrap">
+      <div class="list-wrap-header">
+        <h2>Alle Geräte im Ankaufsrechner</h2>
+        <span id="ankauf-anzahl" class="empty-hint"></span>
+      </div>
+      <div id="ankauf-lade-hinweis" class="empty-hint" hidden>Lade Geräte…</div>
+      <div id="ankauf-liste" class="angebote-list"></div>
+      <div id="ankauf-pagination" class="pagination"></div>
     </div>
   </section>
 </main>
