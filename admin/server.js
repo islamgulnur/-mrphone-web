@@ -47,8 +47,9 @@ function berechnePreise(uvp, jahr, marke, modell) {
 
 const app = express();
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+app.use("/admin", express.static(path.join(__dirname, "public")));
 app.use("/images", express.static(path.join(ROOT, "images")));
+app.use(express.static(ROOT));
 
 const upload = multer({
   storage: multer.memoryStorage(),
