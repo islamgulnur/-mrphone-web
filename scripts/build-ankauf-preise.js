@@ -1,6 +1,8 @@
 /**
  * Erzeugt ankauf-preise.json + ankauf/<kategorie>.json aus geraete-katalog.json
- * unter Anwendung der zentralen Preisformel (pricing-config.js).
+ * unter Anwendung der zentralen Preisformel (pricing-config.js, Prozent-vom-Wiederverkaufswert-
+ * Modell: eigener Verkaufspreis aus bestand.json als Primäranker, sonst marktwertGebraucht aus
+ * dem Katalog als Sekundäranker).
  *
  * Ausführen: node scripts/build-ankauf-preise.js
  *
@@ -15,6 +17,7 @@ const { backupIfChanged } = require("./backup-data");
 
 const ROOT = path.join(__dirname, "..");
 const KATALOG_FILE = path.join(ROOT, "geraete-katalog.json");
+const BESTAND_FILE = path.join(ROOT, "bestand.json");
 const ANKAUF_FILE = path.join(ROOT, "ankauf-preise.json");
 const SPLIT_DIR = path.join(ROOT, "ankauf");
 
@@ -24,13 +27,18 @@ const KATEGORIEN = [
 ];
 
 const ANKAUF_KOMMENTAR =
-  "AUTO-PLATZHALTER-PREISE – berechnet aus neupreisUvp/jahr/marke über die zentrale Heuristik " +
-  "(siehe pricing-config.js, 5 Zustandsstufen: neuVersiegelt/wieNeu/sehrGut/gut/defekt). " +
+  "AUTO-PLATZHALTER-PREISE – berechnet aus dem Wiederverkaufswert (eigener Verkaufspreis aus " +
+  "bestand.json, sonst marktwertGebraucht aus geraete-katalog.json) über die zentrale Heuristik " +
+  "(siehe pricing-config.js, 5 Zustandsstufen: neuVersiegelt/wieNeu/sehrGut/gut/defekt, " +
+  "global verschiebbar über pricing-niveau.json). " +
   "preisQuelle \"auto\" wird bei manueller Preisänderung im Admin automatisch auf \"manuell\" " +
   "gesetzt und danach nie mehr automatisch überschrieben. Vor Livegang: mindestens die " +
   "Top-50-Modelle manuell prüfen (siehe PREISE-ANLEITUNG.md).";
 
 const katalog = JSON.parse(fs.readFileSync(KATALOG_FILE, "utf8"));
+const bestandListe = fs.existsSync(BESTAND_FILE)
+  ? JSON.parse(fs.readFileSync(BESTAND_FILE, "utf8") || "[]")
+  : [];
 
 // Bestehende manuelle Preise einlesen (falls vorhanden), damit sie nicht verloren gehen.
 let bestehendeManuell = {}; // id -> { bezeichnung -> preise }
@@ -50,15 +58,23 @@ if (fs.existsSync(ANKAUF_FILE)) {
   }
 }
 
+const konsistenzWarnungen = [];
+
 const ergebnis = katalog.map((geraet) => {
   const varianten = geraet.varianten.map((v) => {
     const manuell = bestehendeManuell[geraet.id] && bestehendeManuell[geraet.id][v.bezeichnung];
     if (manuell) {
       return { bezeichnung: v.bezeichnung, uvpDelta: v.uvpDelta, preise: manuell, preisQuelle: "manuell" };
     }
-    const uvpVariante = geraet.uvp + (v.uvpDelta || 0);
-    const preise = pricing.berechnePreise(uvpVariante, geraet.jahr, geraet.marke, geraet.modell);
-    return { bezeichnung: v.bezeichnung, uvpDelta: v.uvpDelta, preise, preisQuelle: "auto" };
+    const berechnung = pricing.berechnePreise(geraet, v, bestandListe);
+    const verstoesse = pricing.pruefeKonsistenz(berechnung.preise, {
+      neu: berechnung.wiederverkaufswertNeu,
+      gebraucht: berechnung.wiederverkaufswertGebraucht,
+    });
+    if (verstoesse.length) {
+      konsistenzWarnungen.push({ marke: geraet.marke, modell: geraet.modell, variante: v.bezeichnung, verstoesse });
+    }
+    return { bezeichnung: v.bezeichnung, uvpDelta: v.uvpDelta, preise: berechnung.preise, preisQuelle: "auto" };
   });
   return {
     id: geraet.id,
@@ -98,3 +114,12 @@ ergebnis.forEach((g) => {
 });
 console.log("ankauf-preise.json + ankauf/*.json geschrieben:", ergebnis.length, "Geräte,", variantenGesamt, "Varianten");
 console.log(byKat);
+
+if (konsistenzWarnungen.length) {
+  console.warn("\nKONSISTENZ-WARNUNG: Ankaufspreis über eigenem Verkaufspreis bei", konsistenzWarnungen.length, "Variante(n):");
+  konsistenzWarnungen.forEach((w) => {
+    console.warn(" -", w.marke, w.modell, "(" + w.variante + "):", w.verstoesse.map((v) => v.stufe + "=" + v.ankaufPreis + "€ > " + v.eigenerVerkaufspreis + "€").join(", "));
+  });
+} else {
+  console.log("Konsistenzregel: keine Verstöße (Ankaufspreis nirgends über eigenem Verkaufspreis).");
+}

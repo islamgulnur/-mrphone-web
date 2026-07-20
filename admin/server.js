@@ -32,8 +32,14 @@ const KATEGORIEN = [
 const ZUSTANDS_FELDER = pricing.ZUSTANDS_REIHENFOLGE; // ["neuVersiegelt","wieNeu","sehrGut","gut","defekt"]
 const rundeAuf5 = pricing.rundeAuf5;
 
-function berechnePreise(uvp, jahr, marke, modell) {
-  return pricing.berechnePreise(uvp, jahr, marke, modell);
+function berechnePreise(geraet, variante, bestandListe, niveauProzent) {
+  return pricing.berechnePreise(geraet, variante, bestandListe, niveauProzent);
+}
+
+// Sucht den zugehörigen geraete-katalog.json-Eintrag (Single Source of Truth für
+// uvp/marktwertGebraucht) zu einem ankauf-preise.json-Gerät gleicher id.
+function findeKatalogEintrag(id) {
+  return readJsonListe(KATALOG_DATA_FILE).find((g) => g.id === id);
 }
 
 const app = express();
@@ -386,16 +392,35 @@ app.post("/api/ankauf/:id/neu-berechnen", (req, res) => {
   if (idx === -1) return res.status(404).json({ error: "Gerät nicht gefunden" });
 
   const geraet = list[idx];
+  const katalogEintrag = findeKatalogEintrag(geraet.id);
+  if (!katalogEintrag) {
+    return res.status(409).json({
+      error: "Kein geraete-katalog.json-Eintrag für dieses Gerät gefunden (marktwertGebraucht fehlt) - Neuberechnung nicht möglich.",
+    });
+  }
+
+  const bestand = readBestand();
+  const geraetFuerPricing = {
+    uvp: katalogEintrag.uvp,
+    marktwertGebraucht: katalogEintrag.marktwertGebraucht,
+    marke: geraet.marke,
+    modell: geraet.modell,
+  };
+
+  const warnungen = [];
   geraet.varianten = geraet.varianten.map((v) => {
     if (v.preisQuelle === "manuell") return v; // manuelle Preise werden nie automatisch überschrieben
-    return {
-      ...v,
-      preise: berechnePreise(geraet.neupreisUvp + (v.uvpDelta || 0), geraet.jahr, geraet.marke, geraet.modell),
-    };
+    const berechnung = berechnePreise(geraetFuerPricing, v, bestand);
+    const verstoesse = pricing.pruefeKonsistenz(berechnung.preise, {
+      neu: berechnung.wiederverkaufswertNeu,
+      gebraucht: berechnung.wiederverkaufswertGebraucht,
+    });
+    if (verstoesse.length) warnungen.push({ variante: v.bezeichnung, verstoesse });
+    return { ...v, preise: berechnung.preise };
   });
 
   writeAnkauf(list);
-  res.json(geraet);
+  res.json({ ...geraet, warnungen });
 });
 
 app.delete("/api/ankauf/:id", (req, res) => {
@@ -433,10 +458,15 @@ function angepassterPreis(alterPreis, einheit, richtung, wert) {
 function berechneMassenanpassung(list, body) {
   const { filter, einheit, richtung, wert } = body;
   const betroffeneGeraete = list.filter((g) => passtAufFilter(g, filter));
+  const katalogById = {};
+  readJsonListe(KATALOG_DATA_FILE).forEach((g) => { katalogById[g.id] = g; });
+  const bestand = readBestand();
   let betroffeneVarianten = 0;
   const beispiele = [];
+  const warnungen = [];
 
   betroffeneGeraete.forEach((geraet) => {
+    const katalogEintrag = katalogById[geraet.id];
     geraet.varianten.forEach((v) => {
       betroffeneVarianten++;
       const alt = { ...v.preise };
@@ -444,13 +474,25 @@ function berechneMassenanpassung(list, body) {
       ZUSTANDS_FELDER.forEach((feld) => {
         neu[feld] = angepassterPreis(v.preise[feld], einheit, richtung, wert);
       });
+      if (katalogEintrag) {
+        // Konsistenzregel: Ankaufspreis darf nie über dem eigenen Verkaufspreis liegen.
+        const wiederverkauf = pricing.ermittleWiederverkaufswerte(
+          { uvp: katalogEintrag.uvp, marktwertGebraucht: katalogEintrag.marktwertGebraucht, marke: geraet.marke, modell: geraet.modell },
+          v,
+          bestand
+        );
+        const verstoesse = pricing.pruefeKonsistenz(neu, { neu: wiederverkauf.neu, gebraucht: wiederverkauf.gebraucht });
+        if (verstoesse.length) {
+          warnungen.push({ geraet: geraet.marke + " " + geraet.modell, variante: v.bezeichnung, verstoesse });
+        }
+      }
       if (beispiele.length < 10) {
         beispiele.push({ geraet: geraet.marke + " " + geraet.modell, variante: v.bezeichnung, alt, neu });
       }
     });
   });
 
-  return { betroffeneGeraeteAnzahl: betroffeneGeraete.length, betroffeneVarianten, beispiele, geraeteIds: betroffeneGeraete.map((g) => g.id) };
+  return { betroffeneGeraeteAnzahl: betroffeneGeraete.length, betroffeneVarianten, beispiele, warnungen, geraeteIds: betroffeneGeraete.map((g) => g.id) };
 }
 
 app.post("/api/ankauf/massenanpassung/vorschau", (req, res) => {
@@ -461,7 +503,12 @@ app.post("/api/ankauf/massenanpassung/vorschau", (req, res) => {
 app.post("/api/ankauf/massenanpassung/anwenden", (req, res) => {
   const list = readAnkauf();
   const body = req.body || {};
-  const { einheit, richtung, wert, filter } = body;
+  const { einheit, richtung, wert, filter, bestaetigt } = body;
+
+  const vorschau = berechneMassenanpassung(list, body);
+  if (vorschau.warnungen.length && !bestaetigt) {
+    return res.json({ ok: false, warnung: true, warnungen: vorschau.warnungen });
+  }
 
   let betroffeneVarianten = 0;
   list.forEach((geraet) => {
@@ -478,6 +525,45 @@ app.post("/api/ankauf/massenanpassung/anwenden", (req, res) => {
 
   writeAnkauf(list);
   res.json({ ok: true, betroffeneVarianten });
+});
+
+// Globaler Ankaufsniveau-Regler (-15..+15 %), wirkt multiplikativ auf alle "auto"-Preise
+// (siehe pricing-config.js). Getrennt von der Massenanpassung oben: die hier gespeicherte
+// Anpassung bleibt reversibel und wird bei jeder Neuberechnung/jedem Build neu angewendet,
+// statt einzelne Preise dauerhaft auf "manuell" zu setzen.
+app.get("/api/preisniveau", (req, res) => {
+  res.json({ prozent: pricing.liesAnkaufsniveau(), min: pricing.NIVEAU_MIN, max: pricing.NIVEAU_MAX });
+});
+
+app.post("/api/preisniveau/vorschau", (req, res) => {
+  const angefordert = Number(req.body && req.body.prozent);
+  if (!Number.isFinite(angefordert)) return res.status(400).json({ error: "prozent fehlt oder ungültig" });
+  const geklemmt = Math.min(pricing.NIVEAU_MAX, Math.max(pricing.NIVEAU_MIN, angefordert));
+
+  const katalogListe = readJsonListe(KATALOG_DATA_FILE);
+  const bestand = readBestand();
+  const beispielGeraete = katalogListe.filter((g) => Array.isArray(g.varianten) && g.varianten.length).slice(0, 5);
+
+  const beispiele = beispielGeraete.map((geraet) => {
+    const variante = geraet.varianten[0];
+    const aktuell = pricing.berechnePreise(geraet, variante, bestand);
+    const vorschau = pricing.berechnePreise(geraet, variante, bestand, geklemmt);
+    return {
+      geraet: geraet.marke + " " + geraet.modell,
+      variante: variante.bezeichnung,
+      aktuell: aktuell.preise,
+      neu: vorschau.preise,
+    };
+  });
+
+  res.json({ prozent: geklemmt, beispiele });
+});
+
+app.post("/api/preisniveau", (req, res) => {
+  const angefordert = Number(req.body && req.body.prozent);
+  if (!Number.isFinite(angefordert)) return res.status(400).json({ error: "prozent fehlt oder ungültig" });
+  const geklemmt = pricing.schreibeAnkaufsniveau(angefordert, backupIfChanged);
+  res.json({ ok: true, prozent: geklemmt });
 });
 
 function runGit(args) {

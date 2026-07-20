@@ -1254,6 +1254,8 @@ section {
 }
 .empty-hint a { color: var(--green-dark); font-weight: 600; text-decoration: underline; }
 .empty-hint a:hover { color: var(--green); }
+.empty-hint p { margin: 0 0 1rem; }
+.empty-hint p:last-child { margin-bottom: 0; }
 
 .angebot-media {
   aspect-ratio: 1 / 1;

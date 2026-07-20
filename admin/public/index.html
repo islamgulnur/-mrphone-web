@@ -200,6 +200,29 @@
       </select>
       <button type="button" id="ankauf-neu-btn" class="btn-primary">+ Neues Gerät</button>
       <button type="button" id="ankauf-massenanpassung-btn" class="btn-secondary">Massen-Anpassung…</button>
+      <button type="button" id="ankauf-niveau-btn" class="btn-secondary">Ankaufsniveau…</button>
+    </div>
+
+    <div id="ankauf-niveau-panel" class="card-form massenanpassung-panel" hidden>
+      <h2>Globales Ankaufsniveau</h2>
+      <p class="empty-hint">Verschiebt alle automatisch berechneten Ankaufspreise gleichzeitig um einen Prozentsatz (z. B. bei Marktbewegungen) – ohne einzelne Preise anzufassen. Manuelle Preise sind nicht betroffen.</p>
+      <label class="niveau-slider-row">
+        <span>Ankaufsniveau: <strong id="niveau-wert-anzeige">0 %</strong></span>
+        <input type="range" id="niveau-slider" min="-15" max="15" step="1" value="0">
+      </label>
+      <button type="button" id="niveau-vorschau-btn" class="btn-secondary">Vorschau berechnen</button>
+      <div id="niveau-vorschau-ergebnis" hidden>
+        <div class="varianten-tabelle-wrap">
+          <table class="varianten-tabelle">
+            <thead><tr><th>Gerät</th><th>Variante</th><th>Aktuell</th><th>Neu</th></tr></thead>
+            <tbody id="niveau-vorschau-body"></tbody>
+          </table>
+        </div>
+        <div class="form-actions">
+          <button type="button" id="niveau-anwenden-btn" class="btn-primary">Ankaufsniveau übernehmen</button>
+          <button type="button" id="niveau-abbrechen-btn" class="btn-secondary">Abbrechen</button>
+        </div>
+      </div>
     </div>
 
     <div id="ankauf-massenanpassung-panel" class="card-form massenanpassung-panel" hidden>

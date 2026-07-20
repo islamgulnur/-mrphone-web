@@ -546,6 +546,15 @@
   var maVorschauBody = document.getElementById("ma-vorschau-body");
   var maAnwendenBtn = document.getElementById("ma-anwenden-btn");
   var maAbbrechenBtn = document.getElementById("ma-abbrechen-btn");
+  var akNiveauBtn = document.getElementById("ankauf-niveau-btn");
+  var akNiveauPanel = document.getElementById("ankauf-niveau-panel");
+  var niveauSlider = document.getElementById("niveau-slider");
+  var niveauWertAnzeige = document.getElementById("niveau-wert-anzeige");
+  var niveauVorschauBtn = document.getElementById("niveau-vorschau-btn");
+  var niveauVorschauErgebnis = document.getElementById("niveau-vorschau-ergebnis");
+  var niveauVorschauBody = document.getElementById("niveau-vorschau-body");
+  var niveauAnwendenBtn = document.getElementById("niveau-anwenden-btn");
+  var niveauAbbrechenBtn = document.getElementById("niveau-abbrechen-btn");
 
   var aktuelleAnkaufListe = [];
   var akSeite = 1;
@@ -890,6 +899,24 @@
     maVorschauErgebnis.hidden = true;
   });
 
+  akNiveauBtn.addEventListener("click", function () {
+    akNiveauPanel.hidden = !akNiveauPanel.hidden;
+    niveauVorschauErgebnis.hidden = true;
+    if (!akNiveauPanel.hidden) {
+      fetch("/api/preisniveau")
+        .then(function (r) { return r.json(); })
+        .then(function (daten) {
+          niveauSlider.value = daten.prozent;
+          niveauWertAnzeige.textContent = daten.prozent + " %";
+        })
+        .catch(function () {});
+    }
+  });
+
+  niveauSlider.addEventListener("input", function () {
+    niveauWertAnzeige.textContent = niveauSlider.value + " %";
+  });
+
   function aktuellerMassenanpassungFilter() {
     return {
       kategorie: akFilterKategorie.value,
@@ -950,6 +977,48 @@
 
   maAbbrechenBtn.addEventListener("click", function () {
     maVorschauErgebnis.hidden = true;
+  });
+
+  function renderNiveauVorschau(daten) {
+    niveauVorschauBody.innerHTML = daten.beispiele.map(function (b) {
+      return (
+        "<tr><td>" + b.geraet + "</td><td>" + b.variante + "</td>" +
+        "<td>Sehr gut " + b.aktuell.sehrGut + " € / Gut " + b.aktuell.gut + " €</td>" +
+        "<td>Sehr gut " + b.neu.sehrGut + " € / Gut " + b.neu.gut + " €</td></tr>"
+      );
+    }).join("");
+    niveauVorschauErgebnis.hidden = false;
+  }
+
+  niveauVorschauBtn.addEventListener("click", function () {
+    fetch("/api/preisniveau/vorschau", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prozent: Number(niveauSlider.value) }),
+    })
+      .then(function (r) { return r.json(); })
+      .then(renderNiveauVorschau)
+      .catch(function (err) { alert(err.message); });
+  });
+
+  niveauAnwendenBtn.addEventListener("click", function () {
+    var prozent = Number(niveauSlider.value);
+    if (!confirm("Ankaufsniveau auf " + prozent + " % setzen? Wirkt ab sofort auf alle automatisch berechneten Preise (bei \"Neu berechnen\"/Build).")) return;
+    fetch("/api/preisniveau", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prozent: prozent }),
+    })
+      .then(function (r) { return r.json(); })
+      .then(function () {
+        akNiveauPanel.hidden = true;
+        niveauVorschauErgebnis.hidden = true;
+      })
+      .catch(function (err) { alert(err.message); });
+  });
+
+  niveauAbbrechenBtn.addEventListener("click", function () {
+    niveauVorschauErgebnis.hidden = true;
   });
 
   if (publishAnkaufBtn) {

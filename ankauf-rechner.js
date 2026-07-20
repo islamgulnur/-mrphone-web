@@ -58,9 +58,12 @@
   var hinweisKategorie = root.querySelector("#rechner-hinweis-kategorie");
   var rechnerCard = root.querySelector(".rechner-card");
   var step2Empty = root.querySelector("#rechner-modelle-leer");
+  var step2Lokal = root.querySelector("#rechner-modelle-lokal");
+  var modelleRetryBtn = root.querySelector("#rechner-modelle-retry");
 
   var kategorieCache = {};
   var aktuelleGeraeteListe = [];
+  var aktuellerLadeStatus = null; // "ok" | "fehler" | "lokal"
   var state = { kategorie: null, marke: null, geraet: null, variante: null, zustand: null };
   var aktuellerSchritt = 1;
   var erreichteSchritte = 1;
@@ -162,9 +165,25 @@
   }
 
   function ladeKategorieDaten(kategorie) {
-    if (kategorieCache[kategorie]) return Promise.resolve(kategorieCache[kategorie]);
+    if (location.protocol === "file:") {
+      aktuellerLadeStatus = "lokal";
+      if (modelleLade) modelleLade.hidden = true;
+      if (modelleFehler) modelleFehler.hidden = true;
+      if (step2Lokal) step2Lokal.hidden = false;
+      modellListe.innerHTML = "";
+      markenChips.innerHTML = "";
+      return Promise.resolve([]);
+    }
+
+    if (kategorieCache[kategorie]) {
+      aktuellerLadeStatus = "ok";
+      return Promise.resolve(kategorieCache[kategorie]);
+    }
+
+    aktuellerLadeStatus = null;
     if (modelleLade) modelleLade.hidden = false;
     if (modelleFehler) modelleFehler.hidden = true;
+    if (step2Lokal) step2Lokal.hidden = true;
     modellListe.innerHTML = "";
     markenChips.innerHTML = "";
 
@@ -176,14 +195,27 @@
       .then(function (daten) {
         var liste = Array.isArray(daten) ? daten : [];
         kategorieCache[kategorie] = liste;
+        aktuellerLadeStatus = "ok";
         if (modelleLade) modelleLade.hidden = true;
         return liste;
       })
       .catch(function () {
+        aktuellerLadeStatus = "fehler";
         if (modelleLade) modelleLade.hidden = true;
         if (modelleFehler) modelleFehler.hidden = false;
         return [];
       });
+  }
+
+  if (modelleRetryBtn) {
+    modelleRetryBtn.addEventListener("click", function () {
+      if (!state.kategorie) return;
+      ladeKategorieDaten(state.kategorie).then(function (liste) {
+        aktuelleGeraeteListe = liste;
+        renderMarken();
+        renderModelle();
+      });
+    });
   }
 
   kategorieGrid.addEventListener("click", function (e) {
@@ -255,7 +287,9 @@
 
     if (!geraete.length) {
       modellListe.innerHTML = "";
-      if (step2Empty) step2Empty.hidden = false;
+      // Leer-Meldung nur bei erfolgreich geladener, aber leerer Kategorie – bei Ladefehler
+      // oder file://-Aufruf übernehmen die jeweils eigenen Hinweise (siehe ladeKategorieDaten).
+      if (step2Empty) step2Empty.hidden = aktuellerLadeStatus !== "ok";
       return;
     }
     if (step2Empty) step2Empty.hidden = true;

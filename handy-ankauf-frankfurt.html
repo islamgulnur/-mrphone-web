@@ -260,7 +260,11 @@
             <p class="empty-hint" id="rechner-modelle-lade" hidden>Modelle werden geladen …</p>
             <div class="rechner-modell-liste" id="rechner-modelle"></div>
             <p class="empty-hint" id="rechner-modelle-leer" hidden>Für diese Auswahl haben wir gerade kein Modell hinterlegt. Nutzen Sie gerne die individuelle Preisanfrage unten.</p>
-            <p class="empty-hint" id="rechner-modelle-fehler" hidden>Diese Kategorie konnte gerade nicht geladen werden. Bitte versuchen Sie es erneut oder nutzen Sie die individuelle Preisanfrage unten.</p>
+            <div class="empty-hint" id="rechner-modelle-fehler" hidden>
+              <p>Diese Kategorie konnte gerade nicht geladen werden.</p>
+              <button type="button" class="btn btn-outline-dark" id="rechner-modelle-retry">Erneut versuchen</button>
+            </div>
+            <p class="empty-hint" id="rechner-modelle-lokal" hidden>Diese Seite benötigt einen Webserver – online funktioniert alles automatisch.</p>
           </div>
 
           <!-- Schritt 3: Variante -->
