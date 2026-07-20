@@ -1,0 +1,15 @@
+{
+  "name": "mrphone",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mr. Phone – Handy-Fachgeschäft Frankfurt Zeil: Website & Admin-Panel",
+  "scripts": {
+    "start": "node admin/server.js",
+    "dev": "node admin/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^2.0.0",
+    "sharp": "^0.33.4"
+  }
+}

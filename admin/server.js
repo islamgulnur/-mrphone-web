@@ -22,7 +22,16 @@ const ANKAUF_KOMMENTAR =
   "preisQuelle \"auto\" wird bei manueller Preisänderung " +
   "im Admin automatisch auf \"manuell\" gesetzt und danach nie mehr automatisch überschrieben. " +
   "Vor Livegang: mindestens die Top-50-Modelle manuell prüfen (siehe PREISE-ANLEITUNG.md).";
-const PORT = process.env.PORT || 3000;
+
+// Accept port from CLI argument (e.g. --port 32105) or environment variable.
+const PORT = (() => {
+  const cliIndex = process.argv.indexOf("--port");
+  if (cliIndex !== -1 && cliIndex + 1 < process.argv.length) {
+    const p = parseInt(process.argv[cliIndex + 1], 10);
+    if (Number.isFinite(p) && p > 0) return p;
+  }
+  return Number(process.env.PORT) || 3000;
+})();
 
 const KATEGORIEN = [
   "smartphones", "tablets", "smartwatches", "laptops", "pcs",
@@ -44,8 +53,9 @@ function findeKatalogEintrag(id) {
 
 const app = express();
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+app.use("/admin", express.static(path.join(__dirname, "public")));
 app.use("/images", express.static(path.join(ROOT, "images")));
+app.use(express.static(ROOT));
 
 const upload = multer({
   storage: multer.memoryStorage(),
