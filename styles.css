@@ -378,6 +378,7 @@ section {
 .hero-home .hero-badge,
 .hero-home .hero-content h1,
 .hero-home .hero-lead,
+.hero-home .hero-content .bewertungen-kompakt,
 .hero-home .hero-content .cta-row {
   opacity: 0;
   transform: translateY(18px);
@@ -386,6 +387,7 @@ section {
 .hero-home .hero-badge { animation-delay: 0.1s; }
 .hero-home .hero-content h1 { animation-delay: 0.2s; }
 .hero-home .hero-lead { animation-delay: 0.34s; }
+.hero-home .hero-content .bewertungen-kompakt { animation-delay: 0.42s; }
 .hero-home .hero-content .cta-row { animation-delay: 0.48s; }
 
 @keyframes heroImageIn {
@@ -552,6 +554,109 @@ section {
   box-shadow: var(--shadow);
 }
 
+.bild-fehlt {
+  aspect-ratio: 16 / 9;
+  background: var(--gray-100);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bild-fehlt img { display: none; }
+.bild-fehlt::after {
+  content: "Bild folgt – siehe BILDER-TODO.md";
+  color: var(--gray-400);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ---------- Vorher/Nachher-Vergleich ---------- */
+.vn-grid {
+  display: grid;
+  gap: 1.6rem;
+}
+@media (min-width: 900px) {
+  .vn-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.vn-compare {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--gray-100);
+}
+
+.vn-compare.bild-fehlt .vn-slider { display: none; }
+.vn-compare.bild-fehlt::after {
+  content: "Bilder folgen – siehe BILDER-TODO.md";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-400);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.vn-nachher,
+.vn-vorher {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vn-vorher-wrap {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 calc(100% - var(--vn-pos, 50%)) 0 0);
+}
+
+.vn-slider {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  appearance: none;
+  background: transparent;
+  cursor: ew-resize;
+}
+.vn-slider::-webkit-slider-runnable-track { background: transparent; height: 100%; }
+.vn-slider::-moz-range-track { background: transparent; height: 100%; }
+.vn-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 4px;
+  height: 100%;
+  background: var(--white);
+  box-shadow: 0 0 0 2px rgba(0,0,0,.25), var(--shadow);
+  border-radius: 2px;
+  cursor: ew-resize;
+}
+.vn-slider::-moz-range-thumb {
+  width: 4px;
+  height: 100%;
+  background: var(--white);
+  box-shadow: 0 0 0 2px rgba(0,0,0,.25), var(--shadow);
+  border-radius: 2px;
+  border: none;
+  cursor: ew-resize;
+}
+
+.vn-caption {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 0.6rem;
+}
+
 .gallery-grid {
   display: grid;
   gap: 1rem;
@@ -716,6 +821,28 @@ section {
   padding: 0.55rem 1.1rem;
   font-size: 0.9rem;
   min-height: 40px;
+}
+
+.service-row .service-price-ab {
+  color: var(--green-dark);
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.service-price-hinweis {
+  color: var(--gray-400);
+  font-size: 0.78rem;
+  margin: 0.15rem 0 0;
+}
+
+.reparatur-preise-hinweis {
+  background: rgba(141, 198, 63, 0.12);
+  border: 1px solid rgba(141, 198, 63, 0.35);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin: 0 0 1.4rem;
 }
 
 /* ---------- FAQ ---------- */
@@ -1322,8 +1449,149 @@ section {
   margin: 0;
 }
 
-.angebot-card .btn {
+.angebot-actions {
   margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.3rem;
+}
+
+.reservieren-hinweis {
+  font-size: 0.72rem;
+  color: var(--gray-600);
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* ---------- Live-Öffnungsstatus-Badge ---------- */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.32rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: var(--gray-100);
+  color: var(--gray-600);
+  white-space: nowrap;
+}
+
+.status-badge .status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gray-400);
+  flex-shrink: 0;
+}
+
+.status-badge.is-open {
+  background: rgba(141, 198, 63, 0.18);
+  color: var(--green-dark);
+}
+.status-badge.is-open .status-dot { background: var(--green); }
+
+.status-badge.is-closing-soon {
+  background: rgba(230, 159, 0, 0.16);
+  color: #a06a00;
+}
+.status-badge.is-closing-soon .status-dot { background: #e69f00; }
+
+.status-badge.is-closed .status-dot { background: var(--gray-400); }
+
+.status-badge--mobile { margin-left: 0.2rem; }
+
+@media (min-width: 900px) {
+  .status-badge--mobile { display: none; }
+}
+
+/* ---------- Google-Bewertungen ---------- */
+.sterne {
+  color: #e69f00;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.bewertungen-kompakt {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.bewertungen-kompakt[hidden] { display: none; }
+
+.bewertungen-kompakt-text { color: var(--gray-600); font-weight: 600; }
+
+.hero-content .bewertungen-kompakt { margin-top: 0.6rem; }
+.hero-content .bewertungen-kompakt-text { color: var(--gray-200); }
+
+.bewertungen-section {
+  background: var(--gray-50);
+}
+
+.bewertungen-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.bewertungen-summary .sterne { font-size: 1.6rem; }
+
+.bewertungen-note {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.bewertungen-anzahl {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+}
+
+.bewertungen-slider {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0.3rem 0.2rem 1rem;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.zitat-karte {
+  scroll-snap-align: start;
+  flex: 0 0 min(320px, 82vw);
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.2rem 1.3rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.zitat-karte blockquote {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.zitat-karte figcaption {
+  color: var(--gray-600);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.bewertungen-google-link {
+  display: block;
+  text-align: center;
+  margin-top: 0.6rem;
+  font-weight: 700;
 }
 
 /* =========================================================
@@ -1699,3 +1967,62 @@ section {
 }
 .vorteil-icon { font-size: 1.6rem; }
 .vorteil-item span:last-child { font-weight: 600; font-size: 0.9rem; }
+
+/* ---------- Sprachumschalter (DE/EN) ---------- */
+.lang-switch {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--ink, #1a1a1a);
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.lang-switch:hover { opacity: 0.7; }
+.nav-mobile-actions .lang-switch {
+  display: inline-block;
+  text-align: center;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+}
+
+/* ---------- Ratgeber ---------- */
+.ratgeber-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 700px) { .ratgeber-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .ratgeber-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.ratgeber-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.6rem;
+  border-radius: 14px;
+  background: var(--bg-light, #f5f5f5);
+  border: 1px solid rgba(0,0,0,0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.ratgeber-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.ratgeber-card h2 { font-size: 1.15rem; margin: 0.2rem 0; }
+.ratgeber-card p { margin: 0; opacity: 0.8; font-size: 0.95rem; }
+
+.ratgeber-article {
+  max-width: 760px;
+}
+.ratgeber-article .eyebrow { display: block; margin-bottom: 0.4rem; }
+.ratgeber-article h2 { margin-top: 2rem; }
+.ratgeber-back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}

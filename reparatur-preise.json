@@ -1,0 +1,15 @@
+{
+  "_hinweis": "AB-Preise für Standardreparaturen mit Qualitätsersatzteilen - VOM BETREIBER PRÜFEN und ggf. anpassen. Endpreis wird immer erst nach kostenloser Diagnose im Laden genannt.",
+  "reparaturen": [
+    { "name": "iPhone-Display (iPhone 11–12)", "nameEn": "iPhone display (iPhone 11–12)", "abPreis": 69 },
+    { "name": "iPhone-Display (iPhone 13–14)", "nameEn": "iPhone display (iPhone 13–14)", "abPreis": 119 },
+    { "name": "iPhone-Display (iPhone 15–17)", "nameEn": "iPhone display (iPhone 15–17)", "abPreis": 179 },
+    { "name": "iPhone-Akku", "nameEn": "iPhone battery", "abPreis": 49 },
+    { "name": "Samsung-Display (A-Serie)", "nameEn": "Samsung display (A series)", "abPreis": 59 },
+    { "name": "Samsung-Display (S-Serie)", "nameEn": "Samsung display (S series)", "abPreis": 149 },
+    { "name": "Samsung-Akku", "nameEn": "Samsung battery", "abPreis": 49 },
+    { "name": "Ladebuchse", "nameEn": "Charging port", "abPreis": 39 },
+    { "name": "Kamera", "nameEn": "Camera", "abPreis": 49 },
+    { "name": "Wasserschaden-Diagnose", "nameEn": "Water damage diagnosis", "abPreis": 19 }
+  ]
+}

@@ -22,6 +22,8 @@
 <nav class="admin-tabs" data-scope-group="verkauf">
   <button class="tab-btn active" type="button" data-tab="angebote">Angebote</button>
   <button class="tab-btn" type="button" data-tab="bestand">Bestand</button>
+  <button class="tab-btn" type="button" data-tab="bewertungen">Bewertungen</button>
+  <button class="tab-btn" type="button" data-tab="reparaturpreise">Reparaturpreise</button>
 </nav>
 
 <nav class="admin-tabs" data-scope-group="ankauf" hidden>
@@ -170,6 +172,56 @@
         </div>
         <div id="bestand-list" class="angebote-list"></div>
       </div>
+
+    </div>
+  </section>
+
+  <section id="tab-bewertungen" class="tab-panel">
+    <div class="panel-grid">
+
+      <form id="bewertungen-form" class="card-form">
+        <h2>Google-Bewertungen</h2>
+        <p class="empty-hint">Gesamtnote und Anzahl müssen der echten Google-Gesamtnote entsprechen. Nur echte, wörtliche Zitate eintragen.</p>
+
+        <label>Gesamtnote (z. B. 4.8)
+          <input type="number" id="bw-gesamtnote" step="0.1" min="1" max="5" required>
+        </label>
+        <label>Anzahl Bewertungen
+          <input type="number" id="bw-anzahl" step="1" min="0" required>
+        </label>
+        <label>Stand (Datum)
+          <input type="date" id="bw-stand">
+        </label>
+        <label>Link zum Google-Profil
+          <input type="url" id="bw-google-url" placeholder="https://g.page/r/...">
+        </label>
+
+        <h3>Zitate (werden auf der Startseite als Karten angezeigt)</h3>
+        <div id="bw-zitate-liste" class="bw-zitate-liste"></div>
+        <button type="button" id="bw-zitat-hinzufuegen" class="btn-secondary">+ Zitat hinzufügen</button>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Bewertungen speichern</button>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <section id="tab-reparaturpreise" class="tab-panel">
+    <div class="panel-grid">
+
+      <form id="reparaturpreise-form" class="card-form">
+        <h2>Reparatur-Ab-Preise</h2>
+        <p class="empty-hint">Werden auf der Reparaturseite als „ab XX €" angezeigt. Endpreis nennt ihr immer erst nach Diagnose im Laden.</p>
+
+        <div id="rp-zeilen-liste" class="bw-zitate-liste"></div>
+        <button type="button" id="rp-zeile-hinzufuegen" class="btn-secondary">+ Reparatur hinzufügen</button>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Preise speichern</button>
+        </div>
+      </form>
 
     </div>
   </section>

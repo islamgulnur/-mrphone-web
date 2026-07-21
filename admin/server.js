@@ -16,6 +16,14 @@ const BESTAND_IMAGES_DIR = path.join(ROOT, "images", "bestand");
 const ANKAUF_DATA_FILE = path.join(ROOT, "ankauf-preise.json");
 const ANKAUF_SPLIT_DIR = path.join(ROOT, "ankauf");
 const KATALOG_DATA_FILE = path.join(ROOT, "geraete-katalog.json");
+const BEWERTUNGEN_FILE = path.join(ROOT, "bewertungen.json");
+const REPARATUR_PREISE_FILE = path.join(ROOT, "reparatur-preise.json");
+const REPARATUR_PREISE_HINWEIS =
+  "AB-Preise für Standardreparaturen mit Qualitätsersatzteilen - VOM BETREIBER PRÜFEN und ggf. anpassen. " +
+  "Endpreis wird immer erst nach kostenloser Diagnose im Laden genannt.";
+const BEWERTUNGEN_HINWEIS =
+  "Nur echte, wörtliche Zitate aus eurem Google-Profil eintragen. Gesamtnote und Anzahl müssen der " +
+  "echten Google-Gesamtnote entsprechen (keine geschönte Zahl) - VOM BETREIBER PRÜFEN.";
 const ANKAUF_KOMMENTAR =
   "AUTO-PLATZHALTER-PREISE – berechnet aus neupreisUvp/jahr/marke über die zentrale Heuristik " +
   "(siehe pricing-config.js im Projekt-Root, 5 Zustandsstufen: neuVersiegelt/wieNeu/sehrGut/gut/defekt). " +
@@ -588,6 +596,77 @@ function runGit(args) {
     });
   });
 }
+
+function readBewertungen() {
+  if (!fs.existsSync(BEWERTUNGEN_FILE)) {
+    return { gesamtnote: 0, anzahlBewertungen: 0, stand: "", googleProfilUrl: "", zitate: [] };
+  }
+  const raw = fs.readFileSync(BEWERTUNGEN_FILE, "utf8");
+  return raw.trim() ? JSON.parse(raw) : {};
+}
+
+function writeBewertungen(daten) {
+  backupIfChanged(BEWERTUNGEN_FILE);
+  fs.writeFileSync(BEWERTUNGEN_FILE, JSON.stringify(daten, null, 2) + "\n", "utf8");
+}
+
+app.get("/api/bewertungen", (req, res) => {
+  res.json(readBewertungen());
+});
+
+app.put("/api/bewertungen", (req, res) => {
+  const b = req.body || {};
+  const daten = {
+    _hinweis: BEWERTUNGEN_HINWEIS,
+    gesamtnote: Number(b.gesamtnote) || 0,
+    anzahlBewertungen: parseInt(b.anzahlBewertungen, 10) || 0,
+    stand: String(b.stand || ""),
+    googleProfilUrl: String(b.googleProfilUrl || ""),
+    zitate: Array.isArray(b.zitate)
+      ? b.zitate
+          .map((z) => ({
+            text: String((z && z.text) || "").trim(),
+            name: String((z && z.name) || "").trim(),
+            sterne: Math.min(5, Math.max(1, parseInt(z && z.sterne, 10) || 5)),
+          }))
+          .filter((z) => z.text && z.name)
+      : [],
+  };
+  writeBewertungen(daten);
+  res.json(daten);
+});
+
+function readReparaturPreise() {
+  if (!fs.existsSync(REPARATUR_PREISE_FILE)) return { reparaturen: [] };
+  const raw = fs.readFileSync(REPARATUR_PREISE_FILE, "utf8");
+  return raw.trim() ? JSON.parse(raw) : { reparaturen: [] };
+}
+
+function writeReparaturPreise(daten) {
+  backupIfChanged(REPARATUR_PREISE_FILE);
+  fs.writeFileSync(REPARATUR_PREISE_FILE, JSON.stringify(daten, null, 2) + "\n", "utf8");
+}
+
+app.get("/api/reparatur-preise", (req, res) => {
+  res.json(readReparaturPreise());
+});
+
+app.put("/api/reparatur-preise", (req, res) => {
+  const b = req.body || {};
+  const daten = {
+    _hinweis: REPARATUR_PREISE_HINWEIS,
+    reparaturen: Array.isArray(b.reparaturen)
+      ? b.reparaturen
+          .map((r) => ({
+            name: String((r && r.name) || "").trim(),
+            abPreis: Number(r && r.abPreis) || 0,
+          }))
+          .filter((r) => r.name)
+      : [],
+  };
+  writeReparaturPreise(daten);
+  res.json(daten);
+});
 
 // Dateien, deren Eintragsanzahl vor dem Veröffentlichen mit der letzten committeten
 // Version verglichen wird (Schutz gegen versehentlichen Datenverlust beim Publish).

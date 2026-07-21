@@ -1051,4 +1051,183 @@
 
   resetAnkaufForm();
   ladeAnkauf();
+
+  /* ---------- Bewertungen ---------- */
+  var bwForm = document.getElementById("bewertungen-form");
+  var bwGesamtnote = document.getElementById("bw-gesamtnote");
+  var bwAnzahl = document.getElementById("bw-anzahl");
+  var bwStand = document.getElementById("bw-stand");
+  var bwGoogleUrl = document.getElementById("bw-google-url");
+  var bwZitateListe = document.getElementById("bw-zitate-liste");
+  var bwZitatHinzufuegenBtn = document.getElementById("bw-zitat-hinzufuegen");
+
+  var aktuelleZitate = [];
+
+  function renderBwZitate() {
+    if (!aktuelleZitate.length) {
+      bwZitateListe.innerHTML = '<p class="empty-hint">Noch keine Zitate hinterlegt.</p>';
+      return;
+    }
+    bwZitateListe.innerHTML = aktuelleZitate.map(function (z, i) {
+      return (
+        '<div class="bw-zitat-row" data-index="' + i + '">' +
+        '<label>Text<textarea rows="2" class="bw-zitat-text">' + (z.text || "").replace(/</g, "&lt;") + "</textarea></label>" +
+        '<label>Name (Vorname + Initial)<input type="text" class="bw-zitat-name" value="' + (z.name || "").replace(/"/g, "&quot;") + '"></label>' +
+        '<label>Sterne<input type="number" min="1" max="5" class="bw-zitat-sterne" value="' + (z.sterne || 5) + '"></label>' +
+        '<button type="button" class="btn-small btn-danger bw-zitat-entfernen" data-index="' + i + '">Entfernen</button>' +
+        "</div>"
+      );
+    }).join("");
+  }
+
+  function bwZitateAusFormular() {
+    return Array.from(bwZitateListe.querySelectorAll(".bw-zitat-row")).map(function (row) {
+      return {
+        text: row.querySelector(".bw-zitat-text").value.trim(),
+        name: row.querySelector(".bw-zitat-name").value.trim(),
+        sterne: parseInt(row.querySelector(".bw-zitat-sterne").value, 10) || 5,
+      };
+    });
+  }
+
+  if (bwZitateListe) {
+    bwZitateListe.addEventListener("click", function (e) {
+      var btn = e.target.closest(".bw-zitat-entfernen");
+      if (!btn) return;
+      aktuelleZitate = bwZitateAusFormular();
+      aktuelleZitate.splice(parseInt(btn.getAttribute("data-index"), 10), 1);
+      renderBwZitate();
+    });
+  }
+
+  if (bwZitatHinzufuegenBtn) {
+    bwZitatHinzufuegenBtn.addEventListener("click", function () {
+      aktuelleZitate = bwZitateAusFormular();
+      aktuelleZitate.push({ text: "", name: "", sterne: 5 });
+      renderBwZitate();
+    });
+  }
+
+  function ladeBewertungen() {
+    if (!bwForm) return;
+    fetch("/api/bewertungen")
+      .then(function (r) { return r.json(); })
+      .then(function (daten) {
+        bwGesamtnote.value = daten.gesamtnote || "";
+        bwAnzahl.value = daten.anzahlBewertungen || "";
+        bwStand.value = daten.stand || "";
+        bwGoogleUrl.value = daten.googleProfilUrl || "";
+        aktuelleZitate = Array.isArray(daten.zitate) ? daten.zitate : [];
+        renderBwZitate();
+      })
+      .catch(function () {
+        bwZitateListe.innerHTML = '<p class="empty-hint">Bewertungen konnten nicht geladen werden.</p>';
+      });
+  }
+
+  if (bwForm) {
+    bwForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var body = {
+        gesamtnote: parseFloat(bwGesamtnote.value),
+        anzahlBewertungen: parseInt(bwAnzahl.value, 10),
+        stand: bwStand.value,
+        googleProfilUrl: bwGoogleUrl.value,
+        zitate: bwZitateAusFormular(),
+      };
+      fetch("/api/bewertungen", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (daten) {
+          aktuelleZitate = daten.zitate || [];
+          renderBwZitate();
+        });
+    });
+  }
+
+  ladeBewertungen();
+
+  /* ---------- Reparaturpreise ---------- */
+  var rpForm = document.getElementById("reparaturpreise-form");
+  var rpZeilenListe = document.getElementById("rp-zeilen-liste");
+  var rpZeileHinzufuegenBtn = document.getElementById("rp-zeile-hinzufuegen");
+
+  var aktuelleReparaturen = [];
+
+  function renderRpZeilen() {
+    if (!aktuelleReparaturen.length) {
+      rpZeilenListe.innerHTML = '<p class="empty-hint">Noch keine Reparaturen hinterlegt.</p>';
+      return;
+    }
+    rpZeilenListe.innerHTML = aktuelleReparaturen.map(function (r, i) {
+      return (
+        '<div class="bw-zitat-row" data-index="' + i + '">' +
+        '<label>Bezeichnung<input type="text" class="rp-name" value="' + (r.name || "").replace(/"/g, "&quot;") + '"></label>' +
+        '<label>Ab-Preis (€)<input type="number" min="0" step="1" class="rp-preis" value="' + (r.abPreis || 0) + '"></label>' +
+        '<button type="button" class="btn-small btn-danger rp-zeile-entfernen" data-index="' + i + '">Entfernen</button>' +
+        "</div>"
+      );
+    }).join("");
+  }
+
+  function rpZeilenAusFormular() {
+    return Array.from(rpZeilenListe.querySelectorAll(".bw-zitat-row")).map(function (row) {
+      return {
+        name: row.querySelector(".rp-name").value.trim(),
+        abPreis: parseFloat(row.querySelector(".rp-preis").value) || 0,
+      };
+    });
+  }
+
+  if (rpZeilenListe) {
+    rpZeilenListe.addEventListener("click", function (e) {
+      var btn = e.target.closest(".rp-zeile-entfernen");
+      if (!btn) return;
+      aktuelleReparaturen = rpZeilenAusFormular();
+      aktuelleReparaturen.splice(parseInt(btn.getAttribute("data-index"), 10), 1);
+      renderRpZeilen();
+    });
+  }
+
+  if (rpZeileHinzufuegenBtn) {
+    rpZeileHinzufuegenBtn.addEventListener("click", function () {
+      aktuelleReparaturen = rpZeilenAusFormular();
+      aktuelleReparaturen.push({ name: "", abPreis: 0 });
+      renderRpZeilen();
+    });
+  }
+
+  function ladeReparaturpreise() {
+    if (!rpForm) return;
+    fetch("/api/reparatur-preise")
+      .then(function (r) { return r.json(); })
+      .then(function (daten) {
+        aktuelleReparaturen = Array.isArray(daten.reparaturen) ? daten.reparaturen : [];
+        renderRpZeilen();
+      })
+      .catch(function () {
+        rpZeilenListe.innerHTML = '<p class="empty-hint">Reparaturpreise konnten nicht geladen werden.</p>';
+      });
+  }
+
+  if (rpForm) {
+    rpForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      fetch("/api/reparatur-preise", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reparaturen: rpZeilenAusFormular() }),
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (daten) {
+          aktuelleReparaturen = daten.reparaturen || [];
+          renderRpZeilen();
+        });
+    });
+  }
+
+  ladeReparaturpreise();
 })();
