@@ -203,4 +203,5 @@ module.exports = {
   liesAnkaufsniveau,
   schreibeAnkaufsniveau,
   rundeAuf5,
+  findeEigenenVerkaufspreis,
 };

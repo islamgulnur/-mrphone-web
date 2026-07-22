@@ -98,6 +98,7 @@
   var step2Empty = root.querySelector("#rechner-modelle-leer");
   var step2Lokal = root.querySelector("#rechner-modelle-lokal");
   var modelleRetryBtn = root.querySelector("#rechner-modelle-retry");
+  var preisupdateHinweis = root.querySelector("#rechner-preisupdate-hinweis");
 
   var kategorieCache = {};
   var aktuelleGeraeteListe = [];
@@ -137,6 +138,27 @@
   function setFallbackLinks() {
     var url = waLink(fallbackNachricht());
     if (fallbackLink) fallbackLink.href = url;
+  }
+
+  function zeigePreisupdateHinweis() {
+    if (!preisupdateHinweis) return;
+    fetch(assetUrl("preisupdate-meta.json"))
+      .then(function (res) {
+        if (!res.ok) throw new Error("preisupdate-meta.json nicht erreichbar");
+        return res.json();
+      })
+      .then(function (meta) {
+        var teile = String(meta.datum || "").split("-");
+        if (teile.length !== 3) return;
+        var datumFormatiert = teile[2] + "." + teile[1] + "." + teile[0];
+        preisupdateHinweis.textContent = LANG === "en"
+          ? "Prices updated automatically every day – as of: " + datumFormatiert
+          : "Preise täglich automatisch aktualisiert – Stand: " + datumFormatiert;
+        preisupdateHinweis.hidden = false;
+      })
+      .catch(function () {
+        // Meta-Datei fehlt (z. B. vor dem ersten automatischen Lauf) - Hinweis bleibt einfach versteckt.
+      });
   }
 
   /* ---------- Fortschrittsanzeige ---------- */
@@ -406,7 +428,13 @@
 
   /* ---------- Schritt 4: Zustand ---------- */
   function renderZustaende() {
-    zustandGrid.innerHTML = ZUSTAENDE.map(function (z) {
+    // "Neu & versiegelt" nur anzeigen, wenn für diese Variante ein Neu-Marktwert
+    // vorliegt (preise.neuVersiegelt ist sonst null, siehe scripts/update-ankaufspreise.js).
+    var verfuegbareZustaende = ZUSTAENDE.filter(function (z) {
+      if (z.id !== "neuVersiegelt") return true;
+      return !!(state.variante && state.variante.preise && state.variante.preise.neuVersiegelt != null);
+    });
+    zustandGrid.innerHTML = verfuegbareZustaende.map(function (z) {
       var aktivKlasse = state.zustand === z.id ? " active" : "";
       return (
         '<button type="button" class="rechner-zustand-btn' + aktivKlasse + '" data-zustand="' + z.id + '">' +
@@ -478,6 +506,7 @@
   /* ---------- Laden ---------- */
   renderKategorien();
   setFallbackLinks();
+  zeigePreisupdateHinweis();
   updateProgress();
   root.hidden = false;
 })();

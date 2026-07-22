@@ -1049,8 +1049,28 @@
     });
   }
 
+  function ladePreisupdateStatus() {
+    var el = document.getElementById("ankauf-preisupdate-status");
+    if (!el) return;
+    fetch("/preisupdate-meta.json")
+      .then(function (r) {
+        if (!r.ok) throw new Error("preisupdate-meta.json nicht gefunden");
+        return r.json();
+      })
+      .then(function (meta) {
+        var teile = String(meta.datum || "").split("-");
+        var datum = teile.length === 3 ? teile[2] + "." + teile[1] + "." + teile[0] : meta.datum;
+        el.textContent = "Letztes Auto-Update: " + datum + " · " + (meta.aktualisiert || 0) + " Geräte · " + (meta.pruefen || 0) + " Prüffälle";
+        el.hidden = false;
+      })
+      .catch(function () {
+        // Noch kein automatischer Lauf gab es bisher - Statuszeile bleibt versteckt.
+      });
+  }
+
   resetAnkaufForm();
   ladeAnkauf();
+  ladePreisupdateStatus();
 
   /* ---------- Bewertungen ---------- */
   var bwForm = document.getElementById("bewertungen-form");

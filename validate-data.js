@@ -100,6 +100,10 @@ if (Array.isArray(ankaufRoh)) {
         return;
       }
       ZUSTANDS_FELDER.forEach((feld) => {
+        // neuVersiegelt darf null sein: Gerät wird laut eBay-Marktdaten nicht mehr
+        // versiegelt gehandelt (marktwertNeu fehlt) -> Ankaufsrechner blendet die
+        // Stufe dann aus. Alle anderen Stufen bleiben Pflicht-Zahlen >= 0.
+        if (feld === "neuVersiegelt" && v.preise[feld] === null) return;
         if (typeof v.preise[feld] !== "number" || v.preise[feld] < 0) {
           fehler.push(vOrt + ": preise." + feld + " ist keine gültige Zahl.");
         }

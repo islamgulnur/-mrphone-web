@@ -1,0 +1,66 @@
+name: Ankaufspreise automatisch aktualisieren
+
+# Cron ist in UTC (GitHub Actions kennt keine Zeitzonen/DST). 0 2 * * * UTC entspricht
+# ca. 03:00 Uhr MEZ (Winter) bzw. 04:00 Uhr MESZ (Sommer). Zum Anpassen einfach die
+# Uhrzeit hier ändern.
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry-Run (rechnet + loggt, schreibt/committet nichts)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: preise-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Abhängigkeiten installieren
+        run: npm install
+
+      - name: Ankaufspreise aktualisieren
+        env:
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            node scripts/update-ankaufspreise.js --dry-run
+          else
+            node scripts/update-ankaufspreise.js
+          fi
+
+      - name: Änderungen committen (nur bei echten Änderungen, nie bei Dry-Run)
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          if git diff --quiet; then
+            echo "Keine Preisänderungen – kein Commit."
+            exit 0
+          fi
+
+          DATUM=$(node -e "console.log(JSON.parse(require('fs').readFileSync('preisupdate-meta.json','utf8')).datum)")
+          AKTUALISIERT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('preisupdate-meta.json','utf8')).aktualisiert)")
+          UEBERSPRUNGEN=$(node -e "console.log(JSON.parse(require('fs').readFileSync('preisupdate-meta.json','utf8')).uebersprungen)")
+          PRUEFEN=$(node -e "console.log(JSON.parse(require('fs').readFileSync('preisupdate-meta.json','utf8')).pruefen)")
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add geraete-katalog.json ankauf-preise.json ankauf/ preisupdate-meta.json scripts/rotation-state.json logs/
+          git commit -m "Auto-Preisupdate ${DATUM} (${AKTUALISIERT} Geräte aktualisiert, ${UEBERSPRUNGEN} übersprungen, ${PRUEFEN} Prüffälle)"
+          git push
