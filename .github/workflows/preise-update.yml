@@ -12,6 +12,10 @@ on:
         description: "Dry-Run (rechnet + loggt, schreibt/committet nichts)"
         type: boolean
         default: false
+      nur:
+        description: "Optional: nur bestimmte Geräte+Varianten verarbeiten, Format 'id:Variante,id:Variante' (leer lassen für normale Rotation/Budget)"
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -37,14 +41,18 @@ jobs:
 
       - name: Ankaufspreise aktualisieren
         env:
+          SEARCH_API_KEY: ${{ secrets.SEARCH_API_KEY }}
+          # eBay-Secrets bleiben optional erhalten - falls eBay später reaktiviert wird,
+          # genügt es, diese beiden Secrets im Repo zu hinterlegen (siehe EBAY-SETUP.md).
           EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          DRY_RUN_INPUT: ${{ inputs.dry_run }}
+          NUR_INPUT: ${{ inputs.nur }}
         run: |
-          if [ "${{ inputs.dry_run }}" = "true" ]; then
-            node scripts/update-ankaufspreise.js --dry-run
-          else
-            node scripts/update-ankaufspreise.js
-          fi
+          ARGS=()
+          if [ "$DRY_RUN_INPUT" = "true" ]; then ARGS+=(--dry-run); fi
+          if [ -n "$NUR_INPUT" ]; then ARGS+=(--nur="$NUR_INPUT"); fi
+          node scripts/update-ankaufspreise.js "${ARGS[@]}"
 
       - name: Änderungen committen (nur bei echten Änderungen, nie bei Dry-Run)
         if: ${{ inputs.dry_run != true }}
@@ -61,6 +69,6 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add geraete-katalog.json ankauf-preise.json ankauf/ preisupdate-meta.json scripts/rotation-state.json logs/
+          git add geraete-katalog.json ankauf-preise.json ankauf/ preisupdate-meta.json scripts/rotation-state.json scripts/api-budget-state.json logs/
           git commit -m "Auto-Preisupdate ${DATUM} (${AKTUALISIERT} Geräte aktualisiert, ${UEBERSPRUNGEN} übersprungen, ${PRUEFEN} Prüffälle)"
           git push

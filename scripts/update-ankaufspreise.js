@@ -1,19 +1,24 @@
 /**
- * Vollautomatisches, tägliches Ankaufspreis-Update auf Basis echter eBay-Marktdaten
- * (eBay Browse API, Marktplatz EBAY_DE). Ersetzt schrittweise die Schätzformel aus
- * pricing-config.js durch zwei echte Marktanker je Gerät+Variante (gebraucht/neu).
+ * Vollautomatisches, tägliches Ankaufspreis-Update auf Basis echter Marktdaten.
+ * Datenquelle austauschbar (eBay | bezahlte Such-API | Mock, siehe scripts/lib/search-client.js).
+ * Ersetzt schrittweise die Schätzformel aus pricing-config.js durch zwei echte Marktanker
+ * je Gerät+Variante (gebraucht/neu), gefolgt vom Wettbewerbs-Abstand (siehe
+ * scripts/ankaufspreis-config.js), damit der Ankaufspreis bewusst unter dem Niveau der
+ * Online-Ankaufsportale liegt.
  *
  * Ausführen:
  *   node scripts/update-ankaufspreise.js                 (Live-Lauf, braucht Secrets)
  *   node scripts/update-ankaufspreise.js --dry-run        (rechnet+loggt, schreibt nichts)
  *   node scripts/update-ankaufspreise.js --dry-run --mock (wie oben, erzwingt Mock-Daten)
+ *   node scripts/update-ankaufspreise.js --quelle=ebay|search-api|mock
+ *       (Datenquelle erzwingen statt Auto-Erkennung anhand vorhandener Secrets)
  *   node scripts/update-ankaufspreise.js --dry-run --nur=kat-0024:128 GB,kat-0016:128 GB
  *       (nur die angegebenen Geräte+Varianten verarbeiten, ignoriert Rotation/Budget -
  *        für gezielte Demo-/Testläufe)
  *
  * Sicherheitsregeln (siehe CLAUDE.md + Anforderungsspezifikation):
  *   1. preisQuelle:"manuell" wird nie angefasst.
- *   2. Tagesbremse ±10 %/Tag (Ausnahme: allererster eBay-Lauf eines Geräts, s. u.).
+ *   2. Tagesbremse ±10 %/Tag (Ausnahme: allererster echter Marktlauf eines Geräts, s. u.).
  *   3. Konsistenzregel 1: Ankaufspreis nie über eigenem Verkaufspreis (bestand.json).
  *   4. Konsistenzregel 2: marktwertNeu muss > marktwertGebraucht sein, sonst Skip.
  *   5. validate-data.js muss nach der Berechnung grün sein, sonst kein Commit/Schreiben.
@@ -21,7 +26,7 @@
  *   7. Globaler Preisregler (pricing-niveau.json, ±15 %) wirkt zusätzlich obendrauf.
  *
  * Mock-Modus ist NUR zusammen mit --dry-run erlaubt - ein echter (schreibender) Lauf
- * ohne echte eBay-Secrets bricht bewusst ab, statt versehentlich Fantasiepreise in die
+ * ohne echte Secrets bricht bewusst ab, statt versehentlich Fantasiepreise in die
  * echten Datendateien zu schreiben.
  */
 const fs = require("fs");
@@ -29,9 +34,8 @@ const path = require("path");
 const { execFileSync } = require("child_process");
 
 const pricing = require("../pricing-config");
-const config = require("./ankaufspreis-ebay-config");
-const ebayClient = require("./lib/ebay-client");
-const ebayMock = require("./lib/ebay-mock");
+const config = require("./ankaufspreis-config");
+const searchClient = require("./lib/search-client");
 const { backupIfChanged } = require("./backup-data");
 
 const ROOT = path.join(__dirname, "..");
@@ -40,6 +44,7 @@ const ANKAUF_FILE = path.join(ROOT, "ankauf-preise.json");
 const SPLIT_DIR = path.join(ROOT, "ankauf");
 const BESTAND_FILE = path.join(ROOT, "bestand.json");
 const ROTATION_STATE_FILE = path.join(__dirname, "rotation-state.json");
+const BUDGET_STATE_FILE = path.join(__dirname, "api-budget-state.json");
 const META_FILE = path.join(ROOT, "preisupdate-meta.json");
 const LOGS_DIR = path.join(ROOT, "logs");
 const VALIDATE_SCRIPT = path.join(ROOT, "validate-data.js");
@@ -50,18 +55,21 @@ const KATEGORIEN = [
 ];
 
 const ANKAUF_KOMMENTAR =
-  "AUTO-PREISE aus echten eBay-Marktdaten (Browse API, EBAY_DE) - siehe " +
-  "scripts/update-ankaufspreise.js + scripts/ankaufspreis-ebay-config.js. Je Gerät+Variante " +
-  "zwei Marktanker (gebraucht/neu), Ausreißerfilter + Median + Abschlag, 5 Ankaufsstufen als " +
-  "feste Prozentsätze davon, zusätzlich global verschiebbar über pricing-niveau.json. " +
-  "preisQuelle \"manuell\" wird nie automatisch überschrieben. Geräte, die noch keinen " +
-  "eBay-Lauf hatten (marktwertQuelle \"geschaetzt\" im Katalog), tragen weiterhin die " +
-  "ältere Schätzformel aus pricing-config.js, bis sie an der Reihe sind (siehe Rotation, " +
-  "scripts/rotation-state.json).";
+  "AUTO-PREISE aus echten Marktdaten (bezahlte Such-API oder eBay, austauschbar - siehe " +
+  "scripts/lib/search-client.js) - siehe scripts/update-ankaufspreise.js + " +
+  "scripts/ankaufspreis-config.js. Je Gerät+Variante zwei Marktanker (gebraucht/neu), " +
+  "Ausreißerfilter + Median + Abschlag, 5 Ankaufsstufen als feste Prozentsätze davon, " +
+  "danach Wettbewerbs-Abstand (gestaffelter Abzug unter das Niveau der Online-Ankaufsportale), " +
+  "zusätzlich global verschiebbar über pricing-niveau.json. preisQuelle \"manuell\" wird nie " +
+  "automatisch überschrieben. Geräte, die noch keinen echten Marktlauf hatten (marktwertQuelle " +
+  "\"geschaetzt\" im Katalog), tragen weiterhin die ältere Schätzformel aus pricing-config.js, " +
+  "bis sie an der Reihe sind (siehe Rotation, scripts/rotation-state.json).";
 
 function parseArgs(argv) {
   const dryRun = argv.includes("--dry-run");
   const mockErzwungen = argv.includes("--mock");
+  const quelleArg = argv.find((a) => a.startsWith("--quelle="));
+  const quelleErzwungen = quelleArg ? quelleArg.slice("--quelle=".length).trim() : null;
   const nurArg = argv.find((a) => a.startsWith("--nur="));
   const nur = nurArg
     ? nurArg.slice("--nur=".length).split(",").map((paar) => {
@@ -69,7 +77,7 @@ function parseArgs(argv) {
         return { id: (id || "").trim(), bezeichnung: (bezeichnung || "").trim() };
       })
     : null;
-  return { dryRun, mockErzwungen, nur };
+  return { dryRun, mockErzwungen, quelleErzwungen, nur };
 }
 
 function heutigesDatum() {
@@ -81,6 +89,29 @@ function ladeJson(datei, fallback) {
   const inhalt = fs.readFileSync(datei, "utf8");
   if (!inhalt.trim()) return fallback;
   return JSON.parse(inhalt);
+}
+
+// ---------------------------------------------------------------------------
+// Monats-Budget der bezahlten Such-API mitzählen + bei 80% warnen (Anforderung 4).
+// ---------------------------------------------------------------------------
+function aktualisiereApiBudget({ datum, calls }) {
+  const aktuellerMonat = datum.slice(0, 7); // "YYYY-MM"
+  const stand = ladeJson(BUDGET_STATE_FILE, { monat: aktuellerMonat, verbraucht: 0 });
+  const verbraucht = (stand.monat === aktuellerMonat ? stand.verbraucht : 0) + calls;
+
+  fs.writeFileSync(BUDGET_STATE_FILE, JSON.stringify({ monat: aktuellerMonat, verbraucht }, null, 2) + "\n", "utf8");
+
+  const anteil = config.API_BUDGET_MONATLICH > 0 ? verbraucht / config.API_BUDGET_MONATLICH : 0;
+  console.log(
+    "Such-API-Budget diesen Monat: " + verbraucht + "/" + config.API_BUDGET_MONATLICH +
+    " (" + Math.round(anteil * 100) + "%)"
+  );
+  if (anteil >= config.API_BUDGET_WARNSCHWELLE) {
+    console.warn(
+      "⚠️  Such-API-Budget: " + Math.round(anteil * 100) + "% des Monatskontingents verbraucht (" +
+      verbraucht + "/" + config.API_BUDGET_MONATLICH + ")."
+    );
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -125,40 +156,60 @@ function waehleHeutigeGeraete({ katalog, ankaufAltById, rotationState, nurFilter
 }
 
 // ---------------------------------------------------------------------------
-// Marktabfrage (echt oder Mock) + Ausreißerfilter/Median + Abschlag
+// Marktabfrage (Datenquelle austauschbar, siehe lib/search-client.js) + Ausreißerfilter/
+// Median + Abschlag
 // ---------------------------------------------------------------------------
-async function holeMarktwert({ geraet, variante, zustand, mockModus, accessToken, budgetZaehler }) {
-  const ergebnis = mockModus
-    ? ebayMock.sucheMarktMock({ geraet, variante, zustand })
-    : await ebayClient.sucheMarkt({
-        accessToken,
-        marke: geraet.marke,
-        modell: geraet.modell,
-        variante: variante.bezeichnung,
-        zustand,
-        budgetZaehler,
-      });
+async function holeMarktwert({ geraet, variante, zustand, zugangskontext, budgetZaehler }) {
+  const ergebnis = await searchClient.sucheMarkt({ zugangskontext, geraet, variante, zustand, budgetZaehler });
 
   if (ergebnis.preise.length < config.MIN_TREFFER) {
     return { treffer: ergebnis.preise.length, marktwert: null, quartil: null };
   }
 
-  const quartil = ebayClient.quartilMedian(ergebnis.preise, config.QUARTIL_KAPPEN);
+  const quartil = searchClient.quartilMedian(ergebnis.preise, config.QUARTIL_KAPPEN);
   const abschlag = zustand === "NEW" ? config.ABSCHLAG_NEU : config.ABSCHLAG_GEBRAUCHT;
   const marktwert = quartil.medianNachFilter * (1 - abschlag);
   return { treffer: ergebnis.preise.length, marktwert, quartil, abschlag };
 }
 
 // ---------------------------------------------------------------------------
-// 5 Ankaufsstufen berechnen + Tagesbremse + Konsistenzregel 1
+// 5 Ankaufsstufen berechnen + Wettbewerbs-Abstand + Tagesbremse + Konsistenzregel 1
 // ---------------------------------------------------------------------------
 function berechneStufen({ marktwertGebraucht, marktwertNeu, niveauFaktor }) {
   const stufen = {};
   pricing.ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
     const basis = stufe === "neuVersiegelt" ? marktwertNeu : marktwertGebraucht;
-    stufen[stufe] = basis == null ? null : pricing.rundeAuf5(basis * config.ANKAUF_PROZENTSAETZE_EBAY[stufe] * niveauFaktor);
+    stufen[stufe] = basis == null ? null : pricing.rundeAuf5(basis * config.ANKAUF_PROZENTSAETZE_MARKT[stufe] * niveauFaktor);
   });
   return stufen;
+}
+
+function rundeWettbewerb(zahl) {
+  return Math.max(config.WETTBEWERB_MINDESTPREIS, Math.round(zahl / config.WETTBEWERB_RUNDUNG) * config.WETTBEWERB_RUNDUNG);
+}
+
+// Wettbewerbs-Abstand (siehe ankaufspreis-config.js): nach der reinen Formel-Berechnung
+// gestaffelter Abzug, damit der Ankaufspreis bewusst unter dem Niveau der Online-
+// Ankaufsportale liegt. Wirkt je Zustandsstufe unabhängig, anhand des jeweils EIGENEN
+// berechneten (Vor-Abzug-)Preises dieser Stufe. Globaler Deckel (WETTBEWERB_MAX_ABZUG_PROZENT)
+// gilt für alle Stufen, damit ein fester Euro-Abzug bei günstigen Geräten nicht
+// überproportional viel Prozent des Preises frisst.
+function wendeWettbewerbsAbstandAn(stufenRoh) {
+  const stufenNachAbstand = {};
+  pricing.ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
+    const wert = stufenRoh[stufe];
+    if (wert == null) {
+      stufenNachAbstand[stufe] = null;
+      return;
+    }
+    let abzug = wert <= config.WETTBEWERB_SCHWELLE_1 ? config.WETTBEWERB_ABZUG_BIS_100
+      : wert <= config.WETTBEWERB_SCHWELLE_2 ? config.WETTBEWERB_ABZUG_100_BIS_200
+      : wert <= config.WETTBEWERB_SCHWELLE_3 ? config.WETTBEWERB_ABZUG_200_BIS_500
+      : config.WETTBEWERB_ABZUG_UEBER_500;
+    abzug = Math.min(abzug, wert * config.WETTBEWERB_MAX_ABZUG_PROZENT);
+    stufenNachAbstand[stufe] = rundeWettbewerb(wert - abzug);
+  });
+  return stufenNachAbstand;
 }
 
 function wendeTagesbremseAn({ stufenRoh, altPreise, istErsterLauf }) {
@@ -204,7 +255,7 @@ function wendeKonsistenzregel1An({ stufenFinal, geraet, variante, bestandListe }
 // Hauptlogik je Variante - gibt { variante-Objekt für ankauf-preise.json,
 // protokollEintrag } zurück.
 // ---------------------------------------------------------------------------
-async function verarbeiteVariante({ geraet, variante, altVariante, mockModus, accessToken, budgetZaehler, niveauFaktor, bestandListe, log }) {
+async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontext, budgetZaehler, niveauFaktor, bestandListe, log }) {
   const basis = { marke: geraet.marke, modell: geraet.modell, variante: variante.bezeichnung };
 
   if (altVariante && altVariante.preisQuelle === "manuell") {
@@ -214,9 +265,9 @@ async function verarbeiteVariante({ geraet, variante, altVariante, mockModus, ac
   let gebraucht;
   let neu;
   try {
-    gebraucht = await holeMarktwert({ geraet, variante, zustand: "USED", mockModus, accessToken, budgetZaehler });
+    gebraucht = await holeMarktwert({ geraet, variante, zustand: "USED", zugangskontext, budgetZaehler });
   } catch (e) {
-    if (e instanceof ebayClient.BudgetErschoepftFehler) {
+    if (e instanceof searchClient.BudgetErschoepftFehler) {
       return { variante: altVariante || bauePlatzhalterVariante(variante), protokoll: { typ: "uebersprungen", ...basis, grund: "Tagesbudget erschöpft" } };
     }
     throw e;
@@ -230,9 +281,9 @@ async function verarbeiteVariante({ geraet, variante, altVariante, mockModus, ac
   }
 
   try {
-    neu = await holeMarktwert({ geraet, variante, zustand: "NEW", mockModus, accessToken, budgetZaehler });
+    neu = await holeMarktwert({ geraet, variante, zustand: "NEW", zugangskontext, budgetZaehler });
   } catch (e) {
-    if (e instanceof ebayClient.BudgetErschoepftFehler) {
+    if (e instanceof searchClient.BudgetErschoepftFehler) {
       return { variante: altVariante || bauePlatzhalterVariante(variante), protokoll: { typ: "uebersprungen", ...basis, grund: "Tagesbudget erschöpft (nach Gebraucht-Anfrage)" } };
     }
     throw e;
@@ -248,9 +299,10 @@ async function verarbeiteVariante({ geraet, variante, altVariante, mockModus, ac
   }
 
   const stufenRoh = berechneStufen({ marktwertGebraucht: gebraucht.marktwert, marktwertNeu, niveauFaktor });
-  const istErsterLauf = !geraet.marktwertQuelle || geraet.marktwertQuelle !== "ebay-auto";
+  const stufenNachAbstand = wendeWettbewerbsAbstandAn(stufenRoh);
+  const istErsterLauf = !geraet.marktwertQuelle || geraet.marktwertQuelle === "geschaetzt";
   const { stufenFinal, pruefenGruende: bremseGruende } = wendeTagesbremseAn({
-    stufenRoh, altPreise: altVariante && altVariante.preise, istErsterLauf,
+    stufenRoh: stufenNachAbstand, altPreise: altVariante && altVariante.preise, istErsterLauf,
   });
   const konsistenzGruende = wendeKonsistenzregel1An({ stufenFinal, geraet, variante, bestandListe });
   const alleGruende = [...bremseGruende, ...konsistenzGruende];
@@ -267,6 +319,8 @@ async function verarbeiteVariante({ geraet, variante, altVariante, mockModus, ac
     neuMedianVor: neu.quartil && neu.quartil.medianVorFilter,
     neuMedianNach: neu.quartil && neu.quartil.medianNachFilter,
     marktwertNeu,
+    stufenVorAbstand: stufenRoh,
+    stufenNachAbstand,
     stufen: stufenFinal,
     altStufen: altVariante && altVariante.preise,
     istErsterLauf,
@@ -293,16 +347,25 @@ function bauePlatzhalterVariante(variante) {
 // ---------------------------------------------------------------------------
 function formatiereRechnung(r) {
   const zeilen = [];
-  zeilen.push("**" + r.marke + " " + r.modell + " (" + r.variante + ")**" + (r.istErsterLauf ? " _(erster eBay-Lauf – Tagesbremse übersprungen)_" : ""));
+  zeilen.push("**" + r.marke + " " + r.modell + " (" + r.variante + ")**" + (r.istErsterLauf ? " _(erster echter Marktlauf – Tagesbremse übersprungen)_" : ""));
   zeilen.push("- Gebraucht: " + r.gebrauchtTreffer + " Treffer, Median vor Filter " + rund(r.gebrauchtMedianVor) + " €, nach Filter " + rund(r.gebrauchtMedianNach) + " € → marktwertGebraucht " + rund(r.marktwertGebraucht) + " € (−" + Math.round(config.ABSCHLAG_GEBRAUCHT * 100) + "%)");
   if (r.marktwertNeu != null) {
     zeilen.push("- Neu: " + r.neuTreffer + " Treffer, Median vor Filter " + rund(r.neuMedianVor) + " €, nach Filter " + rund(r.neuMedianNach) + " € → marktwertNeu " + rund(r.marktwertNeu) + " € (−" + Math.round(config.ABSCHLAG_NEU * 100) + "%)");
   } else {
     zeilen.push("- Neu: " + r.neuTreffer + " Treffer (< " + config.MIN_TREFFER + ") → marktwertNeu = null (Stufe „Neu & versiegelt\" wird ausgeblendet)");
   }
+  zeilen.push("- Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):");
   pricing.ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
+    const vor = r.stufenVorAbstand && r.stufenVorAbstand[stufe];
+    const nach = r.stufenNachAbstand && r.stufenNachAbstand[stufe];
     const alt = r.altStufen && r.altStufen[stufe];
-    zeilen.push("  - " + stufe + ": " + (alt != null ? rund(alt) + " € → " : "") + (r.stufen[stufe] == null ? "–" : rund(r.stufen[stufe]) + " €"));
+    zeilen.push(
+      "  - " + stufe + ": " +
+      (vor == null ? "–" : rund(vor) + " €") + " → " +
+      (nach == null ? "–" : rund(nach) + " €") +
+      (alt != null ? " (bisher " + rund(alt) + " €)" : "") +
+      " → final " + (r.stufen[stufe] == null ? "–" : rund(r.stufen[stufe]) + " €")
+    );
   });
   if (r.gruende.length) {
     zeilen.push("- **Ausgelöste Regeln:** " + r.gruende.join("; "));
@@ -355,21 +418,29 @@ function schreibeLog({ datum, protokolle, dryRun }) {
 // Hauptprogramm
 // ---------------------------------------------------------------------------
 async function main() {
-  const { dryRun, mockErzwungen, nur } = parseArgs(process.argv.slice(2));
-  const hatSecrets = !!(process.env.EBAY_CLIENT_ID && process.env.EBAY_CLIENT_SECRET);
-  const mockModus = mockErzwungen || !hatSecrets;
+  const { dryRun, mockErzwungen, quelleErzwungen, nur } = parseArgs(process.argv.slice(2));
+  const quelle = searchClient.bestimmeDatenquelle({
+    quelleErzwungen: quelleErzwungen || (mockErzwungen ? searchClient.DATENQUELLEN.MOCK : null),
+  });
+  const mockModus = quelle === searchClient.DATENQUELLEN.MOCK;
 
   if (mockModus && !dryRun) {
     console.error(
       "Abbruch: Mock-Modus ist nur zusammen mit --dry-run erlaubt.\n" +
-      (hatSecrets ? "--mock wurde explizit gesetzt, aber " : "EBAY_CLIENT_ID/EBAY_CLIENT_SECRET fehlen, und ") +
-      "ein echter (schreibender) Lauf ohne echte eBay-Marktdaten würde Fantasiepreise in die " +
-      "Datendateien schreiben. Secrets einrichten: siehe EBAY-SETUP.md."
+      (mockErzwungen || quelleErzwungen ? "Mock wurde explizit erzwungen, aber " : "Weder SEARCH_API_KEY noch EBAY_CLIENT_ID/EBAY_CLIENT_SECRET gefunden, und ") +
+      "ein echter (schreibender) Lauf ohne echte Marktdaten würde Fantasiepreise in die " +
+      "Datendateien schreiben. Zugang einrichten: siehe SEARCH-API-SETUP.md (oder EBAY-SETUP.md für eBay)."
     );
     process.exit(1);
   }
   if (mockModus) {
-    console.log(hatSecrets ? "Mock-Modus erzwungen (--mock)." : "Keine EBAY_CLIENT_ID/EBAY_CLIENT_SECRET gefunden – nutze Mock-Marktdaten (siehe EBAY-SETUP.md für echten Zugang).");
+    console.log(
+      (mockErzwungen || quelleErzwungen)
+        ? "Mock-Modus erzwungen."
+        : "Keine SEARCH_API_KEY/EBAY_CLIENT_ID/EBAY_CLIENT_SECRET gefunden – nutze Mock-Marktdaten (siehe SEARCH-API-SETUP.md für echten Zugang)."
+    );
+  } else {
+    console.log("Datenquelle: " + quelle + ".");
   }
 
   const katalog = ladeJson(KATALOG_FILE, []);
@@ -387,11 +458,8 @@ async function main() {
     (nur ? " (--nur-Filter aktiv)" : " (davon Rotationsscheibe " + rotationsGroesse + "/" + rotationsGesamt + ")")
   );
 
-  let accessToken = null;
-  const budgetZaehler = mockModus ? null : ebayClient.erstelleBudgetZaehler(config.API_BUDGET_TAEGLICH);
-  if (!mockModus) {
-    accessToken = await ebayClient.holeAccessToken(process.env.EBAY_CLIENT_ID, process.env.EBAY_CLIENT_SECRET);
-  }
+  const budgetZaehler = mockModus ? null : searchClient.erstelleBudgetZaehler(config.API_BUDGET_TAEGLICH);
+  const zugangskontext = await searchClient.holeZugangskontext(quelle);
 
   const niveauFaktor = 1 + pricing.liesAnkaufsniveau() / 100;
   const datum = heutigesDatum();
@@ -422,7 +490,7 @@ async function main() {
       }
 
       const ergebnis = await verarbeiteVariante({
-        geraet, variante, altVariante, mockModus, accessToken, budgetZaehler, niveauFaktor, bestandListe,
+        geraet, variante, altVariante, zugangskontext, budgetZaehler, niveauFaktor, bestandListe,
         log: (r) => { if (dryRun) console.log("\n" + formatiereRechnung(r)); },
       });
       neueVarianten.push(ergebnis.variante);
@@ -453,7 +521,7 @@ async function main() {
       ...g,
       marktwertGebraucht: Math.round(update.marktwertGebraucht),
       marktwertNeu: update.marktwertNeu == null ? null : Math.round(update.marktwertNeu),
-      marktwertQuelle: "ebay-auto",
+      marktwertQuelle: quelle + "-auto",
       marktDatenStand: datum,
     };
   });
@@ -466,6 +534,10 @@ async function main() {
     "\nZusammenfassung: " + aktualisiertAnzahl + " Geräte aktualisiert, " +
     uebersprungenAnzahl + " übersprungen, " + pruefenAnzahl + " PRÜFEN-Fälle."
   );
+
+  if (quelle === searchClient.DATENQUELLEN.SEARCH_API && budgetZaehler) {
+    aktualisiereApiBudget({ datum, calls: budgetZaehler.verbraucht });
+  }
 
   schreibeLog({ datum, protokolle, dryRun });
 
