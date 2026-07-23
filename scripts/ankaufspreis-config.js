@@ -15,8 +15,11 @@
  * wirkt zusätzlich obendrauf) und rundeAuf5().
  */
 
-// Mindestanzahl Treffer je Marktabfrage (gebraucht/neu), sonst Gerät überspringen.
-const MIN_TREFFER = 5;
+// Mindestanzahl Treffer je Marktabfrage, sonst Stufe überspringen (bzw. bei Gebraucht
+// das ganze Gerät). Neuware/versiegelt hat am deutschen Markt strukturell weniger
+// Angebote als Gebrauchtware, daher eigene (niedrigere) Schwelle.
+const MIN_TREFFER_GEBRAUCHT = 5;
+const MIN_TREFFER_NEU = 3;
 
 // Ausreißerfilter: unteres UND oberes Viertel der sortierten Trefferliste kappen,
 // bevor der Median gebildet wird (0.25 = je 25% an beiden Enden).
@@ -91,7 +94,8 @@ const API_BUDGET_MONATLICH = 2500;
 const API_BUDGET_WARNSCHWELLE = 0.80; // Warnung ab 80% Verbrauch
 
 module.exports = {
-  MIN_TREFFER,
+  MIN_TREFFER_GEBRAUCHT,
+  MIN_TREFFER_NEU,
   QUARTIL_KAPPEN,
   ABSCHLAG_GEBRAUCHT,
   ABSCHLAG_NEU,

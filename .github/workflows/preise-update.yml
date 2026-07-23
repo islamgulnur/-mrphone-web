@@ -16,6 +16,10 @@ on:
         description: "Optional: nur bestimmte Geräte+Varianten verarbeiten, Format 'id:Variante,id:Variante' (leer lassen für normale Rotation/Budget)"
         type: string
         default: ""
+      debug_treffer:
+        description: "Optional: Suchstring + erste 5 Rohtreffer (Titel/Preis/Quelle) für genau ein Gerät+Variante ins Log schreiben, Format 'id:Variante'"
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -48,10 +52,12 @@ jobs:
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
           DRY_RUN_INPUT: ${{ inputs.dry_run }}
           NUR_INPUT: ${{ inputs.nur }}
+          DEBUG_TREFFER_INPUT: ${{ inputs.debug_treffer }}
         run: |
           ARGS=()
           if [ "$DRY_RUN_INPUT" = "true" ]; then ARGS+=(--dry-run); fi
           if [ -n "$NUR_INPUT" ]; then ARGS+=(--nur="$NUR_INPUT"); fi
+          if [ -n "$DEBUG_TREFFER_INPUT" ]; then ARGS+=(--debug-treffer="$DEBUG_TREFFER_INPUT"); fi
           node scripts/update-ankaufspreise.js "${ARGS[@]}"
 
       - name: Änderungen committen (nur bei echten Änderungen, nie bei Dry-Run)

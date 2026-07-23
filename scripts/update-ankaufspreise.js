@@ -15,6 +15,9 @@
  *   node scripts/update-ankaufspreise.js --dry-run --nur=kat-0024:128 GB,kat-0016:128 GB
  *       (nur die angegebenen Geräte+Varianten verarbeiten, ignoriert Rotation/Budget -
  *        für gezielte Demo-/Testläufe)
+ *   node scripts/update-ankaufspreise.js --dry-run --nur=kat-0024:128 GB --debug-treffer=kat-0024:128 GB
+ *       (gibt zusätzlich den abgesetzten Suchstring + die ersten 5 Rohtreffer (Titel/Preis/
+ *        Quelle) für genau dieses Gerät+Variante aus - zur Diagnose bei zu wenigen Treffern)
  *
  * Sicherheitsregeln (siehe CLAUDE.md + Anforderungsspezifikation):
  *   1. preisQuelle:"manuell" wird nie angefasst.
@@ -77,7 +80,14 @@ function parseArgs(argv) {
         return { id: (id || "").trim(), bezeichnung: (bezeichnung || "").trim() };
       })
     : null;
-  return { dryRun, mockErzwungen, quelleErzwungen, nur };
+  const debugTrefferArg = argv.find((a) => a.startsWith("--debug-treffer="));
+  const debugTreffer = debugTrefferArg
+    ? (() => {
+        const [id, bezeichnung] = debugTrefferArg.slice("--debug-treffer=".length).split(":");
+        return { id: (id || "").trim(), bezeichnung: (bezeichnung || "").trim() };
+      })()
+    : null;
+  return { dryRun, mockErzwungen, quelleErzwungen, nur, debugTreffer };
 }
 
 function heutigesDatum() {
@@ -159,10 +169,20 @@ function waehleHeutigeGeraete({ katalog, ankaufAltById, rotationState, nurFilter
 // Marktabfrage (Datenquelle austauschbar, siehe lib/search-client.js) + Ausreißerfilter/
 // Median + Abschlag
 // ---------------------------------------------------------------------------
-async function holeMarktwert({ geraet, variante, zustand, zugangskontext, budgetZaehler }) {
+async function holeMarktwert({ geraet, variante, zustand, zugangskontext, budgetZaehler, debugTreffer }) {
   const ergebnis = await searchClient.sucheMarkt({ zugangskontext, geraet, variante, zustand, budgetZaehler });
 
-  if (ergebnis.preise.length < config.MIN_TREFFER) {
+  if (debugTreffer) {
+    console.log(
+      "\n[DEBUG] " + geraet.marke + " " + geraet.modell + " (" + variante.bezeichnung + ") – " + zustand + "\n" +
+      "  Suchstring: " + (ergebnis.suchstring || "(kein suchstring von dieser Quelle geliefert)") + "\n" +
+      "  Rohtreffer (erste " + (ergebnis.rohtreffer ? ergebnis.rohtreffer.length : 0) + "): " +
+      JSON.stringify(ergebnis.rohtreffer || [], null, 2)
+    );
+  }
+
+  const mindestTreffer = zustand === "NEW" ? config.MIN_TREFFER_NEU : config.MIN_TREFFER_GEBRAUCHT;
+  if (ergebnis.preise.length < mindestTreffer) {
     return { treffer: ergebnis.preise.length, marktwert: null, quartil: null };
   }
 
@@ -255,7 +275,7 @@ function wendeKonsistenzregel1An({ stufenFinal, geraet, variante, bestandListe }
 // Hauptlogik je Variante - gibt { variante-Objekt für ankauf-preise.json,
 // protokollEintrag } zurück.
 // ---------------------------------------------------------------------------
-async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontext, budgetZaehler, niveauFaktor, bestandListe, log }) {
+async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontext, budgetZaehler, niveauFaktor, bestandListe, log, debugTreffer }) {
   const basis = { marke: geraet.marke, modell: geraet.modell, variante: variante.bezeichnung };
 
   if (altVariante && altVariante.preisQuelle === "manuell") {
@@ -265,7 +285,7 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
   let gebraucht;
   let neu;
   try {
-    gebraucht = await holeMarktwert({ geraet, variante, zustand: "USED", zugangskontext, budgetZaehler });
+    gebraucht = await holeMarktwert({ geraet, variante, zustand: "USED", zugangskontext, budgetZaehler, debugTreffer });
   } catch (e) {
     if (e instanceof searchClient.BudgetErschoepftFehler) {
       return { variante: altVariante || bauePlatzhalterVariante(variante), protokoll: { typ: "uebersprungen", ...basis, grund: "Tagesbudget erschöpft" } };
@@ -276,12 +296,12 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
   if (gebraucht.marktwert == null) {
     return {
       variante: altVariante || bauePlatzhalterVariante(variante),
-      protokoll: { typ: "uebersprungen", ...basis, grund: "zu wenige Gebraucht-Treffer (" + gebraucht.treffer + " < " + config.MIN_TREFFER + ")" },
+      protokoll: { typ: "uebersprungen", ...basis, grund: "zu wenige Gebraucht-Treffer (" + gebraucht.treffer + " < " + config.MIN_TREFFER_GEBRAUCHT + ")" },
     };
   }
 
   try {
-    neu = await holeMarktwert({ geraet, variante, zustand: "NEW", zugangskontext, budgetZaehler });
+    neu = await holeMarktwert({ geraet, variante, zustand: "NEW", zugangskontext, budgetZaehler, debugTreffer });
   } catch (e) {
     if (e instanceof searchClient.BudgetErschoepftFehler) {
       return { variante: altVariante || bauePlatzhalterVariante(variante), protokoll: { typ: "uebersprungen", ...basis, grund: "Tagesbudget erschöpft (nach Gebraucht-Anfrage)" } };
@@ -352,7 +372,7 @@ function formatiereRechnung(r) {
   if (r.marktwertNeu != null) {
     zeilen.push("- Neu: " + r.neuTreffer + " Treffer, Median vor Filter " + rund(r.neuMedianVor) + " €, nach Filter " + rund(r.neuMedianNach) + " € → marktwertNeu " + rund(r.marktwertNeu) + " € (−" + Math.round(config.ABSCHLAG_NEU * 100) + "%)");
   } else {
-    zeilen.push("- Neu: " + r.neuTreffer + " Treffer (< " + config.MIN_TREFFER + ") → marktwertNeu = null (Stufe „Neu & versiegelt\" wird ausgeblendet)");
+    zeilen.push("- Neu: " + r.neuTreffer + " Treffer (< " + config.MIN_TREFFER_NEU + ") → marktwertNeu = null (Stufe „Neu & versiegelt\" wird ausgeblendet)");
   }
   zeilen.push("- Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):");
   pricing.ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
@@ -418,7 +438,7 @@ function schreibeLog({ datum, protokolle, dryRun }) {
 // Hauptprogramm
 // ---------------------------------------------------------------------------
 async function main() {
-  const { dryRun, mockErzwungen, quelleErzwungen, nur } = parseArgs(process.argv.slice(2));
+  const { dryRun, mockErzwungen, quelleErzwungen, nur, debugTreffer } = parseArgs(process.argv.slice(2));
   const quelle = searchClient.bestimmeDatenquelle({
     quelleErzwungen: quelleErzwungen || (mockErzwungen ? searchClient.DATENQUELLEN.MOCK : null),
   });
@@ -489,9 +509,11 @@ async function main() {
         continue;
       }
 
+      const debugTrifftZu = !!(debugTreffer && debugTreffer.id === geraet.id && debugTreffer.bezeichnung === variante.bezeichnung);
       const ergebnis = await verarbeiteVariante({
         geraet, variante, altVariante, zugangskontext, budgetZaehler, niveauFaktor, bestandListe,
         log: (r) => { if (dryRun) console.log("\n" + formatiereRechnung(r)); },
+        debugTreffer: debugTrifftZu,
       });
       neueVarianten.push(ergebnis.variante);
       protokolle.push(ergebnis.protokoll);

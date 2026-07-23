@@ -11,9 +11,19 @@ const SEARCH_URL = "https://google.serper.dev/shopping";
 
 // Deutscher Such-Zusatz je interner Zustand-Art, damit die Google-Shopping-Treffer zum
 // gewünschten Zustand passen (Serper selbst kennt keinen "conditions"-Filter wie eBay).
+//
+// WICHTIG: Google Shopping (die Datenquelle hinter Serpers /shopping-Endpunkt) indiziert
+// überwiegend strukturierte Produktfeeds regulärer Händler - deren Titel lauten schlicht
+// "Apple iPhone 15 128GB", NIEMALS mit Kleinanzeigen-Jargon wie "versiegelt"/"OVP". Ein
+// Zusatz wie "neu versiegelt OVP" filtert die Treffer fast auf null herunter (beobachtet:
+// 0-3 Treffer statt Dutzenden), weil kaum ein Feed-Titel alle drei Wörter enthält. Für
+// NEW deshalb KEIN Zusatz - Google Shopping listet ohnehin überwiegend Neuware regulärer
+// Händler, das entspricht direkt marktwertNeu. "gebraucht" für USED funktioniert dagegen,
+// weil das tatsächliche Standard-Vokabular deutscher Refurbished-Händler (rebuy,
+// asgoodasnew, Back Market, ...) in deren echten Produkttiteln ist.
 const SUCHZUSATZ_ZUSTAND = {
   USED: "gebraucht",
-  NEW: "neu versiegelt OVP",
+  NEW: "",
 };
 
 function baueSuchstring(marke, modell, variante, zustand) {
@@ -91,7 +101,16 @@ async function sucheMarkt({ apiKey, marke, modell, variante, zustand, budgetZaeh
     .map((t) => parsePreis(t.price))
     .filter((p) => Number.isFinite(p) && p > 0);
 
-  return { preise, gesamtTreffer: treffer.length };
+  // Erste 5 Rohtreffer (Titel/Preis-String/Quelle/geparster Preis) für Diagnosezwecke,
+  // z. B. über --debug-treffer=id:variante in scripts/update-ankaufspreise.js.
+  const rohtreffer = treffer.slice(0, 5).map((t) => ({
+    titel: t.title,
+    preisString: t.price,
+    preisGeparst: parsePreis(t.price),
+    quelle: t.source,
+  }));
+
+  return { preise, gesamtTreffer: treffer.length, suchstring: baueSuchstring(marke, modell, variante, zustand), rohtreffer };
 }
 
 module.exports = { sucheMarkt, baueSuchstring, parsePreis };
