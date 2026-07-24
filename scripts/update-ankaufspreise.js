@@ -1,6 +1,6 @@
 /**
  * Vollautomatisches, tägliches Ankaufspreis-Update auf Basis echter Marktdaten.
- * Datenquelle austauschbar (eBay | bezahlte Such-API | Mock, siehe scripts/lib/search-client.js).
+ * Datenquelle: eBay Browse API (Marktplatz EBAY_DE), siehe scripts/lib/search-client.js.
  * Ersetzt schrittweise die Schätzformel aus pricing-config.js durch zwei echte Marktanker
  * je Gerät+Variante (gebraucht/neu), gefolgt vom Wettbewerbs-Abstand (siehe
  * scripts/ankaufspreis-config.js), damit der Ankaufspreis bewusst unter dem Niveau der
@@ -10,7 +10,7 @@
  *   node scripts/update-ankaufspreise.js                 (Live-Lauf, braucht Secrets)
  *   node scripts/update-ankaufspreise.js --dry-run        (rechnet+loggt, schreibt nichts)
  *   node scripts/update-ankaufspreise.js --dry-run --mock (wie oben, erzwingt Mock-Daten)
- *   node scripts/update-ankaufspreise.js --quelle=ebay|search-api|mock
+ *   node scripts/update-ankaufspreise.js --quelle=ebay|mock
  *       (Datenquelle erzwingen statt Auto-Erkennung anhand vorhandener Secrets)
  *   node scripts/update-ankaufspreise.js --dry-run --nur=kat-0024:128 GB,kat-0016:128 GB
  *       (nur die angegebenen Geräte+Varianten verarbeiten, ignoriert Rotation/Budget -
@@ -47,7 +47,6 @@ const ANKAUF_FILE = path.join(ROOT, "ankauf-preise.json");
 const SPLIT_DIR = path.join(ROOT, "ankauf");
 const BESTAND_FILE = path.join(ROOT, "bestand.json");
 const ROTATION_STATE_FILE = path.join(__dirname, "rotation-state.json");
-const BUDGET_STATE_FILE = path.join(__dirname, "api-budget-state.json");
 const META_FILE = path.join(ROOT, "preisupdate-meta.json");
 const LOGS_DIR = path.join(ROOT, "logs");
 const VALIDATE_SCRIPT = path.join(ROOT, "validate-data.js");
@@ -58,8 +57,8 @@ const KATEGORIEN = [
 ];
 
 const ANKAUF_KOMMENTAR =
-  "AUTO-PREISE aus echten Marktdaten (bezahlte Such-API oder eBay, austauschbar - siehe " +
-  "scripts/lib/search-client.js) - siehe scripts/update-ankaufspreise.js + " +
+  "AUTO-PREISE aus echten eBay-Marktdaten (Browse API, siehe scripts/lib/search-client.js) " +
+  "- siehe scripts/update-ankaufspreise.js + " +
   "scripts/ankaufspreis-config.js. Je Gerät+Variante zwei Marktanker (gebraucht/neu), " +
   "Ausreißerfilter + Median + Abschlag, 5 Ankaufsstufen als feste Prozentsätze davon, " +
   "danach Wettbewerbs-Abstand (gestaffelter Abzug unter das Niveau der Online-Ankaufsportale), " +
@@ -99,29 +98,6 @@ function ladeJson(datei, fallback) {
   const inhalt = fs.readFileSync(datei, "utf8");
   if (!inhalt.trim()) return fallback;
   return JSON.parse(inhalt);
-}
-
-// ---------------------------------------------------------------------------
-// Monats-Budget der bezahlten Such-API mitzählen + bei 80% warnen (Anforderung 4).
-// ---------------------------------------------------------------------------
-function aktualisiereApiBudget({ datum, calls }) {
-  const aktuellerMonat = datum.slice(0, 7); // "YYYY-MM"
-  const stand = ladeJson(BUDGET_STATE_FILE, { monat: aktuellerMonat, verbraucht: 0 });
-  const verbraucht = (stand.monat === aktuellerMonat ? stand.verbraucht : 0) + calls;
-
-  fs.writeFileSync(BUDGET_STATE_FILE, JSON.stringify({ monat: aktuellerMonat, verbraucht }, null, 2) + "\n", "utf8");
-
-  const anteil = config.API_BUDGET_MONATLICH > 0 ? verbraucht / config.API_BUDGET_MONATLICH : 0;
-  console.log(
-    "Such-API-Budget diesen Monat: " + verbraucht + "/" + config.API_BUDGET_MONATLICH +
-    " (" + Math.round(anteil * 100) + "%)"
-  );
-  if (anteil >= config.API_BUDGET_WARNSCHWELLE) {
-    console.warn(
-      "⚠️  Such-API-Budget: " + Math.round(anteil * 100) + "% des Monatskontingents verbraucht (" +
-      verbraucht + "/" + config.API_BUDGET_MONATLICH + ")."
-    );
-  }
 }
 
 // ---------------------------------------------------------------------------
@@ -447,9 +423,9 @@ async function main() {
   if (mockModus && !dryRun) {
     console.error(
       "Abbruch: Mock-Modus ist nur zusammen mit --dry-run erlaubt.\n" +
-      (mockErzwungen || quelleErzwungen ? "Mock wurde explizit erzwungen, aber " : "Weder SEARCH_API_KEY noch EBAY_CLIENT_ID/EBAY_CLIENT_SECRET gefunden, und ") +
+      (mockErzwungen || quelleErzwungen ? "Mock wurde explizit erzwungen, aber " : "Keine EBAY_CLIENT_ID/EBAY_CLIENT_SECRET gefunden, und ") +
       "ein echter (schreibender) Lauf ohne echte Marktdaten würde Fantasiepreise in die " +
-      "Datendateien schreiben. Zugang einrichten: siehe SEARCH-API-SETUP.md (oder EBAY-SETUP.md für eBay)."
+      "Datendateien schreiben. Zugang einrichten: siehe EBAY-SETUP.md."
     );
     process.exit(1);
   }
@@ -457,7 +433,7 @@ async function main() {
     console.log(
       (mockErzwungen || quelleErzwungen)
         ? "Mock-Modus erzwungen."
-        : "Keine SEARCH_API_KEY/EBAY_CLIENT_ID/EBAY_CLIENT_SECRET gefunden – nutze Mock-Marktdaten (siehe SEARCH-API-SETUP.md für echten Zugang)."
+        : "Keine EBAY_CLIENT_ID/EBAY_CLIENT_SECRET gefunden – nutze Mock-Marktdaten (siehe EBAY-SETUP.md für echten Zugang)."
     );
   } else {
     console.log("Datenquelle: " + quelle + ".");
@@ -556,10 +532,6 @@ async function main() {
     "\nZusammenfassung: " + aktualisiertAnzahl + " Geräte aktualisiert, " +
     uebersprungenAnzahl + " übersprungen, " + pruefenAnzahl + " PRÜFEN-Fälle."
   );
-
-  if (quelle === searchClient.DATENQUELLEN.SEARCH_API && budgetZaehler) {
-    aktualisiereApiBudget({ datum, calls: budgetZaehler.verbraucht });
-  }
 
   schreibeLog({ datum, protokolle, dryRun });
 

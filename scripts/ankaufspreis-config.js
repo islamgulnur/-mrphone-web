@@ -3,9 +3,8 @@
  * (scripts/update-ankaufspreise.js). ALLE Faktoren des marktdatenbasierten Verfahrens
  * werden ausschließlich hier geändert – nirgendwo sonst duplizieren.
  *
- * Datenquelle ist austauschbar (eBay | bezahlte Such-API | Mock, siehe
- * scripts/lib/search-client.js) – die hier definierten Faktoren gelten unabhängig davon,
- * welche Quelle gerade die rohen Marktpreise liefert.
+ * Datenquelle ist eBay (Browse API, Marktplatz EBAY_DE) bzw. Mock im Dry-Run, siehe
+ * scripts/lib/search-client.js – die hier definierten Faktoren gelten unabhängig davon.
  *
  * Unabhängig von pricing-config.js: pricing-config.js bleibt die Formel für den
  * manuellen Admin-Workflow (eigener Verkaufspreis/marktwertGebraucht-Schätzung als
@@ -84,15 +83,6 @@ const WETTBEWERB_MAX_ABZUG_PROZENT = 0.15;
 // Rundung nach Anwendung des Wettbewerbs-Abstands (auf volle 5 €).
 const WETTBEWERB_RUNDUNG = 5;
 
-// ---------------------------------------------------------------------------
-// Monats-Budget der bezahlten Such-API
-// ---------------------------------------------------------------------------
-// An den tatsächlich gebuchten Tarif anpassen (siehe SEARCH-API-SETUP.md bzw. die
-// Preisseite des Anbieters). scripts/api-budget-state.json zählt den monatlichen
-// Verbrauch mit; ab API_BUDGET_WARNSCHWELLE erscheint eine Warnung im Log.
-const API_BUDGET_MONATLICH = 2500;
-const API_BUDGET_WARNSCHWELLE = 0.80; // Warnung ab 80% Verbrauch
-
 module.exports = {
   MIN_TREFFER_GEBRAUCHT,
   MIN_TREFFER_NEU,
@@ -113,6 +103,4 @@ module.exports = {
   WETTBEWERB_MINDESTPREIS,
   WETTBEWERB_MAX_ABZUG_PROZENT,
   WETTBEWERB_RUNDUNG,
-  API_BUDGET_MONATLICH,
-  API_BUDGET_WARNSCHWELLE,
 };

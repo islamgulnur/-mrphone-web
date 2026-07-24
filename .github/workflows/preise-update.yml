@@ -45,9 +45,6 @@ jobs:
 
       - name: Ankaufspreise aktualisieren
         env:
-          SEARCH_API_KEY: ${{ secrets.SEARCH_API_KEY }}
-          # eBay-Secrets bleiben optional erhalten - falls eBay später reaktiviert wird,
-          # genügt es, diese beiden Secrets im Repo zu hinterlegen (siehe EBAY-SETUP.md).
           EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
           DRY_RUN_INPUT: ${{ inputs.dry_run }}
@@ -75,6 +72,6 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add geraete-katalog.json ankauf-preise.json ankauf/ preisupdate-meta.json scripts/rotation-state.json scripts/api-budget-state.json logs/
+          git add geraete-katalog.json ankauf-preise.json ankauf/ preisupdate-meta.json scripts/rotation-state.json logs/
           git commit -m "Auto-Preisupdate ${DATUM} (${AKTUALISIERT} Geräte aktualisiert, ${UEBERSPRUNGEN} übersprungen, ${PRUEFEN} Prüffälle)"
           git push

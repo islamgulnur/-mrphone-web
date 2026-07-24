@@ -79,8 +79,9 @@ function erstelleBudgetZaehler(maxCalls) {
 async function sucheMarkt({ accessToken, marke, modell, variante, zustand, budgetZaehler, limit }) {
   if (budgetZaehler) budgetZaehler.pruefeUndZaehle();
 
+  const suchstring = baueSuchstring(marke, modell, variante);
   const params = new URLSearchParams({
-    q: baueSuchstring(marke, modell, variante),
+    q: suchstring,
     filter: "conditions:{" + FILTER_ZUSTAND[zustand] + "}",
     limit: String(limit || 50),
   });
@@ -103,7 +104,17 @@ async function sucheMarkt({ accessToken, marke, modell, variante, zustand, budge
     .map((t) => t.price && Number(t.price.value))
     .filter((p) => Number.isFinite(p) && p > 0);
 
-  return { preise, gesamtTreffer: treffer.length };
+  // Erste 5 Rohtreffer (Titel/Preis/Zustand/Item-ID) für Diagnosezwecke, z. B. über
+  // --debug-treffer=id:variante in scripts/update-ankaufspreise.js, damit z. B. eine zu
+  // knappe Neuware-Trefferzahl (condition NEW) direkt im Log nachvollziehbar ist.
+  const rohtreffer = treffer.slice(0, 5).map((t) => ({
+    titel: t.title,
+    preis: t.price && t.price.value,
+    zustand: t.condition,
+    itemId: t.itemId,
+  }));
+
+  return { preise, gesamtTreffer: treffer.length, suchstring, rohtreffer };
 }
 
 /**

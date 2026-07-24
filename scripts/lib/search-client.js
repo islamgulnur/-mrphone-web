@@ -1,18 +1,20 @@
 /**
- * Datenadapter für Marktpreis-Abfragen: macht die Datenquelle austauschbar
- * (eBay | bezahlte Such-API (Serper.dev) | Mock), ohne dass scripts/update-ankaufspreise.js
- * wissen muss, welche Quelle gerade aktiv ist. eBay bleibt vollständig erhalten und ist
- * jederzeit per --quelle=ebay bzw. durch Setzen der eBay-Secrets reaktivierbar.
+ * Datenadapter für Marktpreis-Abfragen: macht die Datenquelle austauschbar (eBay | Mock),
+ * ohne dass scripts/update-ankaufspreise.js wissen muss, welche Quelle gerade aktiv ist.
+ * eBay (Browse API, Marktplatz EBAY_DE) ist die einzige echte Datenquelle - Mock nur für
+ * Dry-Runs ohne hinterlegte eBay-Secrets.
  *
- * Einheitliche Rückgabeform aller Quellen: { preise: number[], gesamtTreffer: number }.
- * quartilMedian() ist reine Zahlen-Logik (kein eBay-spezifischer Code) und wird von
- * ebay-client.js übernommen, um sie nicht zu duplizieren.
+ * (Frühere Alternativquelle Serper.dev/Google Shopping wurde entfernt, siehe Git-Historie
+ * bei Bedarf.)
+ *
+ * Einheitliche Rückgabeform: { preise: number[], gesamtTreffer: number }. quartilMedian()
+ * ist reine Zahlen-Logik (kein eBay-spezifischer Code) und wird von ebay-client.js
+ * übernommen, um sie nicht zu duplizieren.
  */
 const ebayClient = require("./ebay-client");
 const ebayMock = require("./ebay-mock");
-const serperClient = require("./serper-client");
 
-const DATENQUELLEN = { EBAY: "ebay", SEARCH_API: "search-api", MOCK: "mock" };
+const DATENQUELLEN = { EBAY: "ebay", MOCK: "mock" };
 
 class BudgetErschoepftFehler extends Error {}
 
@@ -35,35 +37,29 @@ function erstelleBudgetZaehler(maxCalls) {
 }
 
 /**
- * Bestimmt die zu verwendende Datenquelle. quelleErzwungen ("ebay"|"search-api"|"mock",
- * aus --quelle=...) hat Vorrang. Sonst Auto-Erkennung anhand vorhandener Secrets:
- * SEARCH_API_KEY gesetzt -> "search-api", sonst EBAY_CLIENT_ID+EBAY_CLIENT_SECRET gesetzt
- * -> "ebay", sonst "mock". Ob "mock" im konkreten Aufruf zulässig ist (nur zusammen mit
- * --dry-run), prüft weiterhin der Aufrufer (scripts/update-ankaufspreise.js) - dieselbe
- * Fail-Closed-Regel wie zuvor beim eBay-only-Code.
+ * Bestimmt die zu verwendende Datenquelle. quelleErzwungen ("ebay"|"mock", aus --quelle=...)
+ * hat Vorrang. Sonst Auto-Erkennung: EBAY_CLIENT_ID+EBAY_CLIENT_SECRET gesetzt -> "ebay",
+ * sonst "mock". Ob "mock" im konkreten Aufruf zulässig ist (nur zusammen mit --dry-run),
+ * prüft weiterhin der Aufrufer (scripts/update-ankaufspreise.js).
  */
 function bestimmeDatenquelle({ quelleErzwungen, env } = {}) {
   const e = env || process.env;
   if (quelleErzwungen) {
     if (!Object.values(DATENQUELLEN).includes(quelleErzwungen)) {
-      throw new Error("Unbekannte Datenquelle '" + quelleErzwungen + "' (--quelle=ebay|search-api|mock).");
+      throw new Error("Unbekannte Datenquelle '" + quelleErzwungen + "' (--quelle=ebay|mock).");
     }
     return quelleErzwungen;
   }
-  if (e.SEARCH_API_KEY) return DATENQUELLEN.SEARCH_API;
   if (e.EBAY_CLIENT_ID && e.EBAY_CLIENT_SECRET) return DATENQUELLEN.EBAY;
   return DATENQUELLEN.MOCK;
 }
 
 /**
- * Holt den Zugangskontext (OAuth-Token bei eBay, API-Key bei der Such-API, nichts bei
- * Mock), der anschließend an jeden sucheMarkt()-Aufruf durchgereicht wird.
+ * Holt den Zugangskontext (OAuth-Token bei eBay, nichts bei Mock), der anschließend an
+ * jeden sucheMarkt()-Aufruf durchgereicht wird.
  */
 async function holeZugangskontext(quelle, env) {
   const e = env || process.env;
-  if (quelle === DATENQUELLEN.SEARCH_API) {
-    return { quelle, apiKey: e.SEARCH_API_KEY };
-  }
   if (quelle === DATENQUELLEN.EBAY) {
     const accessToken = await ebayClient.holeAccessToken(e.EBAY_CLIENT_ID, e.EBAY_CLIENT_SECRET);
     return { quelle, accessToken };
@@ -83,16 +79,6 @@ async function sucheMarkt({ zugangskontext, geraet, variante, zustand, budgetZae
   if (zugangskontext.quelle === DATENQUELLEN.EBAY) {
     return ebayClient.sucheMarkt({
       accessToken: zugangskontext.accessToken,
-      marke: geraet.marke,
-      modell: geraet.modell,
-      variante: variante.bezeichnung,
-      zustand,
-      budgetZaehler,
-    });
-  }
-  if (zugangskontext.quelle === DATENQUELLEN.SEARCH_API) {
-    return serperClient.sucheMarkt({
-      apiKey: zugangskontext.apiKey,
       marke: geraet.marke,
       modell: geraet.modell,
       variante: variante.bezeichnung,
