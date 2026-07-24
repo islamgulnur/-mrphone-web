@@ -20,8 +20,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 75,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 61,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 62,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0002",
@@ -44,8 +46,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 85,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 83,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 113,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0003",
@@ -64,8 +68,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 105,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 79,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 92,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0004",
@@ -88,8 +94,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 115,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 88,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 98,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0005",
@@ -112,8 +120,10 @@
         "uvpDelta": 350
       }
     ],
-    "marktwertGebraucht": 160,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 88,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 112,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0006",
@@ -136,8 +146,10 @@
         "uvpDelta": 350
       }
     ],
-    "marktwertGebraucht": 170,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 128,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": null,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0007",
@@ -160,8 +172,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 145,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 110,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 117,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0008",
@@ -184,8 +198,10 @@
         "uvpDelta": 350
       }
     ],
-    "marktwertGebraucht": 210,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 140,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 175,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0009",
@@ -208,8 +224,10 @@
         "uvpDelta": 350
       }
     ],
-    "marktwertGebraucht": 230,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 220,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 235,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0010",
@@ -232,8 +250,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 110,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 76,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 85,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0011",
@@ -256,8 +276,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 180,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 139,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 166,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0012",
@@ -280,8 +302,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 205,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 175,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 185,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0013",
@@ -304,8 +328,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 265,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 198,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 230,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0014",
@@ -328,8 +354,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 285,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 264,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 282,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0015",
@@ -353,7 +381,9 @@
       }
     ],
     "marktwertGebraucht": 220,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 254,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0016",
@@ -376,8 +406,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 250,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 220,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": null,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0017",
@@ -404,8 +436,10 @@
         "uvpDelta": 550
       }
     ],
-    "marktwertGebraucht": 315,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 288,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 361,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0018",
@@ -432,8 +466,10 @@
         "uvpDelta": 550
       }
     ],
-    "marktwertGebraucht": 345,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 330,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": null,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0019",
@@ -456,8 +492,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 180,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 114,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 138,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0020",
@@ -480,8 +518,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 345,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 290,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 329,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0021",
@@ -504,8 +544,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 395,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 307,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 366,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0022",
@@ -532,8 +574,10 @@
         "uvpDelta": 550
       }
     ],
-    "marktwertGebraucht": 450,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 374,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 446,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0023",
@@ -560,8 +604,10 @@
         "uvpDelta": 550
       }
     ],
-    "marktwertGebraucht": 500,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 451,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 510,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0024",
@@ -584,8 +630,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 415,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 380,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 413,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0025",
@@ -608,8 +656,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 480,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 451,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 474,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0026",
@@ -636,8 +686,10 @@
         "uvpDelta": 550
       }
     ],
-    "marktwertGebraucht": 525,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 501,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 515,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0027",
@@ -660,8 +712,10 @@
         "uvpDelta": 450
       }
     ],
-    "marktwertGebraucht": 635,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 607,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 667,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0028",
@@ -684,8 +738,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 525,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 528,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": null,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0029",
@@ -736,8 +792,10 @@
         "uvpDelta": 550
       }
     ],
-    "marktwertGebraucht": 660,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 625,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 635,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0031",
@@ -760,8 +818,10 @@
         "uvpDelta": 450
       }
     ],
-    "marktwertGebraucht": 800,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 818,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 823,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0032",
@@ -852,8 +912,10 @@
         "uvpDelta": 450
       }
     ],
-    "marktwertGebraucht": 925,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 906,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 975,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0036",
@@ -880,8 +942,10 @@
         "uvpDelta": 750
       }
     ],
-    "marktwertGebraucht": 1035,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 1030,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 1058,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0037",
@@ -896,8 +960,10 @@
         "uvpDelta": 0
       }
     ],
-    "marktwertGebraucht": 65,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 85,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 89,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0038",
@@ -932,8 +998,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 100,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 81,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": null,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0040",
@@ -952,8 +1020,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 115,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 98,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 143,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0041",
@@ -968,8 +1038,10 @@
         "uvpDelta": 0
       }
     ],
-    "marktwertGebraucht": 120,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 98,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 187,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0042",
@@ -988,8 +1060,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 145,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 132,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 145,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0043",
@@ -1012,8 +1086,10 @@
         "uvpDelta": 550
       }
     ],
-    "marktwertGebraucht": 160,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 147,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 152,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0044",
@@ -1028,8 +1104,10 @@
         "uvpDelta": 0
       }
     ],
-    "marktwertGebraucht": 180,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 123,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 183,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0045",
@@ -1048,8 +1126,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 200,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 158,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 168,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0046",
@@ -1068,8 +1148,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 270,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 216,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 232,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0047",
@@ -1088,8 +1170,10 @@
         "uvpDelta": 100
       }
     ],
-    "marktwertGebraucht": 130,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 106,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 147,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0048",
@@ -1108,8 +1192,10 @@
         "uvpDelta": 100
       }
     ],
-    "marktwertGebraucht": 205,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 158,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 167,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0049",
@@ -1172,8 +1258,10 @@
         "uvpDelta": 100
       }
     ],
-    "marktwertGebraucht": 225,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 152,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 164,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0052",
@@ -1192,8 +1280,10 @@
         "uvpDelta": 100
       }
     ],
-    "marktwertGebraucht": 255,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 190,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 229,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0053",
@@ -1212,8 +1302,10 @@
         "uvpDelta": 100
       }
     ],
-    "marktwertGebraucht": 315,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 193,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": null,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0054",
@@ -1240,8 +1332,10 @@
         "uvpDelta": 550
       }
     ],
-    "marktwertGebraucht": 375,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 294,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 328,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0055",
@@ -1280,8 +1374,10 @@
         "uvpDelta": 200
       }
     ],
-    "marktwertGebraucht": 455,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 312,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 359,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0057",
@@ -1304,8 +1400,10 @@
         "uvpDelta": 450
       }
     ],
-    "marktwertGebraucht": 530,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 378,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 420,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0058",
@@ -1324,8 +1422,10 @@
         "uvpDelta": 100
       }
     ],
-    "marktwertGebraucht": 265,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 227,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 258,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0059",
@@ -1344,8 +1444,10 @@
         "uvpDelta": 100
       }
     ],
-    "marktwertGebraucht": 430,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 334,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 348,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0060",
@@ -1388,8 +1490,10 @@
         "uvpDelta": 450
       }
     ],
-    "marktwertGebraucht": 695,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 484,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 566,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0062",
@@ -1408,8 +1512,10 @@
         "uvpDelta": 100
       }
     ],
-    "marktwertGebraucht": 360,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 321,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 340,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0063",
@@ -1428,8 +1534,10 @@
         "uvpDelta": 100
       }
     ],
-    "marktwertGebraucht": 555,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 440,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 469,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0064",
@@ -1448,8 +1556,10 @@
         "uvpDelta": 200
       }
     ],
-    "marktwertGebraucht": 710,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 531,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 553,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0065",
@@ -1472,8 +1582,10 @@
         "uvpDelta": 450
       }
     ],
-    "marktwertGebraucht": 900,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 491,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 575,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0066",
@@ -1492,8 +1604,10 @@
         "uvpDelta": 200
       }
     ],
-    "marktwertGebraucht": 775,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 497,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 506,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0067",
@@ -1596,8 +1710,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 120,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 143,
+    "marktwertQuelle": "search-api-auto",
+    "marktwertNeu": 195,
+    "marktDatenStand": "2026-07-24"
   },
   {
     "id": "kat-0072",
