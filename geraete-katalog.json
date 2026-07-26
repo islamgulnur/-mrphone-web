@@ -13,7 +13,8 @@
       },
       {
         "bezeichnung": "128 GB",
-        "uvpDelta": 50
+        "uvpDelta": 50,
+        "hinweis": "Vermutlich falsche Speicherstufe: Apple bot diese Generation offiziell nur mit 64GB/256GB an (keine 128GB-Stufe). Vor Entfernen bitte gegenprüfen (Stand 27.07.2026, aus Erinnerung, nicht 100% verifiziert). Bewusst NICHT gelöscht, siehe Betreiber-Entscheidung."
       },
       {
         "bezeichnung": "256 GB",
@@ -39,7 +40,8 @@
       },
       {
         "bezeichnung": "128 GB",
-        "uvpDelta": 50
+        "uvpDelta": 50,
+        "hinweis": "Vermutlich falsche Speicherstufe: Apple bot diese Generation offiziell nur mit 64GB/256GB an (keine 128GB-Stufe). Vor Entfernen bitte gegenprüfen (Stand 27.07.2026, aus Erinnerung, nicht 100% verifiziert). Bewusst NICHT gelöscht, siehe Betreiber-Entscheidung."
       },
       {
         "bezeichnung": "256 GB",
@@ -1036,6 +1038,10 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 50
       }
     ],
     "marktwertGebraucht": 98,
@@ -2812,6 +2818,10 @@
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 100
       }
     ],
     "marktwertGebraucht": 305,
@@ -3429,6 +3439,10 @@
       },
       {
         "bezeichnung": "256 GB",
+        "uvpDelta": 100
+      },
+      {
+        "bezeichnung": "512 GB",
         "uvpDelta": 100
       }
     ],
@@ -5826,50 +5840,6 @@
     "marktwertQuelle": "geschaetzt"
   },
   {
-    "id": "kat-0271",
-    "kategorie": "laptops",
-    "marke": "Apple",
-    "modell": "MacBook Air 13\" M1 (2020)",
-    "jahr": 2020,
-    "uvp": 1129,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 200
-      }
-    ],
-    "marktwertGebraucht": 260,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0272",
-    "kategorie": "laptops",
-    "marke": "Apple",
-    "modell": "MacBook Air 13\" M2 (2022)",
-    "jahr": 2022,
-    "uvp": 1199,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 200
-      },
-      {
-        "bezeichnung": "1 TB",
-        "uvpDelta": 450
-      }
-    ],
-    "marktwertGebraucht": 415,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
     "id": "kat-0273",
     "kategorie": "laptops",
     "marke": "Apple",
@@ -5891,102 +5861,6 @@
       }
     ],
     "marktwertGebraucht": 700,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0274",
-    "kategorie": "laptops",
-    "marke": "Apple",
-    "modell": "MacBook Air 13\" M3 (2024)",
-    "jahr": 2024,
-    "uvp": 1199,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 200
-      },
-      {
-        "bezeichnung": "1 TB",
-        "uvpDelta": 450
-      }
-    ],
-    "marktwertGebraucht": 660,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0275",
-    "kategorie": "laptops",
-    "marke": "Apple",
-    "modell": "MacBook Air 15\" M3 (2024)",
-    "jahr": 2024,
-    "uvp": 1599,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 200
-      },
-      {
-        "bezeichnung": "1 TB",
-        "uvpDelta": 450
-      }
-    ],
-    "marktwertGebraucht": 885,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0276",
-    "kategorie": "laptops",
-    "marke": "Apple",
-    "modell": "MacBook Air 13\" M4 (2025)",
-    "jahr": 2025,
-    "uvp": 1199,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 200
-      },
-      {
-        "bezeichnung": "1 TB",
-        "uvpDelta": 450
-      }
-    ],
-    "marktwertGebraucht": 855,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0277",
-    "kategorie": "laptops",
-    "marke": "Apple",
-    "modell": "MacBook Air 15\" M4 (2025)",
-    "jahr": 2025,
-    "uvp": 1599,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 200
-      },
-      {
-        "bezeichnung": "1 TB",
-        "uvpDelta": 450
-      }
-    ],
-    "marktwertGebraucht": 1140,
     "marktwertQuelle": "geschaetzt"
   },
   {
@@ -8202,26 +8076,6 @@
     "marktwertQuelle": "geschaetzt"
   },
   {
-    "id": "kat-0405",
-    "kategorie": "smartphones",
-    "marke": "Xiaomi",
-    "modell": "Xiaomi 15",
-    "jahr": 2025,
-    "uvp": 999,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 100
-      }
-    ],
-    "marktwertGebraucht": 495,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
     "id": "kat-0406",
     "kategorie": "smartphones",
     "marke": "Xiaomi",
@@ -8235,42 +8089,6 @@
       }
     ],
     "marktwertGebraucht": 575,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0407",
-    "kategorie": "smartphones",
-    "marke": "Xiaomi",
-    "modell": "Xiaomi 14",
-    "jahr": 2024,
-    "uvp": 999,
-    "varianten": [
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 0
-      }
-    ],
-    "marktwertGebraucht": 385,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0408",
-    "kategorie": "smartphones",
-    "marke": "Xiaomi",
-    "modell": "Xiaomi 14T Pro",
-    "jahr": 2024,
-    "uvp": 799,
-    "varianten": [
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "1 TB",
-        "uvpDelta": 100
-      }
-    ],
-    "marktwertGebraucht": 305,
     "marktwertQuelle": "geschaetzt"
   },
   {
@@ -8374,38 +8192,6 @@
     "marktwertQuelle": "geschaetzt"
   },
   {
-    "id": "kat-0414",
-    "kategorie": "smartphones",
-    "marke": "Xiaomi",
-    "modell": "Xiaomi 13",
-    "jahr": 2023,
-    "uvp": 999,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      }
-    ],
-    "marktwertGebraucht": 305,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0415",
-    "kategorie": "smartphones",
-    "marke": "Xiaomi",
-    "modell": "Xiaomi 13T Pro",
-    "jahr": 2023,
-    "uvp": 799,
-    "varianten": [
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 0
-      }
-    ],
-    "marktwertGebraucht": 245,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
     "id": "kat-0416",
     "kategorie": "smartphones",
     "marke": "Xiaomi",
@@ -8458,26 +8244,6 @@
     "marktwertQuelle": "geschaetzt"
   },
   {
-    "id": "kat-0419",
-    "kategorie": "smartphones",
-    "marke": "OnePlus",
-    "modell": "OnePlus 12",
-    "jahr": 2024,
-    "uvp": 949,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 120
-      }
-    ],
-    "marktwertGebraucht": 365,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
     "id": "kat-0420",
     "kategorie": "smartphones",
     "marke": "OnePlus",
@@ -8491,26 +8257,6 @@
       }
     ],
     "marktwertGebraucht": 270,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0421",
-    "kategorie": "smartphones",
-    "marke": "OnePlus",
-    "modell": "OnePlus Nord 4",
-    "jahr": 2024,
-    "uvp": 499,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 80
-      }
-    ],
-    "marktwertGebraucht": 190,
     "marktwertQuelle": "geschaetzt"
   },
   {
@@ -8530,46 +8276,6 @@
     "marktwertQuelle": "geschaetzt"
   },
   {
-    "id": "kat-0423",
-    "kategorie": "smartphones",
-    "marke": "OnePlus",
-    "modell": "OnePlus 11",
-    "jahr": 2023,
-    "uvp": 849,
-    "varianten": [
-      {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 100
-      }
-    ],
-    "marktwertGebraucht": 260,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0424",
-    "kategorie": "smartphones",
-    "marke": "OnePlus",
-    "modell": "OnePlus Nord 3",
-    "jahr": 2023,
-    "uvp": 449,
-    "varianten": [
-      {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 50
-      }
-    ],
-    "marktwertGebraucht": 135,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
     "id": "kat-0425",
     "kategorie": "smartphones",
     "marke": "Motorola",
@@ -8583,38 +8289,6 @@
       }
     ],
     "marktwertGebraucht": 385,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0426",
-    "kategorie": "smartphones",
-    "marke": "Motorola",
-    "modell": "Motorola Edge 50 Pro",
-    "jahr": 2024,
-    "uvp": 699,
-    "varianten": [
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 0
-      }
-    ],
-    "marktwertGebraucht": 270,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0427",
-    "kategorie": "smartphones",
-    "marke": "Motorola",
-    "modell": "Motorola Razr 50 Ultra",
-    "jahr": 2024,
-    "uvp": 1199,
-    "varianten": [
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 0
-      }
-    ],
-    "marktwertGebraucht": 460,
     "marktwertQuelle": "geschaetzt"
   },
   {
@@ -8647,22 +8321,6 @@
       }
     ],
     "marktwertGebraucht": 70,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0430",
-    "kategorie": "smartphones",
-    "marke": "Motorola",
-    "modell": "Motorola Edge 40",
-    "jahr": 2023,
-    "uvp": 599,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      }
-    ],
-    "marktwertGebraucht": 180,
     "marktwertQuelle": "geschaetzt"
   },
   {
@@ -8734,66 +8392,6 @@
     "marktwertQuelle": "geschaetzt"
   },
   {
-    "id": "kat-0435",
-    "kategorie": "smartphones",
-    "marke": "Nothing",
-    "modell": "Nothing Phone (2a)",
-    "jahr": 2024,
-    "uvp": 329,
-    "varianten": [
-      {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 50
-      }
-    ],
-    "marktwertGebraucht": 125,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0436",
-    "kategorie": "smartphones",
-    "marke": "Nothing",
-    "modell": "Nothing Phone (2)",
-    "jahr": 2023,
-    "uvp": 649,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 80
-      }
-    ],
-    "marktwertGebraucht": 195,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0437",
-    "kategorie": "smartphones",
-    "marke": "Nothing",
-    "modell": "Nothing Phone (1)",
-    "jahr": 2022,
-    "uvp": 469,
-    "varianten": [
-      {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 40
-      }
-    ],
-    "marktwertGebraucht": 115,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
     "id": "kat-0438",
     "kategorie": "smartphones",
     "marke": "Honor",
@@ -8807,42 +8405,6 @@
       }
     ],
     "marktwertGebraucht": 500,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0439",
-    "kategorie": "smartphones",
-    "marke": "Honor",
-    "modell": "Honor 200 Pro",
-    "jahr": 2024,
-    "uvp": 799,
-    "varianten": [
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 0
-      }
-    ],
-    "marktwertGebraucht": 305,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0440",
-    "kategorie": "smartphones",
-    "marke": "Honor",
-    "modell": "Honor 90",
-    "jahr": 2023,
-    "uvp": 549,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 50
-      }
-    ],
-    "marktwertGebraucht": 165,
     "marktwertQuelle": "geschaetzt"
   },
   {
@@ -8875,142 +8437,6 @@
       }
     ],
     "marktwertGebraucht": 670,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0443",
-    "kategorie": "smartphones",
-    "marke": "Huawei",
-    "modell": "Huawei P60 Pro",
-    "jahr": 2023,
-    "uvp": 1199,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      }
-    ],
-    "marktwertGebraucht": 365,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0444",
-    "kategorie": "smartphones",
-    "marke": "Huawei",
-    "modell": "Huawei P40 Pro",
-    "jahr": 2020,
-    "uvp": 999,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      }
-    ],
-    "marktwertGebraucht": 160,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0445",
-    "kategorie": "smartphones",
-    "marke": "Huawei",
-    "modell": "Huawei P30 Pro",
-    "jahr": 2019,
-    "uvp": 999,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 100
-      }
-    ],
-    "marktwertGebraucht": 130,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0446",
-    "kategorie": "smartphones",
-    "marke": "Huawei",
-    "modell": "Huawei P30",
-    "jahr": 2019,
-    "uvp": 799,
-    "varianten": [
-      {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 0
-      }
-    ],
-    "marktwertGebraucht": 100,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0447",
-    "kategorie": "smartphones",
-    "marke": "Huawei",
-    "modell": "Huawei Mate 20 Pro",
-    "jahr": 2018,
-    "uvp": 849,
-    "varianten": [
-      {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 0
-      }
-    ],
-    "marktwertGebraucht": 80,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0448",
-    "kategorie": "smartphones",
-    "marke": "Sony",
-    "modell": "Sony Xperia 1 VI",
-    "jahr": 2024,
-    "uvp": 1399,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 100
-      }
-    ],
-    "marktwertGebraucht": 535,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0449",
-    "kategorie": "smartphones",
-    "marke": "Sony",
-    "modell": "Sony Xperia 10 VI",
-    "jahr": 2024,
-    "uvp": 429,
-    "varianten": [
-      {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 0
-      }
-    ],
-    "marktwertGebraucht": 165,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0450",
-    "kategorie": "smartphones",
-    "marke": "Sony",
-    "modell": "Sony Xperia 5 V",
-    "jahr": 2023,
-    "uvp": 999,
-    "varianten": [
-      {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 0
-      }
-    ],
-    "marktwertGebraucht": 305,
     "marktwertQuelle": "geschaetzt"
   },
   {
@@ -9127,290 +8553,6 @@
       }
     ],
     "marktwertGebraucht": 345,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0458",
-    "kategorie": "tablets",
-    "marke": "Apple",
-    "modell": "iPad Pro 13\" (M4)",
-    "jahr": 2024,
-    "uvp": 1549,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 230
-      },
-      {
-        "bezeichnung": "1 TB",
-        "uvpDelta": 690
-      },
-      {
-        "bezeichnung": "2 TB",
-        "uvpDelta": 1150
-      }
-    ],
-    "marktwertGebraucht": 855,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0459",
-    "kategorie": "tablets",
-    "marke": "Apple",
-    "modell": "iPad Pro 11\" (M4)",
-    "jahr": 2024,
-    "uvp": 1199,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 230
-      },
-      {
-        "bezeichnung": "1 TB",
-        "uvpDelta": 690
-      },
-      {
-        "bezeichnung": "2 TB",
-        "uvpDelta": 1150
-      }
-    ],
-    "marktwertGebraucht": 660,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0460",
-    "kategorie": "tablets",
-    "marke": "Apple",
-    "modell": "iPad Air 13\" (M2)",
-    "jahr": 2024,
-    "uvp": 949,
-    "varianten": [
-      {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 120
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 360
-      },
-      {
-        "bezeichnung": "1 TB",
-        "uvpDelta": 840
-      }
-    ],
-    "marktwertGebraucht": 525,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0461",
-    "kategorie": "tablets",
-    "marke": "Apple",
-    "modell": "iPad Air 11\" (M2)",
-    "jahr": 2024,
-    "uvp": 719,
-    "varianten": [
-      {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 120
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 360
-      },
-      {
-        "bezeichnung": "1 TB",
-        "uvpDelta": 840
-      }
-    ],
-    "marktwertGebraucht": 395,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0462",
-    "kategorie": "tablets",
-    "marke": "Apple",
-    "modell": "iPad mini (7. Gen)",
-    "jahr": 2024,
-    "uvp": 609,
-    "varianten": [
-      {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 140
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 420
-      }
-    ],
-    "marktwertGebraucht": 335,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0463",
-    "kategorie": "tablets",
-    "marke": "Apple",
-    "modell": "iPad Pro 12,9\" (M2)",
-    "jahr": 2022,
-    "uvp": 1449,
-    "varianten": [
-      {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 120
-      },
-      {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 360
-      },
-      {
-        "bezeichnung": "1 TB",
-        "uvpDelta": 840
-      },
-      {
-        "bezeichnung": "2 TB",
-        "uvpDelta": 1320
-      }
-    ],
-    "marktwertGebraucht": 500,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0464",
-    "kategorie": "tablets",
-    "marke": "Apple",
-    "modell": "iPad Air 5 (M1)",
-    "jahr": 2022,
-    "uvp": 679,
-    "varianten": [
-      {
-        "bezeichnung": "64 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 170
-      }
-    ],
-    "marktwertGebraucht": 235,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0465",
-    "kategorie": "tablets",
-    "marke": "Apple",
-    "modell": "iPad (10. Gen)",
-    "jahr": 2022,
-    "uvp": 579,
-    "varianten": [
-      {
-        "bezeichnung": "64 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 150
-      }
-    ],
-    "marktwertGebraucht": 200,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0466",
-    "kategorie": "tablets",
-    "marke": "Apple",
-    "modell": "iPad mini (6. Gen)",
-    "jahr": 2021,
-    "uvp": 549,
-    "varianten": [
-      {
-        "bezeichnung": "64 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 170
-      }
-    ],
-    "marktwertGebraucht": 150,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0467",
-    "kategorie": "tablets",
-    "marke": "Apple",
-    "modell": "iPad (9. Gen)",
-    "jahr": 2021,
-    "uvp": 429,
-    "varianten": [
-      {
-        "bezeichnung": "64 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 150
-      }
-    ],
-    "marktwertGebraucht": 120,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0468",
-    "kategorie": "tablets",
-    "marke": "Xiaomi",
-    "modell": "Xiaomi Pad 6",
-    "jahr": 2023,
-    "uvp": 399,
-    "varianten": [
-      {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 50
-      }
-    ],
-    "marktwertGebraucht": 120,
-    "marktwertQuelle": "geschaetzt"
-  },
-  {
-    "id": "kat-0469",
-    "kategorie": "tablets",
-    "marke": "Lenovo",
-    "modell": "Lenovo Tab P12",
-    "jahr": 2023,
-    "uvp": 349,
-    "varianten": [
-      {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 0
-      }
-    ],
-    "marktwertGebraucht": 105,
     "marktwertQuelle": "geschaetzt"
   },
   {
@@ -9648,6 +8790,14 @@
       {
         "bezeichnung": "8 GB · 512 GB",
         "uvpDelta": 230
+      },
+      {
+        "bezeichnung": "16 GB · 256 GB",
+        "uvpDelta": 230
+      },
+      {
+        "bezeichnung": "16 GB · 512 GB",
+        "uvpDelta": 460
       }
     ],
     "marktwertGebraucht": 230,

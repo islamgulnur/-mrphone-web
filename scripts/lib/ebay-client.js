@@ -22,12 +22,28 @@ const FILTER_ZUSTAND = {
   NEW: "NEW",
 };
 
+// eBay-DE-Kategorie-IDs je kategorie-Feld aus geraete-katalog.json - NUR für die NEW-Abfrage
+// (siehe Diagnose 27.07.2026: Freitextsuche ohne Kategorie-Filter matcht auch Zubehör/
+// Ersatzteile, die den Modellnamen im Titel tragen, z. B. "Hülle für iPhone 17 Pro Max").
+// Bewusst nur "smartphones" befüllt - für die anderen 9 Kategorien liegt keine verlässlich
+// bekannte eBay-Kategorie-ID vor; lieber ungefiltert lassen als eine falsche ID erfinden.
+const EBAY_KATEGORIE_ID = {
+  smartphones: "9355", // eBay DE: "Handys ohne Vertrag"
+};
+
+// Ausschluss-Keywords für die NEW-Abfrage (siehe Diagnose 27.07.2026): filtert Zubehör/
+// Ersatzteile/Reparaturteile heraus, deren Titel den Modellnamen enthält, aber keine echten
+// Geräte-Angebote sind. Nur für zustand === "NEW" angehängt (siehe sucheMarkt).
+const NEW_AUSSCHLUSS_KEYWORDS =
+  "-hülle -case -schutzfolie -display -akku -ersatzteil -defekt -bastler -adapter -ladekabel";
+
 let cachedToken = null; // { wert, ablauf } - Ablauf als Date.now()-Millisekunden
 
 class BudgetErschoepftFehler extends Error {}
 
-function baueSuchstring(marke, modell, variante) {
-  return [marke, modell, variante].filter(Boolean).join(" ").trim();
+function baueSuchstring(marke, modell, variante, zustand) {
+  const basis = [marke, modell, variante].filter(Boolean).join(" ").trim();
+  return zustand === "NEW" ? basis + " " + NEW_AUSSCHLUSS_KEYWORDS : basis;
 }
 
 async function holeAccessToken(clientId, clientSecret) {
@@ -76,15 +92,17 @@ function erstelleBudgetZaehler(maxCalls) {
  * Fragt die eBay Browse API nach Angeboten für Marke+Modell+Variante in einem
  * Zustand ("USED" oder "NEW") ab. Gibt die rohen Preise (Zahlen, EUR) zurück.
  */
-async function sucheMarkt({ accessToken, marke, modell, variante, zustand, budgetZaehler, limit }) {
+async function sucheMarkt({ accessToken, marke, modell, variante, zustand, kategorie, budgetZaehler, limit }) {
   if (budgetZaehler) budgetZaehler.pruefeUndZaehle();
 
-  const suchstring = baueSuchstring(marke, modell, variante);
+  const suchstring = baueSuchstring(marke, modell, variante, zustand);
   const params = new URLSearchParams({
     q: suchstring,
     filter: "conditions:{" + FILTER_ZUSTAND[zustand] + "}",
     limit: String(limit || 50),
   });
+  const categoryId = zustand === "NEW" ? EBAY_KATEGORIE_ID[kategorie] : null;
+  if (categoryId) params.set("category_ids", categoryId);
 
   const antwort = await fetch(SEARCH_URL + "?" + params.toString(), {
     headers: {

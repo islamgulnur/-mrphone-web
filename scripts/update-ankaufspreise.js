@@ -208,6 +208,19 @@ function wendeWettbewerbsAbstandAn(stufenRoh) {
   return stufenNachAbstand;
 }
 
+// Apple-Korrektur nach Baujahr (siehe ankaufspreis-config.js): wirkt nach dem
+// Wettbewerbs-Abstand, auf alle 5 Zustandsstufen gleichermaßen, bevor die Tagesbremse greift.
+function wendeMarkenKorrekturAn(stufenNachAbstand, geraet) {
+  const faktor = config.appleKorrekturFaktor(geraet.marke, geraet.jahr);
+  if (faktor === 1) return stufenNachAbstand;
+  const stufenKorrigiert = {};
+  pricing.ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
+    const wert = stufenNachAbstand[stufe];
+    stufenKorrigiert[stufe] = wert == null ? null : rundeWettbewerb(wert * faktor);
+  });
+  return stufenKorrigiert;
+}
+
 function wendeTagesbremseAn({ stufenRoh, altPreise, istErsterLauf }) {
   const stufenFinal = {};
   const pruefenGruende = [];
@@ -295,7 +308,7 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
   }
 
   const stufenRoh = berechneStufen({ marktwertGebraucht: gebraucht.marktwert, marktwertNeu, niveauFaktor });
-  const stufenNachAbstand = wendeWettbewerbsAbstandAn(stufenRoh);
+  const stufenNachAbstand = wendeMarkenKorrekturAn(wendeWettbewerbsAbstandAn(stufenRoh), geraet);
   const istErsterLauf = !geraet.marktwertQuelle || geraet.marktwertQuelle === "geschaetzt";
   const { stufenFinal, pruefenGruende: bremseGruende } = wendeTagesbremseAn({
     stufenRoh: stufenNachAbstand, altPreise: altVariante && altVariante.preise, istErsterLauf,

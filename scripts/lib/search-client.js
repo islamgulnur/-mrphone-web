@@ -83,6 +83,7 @@ async function sucheMarkt({ zugangskontext, geraet, variante, zustand, budgetZae
       modell: geraet.modell,
       variante: variante.bezeichnung,
       zustand,
+      kategorie: geraet.kategorie,
       budgetZaehler,
     });
   }

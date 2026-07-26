@@ -83,7 +83,37 @@ const WETTBEWERB_MAX_ABZUG_PROZENT = 0.15;
 // Rundung nach Anwendung des Wettbewerbs-Abstands (auf volle 5 €).
 const WETTBEWERB_RUNDUNG = 5;
 
+// ---------------------------------------------------------------------------
+// Apple-Korrektur nach Baujahr (kalibriert 27.07.2026 gegen reale rebuy/zoxs-Preise,
+// Zustand "Gut", siehe Preisvergleich mit dem Betreiber)
+// ---------------------------------------------------------------------------
+// Der reine eBay-Marktanker liegt bei Apple-Geräten spürbar unter dem Niveau, das
+// professionelle Ankaufsportale (rebuy, zoxs) zahlen - bei den aktuellen Topsellern
+// (iPhone 15/16, Baujahr 2023+) deutlich stärker als bei älteren Modellen (iPhone 14 und
+// älter). Ein einziger Faktor für alle Baujahre trifft daher nicht beide Fälle gleichzeitig
+// (kalibriert an 3 realen Referenzpunkten, Stand 27.07.2026):
+//   - iPhone 15 (128GB) "Gut": 180€ vs. rebuy 286€/zoxs 312€ -> Faktor 1,40 -> 250€ (36€ Abstand)
+//   - iPhone 16 (128GB) "Gut": 250€ vs. rebuy 391€/zoxs 436€ -> Faktor 1,40 -> 350€ (41€ Abstand)
+//   - iPhone 14 (128GB) "Gut": 140€ vs. rebuy 197€/zoxs 209€ -> Faktor 1,15 -> 160€ (37€ Abstand)
+// Samsung bewusst noch OHNE Korrektur: Galaxy S24 (frische Marktdaten) lag bereits nah am
+// Zielkorridor, Galaxy S23 lief zum Kalibrierzeitpunkt noch auf veralteten Schätzdaten
+// (marktwertQuelle "geschaetzt") - Faktor erst festlegen, wenn echte Marktdaten vorliegen.
+const APPLE_KORREKTUR_JAHRESGRENZE = 2023; // ab diesem Baujahr gilt der höhere Faktor
+const APPLE_KORREKTUR_NEUERE = 1.40;       // Baujahr >= Grenze (aktuelle Topseller)
+const APPLE_KORREKTUR_AELTERE = 1.15;      // Baujahr < Grenze
+
+// Wirkt NACH dem Wettbewerbs-Abstand, auf alle 5 Zustandsstufen gleichermaßen (skaliert den
+// gesamten Marktanker, nicht nur eine Stufe). Gilt nur für marke === "Apple".
+function appleKorrekturFaktor(marke, jahr) {
+  if (String(marke || "").trim().toLowerCase() !== "apple") return 1;
+  return Number(jahr) >= APPLE_KORREKTUR_JAHRESGRENZE ? APPLE_KORREKTUR_NEUERE : APPLE_KORREKTUR_AELTERE;
+}
+
 module.exports = {
+  appleKorrekturFaktor,
+  APPLE_KORREKTUR_JAHRESGRENZE,
+  APPLE_KORREKTUR_NEUERE,
+  APPLE_KORREKTUR_AELTERE,
   MIN_TREFFER_GEBRAUCHT,
   MIN_TREFFER_NEU,
   QUARTIL_KAPPEN,
