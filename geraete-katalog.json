@@ -12,11 +12,6 @@
         "uvpDelta": 0
       },
       {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 50,
-        "hinweis": "Vermutlich falsche Speicherstufe: Apple bot diese Generation offiziell nur mit 64GB/256GB an (keine 128GB-Stufe). Vor Entfernen bitte gegenprüfen (Stand 27.07.2026, aus Erinnerung, nicht 100% verifiziert). Bewusst NICHT gelöscht, siehe Betreiber-Entscheidung."
-      },
-      {
         "bezeichnung": "256 GB",
         "uvpDelta": 150
       }
@@ -37,11 +32,6 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0
-      },
-      {
-        "bezeichnung": "128 GB",
-        "uvpDelta": 50,
-        "hinweis": "Vermutlich falsche Speicherstufe: Apple bot diese Generation offiziell nur mit 64GB/256GB an (keine 128GB-Stufe). Vor Entfernen bitte gegenprüfen (Stand 27.07.2026, aus Erinnerung, nicht 100% verifiziert). Bewusst NICHT gelöscht, siehe Betreiber-Entscheidung."
       },
       {
         "bezeichnung": "256 GB",
@@ -2074,6 +2064,10 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 30
       }
     ],
     "marktwertGebraucht": 96,
@@ -2776,6 +2770,10 @@
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 400
       }
     ],
     "marktwertGebraucht": 245,
@@ -2864,6 +2862,10 @@
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 400
       }
     ],
     "marktwertGebraucht": 474,
@@ -2996,6 +2998,10 @@
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200
+      },
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": -50
       }
     ],
     "marktwertGebraucht": 137,
@@ -3572,6 +3578,10 @@
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 200
       }
     ],
     "marktwertGebraucht": 260,
@@ -3758,6 +3768,10 @@
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200
+      },
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": -60
       }
     ],
     "marktwertGebraucht": 246,
@@ -3924,6 +3938,10 @@
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": -150
       }
     ],
     "marktwertGebraucht": 326,
@@ -4332,6 +4350,10 @@
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 600
       }
     ],
     "marktwertGebraucht": 500,
@@ -4716,6 +4738,14 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 80
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 200
       }
     ],
     "marktwertGebraucht": 140,
@@ -5140,8 +5170,8 @@
         "uvpDelta": 0
       },
       {
-        "bezeichnung": "512 GB",
-        "uvpDelta": 200
+        "bezeichnung": "128 GB",
+        "uvpDelta": -100
       }
     ],
     "marktwertGebraucht": 190,
@@ -7742,6 +7772,10 @@
       {
         "bezeichnung": "1TB",
         "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "2TB",
+        "uvpDelta": 180
       }
     ],
     "marktwertGebraucht": 370,
@@ -7846,6 +7880,10 @@
       {
         "bezeichnung": "512GB GB",
         "uvpDelta": 200
+      },
+      {
+        "bezeichnung": "64GB GB",
+        "uvpDelta": -150
       }
     ],
     "marktwertGebraucht": 370,
@@ -7868,6 +7906,10 @@
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 250
+      },
+      {
+        "bezeichnung": "256GB GB",
+        "uvpDelta": -150
       }
     ],
     "marktwertGebraucht": 528,
@@ -8070,8 +8112,12 @@
     "uvp": 169,
     "varianten": [
       {
-        "bezeichnung": "Standard",
+        "bezeichnung": "64 GB (Wi-Fi)",
         "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "128 GB (Wi-Fi + Ethernet)",
+        "uvpDelta": 40
       }
     ],
     "marktwertGebraucht": 60,
@@ -8164,6 +8210,10 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 50
       }
     ],
     "marktwertGebraucht": 106,
@@ -8284,6 +8334,10 @@
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 50
+      },
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": -30
       }
     ],
     "marktwertGebraucht": 140,
@@ -8438,6 +8492,10 @@
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": -50
       }
     ],
     "marktwertGebraucht": 135,
@@ -8518,6 +8576,10 @@
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": -30
       }
     ],
     "marktwertGebraucht": 70,
@@ -8602,6 +8664,14 @@
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": -200
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 300
       }
     ],
     "marktwertGebraucht": 670,
@@ -8702,6 +8772,10 @@
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 250
       }
     ],
     "marktwertGebraucht": 460,
@@ -8718,6 +8792,10 @@
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 150
       }
     ],
     "marktwertGebraucht": 345,

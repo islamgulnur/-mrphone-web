@@ -3,6 +3,55 @@
 Sammelstelle für Dinge, die bewusst nicht automatisch entschieden wurden und noch eine
 manuelle Prüfung durch den Betreiber brauchen.
 
+## GELÖST 28.07.2026: Speichervarianten-Audit (kompletter Katalog, 449 Geräte)
+
+Systematischer Abgleich aller Speichervarianten gegen Herstellerangaben (Websuche wo nicht aus
+Trainingswissen sicher). Ergebnis: 350 OK, 25 FALSCH/FEHLEND korrigiert (`scripts/korrigiere-
+speichervarianten.js`, Backup vorher, `validate-data.js` danach grün), 73 UNSICHER weiter unten
+gesammelt statt geraten.
+
+**Korrigiert:**
+- FALSCH entfernt: iPhone 8 + iPhone 8 Plus (128 GB existierte offiziell nie, nur 64/256 GB),
+  Xiaomi Pad 7 (512 GB existiert nur beim Pro-Modell, nicht beim Standard-Pad 7).
+- FEHLEND ergänzt (22 Varianten, u. a. Galaxy A15/A33 256GB, Xiaomi 13T/15T Pro 1TB, Redmi
+  Note 13 Pro 128GB, Nothing Phone (2) 128GB, Oppo Reno 12 Pro 256GB, iPad Air 7 1TB, Galaxy
+  Tab S7 256/512GB, Xbox Series X 2TB Special Edition, Steam Deck LCD 64GB/OLED 256GB) sowie
+  Apple TV 4K von einer Pauschal-"Standard"-Variante auf die 2 echten Herstellerstufen (64GB
+  Wi-Fi / 128GB Wi-Fi+Ethernet) umgestellt.
+- Neue Varianten bekamen einen Ankaufspreis über die bestehende Bootstrap-Formel
+  (`pricing.berechnePreise()`, inkl. der neuen neuVersiegelt-Logik von oben), genau wie jeder
+  neue Katalogeintrag. **uvpDelta-Werte für die neuen Varianten sind mangels recherchierter
+  offizieller Preislisten plausible Schätzungen** (grob am UVP-Niveau des Geräts orientiert,
+  nicht einzeln verifiziert) - beeinflusst nur den geschätzten Wiederverkaufswert dieser einen
+  neuen Variante, keine bestehenden Preise. Bei Bedarf über das Admin-Preisformular feinjustieren.
+
+**Bewusst NICHT verifiziert (73 Geräte/Modellreihen, nicht geraten):**
+
+*Smartphones:*
+- Xiaomi 12/13/14/15/17 Ultra (kat-0116, kat-0117, kat-0119, kat-0121, kat-0124), 14T (kat-0409), 13T (kat-0416)
+- Redmi Note 11/12/14/14 Pro/15 Pro/15 Pro+/14C/15C (kat-0125–0134, außer bereits korrigiertes kat-0128), sowie kat-0411, kat-0417, kat-0418
+- Poco X7 Pro/F6 Pro/F7 Pro (kat-0136–0138), Poco F6 (kat-0413)
+- Honor Magic 5 Pro/Magic 7 Pro (kat-0176, kat-0178, kat-0441), Honor 90/200 Pro (kat-0179, kat-0180)
+- Oppo Find X5 Pro/Reno 10 Pro (kat-0173, kat-0174), Reno 12/Reno 11 (kat-0452, kat-0453)
+- Huawei P30/P30 Pro/P40 Pro/P50 Pro/P60 Pro/Mate 20 Pro/Mate 40 Pro (kat-0148–0154)
+- Nothing Phone (1)/Phone (2a)/Phone (3)/Phone (3a) (kat-0165, kat-0167, kat-0168, kat-0434)
+- Motorola Edge 40/Edge 50 Pro/Razr 50 Ultra/Razr 60 Ultra/Edge 50 Ultra/Razr 50/Moto G34/Moto G84 (kat-0169–0172, kat-0425, kat-0428, kat-0429, kat-0431)
+- Sony Xperia 1 V/VI/VII, 5 IV/V, 10 V/VI/VII (kat-0157–0164)
+
+*Tablets:* Xiaomi Pad 6 (kat-0226), Lenovo Tab P12 (kat-0228)
+
+*Laptops:* Apple MacBook Air 13"/15" M4 (kat-0470, kat-0471), M3 (kat-0472, kat-0473), M2 (kat-0478), M1 (kat-0479); MacBook Pro 14" M4/M4 Pro, 16" M4 Pro (kat-0474–kat-0476), 14" M3 (kat-0477) - RAM/Storage-Kombinationen nicht eindeutig als offizielle Standard-SKU vs. Build-to-Order verifizierbar.
+
+*PCs:* Apple iMac 24" M1/M3/M4 (kat-0301–kat-0303) - **Hinweis:** ursprünglich als FEHLEND
+eingestuft ("mehrere SSD-Stufen, Katalog bildet nur eine Pauschal-Variante ab"), aber laut
+Audit-Methodik nicht einzeln web-verifiziert, nur aus Trainingswissen vermutet - deshalb hier
+bei UNSICHER statt bei den oben korrigierten FEHLEND-Fällen, um nichts zu erfinden.
+
+*Konsolen:* Xbox One (kat-0373), Xbox One S (kat-0374) - hatten historisch mehrere Speicher-SKUs, unklar ob "Standard" nur die Launch-Version abbildet.
+
+**To-Do:** Bei Bedarf gezielt per Websuche oder Herstellerbeleg nachprüfen und über das Admin-
+Formular/`geraete-katalog.json` ergänzen (Backup + `validate-data.js` beachten).
+
 ## GELÖST 28.07.2026: neuVersiegelt-Formel grundlegend ersetzt (Vorfall 27.07.2026)
 
 Ursprünglicher Befund (27.07.2026): Apple-Korrektur (×1,40) wurde einmalig direkt auf
@@ -89,24 +138,7 @@ Kauf mit 1 TB SSD verfügbar waren, dann Variante(n) über das Admin-Formular od
 `scripts/build-ankauf-preise.js`-Workflow ergänzen (Backup + `validate-data.js` beachten,
 siehe `CLAUDE.md`).
 
-## Verdächtige Speicherstufe: iPhone 8 / iPhone 8 Plus 128 GB (seit 27.07.2026)
-
-`geraete-katalog.json` (`kat-0001`, `kat-0002`) enthält für beide Geräte eine 128 GB-Variante.
-Nach Erinnerung bot Apple diese Generation (2017) offiziell nur mit 64 GB und 256 GB an -
-die 128 GB-Stufe wäre demnach ein Dateneingabefehler. Nicht 100% sicher verifiziert, daher
-**bewusst nicht gelöscht**, nur mit einem `"hinweis"`-Feld auf der Variante markiert
-(sichtbar direkt im JSON). Bitte gegenprüfen und bei Bestätigung entweder entfernen oder den
-Hinweis wieder löschen.
-
-## Speichervarianten der Nebenmodelle nicht gegen Herstellerdaten geprüft (seit 27.07.2026)
-
-Speichervarianten für Xiaomi/Honor/Oppo/Redmi-Submodelle, Kopfhörer, Kameras nicht gegen
-Herstellerdaten geprüft - bei Bedarf einzeln verifizieren.
-
-Kontext: Bei der Katalog-Bereinigung wurden nur echte Duplikate (Marke im `modell`-Feld
-wiederholt, Supabase-Import-Artefakt) entfernt - das war maschinell/strukturell zuverlässig
-erkennbar. Eine inhaltliche Prüfung "hat dieses Xiaomi/Honor/Oppo-Modell wirklich alle vom
-Hersteller angebotenen Speichergrößen?" wurde bewusst NICHT gemacht, da dafür verlässliches
-Herstellerwissen fehlt (anders als bei iPhone/Galaxy S+Z/iPad/MacBook, wo das Wissen solide
-genug war). Betroffen: ca. 250 Geräte in Smartphones (alle Marken außer Apple/Samsung),
-Smartwatches, Kopfhörer, Kameras, PCs/Monitore, Zubehör.
+(Die früheren Einträge "Verdächtige Speicherstufe iPhone 8/8 Plus" und "Speichervarianten der
+Nebenmodelle nicht geprüft" sind durch den Speichervarianten-Audit vom 28.07.2026 oben
+aufgelöst: iPhone 8/8 Plus 128GB wurde entfernt, die verbleibenden ungeprüften Nebenmodelle
+sind jetzt einzeln unter "Bewusst NICHT verifiziert" gelistet statt pauschal als "~250 Geräte".)
