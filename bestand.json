@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": "2447f167-d0f5-4b40-b380-065116acb6db",
+    "modell": "iPhone 17 Pro Max",
+    "marke": "Apple",
+    "speicher": "512 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1299,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-07-28"
+  }
+]

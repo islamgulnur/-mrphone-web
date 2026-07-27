@@ -28,13 +28,11 @@ const QUARTIL_KAPPEN = 0.25;
 const ABSCHLAG_GEBRAUCHT = 0.12; // -12% -> marktwertGebraucht
 const ABSCHLAG_NEU = 0.08;       // -8%  -> marktwertNeu
 
-// Ankaufspreis je Zustandsstufe als Prozentsatz des jeweiligen Marktwerts.
-// neuVersiegelt bezieht sich auf marktwertNeu, alle anderen auf marktwertGebraucht.
-//
-// Kalibrier-Referenz Betreiber: iPhone 15 128GB versiegelt ≈ 430 € Ankauf –
-// bei systematischer Abweichung Faktor neuVersiegelt (aktuell 0.78) anpassen.
+// Ankaufspreis je Zustandsstufe als Prozentsatz des jeweiligen Marktwerts (marktwertGebraucht).
+// "neuVersiegelt" ist seit 28.07.2026 NICHT mehr hier gelistet - eigene Formel in
+// pricing-config.js (berechneNeuVersiegelt), siehe scripts/update-ankaufspreise.js Regel 9
+// und OFFENE-PUNKTE.md (Vorfall 27.07.2026: alter Faktor kaufte über Verkaufspreis/eBay-Neupreis).
 const ANKAUF_PROZENTSAETZE_MARKT = {
-  neuVersiegelt: 0.78,
   wieNeu: 0.75,
   sehrGut: 0.68,
   gut: 0.55,
@@ -84,36 +82,48 @@ const WETTBEWERB_MAX_ABZUG_PROZENT = 0.15;
 const WETTBEWERB_RUNDUNG = 5;
 
 // ---------------------------------------------------------------------------
-// Apple-Korrektur nach Baujahr (kalibriert 27.07.2026 gegen reale rebuy/zoxs-Preise,
-// Zustand "Gut", siehe Preisvergleich mit dem Betreiber)
+// Marken-Korrektur nach Baujahr (kalibriert gegen reale rebuy/zoxs-Preise, Zustand "Gut")
 // ---------------------------------------------------------------------------
-// Der reine eBay-Marktanker liegt bei Apple-Geräten spürbar unter dem Niveau, das
-// professionelle Ankaufsportale (rebuy, zoxs) zahlen - bei den aktuellen Topsellern
-// (iPhone 15/16, Baujahr 2023+) deutlich stärker als bei älteren Modellen (iPhone 14 und
-// älter). Ein einziger Faktor für alle Baujahre trifft daher nicht beide Fälle gleichzeitig
-// (kalibriert an 3 realen Referenzpunkten, Stand 27.07.2026):
+// Der reine eBay-Marktanker liegt bei manchen Marken spürbar unter/über dem Niveau, das
+// professionelle Ankaufsportale (rebuy, zoxs) zahlen. Diese Korrektur wirkt NACH dem
+// Wettbewerbs-Abstand, auf alle 5 Zustandsstufen gleichermaßen (skaliert den gesamten
+// Marktanker, nicht nur eine Stufe) - und wird seit 27.07.2026 zusätzlich durch
+// Konsistenzregel 3 (siehe update-ankaufspreise.js) hart gegen marktwertNeu/marktwertGebraucht
+// gedeckelt, damit ein Faktor > 1 den Ankaufspreis nie über den Marktanker heben kann.
+//
+// Apple (kalibriert 27.07.2026, 3 reale Referenzpunkte):
 //   - iPhone 15 (128GB) "Gut": 180€ vs. rebuy 286€/zoxs 312€ -> Faktor 1,40 -> 250€ (36€ Abstand)
 //   - iPhone 16 (128GB) "Gut": 250€ vs. rebuy 391€/zoxs 436€ -> Faktor 1,40 -> 350€ (41€ Abstand)
 //   - iPhone 14 (128GB) "Gut": 140€ vs. rebuy 197€/zoxs 209€ -> Faktor 1,15 -> 160€ (37€ Abstand)
-// Samsung bewusst noch OHNE Korrektur: Galaxy S24 (frische Marktdaten) lag bereits nah am
-// Zielkorridor, Galaxy S23 lief zum Kalibrierzeitpunkt noch auf veralteten Schätzdaten
-// (marktwertQuelle "geschaetzt") - Faktor erst festlegen, wenn echte Marktdaten vorliegen.
+//   Bei Apple liegt der Marktanker UNTER dem Konkurrenzniveau -> Faktor > 1 (Anhebung).
+//
+// Samsung (kalibriert 27.07.2026, 1 realer Referenzpunkt - siehe unten):
+//   - Galaxy S24 (256GB) "Gut": 210€ vs. rebuy 206€/zoxs 223€ (wir lagen 4€ ÜBER dem
+//     günstigeren Wettbewerber statt darunter) -> Faktor 0,78 -> 165€ (41€ Abstand)
+//   Bei Samsung lag der Marktanker bereits NAH am/ÜBER dem Konkurrenzniveau -> Faktor < 1
+//   (Absenkung). Bewusst EIN flacher Faktor für alle Baujahre (nicht nach Apple-Vorbild
+//   gestaffelt), da bislang nur dieser eine reale Kalibrierpunkt vorliegt - für eine
+//   Baujahr-Staffelung fehlt ein zweiter Referenzpreis eines älteren Samsung-Geräts.
 const APPLE_KORREKTUR_JAHRESGRENZE = 2023; // ab diesem Baujahr gilt der höhere Faktor
 const APPLE_KORREKTUR_NEUERE = 1.40;       // Baujahr >= Grenze (aktuelle Topseller)
 const APPLE_KORREKTUR_AELTERE = 1.15;      // Baujahr < Grenze
+const SAMSUNG_KORREKTUR = 0.78;            // flach, alle Baujahre
 
-// Wirkt NACH dem Wettbewerbs-Abstand, auf alle 5 Zustandsstufen gleichermaßen (skaliert den
-// gesamten Marktanker, nicht nur eine Stufe). Gilt nur für marke === "Apple".
-function appleKorrekturFaktor(marke, jahr) {
-  if (String(marke || "").trim().toLowerCase() !== "apple") return 1;
-  return Number(jahr) >= APPLE_KORREKTUR_JAHRESGRENZE ? APPLE_KORREKTUR_NEUERE : APPLE_KORREKTUR_AELTERE;
+function markenKorrekturFaktor(marke, jahr) {
+  const m = String(marke || "").trim().toLowerCase();
+  if (m === "apple") {
+    return Number(jahr) >= APPLE_KORREKTUR_JAHRESGRENZE ? APPLE_KORREKTUR_NEUERE : APPLE_KORREKTUR_AELTERE;
+  }
+  if (m === "samsung") return SAMSUNG_KORREKTUR;
+  return 1;
 }
 
 module.exports = {
-  appleKorrekturFaktor,
+  markenKorrekturFaktor,
   APPLE_KORREKTUR_JAHRESGRENZE,
   APPLE_KORREKTUR_NEUERE,
   APPLE_KORREKTUR_AELTERE,
+  SAMSUNG_KORREKTUR,
   MIN_TREFFER_GEBRAUCHT,
   MIN_TREFFER_NEU,
   QUARTIL_KAPPEN,

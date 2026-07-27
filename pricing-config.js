@@ -71,21 +71,62 @@ function marktwert(uvp, jahr, marke, modell, referenzjahr) {
 // Annahme (versiegelte/neuwertige Ware erzielt spürbar mehr als gebrauchte "Sehr gut"-Ware).
 const NEUWARE_AUFSCHLAG = 1.15;
 
-// Ankaufspreis je Zustandsstufe als Prozentsatz des jeweiligen Wiederverkaufswerts
-// (neuVersiegelt bezieht sich auf den Neuware-, alle anderen auf den Gebraucht-Wiederverkaufswert).
+// Ankaufspreis je Zustandsstufe als Prozentsatz des Gebraucht-Wiederverkaufswerts.
+// "neuVersiegelt" hat seit 28.07.2026 eine EIGENE Formel (siehe berechneNeuVersiegelt()
+// weiter unten) und wird hier bewusst nicht mehr gelistet.
 const ANKAUF_PROZENTSAETZE = {
-  neuVersiegelt: 0.82,
   wieNeu: 0.75,
   sehrGut: 0.68,
   gut: 0.55,
   defekt: 0.20,
 };
 
+// ---------------------------------------------------------------------------
+// Ankaufspreis "neu versiegelt" (seit 28.07.2026)
+// ---------------------------------------------------------------------------
+// Vorfall 27.07.2026: die alte Herleitung (Prozentsatz vom eBay-Neupreis-Median) kaufte beim
+// iPhone 17 Pro Max 512GB über dem eigenen Verkaufspreis UND über dem eBay-Neupreis ein -
+// Verlustgeschäft. Neue Logik, siehe OFFENE-PUNKTE.md: IMMER der NIEDRIGERE von zwei
+// unabhängigen Ankern, damit wir strukturell nie zu teuer einkaufen können:
+//   Regel 1 (eigener Verkaufspreis in bestand.json vorhanden): eigenerVK × 0,88 (-12% Marge).
+//   Regel 2 (marktAnkerNeu vorhanden - echter eBay-Neupreis-Median ODER, falls kein echter
+//     Marktlauf existiert, dessen Schätzung aus marktwertGebraucht × NEUWARE_AUFSCHLAG):
+//     marktAnkerNeu × 0,82, zusätzlich hart gedeckelt auf marktAnkerNeu × 0,90 (nie über 90%
+//     des Neupreis-Ankers, auch nicht durch den globalen Ankaufsniveau-Regler).
+// Sind beide Anker unbekannt, gibt es keinen Ankaufspreis für diese Stufe (null - Stufe wird
+// in UI/Ankaufsrechner ausgeblendet, wie bei fehlendem marktwertNeu schon bisher üblich).
+const NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG = 0.88; // -12 % vom eigenen Verkaufspreis
+const NEU_VERSIEGELT_MARKTANKER_PROZENT = 0.82;  // Basis-Prozentsatz vom Marktanker
+const NEU_VERSIEGELT_MARKTANKER_DECKEL = 0.90;   // harte Obergrenze: nie über 90 % des Ankers
+
+function berechneNeuVersiegelt({ eigenerVK, marktAnkerNeu, niveauFaktor }) {
+  const faktor = Number.isFinite(niveauFaktor) ? niveauFaktor : 1;
+  const kandidaten = [];
+  if (eigenerVK != null && Number.isFinite(Number(eigenerVK))) {
+    kandidaten.push(Number(eigenerVK) * NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG * faktor);
+  }
+  if (marktAnkerNeu != null && Number.isFinite(Number(marktAnkerNeu))) {
+    const anker = Number(marktAnkerNeu);
+    const basis = anker * NEU_VERSIEGELT_MARKTANKER_PROZENT * faktor;
+    const deckel = anker * NEU_VERSIEGELT_MARKTANKER_DECKEL * faktor;
+    kandidaten.push(Math.min(basis, deckel));
+  }
+  if (!kandidaten.length) return null;
+  return rundeAbAuf5(Math.min(...kandidaten));
+}
+
 // Reihenfolge, in der die 5 Stufen überall (UI, Validierung, Export) angezeigt werden.
 const ZUSTANDS_REIHENFOLGE = ["neuVersiegelt", "wieNeu", "sehrGut", "gut", "defekt"];
 
 function rundeAuf5(zahl) {
   return Math.max(5, Math.round(zahl / 5) * 5);
+}
+
+// Wie rundeAuf5(), aber rundet immer AB (floor statt round) - für harte Obergrenzen, bei
+// denen ein Aufrunden den gedeckelten Wert wieder über die Grenze heben könnte (siehe
+// scripts/update-ankaufspreise.js Konsistenzregel 3).
+function rundeAbAuf5(zahl) {
+  return Math.max(5, Math.floor(zahl / 5) * 5);
 }
 
 function normalisiere(text) {
@@ -119,13 +160,26 @@ function ermittleWiederverkaufswerte(geraet, variante, bestandListe) {
   const uvpVariante = uvpBasis + (Number(variante.uvpDelta) || 0);
   const verhaeltnis = uvpBasis > 0 ? uvpVariante / uvpBasis : 1;
   const marktwertGebrauchtVariante = (Number(geraet.marktwertGebraucht) || 0) * verhaeltnis;
+  // Bevorzugt den ECHTEN marktwertNeu aus dem Katalog (von einem echten Marktlauf befüllt,
+  // siehe scripts/update-ankaufspreise.js), sonst die Schätzung aus marktwertGebraucht ×
+  // NEUWARE_AUFSCHLAG. Beide Varianten werden wie marktwertGebraucht proportional über
+  // uvpDelta auf die konkrete Variante skaliert (Näherung für Nicht-Basis-Varianten, siehe
+  // OFFENE-PUNKTE.md - kein Ersatz für einen echten Marktlauf je Variante).
+  const marktAnkerNeuSchaetzung = geraet.marktwertNeu != null
+    ? Number(geraet.marktwertNeu) * verhaeltnis
+    : marktwertGebrauchtVariante * NEUWARE_AUFSCHLAG;
 
   const eigenerNeu = findeEigenenVerkaufspreis(bestandListe, geraet, variante, "neu");
   const eigenerGebraucht = findeEigenenVerkaufspreis(bestandListe, geraet, variante, "gebraucht");
 
   return {
-    neu: eigenerNeu != null ? eigenerNeu : marktwertGebrauchtVariante * NEUWARE_AUFSCHLAG,
+    neu: eigenerNeu != null ? eigenerNeu : marktAnkerNeuSchaetzung,
     gebraucht: eigenerGebraucht != null ? eigenerGebraucht : marktwertGebrauchtVariante,
+    // Unkollabiert für berechneNeuVersiegelt() (siehe dort): eigenerNeu und
+    // marktAnkerNeuSchaetzung werden dort UNABHÄNGIG voneinander verglichen (niedrigerer
+    // Wert gewinnt), statt wie oben "eigener Verkauf hat immer Vorrang".
+    eigenerNeu,
+    marktAnkerNeuSchaetzung,
     quelleNeu: eigenerNeu != null ? "eigenerVerkauf" : "marktwert",
     quelleGebraucht: eigenerGebraucht != null ? "eigenerVerkauf" : "marktwert",
   };
@@ -159,8 +213,15 @@ function berechnePreise(geraet, variante, bestandListe, niveauProzent) {
 
   const ergebnis = {};
   ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
-    const basis = stufe === "neuVersiegelt" ? wiederverkauf.neu : wiederverkauf.gebraucht;
-    ergebnis[stufe] = rundeAuf5(basis * ANKAUF_PROZENTSAETZE[stufe] * niveauFaktor);
+    if (stufe === "neuVersiegelt") {
+      ergebnis[stufe] = berechneNeuVersiegelt({
+        eigenerVK: wiederverkauf.eigenerNeu,
+        marktAnkerNeu: wiederverkauf.marktAnkerNeuSchaetzung,
+        niveauFaktor,
+      });
+      return;
+    }
+    ergebnis[stufe] = rundeAuf5(wiederverkauf.gebraucht * ANKAUF_PROZENTSAETZE[stufe] * niveauFaktor);
   });
 
   return {
@@ -199,9 +260,14 @@ module.exports = {
   marktwert,
   ermittleWiederverkaufswerte,
   berechnePreise,
+  berechneNeuVersiegelt,
+  NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG,
+  NEU_VERSIEGELT_MARKTANKER_PROZENT,
+  NEU_VERSIEGELT_MARKTANKER_DECKEL,
   pruefeKonsistenz,
   liesAnkaufsniveau,
   schreibeAnkaufsniveau,
   rundeAuf5,
+  rundeAbAuf5,
   findeEigenenVerkaufspreis,
 };
