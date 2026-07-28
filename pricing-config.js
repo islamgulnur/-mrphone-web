@@ -1,10 +1,24 @@
 /**
- * Zentrale Ankaufspreis-Heuristik – Prozent-vom-Wiederverkaufswert-Modell.
+ * Zentrale Ankaufspreis-Heuristik – EINZIGE Quelle für Zustands-Prozentsätze im ganzen Projekt.
  *
  * Verwendet von:
- *   - admin/server.js       ("Neu berechnen", Massenanpassung, Ankaufsniveau-Regler)
- *   - scripts/build-ankauf-preise.js (Erstbefüllung aus geraete-katalog.json)
- *   - scripts/befuelle-marktwert.js (Startwert-Schätzung für marktwertGebraucht)
+ *   - admin/server.js                  ("Neu berechnen", Massenanpassung, Ankaufsniveau-Regler)
+ *   - scripts/build-ankauf-preise.js   (Erstbefüllung aus geraete-katalog.json)
+ *   - scripts/befuelle-marktwert.js    (Startwert-Schätzung für marktwertGebraucht)
+ *   - scripts/update-ankaufspreise.js  (echter täglicher eBay-Marktlauf)
+ *
+ * Bereinigt am 28.07.2026: Apple-Korrektur (1,40/1,15), Samsung-Faktor (0,78), Wettbewerbs-Abstand
+ * und der eigenständige Markt-Deckel (Konsistenzregel 3) sind vollständig entfernt – sie
+ * überlagerten sich und kollidierten bei hochpreisigen Geräten (mehrere Zustandsstufen kollabierten
+ * auf denselben gekappten Preis, siehe OFFENE-PUNKTE.md). Es gibt jetzt nur noch:
+ *   1. Zwei feste Zustands-Tabellen (ANKAUF_PROZENTSAETZE_APPLE / _REST), je als Prozentsatz des
+ *      rohen eBay-Marktwerts – siehe prozentsaetzeFuerMarke(). Da beide Tabellen ausschließlich
+ *      Werte < 1,0 enthalten, kann eine Stufe rechnerisch nie über ihrem eigenen Marktanker landen;
+ *      ein zusätzlicher Markt-Deckel ist damit strukturell überflüssig.
+ *   2. Die separate, gehärtete neuVersiegelt-Formel (berechneNeuVersiegelt(), seit 28.07.2026,
+ *      unverändert) mit hartem 90%-Deckel gegen marktwertNeu.
+ *   3. Genau EINE verbleibende Sicherheitsregel: Ankaufspreis nie über dem eigenen Verkaufspreis
+ *      aus bestand.json (siehe pruefeKonsistenz() bzw. Konsistenzregel 1 in update-ankaufspreise.js).
  *
  * ANKER-PRIORITÄT (pro Zustand "neu"/"gebraucht" unabhängig ermittelt):
  *   1. Primäranker: exakter Treffer (Marke+Modell+Variante+Zustand) in bestand.json
@@ -14,13 +28,14 @@
  *      "Neu"-Wiederverkaufswert wird daraus über NEUWARE_AUFSCHLAG abgeleitet, wenn kein
  *      eigener Verkaufspreis für "neu" vorliegt.
  *
- * Die 5 Ankaufsstufen sind feste Prozentsätze dieses Wiederverkaufswerts (ANKAUF_PROZENTSAETZE),
- * zusätzlich global verschiebbar über den Ankaufsniveau-Regler (pricing-niveau.json, -15..+15 %).
+ * Die 4 Gebraucht-Ankaufsstufen sind feste Prozentsätze dieses Wiederverkaufswerts (siehe
+ * prozentsaetzeFuerMarke()), zusätzlich global verschiebbar über den Ankaufsniveau-Regler
+ * (pricing-niveau.json, -15..+15 %).
  *
  * Änderungen hier wirken sich NICHT rückwirkend auf bereits gespeicherte Preise aus, sondern erst
- * beim nächsten "Neu berechnen" bzw. beim nächsten Lauf des Build-Skripts. preisQuelle:"manuell"
- * gesetzte Varianten werden von keiner Funktion hier automatisch überschrieben – das bleibt
- * Aufgabe der aufrufenden Stelle (dort prüfen!).
+ * beim nächsten "Neu berechnen" bzw. beim nächsten Lauf des Build-/Update-Skripts. preisQuelle:
+ * "manuell" gesetzte Varianten werden von keiner Funktion hier automatisch überschrieben – das
+ * bleibt Aufgabe der aufrufenden Stelle (dort prüfen!).
  */
 const fs = require("fs");
 const path = require("path");
@@ -71,15 +86,32 @@ function marktwert(uvp, jahr, marke, modell, referenzjahr) {
 // Annahme (versiegelte/neuwertige Ware erzielt spürbar mehr als gebrauchte "Sehr gut"-Ware).
 const NEUWARE_AUFSCHLAG = 1.15;
 
-// Ankaufspreis je Zustandsstufe als Prozentsatz des Gebraucht-Wiederverkaufswerts.
-// "neuVersiegelt" hat seit 28.07.2026 eine EIGENE Formel (siehe berechneNeuVersiegelt()
-// weiter unten) und wird hier bewusst nicht mehr gelistet.
-const ANKAUF_PROZENTSAETZE = {
+// Ankaufspreis je Zustandsstufe als Prozentsatz des Gebraucht-Wiederverkaufswerts (= roher
+// eBay-Marktwert). "neuVersiegelt" hat seit 28.07.2026 eine EIGENE Formel (siehe
+// berechneNeuVersiegelt() weiter unten) und wird hier bewusst nicht mehr gelistet.
+//
+// Zwei Tabellen statt einer gemeinsamen: Apple hält den Wiederverkaufswert spürbar besser als
+// der Rest des Sortiments, deshalb ein durchgehend höherer Prozentsatz je Zustandsstufe. Das
+// ersetzt den früheren, sich mit dem Wettbewerbs-Abstand überlagernden "Markenkorrektur"-Faktor
+// (siehe Kommentar oben) durch EINEN einzigen, transparenten Satz Zahlen pro Marke.
+const ANKAUF_PROZENTSAETZE_APPLE = {
+  wieNeu: 0.88,
+  sehrGut: 0.80,
+  gut: 0.72,
+  defekt: 0.25,
+};
+const ANKAUF_PROZENTSAETZE_REST = {
   wieNeu: 0.75,
   sehrGut: 0.68,
   gut: 0.55,
   defekt: 0.20,
 };
+
+function prozentsaetzeFuerMarke(marke) {
+  return String(marke || "").trim().toLowerCase() === "apple"
+    ? ANKAUF_PROZENTSAETZE_APPLE
+    : ANKAUF_PROZENTSAETZE_REST;
+}
 
 // ---------------------------------------------------------------------------
 // Ankaufspreis "neu versiegelt" (seit 28.07.2026)
@@ -210,6 +242,7 @@ function berechnePreise(geraet, variante, bestandListe, niveauProzent) {
   const niveau = Number.isFinite(niveauProzent) ? niveauProzent : liesAnkaufsniveau();
   const niveauFaktor = 1 + niveau / 100;
   const wiederverkauf = ermittleWiederverkaufswerte(geraet, variante, bestandListe);
+  const prozentsaetze = prozentsaetzeFuerMarke(geraet.marke);
 
   const ergebnis = {};
   ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
@@ -221,7 +254,7 @@ function berechnePreise(geraet, variante, bestandListe, niveauProzent) {
       });
       return;
     }
-    ergebnis[stufe] = rundeAuf5(wiederverkauf.gebraucht * ANKAUF_PROZENTSAETZE[stufe] * niveauFaktor);
+    ergebnis[stufe] = rundeAuf5(wiederverkauf.gebraucht * prozentsaetze[stufe] * niveauFaktor);
   });
 
   return {
@@ -250,7 +283,9 @@ module.exports = {
   ALTERSFAKTOR_STUFEN,
   ALTERSFAKTOR_JAHRESABSCHLAG,
   ALTERSFAKTOR_MINIMUM,
-  ANKAUF_PROZENTSAETZE,
+  ANKAUF_PROZENTSAETZE_APPLE,
+  ANKAUF_PROZENTSAETZE_REST,
+  prozentsaetzeFuerMarke,
   NEUWARE_AUFSCHLAG,
   NIVEAU_MIN,
   NIVEAU_MAX,

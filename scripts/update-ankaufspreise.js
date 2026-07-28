@@ -1,10 +1,18 @@
 /**
  * Vollautomatisches, tägliches Ankaufspreis-Update auf Basis echter Marktdaten.
  * Datenquelle: eBay Browse API (Marktplatz EBAY_DE), siehe scripts/lib/search-client.js.
- * Ersetzt schrittweise die Schätzformel aus pricing-config.js durch zwei echte Marktanker
- * je Gerät+Variante (gebraucht/neu), gefolgt vom Wettbewerbs-Abstand (siehe
- * scripts/ankaufspreis-config.js), damit der Ankaufspreis bewusst unter dem Niveau der
- * Online-Ankaufsportale liegt.
+ * Ermittelt zwei echte Marktanker je Gerät+Variante (gebraucht/neu) und wendet darauf die
+ * Zustands-Prozentsätze aus pricing-config.js an (ANKAUF_PROZENTSAETZE_APPLE / _REST,
+ * prozentsaetzeFuerMarke() - je nach Marke, EINZIGE Quelle für diese Prozentsätze).
+ *
+ * Bereinigt am 28.07.2026: Der frühere "Wettbewerbs-Abstand" (gestaffelter Euro-Abzug) und die
+ * frühere "Markenkorrektur" (Apple-Faktor 1,40/1,15, Samsung-Faktor 0,78) sind vollständig
+ * entfernt, ebenso die davon nötig gewordene Konsistenzregel 3 (Markt-Deckel) - sie
+ * überlagerten sich und kollidierten bei hochpreisigen Geräten (siehe OFFENE-PUNKTE.md:
+ * mehrere Zustandsstufen kollabierten auf denselben gekappten Preis). Da die Apple/Rest-
+ * Prozentsätze in pricing-config.js ausschließlich Werte < 1,0 enthalten, kann eine Stufe
+ * rechnerisch nie mehr über ihrem eigenen Marktanker landen - ein zusätzlicher Markt-Deckel
+ * ist damit strukturell überflüssig.
  *
  * Ausführen:
  *   node scripts/update-ankaufspreise.js                 (Live-Lauf, braucht Secrets)
@@ -22,23 +30,17 @@
  * Sicherheitsregeln (siehe CLAUDE.md + Anforderungsspezifikation):
  *   1. preisQuelle:"manuell" wird nie angefasst.
  *   2. Tagesbremse ±10 %/Tag (Ausnahme: allererster echter Marktlauf eines Geräts, s. u.).
- *   3. Konsistenzregel 1: Ankaufspreis nie über eigenem Verkaufspreis (bestand.json).
+ *   3. Konsistenzregel 1 (EINZIGE verbleibende Sicherheitsregel neben neuVersiegelt):
+ *      Ankaufspreis nie über eigenem Verkaufspreis (bestand.json).
  *   4. Konsistenzregel 2: marktwertNeu muss > marktwertGebraucht sein, sonst Skip.
  *   5. validate-data.js muss nach der Berechnung grün sein, sonst kein Commit/Schreiben.
  *   6. API-Ausfall/Fehler: alte Preise bleiben unverändert, sichtbarer Fehlschlag.
  *   7. Globaler Preisregler (pricing-niveau.json, ±15 %) wirkt zusätzlich obendrauf.
- *   8. Konsistenzregel 3: kein Ankaufspreis darf über seinem eigenen Marktanker liegen
- *      (alle Stufen außer neuVersiegelt <= marktwertGebraucht). Greift als letzter,
- *      unbedingter Schritt NACH der Markenkorrektur (siehe wendeMarkenKorrekturAn) - ein
- *      Korrekturfaktor > 1 (z. B. Apple 1,40) kann sonst rechnerisch über den Marktanker
- *      hinausschießen, selbst wenn der Wettbewerbs-Abstand vorher korrekt abgezogen wurde.
- *      Anders als Konsistenzregel 1 (eigener Verkaufspreis) greift diese Regel IMMER, auch
- *      wenn bestand.json für das Gerät keinen Eintrag hat.
- *   9. "neuVersiegelt" hat seit 28.07.2026 EINE EIGENE Formel (siehe pricing.berechneNeuVersiegelt(),
- *      Vorfall 27.07.2026 in OFFENE-PUNKTE.md) und durchläuft NICHT mehr die Schritte 2-8 oben -
+ *   8. "neuVersiegelt" hat seit 28.07.2026 EINE EIGENE Formel (siehe pricing.berechneNeuVersiegelt(),
+ *      Vorfall 27.07.2026 in OFFENE-PUNKTE.md) und durchläuft NICHT die Schritte 2-7 oben -
  *      stattdessen der niedrigere von: eigener Verkaufspreis × 0,88, ODER marktwertNeu × 0,82
  *      (hart gedeckelt auf marktwertNeu × 0,90). So kann diese Stufe strukturell nie mehr über
- *      dem eigenen Verkaufspreis oder über 90 % des eBay-Neupreises einkaufen.
+ *      dem eigenen Verkaufspreis oder über 90 % des eBay-Neupreises einkaufen. Unangetastet.
  *
  * Mock-Modus ist NUR zusammen mit --dry-run erlaubt - ein echter (schreibender) Lauf
  * ohne echte Secrets bricht bewusst ab, statt versehentlich Fantasiepreise in die
@@ -72,17 +74,18 @@ const ANKAUF_KOMMENTAR =
   "AUTO-PREISE aus echten eBay-Marktdaten (Browse API, siehe scripts/lib/search-client.js) " +
   "- siehe scripts/update-ankaufspreise.js + " +
   "scripts/ankaufspreis-config.js. Je Gerät+Variante zwei Marktanker (gebraucht/neu), " +
-  "Ausreißerfilter + Median + Abschlag. Stufen wieNeu/sehrGut/gut/defekt als feste Prozentsätze " +
-  "vom Gebraucht-Marktanker, danach Wettbewerbs-Abstand (gestaffelter Abzug unter das Niveau der " +
-  "Online-Ankaufsportale) + Markenkorrektur (Apple/Samsung). Stufe neuVersiegelt hat seit " +
+  "Ausreißerfilter + Median + Abschlag. Stufen wieNeu/sehrGut/gut/defekt als feste, markenabhängige " +
+  "Prozentsätze vom Gebraucht-Marktanker (pricing-config.js: ANKAUF_PROZENTSAETZE_APPLE / _REST, " +
+  "einzige Quelle dieser Prozentsätze im Projekt). Stufe neuVersiegelt hat seit " +
   "28.07.2026 eine EIGENE Formel (siehe pricing.berechneNeuVersiegelt(), OFFENE-PUNKTE.md): " +
   "niedrigerer Wert von eigenem Verkaufspreis × 0,88 ODER marktwertNeu × 0,82 (gedeckelt auf 90% " +
   "von marktwertNeu) - nie höher als eigener Verkaufspreis oder 90% des eBay-Neupreises. " +
   "Alles zusätzlich global verschiebbar über pricing-niveau.json. preisQuelle \"manuell\" wird " +
   "nie automatisch überschrieben. Geräte, die noch keinen echten Marktlauf hatten (marktwertQuelle " +
   "\"geschaetzt\" im Katalog), tragen weiterhin die ältere Schätzformel aus pricing-config.js " +
-  "(inkl. derselben neuVersiegelt-Formel, dort mit geschätztem statt echtem Marktanker), " +
-  "bis sie an der Reihe sind (siehe Rotation, scripts/rotation-state.json).";
+  "(inkl. derselben neuVersiegelt-Formel, dort mit geschätztem statt echtem Marktanker, aber " +
+  "denselben markenabhängigen Prozentsätzen), bis sie an der Reihe sind (siehe Rotation, " +
+  "scripts/rotation-state.json).";
 
 function parseArgs(argv) {
   const dryRun = argv.includes("--dry-run");
@@ -186,59 +189,21 @@ async function holeMarktwert({ geraet, variante, zustand, zugangskontext, budget
 }
 
 // ---------------------------------------------------------------------------
-// 4 Ankaufsstufen (ohne neuVersiegelt, siehe Regel 9 im Kommentarblock oben) berechnen +
-// Wettbewerbs-Abstand + Tagesbremse + Konsistenzregel 1
+// 4 Ankaufsstufen (ohne neuVersiegelt, siehe Regel 8 im Kommentarblock oben) berechnen +
+// Tagesbremse + Konsistenzregel 1
 // ---------------------------------------------------------------------------
-function berechneStufen({ marktwertGebraucht, niveauFaktor }) {
+// Markenabhängige Prozentsätze (pricing.prozentsaetzeFuerMarke - Apple/Rest, EINZIGE Quelle
+// dieser Prozentsätze im Projekt) direkt auf den echten Gebraucht-Marktanker angewendet.
+// Kein Wettbewerbs-Abstand, keine zusätzliche Markenkorrektur mehr (siehe Kommentarblock
+// oben: bereinigt am 28.07.2026, überlagerten sich und kollidierten bei teuren Geräten).
+function berechneStufen({ marktwertGebraucht, niveauFaktor, marke }) {
+  const prozentsaetze = pricing.prozentsaetzeFuerMarke(marke);
   const stufen = { neuVersiegelt: null }; // wird separat über pricing.berechneNeuVersiegelt() gesetzt
   pricing.ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
     if (stufe === "neuVersiegelt") return;
-    stufen[stufe] = marktwertGebraucht == null ? null : pricing.rundeAuf5(marktwertGebraucht * config.ANKAUF_PROZENTSAETZE_MARKT[stufe] * niveauFaktor);
+    stufen[stufe] = marktwertGebraucht == null ? null : pricing.rundeAuf5(marktwertGebraucht * prozentsaetze[stufe] * niveauFaktor);
   });
   return stufen;
-}
-
-function rundeWettbewerb(zahl) {
-  return Math.max(config.WETTBEWERB_MINDESTPREIS, Math.round(zahl / config.WETTBEWERB_RUNDUNG) * config.WETTBEWERB_RUNDUNG);
-}
-
-// Wettbewerbs-Abstand (siehe ankaufspreis-config.js): nach der reinen Formel-Berechnung
-// gestaffelter Abzug, damit der Ankaufspreis bewusst unter dem Niveau der Online-
-// Ankaufsportale liegt. Wirkt je Zustandsstufe unabhängig, anhand des jeweils EIGENEN
-// berechneten (Vor-Abzug-)Preises dieser Stufe. Globaler Deckel (WETTBEWERB_MAX_ABZUG_PROZENT)
-// gilt für alle Stufen, damit ein fester Euro-Abzug bei günstigen Geräten nicht
-// überproportional viel Prozent des Preises frisst.
-function wendeWettbewerbsAbstandAn(stufenRoh) {
-  const stufenNachAbstand = {};
-  pricing.ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
-    const wert = stufenRoh[stufe];
-    if (wert == null) {
-      stufenNachAbstand[stufe] = null;
-      return;
-    }
-    let abzug = wert <= config.WETTBEWERB_SCHWELLE_1 ? config.WETTBEWERB_ABZUG_BIS_100
-      : wert <= config.WETTBEWERB_SCHWELLE_2 ? config.WETTBEWERB_ABZUG_100_BIS_200
-      : wert <= config.WETTBEWERB_SCHWELLE_3 ? config.WETTBEWERB_ABZUG_200_BIS_500
-      : config.WETTBEWERB_ABZUG_UEBER_500;
-    abzug = Math.min(abzug, wert * config.WETTBEWERB_MAX_ABZUG_PROZENT);
-    stufenNachAbstand[stufe] = rundeWettbewerb(wert - abzug);
-  });
-  return stufenNachAbstand;
-}
-
-// Marken-Korrektur nach Baujahr (siehe ankaufspreis-config.js: Apple und Samsung): wirkt
-// nach dem Wettbewerbs-Abstand, auf alle 5 Zustandsstufen gleichermaßen, bevor die
-// Tagesbremse greift. Konsistenzregel 3 (weiter unten) deckelt das Ergebnis danach hart
-// gegen den jeweiligen Marktanker, falls ein Faktor > 1 (aktuell nur Apple) darüber hinausschießt.
-function wendeMarkenKorrekturAn(stufenNachAbstand, geraet) {
-  const faktor = config.markenKorrekturFaktor(geraet.marke, geraet.jahr);
-  if (faktor === 1) return stufenNachAbstand;
-  const stufenKorrigiert = {};
-  pricing.ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
-    const wert = stufenNachAbstand[stufe];
-    stufenKorrigiert[stufe] = wert == null ? null : rundeWettbewerb(wert * faktor);
-  });
-  return stufenKorrigiert;
 }
 
 function wendeTagesbremseAn({ stufenRoh, altPreise, istErsterLauf }) {
@@ -275,28 +240,6 @@ function wendeKonsistenzregel1An({ stufenFinal, geraet, variante, bestandListe }
     if (eigenerPreis != null && stufenFinal[stufe] > eigenerPreis) {
       stufenFinal[stufe] = pricing.rundeAuf5(eigenerPreis);
       pruefenGruende.push(stufe + ": über eigenem Verkaufspreis (" + eigenerPreis + " €) gekappt");
-    }
-  });
-  return pruefenGruende;
-}
-
-// Konsistenzregel 3 (siehe Kommentarblock oben): harte Obergrenze je Stufe gegen ihren
-// eigenen Marktanker - neuVersiegelt gegen marktwertNeu, alle anderen Stufen gegen
-// marktwertGebraucht. Rundet mit rundeAbAuf5() (floor statt round), damit die Rundung
-// selbst die Grenze nicht wieder überschreitet. Greift unbedingt, unabhängig von
-// bestand.json/eigenem Verkaufspreis - das ist der entscheidende Unterschied zu
-// Konsistenzregel 1, die ohne bestand.json-Eintrag wirkungslos bleibt.
-function wendeKonsistenzregel3An({ stufenFinal, marktwertGebraucht, marktwertNeu }) {
-  const pruefenGruende = [];
-  pricing.ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
-    if (stufenFinal[stufe] == null) return;
-    const anker = stufe === "neuVersiegelt" ? marktwertNeu : marktwertGebraucht;
-    if (anker != null && stufenFinal[stufe] > anker) {
-      const alterWert = stufenFinal[stufe];
-      stufenFinal[stufe] = pricing.rundeAbAuf5(anker);
-      pruefenGruende.push(
-        stufe + ": über Marktanker (" + Math.round(anker) + " €) gekappt (war " + alterWert + " €)"
-      );
     }
   });
   return pruefenGruende;
@@ -349,29 +292,24 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     };
   }
 
-  const stufenRoh = berechneStufen({ marktwertGebraucht: gebraucht.marktwert, niveauFaktor });
-  const stufenNachAbstand = wendeMarkenKorrekturAn(wendeWettbewerbsAbstandAn(stufenRoh), geraet);
+  const stufenRoh = berechneStufen({ marktwertGebraucht: gebraucht.marktwert, niveauFaktor, marke: geraet.marke });
   const istErsterLauf = !geraet.marktwertQuelle || geraet.marktwertQuelle === "geschaetzt";
   const { stufenFinal, pruefenGruende: bremseGruende } = wendeTagesbremseAn({
-    stufenRoh: stufenNachAbstand, altPreise: altVariante && altVariante.preise, istErsterLauf,
+    stufenRoh, altPreise: altVariante && altVariante.preise, istErsterLauf,
   });
   const konsistenzGruende = wendeKonsistenzregel1An({ stufenFinal, geraet, variante, bestandListe });
-  const ankerGruende = wendeKonsistenzregel3An({
-    stufenFinal, marktwertGebraucht: gebraucht.marktwert, marktwertNeu,
-  });
 
-  // Regel 9 (siehe Kommentarblock oben): "neuVersiegelt" umgeht Wettbewerbs-Abstand,
-  // Markenkorrektur UND Tagesbremse komplett - eigene, strukturell sichere Formel statt
-  // Prozentsatz vom Marktwert. Bewusst OHNE Tagesbremse: die Formel selbst ist bereits hart
-  // gegen eigenen Verkaufspreis/marktwertNeu gedeckelt, ein zusätzliches Bremsen der
-  // Preis-SENKUNG (z. B. bei einer Korrektur wie am 27.07.2026) würde nur verzögern, dass ein
-  // zu hoher Preis vom Netz geht.
+  // Regel 8 (siehe Kommentarblock oben): "neuVersiegelt" umgeht Tagesbremse komplett - eigene,
+  // strukturell sichere Formel statt Prozentsatz vom Marktwert. Bewusst OHNE Tagesbremse: die
+  // Formel selbst ist bereits hart gegen eigenen Verkaufspreis/marktwertNeu gedeckelt, ein
+  // zusätzliches Bremsen der Preis-SENKUNG (z. B. bei einer Korrektur wie am 27.07.2026) würde
+  // nur verzögern, dass ein zu hoher Preis vom Netz geht.
   const eigenerVKNeu = pricing.findeEigenenVerkaufspreis(bestandListe, geraet, variante, "neu");
   stufenFinal.neuVersiegelt = pricing.berechneNeuVersiegelt({
     eigenerVK: eigenerVKNeu, marktAnkerNeu: marktwertNeu, niveauFaktor,
   });
 
-  const alleGruende = [...bremseGruende, ...konsistenzGruende, ...ankerGruende];
+  const alleGruende = [...bremseGruende, ...konsistenzGruende];
 
   const neueVariante = { bezeichnung: variante.bezeichnung, uvpDelta: variante.uvpDelta, preise: stufenFinal, preisQuelle: "auto" };
 
@@ -386,8 +324,7 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     neuMedianNach: neu.quartil && neu.quartil.medianNachFilter,
     marktwertNeu,
     eigenerVKNeu,
-    stufenVorAbstand: stufenRoh,
-    stufenNachAbstand,
+    stufenBerechnet: stufenRoh,
     stufen: stufenFinal,
     altStufen: altVariante && altVariante.preise,
     istErsterLauf,
@@ -428,15 +365,13 @@ function formatiereRechnung(r) {
     " → final " + (r.stufen.neuVersiegelt == null ? "– (kein Anker vorhanden)" : rund(r.stufen.neuVersiegelt) + " €") +
     (r.altStufen && r.altStufen.neuVersiegelt != null ? " (bisher " + rund(r.altStufen.neuVersiegelt) + " €)" : "")
   );
-  zeilen.push("- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):");
+  zeilen.push("- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):");
   pricing.ZUSTANDS_REIHENFOLGE.filter((s) => s !== "neuVersiegelt").forEach((stufe) => {
-    const vor = r.stufenVorAbstand && r.stufenVorAbstand[stufe];
-    const nach = r.stufenNachAbstand && r.stufenNachAbstand[stufe];
+    const berechnet = r.stufenBerechnet && r.stufenBerechnet[stufe];
     const alt = r.altStufen && r.altStufen[stufe];
     zeilen.push(
       "  - " + stufe + ": " +
-      (vor == null ? "–" : rund(vor) + " €") + " → " +
-      (nach == null ? "–" : rund(nach) + " €") +
+      (berechnet == null ? "–" : rund(berechnet) + " €") +
       (alt != null ? " (bisher " + rund(alt) + " €)" : "") +
       " → final " + (r.stufen[stufe] == null ? "–" : rund(r.stufen[stufe]) + " €")
     );
