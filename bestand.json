@@ -24,5 +24,31 @@
     "bild": "",
     "aktiv": true,
     "datum": "2026-07-28"
+  },
+  {
+    "id": "b35d31e2-1cb8-45e6-8bf7-842a9f49b7fd",
+    "modell": "Galaxy S26 Ultra",
+    "marke": "Samsung",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 849,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-07-28"
+  },
+  {
+    "id": "6939a2cc-cf7b-4738-8900-5cfce8ca2298",
+    "modell": "Galaxy S26 Ultra",
+    "marke": "Samsung",
+    "speicher": "1 TB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1100,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-07-28"
   }
 ]

@@ -95,6 +95,92 @@ mehrere dieser Geräte (z. B. iPhone 16) verdächtig aktuell/populär für "nich
 gehandelt" wirken, vermutlich Artefakt der alten eBay-NEW-Abfrage vor dem "NEW-Abfrage-Fix"
 (Commit `7db19a9`) - sollte sich beim nächsten echten Marktlauf dieser Geräte klären.
 
+## GELÖST 28.07.2026: Drei Leitplanken gegen zu teure Nicht-Apple-Neu-Ankaufspreise
+
+Befund: `marktAnkerNeu` (echter eBay-Marktwert oder Schätzung) hatte keinen Bezug zur eigenen
+UVP, wodurch kontaminierte Scraper-Treffer (Bundles, falsche Varianten, Sammlerpreise)
+ungebremst in `neuVersiegelt` liefen - z. B. Sony DualSense Controller UVP 69 €, `marktwertNeu`
+496 € → Ankaufspreis 405 € (das 5,9-fache der UVP). Betraf primär, aber nicht ausschließlich,
+Nicht-Apple-Geräte (auch iPad 11, Apple Watch Series 4/8, MacBook Pro 14" M4 waren betroffen).
+
+**Drei markenunabhängige Leitplanken** (`pricing-config.js`, `berechneNeuVersiegelt()` +
+`pruefeMarktwertNeuPlausibilitaet()`, siehe dortige Kommentare):
+1. Anker nie über 100 % UVP der Variante.
+2. Roher `marktwertNeu` > 115 % UVP gilt als kontaminiert und wird verworfen (greift sowohl bei
+   gespeicherten Katalogwerten als auch live in `scripts/update-ankaufspreise.js`).
+3. Reine Schätz-Anker ohne echten Marktlauf (`marktwertQuelle: "geschaetzt"`) zusätzlich auf
+   85 % UVP gedeckelt.
+
+Bewusst KEINE Markenausnahme für Apple - das wäre exakt die Sonderlogik (Apple-Korrektur/
+Samsung-Faktor), die am 28.07.2026 an anderer Stelle bereits entfernt wurde.
+
+**Umgesetzt:** `pricing-config.js` + `scripts/update-ankaufspreise.js` (Commit `668e964`),
+`bestand.json` um reale Verkaufspreise Galaxy S26 Ultra 256GB (849 €)/512GB (999,99 €)/1TB
+(1.100 €) ergänzt (Regel 1 greift dort, wo der Marktanker allein nicht ausreicht). Danach
+`neuVersiegelt` für alle 449 Katalog-Geräte über `pricing.berechnePreise()` neu berechnet (ohne
+neue eBay-Anfragen, aus bereits vorhandenen echten Marktdaten - 252 von 844 Varianten geändert,
+0 Inversionen mehr: keine kleinere Speichergröße kauft mehr als eine größere).
+
+### NOCH OFFEN: 43 Modell/Varianten-Paare mit Speichergrößen-Inversion in den Gebraucht-Stufen
+
+Bei der Inversionsprüfung oben (nur `neuVersiegelt`) fielen zusätzlich 43 Modell/Varianten-Paare
+auf, bei denen die 4 Gebraucht-Stufen (`wieNeu`/`sehrGut`/`gut`/`defekt`) - **unverändert seit
+vor dieser Session** - dasselbe Muster zeigen: kleinere Speichergröße kauft mehr als größere,
+u. a. Galaxy S26 Ultra 256GB `wieNeu` 870 € > 512GB nur 490 €, plus iPhone 14/16/17 Pro(Max),
+mehrere iPads, mehrere MacBook Pro/Air-Konfigurationen, diverse Samsung/Xiaomi/Sony-Modelle.
+Ursache vermutlich Tagesbremse-Drift (±10 %/Tag-Deckelung über viele Läufe hinweg, nie
+synchron zwischen Varianten). **Eigenes Thema, separat angehen - NICHT mit dem neuVersiegelt-Fix
+vermischen** (eine volle Neuberechnung dieser Stufen würde die Tagesbremse umgehen und hätte
+einen viel größeren, ungeprüften Nebeneffekt - siehe Beispiele unten, teils >1.000 € Sprung bei
+unbeteiligten Geräten).
+
+Vollständige Liste (Marke/Modell | kleinere vs. größere Variante | betroffene Stufen mit
+Werten):
+
+- Apple iPhone 12 | 64 GB vs 128 GB | gut: 90→85
+- Apple iPhone SE 2022 | 128 GB vs 256 GB | wieNeu: 120→105, sehrGut: 110→90, gut: 90→75, defekt: 35→25
+- Apple iPhone 14 Pro | 512 GB vs 1 TB | wieNeu: 430→425, sehrGut: 385→380, gut: 315→300, defekt: 115→105
+- Apple iPhone 14 Pro Max | 512 GB vs 1 TB | wieNeu: 475→450, sehrGut: 425→400, gut: 340→315, defekt: 125→115
+- Apple iPhone 16 Pro | 512 GB vs 1 TB | wieNeu: 720→660, sehrGut: 705→660
+- Apple iPhone 16 Pro Max | 512 GB vs 1 TB | wieNeu: 770→730
+- Apple iPhone 17 Pro | 256 GB vs 512 GB | wieNeu: 940→860
+- Apple iPhone 17 Pro | 512 GB vs 1 TB | wieNeu: 860→760, sehrGut: 860→760
+- Apple iPhone 17 Pro Max | 256 GB vs 512 GB | wieNeu: 940→770, sehrGut: 845→770
+- Samsung Galaxy S20+ | 128 GB vs 512 GB | sehrGut: 85→80, gut: 70→60, defekt: 25→20
+- Samsung Galaxy S21 FE | 128 GB vs 256 GB | wieNeu: 90→85, gut: 70→65
+- Samsung Galaxy S22 Ultra | 512 GB vs 1 TB | wieNeu: 350→195, sehrGut: 315→170, gut: 255→150, defekt: 95→50
+- Samsung Galaxy S24 Ultra | 512 GB vs 1 TB | wieNeu: 495→390, sehrGut: 485→350, gut: 390→280, defekt: 145→95
+- Samsung Galaxy S25 FE | 128 GB vs 256 GB | wieNeu: 215→200, sehrGut: 190→180, gut: 150→145, defekt: 60→55
+- Samsung Galaxy S26 | 256 GB vs 512 GB | wieNeu: 540→485, sehrGut: 490→445, gut: 395→350, defekt: 145→125
+- Samsung Galaxy S26 Ultra | 256 GB vs 512 GB | wieNeu: 870→490, sehrGut: 790→440, gut: 640→360, defekt: 230→125
+- Samsung Galaxy Note 9 | 128 GB vs 512 GB | wieNeu: 80→25, sehrGut: 75→25, gut: 65→25
+- Samsung Galaxy Z Flip 6 | 256 GB vs 512 GB | wieNeu: 205→190, sehrGut: 185→170, gut: 160→145, defekt: 55→50
+- Samsung Galaxy Z Flip 7 | 256 GB vs 512 GB | wieNeu: 220→195, sehrGut: 195→175, gut: 160→150, defekt: 60→55
+- Samsung Galaxy Z Fold 7 | 256 GB vs 512 GB | wieNeu: 510→470, sehrGut: 455→420, gut: 370→340, defekt: 130→115
+- Google Pixel 8 Pro | 256 GB vs 512 GB | wieNeu: 305→265, sehrGut: 280→235, gut: 225→195, defekt: 80→70
+- Xiaomi 13T Pro | 512 GB vs 1 TB | wieNeu: 190→185, sehrGut: 175→170, gut: 140→135
+- Redmi Note 13 Pro | 128 GB vs 256 GB | defekt: 25→20
+- OnePlus 9 Pro | 128 GB vs 256 GB | wieNeu: 125→120, sehrGut: 115→110, defekt: 35→30
+- OnePlus 10 Pro | 128 GB vs 256 GB | wieNeu: 150→120, sehrGut: 130→110, gut: 110→95, defekt: 40→35
+- Sony Xperia 1 VI | 256 GB vs 512 GB | wieNeu: 570→460, sehrGut: 515→415, gut: 415→335, defekt: 145→120
+- Nothing Phone (2) | 128 GB vs 256 GB | gut: 125→115
+- Honor 90 | 256 GB vs 512 GB | wieNeu: 125→115, sehrGut: 110→100, defekt: 35→30
+- Apple iPad Mini 5 (2019) | 64 GB vs 256 GB | wieNeu: 100→85, sehrGut: 90→75, gut: 75→60
+- Apple iPad Pro 11" Gen 2 (2020) | 128 GB vs 256 GB | wieNeu: 335→180, sehrGut: 300→160, gut: 235→130, defekt: 90→50
+- Apple iPad Pro 11" Gen 3 (2021) | 256 GB vs 512 GB | wieNeu: 305→265, sehrGut: 270→240, gut: 215→195, defekt: 80→70
+- Apple iPad Pro 12.9" Gen 5 (2021) | 128 GB vs 256 GB | wieNeu: 390→370, sehrGut: 350→335, gut: 275→260, defekt: 100→95
+- Apple iPad Pro 12.9" Gen 5 (2021) | 256 GB vs 512 GB | wieNeu: 370→310, sehrGut: 335→280, gut: 260→225, defekt: 95→85
+- Samsung Galaxy Tab S11+ | 256 GB vs 512 GB | wieNeu: 670→625, sehrGut: 600→565, gut: 475→460, defekt: 170→165
+- Xiaomi Pad 6 | 128 GB vs 256 GB | wieNeu: 130→115, sehrGut: 115→100, gut: 95→85, defekt: 35→30
+- Xiaomi Redmi Note 13 Pro | 128 GB vs 256 GB | wieNeu: 95→90, sehrGut: 90→85, gut: 70→65
+- Huawei Mate X3 | 256 GB vs 512 GB | wieNeu: 455→440, sehrGut: 415→395, gut: 335→310, defekt: 120→110
+- Fairphone 4 | 128 GB vs 256 GB | wieNeu: 220→190, sehrGut: 200→175, gut: 170→145, defekt: 60→50
+- Apple MacBook Air 15" M3 | 16GB·512GB vs 24GB·512GB | wieNeu: 930→840, sehrGut: 840→760, gut: 665→615, defekt: 240→225
+- Apple MacBook Pro 14" M4 | 24GB·1TB vs 32GB·1TB | wieNeu: 2145→1075, sehrGut: 1975→975, gut: 1580→785, defekt: 545→285
+- Apple MacBook Pro 14" M4 Pro | 24GB·1TB vs 48GB·1TB | wieNeu: 2145→1280, sehrGut: 1975→1160, gut: 1580→940, defekt: 545→340
+- Apple MacBook Pro 16" M4 Pro | 24GB·512GB vs 48GB·512GB | wieNeu: 1605→1525, sehrGut: 1465→1385, gut: 1170→1120
+- Apple MacBook Air 13" M1 | 8GB·512GB vs 16GB·256GB | wieNeu: 330→315, sehrGut: 295→280, gut: 230→225
+
 ## Samsung-Markenkorrektur (Faktor 0,78) eingeführt - noch nicht auf alle Samsung-Geräte
 ## rückwirkend angewendet (seit 27.07.2026)
 
