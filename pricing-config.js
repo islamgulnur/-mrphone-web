@@ -15,8 +15,13 @@
  *      rohen eBay-Marktwerts – siehe prozentsaetzeFuerMarke(). Da beide Tabellen ausschließlich
  *      Werte < 1,0 enthalten, kann eine Stufe rechnerisch nie über ihrem eigenen Marktanker landen;
  *      ein zusätzlicher Markt-Deckel ist damit strukturell überflüssig.
- *   2. Die separate, gehärtete neuVersiegelt-Formel (berechneNeuVersiegelt(), seit 28.07.2026,
- *      unverändert) mit hartem 90%-Deckel gegen marktwertNeu.
+ *   2. Die separate, gehärtete neuVersiegelt-Formel (berechneNeuVersiegelt(), seit 28.07.2026)
+ *      mit hartem 90%-Deckel gegen marktwertNeu, seit 28.07.2026 zusätzlich mit drei
+ *      markenunabhängigen Leitplanken gegen kontaminierte/überzogene Marktanker: (1) Anker nie
+ *      über 100% UVP, (2) roher marktwertNeu > 115% UVP gilt als Scraper-Kontamination und wird
+ *      verworfen (pruefeMarktwertNeuPlausibilitaet()), (3) reine Schätz-Anker ohne echten
+ *      Marktlauf zusätzlich auf 85% UVP gedeckelt. Siehe OFFENE-PUNKTE.md, Fall "Nicht-Apple-
+ *      Neupreise zu hoch" (u.a. DualSense-Controller kaufte für 405€ bei 69€ UVP ein).
  *   3. Genau EINE verbleibende Sicherheitsregel: Ankaufspreis nie über dem eigenen Verkaufspreis
  *      aus bestand.json (siehe pruefeKonsistenz() bzw. Konsistenzregel 1 in update-ankaufspreise.js).
  *
@@ -131,14 +136,47 @@ const NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG = 0.88; // -12 % vom eigenen Verkaufspr
 const NEU_VERSIEGELT_MARKTANKER_PROZENT = 0.82;  // Basis-Prozentsatz vom Marktanker
 const NEU_VERSIEGELT_MARKTANKER_DECKEL = 0.90;   // harte Obergrenze: nie über 90 % des Ankers
 
-function berechneNeuVersiegelt({ eigenerVK, marktAnkerNeu, niveauFaktor }) {
+// Leitplanken 1-3 (28.07.2026, Fall Nicht-Apple-Neupreise zu hoch, siehe OFFENE-PUNKTE.md):
+// marktAnkerNeu (echter eBay-Marktwert ODER Schätzung) hatte bislang KEINEN Bezug zur eigenen
+// UVP - ein kontaminierter Scraper-Treffer (Bundle, falsche Variante, Sammlerpreis) lief
+// deshalb ungebremst in den Ankaufspreis. Beispiel: Sony DualSense Controller, UVP 69 €,
+// marktwertNeu 496 € (Scraper-Fehltreffer) -> alter Ankaufspreis 405 €, das 5,9-fache der UVP.
+// Gilt einheitlich für ALLE Marken (auch Apple) - eine Markenausnahme wäre exakt die
+// Sonderlogik (Apple-Korrektur/Samsung-Faktor), die am 28.07.2026 bewusst entfernt wurde.
+const NEU_VERSIEGELT_UVP_DECKEL = 1.0;            // Leitplanke 1: Anker nie über 100 % UVP
+const NEU_VERSIEGELT_GESCHAETZT_UVP_DECKEL = 0.85; // Leitplanke 3: OHNE echten Marktlauf (marktAnkerNeuUrsprung "geschaetzt") zusätzlich enger, da hier weder eBay-Neupreis noch eigener VK vorliegt
+const NEU_VERSIEGELT_MARKTWERT_VERWERFEN_SCHWELLE = 1.15; // Leitplanke 2: roher marktwertNeu > 115 % UVP gilt als kontaminiert -> verworfen (siehe pruefeMarktwertNeuPlausibilitaet)
+
+// Leitplanke 2: verwirft einen roh gescrapten marktwertNeu, wenn er weit über der UVP liegt.
+// Greift VOR jeder Weiterverarbeitung (in ermittleWiederverkaufswerte() für bereits im Katalog
+// gespeicherte Werte, sowie live in scripts/update-ankaufspreise.js für frisch gescrapte Werte),
+// damit ein kontaminierter Treffer weder in neuVersiegelt einfließt noch zurück in den Katalog
+// geschrieben wird. Gibt den Wert unverändert zurück, wenn er plausibel ist, sonst null.
+function pruefeMarktwertNeuPlausibilitaet(marktwertNeu, uvp) {
+  if (marktwertNeu == null || !Number.isFinite(Number(marktwertNeu))) return null;
+  if (!Number.isFinite(Number(uvp)) || Number(uvp) <= 0) return Number(marktwertNeu); // keine UVP -> keine Prüfung möglich (z.B. Objektive "auf Anfrage")
+  return Number(marktwertNeu) <= Number(uvp) * NEU_VERSIEGELT_MARKTWERT_VERWERFEN_SCHWELLE
+    ? Number(marktwertNeu)
+    : null;
+}
+
+function berechneNeuVersiegelt({ eigenerVK, marktAnkerNeu, marktAnkerNeuUrsprung, uvpVariante, niveauFaktor }) {
   const faktor = Number.isFinite(niveauFaktor) ? niveauFaktor : 1;
   const kandidaten = [];
   if (eigenerVK != null && Number.isFinite(Number(eigenerVK))) {
     kandidaten.push(Number(eigenerVK) * NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG * faktor);
   }
   if (marktAnkerNeu != null && Number.isFinite(Number(marktAnkerNeu))) {
-    const anker = Number(marktAnkerNeu);
+    let anker = Number(marktAnkerNeu);
+    if (Number.isFinite(Number(uvpVariante)) && Number(uvpVariante) > 0) {
+      // Leitplanke 1: Anker nie über 100 % der UVP der Variante.
+      anker = Math.min(anker, Number(uvpVariante) * NEU_VERSIEGELT_UVP_DECKEL);
+      // Leitplanke 3: ohne echten Marktlauf (reine Schätzung aus marktwertGebraucht ×
+      // NEUWARE_AUFSCHLAG) zusätzlich enger gedeckelt.
+      if (marktAnkerNeuUrsprung === "geschaetzt") {
+        anker = Math.min(anker, Number(uvpVariante) * NEU_VERSIEGELT_GESCHAETZT_UVP_DECKEL);
+      }
+    }
     const basis = anker * NEU_VERSIEGELT_MARKTANKER_PROZENT * faktor;
     const deckel = anker * NEU_VERSIEGELT_MARKTANKER_DECKEL * faktor;
     kandidaten.push(Math.min(basis, deckel));
@@ -192,13 +230,18 @@ function ermittleWiederverkaufswerte(geraet, variante, bestandListe) {
   const uvpVariante = uvpBasis + (Number(variante.uvpDelta) || 0);
   const verhaeltnis = uvpBasis > 0 ? uvpVariante / uvpBasis : 1;
   const marktwertGebrauchtVariante = (Number(geraet.marktwertGebraucht) || 0) * verhaeltnis;
+  // Leitplanke 2: den rohen Katalog-Wert erst auf Plausibilität gegen die Basis-UVP prüfen
+  // (kontaminierte Scraper-Treffer wie Bundles/falsche Varianten verwerfen), BEVOR er als
+  // "echter" Marktanker verwendet wird - siehe pruefeMarktwertNeuPlausibilitaet().
+  const marktwertNeuGeprueft = pruefeMarktwertNeuPlausibilitaet(geraet.marktwertNeu, uvpBasis);
+  const marktAnkerNeuUrsprung = marktwertNeuGeprueft != null ? "echt" : "geschaetzt";
   // Bevorzugt den ECHTEN marktwertNeu aus dem Katalog (von einem echten Marktlauf befüllt,
   // siehe scripts/update-ankaufspreise.js), sonst die Schätzung aus marktwertGebraucht ×
   // NEUWARE_AUFSCHLAG. Beide Varianten werden wie marktwertGebraucht proportional über
   // uvpDelta auf die konkrete Variante skaliert (Näherung für Nicht-Basis-Varianten, siehe
   // OFFENE-PUNKTE.md - kein Ersatz für einen echten Marktlauf je Variante).
-  const marktAnkerNeuSchaetzung = geraet.marktwertNeu != null
-    ? Number(geraet.marktwertNeu) * verhaeltnis
+  const marktAnkerNeuSchaetzung = marktwertNeuGeprueft != null
+    ? marktwertNeuGeprueft * verhaeltnis
     : marktwertGebrauchtVariante * NEUWARE_AUFSCHLAG;
 
   const eigenerNeu = findeEigenenVerkaufspreis(bestandListe, geraet, variante, "neu");
@@ -212,6 +255,8 @@ function ermittleWiederverkaufswerte(geraet, variante, bestandListe) {
     // Wert gewinnt), statt wie oben "eigener Verkauf hat immer Vorrang".
     eigenerNeu,
     marktAnkerNeuSchaetzung,
+    marktAnkerNeuUrsprung, // "echt" oder "geschaetzt" - steuert Leitplanke 3 in berechneNeuVersiegelt()
+    uvpVariante, // für Leitplanke 1/3 in berechneNeuVersiegelt()
     quelleNeu: eigenerNeu != null ? "eigenerVerkauf" : "marktwert",
     quelleGebraucht: eigenerGebraucht != null ? "eigenerVerkauf" : "marktwert",
   };
@@ -250,6 +295,8 @@ function berechnePreise(geraet, variante, bestandListe, niveauProzent) {
       ergebnis[stufe] = berechneNeuVersiegelt({
         eigenerVK: wiederverkauf.eigenerNeu,
         marktAnkerNeu: wiederverkauf.marktAnkerNeuSchaetzung,
+        marktAnkerNeuUrsprung: wiederverkauf.marktAnkerNeuUrsprung,
+        uvpVariante: wiederverkauf.uvpVariante,
         niveauFaktor,
       });
       return;
@@ -299,6 +346,10 @@ module.exports = {
   NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG,
   NEU_VERSIEGELT_MARKTANKER_PROZENT,
   NEU_VERSIEGELT_MARKTANKER_DECKEL,
+  NEU_VERSIEGELT_UVP_DECKEL,
+  NEU_VERSIEGELT_GESCHAETZT_UVP_DECKEL,
+  NEU_VERSIEGELT_MARKTWERT_VERWERFEN_SCHWELLE,
+  pruefeMarktwertNeuPlausibilitaet,
   pruefeKonsistenz,
   liesAnkaufsniveau,
   schreibeAnkaufsniveau,

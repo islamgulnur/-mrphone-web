@@ -40,7 +40,12 @@
  *      Vorfall 27.07.2026 in OFFENE-PUNKTE.md) und durchläuft NICHT die Schritte 2-7 oben -
  *      stattdessen der niedrigere von: eigener Verkaufspreis × 0,88, ODER marktwertNeu × 0,82
  *      (hart gedeckelt auf marktwertNeu × 0,90). So kann diese Stufe strukturell nie mehr über
- *      dem eigenen Verkaufspreis oder über 90 % des eBay-Neupreises einkaufen. Unangetastet.
+ *      dem eigenen Verkaufspreis oder über 90 % des eBay-Neupreises einkaufen.
+ *   9. Zusätzlich seit 28.07.2026 (Fall "Nicht-Apple-Neupreise zu hoch", gilt für ALLE Marken):
+ *      der frisch gescrapte marktwertNeu wird sofort gegen die UVP geprüft - liegt er über 115 %
+ *      UVP, gilt er als Scraper-Kontamination (Bundle/falsche Variante) und wird verworfen
+ *      (pricing.pruefeMarktwertNeuPlausibilitaet()). Der verbleibende Anker wird in
+ *      berechneNeuVersiegelt() zusätzlich hart auf 100 % UVP gedeckelt.
  *
  * Mock-Modus ist NUR zusammen mit --dry-run erlaubt - ein echter (schreibender) Lauf
  * ohne echte Secrets bricht bewusst ab, statt versehentlich Fantasiepreise in die
@@ -80,6 +85,8 @@ const ANKAUF_KOMMENTAR =
   "28.07.2026 eine EIGENE Formel (siehe pricing.berechneNeuVersiegelt(), OFFENE-PUNKTE.md): " +
   "niedrigerer Wert von eigenem Verkaufspreis × 0,88 ODER marktwertNeu × 0,82 (gedeckelt auf 90% " +
   "von marktwertNeu) - nie höher als eigener Verkaufspreis oder 90% des eBay-Neupreises. " +
+  "Zusätzlich (alle Marken, keine Ausnahme): marktwertNeu > 115% UVP gilt als kontaminiert und " +
+  "wird verworfen, verbleibender Anker zusätzlich hart auf 100% UVP gedeckelt. " +
   "Alles zusätzlich global verschiebbar über pricing-niveau.json. preisQuelle \"manuell\" wird " +
   "nie automatisch überschrieben. Geräte, die noch keinen echten Marktlauf hatten (marktwertQuelle " +
   "\"geschaetzt\" im Katalog), tragen weiterhin die ältere Schätzformel aus pricing-config.js " +
@@ -283,7 +290,14 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     throw e;
   }
 
-  const marktwertNeu = neu.marktwert; // null erlaubt (Anforderung B)
+  const uvpVariante = (Number(geraet.uvp) || 0) + (Number(variante.uvpDelta) || 0);
+  // Leitplanke 2 (28.07.2026, siehe pricing-config.js): rohen, frisch gescrapten marktwertNeu
+  // sofort gegen die Variante-UVP prüfen, BEVOR er weiterverwendet oder in den Katalog
+  // zurückgeschrieben wird - kontaminierte Treffer (Bundles, falsche Variante, Sammlerpreise)
+  // sollen erst gar nicht in den Datenbestand gelangen.
+  const marktwertNeuRoh = neu.marktwert; // null erlaubt (Anforderung B)
+  const marktwertNeu = pricing.pruefeMarktwertNeuPlausibilitaet(marktwertNeuRoh, uvpVariante);
+  const marktwertNeuVerworfen = marktwertNeuRoh != null && marktwertNeu == null;
 
   if (marktwertNeu != null && marktwertNeu <= gebraucht.marktwert) {
     return {
@@ -306,10 +320,25 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
   // nur verzögern, dass ein zu hoher Preis vom Netz geht.
   const eigenerVKNeu = pricing.findeEigenenVerkaufspreis(bestandListe, geraet, variante, "neu");
   stufenFinal.neuVersiegelt = pricing.berechneNeuVersiegelt({
-    eigenerVK: eigenerVKNeu, marktAnkerNeu: marktwertNeu, niveauFaktor,
+    eigenerVK: eigenerVKNeu,
+    marktAnkerNeu: marktwertNeu,
+    // Dieses Skript liefert für neuVersiegelt IMMER einen echten, frisch gescrapten Wert (oder
+    // null) - nie eine Schätzung aus marktwertGebraucht × NEUWARE_AUFSCHLAG (das passiert nur
+    // in pricing-config.js für Geräte ohne echten Marktlauf) - daher fest "echt", Leitplanke 3
+    // (85%-Deckel für Schätz-Anker) greift hier bewusst nicht, nur Leitplanke 1 (100%-UVP-Deckel).
+    marktAnkerNeuUrsprung: "echt",
+    uvpVariante,
+    niveauFaktor,
   });
 
   const alleGruende = [...bremseGruende, ...konsistenzGruende];
+  if (marktwertNeuVerworfen) {
+    alleGruende.push(
+      "marktwertNeu verworfen (Leitplanke 2: " + Math.round(marktwertNeuRoh) + " € > " +
+      Math.round(pricing.NEU_VERSIEGELT_MARKTWERT_VERWERFEN_SCHWELLE * 100) + "% von UVP " +
+      Math.round(uvpVariante) + " € - vermutlich kontaminierter Treffer)"
+    );
+  }
 
   const neueVariante = { bezeichnung: variante.bezeichnung, uvpDelta: variante.uvpDelta, preise: stufenFinal, preisQuelle: "auto" };
 
@@ -322,7 +351,10 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     neuTreffer: neu.treffer,
     neuMedianVor: neu.quartil && neu.quartil.medianVorFilter,
     neuMedianNach: neu.quartil && neu.quartil.medianNachFilter,
+    marktwertNeuRoh,
     marktwertNeu,
+    marktwertNeuVerworfen,
+    uvpVariante,
     eigenerVKNeu,
     stufenBerechnet: stufenRoh,
     stufen: stufenFinal,
@@ -353,7 +385,9 @@ function formatiereRechnung(r) {
   const zeilen = [];
   zeilen.push("**" + r.marke + " " + r.modell + " (" + r.variante + ")**" + (r.istErsterLauf ? " _(erster echter Marktlauf – Tagesbremse übersprungen)_" : ""));
   zeilen.push("- Gebraucht: " + r.gebrauchtTreffer + " Treffer, Median vor Filter " + rund(r.gebrauchtMedianVor) + " €, nach Filter " + rund(r.gebrauchtMedianNach) + " € → marktwertGebraucht " + rund(r.marktwertGebraucht) + " € (−" + Math.round(config.ABSCHLAG_GEBRAUCHT * 100) + "%)");
-  if (r.marktwertNeu != null) {
+  if (r.marktwertNeuVerworfen) {
+    zeilen.push("- Neu: " + r.neuTreffer + " Treffer, Median vor Filter " + rund(r.neuMedianVor) + " €, nach Filter " + rund(r.neuMedianNach) + " € → marktwertNeu(roh) " + rund(r.marktwertNeuRoh) + " € **VERWORFEN** (Leitplanke 2: > " + Math.round(pricing.NEU_VERSIEGELT_MARKTWERT_VERWERFEN_SCHWELLE * 100) + "% von UVP " + rund(r.uvpVariante) + " €) → marktwertNeu = null");
+  } else if (r.marktwertNeu != null) {
     zeilen.push("- Neu: " + r.neuTreffer + " Treffer, Median vor Filter " + rund(r.neuMedianVor) + " €, nach Filter " + rund(r.neuMedianNach) + " € → marktwertNeu " + rund(r.marktwertNeu) + " € (−" + Math.round(config.ABSCHLAG_NEU * 100) + "%)");
   } else {
     zeilen.push("- Neu: " + r.neuTreffer + " Treffer (< " + config.MIN_TREFFER_NEU + ") → marktwertNeu = null");

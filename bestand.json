@@ -11,5 +11,18 @@
     "bild": "",
     "aktiv": true,
     "datum": "2026-07-28"
+  },
+  {
+    "id": "f2f9d628-1f68-4a15-9f6a-031a169b623b",
+    "modell": "Galaxy S26 Ultra",
+    "marke": "Samsung",
+    "speicher": "512 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 999.99,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-07-28"
   }
 ]
