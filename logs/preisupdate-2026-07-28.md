@@ -1,1271 +1,1459 @@
 # Preisupdate 2026-07-28
 
-Aktualisiert: 62 · Übersprungen: 32 · PRÜFEN: 50
+Aktualisiert: 30 · Übersprungen: 22 · PRÜFEN: 100
 
-## ⚠️ PRÜFEN (50)
-**Apple iPhone 8 (64 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 53 €, nach Filter 53 € → marktwertGebraucht 47 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 235 €, nach Filter 235 € → marktwertNeu 216 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 175 € (bisher 50 €)
+## ⚠️ PRÜFEN (100)
+**Apple iPhone 15 Plus (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 384 €, nach Filter 384 € → marktwertGebraucht 338 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 521 €, nach Filter 521 € → marktwertNeu 479 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 390 € (bisher 385 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 35 € → 35 € (bisher 45 €) → final 40 €
-  - sehrGut: 30 € → 30 € (bisher 40 €) → final 35 €
-  - gut: 25 € → 25 € (bisher 35 €) → final 30 €
-  - defekt: 10 € → 10 € (bisher 10 €) → final 10 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt
+  - wieNeu: 255 € → 300 € (bisher 420 €) → final 335 €
+  - sehrGut: 230 € → 275 € (bisher 370 €) → final 335 €
+  - gut: 185 € → 230 € (bisher 300 €) → final 270 €
+  - defekt: 70 € → 85 € (bisher 110 €) → final 100 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (338 €) gekappt (war 380 €)
 
-**Apple iPhone 8 Plus (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 142 €, nach Filter 142 € → marktwertGebraucht 125 € (−12%)
-- Neu: 14 Treffer, Median vor Filter 343 €, nach Filter 343 € → marktwertNeu 315 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 255 € (bisher 105 €)
+**Apple iPhone 15 Plus (256 GB)**
+- Gebraucht: 49 Treffer, Median vor Filter 421 €, nach Filter 421 € → marktwertGebraucht 370 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 524 €, nach Filter 524 € → marktwertNeu 483 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 395 € (bisher 420 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 95 € → 100 € (bisher 85 €) → final 95 €
-  - sehrGut: 85 € → 85 € (bisher 80 €) → final 85 €
-  - gut: 70 € → 70 € (bisher 65 €) → final 70 €
-  - defekt: 25 € → 25 € (bisher 25 €) → final 25 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt
+  - wieNeu: 280 € → 335 € (bisher 555 €) → final 370 €
+  - sehrGut: 250 € → 300 € (bisher 495 €) → final 370 €
+  - gut: 205 € → 245 € (bisher 405 €) → final 365 €
+  - defekt: 75 € → 90 € (bisher 145 €) → final 130 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (370 €) gekappt (war 500 €); sehrGut: über Marktanker (370 €) gekappt (war 445 €)
 
-**Apple iPhone X (64 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 95 €, nach Filter 95 € → marktwertGebraucht 84 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 201 €, nach Filter 201 € → marktwertNeu 185 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 150 € (bisher 75 €)
+**Apple iPhone 15 Plus (512 GB)**
+- Gebraucht: 19 Treffer, Median vor Filter 500 €, nach Filter 500 € → marktwertGebraucht 440 € (−12%)
+- Neu: 5 Treffer, Median vor Filter 1113 €, nach Filter 1113 € → marktwertNeu 1024 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 835 € (bisher 490 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 65 € → 65 € (bisher 55 €) → final 60 €
-  - sehrGut: 55 € → 50 € (bisher 50 €) → final 50 €
-  - gut: 45 € → 45 € (bisher 45 €) → final 45 €
-  - defekt: 15 € → 15 € (bisher 15 €) → final 15 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt
+  - wieNeu: 330 € → 405 € (bisher 590 €) → final 440 €
+  - sehrGut: 300 € → 365 € (bisher 530 €) → final 440 €
+  - gut: 240 € → 285 € (bisher 420 €) → final 380 €
+  - defekt: 90 € → 110 € (bisher 145 €) → final 130 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (440 €) gekappt (war 530 €); sehrGut: über Marktanker (440 €) gekappt (war 475 €)
 
-**Apple iPhone X (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 109 €, nach Filter 109 € → marktwertGebraucht 96 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 211 €, nach Filter 211 € → marktwertNeu 194 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 155 € (bisher 85 €)
+**Apple iPhone 15 Pro (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 499 €, nach Filter 499 € → marktwertGebraucht 439 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 680 €, nach Filter 680 € → marktwertNeu 626 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 510 € (bisher 420 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 70 € → 70 € (bisher 90 €) → final 80 €
-  - sehrGut: 65 € → 65 € (bisher 80 €) → final 70 €
-  - gut: 55 € → 50 € (bisher 65 €) → final 60 €
-  - defekt: 20 € → 15 € (bisher 25 €) → final 25 €
+  - wieNeu: 330 € → 405 € (bisher 470 €) → final 425 €
+  - sehrGut: 300 € → 365 € (bisher 420 €) → final 380 €
+  - gut: 240 € → 285 € (bisher 330 €) → final 295 €
+  - defekt: 90 € → 110 € (bisher 125 €) → final 115 €
 - **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
 
-**Apple iPhone XR (64 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 90 €, nach Filter 90 € → marktwertGebraucht 79 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 235 €, nach Filter 235 € → marktwertNeu 216 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 175 € (bisher 80 €)
+**Apple iPhone 15 Pro (1 TB)**
+- Gebraucht: 50 Treffer, Median vor Filter 742 €, nach Filter 742 € → marktwertGebraucht 653 € (−12%)
+- Neu: 24 Treffer, Median vor Filter 1702 €, nach Filter 1702 € → marktwertNeu 1566 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1280 € (bisher 615 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 60 € → 55 € (bisher 65 €) → final 60 €
-  - sehrGut: 55 € → 50 € (bisher 55 €) → final 50 €
-  - gut: 45 € → 45 € (bisher 50 €) → final 45 €
-  - defekt: 15 € → 15 € (bisher 15 €) → final 15 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt
-
-**Apple iPhone XR (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 100 €, nach Filter 100 € → marktwertGebraucht 88 € (−12%)
-- Neu: 10 Treffer, Median vor Filter 223 €, nach Filter 223 € → marktwertNeu 205 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 165 € (bisher 85 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 65 € → 65 € (bisher 80 €) → final 70 €
-  - sehrGut: 60 € → 55 € (bisher 70 €) → final 65 €
-  - gut: 50 € → 50 € (bisher 55 €) → final 50 €
-  - defekt: 20 € → 15 € (bisher 15 €) → final 15 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt
-
-**Apple iPhone XR (256 GB)**
-- Gebraucht: 34 Treffer, Median vor Filter 175 €, nach Filter 175 € → marktwertGebraucht 154 € (−12%)
-- Neu: 3 Treffer, Median vor Filter 234 €, nach Filter 234 € → marktwertNeu 215 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 175 € (bisher 90 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 115 € → 115 € (bisher 85 €) → final 95 €
-  - sehrGut: 105 € → 105 € (bisher 75 €) → final 85 €
-  - gut: 85 € → 85 € (bisher 55 €) → final 60 €
-  - defekt: 30 € → 30 € (bisher 15 €) → final 15 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
-
-**Apple iPhone XS (512 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 180 €, nach Filter 180 € → marktwertGebraucht 158 € (−12%)
-- Neu: 13 Treffer, Median vor Filter 428 €, nach Filter 428 € → marktwertNeu 394 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 320 € (bisher 115 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 120 € → 115 € (bisher 150 €) → final 135 €
-  - sehrGut: 110 € → 110 € (bisher 130 €) → final 115 €
-  - gut: 85 € → 85 € (bisher 110 €) → final 100 €
-  - defekt: 30 € → 30 € (bisher 40 €) → final 35 €
+  - wieNeu: 490 € → 630 € (bisher 715 €) → final 645 €
+  - sehrGut: 445 € → 565 € (bisher 645 €) → final 580 €
+  - gut: 360 € → 450 € (bisher 520 €) → final 470 €
+  - defekt: 130 € → 155 € (bisher 180 €) → final 160 €
 - **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
 
-**Apple iPhone XS Max (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 150 €, nach Filter 150 € → marktwertGebraucht 132 € (−12%)
-- Neu: 6 Treffer, Median vor Filter 269 €, nach Filter 269 € → marktwertNeu 247 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 200 € (bisher 135 €)
+**Apple iPhone 15 Pro Max (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 599 €, nach Filter 599 € → marktwertGebraucht 527 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 810 €, nach Filter 810 € → marktwertNeu 745 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 610 € (bisher 545 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 100 € → 105 € (bisher 130 €) → final 115 €
-  - sehrGut: 90 € → 90 € (bisher 115 €) → final 105 €
-  - gut: 75 € → 75 € (bisher 105 €) → final 95 €
-  - defekt: 25 € → 25 € (bisher 35 €) → final 30 €
+  - wieNeu: 395 € → 495 € (bisher 580 €) → final 520 €
+  - sehrGut: 360 € → 450 € (bisher 525 €) → final 475 €
+  - gut: 290 € → 350 € (bisher 415 €) → final 375 €
+  - defekt: 105 € → 125 € (bisher 140 €) → final 125 €
 - **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
 
-**Apple iPhone XS Max (512 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 209 €, nach Filter 209 € → marktwertGebraucht 184 € (−12%)
-- Neu: 10 Treffer, Median vor Filter 453 €, nach Filter 453 € → marktwertNeu 417 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 340 € (bisher 150 €)
+**Apple iPhone 15 Pro Max (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 725 €, nach Filter 725 € → marktwertGebraucht 638 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 810 €, nach Filter 810 € → marktwertNeu 745 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 610 € (bisher 620 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 140 € → 140 € (bisher 150 €) → final 140 €
-  - sehrGut: 125 € → 120 € (bisher 130 €) → final 120 €
-  - gut: 100 € → 105 € (bisher 110 €) → final 105 €
-  - defekt: 35 € → 35 € (bisher 40 €) → final 35 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 11 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 172 €, nach Filter 172 € → marktwertGebraucht 152 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 322 €, nach Filter 322 € → marktwertNeu 296 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 240 € (bisher 110 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 115 € → 115 € (bisher 140 €) → final 125 €
-  - sehrGut: 105 € → 105 € (bisher 120 €) → final 110 €
-  - gut: 85 € → 85 € (bisher 105 €) → final 95 €
-  - defekt: 30 € → 30 € (bisher 35 €) → final 30 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 11 Pro (64 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 150 €, nach Filter 150 € → marktwertGebraucht 132 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 320 €, nach Filter 320 € → marktwertNeu 294 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 240 € (bisher 140 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 100 € → 105 € (bisher 105 €) → final 105 €
-  - sehrGut: 90 € → 90 € (bisher 100 €) → final 90 €
-  - gut: 75 € → 75 € (bisher 75 €) → final 75 €
-  - defekt: 25 € → 25 € (bisher 30 €) → final 25 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 11 Pro (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 178 €, nach Filter 178 € → marktwertGebraucht 157 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 328 €, nach Filter 328 € → marktwertNeu 302 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 245 € (bisher 160 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 115 € → 115 € (bisher 150 €) → final 135 €
-  - sehrGut: 105 € → 105 € (bisher 130 €) → final 115 €
-  - gut: 85 € → 85 € (bisher 110 €) → final 100 €
-  - defekt: 30 € → 30 € (bisher 40 €) → final 35 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 11 Pro (512 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 230 €, nach Filter 230 € → marktwertGebraucht 202 € (−12%)
-- Neu: 17 Treffer, Median vor Filter 340 €, nach Filter 340 € → marktwertNeu 313 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 255 € (bisher 185 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 150 € → 150 € (bisher 165 €) → final 150 €
-  - sehrGut: 140 € → 140 € (bisher 150 €) → final 140 €
-  - gut: 110 € → 110 € (bisher 115 €) → final 110 €
-  - defekt: 40 € → 40 € (bisher 45 €) → final 40 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 11 Pro Max (64 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 220 €, nach Filter 220 € → marktwertGebraucht 194 € (−12%)
-- Neu: 23 Treffer, Median vor Filter 338 €, nach Filter 338 € → marktwertNeu 311 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 250 € (bisher 190 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 145 € → 145 € (bisher 165 €) → final 150 €
-  - sehrGut: 130 € → 125 € (bisher 150 €) → final 135 €
-  - gut: 105 € → 105 € (bisher 115 €) → final 105 €
-  - defekt: 40 € → 40 € (bisher 45 €) → final 40 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 11 Pro Max (512 GB)**
-- Gebraucht: 21 Treffer, Median vor Filter 240 €, nach Filter 240 € → marktwertGebraucht 211 € (−12%)
-- Neu: 9 Treffer, Median vor Filter 340 €, nach Filter 340 € → marktwertNeu 313 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 255 € (bisher 245 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 160 € → 160 € (bisher 195 €) → final 175 €
-  - sehrGut: 145 € → 145 € (bisher 180 €) → final 160 €
-  - gut: 115 € → 115 € (bisher 140 €) → final 125 €
-  - defekt: 40 € → 40 € (bisher 50 €) → final 45 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone SE 2020 (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 97 €, nach Filter 97 € → marktwertGebraucht 85 € (−12%)
-- Neu: 29 Treffer, Median vor Filter 220 €, nach Filter 220 € → marktwertNeu 202 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 165 € (bisher 75 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 65 € → 65 € (bisher 55 €) → final 60 €
-  - sehrGut: 60 € → 55 € (bisher 50 €) → final 55 €
-  - gut: 45 € → 45 € (bisher 45 €) → final 45 €
-  - defekt: 15 € → 15 € (bisher 15 €) → final 15 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt
-
-**Apple iPhone 12 mini (64 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 138 €, nach Filter 138 € → marktwertGebraucht 121 € (−12%)
-- Neu: 23 Treffer, Median vor Filter 252 €, nach Filter 252 € → marktwertNeu 232 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 185 € (bisher 135 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 90 € → 90 € (bisher 105 €) → final 95 €
-  - sehrGut: 85 € → 85 € (bisher 100 €) → final 90 €
-  - gut: 65 € → 65 € (bisher 75 €) → final 70 €
-  - defekt: 25 € → 25 € (bisher 30 €) → final 25 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 12 mini (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 230 €, nach Filter 230 € → marktwertGebraucht 202 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 240 €, nach Filter 240 € → marktwertNeu 221 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 180 € (bisher 160 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 150 € → 150 € (bisher 120 €) → final 130 €
-  - sehrGut: 140 € → 140 € (bisher 115 €) → final 125 €
-  - gut: 110 € → 110 € (bisher 90 €) → final 100 €
-  - defekt: 40 € → 40 € (bisher 35 €) → final 40 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
-
-**Apple iPhone 12 (64 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 149 €, nach Filter 149 € → marktwertGebraucht 131 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 266 €, nach Filter 266 € → marktwertNeu 245 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 200 € (bisher 150 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 100 € → 105 € (bisher 125 €) → final 115 €
-  - sehrGut: 90 € → 90 € (bisher 115 €) → final 105 €
-  - gut: 70 € → 70 € (bisher 100 €) → final 90 €
-  - defekt: 25 € → 25 € (bisher 35 €) → final 30 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 12 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 222 €, nach Filter 222 € → marktwertGebraucht 196 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 300 €, nach Filter 300 € → marktwertNeu 276 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 225 € (bisher 175 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 145 € → 145 € (bisher 165 €) → final 150 €
-  - sehrGut: 135 € → 130 € (bisher 150 €) → final 135 €
-  - gut: 110 € → 110 € (bisher 115 €) → final 110 €
-  - defekt: 40 € → 40 € (bisher 45 €) → final 40 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 12 Pro (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 200 €, nach Filter 200 € → marktwertGebraucht 176 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 337 €, nach Filter 337 € → marktwertNeu 310 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 250 € (bisher 185 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 130 € → 125 € (bisher 150 €) → final 135 €
-  - sehrGut: 120 € → 115 € (bisher 130 €) → final 115 €
-  - gut: 95 € → 100 € (bisher 110 €) → final 100 €
-  - defekt: 35 € → 35 € (bisher 40 €) → final 35 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 12 Pro (512 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 340 €, nach Filter 340 € → marktwertGebraucht 299 € (−12%)
-- Neu: 28 Treffer, Median vor Filter 669 €, nach Filter 669 € → marktwertNeu 616 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 505 € (bisher 235 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 225 € → 220 € (bisher 230 €) → final 220 €
-  - sehrGut: 205 € → 200 € (bisher 215 €) → final 200 €
-  - gut: 165 € → 165 € (bisher 175 €) → final 165 €
-  - defekt: 60 € → 55 € (bisher 65 €) → final 60 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 13 mini (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 215 €, nach Filter 215 € → marktwertGebraucht 189 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 362 €, nach Filter 362 € → marktwertNeu 333 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 270 € (bisher 205 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 140 € → 140 € (bisher 165 €) → final 150 €
-  - sehrGut: 130 € → 125 € (bisher 150 €) → final 135 €
-  - gut: 105 € → 105 € (bisher 115 €) → final 105 €
-  - defekt: 40 € → 40 € (bisher 45 €) → final 40 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 13 mini (512 GB)**
-- Gebraucht: 5 Treffer, Median vor Filter 300 €, nach Filter 300 € → marktwertGebraucht 264 € (−12%)
-- Neu: 2 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 285 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 200 € → 205 € (bisher 260 €) → final 235 €
-  - sehrGut: 180 € → 185 € (bisher 235 €) → final 210 €
-  - gut: 145 € → 145 € (bisher 190 €) → final 170 €
-  - defekt: 55 € → 50 € (bisher 70 €) → final 65 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 13 (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 215 €, nach Filter 215 € → marktwertGebraucht 189 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 353 €, nach Filter 353 € → marktwertNeu 325 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 265 € (bisher 205 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 140 € → 140 € (bisher 165 €) → final 150 €
-  - sehrGut: 130 € → 125 € (bisher 150 €) → final 135 €
-  - gut: 105 € → 105 € (bisher 115 €) → final 105 €
-  - defekt: 40 € → 40 € (bisher 45 €) → final 40 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 13 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 280 €, nach Filter 280 € → marktwertGebraucht 247 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 394 €, nach Filter 394 € → marktwertNeu 363 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 295 € (bisher 230 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 185 € → 190 € (bisher 215 €) → final 195 €
-  - sehrGut: 170 € → 175 € (bisher 200 €) → final 180 €
-  - gut: 135 € → 130 € (bisher 160 €) → final 145 €
-  - defekt: 50 € → 50 € (bisher 55 €) → final 50 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 13 (512 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 360 €, nach Filter 360 € → marktwertGebraucht 317 € (−12%)
-- Neu: 30 Treffer, Median vor Filter 634 €, nach Filter 634 € → marktwertNeu 584 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 475 € (bisher 275 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 240 € → 235 € (bisher 290 €) → final 260 €
-  - sehrGut: 215 € → 215 € (bisher 260 €) → final 235 €
-  - gut: 175 € → 180 € (bisher 215 €) → final 195 €
-  - defekt: 65 € → 65 € (bisher 75 €) → final 70 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 13 Pro (512 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 400 €, nach Filter 400 € → marktwertGebraucht 352 € (−12%)
-- Neu: 16 Treffer, Median vor Filter 625 €, nach Filter 625 € → marktwertNeu 575 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 470 € (bisher 370 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 265 € → 260 € (bisher 345 €) → final 310 €
-  - sehrGut: 240 € → 235 € (bisher 310 €) → final 280 €
-  - gut: 195 € → 200 € (bisher 255 €) → final 230 €
-  - defekt: 70 € → 70 € (bisher 90 €) → final 80 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 13 Pro (1 TB)**
-- Gebraucht: 40 Treffer, Median vor Filter 510 €, nach Filter 510 € → marktwertGebraucht 449 € (−12%)
-- Neu: 22 Treffer, Median vor Filter 710 €, nach Filter 710 € → marktwertNeu 653 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 535 € (bisher 435 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 335 € → 340 € (bisher 380 €) → final 340 €
-  - sehrGut: 305 € → 305 € (bisher 340 €) → final 305 €
-  - gut: 245 € → 240 € (bisher 265 €) → final 240 €
-  - defekt: 90 € → 90 € (bisher 105 €) → final 95 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone SE 2022 (64 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 139 €, nach Filter 139 € → marktwertGebraucht 123 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 237 €, nach Filter 237 € → marktwertNeu 218 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 175 € (bisher 110 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 90 € → 90 € (bisher 85 €) → final 90 €
-  - sehrGut: 85 € → 85 € (bisher 75 €) → final 85 €
-  - gut: 65 € → 65 € (bisher 55 €) → final 60 €
-  - defekt: 25 € → 25 € (bisher 25 €) → final 25 €
-- **Ausgelöste Regeln:** sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt
-
-**Apple iPhone SE 2022 (128 GB)**
-- Gebraucht: 35 Treffer, Median vor Filter 187 €, nach Filter 187 € → marktwertGebraucht 165 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 230 €, nach Filter 230 € → marktwertNeu 212 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 170 € (bisher 120 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 125 € → 120 € (bisher 110 €) → final 120 €
-  - sehrGut: 110 € → 110 € (bisher 105 €) → final 110 €
-  - gut: 90 € → 90 € (bisher 80 €) → final 90 €
-  - defekt: 35 € → 35 € (bisher 30 €) → final 35 €
-- **Ausgelöste Regeln:** gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
-
-**Apple iPhone SE 2022 (256 GB)**
-- Gebraucht: 7 Treffer, Median vor Filter 150 €, nach Filter 150 € → marktwertGebraucht 132 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 230 €, nach Filter 230 € → marktwertNeu 211 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 170 € (bisher 145 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 100 € → 105 € (bisher 105 €) → final 105 €
-  - sehrGut: 90 € → 90 € (bisher 100 €) → final 90 €
-  - gut: 75 € → 75 € (bisher 80 €) → final 75 €
-  - defekt: 25 € → 25 € (bisher 30 €) → final 25 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 14 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 351 €, nach Filter 351 € → marktwertGebraucht 309 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 427 €, nach Filter 427 € → marktwertNeu 393 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 320 € (bisher 295 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 230 € → 225 € (bisher 270 €) → final 245 €
-  - sehrGut: 210 € → 205 € (bisher 245 €) → final 220 €
-  - gut: 170 € → 175 € (bisher 205 €) → final 185 €
-  - defekt: 60 € → 55 € (bisher 75 €) → final 70 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 14 (512 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 417 €, nach Filter 417 € → marktwertGebraucht 367 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 420 €, nach Filter 420 € → marktwertNeu 386 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 315 € (bisher 350 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 275 € → 270 € (bisher 385 €) → final 345 €
-  - sehrGut: 250 € → 245 € (bisher 350 €) → final 315 €
-  - gut: 200 € → 205 € (bisher 280 €) → final 250 €
-  - defekt: 75 € → 75 € (bisher 105 €) → final 95 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 14 Plus (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 320 €, nach Filter 320 € → marktwertGebraucht 282 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 400 €, nach Filter 400 € → marktwertNeu 368 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 300 € (bisher 300 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 210 € → 205 € (bisher 225 €) → final 205 €
-  - sehrGut: 190 € → 195 € (bisher 205 €) → final 195 €
-  - gut: 155 € → 155 € (bisher 175 €) → final 160 €
-  - defekt: 55 € → 50 € (bisher 55 €) → final 50 €
+  - wieNeu: 480 € → 615 € (bisher 665 €) → final 615 €
+  - sehrGut: 435 € → 555 € (bisher 610 €) → final 555 €
+  - gut: 350 € → 435 € (bisher 485 €) → final 435 €
+  - defekt: 130 € → 155 € (bisher 170 €) → final 155 €
 - **Ausgelöste Regeln:** gut: Tagesbremse (-10%) gekappt
 
-**Apple iPhone 14 Plus (512 GB)**
-- Gebraucht: 10 Treffer, Median vor Filter 475 €, nach Filter 475 € → marktwertGebraucht 418 € (−12%)
-- Neu: 2 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 375 €)
+**Apple iPhone 15 Pro Max (1 TB)**
+- Gebraucht: 50 Treffer, Median vor Filter 748 €, nach Filter 748 € → marktwertGebraucht 659 € (−12%)
+- Neu: 20 Treffer, Median vor Filter 1702 €, nach Filter 1702 € → marktwertNeu 1566 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1280 € (bisher 715 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 315 € → 315 € (bisher 430 €) → final 385 €
-  - sehrGut: 285 € → 280 € (bisher 390 €) → final 350 €
-  - gut: 230 € → 225 € (bisher 315 €) → final 285 €
-  - defekt: 85 € → 85 € (bisher 115 €) → final 105 €
+  - wieNeu: 495 € → 635 € (bisher 875 €) → final 655 €
+  - sehrGut: 450 € → 575 € (bisher 790 €) → final 655 €
+  - gut: 360 € → 450 € (bisher 645 €) → final 580 €
+  - defekt: 130 € → 155 € (bisher 230 €) → final 205 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (659 €) gekappt (war 790 €); sehrGut: über Marktanker (659 €) gekappt (war 710 €)
+
+**Apple iPhone 16 (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 769 €, nach Filter 769 € → marktwertGebraucht 677 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1295 €, nach Filter 1295 € → marktwertNeu 1191 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 975 € (bisher 655 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 510 € → 645 € (bisher 720 €) → final 650 €
+  - sehrGut: 460 € → 590 € (bisher 650 €) → final 590 €
+  - gut: 370 € → 460 € (bisher 525 €) → final 475 €
+  - defekt: 135 € → 160 € (bisher 180 €) → final 160 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Apple iPhone 16 Pro (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 820 €, nach Filter 820 € → marktwertGebraucht 721 € (−12%)
+- Neu: 25 Treffer, Median vor Filter 1429 €, nach Filter 1429 € → marktwertNeu 1315 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1075 € (bisher 650 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 540 € → 685 € (bisher 870 €) → final 720 €
+  - sehrGut: 490 € → 630 € (bisher 785 €) → final 705 €
+  - gut: 395 € → 495 € (bisher 635 €) → final 570 €
+  - defekt: 145 € → 175 € (bisher 230 €) → final 205 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (721 €) gekappt (war 785 €)
+
+**Apple iPhone 16 Pro (1 TB)**
+- Gebraucht: 50 Treffer, Median vor Filter 754 €, nach Filter 754 € → marktwertGebraucht 663 € (−12%)
+- Neu: 22 Treffer, Median vor Filter 1656 €, nach Filter 1656 € → marktwertNeu 1524 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1245 € (bisher 755 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 500 € → 645 € (bisher 950 €) → final 660 €
+  - sehrGut: 450 € → 575 € (bisher 860 €) → final 660 €
+  - gut: 365 € → 455 € (bisher 680 €) → final 610 €
+  - defekt: 135 € → 160 € (bisher 245 €) → final 220 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (663 €) gekappt (war 855 €); sehrGut: über Marktanker (663 €) gekappt (war 775 €)
+
+**Apple iPhone 16 Pro Max (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 819 €, nach Filter 819 € → marktwertGebraucht 721 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1238 €, nach Filter 1238 € → marktwertNeu 1139 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 930 € (bisher 670 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 540 € → 685 € (bisher 790 €) → final 710 €
+  - sehrGut: 490 € → 630 € (bisher 705 €) → final 635 €
+  - gut: 395 € → 495 € (bisher 575 €) → final 520 €
+  - defekt: 145 € → 175 € (bisher 205 €) → final 185 €
 - **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
 
-**Apple iPhone 14 Pro (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 390 €, nach Filter 390 € → marktwertGebraucht 343 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 500 €, nach Filter 500 € → marktwertNeu 460 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 375 € (bisher 365 €)
+**Apple iPhone 16 Pro Max (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 876 €, nach Filter 876 € → marktwertGebraucht 771 € (−12%)
+- Neu: 20 Treffer, Median vor Filter 1440 €, nach Filter 1440 € → marktwertNeu 1324 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1085 € (bisher 765 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 255 € → 245 € (bisher 275 €) → final 250 €
-  - sehrGut: 235 € → 230 € (bisher 245 €) → final 230 €
-  - gut: 190 € → 195 € (bisher 200 €) → final 195 €
-  - defekt: 70 € → 70 € (bisher 75 €) → final 70 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt
-
-**Apple iPhone 14 Pro (512 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 494 €, nach Filter 494 € → marktwertGebraucht 435 € (−12%)
-- Neu: 23 Treffer, Median vor Filter 1000 €, nach Filter 1000 € → marktwertNeu 920 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 750 € (bisher 450 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 325 € → 330 € (bisher 475 €) → final 430 €
-  - sehrGut: 295 € → 295 € (bisher 430 €) → final 385 €
-  - gut: 240 € → 235 € (bisher 350 €) → final 315 €
-  - defekt: 85 € → 85 € (bisher 125 €) → final 115 €
+  - wieNeu: 580 € → 740 € (bisher 855 €) → final 770 €
+  - sehrGut: 525 € → 665 € (bisher 770 €) → final 695 €
+  - gut: 425 € → 540 € (bisher 625 €) → final 565 €
+  - defekt: 155 € → 190 € (bisher 215 €) → final 195 €
 - **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
 
-**Apple iPhone 14 Pro (1 TB)**
-- Gebraucht: 50 Treffer, Median vor Filter 565 €, nach Filter 565 € → marktwertGebraucht 497 € (−12%)
-- Neu: 9 Treffer, Median vor Filter 1450 €, nach Filter 1450 € → marktwertNeu 1334 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1090 € (bisher 520 €)
+**Apple iPhone 16 Pro Max (1 TB)**
+- Gebraucht: 40 Treffer, Median vor Filter 830 €, nach Filter 830 € → marktwertGebraucht 730 € (−12%)
+- Neu: 17 Treffer, Median vor Filter 1695 €, nach Filter 1695 € → marktwertNeu 1559 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1275 € (bisher 880 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 375 € → 385 € (bisher 470 €) → final 425 €
-  - sehrGut: 340 € → 345 € (bisher 420 €) → final 380 €
-  - gut: 275 € → 270 € (bisher 335 €) → final 300 €
-  - defekt: 100 € → 105 € (bisher 115 €) → final 105 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt
+  - wieNeu: 550 € → 700 € (bisher 1100 €) → final 730 €
+  - sehrGut: 495 € → 635 € (bisher 1000 €) → final 730 €
+  - gut: 400 € → 505 € (bisher 805 €) → final 725 €
+  - defekt: 145 € → 175 € (bisher 295 €) → final 265 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (730 €) gekappt (war 990 €); sehrGut: über Marktanker (730 €) gekappt (war 900 €)
 
-**Apple iPhone 14 Pro Max (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 438 €, nach Filter 438 € → marktwertGebraucht 385 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 570 €, nach Filter 570 € → marktwertNeu 524 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 430 € (bisher 415 €)
+**Apple iPhone 17 Pro (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 983 €, nach Filter 983 € → marktwertGebraucht 865 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1399 €, nach Filter 1399 € → marktwertNeu 1287 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1055 € (bisher 920 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 290 € → 290 € (bisher 345 €) → final 310 €
-  - sehrGut: 260 € → 255 € (bisher 305 €) → final 275 €
-  - gut: 210 € → 205 € (bisher 245 €) → final 220 €
-  - defekt: 75 € → 75 € (bisher 90 €) → final 80 €
+  - wieNeu: 650 € → 840 € (bisher 1120 €) → final 860 €
+  - sehrGut: 590 € → 755 € (bisher 1015 €) → final 860 €
+  - gut: 475 € → 610 € (bisher 820 €) → final 740 €
+  - defekt: 175 € → 215 € (bisher 300 €) → final 270 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (865 €) gekappt (war 1010 €); sehrGut: über Marktanker (865 €) gekappt (war 915 €)
+
+**Apple iPhone 17 Pro (1 TB)**
+- Gebraucht: 50 Treffer, Median vor Filter 864 €, nach Filter 864 € → marktwertGebraucht 760 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1650 €, nach Filter 1650 € → marktwertNeu 1518 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1240 € (bisher 1075 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 570 € → 730 € (bisher 1310 €) → final 760 €
+  - sehrGut: 515 € → 650 € (bisher 1175 €) → final 760 €
+  - gut: 420 € → 530 € (bisher 940 €) → final 760 €
+  - defekt: 150 € → 180 € (bisher 310 €) → final 280 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (760 €) gekappt (war 1180 €); sehrGut: über Marktanker (760 €) gekappt (war 1060 €); gut: über Marktanker (760 €) gekappt (war 845 €)
+
+**Apple iPhone 17 Pro Max (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 875 €, nach Filter 875 € → marktwertGebraucht 770 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1452 €, nach Filter 1452 € → marktwertNeu 1336 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis 1299 € → final 1095 € (bisher 1140 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 580 € → 740 € (bisher 1240 €) → final 770 €
+  - sehrGut: 525 € → 665 € (bisher 1120 €) → final 770 €
+  - gut: 425 € → 540 € (bisher 910 €) → final 770 €
+  - defekt: 155 € → 190 € (bisher 330 €) → final 295 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (770 €) gekappt (war 1115 €); sehrGut: über Marktanker (770 €) gekappt (war 1010 €); gut: über Marktanker (770 €) gekappt (war 820 €)
+
+**Apple iPhone 17 Pro Max (1 TB)**
+- Gebraucht: 33 Treffer, Median vor Filter 1050 €, nach Filter 1050 € → marktwertGebraucht 924 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1729 €, nach Filter 1729 € → marktwertNeu 1591 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1300 € (bisher 1135 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 695 € → 905 € (bisher 1385 €) → final 920 €
+  - sehrGut: 630 € → 810 € (bisher 1255 €) → final 920 €
+  - gut: 510 € → 645 € (bisher 1000 €) → final 900 €
+  - defekt: 185 € → 230 € (bisher 335 €) → final 300 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (924 €) gekappt (war 1245 €); sehrGut: über Marktanker (924 €) gekappt (war 1130 €)
+
+**Apple iPhone 17 Pro Max (2 TB)**
+- Gebraucht: 12 Treffer, Median vor Filter 1520 €, nach Filter 1520 € → marktwertGebraucht 1337 € (−12%)
+- Neu: 41 Treffer, Median vor Filter 2296 €, nach Filter 2296 € → marktwertNeu 2112 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1730 € (bisher 1315 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 1005 € → 1335 € (bisher 1650 €) → final 1335 €
+  - sehrGut: 910 € → 1205 € (bisher 1500 €) → final 1335 €
+  - gut: 735 € → 960 € (bisher 1210 €) → final 1090 €
+  - defekt: 265 € → 315 € (bisher 440 €) → final 395 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (1337 €) gekappt (war 1485 €); sehrGut: über Marktanker (1337 €) gekappt (war 1350 €)
+
+**Samsung Galaxy S8 (64 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 66 €, nach Filter 66 € → marktwertGebraucht 58 € (−12%)
+- Neu: 37 Treffer, Median vor Filter 205 €, nach Filter 205 € → marktwertNeu 189 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 150 € (bisher 70 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 45 € → 30 € (bisher 55 €) → final 50 €
+  - sehrGut: 40 € → 25 € (bisher 50 €) → final 45 €
+  - gut: 30 € → 20 € (bisher 40 €) → final 35 €
+  - defekt: 10 € → 10 € (bisher 15 €) → final 15 €
 - **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
 
-**Apple iPhone 14 Pro Max (512 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 564 €, nach Filter 564 € → marktwertGebraucht 496 € (−12%)
-- Neu: 14 Treffer, Median vor Filter 1146 €, nach Filter 1146 € → marktwertNeu 1055 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 860 € (bisher 500 €)
+**Samsung Galaxy S9 (64 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 85 €, nach Filter 85 € → marktwertGebraucht 75 € (−12%)
+- Neu: 30 Treffer, Median vor Filter 236 €, nach Filter 236 € → marktwertNeu 218 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 175 € (bisher 75 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 370 € → 380 € (bisher 525 €) → final 475 €
-  - sehrGut: 335 € → 340 € (bisher 470 €) → final 425 €
-  - gut: 275 € → 270 € (bisher 380 €) → final 340 €
-  - defekt: 100 € → 105 € (bisher 140 €) → final 125 €
+  - wieNeu: 55 € → 35 € (bisher 50 €) → final 45 €
+  - sehrGut: 50 € → 35 € (bisher 45 €) → final 40 €
+  - gut: 40 € → 25 € (bisher 40 €) → final 35 €
+  - defekt: 15 € → 10 € (bisher 15 €) → final 15 €
 - **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
 
-**Apple iPhone 15 (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 397 €, nach Filter 397 € → marktwertGebraucht 349 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 519 €, nach Filter 519 € → marktwertNeu 477 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 390 € (bisher 335 €)
+**Samsung Galaxy S9 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 585 €, nach Filter 585 € → marktwertGebraucht 514 € (−12%)
+- Neu: 0 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 85 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 260 € → 310 € (bisher 345 €) → final 310 €
-  - sehrGut: 240 € → 285 € (bisher 310 €) → final 285 €
-  - gut: 190 € → 240 € (bisher 250 €) → final 240 €
-  - defekt: 70 € → 85 € (bisher 90 €) → final 85 €
-- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt
+  - wieNeu: 385 € → 270 € (bisher 90 €) → final 100 €
+  - sehrGut: 350 € → 240 € (bisher 80 €) → final 90 €
+  - gut: 285 € → 190 € (bisher 65 €) → final 70 €
+  - defekt: 105 € → 70 € (bisher 25 €) → final 30 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
 
-**Apple MacBook Pro 14" M4 (16 GB · 512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 43 Treffer, Median vor Filter 1551 €, nach Filter 1551 € → marktwertGebraucht 1365 € (−12%)
-- Neu: 15 Treffer, Median vor Filter 2221 €, nach Filter 2221 € → marktwertNeu 2043 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1675 € (bisher 990 €)
+**Samsung Galaxy S9+ (64 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 85 €, nach Filter 85 € → marktwertGebraucht 75 € (−12%)
+- Neu: 30 Treffer, Median vor Filter 236 €, nach Filter 236 € → marktwertNeu 218 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 175 € (bisher 115 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 1025 € → 1365 € (bisher 790 €) → final 1360 €
-  - sehrGut: 930 € → 1230 € (bisher 715 €) → final 1230 €
-  - gut: 750 € → 980 € (bisher 580 €) → final 980 €
-  - defekt: 275 € → 330 € (bisher 210 €) → final 330 €
-- **Ausgelöste Regeln:** wieNeu: über Marktanker (1365 €) gekappt (war 1365 €)
+  - wieNeu: 55 € → 35 € (bisher 65 €) → final 60 €
+  - sehrGut: 50 € → 35 € (bisher 55 €) → final 50 €
+  - gut: 40 € → 25 € (bisher 45 €) → final 40 €
+  - defekt: 15 € → 10 € (bisher 15 €) → final 15 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
 
-**Apple MacBook Pro 14" M4 (24 GB · 1 TB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 8 Treffer, Median vor Filter 2440 €, nach Filter 2440 € → marktwertGebraucht 2147 € (−12%)
-- Neu: 5 Treffer, Median vor Filter 3000 €, nach Filter 3000 € → marktwertNeu 2760 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 2260 € (bisher 1225 €)
+**Samsung Galaxy S9+ (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 585 €, nach Filter 585 € → marktwertGebraucht 514 € (−12%)
+- Neu: 0 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 135 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 1610 € → 2185 € (bisher 980 €) → final 2145 €
-  - sehrGut: 1460 € → 1975 € (bisher 885 €) → final 1975 €
-  - gut: 1180 € → 1580 € (bisher 715 €) → final 1580 €
-  - defekt: 430 € → 545 € (bisher 260 €) → final 545 €
-- **Ausgelöste Regeln:** wieNeu: über Marktanker (2147 €) gekappt (war 2185 €)
+  - wieNeu: 385 € → 270 € (bisher 105 €) → final 115 €
+  - sehrGut: 350 € → 240 € (bisher 95 €) → final 105 €
+  - gut: 285 € → 190 € (bisher 80 €) → final 90 €
+  - defekt: 105 € → 70 € (bisher 30 €) → final 35 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
 
-**Apple MacBook Pro 14" M4 Pro (24 GB · 512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 28 Treffer, Median vor Filter 1761 €, nach Filter 1761 € → marktwertGebraucht 1550 € (−12%)
-- Neu: 14 Treffer, Median vor Filter 2238 €, nach Filter 2238 € → marktwertNeu 2059 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1685 € (bisher 1245 €)
+**Samsung Galaxy S10e (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 109 €, nach Filter 109 € → marktwertGebraucht 96 € (−12%)
+- Neu: 15 Treffer, Median vor Filter 241 €, nach Filter 241 € → marktwertNeu 222 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 180 € (bisher 150 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 1160 € → 1555 € (bisher 995 €) → final 1545 €
-  - sehrGut: 1055 € → 1405 € (bisher 900 €) → final 1405 €
-  - gut: 850 € → 1120 € (bisher 730 €) → final 1120 €
-  - defekt: 310 € → 380 € (bisher 265 €) → final 380 €
-- **Ausgelöste Regeln:** wieNeu: über Marktanker (1550 €) gekappt (war 1555 €)
+  - wieNeu: 70 € → 45 € (bisher 65 €) → final 60 €
+  - sehrGut: 65 € → 45 € (bisher 55 €) → final 50 €
+  - gut: 55 € → 35 € (bisher 45 €) → final 40 €
+  - defekt: 20 € → 10 € (bisher 15 €) → final 15 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
 
-**Apple MacBook Pro 14" M4 Pro (24 GB · 1 TB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 8 Treffer, Median vor Filter 2440 €, nach Filter 2440 € → marktwertGebraucht 2147 € (−12%)
-- Neu: 5 Treffer, Median vor Filter 3000 €, nach Filter 3000 € → marktwertNeu 2760 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 2260 € (bisher 1365 €)
+**Samsung Galaxy S10 (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 105 €, nach Filter 105 € → marktwertGebraucht 92 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 300 €, nach Filter 300 € → marktwertNeu 276 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 225 € (bisher 115 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 1610 € → 2185 € (bisher 1090 €) → final 2145 €
-  - sehrGut: 1460 € → 1975 € (bisher 985 €) → final 1975 €
-  - gut: 1180 € → 1580 € (bisher 800 €) → final 1580 €
-  - defekt: 430 € → 545 € (bisher 290 €) → final 545 €
-- **Ausgelöste Regeln:** wieNeu: über Marktanker (2147 €) gekappt (war 2185 €)
+  - wieNeu: 70 € → 45 € (bisher 90 €) → final 80 €
+  - sehrGut: 65 € → 45 € (bisher 80 €) → final 70 €
+  - gut: 50 € → 35 € (bisher 60 €) → final 55 €
+  - defekt: 20 € → 10 € (bisher 20 €) → final 20 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
 
-**Apple MacBook Pro 16" M4 Pro (24 GB · 512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 29 Treffer, Median vor Filter 1826 €, nach Filter 1826 € → marktwertGebraucht 1607 € (−12%)
-- Neu: 12 Treffer, Median vor Filter 2260 €, nach Filter 2260 € → marktwertNeu 2080 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1705 € (bisher 1560 €)
+**Samsung Galaxy S10 (512 GB)**
+- Gebraucht: 37 Treffer, Median vor Filter 300 €, nach Filter 300 € → marktwertGebraucht 264 € (−12%)
+- Neu: 0 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 155 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 1205 € → 1615 € (bisher 1240 €) → final 1605 €
-  - sehrGut: 1095 € → 1465 € (bisher 1125 €) → final 1465 €
-  - gut: 885 € → 1170 € (bisher 910 €) → final 1170 €
-  - defekt: 320 € → 390 € (bisher 330 €) → final 390 €
-- **Ausgelöste Regeln:** wieNeu: über Marktanker (1607 €) gekappt (war 1615 €)
+  - wieNeu: 200 € → 140 € (bisher 145 €) → final 140 €
+  - sehrGut: 180 € → 125 € (bisher 130 €) → final 125 €
+  - gut: 145 € → 100 € (bisher 100 €) → final 100 €
+  - defekt: 55 € → 35 € (bisher 40 €) → final 35 €
+- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
 
-**Apple MacBook Pro 16" M4 Pro (48 GB · 1 TB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 5 Treffer, Median vor Filter 3799 €, nach Filter 3799 € → marktwertGebraucht 3343 € (−12%)
-- Neu: 5 Treffer, Median vor Filter 3799 €, nach Filter 3799 € → marktwertNeu 3495 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 2865 € (bisher 2035 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 2505 € → 3435 € (bisher 1620 €) → final 3340 €
-  - sehrGut: 2275 € → 3115 € (bisher 1470 €) → final 3115 €
-  - gut: 1840 € → 2505 € (bisher 1190 €) → final 2505 €
-  - defekt: 670 € → 870 € (bisher 435 €) → final 870 €
-- **Ausgelöste Regeln:** wieNeu: über Marktanker (3343 €) gekappt (war 3435 €)
-
-**Apple MacBook Pro 14" M3 (16 GB · 1 TB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 5 Treffer, Median vor Filter 3043 €, nach Filter 3043 € → marktwertGebraucht 2678 € (−12%)
-- Neu: 1 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 925 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 2010 € → 2745 € (bisher 740 €) → final 2675 €
-  - sehrGut: 1820 € → 2480 € (bisher 670 €) → final 2480 €
-  - gut: 1475 € → 1995 € (bisher 540 €) → final 1995 €
-  - defekt: 535 € → 680 € (bisher 195 €) → final 680 €
-- **Ausgelöste Regeln:** wieNeu: über Marktanker (2678 €) gekappt (war 2745 €)
-
-## Aktualisiert (62)
-**Apple iPhone 8 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 99 €, nach Filter 99 € → marktwertGebraucht 87 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 399 €, nach Filter 399 € → marktwertNeu 367 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 300 € (bisher 60 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 65 € → 65 € (bisher 65 €) → final 65 €
-  - sehrGut: 60 € → 55 € (bisher 55 €) → final 55 €
-  - gut: 50 € → 50 € (bisher 50 €) → final 50 €
-  - defekt: 15 € → 15 € (bisher 15 €) → final 15 €
-- Ausgelöste Regeln: keine
-
-**Apple iPhone 8 Plus (64 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 89 €, nach Filter 89 € → marktwertGebraucht 78 € (−12%)
-- Neu: 13 Treffer, Median vor Filter 310 €, nach Filter 310 € → marktwertNeu 285 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 230 € (bisher 90 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 60 € → 55 € (bisher 55 €) → final 55 €
-  - sehrGut: 55 € → 50 € (bisher 50 €) → final 50 €
-  - gut: 45 € → 45 € (bisher 45 €) → final 45 €
-  - defekt: 15 € → 15 € (bisher 15 €) → final 15 €
-- Ausgelöste Regeln: keine
-
-**Apple iPhone XS (64 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 95 €, nach Filter 95 € → marktwertGebraucht 84 € (−12%)
-- Neu: 28 Treffer, Median vor Filter 240 €, nach Filter 240 € → marktwertNeu 221 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 180 € (bisher 90 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 65 € → 65 € (bisher 65 €) → final 65 €
-  - sehrGut: 55 € → 50 € (bisher 55 €) → final 50 €
-  - gut: 45 € → 45 € (bisher 50 €) → final 45 €
-  - defekt: 15 € → 15 € (bisher 15 €) → final 15 €
-- Ausgelöste Regeln: keine
-
-**Apple iPhone XS (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 131 €, nach Filter 131 € → marktwertGebraucht 115 € (−12%)
-- Neu: 21 Treffer, Median vor Filter 280 €, nach Filter 280 € → marktwertNeu 258 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 210 € (bisher 100 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 85 € → 85 € (bisher 90 €) → final 85 €
-  - sehrGut: 80 € → 80 € (bisher 80 €) → final 80 €
-  - gut: 65 € → 65 € (bisher 65 €) → final 65 €
-  - defekt: 25 € → 25 € (bisher 25 €) → final 25 €
-- Ausgelöste Regeln: keine
-
-**Apple iPhone XS Max (64 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 143 €, nach Filter 143 € → marktwertGebraucht 126 € (−12%)
-- Neu: 12 Treffer, Median vor Filter 300 €, nach Filter 300 € → marktwertNeu 276 € (−8%)
+**Samsung Galaxy S10+ (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 105 €, nach Filter 105 € → marktwertGebraucht 92 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 300 €, nach Filter 300 € → marktwertNeu 276 € (−8%)
 - neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 225 € (bisher 120 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 95 € → 100 € (bisher 100 €) → final 100 €
-  - sehrGut: 85 € → 85 € (bisher 85 €) → final 85 €
-  - gut: 70 € → 70 € (bisher 70 €) → final 70 €
-  - defekt: 25 € → 25 € (bisher 25 €) → final 25 €
-- Ausgelöste Regeln: keine
+  - wieNeu: 70 € → 45 € (bisher 95 €) → final 85 €
+  - sehrGut: 65 € → 45 € (bisher 90 €) → final 80 €
+  - gut: 50 € → 35 € (bisher 70 €) → final 65 €
+  - defekt: 20 € → 10 € (bisher 25 €) → final 25 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
 
-**Apple iPhone 11 (64 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 125 €, nach Filter 125 € → marktwertGebraucht 110 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 300 €, nach Filter 300 € → marktwertNeu 276 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 225 € (bisher 95 €)
+**Samsung Galaxy S10+ (512 GB)**
+- Gebraucht: 37 Treffer, Median vor Filter 300 €, nach Filter 300 € → marktwertGebraucht 264 € (−12%)
+- Neu: 0 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 160 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 80 € → 80 € (bisher 85 €) → final 80 €
-  - sehrGut: 75 € → 75 € (bisher 75 €) → final 75 €
-  - gut: 60 € → 55 € (bisher 55 €) → final 55 €
-  - defekt: 20 € → 15 € (bisher 15 €) → final 15 €
-- Ausgelöste Regeln: keine
+  - wieNeu: 200 € → 140 € (bisher 145 €) → final 140 €
+  - sehrGut: 180 € → 125 € (bisher 130 €) → final 125 €
+  - gut: 145 € → 100 € (bisher 100 €) → final 100 €
+  - defekt: 55 € → 35 € (bisher 40 €) → final 35 €
+- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
 
-**Apple iPhone 11 (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 121 €, nach Filter 121 € → marktwertGebraucht 107 € (−12%)
-- Neu: 49 Treffer, Median vor Filter 325 €, nach Filter 325 € → marktwertNeu 299 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 245 € (bisher 100 €)
+**Samsung Galaxy S10+ (1 TB)**
+- Gebraucht: 7 Treffer, Median vor Filter 990 €, nach Filter 990 € → marktwertGebraucht 871 € (−12%)
+- Neu: 1 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 190 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 80 € → 80 € (bisher 80 €) → final 80 €
-  - sehrGut: 75 € → 75 € (bisher 75 €) → final 75 €
-  - gut: 60 € → 55 € (bisher 55 €) → final 55 €
-  - defekt: 20 € → 15 € (bisher 15 €) → final 15 €
-- Ausgelöste Regeln: keine
+  - wieNeu: 655 € → 470 € (bisher 185 €) → final 205 €
+  - sehrGut: 590 € → 420 € (bisher 170 €) → final 185 €
+  - gut: 480 € → 345 € (bisher 135 €) → final 150 €
+  - defekt: 175 € → 120 € (bisher 50 €) → final 55 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
 
-**Apple iPhone 11 Pro Max (256 GB)**
+**Samsung Galaxy S20 (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 115 €, nach Filter 115 € → marktwertGebraucht 101 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 195 €, nach Filter 195 € → marktwertNeu 179 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 145 € (bisher 150 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 75 € → 50 € (bisher 80 €) → final 70 €
+  - sehrGut: 70 € → 45 € (bisher 75 €) → final 70 €
+  - gut: 55 € → 35 € (bisher 60 €) → final 55 €
+  - defekt: 20 € → 10 € (bisher 20 €) → final 20 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S20+ (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 115 €, nach Filter 115 € → marktwertGebraucht 101 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 195 €, nach Filter 195 € → marktwertNeu 179 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 145 € (bisher 135 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 75 € → 50 € (bisher 100 €) → final 90 €
+  - sehrGut: 70 € → 45 € (bisher 95 €) → final 85 €
+  - gut: 55 € → 35 € (bisher 75 €) → final 70 €
+  - defekt: 20 € → 10 € (bisher 25 €) → final 25 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S20 Ultra (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 129 €, nach Filter 129 € → marktwertGebraucht 114 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 200 €, nach Filter 200 € → marktwertNeu 184 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 150 € (bisher 190 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 85 € → 60 € (bisher 140 €) → final 110 €
+  - sehrGut: 75 € → 50 € (bisher 125 €) → final 110 €
+  - gut: 60 € → 40 € (bisher 100 €) → final 90 €
+  - defekt: 25 € → 15 € (bisher 40 €) → final 35 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (114 €) gekappt (war 125 €); sehrGut: über Marktanker (114 €) gekappt (war 115 €)
+
+**Samsung Galaxy S20 FE (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 120 €, nach Filter 120 € → marktwertGebraucht 106 € (−12%)
+- Neu: 38 Treffer, Median vor Filter 191 €, nach Filter 191 € → marktwertNeu 175 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 140 € (bisher 120 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 80 € → 55 € (bisher 70 €) → final 65 €
+  - sehrGut: 70 € → 45 € (bisher 60 €) → final 55 €
+  - gut: 60 € → 40 € (bisher 50 €) → final 45 €
+  - defekt: 20 € → 10 € (bisher 15 €) → final 15 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S20 FE (256 GB)**
+- Gebraucht: 20 Treffer, Median vor Filter 155 €, nach Filter 155 € → marktwertGebraucht 136 € (−12%)
+- Neu: 0 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 135 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 100 € → 70 € (bisher 75 €) → final 70 €
+  - sehrGut: 95 € → 65 € (bisher 70 €) → final 65 €
+  - gut: 75 € → 50 € (bisher 55 €) → final 50 €
+  - defekt: 25 € → 15 € (bisher 20 €) → final 20 €
+- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S21 (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 153 €, nach Filter 153 € → marktwertGebraucht 134 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 210 €, nach Filter 210 € → marktwertNeu 193 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 155 € (bisher 135 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 100 € → 70 € (bisher 100 €) → final 90 €
+  - sehrGut: 90 € → 60 € (bisher 95 €) → final 85 €
+  - gut: 75 € → 50 € (bisher 75 €) → final 70 €
+  - defekt: 25 € → 15 € (bisher 25 €) → final 25 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S21 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 200 €, nach Filter 200 € → marktwertGebraucht 176 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 224 €, nach Filter 224 € → marktwertNeu 207 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 165 € (bisher 150 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 130 € → 85 € (bisher 115 €) → final 105 €
+  - sehrGut: 120 € → 80 € (bisher 100 €) → final 90 €
+  - gut: 95 € → 65 € (bisher 90 €) → final 80 €
+  - defekt: 35 € → 25 € (bisher 30 €) → final 25 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S21 FE (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 160 €, nach Filter 160 € → marktwertGebraucht 141 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 194 €, nach Filter 194 € → marktwertNeu 179 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 145 € (bisher 130 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 105 € → 70 € (bisher 100 €) → final 90 €
+  - sehrGut: 95 € → 65 € (bisher 90 €) → final 80 €
+  - gut: 75 € → 50 € (bisher 75 €) → final 70 €
+  - defekt: 30 € → 20 € (bisher 25 €) → final 25 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S22 (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 180 €, nach Filter 180 € → marktwertGebraucht 158 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 267 €, nach Filter 267 € → marktwertNeu 246 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 200 € (bisher 185 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 120 € → 80 € (bisher 125 €) → final 115 €
+  - sehrGut: 110 € → 75 € (bisher 110 €) → final 100 €
+  - gut: 85 € → 60 € (bisher 90 €) → final 80 €
+  - defekt: 30 € → 20 € (bisher 35 €) → final 30 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S22 (256 GB)**
 - Gebraucht: 50 Treffer, Median vor Filter 250 €, nach Filter 250 € → marktwertGebraucht 220 € (−12%)
-- Neu: 24 Treffer, Median vor Filter 345 €, nach Filter 345 € → marktwertNeu 317 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 260 € (bisher 215 €)
+- Neu: 50 Treffer, Median vor Filter 245 €, nach Filter 245 € → marktwertNeu 225 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 180 € (bisher 205 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 165 € → 165 € (bisher 175 €) → final 165 €
-  - sehrGut: 150 € → 150 € (bisher 155 €) → final 150 €
-  - gut: 120 € → 115 € (bisher 120 €) → final 115 €
-  - defekt: 45 € → 45 € (bisher 45 €) → final 45 €
+  - wieNeu: 165 € → 115 € (bisher 155 €) → final 140 €
+  - sehrGut: 150 € → 100 € (bisher 140 €) → final 125 €
+  - gut: 120 € → 80 € (bisher 110 €) → final 100 €
+  - defekt: 45 € → 30 € (bisher 40 €) → final 35 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S22+ (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 180 €, nach Filter 180 € → marktwertGebraucht 158 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 267 €, nach Filter 267 € → marktwertNeu 246 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 200 € (bisher 180 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 120 € → 80 € (bisher 125 €) → final 115 €
+  - sehrGut: 110 € → 75 € (bisher 110 €) → final 100 €
+  - gut: 85 € → 60 € (bisher 90 €) → final 80 €
+  - defekt: 30 € → 20 € (bisher 35 €) → final 30 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S22+ (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 250 €, nach Filter 250 € → marktwertGebraucht 220 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 245 €, nach Filter 245 € → marktwertNeu 225 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 180 € (bisher 195 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 165 € → 115 € (bisher 155 €) → final 140 €
+  - sehrGut: 150 € → 100 € (bisher 140 €) → final 125 €
+  - gut: 120 € → 80 € (bisher 110 €) → final 100 €
+  - defekt: 45 € → 30 € (bisher 40 €) → final 35 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S22 Ultra (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 231 €, nach Filter 231 € → marktwertGebraucht 204 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 364 €, nach Filter 364 € → marktwertNeu 335 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 270 € (bisher 265 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 155 € → 105 € (bisher 185 €) → final 165 €
+  - sehrGut: 140 € → 95 € (bisher 180 €) → final 160 €
+  - gut: 110 € → 75 € (bisher 140 €) → final 125 €
+  - defekt: 40 € → 25 € (bisher 50 €) → final 45 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S22 Ultra (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 300 €, nach Filter 300 € → marktwertGebraucht 264 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 365 €, nach Filter 365 € → marktwertNeu 336 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 275 € (bisher 290 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 200 € → 140 € (bisher 210 €) → final 190 €
+  - sehrGut: 180 € → 125 € (bisher 190 €) → final 170 €
+  - gut: 145 € → 100 € (bisher 160 €) → final 145 €
+  - defekt: 55 € → 35 € (bisher 55 €) → final 50 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S22 Ultra (1 TB)**
+- Gebraucht: 8 Treffer, Median vor Filter 434 €, nach Filter 434 € → marktwertGebraucht 382 € (−12%)
+- Neu: 2 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 385 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 285 € → 190 € (bisher 215 €) → final 195 €
+  - sehrGut: 260 € → 170 € (bisher 190 €) → final 170 €
+  - gut: 210 € → 140 € (bisher 165 €) → final 150 €
+  - defekt: 75 € → 50 € (bisher 55 €) → final 50 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S23+ (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 306 €, nach Filter 306 € → marktwertGebraucht 270 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 330 €, nach Filter 330 € → marktwertNeu 304 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 245 € (bisher 290 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 200 € → 140 € (bisher 200 €) → final 180 €
+  - sehrGut: 185 € → 130 € (bisher 180 €) → final 160 €
+  - gut: 150 € → 100 € (bisher 150 €) → final 135 €
+  - defekt: 55 € → 35 € (bisher 50 €) → final 45 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S23+ (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 431 €, nach Filter 431 € → marktwertGebraucht 379 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 442 €, nach Filter 442 € → marktwertNeu 407 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 330 € (bisher 340 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 285 € → 190 € (bisher 235 €) → final 210 €
+  - sehrGut: 260 € → 170 € (bisher 215 €) → final 195 €
+  - gut: 210 € → 140 € (bisher 175 €) → final 160 €
+  - defekt: 75 € → 50 € (bisher 65 €) → final 60 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S23 Ultra (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 325 €, nach Filter 325 € → marktwertGebraucht 286 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 450 €, nach Filter 450 € → marktwertNeu 414 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 335 € (bisher 340 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 215 € → 145 € (bisher 245 €) → final 220 €
+  - sehrGut: 195 € → 135 € (bisher 215 €) → final 195 €
+  - gut: 155 € → 105 € (bisher 180 €) → final 160 €
+  - defekt: 55 € → 35 € (bisher 65 €) → final 60 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S23 Ultra (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 431 €, nach Filter 431 € → marktwertGebraucht 379 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 446 €, nach Filter 446 € → marktwertNeu 410 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 335 € (bisher 390 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 285 € → 190 € (bisher 295 €) → final 265 €
+  - sehrGut: 260 € → 170 € (bisher 265 €) → final 240 €
+  - gut: 210 € → 140 € (bisher 210 €) → final 190 €
+  - defekt: 75 € → 50 € (bisher 80 €) → final 70 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S23 Ultra (1 TB)**
+- Gebraucht: 10 Treffer, Median vor Filter 548 €, nach Filter 548 € → marktwertGebraucht 482 € (−12%)
+- Neu: 2 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 455 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 360 € → 250 € (bisher 370 €) → final 335 €
+  - sehrGut: 330 € → 225 € (bisher 330 €) → final 295 €
+  - gut: 265 € → 175 € (bisher 260 €) → final 235 €
+  - defekt: 95 € → 65 € (bisher 95 €) → final 85 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S23 FE (256 GB)**
+- Gebraucht: 18 Treffer, Median vor Filter 306 €, nach Filter 306 € → marktwertGebraucht 269 € (−12%)
+- Neu: 11 Treffer, Median vor Filter 499 €, nach Filter 499 € → marktwertNeu 459 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 375 € (bisher 240 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 200 € → 140 € (bisher 180 €) → final 160 €
+  - sehrGut: 185 € → 130 € (bisher 160 €) → final 145 €
+  - gut: 150 € → 100 € (bisher 125 €) → final 115 €
+  - defekt: 55 € → 35 € (bisher 45 €) → final 40 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S24 (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 334 €, nach Filter 334 € → marktwertGebraucht 294 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 432 €, nach Filter 432 € → marktwertNeu 398 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 325 € (bisher 285 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 220 € → 145 € (bisher 215 €) → final 195 €
+  - sehrGut: 200 € → 140 € (bisher 190 €) → final 170 €
+  - gut: 160 € → 110 € (bisher 165 €) → final 150 €
+  - defekt: 60 € → 40 € (bisher 55 €) → final 50 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S24 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 437 €, nach Filter 437 € → marktwertGebraucht 385 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 555 €, nach Filter 555 € → marktwertNeu 510 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 415 € (bisher 315 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 290 € → 195 € (bisher 295 €) → final 265 €
+  - sehrGut: 260 € → 170 € (bisher 260 €) → final 235 €
+  - gut: 210 € → 140 € (bisher 210 €) → final 190 €
+  - defekt: 75 € → 50 € (bisher 80 €) → final 70 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S24 Ultra (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 500 €, nach Filter 500 € → marktwertGebraucht 440 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 641 €, nach Filter 641 € → marktwertNeu 590 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 480 € (bisher 460 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 330 € → 225 € (bisher 325 €) → final 295 €
+  - sehrGut: 300 € → 205 € (bisher 290 €) → final 260 €
+  - gut: 240 € → 160 € (bisher 225 €) → final 205 €
+  - defekt: 90 € → 60 € (bisher 85 €) → final 75 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S24 Ultra (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 566 €, nach Filter 566 € → marktwertGebraucht 498 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 680 €, nach Filter 680 € → marktwertNeu 626 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 510 € (bisher 525 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 375 € → 260 € (bisher 595 €) → final 495 €
+  - sehrGut: 340 € → 235 € (bisher 540 €) → final 485 €
+  - gut: 275 € → 185 € (bisher 435 €) → final 390 €
+  - defekt: 100 € → 70 € (bisher 160 €) → final 145 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (498 €) gekappt (war 535 €)
+
+**Samsung Galaxy S24 Ultra (1 TB)**
+- Gebraucht: 25 Treffer, Median vor Filter 700 €, nach Filter 700 € → marktwertGebraucht 616 € (−12%)
+- Neu: 13 Treffer, Median vor Filter 1345 €, nach Filter 1345 € → marktwertNeu 1237 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1010 € (bisher 605 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 460 € → 330 € (bisher 435 €) → final 390 €
+  - sehrGut: 420 € → 295 € (bisher 390 €) → final 350 €
+  - gut: 340 € → 235 € (bisher 310 €) → final 280 €
+  - defekt: 125 € → 80 € (bisher 105 €) → final 95 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S24 FE (128 GB)**
+- Gebraucht: 36 Treffer, Median vor Filter 350 €, nach Filter 350 € → marktwertGebraucht 308 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 350 €, nach Filter 350 € → marktwertNeu 322 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 260 € (bisher 275 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 230 € → 150 € (bisher 205 €) → final 185 €
+  - sehrGut: 210 € → 140 € (bisher 185 €) → final 165 €
+  - gut: 170 € → 115 € (bisher 155 €) → final 140 €
+  - defekt: 60 € → 40 € (bisher 55 €) → final 50 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S24 FE (256 GB)**
+- Gebraucht: 8 Treffer, Median vor Filter 406 €, nach Filter 406 € → marktwertGebraucht 357 € (−12%)
+- Neu: 11 Treffer, Median vor Filter 585 €, nach Filter 585 € → marktwertNeu 538 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 440 € (bisher 315 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 270 € → 180 € (bisher 250 €) → final 225 €
+  - sehrGut: 245 € → 165 € (bisher 220 €) → final 200 €
+  - gut: 195 € → 135 € (bisher 180 €) → final 160 €
+  - defekt: 70 € → 45 € (bisher 65 €) → final 60 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S25 (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 499 €, nach Filter 499 € → marktwertGebraucht 439 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 544 €, nach Filter 544 € → marktwertNeu 500 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 410 € (bisher 380 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 330 € → 225 € (bisher 290 €) → final 260 €
+  - sehrGut: 300 € → 205 € (bisher 260 €) → final 235 €
+  - gut: 240 € → 160 € (bisher 205 €) → final 185 €
+  - defekt: 90 € → 60 € (bisher 80 €) → final 70 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S25 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 563 €, nach Filter 563 € → marktwertGebraucht 495 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 617 €, nach Filter 617 € → marktwertNeu 568 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 465 € (bisher 425 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 370 € → 255 € (bisher 360 €) → final 325 €
+  - sehrGut: 335 € → 230 € (bisher 320 €) → final 290 €
+  - gut: 270 € → 180 € (bisher 250 €) → final 225 €
+  - defekt: 100 € → 70 € (bisher 90 €) → final 80 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S25+ (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 563 €, nach Filter 563 € → marktwertGebraucht 495 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 617 €, nach Filter 617 € → marktwertNeu 568 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 465 € (bisher 450 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 370 € → 255 € (bisher 360 €) → final 325 €
+  - sehrGut: 335 € → 230 € (bisher 320 €) → final 290 €
+  - gut: 270 € → 180 € (bisher 250 €) → final 225 €
+  - defekt: 100 € → 70 € (bisher 90 €) → final 80 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S25 Ultra (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 809 €, nach Filter 809 € → marktwertGebraucht 711 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1073 €, nach Filter 1073 € → marktwertNeu 987 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 805 € (bisher 535 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 535 € → 380 € (bisher 475 €) → final 430 €
+  - sehrGut: 485 € → 345 € (bisher 435 €) → final 390 €
+  - gut: 390 € → 275 € (bisher 345 €) → final 310 €
+  - defekt: 140 € → 95 € (bisher 120 €) → final 110 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S25 Ultra (1 TB)**
+- Gebraucht: 9 Treffer, Median vor Filter 850 €, nach Filter 850 € → marktwertGebraucht 748 € (−12%)
+- Neu: 44 Treffer, Median vor Filter 1518 €, nach Filter 1518 € → marktwertNeu 1397 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1145 € (bisher 615 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 560 € → 400 € (bisher 535 €) → final 480 €
+  - sehrGut: 510 € → 360 € (bisher 480 €) → final 430 €
+  - gut: 410 € → 290 € (bisher 390 €) → final 350 €
+  - defekt: 150 € → 100 € (bisher 135 €) → final 120 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S25 Edge (256 GB)**
+- Gebraucht: 43 Treffer, Median vor Filter 615 €, nach Filter 615 € → marktwertGebraucht 541 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 629 €, nach Filter 629 € → marktwertNeu 579 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 470 € (bisher 410 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 405 € → 285 € (bisher 335 €) → final 300 €
+  - sehrGut: 370 € → 255 € (bisher 300 €) → final 270 €
+  - gut: 300 € → 205 € (bisher 235 €) → final 210 €
+  - defekt: 110 € → 75 € (bisher 90 €) → final 80 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy S25 Edge (512 GB)**
+- Gebraucht: 26 Treffer, Median vor Filter 692 €, nach Filter 692 € → marktwertGebraucht 609 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 670 €, nach Filter 670 € → marktwertNeu 617 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 505 € (bisher 480 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 455 € → 325 € (bisher 675 €) → final 605 €
+  - sehrGut: 415 € → 295 € (bisher 610 €) → final 550 €
+  - gut: 335 € → 230 € (bisher 495 €) → final 445 €
+  - defekt: 120 € → 80 € (bisher 180 €) → final 160 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (609 €) gekappt (war 610 €)
+
+**Samsung Galaxy Note 9 (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 116 €, nach Filter 116 € → marktwertGebraucht 102 € (−12%)
+- Neu: 25 Treffer, Median vor Filter 290 €, nach Filter 290 € → marktwertNeu 267 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 215 € (bisher 155 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 75 € → 50 € (bisher 90 €) → final 80 €
+  - sehrGut: 70 € → 45 € (bisher 85 €) → final 75 €
+  - gut: 55 € → 35 € (bisher 70 €) → final 65 €
+  - defekt: 20 € → 10 € (bisher 25 €) → final 25 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Note 9 (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 30 €, nach Filter 30 € → marktwertGebraucht 27 € (−12%)
+- Neu: 3 Treffer, Median vor Filter 518 €, nach Filter 518 € → marktwertNeu 477 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 390 € (bisher 205 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 20 € → 10 € (bisher 115 €) → final 25 €
+  - sehrGut: 20 € → 10 € (bisher 105 €) → final 25 €
+  - gut: 15 € → 10 € (bisher 85 €) → final 25 €
+  - defekt: 5 € → 10 € (bisher 30 €) → final 25 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; wieNeu: über Marktanker (27 €) gekappt (war 105 €); sehrGut: über Marktanker (27 €) gekappt (war 95 €); gut: über Marktanker (27 €) gekappt (war 75 €)
+
+**Samsung Galaxy Note 10 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 200 €, nach Filter 200 € → marktwertGebraucht 176 € (−12%)
+- Neu: 12 Treffer, Median vor Filter 325 €, nach Filter 325 € → marktwertNeu 299 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 245 € (bisher 215 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 130 € → 85 € (bisher 115 €) → final 105 €
+  - sehrGut: 120 € → 80 € (bisher 100 €) → final 90 €
+  - gut: 95 € → 65 € (bisher 90 €) → final 80 €
+  - defekt: 35 € → 25 € (bisher 30 €) → final 25 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Note 10+ (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 200 €, nach Filter 200 € → marktwertGebraucht 176 € (−12%)
+- Neu: 12 Treffer, Median vor Filter 325 €, nach Filter 325 € → marktwertNeu 299 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 245 € (bisher 215 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 130 € → 85 € (bisher 115 €) → final 105 €
+  - sehrGut: 120 € → 80 € (bisher 100 €) → final 90 €
+  - gut: 95 € → 65 € (bisher 90 €) → final 80 €
+  - defekt: 35 € → 25 € (bisher 30 €) → final 25 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Note 10+ (512 GB)**
+- Gebraucht: 16 Treffer, Median vor Filter 275 €, nach Filter 275 € → marktwertGebraucht 242 € (−12%)
+- Neu: 0 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 255 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 180 € → 125 € (bisher 165 €) → final 150 €
+  - sehrGut: 165 € → 115 € (bisher 150 €) → final 135 €
+  - gut: 135 € → 90 € (bisher 115 €) → final 105 €
+  - defekt: 50 € → 35 € (bisher 45 €) → final 40 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Note 20 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 270 €, nach Filter 270 € → marktwertGebraucht 238 € (−12%)
+- Neu: 12 Treffer, Median vor Filter 347 €, nach Filter 347 € → marktwertNeu 319 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 260 € (bisher 260 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 180 € → 125 € (bisher 150 €) → final 135 €
+  - sehrGut: 160 € → 110 € (bisher 135 €) → final 120 €
+  - gut: 130 € → 85 € (bisher 105 €) → final 95 €
+  - defekt: 50 € → 35 € (bisher 40 €) → final 35 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Note 20 Ultra (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 283 €, nach Filter 283 € → marktwertGebraucht 249 € (−12%)
+- Neu: 10 Treffer, Median vor Filter 347 €, nach Filter 347 € → marktwertNeu 319 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 260 € (bisher 335 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 185 € → 130 € (bisher 165 €) → final 150 €
+  - sehrGut: 170 € → 115 € (bisher 150 €) → final 135 €
+  - gut: 135 € → 90 € (bisher 115 €) → final 105 €
+  - defekt: 50 € → 35 € (bisher 45 €) → final 40 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Note 20 Ultra (512 GB)**
+- Gebraucht: 7 Treffer, Median vor Filter 490 €, nach Filter 490 € → marktwertGebraucht 431 € (−12%)
+- Neu: 2 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 385 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 325 € → 220 € (bisher 265 €) → final 240 €
+  - sehrGut: 295 € → 200 € (bisher 235 €) → final 210 €
+  - gut: 235 € → 155 € (bisher 190 €) → final 170 €
+  - defekt: 85 € → 60 € (bisher 70 €) → final 65 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Flip 3 (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 139 €, nach Filter 139 € → marktwertGebraucht 122 € (−12%)
+- Neu: 44 Treffer, Median vor Filter 260 €, nach Filter 260 € → marktwertNeu 239 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 195 € (bisher 195 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 90 € → 60 € (bisher 70 €) → final 65 €
+  - sehrGut: 85 € → 60 € (bisher 60 €) → final 60 €
+  - gut: 65 € → 45 € (bisher 50 €) → final 45 €
+  - defekt: 25 € → 15 € (bisher 15 €) → final 15 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Flip 3 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 256 €, nach Filter 256 € → marktwertGebraucht 225 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 260 €, nach Filter 260 € → marktwertNeu 239 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 195 € (bisher 210 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 170 € → 115 € (bisher 160 €) → final 145 €
+  - sehrGut: 155 € → 105 € (bisher 140 €) → final 125 €
+  - gut: 125 € → 80 € (bisher 110 €) → final 100 €
+  - defekt: 45 € → 30 € (bisher 40 €) → final 35 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Flip 4 (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 149 €, nach Filter 149 € → marktwertGebraucht 131 € (−12%)
+- Neu: 34 Treffer, Median vor Filter 490 €, nach Filter 490 € → marktwertNeu 451 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 365 € (bisher 230 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 100 € → 70 € (bisher 100 €) → final 90 €
+  - sehrGut: 90 € → 60 € (bisher 95 €) → final 85 €
+  - gut: 70 € → 45 € (bisher 80 €) → final 70 €
+  - defekt: 25 € → 15 € (bisher 25 €) → final 25 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Flip 4 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 294 €, nach Filter 294 € → marktwertGebraucht 259 € (−12%)
+- Neu: 27 Treffer, Median vor Filter 480 €, nach Filter 480 € → marktwertNeu 442 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 360 € (bisher 250 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 195 € → 135 € (bisher 180 €) → final 160 €
+  - sehrGut: 175 € → 120 € (bisher 160 €) → final 145 €
+  - gut: 140 € → 95 € (bisher 125 €) → final 115 €
+  - defekt: 50 € → 35 € (bisher 45 €) → final 40 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Flip 4 (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 330 €, nach Filter 330 € → marktwertGebraucht 290 € (−12%)
+- Neu: 12 Treffer, Median vor Filter 734 €, nach Filter 734 € → marktwertNeu 675 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 550 € (bisher 290 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 220 € → 145 € (bisher 185 €) → final 165 €
+  - sehrGut: 195 € → 135 € (bisher 175 €) → final 160 €
+  - gut: 160 € → 110 € (bisher 140 €) → final 125 €
+  - defekt: 60 € → 40 € (bisher 50 €) → final 45 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Flip 5 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 305 €, nach Filter 305 € → marktwertGebraucht 268 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 390 €, nach Filter 390 € → marktwertNeu 359 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 290 € (bisher 300 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 200 € → 140 € (bisher 175 €) → final 160 €
+  - sehrGut: 185 € → 130 € (bisher 165 €) → final 150 €
+  - gut: 150 € → 100 € (bisher 130 €) → final 115 €
+  - defekt: 55 € → 35 € (bisher 45 €) → final 40 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Flip 5 (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 350 €, nach Filter 350 € → marktwertGebraucht 308 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 370 €, nach Filter 370 € → marktwertNeu 340 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 275 € (bisher 350 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 230 € → 150 € (bisher 190 €) → final 170 €
+  - sehrGut: 210 € → 140 € (bisher 175 €) → final 160 €
+  - gut: 170 € → 115 € (bisher 145 €) → final 130 €
+  - defekt: 60 € → 40 € (bisher 50 €) → final 45 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Flip 6 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 393 €, nach Filter 393 € → marktwertGebraucht 346 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 460 €, nach Filter 460 € → marktwertNeu 423 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 345 € (bisher 370 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 260 € → 170 € (bisher 225 €) → final 205 €
+  - sehrGut: 235 € → 155 € (bisher 205 €) → final 185 €
+  - gut: 190 € → 135 € (bisher 175 €) → final 160 €
+  - defekt: 70 € → 45 € (bisher 60 €) → final 55 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Flip 6 (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 389 €, nach Filter 389 € → marktwertGebraucht 343 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 460 €, nach Filter 460 € → marktwertNeu 423 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 345 € (bisher 430 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 255 € → 170 € (bisher 210 €) → final 190 €
+  - sehrGut: 235 € → 155 € (bisher 190 €) → final 170 €
+  - gut: 190 € → 135 € (bisher 160 €) → final 145 €
+  - defekt: 70 € → 45 € (bisher 55 €) → final 50 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Flip 7 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 412 €, nach Filter 412 € → marktwertGebraucht 362 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 680 €, nach Filter 680 € → marktwertNeu 626 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 510 € (bisher 505 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 270 € → 180 € (bisher 245 €) → final 220 €
+  - sehrGut: 245 € → 165 € (bisher 215 €) → final 195 €
+  - gut: 200 € → 140 € (bisher 175 €) → final 160 €
+  - defekt: 70 € → 45 € (bisher 65 €) → final 60 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Flip 7 (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 389 €, nach Filter 389 € → marktwertGebraucht 343 € (−12%)
+- Neu: 39 Treffer, Median vor Filter 958 €, nach Filter 958 € → marktwertNeu 881 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 720 € (bisher 590 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 255 € → 170 € (bisher 215 €) → final 195 €
+  - sehrGut: 235 € → 155 € (bisher 195 €) → final 175 €
+  - gut: 190 € → 135 € (bisher 165 €) → final 150 €
+  - defekt: 70 € → 45 € (bisher 60 €) → final 55 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Fold 3 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 197 €, nach Filter 197 € → marktwertGebraucht 173 € (−12%)
+- Neu: 37 Treffer, Median vor Filter 460 €, nach Filter 460 € → marktwertNeu 423 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 345 € (bisher 360 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 130 € → 85 € (bisher 120 €) → final 110 €
+  - sehrGut: 120 € → 80 € (bisher 105 €) → final 95 €
+  - gut: 95 € → 65 € (bisher 90 €) → final 80 €
+  - defekt: 35 € → 25 € (bisher 30 €) → final 25 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Fold 4 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 291 €, nach Filter 291 € → marktwertGebraucht 256 € (−12%)
+- Neu: 39 Treffer, Median vor Filter 480 €, nach Filter 480 € → marktwertNeu 442 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 360 € (bisher 360 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 190 € → 135 € (bisher 175 €) → final 160 €
+  - sehrGut: 175 € → 120 € (bisher 155 €) → final 140 €
+  - gut: 140 € → 95 € (bisher 125 €) → final 115 €
+  - defekt: 50 € → 35 € (bisher 45 €) → final 40 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Fold 4 (1 TB)**
+- Gebraucht: 9 Treffer, Median vor Filter 642 €, nach Filter 642 € → marktwertGebraucht 565 € (−12%)
+- Neu: 0 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 450 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 425 € → 300 € (bisher 505 €) → final 455 €
+  - sehrGut: 385 € → 270 € (bisher 460 €) → final 415 €
+  - gut: 310 € → 210 € (bisher 370 €) → final 335 €
+  - defekt: 115 € → 80 € (bisher 135 €) → final 120 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Fold 5 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 456 €, nach Filter 456 € → marktwertGebraucht 402 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 600 €, nach Filter 600 € → marktwertNeu 552 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 450 € (bisher 455 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 300 € → 205 € (bisher 315 €) → final 285 €
+  - sehrGut: 275 € → 185 € (bisher 285 €) → final 255 €
+  - gut: 220 € → 145 € (bisher 220 €) → final 200 €
+  - defekt: 80 € → 55 € (bisher 85 €) → final 75 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Fold 5 (1 TB)**
+- Gebraucht: 22 Treffer, Median vor Filter 993 €, nach Filter 993 € → marktwertGebraucht 874 € (−12%)
+- Neu: 26 Treffer, Median vor Filter 2220 €, nach Filter 2220 € → marktwertNeu 2042 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1670 € (bisher 565 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 655 € → 470 € (bisher 600 €) → final 540 €
+  - sehrGut: 595 € → 425 € (bisher 540 €) → final 485 €
+  - gut: 480 € → 345 € (bisher 440 €) → final 395 €
+  - defekt: 175 € → 120 € (bisher 155 €) → final 140 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Fold 6 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 627 €, nach Filter 627 € → marktwertGebraucht 552 € (−12%)
+- Neu: 31 Treffer, Median vor Filter 1330 €, nach Filter 1330 € → marktwertNeu 1224 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1000 € (bisher 465 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 415 € → 295 € (bisher 340 €) → final 305 €
+  - sehrGut: 375 € → 260 € (bisher 305 €) → final 275 €
+  - gut: 305 € → 205 € (bisher 240 €) → final 215 €
+  - defekt: 110 € → 75 € (bisher 90 €) → final 80 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Fold 6 (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 646 €, nach Filter 646 € → marktwertGebraucht 569 € (−12%)
+- Neu: 15 Treffer, Median vor Filter 1460 €, nach Filter 1460 € → marktwertNeu 1343 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1100 € (bisher 510 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 425 € → 300 € (bisher 340 €) → final 305 €
+  - sehrGut: 385 € → 270 € (bisher 305 €) → final 275 €
+  - gut: 315 € → 215 € (bisher 240 €) → final 215 €
+  - defekt: 115 € → 80 € (bisher 90 €) → final 80 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Fold 6 (1 TB)**
+- Gebraucht: 17 Treffer, Median vor Filter 759 €, nach Filter 759 € → marktwertGebraucht 668 € (−12%)
+- Neu: 12 Treffer, Median vor Filter 1878 €, nach Filter 1878 € → marktwertNeu 1728 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1415 € (bisher 570 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 500 € → 360 € (bisher 410 €) → final 370 €
+  - sehrGut: 455 € → 325 € (bisher 365 €) → final 330 €
+  - gut: 365 € → 255 € (bisher 290 €) → final 260 €
+  - defekt: 135 € → 90 € (bisher 100 €) → final 90 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Fold 7 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 985 €, nach Filter 985 € → marktwertGebraucht 867 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1521 €, nach Filter 1521 € → marktwertNeu 1399 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1145 € (bisher 980 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 650 € → 470 € (bisher 565 €) → final 510 €
+  - sehrGut: 590 € → 420 € (bisher 505 €) → final 455 €
+  - gut: 475 € → 340 € (bisher 410 €) → final 370 €
+  - defekt: 175 € → 120 € (bisher 145 €) → final 130 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Fold 7 (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 850 €, nach Filter 850 € → marktwertGebraucht 748 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1677 €, nach Filter 1677 € → marktwertNeu 1542 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1260 € (bisher 1070 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 560 € → 400 € (bisher 520 €) → final 470 €
+  - sehrGut: 510 € → 360 € (bisher 465 €) → final 420 €
+  - gut: 410 € → 290 € (bisher 380 €) → final 340 €
+  - defekt: 150 € → 100 € (bisher 130 €) → final 115 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy Z Fold 7 (1 TB)**
+- Gebraucht: 20 Treffer, Median vor Filter 998 €, nach Filter 998 € → marktwertGebraucht 878 € (−12%)
+- Neu: 15 Treffer, Median vor Filter 2533 €, nach Filter 2533 € → marktwertNeu 2330 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1910 € (bisher 1190 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 660 € → 475 € (bisher 610 €) → final 550 €
+  - sehrGut: 595 € → 425 € (bisher 545 €) → final 490 €
+  - gut: 485 € → 345 € (bisher 445 €) → final 400 €
+  - defekt: 175 € → 120 € (bisher 155 €) → final 140 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy A14 (64 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 84 €, nach Filter 84 € → marktwertGebraucht 74 € (−12%)
+- Neu: 48 Treffer, Median vor Filter 150 €, nach Filter 150 € → marktwertNeu 138 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 110 € (bisher 100 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 55 € → 35 € (bisher 50 €) → final 45 €
+  - sehrGut: 50 € → 35 € (bisher 45 €) → final 40 €
+  - gut: 40 € → 25 € (bisher 40 €) → final 35 €
+  - defekt: 15 € → 10 € (bisher 15 €) → final 15 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy A14 (128 GB)**
+- Gebraucht: 35 Treffer, Median vor Filter 94 €, nach Filter 94 € → marktwertGebraucht 82 € (−12%)
+- Neu: 23 Treffer, Median vor Filter 162 €, nach Filter 162 € → marktwertNeu 149 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 120 € (bisher 130 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 60 € → 40 € (bisher 50 €) → final 45 €
+  - sehrGut: 55 € → 35 € (bisher 45 €) → final 40 €
+  - gut: 45 € → 30 € (bisher 40 €) → final 35 €
+  - defekt: 15 € → 10 € (bisher 15 €) → final 15 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy A15 (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 111 €, nach Filter 111 € → marktwertGebraucht 97 € (−12%)
+- Neu: 39 Treffer, Median vor Filter 175 €, nach Filter 175 € → marktwertNeu 161 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 130 € (bisher 120 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 75 € → 50 € (bisher 60 €) → final 55 €
+  - sehrGut: 65 € → 45 € (bisher 55 €) → final 50 €
+  - gut: 55 € → 35 € (bisher 45 €) → final 40 €
+  - defekt: 20 € → 10 € (bisher 15 €) → final 15 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy A16 (128 GB)**
+- Gebraucht: 41 Treffer, Median vor Filter 105 €, nach Filter 105 € → marktwertGebraucht 93 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 143 €, nach Filter 143 € → marktwertNeu 131 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 105 € (bisher 100 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 70 € → 45 € (bisher 60 €) → final 55 €
+  - sehrGut: 65 € → 45 € (bisher 55 €) → final 50 €
+  - gut: 50 € → 35 € (bisher 45 €) → final 40 €
+  - defekt: 20 € → 10 € (bisher 15 €) → final 15 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Samsung Galaxy A17 (128 GB)**
+- Gebraucht: 26 Treffer, Median vor Filter 145 €, nach Filter 145 € → marktwertGebraucht 128 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 169 €, nach Filter 169 € → marktwertNeu 155 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 125 € (bisher 120 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 95 € → 65 € (bisher 85 €) → final 75 €
+  - sehrGut: 85 € → 60 € (bisher 75 €) → final 70 €
+  - gut: 70 € → 45 € (bisher 60 €) → final 55 €
+  - defekt: 25 € → 15 € (bisher 20 €) → final 20 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+## Aktualisiert (30)
+**Apple iPhone 15 Pro (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 599 €, nach Filter 599 € → marktwertGebraucht 527 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 680 €, nach Filter 680 € → marktwertNeu 626 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 510 € (bisher 455 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 395 € → 495 € (bisher 520 €) → final 495 €
+  - sehrGut: 360 € → 450 € (bisher 460 €) → final 450 €
+  - gut: 290 € → 350 € (bisher 365 €) → final 350 €
+  - defekt: 105 € → 125 € (bisher 135 €) → final 125 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone SE 2020 (64 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 82 €, nach Filter 82 € → marktwertGebraucht 73 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 205 €, nach Filter 205 € → marktwertNeu 189 € (−8%)
+**Apple iPhone 15 Pro (512 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 650 €, nach Filter 650 € → marktwertGebraucht 572 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 810 €, nach Filter 810 € → marktwertNeu 745 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 610 € (bisher 525 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 430 € → 545 € (bisher 600 €) → final 545 €
+  - sehrGut: 390 € → 490 € (bisher 540 €) → final 490 €
+  - gut: 315 € → 385 € (bisher 425 €) → final 385 €
+  - defekt: 115 € → 140 € (bisher 145 €) → final 140 €
+- Ausgelöste Regeln: keine
+
+**Apple iPhone 16 (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 550 €, nach Filter 550 € → marktwertGebraucht 484 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 700 €, nach Filter 700 € → marktwertNeu 644 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 525 € (bisher 495 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 365 € → 455 € (bisher 495 €) → final 455 €
+  - sehrGut: 330 € → 405 € (bisher 450 €) → final 405 €
+  - gut: 265 € → 315 € (bisher 350 €) → final 315 €
+  - defekt: 95 € → 120 € (bisher 125 €) → final 120 €
+- Ausgelöste Regeln: keine
+
+**Apple iPhone 16 (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 705 €, nach Filter 705 € → marktwertGebraucht 620 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 750 €, nach Filter 750 € → marktwertNeu 690 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 565 € (bisher 550 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 465 € → 595 € (bisher 610 €) → final 595 €
+  - sehrGut: 420 € → 530 € (bisher 555 €) → final 530 €
+  - gut: 340 € → 420 € (bisher 450 €) → final 420 €
+  - defekt: 125 € → 145 € (bisher 160 €) → final 145 €
+- Ausgelöste Regeln: keine
+
+**Apple iPhone 16 Plus (128 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 50 Treffer, Median vor Filter 473 €, nach Filter 473 € → marktwertGebraucht 416 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 700 €, nach Filter 700 € → marktwertNeu 644 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 525 € (bisher 570 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 310 € → 380 € (bisher 635 €) → final 380 €
+  - sehrGut: 285 € → 345 € (bisher 575 €) → final 345 €
+  - gut: 230 € → 275 € (bisher 470 €) → final 275 €
+  - defekt: 85 € → 105 € (bisher 170 €) → final 105 €
+- Ausgelöste Regeln: keine
+
+**Apple iPhone 16 Plus (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 31 Treffer, Median vor Filter 583 €, nach Filter 583 € → marktwertGebraucht 513 € (−12%)
+- Neu: 48 Treffer, Median vor Filter 700 €, nach Filter 700 € → marktwertNeu 644 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 525 € (bisher 620 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 385 € → 485 € (bisher 695 €) → final 485 €
+  - sehrGut: 350 € → 435 € (bisher 630 €) → final 435 €
+  - gut: 280 € → 335 € (bisher 510 €) → final 335 €
+  - defekt: 105 € → 125 € (bisher 180 €) → final 125 €
+- Ausgelöste Regeln: keine
+
+**Apple iPhone 16 Plus (512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 13 Treffer, Median vor Filter 650 €, nach Filter 650 € → marktwertGebraucht 572 € (−12%)
+- Neu: 8 Treffer, Median vor Filter 1197 €, nach Filter 1197 € → marktwertNeu 1101 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 900 € (bisher 725 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 430 € → 545 € (bisher 810 €) → final 545 €
+  - sehrGut: 390 € → 490 € (bisher 735 €) → final 490 €
+  - gut: 315 € → 385 € (bisher 595 €) → final 385 €
+  - defekt: 115 € → 140 € (bisher 215 €) → final 140 €
+- Ausgelöste Regeln: keine
+
+**Apple iPhone 16 Pro (128 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 693 €, nach Filter 693 € → marktwertGebraucht 609 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1005 €, nach Filter 1005 € → marktwertNeu 924 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 755 € (bisher 520 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 455 € → 580 € (bisher 600 €) → final 580 €
+  - sehrGut: 415 € → 525 € (bisher 540 €) → final 525 €
+  - gut: 335 € → 415 € (bisher 425 €) → final 415 €
+  - defekt: 120 € → 140 € (bisher 145 €) → final 140 €
+- Ausgelöste Regeln: keine
+
+**Apple iPhone 16 Pro (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 800 €, nach Filter 800 € → marktwertGebraucht 704 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1094 €, nach Filter 1094 € → marktwertNeu 1007 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 825 € (bisher 560 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 530 € → 670 € (bisher 705 €) → final 670 €
+  - sehrGut: 480 € → 615 € (bisher 635 €) → final 615 €
+  - gut: 385 € → 485 € (bisher 520 €) → final 485 €
+  - defekt: 140 € → 170 € (bisher 180 €) → final 170 €
+- Ausgelöste Regeln: keine
+
+**Apple iPhone 16e (128 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 37 Treffer, Median vor Filter 450 €, nach Filter 450 € → marktwertGebraucht 396 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 462 €, nach Filter 462 € → marktwertNeu 425 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 345 € (bisher 470 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 295 € → 355 € (bisher 525 €) → final 355 €
+  - sehrGut: 270 € → 320 € (bisher 475 €) → final 320 €
+  - gut: 220 € → 260 € (bisher 385 €) → final 260 €
+  - defekt: 80 € → 100 € (bisher 140 €) → final 100 €
+- Ausgelöste Regeln: keine
+
+**Apple iPhone 17 (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 50 Treffer, Median vor Filter 833 €, nach Filter 833 € → marktwertGebraucht 733 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 852 €, nach Filter 852 € → marktwertNeu 784 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 640 € (bisher 635 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 550 € → 700 € (bisher 705 €) → final 700 €
+  - sehrGut: 500 € → 645 € (bisher 645 €) → final 645 €
+  - gut: 405 € → 510 € (bisher 520 €) → final 510 €
+  - defekt: 145 € → 175 € (bisher 190 €) → final 175 €
+- Ausgelöste Regeln: keine
+
+**Apple iPhone 17 (512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 50 Treffer, Median vor Filter 894 €, nach Filter 894 € → marktwertGebraucht 786 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1350 €, nach Filter 1350 € → marktwertNeu 1242 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1015 € (bisher 770 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 590 € → 755 € (bisher 860 €) → final 755 €
+  - sehrGut: 535 € → 680 € (bisher 775 €) → final 680 €
+  - gut: 430 € → 545 € (bisher 630 €) → final 545 €
+  - defekt: 155 € → 190 € (bisher 230 €) → final 190 €
+- Ausgelöste Regeln: keine
+
+**Apple iPhone 17 Air (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 7 Treffer, Median vor Filter 757 €, nach Filter 757 € → marktwertGebraucht 666 € (−12%)
+- Neu: 13 Treffer, Median vor Filter 879 €, nach Filter 879 € → marktwertNeu 809 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 660 € (bisher 835 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 500 € → 645 € (bisher 940 €) → final 645 €
+  - sehrGut: 455 € → 580 € (bisher 845 €) → final 580 €
+  - gut: 365 € → 455 € (bisher 685 €) → final 455 €
+  - defekt: 135 € → 160 € (bisher 250 €) → final 160 €
+- Ausgelöste Regeln: keine
+
+**Apple iPhone 17 Pro (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 1094 €, nach Filter 1094 € → marktwertGebraucht 963 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1149 €, nach Filter 1149 € → marktwertNeu 1057 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 865 € (bisher 795 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 720 € → 940 € (bisher 880 €) → final 940 €
+  - sehrGut: 655 € → 845 € (bisher 790 €) → final 845 €
+  - gut: 530 € → 670 € (bisher 645 €) → final 670 €
+  - defekt: 195 € → 245 € (bisher 225 €) → final 245 €
+- Ausgelöste Regeln: keine
+
+**Apple iPhone 17 Pro Max (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 1091 €, nach Filter 1091 € → marktwertGebraucht 960 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1259 €, nach Filter 1259 € → marktwertNeu 1159 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 950 € (bisher 865 €)
+- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 720 € → 940 € (bisher 1010 €) → final 940 €
+  - sehrGut: 655 € → 845 € (bisher 910 €) → final 845 €
+  - gut: 530 € → 670 € (bisher 720 €) → final 670 €
+  - defekt: 190 € → 240 € (bisher 245 €) → final 240 €
+- Ausgelöste Regeln: keine
+
+**Samsung Galaxy S8+ (64 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 50 Treffer, Median vor Filter 66 €, nach Filter 66 € → marktwertGebraucht 58 € (−12%)
+- Neu: 37 Treffer, Median vor Filter 205 €, nach Filter 205 € → marktwertNeu 189 € (−8%)
 - neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 150 € (bisher 65 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 55 € → 50 € (bisher 50 €) → final 50 €
-  - sehrGut: 50 € → 50 € (bisher 50 €) → final 50 €
-  - gut: 40 € → 40 € (bisher 40 €) → final 40 €
-  - defekt: 15 € → 15 € (bisher 15 €) → final 15 €
+  - wieNeu: 45 € → 30 € (bisher 55 €) → final 30 €
+  - sehrGut: 40 € → 25 € (bisher 50 €) → final 25 €
+  - gut: 30 € → 20 € (bisher 40 €) → final 20 €
+  - defekt: 10 € → 10 € (bisher 15 €) → final 10 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone SE 2020 (256 GB)**
-- Gebraucht: 18 Treffer, Median vor Filter 103 €, nach Filter 103 € → marktwertGebraucht 90 € (−12%)
-- Neu: 13 Treffer, Median vor Filter 290 €, nach Filter 290 € → marktwertNeu 267 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 215 € (bisher 90 €)
+**Samsung Galaxy S21+ (128 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 50 Treffer, Median vor Filter 153 €, nach Filter 153 € → marktwertGebraucht 134 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 210 €, nach Filter 210 € → marktwertNeu 193 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 155 € (bisher 235 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 70 € → 70 € (bisher 65 €) → final 70 €
-  - sehrGut: 60 € → 55 € (bisher 55 €) → final 55 €
-  - gut: 50 € → 50 € (bisher 50 €) → final 50 €
-  - defekt: 20 € → 15 € (bisher 15 €) → final 15 €
+  - wieNeu: 100 € → 70 € (bisher 190 €) → final 70 €
+  - sehrGut: 90 € → 60 € (bisher 170 €) → final 60 €
+  - gut: 75 € → 50 € (bisher 140 €) → final 50 €
+  - defekt: 25 € → 15 € (bisher 50 €) → final 15 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone 12 mini (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 163 €, nach Filter 163 € → marktwertGebraucht 143 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 251 €, nach Filter 251 € → marktwertNeu 231 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 185 € (bisher 140 €)
+**Samsung Galaxy S21+ (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 50 Treffer, Median vor Filter 200 €, nach Filter 200 € → marktwertGebraucht 176 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 224 €, nach Filter 224 € → marktwertNeu 207 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 165 € (bisher 255 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 110 € → 110 € (bisher 105 €) → final 110 €
-  - sehrGut: 100 € → 105 € (bisher 100 €) → final 105 €
-  - gut: 80 € → 80 € (bisher 75 €) → final 80 €
-  - defekt: 30 € → 30 € (bisher 30 €) → final 30 €
+  - wieNeu: 130 € → 85 € (bisher 125 €) → final 85 €
+  - sehrGut: 120 € → 80 € (bisher 110 €) → final 80 €
+  - gut: 95 € → 65 € (bisher 90 €) → final 65 €
+  - defekt: 35 € → 25 € (bisher 35 €) → final 25 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone 12 (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 172 €, nach Filter 172 € → marktwertGebraucht 152 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 282 €, nach Filter 282 € → marktwertNeu 260 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 210 € (bisher 160 €)
+**Samsung Galaxy S21 Ultra (128 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 50 Treffer, Median vor Filter 170 €, nach Filter 170 € → marktwertGebraucht 150 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 250 €, nach Filter 250 € → marktwertNeu 230 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 185 € (bisher 280 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 115 € → 115 € (bisher 115 €) → final 115 €
-  - sehrGut: 105 € → 105 € (bisher 105 €) → final 105 €
-  - gut: 85 € → 85 € (bisher 85 €) → final 85 €
-  - defekt: 30 € → 30 € (bisher 30 €) → final 30 €
+  - wieNeu: 110 € → 75 € (bisher 225 €) → final 75 €
+  - sehrGut: 100 € → 70 € (bisher 205 €) → final 70 €
+  - gut: 80 € → 55 € (bisher 165 €) → final 55 €
+  - defekt: 30 € → 20 € (bisher 60 €) → final 20 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone 12 Pro (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 223 €, nach Filter 223 € → marktwertGebraucht 197 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 335 €, nach Filter 335 € → marktwertNeu 308 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 250 € (bisher 205 €)
+**Samsung Galaxy S21 Ultra (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 50 Treffer, Median vor Filter 221 €, nach Filter 221 € → marktwertGebraucht 194 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 250 €, nach Filter 250 € → marktwertNeu 230 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 185 € (bisher 305 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 145 € → 145 € (bisher 155 €) → final 145 €
-  - sehrGut: 135 € → 130 € (bisher 140 €) → final 130 €
-  - gut: 110 € → 110 € (bisher 115 €) → final 110 €
-  - defekt: 40 € → 40 € (bisher 40 €) → final 40 €
+  - wieNeu: 145 € → 100 € (bisher 140 €) → final 100 €
+  - sehrGut: 130 € → 85 € (bisher 125 €) → final 85 €
+  - gut: 105 € → 70 € (bisher 100 €) → final 70 €
+  - defekt: 40 € → 25 € (bisher 35 €) → final 25 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone 12 Pro Max (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 299 €, nach Filter 299 € → marktwertGebraucht 263 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 350 €, nach Filter 350 € → marktwertNeu 322 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 260 € (bisher 230 €)
+**Samsung Galaxy S21 Ultra (512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 12 Treffer, Median vor Filter 415 €, nach Filter 415 € → marktwertGebraucht 365 € (−12%)
+- Neu: 3 Treffer, Median vor Filter 438 €, nach Filter 438 € → marktwertNeu 403 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 330 € (bisher 350 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 195 € → 200 € (bisher 205 €) → final 200 €
-  - sehrGut: 180 € → 185 € (bisher 185 €) → final 185 €
-  - gut: 145 € → 145 € (bisher 145 €) → final 145 €
-  - defekt: 55 € → 50 € (bisher 50 €) → final 50 €
+  - wieNeu: 275 € → 185 € (bisher 150 €) → final 185 €
+  - sehrGut: 250 € → 170 € (bisher 135 €) → final 170 €
+  - gut: 200 € → 140 € (bisher 105 €) → final 140 €
+  - defekt: 75 € → 50 € (bisher 40 €) → final 50 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone 12 Pro Max (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 300 €, nach Filter 300 € → marktwertGebraucht 264 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 354 €, nach Filter 354 € → marktwertNeu 326 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 265 € (bisher 245 €)
+**Samsung Galaxy S21 FE (256 GB)**
+- Gebraucht: 17 Treffer, Median vor Filter 199 €, nach Filter 199 € → marktwertGebraucht 175 € (−12%)
+- Neu: 29 Treffer, Median vor Filter 214 €, nach Filter 214 € → marktwertNeu 197 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 160 € (bisher 150 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 200 € → 205 € (bisher 205 €) → final 205 €
-  - sehrGut: 180 € → 185 € (bisher 185 €) → final 185 €
-  - gut: 145 € → 145 € (bisher 145 €) → final 145 €
-  - defekt: 55 € → 50 € (bisher 50 €) → final 50 €
+  - wieNeu: 130 € → 85 € (bisher 90 €) → final 85 €
+  - sehrGut: 120 € → 80 € (bisher 85 €) → final 80 €
+  - gut: 95 € → 65 € (bisher 65 €) → final 65 €
+  - defekt: 35 € → 25 € (bisher 25 €) → final 25 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone 12 Pro Max (512 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 450 €, nach Filter 450 € → marktwertGebraucht 396 € (−12%)
-- Neu: 14 Treffer, Median vor Filter 590 €, nach Filter 590 € → marktwertNeu 542 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 440 € (bisher 285 €)
+**Samsung Galaxy S23 (128 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 50 Treffer, Median vor Filter 249 €, nach Filter 249 € → marktwertGebraucht 219 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 327 €, nach Filter 327 € → marktwertNeu 301 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 245 € (bisher 335 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 295 € → 295 € (bisher 305 €) → final 295 €
-  - sehrGut: 270 € → 265 € (bisher 275 €) → final 265 €
-  - gut: 220 € → 215 € (bisher 225 €) → final 215 €
-  - defekt: 80 € → 80 € (bisher 80 €) → final 80 €
+  - wieNeu: 165 € → 115 € (bisher 270 €) → final 115 €
+  - sehrGut: 150 € → 100 € (bisher 245 €) → final 100 €
+  - gut: 120 € → 80 € (bisher 200 €) → final 80 €
+  - defekt: 45 € → 30 € (bisher 70 €) → final 30 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone 13 mini (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 310 €, nach Filter 310 € → marktwertGebraucht 273 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 350 €, nach Filter 350 € → marktwertNeu 322 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 260 € (bisher 230 €)
+**Samsung Galaxy S23 (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 50 Treffer, Median vor Filter 306 €, nach Filter 306 € → marktwertGebraucht 270 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 337 €, nach Filter 337 € → marktwertNeu 310 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 250 € (bisher 375 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 205 € → 200 € (bisher 220 €) → final 200 €
-  - sehrGut: 185 € → 190 € (bisher 200 €) → final 190 €
-  - gut: 150 € → 150 € (bisher 165 €) → final 150 €
-  - defekt: 55 € → 50 € (bisher 55 €) → final 50 €
+  - wieNeu: 200 € → 140 € (bisher 300 €) → final 140 €
+  - sehrGut: 185 € → 130 € (bisher 270 €) → final 130 €
+  - gut: 150 € → 100 € (bisher 220 €) → final 100 €
+  - defekt: 55 € → 35 € (bisher 80 €) → final 35 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone 13 Pro (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 300 €, nach Filter 300 € → marktwertGebraucht 264 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 450 €, nach Filter 450 € → marktwertNeu 414 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 335 € (bisher 295 €)
+**Samsung Galaxy S24+ (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 50 Treffer, Median vor Filter 437 €, nach Filter 437 € → marktwertGebraucht 385 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 555 €, nach Filter 555 € → marktwertNeu 510 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 415 € (bisher 515 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 200 € → 205 € (bisher 215 €) → final 205 €
-  - sehrGut: 180 € → 185 € (bisher 200 €) → final 185 €
-  - gut: 145 € → 145 € (bisher 160 €) → final 145 €
-  - defekt: 55 € → 50 € (bisher 55 €) → final 50 €
+  - wieNeu: 290 € → 195 € (bisher 415 €) → final 195 €
+  - sehrGut: 260 € → 170 € (bisher 375 €) → final 170 €
+  - gut: 210 € → 140 € (bisher 305 €) → final 140 €
+  - defekt: 75 € → 50 € (bisher 110 €) → final 50 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone 13 Pro (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 343 €, nach Filter 343 € → marktwertGebraucht 301 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 450 €, nach Filter 450 € → marktwertNeu 414 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 335 € (bisher 320 €)
+**Samsung Galaxy S24+ (512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 50 Treffer, Median vor Filter 550 €, nach Filter 550 € → marktwertGebraucht 484 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 620 €, nach Filter 620 € → marktwertNeu 570 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 465 € (bisher 605 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 225 € → 220 € (bisher 230 €) → final 220 €
-  - sehrGut: 205 € → 200 € (bisher 205 €) → final 200 €
-  - gut: 165 € → 165 € (bisher 175 €) → final 165 €
-  - defekt: 60 € → 55 € (bisher 55 €) → final 55 €
+  - wieNeu: 365 € → 255 € (bisher 485 €) → final 255 €
+  - sehrGut: 330 € → 225 € (bisher 440 €) → final 225 €
+  - gut: 265 € → 175 € (bisher 355 €) → final 175 €
+  - defekt: 95 € → 65 € (bisher 130 €) → final 65 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone 13 Pro Max (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 380 €, nach Filter 380 € → marktwertGebraucht 334 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 511 €, nach Filter 511 € → marktwertNeu 471 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 385 € (bisher 310 €)
+**Samsung Galaxy S25 Ultra (256 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 743 €, nach Filter 743 € → marktwertGebraucht 653 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 863 €, nach Filter 863 € → marktwertNeu 794 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 650 € (bisher 470 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 250 € → 245 € (bisher 245 €) → final 245 €
-  - sehrGut: 225 € → 220 € (bisher 220 €) → final 220 €
-  - gut: 185 € → 190 € (bisher 185 €) → final 190 €
-  - defekt: 65 € → 65 € (bisher 65 €) → final 65 €
+  - wieNeu: 490 € → 350 € (bisher 330 €) → final 350 €
+  - sehrGut: 445 € → 315 € (bisher 295 €) → final 315 €
+  - gut: 360 € → 250 € (bisher 230 €) → final 250 €
+  - defekt: 130 € → 85 € (bisher 90 €) → final 85 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone 13 Pro Max (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 393 €, nach Filter 393 € → marktwertGebraucht 345 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 517 €, nach Filter 517 € → marktwertNeu 476 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 390 € (bisher 335 €)
+**Samsung Galaxy S25 FE (128 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 17 Treffer, Median vor Filter 476 €, nach Filter 476 € → marktwertGebraucht 419 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 510 €, nach Filter 510 € → marktwertNeu 469 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 380 € (bisher 435 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 260 € → 255 € (bisher 260 €) → final 255 €
-  - sehrGut: 235 € → 230 € (bisher 235 €) → final 230 €
-  - gut: 190 € → 195 € (bisher 200 €) → final 195 €
-  - defekt: 70 € → 70 € (bisher 70 €) → final 70 €
+  - wieNeu: 315 € → 215 € (bisher 350 €) → final 215 €
+  - sehrGut: 285 € → 190 € (bisher 315 €) → final 190 €
+  - gut: 230 € → 150 € (bisher 255 €) → final 150 €
+  - defekt: 85 € → 60 € (bisher 95 €) → final 60 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone 13 Pro Max (512 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 485 €, nach Filter 485 € → marktwertGebraucht 426 € (−12%)
-- Neu: 6 Treffer, Median vor Filter 595 €, nach Filter 595 € → marktwertNeu 547 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 445 € (bisher 385 €)
+**Samsung Galaxy S25 FE (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 10 Treffer, Median vor Filter 450 €, nach Filter 450 € → marktwertGebraucht 396 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 554 €, nach Filter 554 € → marktwertNeu 509 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 415 € (bisher 495 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 320 € → 320 € (bisher 330 €) → final 320 €
-  - sehrGut: 290 € → 290 € (bisher 295 €) → final 290 €
-  - gut: 235 € → 230 € (bisher 230 €) → final 230 €
-  - defekt: 85 € → 85 € (bisher 85 €) → final 85 €
+  - wieNeu: 295 € → 200 € (bisher 395 €) → final 200 €
+  - sehrGut: 270 € → 180 € (bisher 360 €) → final 180 €
+  - gut: 220 € → 145 € (bisher 290 €) → final 145 €
+  - defekt: 80 € → 55 € (bisher 105 €) → final 55 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone 13 Pro Max (1 TB)**
-- Gebraucht: 26 Treffer, Median vor Filter 535 €, nach Filter 535 € → marktwertGebraucht 471 € (−12%)
-- Neu: 12 Treffer, Median vor Filter 829 €, nach Filter 829 € → marktwertNeu 763 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 625 € (bisher 445 €)
+**Samsung Galaxy S26 Ultra (512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 20 Treffer, Median vor Filter 1028 €, nach Filter 1028 € → marktwertGebraucht 905 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1099 €, nach Filter 1099 € → marktwertNeu 1011 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 825 € (bisher 1240 €)
 - Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 355 € → 360 € (bisher 375 €) → final 360 €
-  - sehrGut: 320 € → 320 € (bisher 335 €) → final 320 €
-  - gut: 260 € → 255 € (bisher 260 €) → final 255 €
-  - defekt: 95 € → 100 € (bisher 100 €) → final 100 €
+  - wieNeu: 680 € → 490 € (bisher 480 €) → final 490 €
+  - sehrGut: 615 € → 440 € (bisher 440 €) → final 440 €
+  - gut: 500 € → 360 € (bisher 350 €) → final 360 €
+  - defekt: 180 € → 125 € (bisher 120 €) → final 125 €
 - Ausgelöste Regeln: keine
 
-**Apple iPhone 14 (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 298 €, nach Filter 298 € → marktwertGebraucht 262 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 393 €, nach Filter 393 € → marktwertNeu 362 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 295 € (bisher 265 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 195 € → 200 € (bisher 215 €) → final 200 €
-  - sehrGut: 180 € → 185 € (bisher 200 €) → final 185 €
-  - gut: 145 € → 145 € (bisher 160 €) → final 145 €
-  - defekt: 50 € → 50 € (bisher 55 €) → final 50 €
-- Ausgelöste Regeln: keine
-
-**Apple iPhone 14 Pro (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 440 €, nach Filter 440 € → marktwertGebraucht 387 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 522 €, nach Filter 522 € → marktwertNeu 480 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 390 € (bisher 390 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 290 € → 290 € (bisher 300 €) → final 290 €
-  - sehrGut: 265 € → 260 € (bisher 270 €) → final 260 €
-  - gut: 215 € → 215 € (bisher 215 €) → final 215 €
-  - defekt: 75 € → 75 € (bisher 80 €) → final 75 €
-- Ausgelöste Regeln: keine
-
-**Apple iPhone 14 Pro Max (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 475 €, nach Filter 475 € → marktwertGebraucht 418 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 570 €, nach Filter 570 € → marktwertNeu 524 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 430 € (bisher 445 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 315 € → 315 € (bisher 335 €) → final 315 €
-  - sehrGut: 285 € → 280 € (bisher 300 €) → final 280 €
-  - gut: 230 € → 225 € (bisher 235 €) → final 225 €
-  - defekt: 85 € → 85 € (bisher 90 €) → final 85 €
-- Ausgelöste Regeln: keine
-
-**Apple iPhone 14 Pro Max (1 TB)**
-- Gebraucht: 24 Treffer, Median vor Filter 649 €, nach Filter 649 € → marktwertGebraucht 572 € (−12%)
-- Neu: 6 Treffer, Median vor Filter 1475 €, nach Filter 1475 € → marktwertNeu 1357 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1110 € (bisher 575 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 430 € → 450 € (bisher 485 €) → final 450 €
-  - sehrGut: 390 € → 400 € (bisher 435 €) → final 400 €
-  - gut: 315 € → 315 € (bisher 345 €) → final 315 €
-  - defekt: 115 € → 115 € (bisher 120 €) → final 115 €
-- Ausgelöste Regeln: keine
-
-**Apple iPhone 15 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 500 €, nach Filter 500 € → marktwertGebraucht 440 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 589 €, nach Filter 589 € → marktwertNeu 542 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 440 € (bisher 370 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 330 € → 405 € (bisher 405 €) → final 405 €
-  - sehrGut: 300 € → 365 € (bisher 365 €) → final 365 €
-  - gut: 240 € → 285 € (bisher 285 €) → final 285 €
-  - defekt: 90 € → 110 € (bisher 110 €) → final 110 €
-- Ausgelöste Regeln: keine
-
-**Apple iPhone 15 (512 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 619 €, nach Filter 619 € → marktwertGebraucht 545 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 810 €, nach Filter 810 € → marktwertNeu 745 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 610 € (bisher 445 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 410 € → 520 € (bisher 545 €) → final 520 €
-  - sehrGut: 370 € → 460 € (bisher 490 €) → final 460 €
-  - gut: 300 € → 365 € (bisher 385 €) → final 365 €
-  - defekt: 110 € → 135 € (bisher 140 €) → final 135 €
-- Ausgelöste Regeln: keine
-
-**Motorola Motorola Razr 50 (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 7 Treffer, Median vor Filter 299 €, nach Filter 299 € → marktwertGebraucht 263 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 340 €, nach Filter 340 € → marktwertNeu 313 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 255 € (bisher 285 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 195 € → 175 € (bisher 230 €) → final 175 €
-  - sehrGut: 180 € → 160 € (bisher 205 €) → final 160 €
-  - gut: 145 € → 125 € (bisher 170 €) → final 125 €
-  - defekt: 55 € → 45 € (bisher 60 €) → final 45 €
-- Ausgelöste Regeln: keine
-
-**Motorola Moto G84 (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 10 Treffer, Median vor Filter 219 €, nach Filter 219 € → marktwertGebraucht 193 € (−12%)
-- Neu: 8 Treffer, Median vor Filter 409 €, nach Filter 409 € → marktwertNeu 376 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 305 € (bisher 90 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 145 € → 125 € (bisher 75 €) → final 125 €
-  - sehrGut: 130 € → 110 € (bisher 70 €) → final 110 €
-  - gut: 105 € → 90 € (bisher 55 €) → final 90 €
-  - defekt: 40 € → 35 € (bisher 20 €) → final 35 €
-- Ausgelöste Regeln: keine
-
-**Motorola Moto G54 (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 5 Treffer, Median vor Filter 124 €, nach Filter 124 € → marktwertGebraucht 109 € (−12%)
-- Neu: 8 Treffer, Median vor Filter 330 €, nach Filter 330 € → marktwertNeu 303 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 245 € (bisher 65 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 80 € → 70 € (bisher 55 €) → final 70 €
-  - sehrGut: 75 € → 65 € (bisher 50 €) → final 65 €
-  - gut: 60 € → 50 € (bisher 40 €) → final 50 €
-  - defekt: 20 € → 15 € (bisher 15 €) → final 15 €
-- Ausgelöste Regeln: keine
-
-**Nothing Nothing Phone (3a) Pro (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 5 Treffer, Median vor Filter 319 €, nach Filter 319 € → marktwertGebraucht 281 € (−12%)
-- Neu: 5 Treffer, Median vor Filter 470 €, nach Filter 470 € → marktwertNeu 433 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 350 € (bisher 215 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 210 € → 180 € (bisher 175 €) → final 180 €
-  - sehrGut: 190 € → 170 € (bisher 155 €) → final 170 €
-  - gut: 155 € → 135 € (bisher 125 €) → final 135 €
-  - defekt: 55 € → 45 € (bisher 45 €) → final 45 €
-- Ausgelöste Regeln: keine
-
-**Nothing Nothing Phone (3a) (128 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 16 Treffer, Median vor Filter 152 €, nach Filter 152 € → marktwertGebraucht 134 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 179 €, nach Filter 179 € → marktwertNeu 165 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 135 € (bisher 155 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 100 € → 90 € (bisher 125 €) → final 90 €
-  - sehrGut: 90 € → 80 € (bisher 110 €) → final 80 €
-  - gut: 75 € → 65 € (bisher 90 €) → final 65 €
-  - defekt: 25 € → 20 € (bisher 35 €) → final 20 €
-- Ausgelöste Regeln: keine
-
-**Nothing Nothing Phone (3a) (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 10 Treffer, Median vor Filter 313 €, nach Filter 313 € → marktwertGebraucht 275 € (−12%)
-- Neu: 19 Treffer, Median vor Filter 415 €, nach Filter 415 € → marktwertNeu 382 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 310 € (bisher 170 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 205 € → 175 € (bisher 140 €) → final 175 €
-  - sehrGut: 185 € → 165 € (bisher 125 €) → final 165 €
-  - gut: 150 € → 130 € (bisher 100 €) → final 130 €
-  - defekt: 55 € → 45 € (bisher 35 €) → final 45 €
-- Ausgelöste Regeln: keine
-
-**Honor Honor Magic6 Pro (512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 6 Treffer, Median vor Filter 481 €, nach Filter 481 € → marktwertGebraucht 423 € (−12%)
-- Neu: 10 Treffer, Median vor Filter 1532 €, nach Filter 1532 € → marktwertNeu 1409 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1155 € (bisher 470 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 315 € → 275 € (bisher 375 €) → final 275 €
-  - sehrGut: 290 € → 250 € (bisher 340 €) → final 250 €
-  - gut: 235 € → 200 € (bisher 275 €) → final 200 €
-  - defekt: 85 € → 75 € (bisher 100 €) → final 75 €
-- Ausgelöste Regeln: keine
-
-**Honor Honor Magic5 Pro (512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 11 Treffer, Median vor Filter 353 €, nach Filter 353 € → marktwertGebraucht 311 € (−12%)
-- Neu: 7 Treffer, Median vor Filter 599 €, nach Filter 599 € → marktwertNeu 551 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 450 € (bisher 340 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 235 € → 200 € (bisher 275 €) → final 200 €
-  - sehrGut: 210 € → 180 € (bisher 250 €) → final 180 €
-  - gut: 170 € → 150 € (bisher 200 €) → final 150 €
-  - defekt: 60 € → 50 € (bisher 75 €) → final 50 €
-- Ausgelöste Regeln: keine
-
-**Huawei Huawei Mate X3 (512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 5 Treffer, Median vor Filter 728 €, nach Filter 728 € → marktwertGebraucht 640 € (−12%)
-- Neu: 1 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 630 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 480 € → 440 € (bisher 505 €) → final 440 €
-  - sehrGut: 435 € → 395 € (bisher 455 €) → final 395 €
-  - gut: 350 € → 310 € (bisher 370 €) → final 310 €
-  - defekt: 130 € → 110 € (bisher 135 €) → final 110 €
-- Ausgelöste Regeln: keine
-
-**Oppo Oppo Reno12 (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 5 Treffer, Median vor Filter 269 €, nach Filter 269 € → marktwertGebraucht 237 € (−12%)
-- Neu: 9 Treffer, Median vor Filter 473 €, nach Filter 473 € → marktwertNeu 436 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 355 € (bisher 175 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 180 € → 160 € (bisher 145 €) → final 160 €
-  - sehrGut: 160 € → 140 € (bisher 130 €) → final 140 €
-  - gut: 130 € → 110 € (bisher 105 €) → final 110 €
-  - defekt: 45 € → 40 € (bisher 40 €) → final 40 €
-- Ausgelöste Regeln: keine
-
-**Oppo Oppo Reno11 (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 5 Treffer, Median vor Filter 224 €, nach Filter 224 € → marktwertGebraucht 197 € (−12%)
-- Neu: 4 Treffer, Median vor Filter 450 €, nach Filter 450 € → marktwertNeu 414 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 335 € (bisher 145 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 150 € → 130 € (bisher 115 €) → final 130 €
-  - sehrGut: 135 € → 115 € (bisher 105 €) → final 115 €
-  - gut: 110 € → 95 € (bisher 85 €) → final 95 €
-  - defekt: 40 € → 35 € (bisher 30 €) → final 35 €
-- Ausgelöste Regeln: keine
-
-**Fairphone Fairphone 5 (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 14 Treffer, Median vor Filter 458 €, nach Filter 458 € → marktwertGebraucht 403 € (−12%)
-- Neu: 1 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 195 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 300 € → 260 € (bisher 160 €) → final 260 €
-  - sehrGut: 275 € → 235 € (bisher 145 €) → final 235 €
-  - gut: 220 € → 185 € (bisher 115 €) → final 185 €
-  - defekt: 80 € → 70 € (bisher 40 €) → final 70 €
-- Ausgelöste Regeln: keine
-
-**Fairphone Fairphone 4 (128 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 23 Treffer, Median vor Filter 396 €, nach Filter 396 € → marktwertGebraucht 349 € (−12%)
-- Neu: 1 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 100 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 260 € → 220 € (bisher 85 €) → final 220 €
-  - sehrGut: 235 € → 200 € (bisher 75 €) → final 200 €
-  - gut: 190 € → 170 € (bisher 60 €) → final 170 €
-  - defekt: 70 € → 60 € (bisher 20 €) → final 60 €
-- Ausgelöste Regeln: keine
-
-**Fairphone Fairphone 4 (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 9 Treffer, Median vor Filter 339 €, nach Filter 339 € → marktwertGebraucht 298 € (−12%)
-- Neu: 0 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 115 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 225 € → 190 € (bisher 90 €) → final 190 €
-  - sehrGut: 205 € → 175 € (bisher 85 €) → final 175 €
-  - gut: 165 € → 145 € (bisher 70 €) → final 145 €
-  - defekt: 60 € → 50 € (bisher 25 €) → final 50 €
-- Ausgelöste Regeln: keine
-
-**Asus Asus ROG Phone 8 Pro (512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 5 Treffer, Median vor Filter 599 €, nach Filter 599 € → marktwertGebraucht 527 € (−12%)
-- Neu: 3 Treffer, Median vor Filter 800 €, nach Filter 800 € → marktwertNeu 736 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 600 € (bisher 430 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 395 € → 355 € (bisher 345 €) → final 355 €
-  - sehrGut: 360 € → 320 € (bisher 315 €) → final 320 €
-  - gut: 290 € → 250 € (bisher 255 €) → final 250 €
-  - defekt: 105 € → 90 € (bisher 90 €) → final 90 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 13" M4 (16 GB · 256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 34 Treffer, Median vor Filter 851 €, nach Filter 851 € → marktwertGebraucht 749 € (−12%)
-- Neu: 20 Treffer, Median vor Filter 982 €, nach Filter 982 € → marktwertNeu 903 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 740 € (bisher 805 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 560 € → 715 € (bisher 640 €) → final 715 €
-  - sehrGut: 510 € → 645 € (bisher 580 €) → final 645 €
-  - gut: 410 € → 520 € (bisher 470 €) → final 520 €
-  - defekt: 150 € → 180 € (bisher 170 €) → final 180 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 13" M4 (16 GB · 512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 5 Treffer, Median vor Filter 999 €, nach Filter 999 € → marktwertGebraucht 879 € (−12%)
-- Neu: 5 Treffer, Median vor Filter 1562 €, nach Filter 1562 € → marktwertNeu 1437 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1175 € (bisher 960 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 660 € → 855 € (bisher 765 €) → final 855 €
-  - sehrGut: 600 € → 770 € (bisher 695 €) → final 770 €
-  - gut: 485 € → 625 € (bisher 560 €) → final 625 €
-  - defekt: 175 € → 215 € (bisher 205 €) → final 215 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 15" M4 (16 GB · 256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 34 Treffer, Median vor Filter 1079 €, nach Filter 1079 € → marktwertGebraucht 950 € (−12%)
-- Neu: 24 Treffer, Median vor Filter 1199 €, nach Filter 1199 € → marktwertNeu 1103 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 900 € (bisher 1005 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 710 € → 925 € (bisher 805 €) → final 925 €
-  - sehrGut: 645 € → 835 € (bisher 730 €) → final 835 €
-  - gut: 520 € → 660 € (bisher 590 €) → final 660 €
-  - defekt: 190 € → 240 € (bisher 215 €) → final 240 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 15" M4 (16 GB · 512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 8 Treffer, Median vor Filter 1125 €, nach Filter 1125 € → marktwertGebraucht 990 € (−12%)
-- Neu: 8 Treffer, Median vor Filter 1906 €, nach Filter 1906 € → marktwertNeu 1754 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1435 € (bisher 1160 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 745 € → 975 € (bisher 925 €) → final 975 €
-  - sehrGut: 675 € → 875 € (bisher 840 €) → final 875 €
-  - gut: 545 € → 695 € (bisher 680 €) → final 695 €
-  - defekt: 200 € → 250 € (bisher 245 €) → final 250 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 13" M3 (8 GB · 256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 50 Treffer, Median vor Filter 775 €, nach Filter 775 € → marktwertGebraucht 682 € (−12%)
-- Neu: 18 Treffer, Median vor Filter 900 €, nach Filter 900 € → marktwertNeu 828 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 675 € (bisher 570 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 510 € → 645 € (bisher 455 €) → final 645 €
-  - sehrGut: 465 € → 595 € (bisher 410 €) → final 595 €
-  - gut: 375 € → 470 € (bisher 335 €) → final 470 €
-  - defekt: 135 € → 160 € (bisher 120 €) → final 160 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 13" M3 (16 GB · 512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 18 Treffer, Median vor Filter 900 €, nach Filter 900 € → marktwertGebraucht 792 € (−12%)
-- Neu: 9 Treffer, Median vor Filter 1169 €, nach Filter 1169 € → marktwertNeu 1075 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 880 € (bisher 775 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 595 € → 765 € (bisher 620 €) → final 765 €
-  - sehrGut: 540 € → 685 € (bisher 560 €) → final 685 €
-  - gut: 435 € → 555 € (bisher 455 €) → final 555 €
-  - defekt: 160 € → 195 € (bisher 165 €) → final 195 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 13" M3 (24 GB · 512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 9 Treffer, Median vor Filter 999 €, nach Filter 999 € → marktwertGebraucht 879 € (−12%)
-- Neu: 2 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 895 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 660 € → 855 € (bisher 715 €) → final 855 €
-  - sehrGut: 600 € → 770 € (bisher 645 €) → final 770 €
-  - gut: 485 € → 625 € (bisher 525 €) → final 625 €
-  - defekt: 175 € → 215 € (bisher 190 €) → final 215 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 15" M3 (8 GB · 256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 31 Treffer, Median vor Filter 870 €, nach Filter 870 € → marktwertGebraucht 766 € (−12%)
-- Neu: 10 Treffer, Median vor Filter 1050 €, nach Filter 1050 € → marktwertNeu 966 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 790 € (bisher 725 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 575 € → 735 € (bisher 580 €) → final 735 €
-  - sehrGut: 520 € → 660 € (bisher 525 €) → final 660 €
-  - gut: 420 € → 530 € (bisher 425 €) → final 530 €
-  - defekt: 155 € → 190 € (bisher 155 €) → final 190 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 15" M3 (16 GB · 512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 5 Treffer, Median vor Filter 1085 €, nach Filter 1085 € → marktwertGebraucht 955 € (−12%)
-- Neu: 7 Treffer, Median vor Filter 1550 €, nach Filter 1550 € → marktwertNeu 1426 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1165 € (bisher 930 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 715 € → 930 € (bisher 745 €) → final 930 €
-  - sehrGut: 650 € → 840 € (bisher 675 €) → final 840 €
-  - gut: 525 € → 665 € (bisher 545 €) → final 665 €
-  - defekt: 190 € → 240 € (bisher 200 €) → final 240 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Pro 14" M3 (8 GB · 512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 26 Treffer, Median vor Filter 1035 €, nach Filter 1035 € → marktwertGebraucht 910 € (−12%)
-- Neu: 10 Treffer, Median vor Filter 1525 €, nach Filter 1525 € → marktwertNeu 1403 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1150 € (bisher 740 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 685 € → 890 € (bisher 590 €) → final 890 €
-  - sehrGut: 620 € → 800 € (bisher 535 €) → final 800 €
-  - gut: 500 € → 645 € (bisher 430 €) → final 645 €
-  - defekt: 180 € → 225 € (bisher 155 €) → final 225 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 13" M2 (8 GB · 256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 50 Treffer, Median vor Filter 650 €, nach Filter 650 € → marktwertGebraucht 572 € (−12%)
-- Neu: 45 Treffer, Median vor Filter 869 €, nach Filter 869 € → marktwertNeu 799 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 655 € (bisher 390 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 430 € → 450 € (bisher 310 €) → final 450 €
-  - sehrGut: 390 € → 400 € (bisher 280 €) → final 400 €
-  - gut: 315 € → 315 € (bisher 230 €) → final 315 €
-  - defekt: 115 € → 115 € (bisher 85 €) → final 115 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 13" M2 (8 GB · 512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 49 Treffer, Median vor Filter 700 €, nach Filter 700 € → marktwertGebraucht 616 € (−12%)
-- Neu: 13 Treffer, Median vor Filter 877 €, nach Filter 877 € → marktwertNeu 807 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 660 € (bisher 465 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 460 € → 485 € (bisher 370 €) → final 485 €
-  - sehrGut: 420 € → 435 € (bisher 335 €) → final 435 €
-  - gut: 340 € → 345 € (bisher 270 €) → final 345 €
-  - defekt: 125 € → 120 € (bisher 100 €) → final 120 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 13" M2 (16 GB · 512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 15 Treffer, Median vor Filter 765 €, nach Filter 765 € → marktwertGebraucht 673 € (−12%)
-- Neu: 4 Treffer, Median vor Filter 913 €, nach Filter 913 € → marktwertNeu 840 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 685 € (bisher 540 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 505 € → 525 € (bisher 430 €) → final 525 €
-  - sehrGut: 460 € → 485 € (bisher 390 €) → final 485 €
-  - gut: 370 € → 380 € (bisher 315 €) → final 380 €
-  - defekt: 135 € → 130 € (bisher 115 €) → final 130 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 13" M1 (8 GB · 256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 50 Treffer, Median vor Filter 401 €, nach Filter 401 € → marktwertGebraucht 353 € (−12%)
-- Neu: 43 Treffer, Median vor Filter 703 €, nach Filter 703 € → marktwertNeu 647 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 530 € (bisher 215 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 265 € → 260 € (bisher 175 €) → final 260 €
-  - sehrGut: 240 € → 235 € (bisher 155 €) → final 235 €
-  - gut: 195 € → 200 € (bisher 125 €) → final 200 €
-  - defekt: 70 € → 70 € (bisher 45 €) → final 70 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 13" M1 (8 GB · 512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 50 Treffer, Median vor Filter 490 €, nach Filter 490 € → marktwertGebraucht 431 € (−12%)
-- Neu: 3 Treffer, Median vor Filter 1000 €, nach Filter 1000 € → marktwertNeu 920 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 750 € (bisher 265 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 325 € → 330 € (bisher 210 €) → final 330 €
-  - sehrGut: 295 € → 295 € (bisher 190 €) → final 295 €
-  - gut: 235 € → 230 € (bisher 155 €) → final 230 €
-  - defekt: 85 € → 85 € (bisher 55 €) → final 85 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 13" M1 (16 GB · 256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 33 Treffer, Median vor Filter 479 €, nach Filter 479 € → marktwertGebraucht 422 € (−12%)
-- Neu: 0 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 265 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 315 € → 315 € (bisher 210 €) → final 315 €
-  - sehrGut: 285 € → 280 € (bisher 190 €) → final 280 €
-  - gut: 230 € → 225 € (bisher 155 €) → final 225 €
-  - defekt: 85 € → 85 € (bisher 55 €) → final 85 €
-- Ausgelöste Regeln: keine
-
-**Apple MacBook Air 13" M1 (16 GB · 512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 31 Treffer, Median vor Filter 661 €, nach Filter 661 € → marktwertGebraucht 582 € (−12%)
-- Neu: 0 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 315 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 435 € → 455 € (bisher 250 €) → final 455 €
-  - sehrGut: 395 € → 410 € (bisher 230 €) → final 410 €
-  - gut: 320 € → 320 € (bisher 185 €) → final 320 €
-  - defekt: 115 € → 115 € (bisher 65 €) → final 115 €
-- Ausgelöste Regeln: keine
-
-**Apple MagSafe Ladegerät (Standard)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 17 Treffer, Median vor Filter 23 €, nach Filter 23 € → marktwertGebraucht 20 € (−12%)
-- Neu: 0 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden) (bisher 15 €)
-- Übrige Stufen (berechnet → nach Wettbewerbs-Abstand → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 15 € → 20 € (bisher 15 €) → final 20 €
-  - sehrGut: 15 € → 20 € (bisher 15 €) → final 20 €
-  - gut: 10 € → 15 € (bisher 10 €) → final 15 €
-  - defekt: 5 € → 15 € (bisher 5 €) → final 15 €
-- Ausgelöste Regeln: keine
-
-## Übersprungen (32)
-- Apple iPhone 14 Plus (256 GB): Datenfehler: marktwertNeu (368 €) <= marktwertGebraucht (413 €)
-- OnePlus OnePlus Nord CE4 (256 GB): zu wenige Gebraucht-Treffer (1 < 5)
-- OnePlus OnePlus Nord CE4 (128 GB): zu wenige Gebraucht-Treffer (1 < 5)
-- Motorola Motorola Edge 50 Ultra (512 GB): zu wenige Gebraucht-Treffer (0 < 5)
-- Motorola Moto G34 (128 GB): zu wenige Gebraucht-Treffer (1 < 5)
-- Motorola Moto G54 (128 GB): zu wenige Gebraucht-Treffer (1 < 5)
-- Huawei Huawei Mate X3 (256 GB): zu wenige Gebraucht-Treffer (3 < 5)
-- Huawei Huawei Mate X3 (1 TB): zu wenige Gebraucht-Treffer (0 < 5)
-- Oppo Oppo Find X8 Pro (512 GB): zu wenige Gebraucht-Treffer (3 < 5)
-- Asus Asus ROG Phone 8 Pro (1 TB): zu wenige Gebraucht-Treffer (0 < 5)
-- Asus Asus Zenfone 11 Ultra (256 GB): zu wenige Gebraucht-Treffer (1 < 5)
-- Asus Asus Zenfone 11 Ultra (512 GB): zu wenige Gebraucht-Treffer (0 < 5)
-- Apple MacBook Air 13" M4 (24 GB · 512 GB): zu wenige Gebraucht-Treffer (4 < 5)
-- Apple MacBook Air 13" M4 (24 GB · 1 TB): zu wenige Gebraucht-Treffer (1 < 5)
-- Apple MacBook Air 15" M4 (24 GB · 512 GB): zu wenige Gebraucht-Treffer (2 < 5)
-- Apple MacBook Air 15" M4 (24 GB · 1 TB): zu wenige Gebraucht-Treffer (0 < 5)
-- Apple MacBook Air 15" M3 (24 GB · 512 GB): zu wenige Gebraucht-Treffer (2 < 5)
-- Apple MacBook Pro 14" M4 (32 GB · 1 TB): zu wenige Gebraucht-Treffer (4 < 5)
-- Apple MacBook Pro 14" M4 Pro (48 GB · 1 TB): zu wenige Gebraucht-Treffer (2 < 5)
-- Apple MacBook Pro 16" M4 Pro (48 GB · 512 GB): zu wenige Gebraucht-Treffer (1 < 5)
-- Apple AirPods Pro 2 (USB-C) (Standard): zu wenige Gebraucht-Treffer (0 < 5)
-- Apple AirPods 4 (mit ANC) (Standard): zu wenige Gebraucht-Treffer (0 < 5)
-- Apple AirPods Max (USB-C) (Standard): zu wenige Gebraucht-Treffer (0 < 5)
-- Apple Apple 35W Dual USB-C (Standard): zu wenige Gebraucht-Treffer (0 < 5)
-- Apple Apple 20W USB-C Netzteil (Standard): zu wenige Gebraucht-Treffer (0 < 5)
-- Samsung Samsung 25W Schnellladegerät (Standard): zu wenige Gebraucht-Treffer (0 < 5)
-- Anker Anker Powerbank 20.000 mAh (Standard): zu wenige Gebraucht-Treffer (0 < 5)
-- Anker Anker 67W USB-C Netzteil (Standard): zu wenige Gebraucht-Treffer (0 < 5)
-- Anker Anker USB-C Kabel 2 m (Standard): zu wenige Gebraucht-Treffer (0 < 5)
-- Mr. Phone USB-C Kabel (Standard): zu wenige Gebraucht-Treffer (0 < 5)
-- Mr. Phone Panzerglas Schutzfolie (Standard): zu wenige Gebraucht-Treffer (0 < 5)
-- Mr. Phone Silikon Schutzhülle (Standard): zu wenige Gebraucht-Treffer (0 < 5)
+## Übersprungen (22)
+- Apple iPhone 16e (256 GB): Datenfehler: marktwertNeu (405 €) <= marktwertGebraucht (438 €)
+- Apple iPhone 16e (512 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPhone 17 Air (512 GB): zu wenige Gebraucht-Treffer (1 < 5)
+- Apple iPhone 17 Air (1 TB): zu wenige Gebraucht-Treffer (1 < 5)
+- Samsung Galaxy S10e (256 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Samsung Galaxy S20+ (512 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Samsung Galaxy S20 Ultra (512 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Samsung Galaxy S22 Ultra (512 GB): Datenfehler: marktwertNeu (336 €) <= marktwertGebraucht (352 €)
+- Samsung Galaxy S23 FE (128 GB): Datenfehler: marktwertNeu (230 €) <= marktwertGebraucht (235 €)
+- Samsung Galaxy S25+ (512 GB): Datenfehler: marktwertNeu (630 €) <= marktwertGebraucht (642 €)
+- Samsung Galaxy S26 (256 GB): Datenfehler: marktwertNeu (597 €) <= marktwertGebraucht (660 €)
+- Samsung Galaxy S26 (512 GB): Datenfehler: marktwertNeu (781 €) <= marktwertGebraucht (862 €)
+- Samsung Galaxy S26+ (256 GB): Datenfehler: marktwertNeu (597 €) <= marktwertGebraucht (660 €)
+- Samsung Galaxy S26+ (512 GB): Datenfehler: marktwertNeu (781 €) <= marktwertGebraucht (862 €)
+- Samsung Galaxy S26 Ultra (256 GB): Datenfehler: marktwertNeu (828 €) <= marktwertGebraucht (850 €)
+- Samsung Galaxy S26 Ultra (1 TB): zu wenige Gebraucht-Treffer (4 < 5)
+- Samsung Galaxy Z Fold 3 (512 GB): Datenfehler: marktwertNeu (421 €) <= marktwertGebraucht (486 €)
+- Samsung Galaxy Z Fold 4 (512 GB): Datenfehler: marktwertNeu (423 €) <= marktwertGebraucht (512 €)
+- Samsung Galaxy Z Fold 5 (512 GB): Datenfehler: marktwertNeu (552 €) <= marktwertGebraucht (555 €)
+- Samsung Galaxy A15 (256 GB): zu wenige Gebraucht-Treffer (1 < 5)
+- Samsung Galaxy A16 (256 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Samsung Galaxy A17 (256 GB): zu wenige Gebraucht-Treffer (0 < 5)
