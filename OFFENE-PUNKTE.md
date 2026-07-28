@@ -181,6 +181,34 @@ Werten):
 - Apple MacBook Pro 16" M4 Pro | 24GB·512GB vs 48GB·512GB | wieNeu: 1605→1525, sehrGut: 1465→1385, gut: 1170→1120
 - Apple MacBook Air 13" M1 | 8GB·512GB vs 16GB·256GB | wieNeu: 330→315, sehrGut: 295→280, gut: 230→225
 
+### NOCH OFFEN: Nicht-Basis-Varianten bekommen keine echten Live-Marktdaten für marktwertNeu
+
+Beim Live-Lauf 28.07.2026 für DualSense/Xbox Series X/Galaxy Tab S9 Ultra/Galaxy S26 Ultra
+(`--nur`, siehe Commit `838a37c` + `6dc30ef`) aufgefallen: `scripts/update-ankaufspreise.js`
+sucht `marktwertNeu` live PRO VARIANTE (jede Speichergröße bekommt eine eigene eBay-Abfrage),
+aber `katalogUpdates.set(geraet.id, ergebnis.marktwerte)` greift nur `if (variante.uvpDelta ===
+0)` (siehe Zeile ~510) - der frische, präzise Wert wird also nur für die Basis-Variante
+dauerhaft in `geraete-katalog.json` gespeichert. Für alle anderen Varianten (Xbox 2TB, Galaxy
+S26 Ultra 512GB, Galaxy Tab S9 Ultra 1TB u.v.m.) wird ihr frischer Live-Wert nach diesem einen
+Lauf verworfen, und `pricing.ermittleWiederverkaufswerte()` skaliert stattdessen weiterhin nur
+den gespeicherten Basis-Wert proportional über `uvpDelta` hoch - eine Näherung, die bei
+nicht-linearer Speicher-Preisstaffelung spürbar daneben liegen kann (dieselbe, bereits am
+28.07.2026 an anderer Stelle dokumentierte Einschränkung, siehe oben "Bekannte Einschränkung").
+
+Konkret beobachtete Abweichung zwischen dem, was der Live-Lauf selbst für die jeweilige
+Variante berechnete, und dem, was nach der anschließenden `neuVersiegelt`-Regenerierung
+(skaliert aus der Basis-Variante) final gespeichert wurde:
+- Xbox Series X 2TB: Live-Lauf 510 € vs. final gespeichert 595 €
+- Galaxy S26 Ultra 512GB: Live-Lauf 825 € vs. final gespeichert 875 €
+- Galaxy Tab S9 Ultra 1TB: Live-Lauf 940 € vs. final gespeichert 780 €
+
+Beide Seiten bleiben innerhalb der drei Leitplanken (nie über UVP, nie kontaminiert) - keine
+Sicherheitsverletzung, nur ein Präzisionsverlust. **Eigenes Thema, separat angehen - nicht Teil
+des heutigen Leitplanken-Fixes.** Möglicher Lösungsansatz für später: `marktwertNeu` (und
+`marktwertGebraucht`) pro Variante statt nur pro Basis-Variante in `geraete-katalog.json`
+speichern (Schema-Erweiterung nötig, betrifft `scripts/update-ankaufspreise.js`,
+`pricing-config.js` `ermittleWiederverkaufswerte()`, ggf. `geraete-katalog.json`-Struktur).
+
 ## Samsung-Markenkorrektur (Faktor 0,78) eingeführt - noch nicht auf alle Samsung-Geräte
 ## rückwirkend angewendet (seit 27.07.2026)
 
