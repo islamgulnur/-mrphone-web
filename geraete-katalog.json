@@ -16,10 +16,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 61,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 62,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 47,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 216,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0002",
@@ -38,10 +38,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 83,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 113,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 78,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 285,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0003",
@@ -60,10 +60,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 79,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 92,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 84,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 185,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0004",
@@ -86,10 +86,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 88,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 98,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 79,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 216,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0005",
@@ -112,10 +112,10 @@
         "uvpDelta": 350
       }
     ],
-    "marktwertGebraucht": 88,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 112,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 84,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 221,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0006",
@@ -138,10 +138,10 @@
         "uvpDelta": 350
       }
     ],
-    "marktwertGebraucht": 128,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": null,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 126,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 276,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0007",
@@ -165,9 +165,9 @@
       }
     ],
     "marktwertGebraucht": 110,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 117,
-    "marktDatenStand": "2026-07-24"
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 276,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0008",
@@ -190,10 +190,10 @@
         "uvpDelta": 350
       }
     ],
-    "marktwertGebraucht": 140,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 175,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 132,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 294,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0009",
@@ -216,10 +216,10 @@
         "uvpDelta": 350
       }
     ],
-    "marktwertGebraucht": 220,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 235,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 194,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 311,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0010",
@@ -242,10 +242,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 76,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 85,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 73,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 189,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0011",
@@ -268,10 +268,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 139,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 166,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 121,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 232,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0012",
@@ -294,10 +294,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 175,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 185,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 131,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 245,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0013",
@@ -320,10 +320,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 198,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 230,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 176,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 310,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0014",
@@ -346,10 +346,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 264,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 282,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 263,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 322,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0015",
@@ -372,10 +372,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 220,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 254,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 189,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 333,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0016",
@@ -398,10 +398,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 220,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": null,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 189,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 325,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0017",
@@ -428,10 +428,10 @@
         "uvpDelta": 550
       }
     ],
-    "marktwertGebraucht": 288,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 361,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 264,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 414,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0018",
@@ -458,10 +458,10 @@
         "uvpDelta": 550
       }
     ],
-    "marktwertGebraucht": 330,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": null,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 334,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 471,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0019",
@@ -484,10 +484,10 @@
         "uvpDelta": 150
       }
     ],
-    "marktwertGebraucht": 114,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 138,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 123,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 218,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0020",
@@ -510,10 +510,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 290,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 329,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 262,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 362,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0021",
@@ -536,10 +536,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 307,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 366,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 282,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 368,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0022",
@@ -566,10 +566,10 @@
         "uvpDelta": 550
       }
     ],
-    "marktwertGebraucht": 374,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 446,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 343,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 460,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0023",
@@ -596,10 +596,10 @@
         "uvpDelta": 550
       }
     ],
-    "marktwertGebraucht": 451,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 510,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 385,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 524,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0024",
@@ -622,10 +622,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 380,
-    "marktwertQuelle": "search-api-auto",
-    "marktwertNeu": 413,
-    "marktDatenStand": "2026-07-24"
+    "marktwertGebraucht": 349,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 477,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0025",
@@ -8530,8 +8530,10 @@
         "uvpDelta": 0
       }
     ],
-    "marktwertGebraucht": 305,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 263,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 313,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0429",
@@ -8562,8 +8564,10 @@
         "uvpDelta": 0
       }
     ],
-    "marktwertGebraucht": 100,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 193,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 376,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0432",
@@ -8582,8 +8586,10 @@
         "uvpDelta": -30
       }
     ],
-    "marktwertGebraucht": 70,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 109,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 303,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0433",
@@ -8598,8 +8604,10 @@
         "uvpDelta": 0
       }
     ],
-    "marktwertGebraucht": 230,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 281,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 433,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0434",
@@ -8618,8 +8626,10 @@
         "uvpDelta": 40
       }
     ],
-    "marktwertGebraucht": 165,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 134,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 165,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0438",
@@ -8634,8 +8644,10 @@
         "uvpDelta": 0
       }
     ],
-    "marktwertGebraucht": 500,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 423,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 1409,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0441",
@@ -8650,8 +8662,10 @@
         "uvpDelta": 0
       }
     ],
-    "marktwertGebraucht": 365,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 311,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 551,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0442",
@@ -8674,8 +8688,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 670,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 640,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": null,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0451",
@@ -8706,8 +8722,10 @@
         "uvpDelta": 0
       }
     ],
-    "marktwertGebraucht": 190,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 237,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 436,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0453",
@@ -8722,8 +8740,10 @@
         "uvpDelta": 0
       }
     ],
-    "marktwertGebraucht": 155,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 197,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 414,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0454",
@@ -8738,8 +8758,10 @@
         "uvpDelta": 0
       }
     ],
-    "marktwertGebraucht": 210,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 403,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": null,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0455",
@@ -8758,8 +8780,10 @@
         "uvpDelta": 70
       }
     ],
-    "marktwertGebraucht": 110,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 349,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": null,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0456",
@@ -8778,8 +8802,10 @@
         "uvpDelta": 250
       }
     ],
-    "marktwertGebraucht": 460,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 527,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 736,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0457",
@@ -8826,8 +8852,10 @@
         "uvpDelta": 690
       }
     ],
-    "marktwertGebraucht": 855,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 749,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 903,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0471",
@@ -8854,8 +8882,10 @@
         "uvpDelta": 690
       }
     ],
-    "marktwertGebraucht": 1070,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 950,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 1103,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0472",
@@ -8878,8 +8908,10 @@
         "uvpDelta": 630
       }
     ],
-    "marktwertGebraucht": 605,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 682,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 828,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0473",
@@ -8902,8 +8934,10 @@
         "uvpDelta": 630
       }
     ],
-    "marktwertGebraucht": 770,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 766,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 966,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0474",
@@ -8926,8 +8960,10 @@
         "uvpDelta": 690
       }
     ],
-    "marktwertGebraucht": 1050,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 1365,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 2043,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0475",
@@ -8950,8 +8986,10 @@
         "uvpDelta": 690
       }
     ],
-    "marktwertGebraucht": 1325,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 1550,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 2059,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0476",
@@ -8974,8 +9012,10 @@
         "uvpDelta": 920
       }
     ],
-    "marktwertGebraucht": 1655,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 1607,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 2080,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0477",
@@ -8994,8 +9034,10 @@
         "uvpDelta": 460
       }
     ],
-    "marktwertGebraucht": 785,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 910,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 1403,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0478",
@@ -9018,8 +9060,10 @@
         "uvpDelta": 460
       }
     ],
-    "marktwertGebraucht": 415,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 572,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 799,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0479",
@@ -9046,8 +9090,10 @@
         "uvpDelta": 460
       }
     ],
-    "marktwertGebraucht": 230,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 353,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 647,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0480",
@@ -9111,7 +9157,9 @@
       }
     ],
     "marktwertGebraucht": 20,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": null,
+    "marktDatenStand": "2026-07-28"
   },
   {
     "id": "kat-0484",
