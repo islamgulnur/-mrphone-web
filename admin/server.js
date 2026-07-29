@@ -418,17 +418,19 @@ app.post("/api/ankauf/:id/neu-berechnen", (req, res) => {
   }
 
   const bestand = readBestand();
-  const geraetFuerPricing = {
-    uvp: katalogEintrag.uvp,
-    marktwertGebraucht: katalogEintrag.marktwertGebraucht,
-    marke: geraet.marke,
-    modell: geraet.modell,
-  };
+  // Vollen Katalog-Eintrag verwenden (nicht nur uvp/marktwertGebraucht/marke/modell) - sonst
+  // gehen marktwertNeu/marktwertQuelle/marktDatenStand verloren und neuVersiegelt fällt immer
+  // auf die Schätz-Formel zurück statt einen echten Marktanker zu nutzen.
+  const geraetFuerPricing = { ...katalogEintrag, marke: geraet.marke, modell: geraet.modell };
 
   const warnungen = [];
   geraet.varianten = geraet.varianten.map((v) => {
     if (v.preisQuelle === "manuell") return v; // manuelle Preise werden nie automatisch überschrieben
-    const berechnung = berechnePreise(geraetFuerPricing, v, bestand);
+    // Passende Katalog-Variante heranziehen (trägt ggf. einen eigenen echten Varianten-Anker,
+    // siehe pricing-config.js ermittleWiederverkaufswerte) statt der schlankeren
+    // ankauf-preise.json-Variante; Fallback auf v, falls im Katalog keine Entsprechung existiert.
+    const katalogVariante = (katalogEintrag.varianten || []).find((kv) => kv.bezeichnung === v.bezeichnung) || v;
+    const berechnung = berechnePreise(geraetFuerPricing, katalogVariante, bestand);
     const verstoesse = pricing.pruefeKonsistenz(berechnung.preise, {
       neu: berechnung.wiederverkaufswertNeu,
       gebraucht: berechnung.wiederverkaufswertGebraucht,

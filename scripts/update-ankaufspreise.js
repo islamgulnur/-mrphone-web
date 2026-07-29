@@ -507,7 +507,8 @@ async function main() {
   const niveauFaktor = 1 + pricing.liesAnkaufsniveau() / 100;
   const datum = heutigesDatum();
   const protokolle = [];
-  const katalogUpdates = new Map(); // id -> { marktwertGebraucht, marktwertNeu }
+  const katalogUpdates = new Map(); // id -> { marktwertGebraucht, marktwertNeu } (Basis-Variante, Geräte-Ebene)
+  const katalogVariantenUpdates = new Map(); // id -> Map(bezeichnung -> { marktwertGebraucht, marktwertNeu })
   const ergebnisListe = [];
 
   for (const geraet of katalog) {
@@ -541,8 +542,17 @@ async function main() {
       neueVarianten.push(ergebnis.variante);
       protokolle.push(ergebnis.protokoll);
 
-      if (ergebnis.marktwerte && variante.uvpDelta === 0) {
-        katalogUpdates.set(geraet.id, ergebnis.marktwerte);
+      if (ergebnis.marktwerte) {
+        if (variante.uvpDelta === 0) {
+          katalogUpdates.set(geraet.id, ergebnis.marktwerte);
+        }
+        // Echte Pro-Variante-Marktdaten (jede Speichergröße wird oben bereits einzeln
+        // abgefragt) nicht mehr wegwerfen, sondern für ALLE Varianten persistieren -
+        // sonst skaliert ermittleWiederverkaufswerte() Nicht-Basis-Varianten weiterhin
+        // nur proportional aus der Basis-Variante hoch (Ursache der dokumentierten
+        // Speichergrößen-Inversionen, siehe OFFENE-PUNKTE.md).
+        if (!katalogVariantenUpdates.has(geraet.id)) katalogVariantenUpdates.set(geraet.id, new Map());
+        katalogVariantenUpdates.get(geraet.id).set(variante.bezeichnung, ergebnis.marktwerte);
       }
     }
 
@@ -561,13 +571,31 @@ async function main() {
   // geraete-katalog.json: nur betroffene Felder ergänzen, Rest 1:1 durchreichen.
   const katalogNeu = katalog.map((g) => {
     const update = katalogUpdates.get(g.id);
-    if (!update) return g;
+    const variantenUpdates = katalogVariantenUpdates.get(g.id);
+    if (!update && !variantenUpdates) return g;
+
+    const varianten = !variantenUpdates
+      ? g.varianten
+      : g.varianten.map((v) => {
+          const vUpdate = variantenUpdates.get(v.bezeichnung);
+          if (!vUpdate) return v;
+          return {
+            ...v,
+            marktwertGebraucht: Math.round(vUpdate.marktwertGebraucht),
+            marktwertNeu: vUpdate.marktwertNeu == null ? null : Math.round(vUpdate.marktwertNeu),
+            marktwertQuelle: quelle + "-auto",
+            marktDatenStand: datum,
+          };
+        });
+
+    if (!update) return { ...g, varianten };
     return {
       ...g,
       marktwertGebraucht: Math.round(update.marktwertGebraucht),
       marktwertNeu: update.marktwertNeu == null ? null : Math.round(update.marktwertNeu),
       marktwertQuelle: quelle + "-auto",
       marktDatenStand: datum,
+      varianten,
     };
   });
 

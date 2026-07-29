@@ -229,19 +229,31 @@ function ermittleWiederverkaufswerte(geraet, variante, bestandListe) {
   const uvpBasis = Number(geraet.uvp) || 0;
   const uvpVariante = uvpBasis + (Number(variante.uvpDelta) || 0);
   const verhaeltnis = uvpBasis > 0 ? uvpVariante / uvpBasis : 1;
-  const marktwertGebrauchtVariante = (Number(geraet.marktwertGebraucht) || 0) * verhaeltnis;
-  // Leitplanke 2: den rohen Katalog-Wert erst auf Plausibilität gegen die Basis-UVP prüfen
-  // (kontaminierte Scraper-Treffer wie Bundles/falsche Varianten verwerfen), BEVOR er als
-  // "echter" Marktanker verwendet wird - siehe pruefeMarktwertNeuPlausibilitaet().
-  const marktwertNeuGeprueft = pruefeMarktwertNeuPlausibilitaet(geraet.marktwertNeu, uvpBasis);
+
+  // Anker-Priorität 2 (nach dem Primäranker bestand.json, siehe unten): ECHTER Marktanker
+  // DIESER Variante (von scripts/update-ankaufspreise.js direkt auf die Variante geschrieben,
+  // siehe dort - jede Speichergröße wird einzeln abgefragt). Erst wenn die Variante selbst noch
+  // keinen eigenen echten Lauf hatte, auf den alten Fallback zurückfallen: Geräte-Level-Wert
+  // proportional über uvpDelta skaliert (Näherung, siehe OFFENE-PUNKTE.md).
+  const hatEigenenVariantenAnker = variante.marktwertGebraucht != null;
+  const marktwertGebrauchtVariante = hatEigenenVariantenAnker
+    ? Number(variante.marktwertGebraucht) || 0
+    : (Number(geraet.marktwertGebraucht) || 0) * verhaeltnis;
+
+  // Leitplanke 2: den rohen Katalog-Wert erst auf Plausibilität gegen die (variantenscharfe)
+  // UVP prüfen (kontaminierte Scraper-Treffer wie Bundles/falsche Varianten verwerfen), BEVOR
+  // er als "echter" Marktanker verwendet wird - siehe pruefeMarktwertNeuPlausibilitaet().
+  const marktwertNeuRoh = hatEigenenVariantenAnker ? variante.marktwertNeu : geraet.marktwertNeu;
+  const marktwertNeuUvpBasis = hatEigenenVariantenAnker ? uvpVariante : uvpBasis;
+  const marktwertNeuGeprueft = pruefeMarktwertNeuPlausibilitaet(marktwertNeuRoh, marktwertNeuUvpBasis);
   const marktAnkerNeuUrsprung = marktwertNeuGeprueft != null ? "echt" : "geschaetzt";
-  // Bevorzugt den ECHTEN marktwertNeu aus dem Katalog (von einem echten Marktlauf befüllt,
-  // siehe scripts/update-ankaufspreise.js), sonst die Schätzung aus marktwertGebraucht ×
-  // NEUWARE_AUFSCHLAG. Beide Varianten werden wie marktwertGebraucht proportional über
-  // uvpDelta auf die konkrete Variante skaliert (Näherung für Nicht-Basis-Varianten, siehe
-  // OFFENE-PUNKTE.md - kein Ersatz für einen echten Marktlauf je Variante).
+  // Bevorzugt den ECHTEN marktwertNeu (variantenscharf, falls vorhanden, siehe oben - sonst vom
+  // Katalog geräteweit befüllt, siehe scripts/update-ankaufspreise.js), sonst die Schätzung aus
+  // marktwertGebraucht × NEUWARE_AUFSCHLAG. Nur wenn kein eigener Varianten-Anker vorliegt, wird
+  // wie bisher proportional über uvpDelta auf die konkrete Variante skaliert (Näherung für
+  // Nicht-Basis-Varianten ohne eigenen echten Marktlauf, siehe OFFENE-PUNKTE.md).
   const marktAnkerNeuSchaetzung = marktwertNeuGeprueft != null
-    ? marktwertNeuGeprueft * verhaeltnis
+    ? (hatEigenenVariantenAnker ? marktwertNeuGeprueft : marktwertNeuGeprueft * verhaeltnis)
     : marktwertGebrauchtVariante * NEUWARE_AUFSCHLAG;
 
   const eigenerNeu = findeEigenenVerkaufspreis(bestandListe, geraet, variante, "neu");
