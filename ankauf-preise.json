@@ -11182,9 +11182,9 @@
         "bezeichnung": "1. Gen",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 95,
-          "wieNeu": 25,
-          "sehrGut": 25,
+          "neuVersiegelt": 85,
+          "wieNeu": 30,
+          "sehrGut": 30,
           "gut": 15,
           "defekt": 10
         },
@@ -11205,10 +11205,10 @@
         "bezeichnung": "2. Gen",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 135,
-          "wieNeu": 50,
-          "sehrGut": 50,
-          "gut": 40,
+          "neuVersiegelt": 120,
+          "wieNeu": 55,
+          "sehrGut": 55,
+          "gut": 45,
           "defekt": 15
         },
         "preisQuelle": "auto"
@@ -11229,9 +11229,9 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 155,
-          "wieNeu": 65,
-          "sehrGut": 65,
-          "gut": 50,
+          "wieNeu": 70,
+          "sehrGut": 70,
+          "gut": 55,
           "defekt": 20
         },
         "preisQuelle": "auto"
@@ -11620,10 +11620,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 2060,
-          "wieNeu": 1335,
-          "sehrGut": 1205,
-          "gut": 965,
-          "defekt": 330
+          "wieNeu": 1470,
+          "sehrGut": 1325,
+          "gut": 1060,
+          "defekt": 365
         },
         "preisQuelle": "auto"
       }
@@ -11643,10 +11643,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 1190,
-          "wieNeu": 915,
-          "sehrGut": 825,
-          "gut": 655,
-          "defekt": 215
+          "wieNeu": 950,
+          "sehrGut": 860,
+          "gut": 695,
+          "defekt": 235
         },
         "preisQuelle": "auto"
       }
@@ -11666,10 +11666,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 1190,
-          "wieNeu": 885,
-          "sehrGut": 800,
-          "gut": 635,
-          "defekt": 215
+          "wieNeu": 945,
+          "sehrGut": 855,
+          "gut": 690,
+          "defekt": 235
         },
         "preisQuelle": "auto"
       }
@@ -11758,10 +11758,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 560,
-          "wieNeu": 420,
-          "sehrGut": 380,
-          "gut": 300,
-          "defekt": 105
+          "wieNeu": 460,
+          "sehrGut": 420,
+          "gut": 330,
+          "defekt": 115
         },
         "preisQuelle": "auto"
       }
@@ -11781,10 +11781,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 545,
-          "wieNeu": 380,
-          "sehrGut": 340,
-          "gut": 265,
-          "defekt": 95
+          "wieNeu": 395,
+          "sehrGut": 360,
+          "gut": 290,
+          "defekt": 105
         },
         "preisQuelle": "auto"
       }
@@ -11803,11 +11803,11 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 915,
-          "wieNeu": 680,
-          "sehrGut": 610,
-          "gut": 485,
-          "defekt": 175
+          "neuVersiegelt": null,
+          "wieNeu": 700,
+          "sehrGut": 635,
+          "gut": 515,
+          "defekt": 185
         },
         "preisQuelle": "auto"
       }
@@ -11827,10 +11827,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 1275,
-          "wieNeu": 600,
-          "sehrGut": 540,
-          "gut": 435,
-          "defekt": 155
+          "wieNeu": 655,
+          "sehrGut": 595,
+          "gut": 480,
+          "defekt": 170
         },
         "preisQuelle": "auto"
       }
@@ -11850,10 +11850,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 1320,
-          "wieNeu": 1080,
-          "sehrGut": 975,
-          "gut": 780,
-          "defekt": 260
+          "wieNeu": 1120,
+          "sehrGut": 1015,
+          "gut": 820,
+          "defekt": 285
         },
         "preisQuelle": "auto"
       }
@@ -11873,10 +11873,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 1145,
-          "wieNeu": 630,
-          "sehrGut": 565,
-          "gut": 460,
-          "defekt": 160
+          "wieNeu": 665,
+          "sehrGut": 605,
+          "gut": 490,
+          "defekt": 175
         },
         "preisQuelle": "auto"
       }
@@ -11918,11 +11918,11 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 485,
-          "wieNeu": 305,
-          "sehrGut": 270,
-          "gut": 215,
-          "defekt": 80
+          "neuVersiegelt": 395,
+          "wieNeu": 330,
+          "sehrGut": 295,
+          "gut": 235,
+          "defekt": 90
         },
         "preisQuelle": "auto"
       }
@@ -12010,11 +12010,11 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 1560,
-          "wieNeu": 1195,
-          "sehrGut": 1080,
-          "gut": 860,
-          "defekt": 290
+          "neuVersiegelt": null,
+          "wieNeu": 1205,
+          "sehrGut": 1095,
+          "gut": 885,
+          "defekt": 320
         },
         "preisQuelle": "auto"
       }
@@ -12056,11 +12056,11 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 990,
-          "wieNeu": 740,
-          "sehrGut": 665,
-          "gut": 530,
-          "defekt": 180
+          "neuVersiegelt": null,
+          "wieNeu": 665,
+          "sehrGut": 600,
+          "gut": 475,
+          "defekt": 160
         },
         "preisQuelle": "auto"
       }

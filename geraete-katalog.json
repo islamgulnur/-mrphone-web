@@ -6899,13 +6899,17 @@
     "varianten": [
       {
         "bezeichnung": "1. Gen",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 36,
+        "marktwertNeu": 105,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-07-31"
       }
     ],
     "marktwertGebraucht": 36,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 119,
-    "marktDatenStand": "2026-07-27"
+    "marktwertNeu": 105,
+    "marktDatenStand": "2026-07-31"
   },
   {
     "id": "kat-0313",
@@ -6917,13 +6921,17 @@
     "varianten": [
       {
         "bezeichnung": "2. Gen",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 73,
+        "marktwertNeu": 147,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-07-31"
       }
     ],
     "marktwertGebraucht": 73,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 166,
-    "marktDatenStand": "2026-07-27"
+    "marktwertNeu": 147,
+    "marktDatenStand": "2026-07-31"
   },
   {
     "id": "kat-0314",
@@ -6935,13 +6943,17 @@
     "varianten": [
       {
         "bezeichnung": "3. Gen",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 88,
+        "marktwertNeu": 193,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-07-31"
       }
     ],
-    "marktwertGebraucht": 74,
+    "marktwertGebraucht": 88,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 193,
-    "marktDatenStand": "2026-07-27"
+    "marktDatenStand": "2026-07-31"
   },
   {
     "id": "kat-0315",
@@ -7209,13 +7221,17 @@
     "varianten": [
       {
         "bezeichnung": "Gehäuse",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 1979,
+        "marktwertNeu": 2516,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-07-31"
       }
     ],
-    "marktwertGebraucht": 1847,
+    "marktwertGebraucht": 1979,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 2516,
-    "marktDatenStand": "2026-07-27"
+    "marktDatenStand": "2026-07-31"
   },
   {
     "id": "kat-0332",
@@ -7227,13 +7243,17 @@
     "varianten": [
       {
         "bezeichnung": "Gehäuse",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 1265,
+        "marktwertNeu": 1454,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-07-31"
       }
     ],
-    "marktwertGebraucht": 1284,
+    "marktwertGebraucht": 1265,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 1453,
-    "marktDatenStand": "2026-07-27"
+    "marktwertNeu": 1454,
+    "marktDatenStand": "2026-07-31"
   },
   {
     "id": "kat-0333",
@@ -7245,13 +7265,17 @@
     "varianten": [
       {
         "bezeichnung": "Gehäuse",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 1257,
+        "marktwertNeu": 1453,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-07-31"
       }
     ],
-    "marktwertGebraucht": 1250,
+    "marktwertGebraucht": 1257,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 1452,
-    "marktDatenStand": "2026-07-27"
+    "marktwertNeu": 1453,
+    "marktDatenStand": "2026-07-31"
   },
   {
     "id": "kat-0334",
@@ -7313,13 +7337,17 @@
     "varianten": [
       {
         "bezeichnung": "Gehäuse",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 616,
+        "marktwertNeu": 685,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-07-31"
       }
     ],
     "marktwertGebraucht": 616,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 688,
-    "marktDatenStand": "2026-07-27"
+    "marktwertNeu": 685,
+    "marktDatenStand": "2026-07-31"
   },
   {
     "id": "kat-0338",
@@ -7331,13 +7359,17 @@
     "varianten": [
       {
         "bezeichnung": "Gehäuse",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 527,
+        "marktwertNeu": 667,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-07-31"
       }
     ],
-    "marktwertGebraucht": 558,
+    "marktwertGebraucht": 527,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 667,
-    "marktDatenStand": "2026-07-27"
+    "marktDatenStand": "2026-07-31"
   },
   {
     "id": "kat-0339",
@@ -7349,13 +7381,17 @@
     "varianten": [
       {
         "bezeichnung": "Gehäuse",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 934,
+        "marktwertNeu": null,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-07-31"
       }
     ],
-    "marktwertGebraucht": 972,
+    "marktwertGebraucht": 934,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": null,
-    "marktDatenStand": "2026-07-27"
+    "marktDatenStand": "2026-07-31"
   },
   {
     "id": "kat-0340",
@@ -7367,13 +7403,17 @@
     "varianten": [
       {
         "bezeichnung": "Gehäuse",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 875,
+        "marktwertNeu": 1559,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-07-31"
       }
     ],
-    "marktwertGebraucht": 867,
+    "marktwertGebraucht": 875,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 1559,
-    "marktDatenStand": "2026-07-27"
+    "marktDatenStand": "2026-07-31"
   },
   {
     "id": "kat-0341",
@@ -7385,13 +7425,17 @@
     "varianten": [
       {
         "bezeichnung": "Gehäuse",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 1494,
+        "marktwertNeu": 1610,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-07-31"
       }
     ],
-    "marktwertGebraucht": 1509,
+    "marktwertGebraucht": 1494,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 1610,
-    "marktDatenStand": "2026-07-27"
+    "marktDatenStand": "2026-07-31"
   },
   {
     "id": "kat-0342",
@@ -7403,13 +7447,17 @@
     "varianten": [
       {
         "bezeichnung": "Gehäuse",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 889,
+        "marktwertNeu": 1397,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-07-31"
       }
     ],
-    "marktwertGebraucht": 906,
+    "marktwertGebraucht": 889,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 1397,
-    "marktDatenStand": "2026-07-27"
+    "marktDatenStand": "2026-07-31"
   },
   {
     "id": "kat-0343",
@@ -7437,13 +7485,17 @@
     "varianten": [
       {
         "bezeichnung": "Gehäuse",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 442,
+        "marktwertNeu": 487,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-07-31"
       }
     ],
-    "marktwertGebraucht": 457,
+    "marktwertGebraucht": 442,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 595,
-    "marktDatenStand": "2026-07-27"
+    "marktwertNeu": 487,
+    "marktDatenStand": "2026-07-31"
   },
   {
     "id": "kat-0345",
@@ -7503,13 +7555,17 @@
     "varianten": [
       {
         "bezeichnung": "Gehäuse",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 1610,
+        "marktwertNeu": null,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-07-31"
       }
     ],
-    "marktwertGebraucht": 1658,
+    "marktwertGebraucht": 1610,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": null,
-    "marktDatenStand": "2026-07-27"
+    "marktDatenStand": "2026-07-31"
   },
   {
     "id": "kat-0349",
@@ -7537,13 +7593,17 @@
     "varianten": [
       {
         "bezeichnung": "Gehäuse",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 589,
+        "marktwertNeu": null,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-07-31"
       }
     ],
-    "marktwertGebraucht": 1055,
+    "marktwertGebraucht": 589,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": null,
-    "marktDatenStand": "2026-07-27"
+    "marktDatenStand": "2026-07-31"
   },
   {
     "id": "kat-0351",
