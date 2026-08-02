@@ -3,6 +3,52 @@
 Sammelstelle für Dinge, die bewusst nicht automatisch entschieden wurden und noch eine
 manuelle Prüfung durch den Betreiber brauchen.
 
+## NOCH OFFEN: /admin/ hat keinen Zugriffsschutz im Code (02.08.2026)
+
+**Ausgangspunkt:** Betreiber ging davon aus, eine 5-Tap-Geste auf die E-Mail-Adresse öffne ein
+Login-Formular für den Admin-Bereich. Prüfung ergab: **diese Geste existiert nicht** - weder im
+aktuellen Code noch je in der Git-Historie (`git log --all -S` auf typische Bezeichner wie
+"tapCount", "5 Taps", "clickTimes" ohne Treffer; `admin/public/index.html`, `admin/public/
+admin.js`, `admin/server.js`, `main.js` und alle `*.html` durchsucht - kein Login-Formular, kein
+Passwort-Feld, kein Session-/Auth-Check irgendwo). Nicht kaputt, nie gebaut.
+
+**Live-Prüfung der tatsächlichen Exposition (02.08.2026):**
+- `https://mrphone-web.vercel.app/admin/`, `/admin`, `/admin/index.html`, `/admin/admin.js` →
+  alle HTTP 404. Zum Vergleich: `/` und `/sortiment.html` → HTTP 200 (Seite läuft normal).
+- Ursache: `.github/workflows/deploy.yml` baut das GitHub-Pages-Artefakt explizit mit
+  `rsync --exclude='admin' --exclude='.github' --exclude='.git' ./ _site/` - der komplette
+  `admin/`-Ordner landet nie im ausgelieferten Verzeichnis. Die Vercel-Instanz zeigt live
+  dasselbe Bild (ebenfalls 404), landet also offenbar auf demselben statischen Stand.
+- `admin/server.js` (der Express-Prozess mit den schreibenden API-Routen) läuft nachweislich
+  nur lokal auf dem Rechner des Betreibers - auf GitHub Pages/Vercel läuft kein Node-Prozess,
+  nur statische Dateien. Ohne laufenden Server gibt es live keinen Schreib-Endpunkt, den jemand
+  ohne Login ansprechen könnte.
+- **Einordnung: aktuell kein ausnutzbares Risiko in der Praxis**, weil der Admin-Server durch
+  Infrastruktur (nicht deployed) geschützt ist - nicht durch Code/Absicht. Das ist der
+  entscheidende Unterschied zu einem echten Zugriffsschutz: Sobald `admin/` je aus dem
+  `--exclude` fällt, versehentlich mitdeployed wird, oder eine künftige Vercel-Konfiguration den
+  Node-Server doch als Funktion ausführt, ist der komplette Admin-Bereich (Preise/Bestand/
+  Angebote bearbeiten, "Verkauf veröffentlichen") sofort ungeschützt erreichbar - `admin/
+  server.js` selbst hat keinerlei Passwort-/Session-/Token-Prüfung, unabhängig vom Deployment.
+- Nebenbefund, kein neues Risiko: `ankauf-preise.json` und `bestand.json` sind live direkt als
+  JSON abrufbar (HTTP 200) - das sind aber dieselben Daten, die ohnehin öffentlich auf der Seite
+  angezeigt werden (Sortiment/Ankaufsrechner), keine zusätzliche Exposition.
+
+**Secrets-Scan im ausgelieferten Frontend-Code (02.08.2026):** komplettes Repo per
+`git grep` nach API-Key-/Passwort-/Token-/Private-Key-Mustern durchsucht (getrackte Dateien) -
+keine Treffer. Kein `.env` im Repo (weder getrackt noch lokal vorhanden). `backups/` ist über
+`.gitignore` ausgeschlossen und kann dadurch gar nicht ins Deployment gelangen. Die eBay-
+Zugangsdaten (`EBAY_CLIENT_ID`/`EBAY_CLIENT_SECRET`) werden ausschließlich serverseitig über
+`process.env` gelesen (`scripts/lib/search-client.js`, `scripts/update-ankaufspreise.js`),
+gesetzt über verschlüsselte GitHub-Actions-Repository-Secrets (`.github/workflows/
+preise-update.yml`) - korrektes Muster, taucht in keiner ausgelieferten HTML-/JS-Datei auf.
+
+**Lösungsansatz für später (nicht Teil dieser Session - Sicherheitsfunktionen bewusst nicht
+nebenbei bauen):** echter serverseitiger Schutz, sobald der Admin-Bereich live erreichbar sein
+soll - z. B. eine Vercel Serverless Function mit eigener Session-/Token-Prüfung, oder Vercel
+Password Protection auf Plattform-Ebene. **Nicht** ein Passwort im Frontend-JS hardcoden oder
+vorausfüllen - das wäre im Quelltext für jeden Besucher lesbar und kein echter Schutz.
+
 ## GELÖST 28.07.2026: Speichervarianten-Audit (kompletter Katalog, 449 Geräte)
 
 Systematischer Abgleich aller Speichervarianten gegen Herstellerangaben (Websuche wo nicht aus
