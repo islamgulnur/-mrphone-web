@@ -1,0 +1,22 @@
+# Interne Dateien, die nie an den Browser ausgeliefert werden sollen (Vercel läuft im
+# Zero-Config-Static-Modus, liefert ohne diese Liste das komplette Repo roh aus).
+# Absichtlich einzeln aufgelistete .md-Dateien statt *.md - siehe OFFENE-PUNKTE.md.
+
+admin/
+scripts/
+.github/
+logs/
+.claude/
+pricing-config.js
+validate-data.js
+
+AI_RULES.md
+ANALYTICS-SETUP.md
+BILDER-TODO.md
+CLAUDE.md
+EBAY-SETUP.md
+EINTRAEGE-TODO.md
+MEINE-AUFGABEN.md
+OFFENE-PUNKTE.md
+PREISE-ANLEITUNG.md
+PRODUKTE-ANLEITUNG.md
