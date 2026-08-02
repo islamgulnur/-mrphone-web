@@ -422,7 +422,7 @@ function rund(zahl) {
   return Number.isFinite(zahl) ? Math.round(zahl) : "–";
 }
 
-function schreibeLog({ datum, protokolle, dryRun }) {
+function schreibeLog({ datum, protokolle, speicherKonsistenzProtokoll, dryRun }) {
   const pruefen = protokolle.filter((p) => p.typ === "pruefen");
   const aktualisiert = protokolle.filter((p) => p.typ === "aktualisiert");
   const uebersprungen = protokolle.filter((p) => p.typ === "uebersprungen");
@@ -432,6 +432,15 @@ function schreibeLog({ datum, protokolle, dryRun }) {
   teile.push("");
   teile.push("Aktualisiert: " + aktualisiert.length + " · Übersprungen: " + uebersprungen.length + " · PRÜFEN: " + pruefen.length);
   teile.push("");
+
+  if (speicherKonsistenzProtokoll && speicherKonsistenzProtokoll.length) {
+    teile.push("## 📉 Speicher-Konsistenzkappung (" + speicherKonsistenzProtokoll.length + ")");
+    teile.push("Kleinere Speichervariante lag über einer größeren - auf deren Niveau gekappt (siehe OFFENE-PUNKTE.md).");
+    speicherKonsistenzProtokoll.forEach((a) => {
+      teile.push("- " + a.marke + " " + a.modell + " (" + a.variante + "), " + a.stufe + ": " + rund(a.alt) + " € → " + rund(a.neu) + " €");
+    });
+    teile.push("");
+  }
 
   if (pruefen.length) {
     teile.push("## ⚠️ PRÜFEN (" + pruefen.length + ")");
@@ -510,6 +519,7 @@ async function main() {
   const katalogUpdates = new Map(); // id -> { marktwertGebraucht, marktwertNeu } (Basis-Variante, Geräte-Ebene)
   const katalogVariantenUpdates = new Map(); // id -> Map(bezeichnung -> { marktwertGebraucht, marktwertNeu })
   const ergebnisListe = [];
+  const speicherKonsistenzProtokoll = [];
 
   for (const geraet of katalog) {
     const altGeraet = ankaufAltById.get(geraet.id);
@@ -555,6 +565,17 @@ async function main() {
         katalogVariantenUpdates.get(geraet.id).set(variante.bezeichnung, ergebnis.marktwerte);
       }
     }
+
+    // Speicher-Konsistenzregel: läuft NACH allen bestehenden Leitplanken (Tagesbremse,
+    // Konsistenzregel 1, neuVersiegelt-Formel) und nach deren Rundung, über ALLE Varianten
+    // dieses Geräts (auch heute nicht verarbeitete/eingefrorene) - siehe OFFENE-PUNKTE.md.
+    const speicherAenderungen = pricing.wendeSpeicherKonsistenzAn(neueVarianten);
+    speicherAenderungen.forEach((a) => {
+      speicherKonsistenzProtokoll.push({
+        marke: geraet.marke, modell: geraet.modell, variante: a.bezeichnung,
+        stufe: a.stufe, alt: a.alt, neu: a.neu,
+      });
+    });
 
     ergebnisListe.push({
       id: geraet.id,
@@ -605,10 +626,13 @@ async function main() {
 
   console.log(
     "\nZusammenfassung: " + aktualisiertAnzahl + " Geräte aktualisiert, " +
-    uebersprungenAnzahl + " übersprungen, " + pruefenAnzahl + " PRÜFEN-Fälle."
+    uebersprungenAnzahl + " übersprungen, " + pruefenAnzahl + " PRÜFEN-Fälle." +
+    (speicherKonsistenzProtokoll.length
+      ? " " + speicherKonsistenzProtokoll.length + " Speicher-Konsistenzkappung(en) (kleinere Variante > größere)."
+      : "")
   );
 
-  schreibeLog({ datum, protokolle, dryRun });
+  schreibeLog({ datum, protokolle, speicherKonsistenzProtokoll, dryRun });
 
   if (dryRun) {
     console.log("\nDry-Run beendet: keine Datei geschrieben, kein Commit.");

@@ -327,6 +327,49 @@ function berechnePreise(geraet, variante, bestandListe, niveauProzent) {
 
 // Konsistenzregel: Ankaufspreis darf nie über dem eigenen Verkaufspreis desselben Modells liegen.
 // Gibt eine Liste von Verstößen zurück (leer = alles konsistent).
+// Konsistenzregel "Speichergröße": größere Variante (höheres uvpDelta) muss in JEDER
+// Zustandsstufe >= der kleineren sein - sonst würde der Ankauf einer kleineren Speichergröße
+// mehr zahlen als für eine größere desselben Geräts. Läuft NACH allen anderen Leitplanken
+// (Tagesbremse, Konsistenzregel 1/eigener VK, neuVersiegelt-Formel) und nach deren Rundung -
+// prüft also das jeweils fertige Endergebnis pro Variante, nicht ein Zwischenergebnis.
+//
+// Richtung ausschließlich abwärts: bei einem Verstoß wird NUR die kleinere Variante auf das
+// Niveau der größeren gekappt, die größere wird nie angehoben (kein zusätzliches Verlustrisiko
+// durch diese Regel). preisQuelle "manuell" ist ein Notventil - solche Varianten werden von der
+// Regel komplett übersprungen: nie selbst verändert, und ihr Wert wird auch nicht als Referenz
+// für Nachbar-Varianten herangezogen (weder als Ober- noch als Untergrenze).
+//
+// Verfahren pro Zustandsstufe: Varianten nach uvpDelta aufsteigend sortieren, von der GRÖSSTEN
+// zur kleinsten durchgehen und eine laufende Obergrenze (ceiling) mitführen. Das garantiert eine
+// durchgehend nicht-fallende Kette auch bei 3+ Speicherstufen in einem Durchlauf.
+function wendeSpeicherKonsistenzAn(varianten) {
+  const aenderungen = [];
+  const sortiert = varianten
+    .filter((v) => v && v.preise)
+    .sort((a, b) => (Number(a.uvpDelta) || 0) - (Number(b.uvpDelta) || 0));
+
+  ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
+    let ceiling = null;
+    for (let i = sortiert.length - 1; i >= 0; i--) {
+      const variante = sortiert[i];
+      if (variante.preisQuelle === "manuell") continue; // Notventil: weder kappen noch als Referenz nutzen
+      let wert = variante.preise[stufe];
+      if (wert == null) continue; // keine Zahl in dieser Stufe -> kein Constraint, ceiling bleibt
+
+      if (ceiling != null && wert > ceiling) {
+        aenderungen.push({
+          bezeichnung: variante.bezeichnung, stufe, alt: wert, neu: ceiling,
+        });
+        variante.preise[stufe] = ceiling;
+        wert = ceiling;
+      }
+      ceiling = wert;
+    }
+  });
+
+  return aenderungen;
+}
+
 function pruefeKonsistenz(preise, wiederverkaufswerte) {
   const verstoesse = [];
   ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
@@ -363,6 +406,7 @@ module.exports = {
   NEU_VERSIEGELT_MARKTWERT_VERWERFEN_SCHWELLE,
   pruefeMarktwertNeuPlausibilitaet,
   pruefeKonsistenz,
+  wendeSpeicherKonsistenzAn,
   liesAnkaufsniveau,
   schreibeAnkaufsniveau,
   rundeAuf5,
