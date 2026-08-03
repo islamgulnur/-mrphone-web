@@ -1,0 +1,46 @@
+name: Header/Footer aus Templates bauen
+
+# Läuft nur bei Änderungen an den Partials selbst - nicht bei jeder Seiten-Änderung,
+# sonst würde der eigene Rückcommit (Schritt unten) den Workflow erneut auslösen.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "templates/partials/**"
+      - "scripts/build-templates.js"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-templates
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Header/Footer aus Partials bauen
+        run: node scripts/build-templates.js
+
+      - name: Änderungen committen (nur bei echten Änderungen)
+        run: |
+          if git diff --quiet; then
+            echo "Keine Änderungen - kein Commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -u -- '*.html' en ratgeber
+          git commit -m "Header/Footer aus Templates neu gebaut [skip ci]"
+          git push

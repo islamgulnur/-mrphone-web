@@ -4,6 +4,7 @@
 
 admin/
 scripts/
+templates/
 .github/
 logs/
 .claude/
