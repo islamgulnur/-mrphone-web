@@ -1,0 +1,177 @@
+/* =========================================================
+   index-styles.css - NUR für index.html verlinkt.
+   Reskin der Startseite auf Schwarz+Logo-Grün-Glassmorphism
+   (Design freigegeben, siehe .design-preview/homepage-prototype.html).
+   Lädt NACH styles.css/phone-bg.css und überschreibt gezielt dieselben
+   Klassennamen - styles.css selbst bleibt unangetastet, alle anderen
+   25 Seiten sind dadurch nicht betroffen. Layout-Mechanik (Grid-Spalten,
+   .reveal/.is-visible-Transitions, [hidden]) wird nicht angefasst, nur
+   Farbe/Typografie/Radius/Schatten.
+   ========================================================= */
+
+:root {
+  --ink: #0a0c08;
+  --ink-raised: #12150e;
+  --ink-raised-2: #1a1e13;
+  --glass: rgba(237, 241, 230, 0.055);
+  --glass-strong: rgba(237, 241, 230, 0.09);
+  --hairline: rgba(141, 198, 63, 0.20);
+  --hairline-strong: rgba(141, 198, 63, 0.4);
+  --signal: #8dc63f;
+  --signal-deep: #6a9e2e;
+  --signal-wash: rgba(141, 198, 63, 0.12);
+  --paper: #edf1e6;
+  --steel: #8c917f;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas, monospace;
+}
+
+body { background: var(--ink); color: var(--paper); }
+h1, h2, h3 { font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
+
+/* ---------- Header ---------- */
+.site-header {
+  background: rgba(10, 12, 8, 0.86);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border-bottom: 1px solid var(--hairline);
+}
+.logo-link img { background: var(--paper); padding: 0.25rem 0.5rem; border-radius: 8px; }
+.main-nav a { color: var(--paper); }
+.main-nav a:hover, .main-nav a[aria-current="page"] { color: var(--signal); }
+.header-cta .header-phone { color: var(--paper); }
+.status-badge { background: var(--glass); color: var(--steel); border: 1px solid var(--hairline); }
+.status-badge.is-open { background: var(--signal-wash); color: var(--signal); }
+
+/* ---------- Buttons ---------- */
+.btn { border-radius: 10px; }
+.btn-primary { background: var(--signal); color: var(--ink); }
+.btn-primary:hover, .btn-primary:focus-visible { background: var(--signal-deep); }
+.btn-outline { border-color: var(--hairline-strong); color: var(--paper); }
+.btn-outline:hover, .btn-outline:focus-visible { background: var(--glass-strong); color: var(--paper); }
+.btn-outline-dark { border-color: var(--hairline-strong); color: var(--paper); }
+.btn-outline-dark:hover, .btn-outline-dark:focus-visible { background: var(--glass-strong); color: var(--paper); }
+
+/* ---------- Hero (Basis schon dunkel via .hero{background:var(--black)} - hier nur Feinschliff) ---------- */
+.hero { background: var(--ink); position: relative; overflow: clip; }
+.hero::before {
+  content: "";
+  position: absolute; top: -20%; right: -10%;
+  width: 55vw; height: 55vw; max-width: 620px; max-height: 620px;
+  background: radial-gradient(circle, var(--signal-wash), transparent 70%);
+  pointer-events: none;
+}
+.hero-badge { background: var(--signal-wash); color: var(--signal); border: 1px solid var(--hairline); }
+.hero-lead { color: var(--steel); }
+.hero-image-wrap { border: 1px solid var(--hairline); box-shadow: none; position: relative; z-index: 1; }
+.hero-content .bewertungen-kompakt-text { color: var(--steel); }
+
+/* ---------- Ankaufsrechner-Teaser (neu) ---------- */
+.ankauf-teaser { padding-block: 0 2.2rem; position: relative; }
+.ankauf-card {
+  display: block;
+  background: linear-gradient(155deg, var(--signal-wash), var(--glass) 55%);
+  border: 1px solid var(--hairline-strong);
+  border-radius: 16px;
+  padding: 1.6rem;
+  color: var(--paper);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.ankauf-card:hover { border-color: var(--signal); transform: translateY(-2px); }
+.ankauf-card .eyebrow { color: var(--signal); }
+.ankauf-card h2 { color: var(--paper); margin: 0.3rem 0 0.6rem; }
+.ankauf-card p { color: var(--steel); margin: 0; max-width: 60ch; }
+.ankauf-card .cta-row { margin-top: 1.2rem; }
+
+/* ---------- Bewertungen (Struktur/Data-Hooks unverändert, main.js füllt sie) ---------- */
+.bewertungen-section { padding-block: 2.6rem; }
+.bewertungen-summary { color: var(--paper); }
+.sterne { color: var(--signal); }
+.bewertungen-anzahl { color: var(--steel); }
+.zitat-karte {
+  background: var(--glass);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  padding: 1.1rem 1.2rem;
+  color: var(--paper);
+}
+.zitat-karte .sterne { color: var(--signal); display: block; margin-bottom: 0.5rem; font-size: 0.85rem; }
+.zitat-karte blockquote { margin: 0 0 0.6rem; font-style: italic; color: var(--paper); }
+.zitat-karte figcaption { color: var(--steel); font-size: 0.82rem; }
+.bewertungen-google-link { color: var(--signal); font-weight: 600; }
+
+/* ---------- Angebote (Struktur/Data-Hooks unverändert) ---------- */
+.angebote-section { padding-block: 2.6rem; }
+.angebot-card {
+  background: var(--glass);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  overflow: hidden;
+  color: var(--paper);
+}
+.angebot-body { padding: 1.1rem; }
+.angebot-price { color: var(--signal); font-weight: 700; }
+.angebot-oldprice { color: var(--steel); text-decoration: line-through; }
+.angebot-warranty { color: var(--steel); font-size: 0.85rem; }
+
+/* ---------- Leistungen ---------- */
+#leistungen { padding-block: 3rem 1.6rem; }
+.tile {
+  background: var(--glass);
+  border: 1px solid var(--hairline);
+  color: var(--paper);
+  box-shadow: none;
+}
+.tile:hover { border-color: var(--signal); box-shadow: none; }
+.tile-icon { background: var(--signal-wash); border: 1px solid var(--hairline); }
+.tile p { color: var(--steel); }
+a.tile { border-color: var(--hairline-strong); }
+
+/* ---------- Unser Sortiment (kategorie-grid war schon dunkel, nur Akzent nachschärfen) ---------- */
+#unser-sortiment { background: var(--ink-raised) !important; padding-block: 2.6rem; }
+.sortiment-seo-text { color: var(--steel); }
+
+/* ---------- Vertrauen / bg-dark / bg-light ---------- */
+.bg-dark { background: var(--ink-raised); }
+.bg-light { background: var(--ink); }
+.trust-item p { color: var(--steel); }
+
+/* ---------- Split-Sektionen (Unser Laden, Tablets) ---------- */
+.split-media img { border: 1px solid var(--hairline); box-shadow: none; }
+.split-content p { color: var(--steel); }
+
+/* ---------- Galerien ---------- */
+.gallery-grid a { border: 1px solid var(--hairline); border-radius: 12px; }
+
+/* ---------- Zubehör-Badge ---------- */
+.badge-inline { background: var(--signal-wash); color: var(--signal); border: 1px solid var(--hairline); }
+
+/* ---------- Bewertungs-CTA ---------- */
+.review-cta { background: var(--ink-raised); }
+.review-cta h2, .review-cta p { color: var(--paper); }
+.review-cta .stars { color: var(--signal); }
+
+/* ---------- Anfahrt / info-box ---------- */
+.info-box {
+  background: var(--glass);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+}
+.info-box dt { color: var(--signal); }
+.info-box dd { color: var(--paper); }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--ink-raised); border-top: 1px solid var(--hairline); }
+.footer-col p, .footer-col li { color: var(--steel); }
+.footer-col a { color: var(--paper); }
+.footer-col a:hover { color: var(--signal); }
+.footer-logo { background: var(--paper); padding: 0.3rem 0.6rem; border-radius: 8px; }
+.footer-bottom { color: var(--steel); border-top-color: var(--hairline); }
+
+/* ---------- WhatsApp-Button ---------- */
+.whatsapp-float { background: var(--signal); }
+.whatsapp-float:hover { background: var(--signal-deep); }
+
+@media (min-width: 640px) {
+  .ankauf-card { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+}

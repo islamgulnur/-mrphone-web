@@ -25,11 +25,11 @@
 <meta name="twitter:description" content="Handy-Verkauf, Ankauf & Express-Reparatur mitten auf der Zeil in Frankfurt.">
 <meta name="twitter:image" content="https://www.mr-phone-frankfurt.de/images/mr-phone-zeil-frankfurt-aussenansicht.jpg">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="phone-bg.css">
+<!-- Nur auf index.html: Schwarz+Grün-Glassmorphism-Reskin, siehe .design-preview/homepage-prototype.html.
+     Systemschriften statt Google Fonts, deshalb kein Inter-Link mehr auf dieser Seite. -->
+<link rel="stylesheet" href="index-styles.css">
 
 <script type="application/ld+json">
 {
@@ -162,6 +162,22 @@
     </div>
   </section>
 
+  <!-- ANKAUFSRECHNER-TEASER -->
+  <section class="ankauf-teaser">
+    <div class="container">
+      <a class="ankauf-card reveal" href="handy-ankauf-frankfurt.html#ankaufsrechner">
+        <div>
+          <span class="eyebrow">Sofort-Ankauf</span>
+          <h2>Was ist Ihr altes Handy wert?</h2>
+          <p>Gerät und Zustand wählen, Preis in Sekunden sehen – unverbindlich, dann per WhatsApp 24&nbsp;h sichern und im Laden bar auszahlen lassen.</p>
+        </div>
+        <div class="cta-row">
+          <span class="btn btn-primary">Preis berechnen →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
   <!-- GOOGLE-BEWERTUNGEN -->
   <section id="bewertungen" class="bewertungen-section reveal" hidden>
     <div class="container">
@@ -212,11 +228,6 @@
           <h3>Express-Reparatur</h3>
           <p>Display, Akku, Wasserschaden, Kamera oder Ladebuchse defekt? Wir reparieren fachgerecht – oft noch am selben Tag.</p>
         </div>
-        <a class="tile" href="handy-ankauf-frankfurt.html#ankaufsrechner">
-          <div class="tile-icon">💶</div>
-          <h3>Sofort-Ankauf: Preis online berechnen</h3>
-          <p>Ankaufsrechner nutzen, Preis per WhatsApp 24h sichern und im Laden auf der Zeil bar auszahlen lassen – kein Versand, keine Wartezeit.</p>
-        </a>
         <div class="tile">
           <div class="tile-icon">🛡️</div>
           <h3>6 Monate Garantie</h3>
