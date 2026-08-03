@@ -125,7 +125,10 @@ function main() {
 
   let seiten = findeSeiten();
   if (onlyListe) {
-    seiten = seiten.filter((s) => onlyListe.includes(s.basename) || onlyListe.includes(s.relPath));
+    // Nur relPath vergleichen (z.B. "index.html" vs. "en/index.html") - der reine
+    // Dateiname ist nicht eindeutig, da index.html in drei Verzeichnissen existiert.
+    const normalisiert = onlyListe.map((s) => s.split(/[\\/]/).join(path.sep));
+    seiten = seiten.filter((s) => normalisiert.includes(s.relPath));
   }
 
   const geaendert = [];
