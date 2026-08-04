@@ -1,0 +1,55 @@
+/* =========================================================
+   handy-ankauf-dark.css - NUR für handy-ankauf-frankfurt.html.
+   Ergänzt dark-theme.css um Klassen, die ausschließlich der
+   Ankaufsrechner und die "Ablauf"-Sektion auf dieser Seite nutzen
+   (styles.css-Basis dort größtenteils weiße Karten auf hellem Grund).
+   Lädt NACH styles.css UND dark-theme.css.
+   ========================================================= */
+
+/* ---------- Ankaufsrechner-Karte ---------- */
+.rechner-card {
+  background: var(--glass-strong);
+  border: 1px solid var(--hairline);
+}
+
+.rechner-progress-step { color: var(--steel); }
+.rechner-progress-step:not(:first-child)::before { background: var(--hairline-strong); }
+.rechner-progress-circle { border-color: var(--hairline-strong); color: var(--steel); }
+.rechner-progress-check { color: var(--ink); }
+/* Bug in styles.css selbst gefunden (nicht reskin-bedingt, betrifft auch die helle Basis-
+   Version ueberall): .active .rechner-progress-circle setzt color:var(--white) auf
+   background:var(--green) - 2.04:1, WCAG-Fail unabhaengig vom Theme. Hier mitgefixt,
+   styles.css selbst bewusst nicht angefasst (siehe Hinweis an Betreiber). */
+.rechner-progress-step.active .rechner-progress-circle { color: var(--ink); }
+.rechner-progress-step.active .rechner-progress-label { color: var(--paper); }
+.rechner-progress-step.done .rechner-progress-label { color: var(--steel); }
+
+.rechner-back { color: var(--steel); }
+.rechner-back:hover { color: var(--paper); }
+
+.rechner-chip { border-color: var(--hairline-strong); background: var(--glass); color: var(--steel); }
+.rechner-chip:hover { color: var(--paper); }
+.rechner-chip.active { background: var(--signal); color: var(--ink); border-color: var(--signal); }
+
+.rechner-search input { border: 1px solid var(--hairline-strong); background: var(--glass); color: var(--paper); }
+
+.rechner-modell-btn { border-color: var(--hairline-strong); background: var(--glass); color: var(--paper); }
+.rechner-modell-btn .modell-marke { color: var(--steel); }
+
+.rechner-variante-btn { border-color: var(--hairline-strong); background: var(--glass); color: var(--paper); }
+
+.rechner-zustand-btn { border-color: var(--hairline-strong); background: var(--glass); color: var(--paper); }
+.rechner-zustand-btn span { color: var(--steel); }
+
+.rechner-ergebnis-label { color: var(--steel); }
+.rechner-ergebnis-preis { color: var(--signal); }
+.rechner-ergebnis-sub { color: var(--steel); }
+.rechner-hinweis { color: var(--steel); }
+.rechner-hinweis-kategorie { color: var(--signal); }
+.rechner-disclaimer { color: var(--steel); }
+
+.rechner-fallback { color: var(--steel); }
+.rechner-fallback a { color: var(--signal); }
+
+/* ---------- Ablauf-Schritte ---------- */
+.step { background: var(--glass); border: 1px solid var(--hairline); box-shadow: none; }

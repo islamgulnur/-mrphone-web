@@ -1,0 +1,175 @@
+/* =========================================================
+   dark-theme.css - Schwarz+Logo-Grün-Glassmorphism-Reskin,
+   geteilt von allen reskinnten Seiten (siehe Ladeliste unten in
+   den jeweiligen <head>-Blöcken). Portiert 1:1 aus index-styles.css
+   (dort "Design freigegeben"), ergänzt um Klassen, die auf
+   index.html nicht vorkommen (Breadcrumb, Filter, FAQ, Sortiment-
+   Badges usw.).
+   Lädt NACH styles.css und überschreibt gezielt dieselben
+   Klassennamen - styles.css selbst bleibt unangetastet, damit noch
+   nicht umgebaute Seiten optisch unverändert bleiben. Layout-Mechanik
+   (Grid-Spalten, .reveal/.is-visible-Transitions, [hidden]) wird
+   nicht angefasst, nur Farbe/Typografie/Radius/Schatten.
+   ========================================================= */
+
+:root {
+  --ink: #0a0c08;
+  --ink-raised: #12150e;
+  --ink-raised-2: #1a1e13;
+  --glass: rgba(237, 241, 230, 0.055);
+  --glass-strong: rgba(237, 241, 230, 0.09);
+  --hairline: rgba(141, 198, 63, 0.20);
+  --hairline-strong: rgba(141, 198, 63, 0.4);
+  --signal: #8dc63f;
+  --signal-deep: #6a9e2e;
+  --signal-wash: rgba(141, 198, 63, 0.12);
+  --paper: #edf1e6;
+  --steel: #8c917f;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas, monospace;
+}
+
+body { background: var(--ink); color: var(--paper); }
+h1, h2, h3 { font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
+
+/* ---------- Header ---------- */
+.site-header {
+  background: rgba(10, 12, 8, 0.86);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border-bottom: 1px solid var(--hairline);
+}
+.logo-link img { background: var(--paper); padding: 0.25rem 0.5rem; border-radius: 8px; }
+.main-nav a { color: var(--paper); }
+.main-nav a:hover, .main-nav a[aria-current="page"] { color: var(--signal); }
+/* Bug behoben (siehe index-styles.css): .lang-switch nutzt color:var(--ink), was hier
+   die dunkle Seitenfarbe selbst ist -> Text unsichtbar in der eigenen dunklen Kopfzeile. */
+.lang-switch { color: var(--paper); }
+/* Bug behoben: .main-nav a (Spezifitaet 0,1,1) schlaegt .btn-primary (0,1,0) - der mobile
+   "Per WhatsApp anfragen"-Button in der Nav bekam dadurch helles statt dunkles Text auf
+   gruenem Grund. */
+.main-nav a.btn-primary { color: var(--ink); }
+.header-cta .header-phone { color: var(--paper); }
+.status-badge { background: var(--glass); color: var(--steel); border: 1px solid var(--hairline); }
+.status-badge.is-open { background: var(--signal-wash); color: var(--signal); }
+
+/* ---------- Buttons ---------- */
+.btn { border-radius: 10px; }
+.btn-primary { background: var(--signal); color: var(--ink); }
+.btn-primary:hover, .btn-primary:focus-visible { background: var(--signal-deep); }
+.btn-outline { border-color: var(--hairline-strong); color: var(--paper); }
+.btn-outline:hover, .btn-outline:focus-visible { background: var(--glass-strong); color: var(--paper); }
+.btn-outline-dark { border-color: var(--hairline-strong); color: var(--paper); }
+.btn-outline-dark:hover, .btn-outline-dark:focus-visible { background: var(--glass-strong); color: var(--paper); }
+
+/* ---------- Seiten-Header / bg-dark / bg-light ---------- */
+.bg-dark { background: var(--ink-raised); }
+.bg-light { background: var(--ink); }
+.hero-lead { color: var(--steel); }
+
+/* ---------- Breadcrumb ---------- */
+.breadcrumb { color: var(--steel); }
+
+/* ---------- Bewertungen (Struktur/Data-Hooks unveraendert, main.js fuellt sie) ----------
+   Bug behoben: .bewertungen-section hatte in der ersten Fassung kein Override -> fiel auf
+   das helle styles.css-Grau zurueck, waehrend der Text hell blieb, WCAG-Fail. */
+.bewertungen-section { background: var(--ink-raised); padding-block: 2.6rem; }
+.bewertungen-summary { color: var(--paper); }
+.sterne { color: var(--signal); }
+.bewertungen-anzahl { color: var(--steel); }
+/* Bug behoben: .trust-badge ist eine weisse Pille (Hero, Ankauf-Teaser, Ankaufsrechner) -
+   das globale Signal-Gruen der Sterne hat auf Weiss nur 2.04:1 Kontrast, WCAG AA braucht
+   4.5:1 fuer diese Schriftgroesse. Dunklerer Ton nur in diesem Kontext. */
+.trust-badge .sterne { color: var(--gray-900, #1a1a1a); }
+.zitat-karte {
+  background: var(--glass);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  padding: 1.1rem 1.2rem;
+  color: var(--paper);
+}
+.zitat-karte .sterne { color: var(--signal); display: block; margin-bottom: 0.5rem; font-size: 0.85rem; }
+.zitat-karte blockquote { margin: 0 0 0.6rem; font-style: italic; color: var(--paper); }
+.zitat-karte figcaption { color: var(--steel); font-size: 0.82rem; }
+.bewertungen-google-link { color: var(--signal); font-weight: 600; }
+
+/* ---------- Angebote / Sortiment-Grid (Struktur/Data-Hooks unveraendert) ----------
+   Gleicher Bug wie bei Bewertungen: styles.css setzt background:var(--gray-50). */
+.angebote-section { background: var(--ink-raised); padding-block: 2.6rem; }
+.angebot-card {
+  background: var(--glass);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  overflow: hidden;
+  color: var(--paper);
+}
+.angebot-media { background: var(--ink-raised-2); }
+.angebot-body { padding: 1.1rem; }
+.angebot-price { color: var(--signal); font-weight: 700; }
+.angebot-oldprice { color: var(--steel); text-decoration: line-through; }
+.angebot-warranty { color: var(--steel); font-size: 0.85rem; }
+.angebot-badge.badge-gebraucht { background: var(--glass-strong); color: var(--steel); }
+/* Bug beim Kontrast-Scan gefunden: --green-dark (fuer helle Karten gedacht) kam auf der
+   dunklen Karte nur auf 4.25:1, WCAG AA braucht 4.5:1. Helleres Signal-Gruen stattdessen. */
+.angebot-badge.badge-neu { color: var(--signal); }
+.reservieren-hinweis { color: var(--steel); }
+
+/* ---------- Filter (Sortiment/Kategorie-Seiten) ---------- */
+.filter-inline { color: var(--steel); }
+.filter-inline select {
+  border: 1px solid var(--hairline-strong);
+  color: var(--paper);
+  background: var(--ink-raised);
+}
+.filter-tabs .filter-btn { border-color: var(--hairline-strong); background: var(--ink-raised); color: var(--steel); }
+.filter-tabs .filter-btn:hover { border-color: var(--signal); color: var(--paper); }
+.filter-tabs .filter-btn.active { background: var(--signal); color: var(--ink); border-color: var(--signal); }
+
+/* ---------- Info-Hinweise / leere Listen ---------- */
+.empty-hint {
+  background: var(--glass);
+  border: 1px solid var(--hairline);
+  color: var(--steel);
+}
+.empty-hint a { color: var(--signal); }
+.empty-hint a:hover { color: var(--signal-deep); }
+
+/* ---------- FAQ ---------- */
+.faq-item {
+  background: var(--glass);
+  border: 1px solid var(--hairline);
+  color: var(--paper);
+}
+.faq-item summary::after { color: var(--signal); }
+.faq-item .faq-body { color: var(--steel); }
+
+/* ---------- Vertrauen / Anfahrt / info-box ---------- */
+.trust-item p { color: var(--steel); }
+.info-box {
+  background: var(--glass);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+}
+.info-box dt { color: var(--signal); }
+.info-box dd { color: var(--paper); }
+
+/* ---------- Bewertungs-CTA ---------- */
+.review-cta { background: var(--ink-raised); }
+.review-cta h2, .review-cta p { color: var(--paper); }
+.review-cta .stars { color: var(--signal); }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--ink-raised); border-top: 1px solid var(--hairline); }
+.footer-col p, .footer-col li { color: var(--steel); }
+.footer-col a { color: var(--paper); }
+.footer-col a:hover { color: var(--signal); }
+.footer-logo { background: var(--paper); padding: 0.3rem 0.6rem; border-radius: 8px; }
+.footer-bottom { color: var(--steel); border-top-color: var(--hairline); }
+/* Bug behoben: .bewertungen-kompakt-text hat eine eigene color-Regel in styles.css
+   (--gray-600, fuer helle Footer auf nicht umgebauten Seiten gedacht) - die gewinnt gegen
+   die geerbte --steel-Farbe von .footer-bottom, auch wenn diese Regel hier spaeter laedt. */
+.footer-bottom .bewertungen-kompakt-text { color: var(--steel); }
+
+/* ---------- WhatsApp-Button ---------- */
+.whatsapp-float { background: var(--signal); }
+.whatsapp-float:hover { background: var(--signal-deep); }
