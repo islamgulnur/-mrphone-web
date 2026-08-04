@@ -155,6 +155,47 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
 .review-cta h2, .review-cta p { color: var(--paper); }
 .review-cta .stars { color: var(--signal); }
 
+/* ---------- Leistungs-Kacheln (Kontakt u.a.) ---------- */
+.tile {
+  background: var(--glass);
+  border: 1px solid var(--hairline);
+  color: var(--paper);
+  box-shadow: none;
+}
+.tile:hover { border-color: var(--signal); box-shadow: none; }
+.tile-icon { background: var(--signal-wash); border: 1px solid var(--hairline); }
+.tile p { color: var(--steel); }
+a.tile { border-color: var(--hairline-strong); }
+
+/* ---------- Split-Sektionen (Kontakt/Anfahrt) ---------- */
+.split-media img { border: 1px solid var(--hairline); box-shadow: none; }
+.split-content p { color: var(--steel); }
+.map-embed { border: 1px solid var(--hairline); }
+
+/* ---------- Galerien ---------- */
+.gallery-grid a { border: 1px solid var(--hairline); border-radius: 12px; }
+
+/* ---------- Zubehör-/Express-Badge ---------- */
+.badge-inline { background: var(--signal-wash); color: var(--signal); border: 1px solid var(--hairline); }
+
+/* ---------- Ablauf-Schritte (Reparatur/Ankauf) ---------- */
+.step { background: var(--glass); border: 1px solid var(--hairline); box-shadow: none; }
+
+/* ---------- Reparatur-Preisliste ---------- */
+.service-row { background: var(--glass); border: 1px solid var(--hairline); box-shadow: none; color: var(--paper); }
+.service-row:hover { border-color: var(--signal); }
+.service-row .service-price { color: var(--steel); }
+.service-row .service-price-ab { color: var(--signal); }
+.service-price-hinweis { color: var(--steel); }
+
+/* ---------- Vorher/Nachher-Vergleich ---------- */
+.vn-compare { background: var(--ink-raised-2); }
+.vn-compare.bild-fehlt::after { color: var(--steel); }
+
+/* ---------- Ratgeber ---------- */
+.ratgeber-card { background: var(--glass); border: 1px solid var(--hairline); }
+.ratgeber-card:hover { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35); }
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--ink-raised); border-top: 1px solid var(--hairline); }
 .footer-col p, .footer-col li { color: var(--steel); }

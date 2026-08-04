@@ -45,6 +45,3 @@
 
 .rechner-fallback { color: var(--steel); }
 .rechner-fallback a { color: var(--signal); }
-
-/* ---------- Ablauf-Schritte ---------- */
-.step { background: var(--glass); border: 1px solid var(--hairline); box-shadow: none; }
