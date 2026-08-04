@@ -318,7 +318,25 @@
           el.hidden = false;
         });
 
-        if (section && Array.isArray(data.zitate) && data.zitate.length) {
+        // AggregateRating direkt aus bewertungen.json injizieren, damit das JSON-LD
+        // nie von der sichtbaren Zahl abweichen kann (Google straft widersprüchliche
+        // strukturierte Daten ab) - keine zweite hartcodierte Quelle im HTML.
+        var schemaEl = document.getElementById("schema-localbusiness");
+        if (schemaEl) {
+          try {
+            var schema = JSON.parse(schemaEl.textContent);
+            schema.aggregateRating = {
+              "@type": "AggregateRating",
+              "ratingValue": data.gesamtnote,
+              "reviewCount": data.anzahlBewertungen,
+              "bestRating": 5,
+              "worstRating": 1
+            };
+            schemaEl.textContent = JSON.stringify(schema, null, 2);
+          } catch (e) {}
+        }
+
+        if (section) {
           var noteEl = section.querySelector("[data-bewertungen-note]");
           var anzahlEl = section.querySelector("[data-bewertungen-anzahl]");
           var sterneEl = section.querySelector("[data-bewertungen-sterne]");
@@ -331,8 +349,26 @@
               : data.anzahlBewertungen + " Google-Bewertungen · Stand " + (data.stand || "");
           }
           if (sterneEl) sterneEl.innerHTML = sterneHtml(data.gesamtnote);
-          if (slider) slider.innerHTML = data.zitate.slice(0, 4).map(zitatKarteHtml).join("");
           if (link && data.googleProfilUrl) link.href = data.googleProfilUrl;
+
+          // Platzhalter-Zitate (noch nicht durch echten Wortlaut ersetzt, siehe
+          // OFFENE-PUNKTE.md) nie öffentlich anzeigen - Kennzahl/Link bleiben aber
+          // sichtbar, sobald echte Zitate eingetragen sind, erscheinen die Karten
+          // beim nächsten Laden automatisch wieder.
+          var echteZitate = Array.isArray(data.zitate)
+            ? data.zitate.filter(function (z) {
+                return z && z.text && z.text.indexOf("Platzhalter") === -1;
+              })
+            : [];
+          if (slider) {
+            if (echteZitate.length) {
+              slider.innerHTML = echteZitate.slice(0, 4).map(zitatKarteHtml).join("");
+              slider.hidden = false;
+            } else {
+              slider.hidden = true;
+            }
+          }
+
           section.hidden = false;
           revealElements(section.querySelectorAll(".reveal"));
         }
