@@ -16,11 +16,6 @@
 .rechner-progress-step:not(:first-child)::before { background: var(--hairline-strong); }
 .rechner-progress-circle { border-color: var(--hairline-strong); color: var(--steel); }
 .rechner-progress-check { color: var(--ink); }
-/* Bug in styles.css selbst gefunden (nicht reskin-bedingt, betrifft auch die helle Basis-
-   Version ueberall): .active .rechner-progress-circle setzt color:var(--white) auf
-   background:var(--green) - 2.04:1, WCAG-Fail unabhaengig vom Theme. Hier mitgefixt,
-   styles.css selbst bewusst nicht angefasst (siehe Hinweis an Betreiber). */
-.rechner-progress-step.active .rechner-progress-circle { color: var(--ink); }
 .rechner-progress-step.active .rechner-progress-label { color: var(--paper); }
 .rechner-progress-step.done .rechner-progress-label { color: var(--steel); }
 

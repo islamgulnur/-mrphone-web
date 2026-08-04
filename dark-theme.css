@@ -109,9 +109,6 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
 .angebot-oldprice { color: var(--steel); text-decoration: line-through; }
 .angebot-warranty { color: var(--steel); font-size: 0.85rem; }
 .angebot-badge.badge-gebraucht { background: var(--glass-strong); color: var(--steel); }
-/* Bug beim Kontrast-Scan gefunden: --green-dark (fuer helle Karten gedacht) kam auf der
-   dunklen Karte nur auf 4.25:1, WCAG AA braucht 4.5:1. Helleres Signal-Gruen stattdessen. */
-.angebot-badge.badge-neu { color: var(--signal); }
 .reservieren-hinweis { color: var(--steel); }
 
 /* ---------- Filter (Sortiment/Kategorie-Seiten) ---------- */

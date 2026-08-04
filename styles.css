@@ -1423,8 +1423,8 @@ section {
 }
 
 .angebot-badge.badge-neu {
-  background: rgba(141, 198, 63, 0.18);
-  color: var(--green-dark);
+  background: var(--green);
+  color: var(--black);
 }
 
 .angebot-badge.badge-gebraucht {
@@ -1781,11 +1781,11 @@ section {
   opacity: 0.55;
 }
 
-/* Aktiver Schritt: grüner Kreis mit Glow, weiße Zahl */
+/* Aktiver Schritt: grüner Kreis mit Glow, schwarze Zahl (weiß auf grün war 2.04:1, WCAG-Fail) */
 .rechner-progress-step.active .rechner-progress-circle {
   background: var(--green);
   border-color: var(--green);
-  color: var(--white);
+  color: var(--black);
   box-shadow: 0 0 0 5px rgba(141, 198, 63, 0.22);
 }
 .rechner-progress-step.active .rechner-progress-label {
