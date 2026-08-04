@@ -39,6 +39,15 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
 .logo-link img { background: var(--paper); padding: 0.25rem 0.5rem; border-radius: 8px; }
 .main-nav a { color: var(--paper); }
 .main-nav a:hover, .main-nav a[aria-current="page"] { color: var(--signal); }
+/* Bug behoben: .lang-switch setzt color:var(--ink) in styles.css - dort ohne :root-Definition
+   ein dunkler Textton (Fallback #1a1a1a) fuer helle Header auf den anderen 25 Seiten gedacht.
+   Hier definiert --ink aber die dunkle Seitenfarbe selbst -> Text verschwand exakt in der
+   eigenen dunklen Kopfzeile (Kontrast 1:1, komplett unsichtbar). */
+.lang-switch { color: var(--paper); }
+/* Bug behoben: .main-nav a (Klasse+Typ, Spezifitaet 0,1,1) schlaegt .btn-primary
+   (Spezifitaet 0,1,0) - der mobile "Per WhatsApp anfragen"-Button in der Nav bekam dadurch
+   helles --paper statt dunklem --ink auf gruenem Grund (1.78:1, WCAG-Fail). */
+.main-nav a.btn-primary { color: var(--ink); }
 .header-cta .header-phone { color: var(--paper); }
 .status-badge { background: var(--glass); color: var(--steel); border: 1px solid var(--hairline); }
 .status-badge.is-open { background: var(--signal-wash); color: var(--signal); }
@@ -83,11 +92,17 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
 .ankauf-card p { color: var(--steel); margin: 0; max-width: 60ch; }
 .ankauf-card .cta-row { margin-top: 1.2rem; }
 
-/* ---------- Bewertungen (Struktur/Data-Hooks unverändert, main.js füllt sie) ---------- */
-.bewertungen-section { padding-block: 2.6rem; }
+/* ---------- Bewertungen (Struktur/Data-Hooks unverändert, main.js füllt sie) ----------
+   Bug behoben: styles.css setzt hier background:var(--gray-50) (hellgrau), das war in der
+   ersten Fassung nicht überschrieben -> heller Text auf hellem Grund, WCAG-Fail. */
+.bewertungen-section { background: var(--ink-raised); padding-block: 2.6rem; }
 .bewertungen-summary { color: var(--paper); }
 .sterne { color: var(--signal); }
 .bewertungen-anzahl { color: var(--steel); }
+/* Bug behoben: .trust-badge ist eine weisse Pille (Hero, Ankauf-Teaser, Ankaufsrechner) -
+   das globale Signal-Gruen der Sterne (--signal) hat auf Weiss nur 2.04:1 Kontrast,
+   WCAG AA braucht 4.5:1 fuer diese Schriftgroesse. Dunklerer Ton nur in diesem Kontext. */
+.trust-badge .sterne { color: var(--gray-900, #1a1a1a); }
 .zitat-karte {
   background: var(--glass);
   border: 1px solid var(--hairline);
@@ -100,8 +115,11 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
 .zitat-karte figcaption { color: var(--steel); font-size: 0.82rem; }
 .bewertungen-google-link { color: var(--signal); font-weight: 600; }
 
-/* ---------- Angebote (Struktur/Data-Hooks unverändert) ---------- */
-.angebote-section { padding-block: 2.6rem; }
+/* ---------- Angebote (Struktur/Data-Hooks unverändert) ----------
+   Gleicher Bug wie bei Bewertungen: styles.css setzt background:var(--gray-50).
+   Aktuell nicht sichtbar (angebote.json leer), würde aber beim ersten echten
+   Angebot denselben Kontrast-Fehler zeigen - proaktiv mitgefixt. */
+.angebote-section { background: var(--ink-raised); padding-block: 2.6rem; }
 .angebot-card {
   background: var(--glass);
   border: 1px solid var(--hairline);
@@ -167,6 +185,11 @@ a.tile { border-color: var(--hairline-strong); }
 .footer-col a:hover { color: var(--signal); }
 .footer-logo { background: var(--paper); padding: 0.3rem 0.6rem; border-radius: 8px; }
 .footer-bottom { color: var(--steel); border-top-color: var(--hairline); }
+/* Bug behoben: .bewertungen-kompakt-text hat eine eigene color-Regel in styles.css
+   (--gray-600, fuer helle Footer auf den anderen 25 Seiten gedacht) - die gewinnt gegen
+   die geerbte --steel-Farbe von .footer-bottom, auch wenn diese Regel hier spaeter laedt.
+   Direkte Regel auf dem Element noetig, sonst dunkelgrauer Text auf dunklem Footer. */
+.footer-bottom .bewertungen-kompakt-text { color: var(--steel); }
 
 /* ---------- WhatsApp-Button ---------- */
 .whatsapp-float { background: var(--signal); }
