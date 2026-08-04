@@ -18,7 +18,7 @@ kaputten Bild-Icons – keine Eile, aber sichtbar unvollständig.
 - [ ] Die 4 Platzhalter-Zitate in `bewertungen.json` durch **echte, wörtliche** 5-Sterne-Zitate aus
       eurem Google-Profil ersetzen (aktuell: "Michael K.", "Sarah B.", "Ahmed T.", "Lena M." – Namen
       können bleiben, wenn sie zu echten Bewertern passen, sonst anpassen)
-- [ ] `gesamtnote` (aktuell 4,8) und `anzahlBewertungen` (aktuell 127) regelmäßig mit dem echten
+- [ ] `gesamtnote` (aktuell 5,0) und `anzahlBewertungen` (aktuell 490) regelmäßig mit dem echten
       Google-Profil abgleichen, nicht schönen
 
 ## 3. Reparaturpreise (siehe `reparatur-preise.json`)

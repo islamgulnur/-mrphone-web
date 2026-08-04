@@ -6,10 +6,10 @@ manuelle Prüfung durch den Betreiber brauchen.
 ## NOCH OFFEN: bewertungen.json enthält nur Platzhalter-Zitate (03.08.2026)
 
 Beim Startseiten-Design-Prototyp (`.design-preview/homepage-prototype.html`) aufgefallen:
-`gesamtnote` (4,8) und `anzahlBewertungen` (127) sind echt eingetragen, aber alle 4 Einträge
+`gesamtnote` (5,0) und `anzahlBewertungen` (490) sind echt eingetragen, aber alle 4 Einträge
 unter `zitate` haben weiterhin den Platzhaltertext "Platzhalter – bitte durch ein echtes,
 wörtliches 5-Sterne-Zitat aus dem Google-Profil ersetzen" (nur die Namen Michael K./Sarah B./
-Ahmed T./Lena M. sind gesetzt). 4,8/5 aus 127 Bewertungen ist ein starkes Verkaufsargument, das
+Ahmed T./Lena M. sind gesetzt). 5,0/5 aus 490 Bewertungen ist ein starkes Verkaufsargument, das
 auf der Seite so nicht nutzbar ist, solange keine echten Wortlaute drinstehen. **To-Do:** echte,
 wörtliche 5-Sterne-Zitate aus dem Google-Profil in `bewertungen.json` eintragen.
 
