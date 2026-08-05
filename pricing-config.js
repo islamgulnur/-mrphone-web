@@ -7,6 +7,12 @@
  *   - scripts/befuelle-marktwert.js    (Startwert-Schätzung für marktwertGebraucht)
  *   - scripts/update-ankaufspreise.js  (echter täglicher eBay-Marktlauf)
  *
+ * Erweitert am 06.08.2026: kategorie "smartphones" läuft seitdem über eine EIGENE, UVP-basierte
+ * Formel statt der reinen eBay-Marktanker-Formel (siehe berechneNeuVersiegeltUvpBasiert() +
+ * berechneGebrauchtAusNeu() weiter unten, Grund + Kalibrierung dort dokumentiert). Alle anderen
+ * Kategorien bleiben unverändert auf der hier unten beschriebenen alten Formel, bis eigene
+ * Referenzwerte vorliegen (siehe OFFENE-PUNKTE.md).
+ *
  * Bereinigt am 28.07.2026: Apple-Korrektur (1,40/1,15), Samsung-Faktor (0,78), Wettbewerbs-Abstand
  * und der eigenständige Markt-Deckel (Konsistenzregel 3) sind vollständig entfernt – sie
  * überlagerten sich und kollidierten bei hochpreisigen Geräten (mehrere Zustandsstufen kollabierten
@@ -185,6 +191,134 @@ function berechneNeuVersiegelt({ eigenerVK, marktAnkerNeu, marktAnkerNeuUrsprung
   return rundeAbAuf5(Math.min(...kandidaten));
 }
 
+// ---------------------------------------------------------------------------
+// UVP-basierte Formel für Kategorie "smartphones" (seit 06.08.2026)
+// ---------------------------------------------------------------------------
+// Grund (siehe OFFENE-PUNKTE.md, "Ankaufspreise vs. Wettbewerb"): die alte neuVersiegelt-Formel
+// hing ausschließlich am eBay-Marktanker. Bei Geräten ohne echten Marktlauf (marktwertQuelle
+// "geschaetzt") führte das zu inkonsistenten, unkalibrierten Ankaufspreisen (mal deutlich über,
+// mal deutlich unter dem gewünschten Wettbewerbsabstand zu Avatel). Neue Logik NUR für
+// kategorie "smartphones" (einzige Kategorie mit belastbaren Referenzwerten - 5 echte
+// Avatel-Vergleichspreise, siehe unten): der Ankaufspreis hängt an EINEM Anker (UVP-Prozentsatz,
+// markengetrennt, kalibriert auf die 5 Referenzwerte), nicht mehr an der Tagesform des
+// eBay-Marktes. Damit Preise bei starkem Marktverfall (altes Gerät, eBay-Wert weit unter
+// UVP-Prozentsatz) nicht bei diesem Prozentsatz "kleben bleiben", bleibt der echte eBay-Marktwert
+// als Korrektiv erhalten: IMMER der niedrigere von UVP-Anker ODER eBay-Anker gewinnt (gleiches
+// Min-Prinzip wie beim eigenen Verkaufspreis, siehe berechneNeuVersiegelt oben). Andere
+// Kategorien (tablets, laptops, ...) haben keine eigene Kalibrierung und bleiben bewusst auf der
+// alten, rein eBay-basierten Formel (berechneNeuVersiegelt), bis eigene Referenzwerte vorliegen.
+//
+// Kalibrierung anhand 5 Referenzgeräte (Ziel: konstant 50-60€ unter Avatel-Ankaufspreis, NEU/
+// versiegelt): iPhone 17 Pro Max 256GB (Avatel 1100 -> Ziel 1040), iPhone 17 Pro 256GB
+// (1000 -> 950), iPhone 17 256GB (710 -> 650), Galaxy S26+ 256GB (620 -> 570), Galaxy S26 256GB
+// (500 -> 450, korrigiert am 06.08.2026). Daraus: Apple ~71% UVP, Samsung/Rest ~50% UVP (Ziel-
+// Prozentsatz trifft je Gerät nicht exakt, siehe OFFENE-PUNKTE.md - inhärenter Trade-off, weil
+// kein einzelner Prozentsatz alle 5 Punkte exakt treffen kann, aber Automatik ohne manuelle
+// Preispflege war explizit die Vorgabe).
+const ANKAUF_UVP_PROZENT_NEU = {
+  apple: 0.71,
+  rest: 0.50,
+};
+
+// Korrektiv-Prozentsatz auf den ECHTEN eBay-Marktwert (marktAnkerNeuUrsprung "echt", NIE bei
+// "geschaetzt" - eine unverifizierte Schätzung taugt nicht als Korrektiv nach unten, siehe
+// OFFENE-PUNKTE.md). 90% statt der alten 82%, bewusst so gewählt, dass der UVP-Anker bei frischen
+// Geräten (eBay-Wert noch nah an UVP) gewinnt und die Kalibrierung nicht unterläuft, aber bei
+// gealterten Geräten (eBay-Wert weit unter UVP-Prozentsatz gefallen) das Korrektiv greift.
+const NEU_VERSIEGELT_EBAY_KORREKTIV_PROZENT = 0.90;
+
+// Gebraucht-Stufen (wieNeu/sehrGut/gut) als Prozentsatz des NEUEN Ankaufspreises (nicht mehr vom
+// eBay-Gebraucht-Marktwert, siehe OFFENE-PUNKTE.md - EIN Anker pro Gerät statt zwei
+// unabhängiger Quellen, die sich früher widersprechen konnten, siehe Fall iPhone 17 256GB:
+// wieNeu lag vor dieser Änderung über neuVersiegelt). Nicht unabhängig kalibriert (keine
+// Referenzwerte für Gebraucht-Stufen vorhanden) - Spreizung so gewählt, dass Stufen bei Rundung
+// auf 5€ nicht kollabieren (erster Entwurf 78/76/75 für Apple kollabierte bei mehreren Geräten
+// auf sehrGut=gut, siehe OFFENE-PUNKTE.md). Defekt bleibt bewusst UNVERÄNDERT auf der alten
+// Formel (Prozentsatz vom eBay-Gebraucht-Marktwert, ANKAUF_PROZENTSAETZE_APPLE/_REST.defekt).
+const ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_APPLE = { wieNeu: 0.80, sehrGut: 0.74, gut: 0.64 };
+const ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_REST = { wieNeu: 0.82, sehrGut: 0.75, gut: 0.60 };
+
+function istUvpBasierteKategorie(kategorie) {
+  return String(kategorie || "").trim().toLowerCase() === "smartphones";
+}
+
+// Neuversiegelt-Preis für die UVP-basierte Formel: niedrigerer von bis zu 4 Kandidaten (gleiches
+// "immer der niedrigere Anker gewinnt"-Prinzip wie berechneNeuVersiegelt oben).
+//   1. eigener VK × 0,88 (unverändert)
+//   2. UVP-Variante × Marken-Prozent (siehe ANKAUF_UVP_PROZENT_NEU) - immer verfügbar
+//   3. echter eBay-Marktwert (NUR marktAnkerNeuUrsprung "echt") × 0,90, vorher auf UVP gedeckelt
+//      (Leitplanke 1, wie bei der alten Formel)
+//   4. Sicherheitsnetz NUR ohne echten eBay-Lauf (ergänzt 06.08.2026, siehe OFFENE-PUNKTE.md):
+//      Ergebnis der alten, unveränderten berechneNeuVersiegelt() mit denselben Eingaben - aber
+//      NUR wenn marktAnkerNeuUrsprung NICHT "echt" ist. Erster Versuch band dieses Sicherheitsnetz
+//      IMMER ein (auch bei "echt") und riss dadurch die kalibrierten Apple-Preise zurück auf den
+//      alten, alten 0,82-Faktor (iPhone 17 Pro Max 256GB fiel von 1040€ Ziel auf 950€ - exakt der
+//      alte, zu niedrige Wert, den die Kalibrierung beheben sollte). Bei "echt" übernimmt bereits
+//      Kandidat 3 die Korrektiv-Rolle (siehe oben) - das Sicherheitsnetz wird dort nicht gebraucht
+//      und würde die Kalibrierung nur wieder aushebeln. Nur bei "geschätzt" (kein echter Marktlauf
+//      für diese Variante) fehlte bislang jeder Deckel - dort greift jetzt der alte 85%-UVP-Deckel
+//      (Leitplanke 3 in berechneNeuVersiegelt) als Sicherheitsnetz (gefunden beim Testlauf: 51 von
+//      844 Varianten mit Konsistenzregel-1-Verstoß, u.a. iPhone 13 mini 512GB).
+function berechneNeuVersiegeltUvpBasiert({ eigenerVK, marktAnkerNeuEcht, marktAnkerNeu, marktAnkerNeuUrsprung, uvpVariante, marke, niveauFaktor }) {
+  const faktor = Number.isFinite(niveauFaktor) ? niveauFaktor : 1;
+  const kandidaten = [];
+  if (eigenerVK != null && Number.isFinite(Number(eigenerVK))) {
+    kandidaten.push(Number(eigenerVK) * NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG * faktor);
+  }
+  if (Number.isFinite(uvpVariante) && uvpVariante > 0) {
+    const prozent = String(marke || "").trim().toLowerCase() === "apple"
+      ? ANKAUF_UVP_PROZENT_NEU.apple
+      : ANKAUF_UVP_PROZENT_NEU.rest;
+    kandidaten.push(uvpVariante * prozent * faktor);
+  }
+  if (marktAnkerNeuEcht != null && Number.isFinite(Number(marktAnkerNeuEcht))) {
+    let anker = Number(marktAnkerNeuEcht);
+    if (Number.isFinite(uvpVariante) && uvpVariante > 0) {
+      anker = Math.min(anker, Number(uvpVariante)); // Leitplanke 1: nie über 100% UVP
+    }
+    kandidaten.push(anker * NEU_VERSIEGELT_EBAY_KORREKTIV_PROZENT * faktor);
+  }
+  if (marktAnkerNeuUrsprung !== "echt") {
+    const altesSicherheitsnetz = berechneNeuVersiegelt({
+      eigenerVK, marktAnkerNeu, marktAnkerNeuUrsprung, uvpVariante, niveauFaktor,
+    });
+    if (altesSicherheitsnetz != null) kandidaten.push(altesSicherheitsnetz);
+  }
+  if (!kandidaten.length) return null;
+  return rundeAbAuf5(Math.min(...kandidaten));
+}
+
+// Gebraucht-Stufen abgeleitet vom bereits berechneten neuVersiegelt-Preis. niveauFaktor bewusst
+// NICHT hier nochmal angewendet - steckt schon im übergebenen neuWert (sonst würde der globale
+// Regler doppelt wirken).
+//
+// KORREKTIV gegen echten Gebraucht-Marktwert (ergänzt 06.08.2026, siehe OFFENE-PUNKTE.md,
+// "Konsistenzregel-1-Verstöße nach UVP-Umstellung"): reiner Prozentsatz vom neuVersiegelt-Wert
+// reicht NICHT - bei alten/stark abgewerteten Geräten (z.B. iPhone 8: neuVersiegelt bleibt über
+// den echten eBay-Neupreis für versiegelte/Sammler-Ware bei ~190€, aber der tatsächliche
+// Gebraucht-Marktwert ist auf 47€ gefallen) hätte 80% von 190€ = 152€ Ankaufspreis für eine Stufe
+// ergeben, die wir nur für 47€ weiterverkaufen könnten - Verstoß gegen Konsistenzregel 1 (Ankauf
+// nie über eigenem Wiederverkaufswert). Gleiches Min-Prinzip wie überall sonst in dieser Datei:
+// IMMER der niedrigere von (a) Prozentsatz vom neuen neuVersiegelt-Ankaufspreis oder (b) alter,
+// bereits gehärteter Prozentsatz vom echten Gebraucht-Marktwert (prozentsaetzeFuerMarke() -
+// dieselbe Tabelle, die defekt unverändert weiter benutzt) gewinnt.
+function berechneGebrauchtAusNeu(neuWert, marke, marktwertGebraucht) {
+  if (neuWert == null) return { wieNeu: null, sehrGut: null, gut: null };
+  const tabelleAusNeu = String(marke || "").trim().toLowerCase() === "apple"
+    ? ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_APPLE
+    : ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_REST;
+  const tabelleAusMarkt = prozentsaetzeFuerMarke(marke);
+  const ergebnis = {};
+  ["wieNeu", "sehrGut", "gut"].forEach((stufe) => {
+    const kandidaten = [neuWert * tabelleAusNeu[stufe]];
+    if (marktwertGebraucht != null && Number.isFinite(Number(marktwertGebraucht))) {
+      kandidaten.push(Number(marktwertGebraucht) * tabelleAusMarkt[stufe]);
+    }
+    ergebnis[stufe] = rundeAuf5(Math.min(...kandidaten));
+  });
+  return ergebnis;
+}
+
 // Reihenfolge, in der die 5 Stufen überall (UI, Validierung, Export) angezeigt werden.
 const ZUSTANDS_REIHENFOLGE = ["neuVersiegelt", "wieNeu", "sehrGut", "gut", "defekt"];
 
@@ -302,19 +436,40 @@ function berechnePreise(geraet, variante, bestandListe, niveauProzent) {
   const prozentsaetze = prozentsaetzeFuerMarke(geraet.marke);
 
   const ergebnis = {};
-  ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
-    if (stufe === "neuVersiegelt") {
-      ergebnis[stufe] = berechneNeuVersiegelt({
-        eigenerVK: wiederverkauf.eigenerNeu,
-        marktAnkerNeu: wiederverkauf.marktAnkerNeuSchaetzung,
-        marktAnkerNeuUrsprung: wiederverkauf.marktAnkerNeuUrsprung,
-        uvpVariante: wiederverkauf.uvpVariante,
-        niveauFaktor,
-      });
-      return;
-    }
-    ergebnis[stufe] = rundeAuf5(wiederverkauf.gebraucht * prozentsaetze[stufe] * niveauFaktor);
-  });
+  if (istUvpBasierteKategorie(geraet.kategorie)) {
+    // UVP-basierte Formel (siehe Kommentarblock oben) - NUR kategorie "smartphones".
+    ergebnis.neuVersiegelt = berechneNeuVersiegeltUvpBasiert({
+      eigenerVK: wiederverkauf.eigenerNeu,
+      marktAnkerNeuEcht: wiederverkauf.marktAnkerNeuUrsprung === "echt" ? wiederverkauf.marktAnkerNeuSchaetzung : null,
+      marktAnkerNeu: wiederverkauf.marktAnkerNeuSchaetzung,
+      marktAnkerNeuUrsprung: wiederverkauf.marktAnkerNeuUrsprung,
+      uvpVariante: wiederverkauf.uvpVariante,
+      marke: geraet.marke,
+      niveauFaktor,
+    });
+    const gebraucht = berechneGebrauchtAusNeu(ergebnis.neuVersiegelt, geraet.marke, wiederverkauf.gebraucht);
+    ergebnis.wieNeu = gebraucht.wieNeu;
+    ergebnis.sehrGut = gebraucht.sehrGut;
+    ergebnis.gut = gebraucht.gut;
+    // Defekt bewusst unverändert: alte Formel (Prozentsatz vom eBay-Gebraucht-Marktwert).
+    ergebnis.defekt = wiederverkauf.gebraucht == null
+      ? null
+      : rundeAuf5(wiederverkauf.gebraucht * prozentsaetze.defekt * niveauFaktor);
+  } else {
+    ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
+      if (stufe === "neuVersiegelt") {
+        ergebnis[stufe] = berechneNeuVersiegelt({
+          eigenerVK: wiederverkauf.eigenerNeu,
+          marktAnkerNeu: wiederverkauf.marktAnkerNeuSchaetzung,
+          marktAnkerNeuUrsprung: wiederverkauf.marktAnkerNeuUrsprung,
+          uvpVariante: wiederverkauf.uvpVariante,
+          niveauFaktor,
+        });
+        return;
+      }
+      ergebnis[stufe] = rundeAuf5(wiederverkauf.gebraucht * prozentsaetze[stufe] * niveauFaktor);
+    });
+  }
 
   return {
     preise: ergebnis,
@@ -405,6 +560,13 @@ module.exports = {
   NEU_VERSIEGELT_GESCHAETZT_UVP_DECKEL,
   NEU_VERSIEGELT_MARKTWERT_VERWERFEN_SCHWELLE,
   pruefeMarktwertNeuPlausibilitaet,
+  ANKAUF_UVP_PROZENT_NEU,
+  NEU_VERSIEGELT_EBAY_KORREKTIV_PROZENT,
+  ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_APPLE,
+  ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_REST,
+  istUvpBasierteKategorie,
+  berechneNeuVersiegeltUvpBasiert,
+  berechneGebrauchtAusNeu,
   pruefeKonsistenz,
   wendeSpeicherKonsistenzAn,
   liesAnkaufsniveau,

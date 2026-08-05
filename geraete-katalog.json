@@ -989,8 +989,8 @@
         "bezeichnung": "1 TB",
         "uvpDelta": 550,
         "marktwertGebraucht": 641,
-        "marktwertNeu": 1565,
-        "marktwertQuelle": "ebay-auto",
+        "marktwertNeu": null,
+        "marktwertQuelle": "kontaminiert-verworfen-06.08.2026",
         "marktDatenStand": "2026-08-02"
       }
     ],
@@ -1027,8 +1027,8 @@
         "bezeichnung": "1 TB",
         "uvpDelta": 450,
         "marktwertGebraucht": 664,
-        "marktwertNeu": 1565,
-        "marktwertQuelle": "ebay-auto",
+        "marktwertNeu": null,
+        "marktwertQuelle": "kontaminiert-verworfen-06.08.2026",
         "marktDatenStand": "2026-08-02"
       }
     ],
@@ -2753,8 +2753,8 @@
         "bezeichnung": "1 TB",
         "uvpDelta": 450,
         "marktwertGebraucht": 869,
-        "marktwertNeu": 2344,
-        "marktwertQuelle": "ebay-auto",
+        "marktwertNeu": null,
+        "marktwertQuelle": "kontaminiert-verworfen-06.08.2026",
         "marktDatenStand": "2026-08-03"
       }
     ],
@@ -2829,8 +2829,8 @@
         "bezeichnung": "1 TB",
         "uvpDelta": 450,
         "marktwertGebraucht": 879,
-        "marktwertNeu": 2344,
-        "marktwertQuelle": "ebay-auto",
+        "marktwertNeu": null,
+        "marktwertQuelle": "kontaminiert-verworfen-06.08.2026",
         "marktDatenStand": "2026-08-03"
       }
     ],
@@ -3547,8 +3547,8 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
         "marktwertGebraucht": 1028,
-        "marktwertNeu": 2147,
-        "marktwertQuelle": "ebay-auto",
+        "marktwertNeu": null,
+        "marktwertQuelle": "kontaminiert-verworfen-06.08.2026",
         "marktDatenStand": "2026-08-04"
       }
     ],
@@ -6267,8 +6267,8 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
         "marktwertGebraucht": 957,
-        "marktwertNeu": 993,
-        "marktwertQuelle": "ebay-auto",
+        "marktwertNeu": null,
+        "marktwertQuelle": "kontaminiert-verworfen-06.08.2026",
         "marktDatenStand": "2026-07-30"
       }
     ],
@@ -6289,8 +6289,8 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "marktwertGebraucht": 957,
-        "marktwertNeu": 993,
-        "marktwertQuelle": "ebay-auto",
+        "marktwertNeu": null,
+        "marktwertQuelle": "kontaminiert-verworfen-06.08.2026",
         "marktDatenStand": "2026-07-30"
       },
       {

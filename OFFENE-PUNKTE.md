@@ -321,3 +321,55 @@ siehe `CLAUDE.md`).
 Nebenmodelle nicht geprüft" sind durch den Speichervarianten-Audit vom 28.07.2026 oben
 aufgelöst: iPhone 8/8 Plus 128GB wurde entfernt, die verbleibenden ungeprüften Nebenmodelle
 sind jetzt einzeln unter "Bewusst NICHT verifiziert" gelistet statt pauschal als "~250 Geräte".)
+
+## NOCH OFFEN: UVP-basierte Ankaufsformel nur für kategorie "smartphones" kalibriert (06.08.2026)
+
+Ankaufspreise waren gegenüber Avatel ungleichmäßig (Apple oft zu niedrig, Samsung S26-Serie
+deutlich zu hoch, weil die Samsung-Neuwerte über eine unverifizierte Schätzformel liefen statt
+über echte Marktdaten). Neu kalibriert anhand 5 echter Avatel-Vergleichspreise (siehe
+`pricing-config.js`, Kommentar über `ANKAUF_UVP_PROZENT_NEU`): `neuVersiegelt` hängt jetzt NUR
+für `kategorie: "smartphones"` an einem UVP-Prozentsatz (Apple 71%, Rest 50%), mit echtem
+eBay-Marktwert als Korrektiv nach unten (verhindert, dass alte, stark abgewertete Geräte am
+UVP-Prozentsatz kleben bleiben). `wieNeu`/`sehrGut`/`gut` leiten sich daraus ab (Prozentsatz vom
+neuen `neuVersiegelt`-Wert statt vom eBay-Gebraucht-Marktwert). `defekt` bewusst unverändert.
+
+**To-Do:** Tablets, Laptops, PCs, Smartwatches, Kopfhörer, Kameras, Konsolen, Zubehör
+(232 von 449 Geräten) bleiben bewusst auf der alten, rein eBay-basierten Formel
+(`berechneNeuVersiegelt()`), weil dafür keine eigenen Referenz-Vergleichspreise vorliegen. Sobald
+für eine dieser Kategorien eigene Wettbewerbs-Referenzwerte geliefert werden, kann sie nach
+demselben Muster (Prozentsatz von UVP, kalibriert, `istUvpBasierteKategorie()` erweitern) auf die
+neue Formel umgestellt werden.
+
+## NOCH OFFEN: Kameras/Monitore aus Ankaufsrechner entfernt, Datenbasis bleibt (06.08.2026)
+
+Auf Wunsch des Betreibers (kauft diese Kategorien praktisch nie an) sind "kameras" und
+"monitore" aus den `KATEGORIEN`-Kacheln in `ankauf-rechner.js` entfernt (DE+EN). Bewusst NICHT
+angefasst: `geraete-katalog.json`, `ankauf-preise.json`, `ankauf/kameras.json`,
+`ankauf/monitore.json`, `admin/server.js` – Kategorien bleiben für Sortiment/Verkauf
+(`sortiment.html`, `kameras-frankfurt.html`) vollständig erhalten, es fehlen nur die
+Ankaufsrechner-Kacheln. Reversibel: die 4 entfernten Zeilen (2× kameras, 2× monitore) wieder
+einfügen. Der nächtliche eBay-Marktlauf läuft für diese 39 Geräte unverändert weiter (nicht
+gestoppt) – **To-Do, falls gewünscht:** in `scripts/update-ankaufspreise.js`/Rotation aus dem Lauf
+ausschließen, um API-Budget zu sparen.
+
+## NOCH OFFEN: Galaxy Tab S11 256GB, neuVersiegelt knapp unter wieNeu (06.08.2026)
+
+Nebeneffekt der Kontaminations-Bereinigung (siehe unten): ohne den verworfenen 993€-Wert läuft
+`neuVersiegelt` jetzt über die alte Schätzformel (85%-UVP-Deckel) und landet bei 695€, knapp unter
+dem unabhängig berechneten `wieNeu` (720€) - dieselbe Bug-Klasse wie die 13 Smartphone-Fälle, die
+durch die neue UVP-Formel automatisch verschwunden sind (siehe Eintrag oben), hier aber noch nicht
+behoben, weil Tablets bewusst auf der alten Formel bleiben. Finanziell unkritisch (Konsistenzregel 1
+- nie über eigenem Wiederverkaufswert - hält, geprüft: 0 Verstöße), nur eine Anzeige-Inkonsistenz.
+**To-Do:** mit erledigt sich vermutlich von selbst, sobald Tab S11 einen neuen echten eBay-Neu-Lauf
+hat (Rotation) oder Tablets auf die neue Formel umgestellt werden (siehe Eintrag oben).
+
+## Erledigt: kontaminierte marktwertNeu-Werte verworfen (06.08.2026)
+
+Duplikat-Scan (identischer `marktwertNeu`-Wert bei ≥2 verschiedenen Modellen, jeweils ≥80% der
+eigenen UVP – Muster für Scraper-/Bundle-Kontamination) fand 5 Fälle. `marktwertNeu` bei diesen
+7 Geräte-Varianten auf `null` gesetzt (`marktwertQuelle: "kontaminiert-verworfen-06.08.2026"`),
+laufen jetzt über UVP-Basis bzw. Schätzformel statt über den kontaminierten Wert:
+- Galaxy Z Fold 5 1TB & Galaxy Z Fold 7 1TB (beide 2344€)
+- iPhone 15 Pro 1TB & iPhone 15 Pro Max 1TB (beide 1565€)
+- Galaxy Tab S11 256GB & Tab S11+ 256GB (beide 993€)
+- Pixel 9 Pro Fold 512GB (2147€, kein Duplikat, aber über UVP-Variante – für sich genommen unplausibel)

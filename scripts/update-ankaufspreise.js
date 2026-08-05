@@ -79,20 +79,23 @@ const ANKAUF_KOMMENTAR =
   "AUTO-PREISE aus echten eBay-Marktdaten (Browse API, siehe scripts/lib/search-client.js) " +
   "- siehe scripts/update-ankaufspreise.js + " +
   "scripts/ankaufspreis-config.js. Je Gerät+Variante zwei Marktanker (gebraucht/neu), " +
-  "Ausreißerfilter + Median + Abschlag. Stufen wieNeu/sehrGut/gut/defekt als feste, markenabhängige " +
-  "Prozentsätze vom Gebraucht-Marktanker (pricing-config.js: ANKAUF_PROZENTSAETZE_APPLE / _REST, " +
-  "einzige Quelle dieser Prozentsätze im Projekt). Stufe neuVersiegelt hat seit " +
-  "28.07.2026 eine EIGENE Formel (siehe pricing.berechneNeuVersiegelt(), OFFENE-PUNKTE.md): " +
-  "niedrigerer Wert von eigenem Verkaufspreis × 0,88 ODER marktwertNeu × 0,82 (gedeckelt auf 90% " +
-  "von marktwertNeu) - nie höher als eigener Verkaufspreis oder 90% des eBay-Neupreises. " +
-  "Zusätzlich (alle Marken, keine Ausnahme): marktwertNeu > 115% UVP gilt als kontaminiert und " +
-  "wird verworfen, verbleibender Anker zusätzlich hart auf 100% UVP gedeckelt. " +
+  "Ausreißerfilter + Median + Abschlag. defekt IMMER als fester, markenabhängiger Prozentsatz vom " +
+  "Gebraucht-Marktanker (pricing-config.js: ANKAUF_PROZENTSAETZE_APPLE / _REST, einzige Quelle " +
+  "dieser Prozentsätze). Kategorie \"smartphones\" (seit 06.08.2026, siehe OFFENE-PUNKTE.md): " +
+  "neuVersiegelt = niedrigerer von eigenem Verkaufspreis × 0,88 / UVP × markenabhängigem " +
+  "Prozentsatz (Apple 71%, Rest 50%, kalibriert auf 5 Avatel-Referenzpreise) / echtem " +
+  "eBay-Marktwert × 0,90 (Korrektiv gegen Marktverfall, gedeckelt auf 100% UVP) - wieNeu/sehrGut/" +
+  "gut leiten sich als Prozentsatz vom so ermittelten neuVersiegelt-Wert ab (ANKAUF_GEBRAUCHT_" +
+  "PROZENT_VON_NEU_APPLE/_REST). Alle ANDEREN Kategorien: neuVersiegelt weiterhin die alte, rein " +
+  "eBay-basierte Formel (pricing.berechneNeuVersiegelt(), seit 28.07.2026) - niedrigerer Wert von " +
+  "eigenem Verkaufspreis × 0,88 ODER marktwertNeu × 0,82 (gedeckelt auf 90% von marktwertNeu), " +
+  "wieNeu/sehrGut/gut als Prozentsatz vom Gebraucht-Marktanker. " +
+  "Zusätzlich (alle Marken/Kategorien, keine Ausnahme): marktwertNeu > 115% UVP gilt als " +
+  "kontaminiert und wird verworfen, verbleibender Anker zusätzlich hart auf 100% UVP gedeckelt. " +
   "Alles zusätzlich global verschiebbar über pricing-niveau.json. preisQuelle \"manuell\" wird " +
   "nie automatisch überschrieben. Geräte, die noch keinen echten Marktlauf hatten (marktwertQuelle " +
-  "\"geschaetzt\" im Katalog), tragen weiterhin die ältere Schätzformel aus pricing-config.js " +
-  "(inkl. derselben neuVersiegelt-Formel, dort mit geschätztem statt echtem Marktanker, aber " +
-  "denselben markenabhängigen Prozentsätzen), bis sie an der Reihe sind (siehe Rotation, " +
-  "scripts/rotation-state.json).";
+  "\"geschaetzt\" im Katalog), tragen weiterhin die ältere Schätzformel aus pricing-config.js, bis " +
+  "sie an der Reihe sind (siehe Rotation, scripts/rotation-state.json).";
 
 function parseArgs(argv) {
   const dryRun = argv.includes("--dry-run");
@@ -306,30 +309,61 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     };
   }
 
-  const stufenRoh = berechneStufen({ marktwertGebraucht: gebraucht.marktwert, niveauFaktor, marke: geraet.marke });
-  const istErsterLauf = !geraet.marktwertQuelle || geraet.marktwertQuelle === "geschaetzt";
-  const { stufenFinal, pruefenGruende: bremseGruende } = wendeTagesbremseAn({
-    stufenRoh, altPreise: altVariante && altVariante.preise, istErsterLauf,
-  });
-  const konsistenzGruende = wendeKonsistenzregel1An({ stufenFinal, geraet, variante, bestandListe });
-
   // Regel 8 (siehe Kommentarblock oben): "neuVersiegelt" umgeht Tagesbremse komplett - eigene,
   // strukturell sichere Formel statt Prozentsatz vom Marktwert. Bewusst OHNE Tagesbremse: die
   // Formel selbst ist bereits hart gegen eigenen Verkaufspreis/marktwertNeu gedeckelt, ein
   // zusätzliches Bremsen der Preis-SENKUNG (z. B. bei einer Korrektur wie am 27.07.2026) würde
   // nur verzögern, dass ein zu hoher Preis vom Netz geht.
+  //
+  // Seit 06.08.2026 (siehe pricing-config.js, OFFENE-PUNKTE.md): kategorie "smartphones" läuft
+  // über die UVP-basierte Formel statt der reinen eBay-Marktanker-Formel, wieNeu/sehrGut/gut
+  // leiten sich dabei vom neuVersiegelt-Wert ab statt vom eBay-Gebraucht-Marktwert - aus demselben
+  // Grund wie neuVersiegelt bewusst OHNE Tagesbremse (Formel bereits strukturell sicher). Andere
+  // Kategorien unverändert auf der alten Formel inkl. Tagesbremse für wieNeu/sehrGut/gut. defekt
+  // bleibt für ALLE Kategorien unverändert (alte Formel, Tagesbremse greift weiterhin).
   const eigenerVKNeu = pricing.findeEigenenVerkaufspreis(bestandListe, geraet, variante, "neu");
-  stufenFinal.neuVersiegelt = pricing.berechneNeuVersiegelt({
-    eigenerVK: eigenerVKNeu,
-    marktAnkerNeu: marktwertNeu,
-    // Dieses Skript liefert für neuVersiegelt IMMER einen echten, frisch gescrapten Wert (oder
-    // null) - nie eine Schätzung aus marktwertGebraucht × NEUWARE_AUFSCHLAG (das passiert nur
-    // in pricing-config.js für Geräte ohne echten Marktlauf) - daher fest "echt", Leitplanke 3
-    // (85%-Deckel für Schätz-Anker) greift hier bewusst nicht, nur Leitplanke 1 (100%-UVP-Deckel).
-    marktAnkerNeuUrsprung: "echt",
-    uvpVariante,
-    niveauFaktor,
+  const istSmartphone = pricing.istUvpBasierteKategorie(geraet.kategorie);
+  const neuVersiegeltWert = istSmartphone
+    ? pricing.berechneNeuVersiegeltUvpBasiert({
+        eigenerVK: eigenerVKNeu,
+        marktAnkerNeuEcht: marktwertNeu,
+        marktAnkerNeu: marktwertNeu,
+        marktAnkerNeuUrsprung: "echt",
+        uvpVariante,
+        marke: geraet.marke,
+        niveauFaktor,
+      })
+    : pricing.berechneNeuVersiegelt({
+        eigenerVK: eigenerVKNeu,
+        marktAnkerNeu: marktwertNeu,
+        // Dieses Skript liefert für neuVersiegelt IMMER einen echten, frisch gescrapten Wert (oder
+        // null) - nie eine Schätzung aus marktwertGebraucht × NEUWARE_AUFSCHLAG (das passiert nur
+        // in pricing-config.js für Geräte ohne echten Marktlauf) - daher fest "echt", Leitplanke 3
+        // (85%-Deckel für Schätz-Anker) greift hier bewusst nicht, nur Leitplanke 1 (100%-UVP-Deckel).
+        marktAnkerNeuUrsprung: "echt",
+        uvpVariante,
+        niveauFaktor,
+      });
+
+  const stufenRoh = berechneStufen({ marktwertGebraucht: gebraucht.marktwert, niveauFaktor, marke: geraet.marke });
+  stufenRoh.neuVersiegelt = neuVersiegeltWert;
+  if (istSmartphone) {
+    const abgeleitet = pricing.berechneGebrauchtAusNeu(neuVersiegeltWert, geraet.marke, gebraucht.marktwert);
+    stufenRoh.wieNeu = abgeleitet.wieNeu;
+    stufenRoh.sehrGut = abgeleitet.sehrGut;
+    stufenRoh.gut = abgeleitet.gut;
+  }
+
+  const istErsterLauf = !geraet.marktwertQuelle || geraet.marktwertQuelle === "geschaetzt";
+  const stufenOhneBremse = ["neuVersiegelt", ...(istSmartphone ? ["wieNeu", "sehrGut", "gut"] : [])];
+  const stufenFuerBremse = { ...stufenRoh };
+  stufenOhneBremse.forEach((s) => { stufenFuerBremse[s] = null; });
+  const { stufenFinal, pruefenGruende: bremseGruende } = wendeTagesbremseAn({
+    stufenRoh: stufenFuerBremse, altPreise: altVariante && altVariante.preise, istErsterLauf,
   });
+  stufenOhneBremse.forEach((s) => { stufenFinal[s] = stufenRoh[s]; });
+
+  const konsistenzGruende = wendeKonsistenzregel1An({ stufenFinal, geraet, variante, bestandListe });
 
   const alleGruende = [...bremseGruende, ...konsistenzGruende];
   if (marktwertNeuVerworfen) {
