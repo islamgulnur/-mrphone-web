@@ -744,6 +744,10 @@ app.post("/api/publish", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+// Nur localhost, nicht 0.0.0.0 (Node-Standard ohne Host-Argument): sonst waere der
+// Server fuer jedes Geraet im selben Heimnetz erreichbar. Zugriff von unterwegs/Laden
+// laeuft ueber "tailscale serve", das lokal auf 127.0.0.1 zugreift und selbst nur
+// innerhalb des eigenen Tailscale-Netzes erreichbar ist - siehe ADMIN-ZUGRIFF.md.
+app.listen(PORT, "127.0.0.1", () => {
   console.log("Mr. Phone Admin läuft auf http://localhost:" + PORT);
 });
