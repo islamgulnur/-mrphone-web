@@ -445,6 +445,17 @@ section {
   font-size: 1.5rem;
 }
 
+/* Line-Icons statt Emoji (Leistungen/Vertrauen/Anfahrt/Vorteile): SVG braucht
+   explizite Groesse, Emoji-Glyphen skalierten sonst automatisch mit font-size. */
+.tile-icon svg { width: 28px; height: 28px; }
+.trust-icon svg,
+.vorteil-icon svg,
+.badge-inline svg {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
 /* ---------- Unser Sortiment: Kategorie-Kacheln ---------- */
 .kategorie-grid {
   display: grid;
