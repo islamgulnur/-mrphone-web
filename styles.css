@@ -1403,6 +1403,14 @@ section {
   object-fit: cover;
 }
 
+.angebot-media--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-600);
+}
+.angebot-media--empty svg { width: 32%; height: 32%; }
+
 .angebot-body {
   padding: 1.1rem 1.2rem 1.4rem;
   display: flex;

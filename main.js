@@ -15,6 +15,27 @@
     return "/" + p;
   }
 
+  /* Ohne Foto liefert assetUrl("") "/" zurueck -> <img src="/"> laedt die
+     aktuelle HTML-Seite selbst als "Bild" nach und zeigt ein kaputtes Icon.
+     Deshalb hier fruehzeitig abfangen und ein Platzhalter-SVG (gleicher
+     Line-Stil wie die Sortiment-Icons) statt <img> rendern. */
+  function mediaHtml(bild, alt) {
+    if (!bild) {
+      return (
+        '<div class="angebot-media angebot-media--empty" role="img" aria-label="' + escapeHtml(alt) + '">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+        '<rect x="3" y="4" width="18" height="16" rx="2"></rect>' +
+        '<circle cx="8.5" cy="9.5" r="1.5"></circle>' +
+        '<path d="M21 16l-5.5-5.5a2 2 0 0 0-2.8 0L5 18"></path>' +
+        "</svg></div>"
+      );
+    }
+    return (
+      '<div class="angebot-media"><img src="' + assetUrl(escapeHtml(bild)) + '" alt="' + escapeHtml(alt) +
+      '" width="800" height="800" loading="lazy"></div>'
+    );
+  }
+
   /* ---------- Scroll-Reveal ---------- */
   function revealElements(items) {
     if (!items.length) return;
@@ -482,9 +503,7 @@
 
     return (
       '<article class="angebot-card reveal">' +
-      '<div class="angebot-media"><img src="' + assetUrl(escapeHtml(a.bild)) + '" alt="' +
-      escapeHtml(titel) +
-      '" width="800" height="800" loading="lazy"></div>' +
+      mediaHtml(a.bild, titel) +
       '<div class="angebot-body">' +
       '<span class="angebot-badge ' + badgeClass + '">' + badgeText + "</span>" +
       "<h3>" + escapeHtml(titel) + "</h3>" +
@@ -545,9 +564,7 @@
 
     return (
       '<article class="angebot-card reveal">' +
-      '<div class="angebot-media"><img src="' + assetUrl(escapeHtml(a.bild)) + '" alt="' +
-      escapeHtml(titel) +
-      '" width="800" height="800" loading="lazy"></div>' +
+      mediaHtml(a.bild, titel) +
       '<div class="angebot-body">' +
       '<span class="angebot-badge ' + badgeClass + '">' + badgeText + "</span>" +
       "<h3>" + escapeHtml(titel) + "</h3>" +
