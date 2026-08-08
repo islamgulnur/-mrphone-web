@@ -399,3 +399,31 @@ hängt ausschließlich an `geraete-katalog.json`-Einträgen). **To-Do**, nach Pr
 - Sony Xperia 10 IV (Katalog startet bei 10 V), Xperia L1
 - Apple "Smart Keyboard Folio" (Katalog kennt nur "Magic Keyboard für iPad")
 - HP "Pro 14 Plus Core Ultra 7" (Katalog hat nur generische Tiers "EliteBook"/"Pavilion")
+
+## NOCH OFFEN: marktwertGebraucht ohne UVP-Leitplanke außerhalb "smartphones" (08.08.2026)
+
+Beim Live-Schalten der Ankaufspreise aus dem Kassensystem-Import aufgefallen: die UVP-Leitplanken
+aus `pricing-config.js` (`istUvpBasierteKategorie()`, Kontaminations-Check `pruefeMarktwertNeuPlausibilitaet`)
+greifen laut Code nur für Kategorie `smartphones`. Für alle anderen Kategorien gibt es für
+`marktwertGebraucht` **keine** Plausibilitätsprüfung gegen die UVP – ein kontaminierter eBay-Treffer
+fließt dort ungebremst in die gebraucht-Ankaufsstufen (wieNeu/sehrGut/gut/defekt), da diese direkt mit
+`marktwertGebraucht × Zustandsprozentsatz` rechnen.
+
+**Konkret gefunden (17 Einträge, `marktwertGebraucht` > 75 % der UVP-Variante, alle nicht-smartphones):**
+5× Apple MacBook Pro 14"/16" M3/M4 (u.a. 32GB·1TB M4: 2280€ gebraucht bei 2589€ UVP-Variante = 88 %),
+iPad 11 (2025) 256GB (765€ bei 499€ UVP = 153 %!), Galaxy Tab S9 FE/S11/S11+, PlayStation 5 (Digital/
+Slim), 4× Valve Steam Deck, DualSense Controller. Zwei der Tab-S11-Einträge sind sogar schon als
+`"kontaminiert-verworfen-06.08.2026"` markiert, tragen aber trotzdem noch den alten kontaminierten
+Zahlenwert im `marktwertGebraucht`-Feld weiter (Markierung allein hat den Wert nicht genullt).
+
+**Deshalb bewusst NICHT live geschaltet:** `ankauf-preise.json` wurde beim Live-Schalten der
+Kassensystem-Ankaufspreise (08.08.2026) NUR für Kategorie `smartphones` aus dem frischen
+`build-ankauf-preise.js`-Lauf übernommen (dort greifen die Leitplanken, 0 Konsistenz-/Inversions-
+Verstöße bestätigt). Alle anderen Kategorien blieben auf dem Vor-Lauf-Stand, damit die 17 auffälligen
+Werte nicht ungeprüft zu echten Ankaufspreisen werden.
+
+**To-Do:** entweder (a) `istUvpBasierteKategorie()` auf weitere Kategorien mit belastbaren
+Referenzwerten ausweiten (wie schon für smartphones am 06.08.2026 gemacht, siehe oben im Dokument),
+oder (b) eine kategorie-unabhängige Leitplanke für `marktwertGebraucht` gegen die UVP ergänzen, oder
+(c) die 17 Werte einzeln manuell prüfen und ggf. wie die bereits markierten Tab-S11-Fälle auf `null`
+setzen. Erst danach `build-ankauf-preise.js` für die restlichen Kategorien laufen lassen.
