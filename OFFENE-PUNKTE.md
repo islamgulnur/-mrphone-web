@@ -422,8 +422,40 @@ Kassensystem-Ankaufspreise (08.08.2026) NUR für Kategorie `smartphones` aus dem
 Verstöße bestätigt). Alle anderen Kategorien blieben auf dem Vor-Lauf-Stand, damit die 17 auffälligen
 Werte nicht ungeprüft zu echten Ankaufspreisen werden.
 
-**To-Do:** entweder (a) `istUvpBasierteKategorie()` auf weitere Kategorien mit belastbaren
-Referenzwerten ausweiten (wie schon für smartphones am 06.08.2026 gemacht, siehe oben im Dokument),
-oder (b) eine kategorie-unabhängige Leitplanke für `marktwertGebraucht` gegen die UVP ergänzen, oder
+**To-Do:** entweder (a) `istUvpBasierteKategorie()` auf **alle** Kategorien ausweiten statt nur auf
+solche mit eigens recherchierten Referenzwerten (radikalste, aber einfachste Lösung – nutzt für
+Kategorien ohne eigene Kalibrierung einfach einen generischen UVP-Prozentsatz statt marktwertGebraucht
+ungeprüft durchzureichen), oder (a') `istUvpBasierteKategorie()` nur auf weitere Kategorien MIT
+belastbaren Referenzwerten ausweiten (schrittweise, wie schon für smartphones am 06.08.2026 gemacht,
+siehe oben im Dokument), oder (b) eine kategorie-unabhängige Leitplanke ausschließlich für
+`marktwertGebraucht` gegen die UVP ergänzen (ohne die volle UVP-basierte Formel zu übernehmen), oder
 (c) die 17 Werte einzeln manuell prüfen und ggf. wie die bereits markierten Tab-S11-Fälle auf `null`
 setzen. Erst danach `build-ankauf-preise.js` für die restlichen Kategorien laufen lassen.
+
+## NOCH OFFEN: Erhöhungssperre nachträglich angewendet, 2 Verdachtsfälle bei smartphones (08.08.2026)
+
+Der erste Live-Lauf für Kategorie `smartphones` (siehe oben) hatte versehentlich auch Erhöhungen
+übernommen, obwohl für diesen Import nur Senkungen gewünscht waren. Nachträglich korrigiert: **275
+Erhöhungen gesperrt** (alter, niedrigerer Wert bleibt bestehen), **23 Senkungen übernommen**, **1967
+Werte unverändert**, **5 Referenzgeräte** (iPhone 17 Pro Max 256GB/iPhone 17 Pro 256GB/iPhone 17
+256GB/Galaxy S26+ 256GB/Galaxy S26 256GB) behalten ihren kalibrierten `neuVersiegelt`-Wert unabhängig
+von der Sperre.
+
+Dabei zwei Verdachtsfälle geprüft, die durch die Sperre ohnehin wieder auf dem alten (niedrigeren)
+Wert stehen, aber als Datenqualitäts-Verdacht festgehalten werden:
+
+- **Galaxy Note 9 128GB:** `marktwertNeu` im Katalog = 267€ (Stand 03.08.2026, nicht vom
+  Auto-Preisupdate am 07.08. berührt), UVP 999€. Für ein 2018er-Gerät ohne bekannten
+  Sammler-/Vintage-Markt wirkt das hoch – lief formal durch beide bestehenden Leitplanken (< 100 %
+  UVP, < 115 % UVP für die Kontaminations-Prüfung), ist also nicht automatisch als kontaminiert
+  erkannt worden, aber die Herkunft/Plausibilität des einzelnen eBay-Treffers wurde nicht manuell
+  nachvollzogen.
+- **Galaxy Z Fold 7 256GB/512GB:** `marktwertNeu` 1431€/1471€ bei UVP-Variante 2099€/2299€ (68 %/64 %)
+  – für sich genommen nicht unplausibel, ABER die 1TB-Variante desselben Geräts ist bereits als
+  `"kontaminiert-verworfen-06.08.2026"` markiert. 256GB/512GB wurden bei dieser früheren Bereinigung
+  nicht mit geprüft/genullt – unklar, ob sie tatsächlich sauber sind oder nur nicht denselben
+  Schwellenwert gerissen haben.
+
+**To-Do:** beide Fälle bei der nächsten manuellen Preisprüfung (siehe PREISE-ANLEITUNG.md) gezielt
+gegenchecken, bevor sie – z. B. durch eine künftige Senkung an anderer Stelle, die die Sperre nicht
+mehr greift – doch noch live gehen.
