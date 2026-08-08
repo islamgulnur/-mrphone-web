@@ -344,6 +344,7 @@ function findeEigenenVerkaufspreis(bestandListe, geraet, variante, zustand) {
   const treffer = bestandListe.filter((eintrag) => (
     eintrag
     && eintrag.zustand === zustand
+    && eintrag.ankaufsAnker !== false
     && normalisiere(eintrag.marke) === normalisiere(geraet.marke)
     && normalisiere(eintrag.modell) === normalisiere(geraet.modell)
     && normalisiere(eintrag.speicher) === normalisiere(variante.bezeichnung)

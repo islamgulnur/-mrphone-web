@@ -373,3 +373,29 @@ laufen jetzt über UVP-Basis bzw. Schätzformel statt über den kontaminierten W
 - iPhone 15 Pro 1TB & iPhone 15 Pro Max 1TB (beide 1565€)
 - Galaxy Tab S11 256GB & Tab S11+ 256GB (beide 993€)
 - Pixel 9 Pro Fold 512GB (2147€, kein Duplikat, aber über UVP-Variante – für sich genommen unplausibel)
+
+## NOCH OFFEN: Katalog-Lücken nach Kassensystem-Import (08.08.2026)
+
+Beim Import der Kassensystem-Inventarliste in `bestand.json` (124 Einträge, 200 Stück) blieben
+22 Positionen ohne Treffer in `geraete-katalog.json` – sie stehen jetzt im Sortiment (`bestand.json`),
+bekommen aber **keinen automatischen Ankaufspreis**, bis der Katalog ergänzt wird (die Ankaufsformel
+hängt ausschließlich an `geraete-katalog.json`-Einträgen). **To-Do**, nach Priorität:
+
+**Komplette Modellreihen fehlen (höchste Priorität, mehrere Geräte betroffen):**
+- Samsung Galaxy A06 (4 Stück), A07 (4 Stück), A37 (6 Stück), A57 (4 Stück) – Katalog springt von
+  A05s direkt auf A13, bzw. hört bei A56 auf
+
+**Ganze Marke fehlt:**
+- Realme (1 Stück, "Note 50 64GB")
+
+**Neuer als Katalogstand:**
+- Samsung Galaxy Buds 4, Galaxy Z Flip 8
+- Apple MacBook Pro 14" M5, iPad Pro 11" (M5)
+- Xiaomi Redmi A5, Redmi Note 14S
+
+**Kein Katalog-Pendant vorhanden:**
+- Lenovo "Tab Plus" (Katalog kennt nur "Tab P12")
+- Samsung Galaxy Tab A9+ (Katalog kennt nur "Tab A9" ohne Plus)
+- Sony Xperia 10 IV (Katalog startet bei 10 V), Xperia L1
+- Apple "Smart Keyboard Folio" (Katalog kennt nur "Magic Keyboard für iPad")
+- HP "Pro 14 Plus Core Ultra 7" (Katalog hat nur generische Tiers "EliteBook"/"Pavilion")
