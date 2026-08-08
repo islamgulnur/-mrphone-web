@@ -10,6 +10,6 @@
     { "name": "Samsung-Akku", "nameEn": "Samsung battery", "abPreis": 49 },
     { "name": "Ladebuchse", "nameEn": "Charging port", "abPreis": 39 },
     { "name": "Kamera", "nameEn": "Camera", "abPreis": 49 },
-    { "name": "Wasserschaden-Diagnose", "nameEn": "Water damage diagnosis", "abPreis": 19 }
+    { "name": "Wasserschaden-Diagnose", "nameEn": "Water damage diagnosis", "abPreis": 49 }
   ]
 }
