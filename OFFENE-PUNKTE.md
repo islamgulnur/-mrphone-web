@@ -459,3 +459,19 @@ Wert stehen, aber als Datenqualitäts-Verdacht festgehalten werden:
 **To-Do:** beide Fälle bei der nächsten manuellen Preisprüfung (siehe PREISE-ANLEITUNG.md) gezielt
 gegenchecken, bevor sie – z. B. durch eine künftige Senkung an anderer Stelle, die die Sperre nicht
 mehr greift – doch noch live gehen.
+
+## NOCH OFFEN: Kontaminationsprüfung kennt kein Alters-Kriterium (08.08.2026)
+
+Am Galaxy-Note-9-Fall (siehe oben) sichtbar geworden: `pruefeMarktwertNeuPlausibilitaet()` prüft
+`marktwertNeu` ausschließlich relativ zur UVP (< 100 % / < 115 %-Verwerfungsschwelle), unabhängig vom
+Gerätealter. Bei einem aktuellen Flaggschiff (aktuelles Modelljahr) sind 60-70 % der UVP für einen
+"echten" Marktwert normal. Beim Note 9 (Modelljahr 2018, `jahr` bereits im Katalog vorhanden) sind
+267€ von 999€ UVP (27 %) zwar im Rahmen der Schwelle, aber ein Wert nahe 100 % UVP wäre bei einem
+so alten Gerät ohne Sammlerstatus schon für sich genommen ein Kontaminationsindiz – die Prüfung sieht
+das aktuell nicht, weil sie nur die UVP kennt, nicht das Baujahr.
+
+**To-Do:** `pruefeMarktwertNeuPlausibilitaet()` (bzw. eine neue, danebenliegende Prüfung) um eine
+altersabhängige Obergrenze ergänzen – z. B. gestaffelt analog zu `ALTERSFAKTOR_STUFEN`, oder simpler:
+je älter das Modelljahr, desto niedriger die zulässige Prozent-Schwelle relativ zur UVP. Separates
+Thema von der Kategorie-Ausweitung oben – betrifft auch `smartphones`, wo die UVP-Leitplanken sonst
+schon greifen.
