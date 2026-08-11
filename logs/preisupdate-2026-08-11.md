@@ -1,675 +1,875 @@
 # Preisupdate 2026-08-11
 
-Aktualisiert: 58 · Übersprungen: 38 · PRÜFEN: 33
+Aktualisiert: 32 · Übersprungen: 75 · PRÜFEN: 46
 
-## 📉 Speicher-Konsistenzkappung (21)
+## 📉 Speicher-Konsistenzkappung (45)
 Kleinere Speichervariante lag über einer größeren - auf deren Niveau gekappt (siehe OFFENE-PUNKTE.md).
-- Google Pixel 9 Pro XL (512 GB), neuVersiegelt: 745 € → 650 €
-- Google Pixel 10 Pro Fold (256 GB), wieNeu: 775 € → 760 €
-- Google Pixel 10 Pro Fold (256 GB), sehrGut: 710 € → 690 €
-- Google Pixel 10 Pro Fold (256 GB), gut: 565 € → 555 €
-- Google Pixel 10 Pro Fold (256 GB), defekt: 225 € → 205 €
-- Redmi Note 14 Pro (256 GB), wieNeu: 150 € → 145 €
-- Redmi Note 14 Pro (256 GB), sehrGut: 135 € → 130 €
-- Redmi Note 14 Pro (256 GB), gut: 110 € → 105 €
-- OnePlus 8 Pro (128 GB), neuVersiegelt: 395 € → 270 €
-- OnePlus 9 (128 GB), neuVersiegelt: 185 € → 155 €
-- OnePlus 10 Pro (128 GB), wieNeu: 185 € → 130 €
-- OnePlus 10 Pro (128 GB), sehrGut: 170 € → 120 €
-- OnePlus 10 Pro (128 GB), gut: 135 € → 95 €
-- Huawei P30 Pro (128 GB), neuVersiegelt: 335 € → 240 €
-- Huawei P30 Pro (256 GB), wieNeu: 180 € → 110 €
-- Huawei P30 Pro (256 GB), sehrGut: 160 € → 100 €
-- Huawei P30 Pro (256 GB), gut: 130 € → 80 €
-- Huawei P30 Pro (256 GB), defekt: 35 € → 30 €
-- Huawei P60 Pro (256 GB), wieNeu: 260 € → 245 €
-- Huawei P60 Pro (256 GB), sehrGut: 235 € → 225 €
-- Huawei P60 Pro (256 GB), gut: 190 € → 180 €
+- Nothing Phone (2a) (128 GB), wieNeu: 125 € → 120 €
+- Nokia G22 (64 GB), neuVersiegelt: 90 € → 70 €
+- Apple iPad Air 6 11" (2024) (128 GB), neuVersiegelt: 550 € → 545 €
+- Apple iPad Pro 11" Gen 2 (2020) (128 GB), wieNeu: 200 € → 180 €
+- Apple iPad Pro 11" Gen 2 (2020) (128 GB), sehrGut: 175 € → 160 €
+- Apple iPad Pro 11" Gen 2 (2020) (128 GB), gut: 145 € → 130 €
+- Apple iPad Pro 11" Gen 2 (2020) (128 GB), defekt: 55 € → 50 €
+- Apple iPad Pro 12.9" Gen 4 (2020) (256 GB), wieNeu: 320 € → 250 €
+- Apple iPad Pro 12.9" Gen 4 (2020) (256 GB), sehrGut: 290 € → 225 €
+- Apple iPad Pro 12.9" Gen 4 (2020) (256 GB), gut: 265 € → 185 €
+- Apple iPad Pro 12.9" Gen 4 (2020) (256 GB), defekt: 90 € → 65 €
+- Apple iPad Pro 12.9" Gen 5 (2021) (256 GB), wieNeu: 340 € → 310 €
+- Apple iPad Pro 12.9" Gen 5 (2021) (128 GB), wieNeu: 340 € → 310 €
+- Apple iPad Pro 12.9" Gen 5 (2021) (256 GB), sehrGut: 310 € → 280 €
+- Apple iPad Pro 12.9" Gen 5 (2021) (128 GB), sehrGut: 310 € → 280 €
+- Apple iPad Pro 12.9" Gen 5 (2021) (256 GB), gut: 250 € → 225 €
+- Apple iPad Pro 12.9" Gen 5 (2021) (128 GB), gut: 250 € → 225 €
+- Apple iPad Pro 12.9" Gen 5 (2021) (256 GB), defekt: 95 € → 85 €
+- Apple iPad Pro 12.9" Gen 5 (2021) (128 GB), defekt: 95 € → 85 €
+- Apple iPad Pro 12.9" Gen 6 (2022) (256 GB), wieNeu: 500 € → 455 €
+- Apple iPad Pro 12.9" Gen 6 (2022) (256 GB), sehrGut: 450 € → 410 €
+- Apple iPad Pro 12.9" Gen 6 (2022) (256 GB), gut: 365 € → 330 €
+- Apple iPad Pro 12.9" Gen 6 (2022) (256 GB), defekt: 130 € → 120 €
+- Samsung Galaxy Tab S7 (256 GB), neuVersiegelt: 375 € → 165 €
+- Samsung Galaxy Tab S7 (128 GB), neuVersiegelt: 330 € → 165 €
+- Samsung Galaxy Tab S7 (256 GB), wieNeu: 150 € → 135 €
+- Samsung Galaxy Tab S7 (128 GB), wieNeu: 150 € → 135 €
+- Samsung Galaxy Tab S7 (256 GB), sehrGut: 130 € → 120 €
+- Samsung Galaxy Tab S7 (128 GB), sehrGut: 130 € → 120 €
+- Samsung Galaxy Tab S7 (256 GB), gut: 110 € → 100 €
+- Samsung Galaxy Tab S7 (128 GB), gut: 110 € → 100 €
+- Samsung Galaxy Tab S7 (256 GB), defekt: 40 € → 35 €
+- Samsung Galaxy Tab S7 (128 GB), defekt: 40 € → 35 €
+- Samsung Galaxy Tab S8 (128 GB), neuVersiegelt: 450 € → 445 €
+- Samsung Galaxy Tab S8+ (128 GB), neuVersiegelt: 450 € → 445 €
+- Samsung Galaxy Tab S10 Ultra (256 GB), wieNeu: 575 € → 570 €
+- Samsung Galaxy Tab S10 Ultra (256 GB), sehrGut: 520 € → 515 €
+- Samsung Galaxy Tab S10 Ultra (256 GB), gut: 420 € → 415 €
+- Samsung Galaxy Tab S10 Ultra (256 GB), defekt: 155 € → 150 €
+- Samsung Galaxy Tab S11 Ultra (256 GB), wieNeu: 720 € → 715 €
+- Lenovo Tab P12 (128 GB), neuVersiegelt: 325 € → 140 €
+- Lenovo Tab P12 (128 GB), wieNeu: 125 € → 115 €
+- Lenovo Tab P12 (128 GB), sehrGut: 110 € → 100 €
+- Lenovo Tab P12 (128 GB), gut: 95 € → 85 €
+- Lenovo Tab P12 (128 GB), defekt: 35 € → 30 €
 
-## ⚠️ PRÜFEN (33)
-**Google Pixel 8a (128 GB)**
-- Gebraucht: 38 Treffer, Median vor Filter 260 €, nach Filter 260 € → marktwertGebraucht 229 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 290 €, nach Filter 290 € → marktwertNeu 267 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 240 € (bisher 240 €)
+## ⚠️ PRÜFEN (46)
+**Nothing Phone (2a) (128 GB)**
+- Gebraucht: 10 Treffer, Median vor Filter 187 €, nach Filter 187 € → marktwertGebraucht 165 € (−12%)
+- Neu: 3 Treffer, Median vor Filter 521 €, nach Filter 521 € → marktwertNeu(roh) 479 € **VERWORFEN** (Leitplanke 2: > 115% von UVP 329 €) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 160 € (bisher 160 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 170 € (bisher 160 €) → final 170 €
-  - sehrGut: 155 € (bisher 145 €) → final 155 €
-  - gut: 125 € (bisher 115 €) → final 125 €
-  - defekt: 45 € (bisher 40 €) → final 45 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
-
-**Google Pixel 9 Pro XL (512 GB)**
-- Gebraucht: 11 Treffer, Median vor Filter 700 €, nach Filter 700 € → marktwertGebraucht 616 € (−12%)
-- Neu: 13 Treffer, Median vor Filter 1525 €, nach Filter 1525 € → marktwertNeu 1403 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 650 € (bisher 650 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 460 € (bisher 520 €) → final 460 €
-  - sehrGut: 420 € (bisher 475 €) → final 420 €
-  - gut: 340 € (bisher 385 €) → final 340 €
-  - defekt: 125 € (bisher 140 €) → final 125 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
-
-**Google Pixel 9 Pro Fold (256 GB)**
-- Gebraucht: 13 Treffer, Median vor Filter 819 €, nach Filter 819 € → marktwertGebraucht 721 € (−12%)
-- Neu: 14 Treffer, Median vor Filter 1480 €, nach Filter 1480 € → marktwertNeu 1362 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 945 € (bisher 945 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 540 € (bisher 615 €) → final 540 €
-  - sehrGut: 490 € (bisher 560 €) → final 490 €
-  - gut: 395 € (bisher 450 €) → final 395 €
-  - defekt: 145 € (bisher 165 €) → final 150 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
-
-**Google Pixel 9 Pro Fold (512 GB)**
-- Gebraucht: 15 Treffer, Median vor Filter 990 €, nach Filter 990 € → marktwertGebraucht 871 € (−12%)
-- Neu: 7 Treffer, Median vor Filter 2333 €, nach Filter 2333 € → marktwertNeu 2146 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1045 € (bisher 965 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 655 € (bisher 770 €) → final 655 €
-  - sehrGut: 590 € (bisher 700 €) → final 590 €
-  - gut: 480 € (bisher 565 €) → final 480 €
-  - defekt: 175 € (bisher 205 €) → final 185 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
-
-**Google Pixel 10 Pro (256 GB)**
-- Gebraucht: 43 Treffer, Median vor Filter 816 €, nach Filter 816 € → marktwertGebraucht 718 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 936 €, nach Filter 936 € → marktwertNeu 861 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 595 € (bisher 595 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 490 € (bisher 470 €) → final 490 €
-  - sehrGut: 445 € (bisher 430 €) → final 445 €
-  - gut: 355 € (bisher 345 €) → final 355 €
-  - defekt: 145 € (bisher 125 €) → final 140 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
-
-**Google Pixel 10 Pro (512 GB)**
-- Gebraucht: 13 Treffer, Median vor Filter 990 €, nach Filter 990 € → marktwertGebraucht 871 € (−12%)
-- Neu: 32 Treffer, Median vor Filter 1715 €, nach Filter 1715 € → marktwertNeu 1578 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 695 € (bisher 695 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 570 € (bisher 570 €) → final 570 €
-  - sehrGut: 520 € (bisher 520 €) → final 520 €
-  - gut: 415 € (bisher 415 €) → final 415 €
-  - defekt: 175 € (bisher 155 €) → final 170 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
-
-**Google Pixel 10 Pro XL (512 GB)**
-- Gebraucht: 6 Treffer, Median vor Filter 1066 €, nach Filter 1066 € → marktwertGebraucht 938 € (−12%)
-- Neu: 8 Treffer, Median vor Filter 1715 €, nach Filter 1715 € → marktwertNeu 1578 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 745 € (bisher 745 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 610 € (bisher 610 €) → final 610 €
-  - sehrGut: 560 € (bisher 560 €) → final 560 €
-  - gut: 445 € (bisher 445 €) → final 445 €
-  - defekt: 190 € (bisher 165 €) → final 180 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
-
-**Google Pixel 10 Pro Fold (512 GB)**
-- Gebraucht: 6 Treffer, Median vor Filter 1152 €, nach Filter 1152 € → marktwertGebraucht 1013 € (−12%)
-- Neu: 11 Treffer, Median vor Filter 1638 €, nach Filter 1638 € → marktwertNeu 1507 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1045 € (bisher 1045 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 760 € (bisher 855 €) → final 760 €
-  - sehrGut: 690 € (bisher 785 €) → final 690 €
-  - gut: 555 € (bisher 625 €) → final 555 €
-  - defekt: 205 € (bisher 230 €) → final 205 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
-
-**Xiaomi 13 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 159 €, nach Filter 159 € → marktwertGebraucht 140 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 239 €, nach Filter 239 € → marktwertNeu 220 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 195 € (bisher 195 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 105 € (bisher 95 €) → final 105 €
-  - sehrGut: 95 € (bisher 85 €) → final 95 €
-  - gut: 75 € (bisher 70 €) → final 75 €
-  - defekt: 30 € (bisher 25 €) → final 30 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
-
-**Xiaomi 14 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 187 €, nach Filter 187 € → marktwertGebraucht 165 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 269 €, nach Filter 269 € → marktwertNeu 247 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 220 € (bisher 185 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 125 € (bisher 110 €) → final 125 €
-  - sehrGut: 110 € (bisher 100 €) → final 110 €
-  - gut: 90 € (bisher 80 €) → final 90 €
-  - defekt: 35 € (bisher 30 €) → final 35 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
-
-**Xiaomi 15 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 272 €, nach Filter 272 € → marktwertGebraucht 239 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 270 €, nach Filter 270 € → marktwertNeu 248 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 220 € (bisher 210 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 180 € (bisher 170 €) → final 180 €
-  - sehrGut: 165 € (bisher 155 €) → final 165 €
-  - gut: 130 € (bisher 125 €) → final 130 €
-  - defekt: 50 € (bisher 45 €) → final 50 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
-
-**Redmi Note 13 Pro (512 GB)**
-- Gebraucht: 26 Treffer, Median vor Filter 220 €, nach Filter 220 € → marktwertGebraucht 193 € (−12%)
-- Neu: 13 Treffer, Median vor Filter 400 €, nach Filter 400 € → marktwertNeu 368 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 295 € (bisher 295 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 145 € (bisher 130 €) → final 145 €
-  - sehrGut: 130 € (bisher 120 €) → final 130 €
-  - gut: 105 € (bisher 95 €) → final 105 €
-  - defekt: 40 € (bisher 35 €) → final 40 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
-
-**Redmi Note 13 Pro (128 GB)**
-- Gebraucht: 10 Treffer, Median vor Filter 120 €, nach Filter 120 € → marktwertGebraucht 106 € (−12%)
-- Neu: 0 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 170 € (bisher 105 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 80 € (bisher 85 €) → final 80 €
-  - sehrGut: 70 € (bisher 80 €) → final 70 €
-  - gut: 60 € (bisher 65 €) → final 60 €
-  - defekt: 20 € (bisher 25 €) → final 25 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
-
-**Redmi Note 14 Pro (256 GB)**
-- Gebraucht: 45 Treffer, Median vor Filter 228 €, nach Filter 228 € → marktwertGebraucht 201 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 272 €, nach Filter 272 € → marktwertNeu 250 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 195 € (bisher 195 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 150 € (bisher 135 €) → final 145 €
-  - sehrGut: 135 € (bisher 125 €) → final 130 €
-  - gut: 110 € (bisher 100 €) → final 105 €
-  - defekt: 40 € (bisher 35 €) → final 40 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
-
-**Poco X7 Pro (256 GB)**
-- Gebraucht: 5 Treffer, Median vor Filter 299 €, nach Filter 299 € → marktwertGebraucht 263 € (−12%)
-- Neu: 12 Treffer, Median vor Filter 421 €, nach Filter 421 € → marktwertNeu 387 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 180 € (bisher 180 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 150 € (bisher 150 €) → final 150 €
-  - sehrGut: 135 € (bisher 135 €) → final 135 €
-  - gut: 110 € (bisher 110 €) → final 110 €
-  - defekt: 55 € (bisher 40 €) → final 45 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
-
-**OnePlus 8 Pro (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 188 €, nach Filter 188 € → marktwertGebraucht 166 € (−12%)
-- Neu: 3 Treffer, Median vor Filter 479 €, nach Filter 479 € → marktwertNeu 441 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 270 € (bisher 230 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 125 € (bisher 120 €) → final 125 €
-  - sehrGut: 115 € (bisher 110 €) → final 115 €
-  - gut: 90 € (bisher 90 €) → final 90 €
-  - defekt: 35 € (bisher 30 €) → final 35 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
-
-**OnePlus 8 Pro (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 201 €, nach Filter 201 € → marktwertGebraucht 177 € (−12%)
-- Neu: 5 Treffer, Median vor Filter 328 €, nach Filter 328 € → marktwertNeu 302 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 270 € (bisher 230 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 135 € (bisher 120 €) → final 135 €
-  - sehrGut: 120 € (bisher 110 €) → final 120 €
-  - gut: 95 € (bisher 90 €) → final 95 €
-  - defekt: 35 € (bisher 30 €) → final 35 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
-
-**OnePlus 9 (256 GB)**
-- Gebraucht: 47 Treffer, Median vor Filter 186 €, nach Filter 186 € → marktwertGebraucht 163 € (−12%)
-- Neu: 3 Treffer, Median vor Filter 191 €, nach Filter 191 € → marktwertNeu 176 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 155 € (bisher 170 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 120 € (bisher 120 €) → final 120 €
+  - wieNeu: 125 € (bisher 120 €) → final 120 €
   - sehrGut: 110 € (bisher 110 €) → final 110 €
   - gut: 90 € (bisher 90 €) → final 90 €
-  - defekt: 35 € (bisher 30 €) → final 35 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
+  - defekt: 35 € (bisher 35 €) → final 35 €
+- **Ausgelöste Regeln:** marktwertNeu verworfen (Leitplanke 2: 479 € > 115% von UVP 329 € - vermutlich kontaminierter Treffer)
 
-**OnePlus 9 Pro (128 GB)**
-- Gebraucht: 40 Treffer, Median vor Filter 188 €, nach Filter 188 € → marktwertGebraucht 165 € (−12%)
-- Neu: 2 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 445 € (bisher 155 €)
+**Nothing Phone (2a) (256 GB)**
+- Gebraucht: 7 Treffer, Median vor Filter 185 €, nach Filter 185 € → marktwertGebraucht 163 € (−12%)
+- Neu: 5 Treffer, Median vor Filter 603 €, nach Filter 603 € → marktwertNeu(roh) 554 € **VERWORFEN** (Leitplanke 2: > 115% von UVP 429 €) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 210 € (bisher 210 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 125 € (bisher 120 €) → final 125 €
-  - sehrGut: 110 € (bisher 110 €) → final 110 €
-  - gut: 90 € (bisher 90 €) → final 90 €
-  - defekt: 35 € (bisher 30 €) → final 35 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
+  - wieNeu: 120 € (bisher 135 €) → final 120 €
+  - sehrGut: 110 € (bisher 120 €) → final 110 €
+  - gut: 90 € (bisher 100 €) → final 90 €
+  - defekt: 35 € (bisher 35 €) → final 35 €
+- **Ausgelöste Regeln:** marktwertNeu verworfen (Leitplanke 2: 554 € > 115% von UVP 429 € - vermutlich kontaminierter Treffer)
 
-**OnePlus 9 Pro (256 GB)**
-- Gebraucht: 32 Treffer, Median vor Filter 192 €, nach Filter 192 € → marktwertGebraucht 169 € (−12%)
-- Neu: 1 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 495 € (bisher 190 €)
+**Nothing Phone (3) (512 GB)**
+- Gebraucht: 7 Treffer, Median vor Filter 580 €, nach Filter 580 € → marktwertGebraucht 510 € (−12%)
+- Neu: 12 Treffer, Median vor Filter 691 €, nach Filter 691 € → marktwertNeu 636 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 495 € (bisher 495 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 125 € (bisher 120 €) → final 125 €
-  - sehrGut: 115 € (bisher 110 €) → final 115 €
-  - gut: 95 € (bisher 90 €) → final 95 €
-  - defekt: 35 € (bisher 30 €) → final 35 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
+  - wieNeu: 385 € (bisher 405 €) → final 385 €
+  - sehrGut: 345 € (bisher 370 €) → final 345 €
+  - gut: 280 € (bisher 295 €) → final 280 €
+  - defekt: 100 € (bisher 115 €) → final 105 €
+- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
 
-**OnePlus 10 Pro (128 GB)**
-- Gebraucht: 11 Treffer, Median vor Filter 280 €, nach Filter 280 € → marktwertGebraucht 246 € (−12%)
-- Neu: 0 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 445 € (bisher 230 €)
+**Motorola Edge 40 (256 GB)**
+- Gebraucht: 18 Treffer, Median vor Filter 236 €, nach Filter 236 € → marktwertGebraucht 207 € (−12%)
+- Neu: 24 Treffer, Median vor Filter 341 €, nach Filter 341 € → marktwertNeu 313 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 280 € (bisher 280 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 185 € (bisher 120 €) → final 130 €
-  - sehrGut: 170 € (bisher 110 €) → final 120 €
-  - gut: 135 € (bisher 90 €) → final 95 €
-  - defekt: 50 € (bisher 30 €) → final 35 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
-
-**OnePlus 10 Pro (256 GB)**
-- Gebraucht: 12 Treffer, Median vor Filter 200 €, nach Filter 200 € → marktwertGebraucht 176 € (−12%)
-- Neu: 1 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 495 € (bisher 230 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 130 € (bisher 120 €) → final 130 €
-  - sehrGut: 120 € (bisher 110 €) → final 120 €
-  - gut: 95 € (bisher 90 €) → final 95 €
-  - defekt: 35 € (bisher 30 €) → final 35 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
-
-**OnePlus 11 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 216 €, nach Filter 216 € → marktwertGebraucht 190 € (−12%)
-- Neu: 9 Treffer, Median vor Filter 590 €, nach Filter 590 € → marktwertNeu 542 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 470 € (bisher 410 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 145 € (bisher 165 €) → final 145 €
-  - sehrGut: 130 € (bisher 150 €) → final 130 €
-  - gut: 105 € (bisher 120 €) → final 105 €
+  - wieNeu: 155 € (bisher 160 €) → final 155 €
+  - sehrGut: 140 € (bisher 145 €) → final 140 €
+  - gut: 115 € (bisher 120 €) → final 115 €
   - defekt: 40 € (bisher 45 €) → final 40 €
 - **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
 
-**OnePlus 13 (256 GB)**
-- Gebraucht: 17 Treffer, Median vor Filter 450 €, nach Filter 450 € → marktwertGebraucht 396 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 665 €, nach Filter 665 € → marktwertNeu 612 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 520 € (bisher 520 €)
+**Oppo Reno 12 Pro (512 GB)**
+- Gebraucht: 12 Treffer, Median vor Filter 455 €, nach Filter 455 € → marktwertGebraucht 400 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 699 €, nach Filter 699 € → marktwertNeu 643 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 395 € (bisher 395 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 295 € (bisher 330 €) → final 295 €
-  - sehrGut: 270 € (bisher 300 €) → final 270 €
-  - gut: 220 € (bisher 245 €) → final 220 €
+  - wieNeu: 300 € (bisher 265 €) → final 300 €
+  - sehrGut: 270 € (bisher 240 €) → final 270 €
+  - gut: 220 € (bisher 195 €) → final 220 €
+  - defekt: 80 € (bisher 70 €) → final 75 €
+- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
+
+**Honor Magic 5 Pro (512 GB)**
+- Gebraucht: 26 Treffer, Median vor Filter 433 €, nach Filter 433 € → marktwertGebraucht 381 € (−12%)
+- Neu: 41 Treffer, Median vor Filter 971 €, nach Filter 971 € → marktwertNeu 894 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 595 € (bisher 595 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 285 € (bisher 330 €) → final 285 €
+  - sehrGut: 260 € (bisher 300 €) → final 260 €
+  - gut: 210 € (bisher 240 €) → final 210 €
+  - defekt: 75 € (bisher 90 €) → final 80 €
+- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
+
+**Honor Magic 6 Pro (512 GB)**
+- Gebraucht: 28 Treffer, Median vor Filter 465 €, nach Filter 465 € → marktwertGebraucht 410 € (−12%)
+- Neu: 24 Treffer, Median vor Filter 917 €, nach Filter 917 € → marktwertNeu 843 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 645 € (bisher 645 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 305 € (bisher 340 €) → final 305 €
+  - sehrGut: 280 € (bisher 305 €) → final 280 €
+  - gut: 225 € (bisher 250 €) → final 225 €
   - defekt: 80 € (bisher 90 €) → final 80 €
 - **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
 
-**OnePlus Nord 4 (256 GB)**
-- Gebraucht: 16 Treffer, Median vor Filter 150 €, nach Filter 150 € → marktwertGebraucht 132 € (−12%)
-- Neu: 18 Treffer, Median vor Filter 437 €, nach Filter 437 € → marktwertNeu 402 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 245 € (bisher 245 €)
+**Honor 200 Pro (512 GB)**
+- Gebraucht: 9 Treffer, Median vor Filter 688 €, nach Filter 688 € → marktwertGebraucht 605 € (−12%)
+- Neu: 21 Treffer, Median vor Filter 894 €, nach Filter 894 € → marktwertNeu(roh) 822 € **VERWORFEN** (Leitplanke 2: > 115% von UVP 699 €) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 345 € (bisher 345 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 100 € (bisher 105 €) → final 100 €
-  - sehrGut: 90 € (bisher 95 €) → final 90 €
-  - gut: 70 € (bisher 80 €) → final 70 €
-  - defekt: 25 € (bisher 30 €) → final 25 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
+  - wieNeu: 285 € (bisher 285 €) → final 285 €
+  - sehrGut: 260 € (bisher 260 €) → final 260 €
+  - gut: 205 € (bisher 205 €) → final 205 €
+  - defekt: 120 € (bisher 105 €) → final 115 €
+- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt; marktwertNeu verworfen (Leitplanke 2: 822 € > 115% von UVP 699 € - vermutlich kontaminierter Treffer)
 
-**Huawei P30 Pro (256 GB)**
-- Gebraucht: 22 Treffer, Median vor Filter 270 €, nach Filter 270 € → marktwertGebraucht 238 € (−12%)
-- Neu: 6 Treffer, Median vor Filter 293 €, nach Filter 293 € → marktwertNeu 269 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 240 € (bisher 355 €)
+**Nokia G22 (64 GB)**
+- Gebraucht: 6 Treffer, Median vor Filter 76 €, nach Filter 76 € → marktwertGebraucht 67 € (−12%)
+- Neu: 3 Treffer, Median vor Filter 298 €, nach Filter 298 € → marktwertNeu(roh) 275 € **VERWORFEN** (Leitplanke 2: > 115% von UVP 189 €) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 70 € (bisher 55 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 180 € (bisher 110 €) → final 110 €
-  - sehrGut: 160 € (bisher 100 €) → final 100 €
-  - gut: 130 € (bisher 80 €) → final 80 €
-  - defekt: 50 € (bisher 30 €) → final 30 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
+  - wieNeu: 50 € (bisher 45 €) → final 50 €
+  - sehrGut: 45 € (bisher 40 €) → final 45 €
+  - gut: 35 € (bisher 35 €) → final 35 €
+  - defekt: 15 € (bisher 10 €) → final 10 €
+- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt; marktwertNeu verworfen (Leitplanke 2: 275 € > 115% von UVP 189 € - vermutlich kontaminierter Treffer)
 
-**Huawei P40 Pro (256 GB)**
-- Gebraucht: 22 Treffer, Median vor Filter 230 €, nach Filter 230 € → marktwertGebraucht 202 € (−12%)
-- Neu: 9 Treffer, Median vor Filter 325 €, nach Filter 325 € → marktwertNeu 299 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 265 € (bisher 265 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 150 € (bisher 165 €) → final 150 €
-  - sehrGut: 140 € (bisher 150 €) → final 140 €
-  - gut: 110 € (bisher 120 €) → final 110 €
-  - defekt: 40 € (bisher 45 €) → final 40 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
-
-**Huawei P50 Pro (256 GB)**
-- Gebraucht: 5 Treffer, Median vor Filter 258 €, nach Filter 258 € → marktwertGebraucht 227 € (−12%)
-- Neu: 9 Treffer, Median vor Filter 376 €, nach Filter 376 € → marktwertNeu 346 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 310 € (bisher 270 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 170 € (bisher 160 €) → final 170 €
-  - sehrGut: 155 € (bisher 145 €) → final 155 €
-  - gut: 125 € (bisher 115 €) → final 125 €
-  - defekt: 45 € (bisher 40 €) → final 45 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
-
-**Huawei P60 Pro (256 GB)**
-- Gebraucht: 14 Treffer, Median vor Filter 395 €, nach Filter 395 € → marktwertGebraucht 347 € (−12%)
-- Neu: 3 Treffer, Median vor Filter 1528 €, nach Filter 1528 € → marktwertNeu(roh) 1406 € **VERWORFEN** (Leitplanke 2: > 115% von UVP 1199 €) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 595 € (bisher 495 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 260 € (bisher 195 €) → final 245 €
-  - sehrGut: 235 € (bisher 180 €) → final 225 €
-  - gut: 190 € (bisher 145 €) → final 180 €
-  - defekt: 70 € (bisher 55 €) → final 60 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt; marktwertNeu verworfen (Leitplanke 2: 1406 € > 115% von UVP 1199 € - vermutlich kontaminierter Treffer)
-
-**Huawei P60 Pro (512 GB)**
-- Gebraucht: 6 Treffer, Median vor Filter 374 €, nach Filter 374 € → marktwertGebraucht 329 € (−12%)
+**Apple iPad 7 (2019) (32 GB)**
+- Gebraucht: 38 Treffer, Median vor Filter 100 €, nach Filter 100 € → marktwertGebraucht 88 € (−12%)
 - Neu: 2 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 695 € (bisher 695 €)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 245 € (bisher 195 €) → final 245 €
-  - sehrGut: 225 € (bisher 180 €) → final 225 €
-  - gut: 180 € (bisher 145 €) → final 180 €
-  - defekt: 65 € (bisher 55 €) → final 60 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
+  - wieNeu: 75 € (bisher 70 €) → final 75 €
+  - sehrGut: 70 € (bisher 65 €) → final 70 €
+  - gut: 65 € (bisher 55 €) → final 60 €
+  - defekt: 20 € (bisher 15 €) → final 15 €
+- **Ausgelöste Regeln:** gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
 
-**Huawei Mate 20 Pro (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 110 €, nach Filter 110 € → marktwertGebraucht 96 € (−12%)
-- Neu: 6 Treffer, Median vor Filter 338 €, nach Filter 338 € → marktwertNeu 311 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 280 € (bisher 275 €)
+**Apple iPad 7 (2019) (128 GB)**
+- Gebraucht: 22 Treffer, Median vor Filter 116 €, nach Filter 116 € → marktwertGebraucht 102 € (−12%)
+- Neu: 2 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 70 € (bisher 85 €) → final 70 €
-  - sehrGut: 65 € (bisher 80 €) → final 65 €
-  - gut: 55 € (bisher 65 €) → final 55 €
-  - defekt: 20 € (bisher 25 €) → final 25 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (-10%) gekappt
+  - wieNeu: 90 € (bisher 85 €) → final 90 €
+  - sehrGut: 80 € (bisher 70 €) → final 75 €
+  - gut: 75 € (bisher 60 €) → final 65 €
+  - defekt: 25 € (bisher 15 €) → final 15 €
+- **Ausgelöste Regeln:** sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
 
-**Nothing Phone (1) (256 GB)**
-- Gebraucht: 16 Treffer, Median vor Filter 267 €, nach Filter 267 € → marktwertGebraucht 235 € (−12%)
-- Neu: 8 Treffer, Median vor Filter 379 €, nach Filter 379 € → marktwertNeu 349 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 280 € (bisher 280 €)
+**Apple iPad 8 (2020) (32 GB)**
+- Gebraucht: 31 Treffer, Median vor Filter 139 €, nach Filter 139 € → marktwertGebraucht 122 € (−12%)
+- Neu: 3 Treffer, Median vor Filter 235 €, nach Filter 235 € → marktwertNeu 216 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 175 € (bisher 180 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 175 € (bisher 150 €) → final 175 €
-  - sehrGut: 160 € (bisher 135 €) → final 160 €
-  - gut: 130 € (bisher 110 €) → final 130 €
+  - wieNeu: 110 € (bisher 100 €) → final 110 €
+  - sehrGut: 100 € (bisher 95 €) → final 100 €
+  - gut: 90 € (bisher 65 €) → final 70 €
+  - defekt: 30 € (bisher 20 €) → final 20 €
+- **Ausgelöste Regeln:** gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Apple iPad 8 (2020) (128 GB)**
+- Gebraucht: 15 Treffer, Median vor Filter 200 €, nach Filter 200 € → marktwertGebraucht 176 € (−12%)
+- Neu: 2 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 155 € (bisher 120 €) → final 130 €
+  - sehrGut: 140 € (bisher 110 €) → final 120 €
+  - gut: 125 € (bisher 95 €) → final 105 €
+  - defekt: 45 € (bisher 35 €) → final 40 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Apple iPad 9 (2021) (64 GB)**
+- Gebraucht: 33 Treffer, Median vor Filter 208 €, nach Filter 208 € → marktwertGebraucht 183 € (−12%)
+- Neu: 6 Treffer, Median vor Filter 300 €, nach Filter 300 € → marktwertNeu 276 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 225 € (bisher 225 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 160 € (bisher 130 €) → final 145 €
+  - sehrGut: 145 € (bisher 120 €) → final 130 €
+  - gut: 130 € (bisher 105 €) → final 115 €
   - defekt: 45 € (bisher 40 €) → final 45 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
 
-**Nothing Phone (2) (512 GB)**
-- Gebraucht: 6 Treffer, Median vor Filter 581 €, nach Filter 581 € → marktwertGebraucht 511 € (−12%)
-- Neu: 4 Treffer, Median vor Filter 990 €, nach Filter 990 € → marktwertNeu 911 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 420 € (bisher 420 €)
+**Apple iPad 9 (2021) (256 GB)**
+- Gebraucht: 27 Treffer, Median vor Filter 402 €, nach Filter 402 € → marktwertGebraucht 354 € (−12%)
+- Neu: 5 Treffer, Median vor Filter 750 €, nach Filter 750 € → marktwertNeu(roh) 690 € **VERWORFEN** (Leitplanke 2: > 115% von UVP 529 €) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 345 € (bisher 240 €) → final 345 €
-  - sehrGut: 315 € (bisher 220 €) → final 315 €
-  - gut: 250 € (bisher 175 €) → final 250 €
-  - defekt: 100 € (bisher 65 €) → final 70 €
-- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
+  - wieNeu: 310 € (bisher 285 €) → final 310 €
+  - sehrGut: 285 € (bisher 260 €) → final 285 €
+  - gut: 255 € (bisher 215 €) → final 235 €
+  - defekt: 90 € (bisher 75 €) → final 85 €
+- **Ausgelöste Regeln:** gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt; marktwertNeu verworfen (Leitplanke 2: 690 € > 115% von UVP 529 € - vermutlich kontaminierter Treffer)
 
-## Aktualisiert (58)
-**Google Pixel 7 Pro (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 224 €, nach Filter 224 € → marktwertGebraucht 197 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 307 €, nach Filter 307 € → marktwertNeu 283 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 250 € (bisher 250 €)
+**Apple iPad 10 (2022) (64 GB)**
+- Gebraucht: 45 Treffer, Median vor Filter 359 €, nach Filter 359 € → marktwertGebraucht 316 € (−12%)
+- Neu: 17 Treffer, Median vor Filter 450 €, nach Filter 450 € → marktwertNeu 414 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 335 € (bisher 350 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 150 € (bisher 150 €) → final 150 €
-  - sehrGut: 135 € (bisher 135 €) → final 135 €
-  - gut: 110 € (bisher 110 €) → final 110 €
-  - defekt: 40 € (bisher 40 €) → final 40 €
-- Ausgelöste Regeln: keine
+  - wieNeu: 280 € (bisher 235 €) → final 260 €
+  - sehrGut: 255 € (bisher 220 €) → final 240 €
+  - gut: 225 € (bisher 180 €) → final 200 €
+  - defekt: 80 € (bisher 60 €) → final 65 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
 
-**Google Pixel 7 Pro (512 GB)**
-- Gebraucht: 18 Treffer, Median vor Filter 495 €, nach Filter 495 € → marktwertGebraucht 435 € (−12%)
+**Apple iPad 11 (2025) (128 GB)**
+- Gebraucht: 10 Treffer, Median vor Filter 435 €, nach Filter 435 € → marktwertGebraucht 383 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 478 €, nach Filter 478 € → marktwertNeu 439 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis 370 € → final 325 € (bisher 325 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 335 € (bisher 315 €) → final 300 €
+  - sehrGut: 305 € (bisher 280 €) → final 300 €
+  - gut: 275 € (bisher 225 €) → final 250 €
+  - defekt: 95 € (bisher 85 €) → final 95 €
+- **Ausgelöste Regeln:** gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt; wieNeu: über eigenem Verkaufspreis (299.99 €) gekappt; sehrGut: über eigenem Verkaufspreis (299.99 €) gekappt
+
+**Apple iPad 11 (2025) (256 GB)**
+- Gebraucht: 6 Treffer, Median vor Filter 885 €, nach Filter 885 € → marktwertGebraucht 778 € (−12%)
+- Neu: 32 Treffer, Median vor Filter 1065 €, nach Filter 1065 € → marktwertNeu(roh) 980 € **VERWORFEN** (Leitplanke 2: > 115% von UVP 499 €) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 685 € (bisher 320 €) → final 350 €
+  - sehrGut: 625 € (bisher 290 €) → final 320 €
+  - gut: 560 € (bisher 235 €) → final 260 €
+  - defekt: 195 € (bisher 85 €) → final 95 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt; marktwertNeu verworfen (Leitplanke 2: 980 € > 115% von UVP 499 € - vermutlich kontaminierter Treffer)
+
+**Apple iPad Air 3 (2019) (64 GB)**
+- Gebraucht: 20 Treffer, Median vor Filter 179 €, nach Filter 179 € → marktwertGebraucht 158 € (−12%)
 - Neu: 1 Treffer (< 3) → marktwertNeu = null
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 595 € (bisher 410 €)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 325 € (bisher 330 €) → final 325 €
-  - sehrGut: 295 € (bisher 300 €) → final 295 €
-  - gut: 240 € (bisher 240 €) → final 240 €
-  - defekt: 85 € (bisher 90 €) → final 85 €
-- Ausgelöste Regeln: keine
+  - wieNeu: 140 € (bisher 130 €) → final 140 €
+  - sehrGut: 125 € (bisher 120 €) → final 125 €
+  - gut: 115 € (bisher 105 €) → final 115 €
+  - defekt: 40 € (bisher 35 €) → final 40 €
+- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
 
-**Google Pixel 7a (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 200 €, nach Filter 200 € → marktwertGebraucht 176 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 200 €, nach Filter 200 € → marktwertNeu 184 € (−8%)
+**Apple iPad Air 4 (2020) (64 GB)**
+- Gebraucht: 26 Treffer, Median vor Filter 324 €, nach Filter 324 € → marktwertGebraucht 285 € (−12%)
+- Neu: 1 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 250 € (bisher 225 €) → final 250 €
+  - sehrGut: 230 € (bisher 215 €) → final 230 €
+  - gut: 205 € (bisher 165 €) → final 180 €
+  - defekt: 70 € (bisher 55 €) → final 60 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Apple iPad Air 4 (2020) (256 GB)**
+- Gebraucht: 8 Treffer, Median vor Filter 335 €, nach Filter 335 € → marktwertGebraucht 294 € (−12%)
+- Neu: 1 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 260 € (bisher 225 €) → final 250 €
+  - sehrGut: 235 € (bisher 215 €) → final 235 €
+  - gut: 210 € (bisher 170 €) → final 185 €
+  - defekt: 75 € (bisher 60 €) → final 65 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Apple iPad Air 5 (2022) (64 GB)**
+- Gebraucht: 34 Treffer, Median vor Filter 395 €, nach Filter 395 € → marktwertGebraucht 347 € (−12%)
+- Neu: 9 Treffer, Median vor Filter 600 €, nach Filter 600 € → marktwertNeu 552 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 450 € (bisher 460 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 305 € (bisher 260 €) → final 285 €
+  - sehrGut: 280 € (bisher 230 €) → final 255 €
+  - gut: 250 € (bisher 200 €) → final 220 €
+  - defekt: 85 € (bisher 65 €) → final 70 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Apple iPad Air 6 11" (2024) (128 GB)**
+- Gebraucht: 6 Treffer, Median vor Filter 475 €, nach Filter 475 € → marktwertGebraucht 418 € (−12%)
+- Neu: 4 Treffer, Median vor Filter 732 €, nach Filter 732 € → marktwertNeu 673 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 545 € (bisher 545 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 370 € (bisher 250 €) → final 275 €
+  - sehrGut: 335 € (bisher 225 €) → final 250 €
+  - gut: 300 € (bisher 185 €) → final 205 €
+  - defekt: 105 € (bisher 65 €) → final 70 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Apple iPad Mini 6 (2021) (64 GB)**
+- Gebraucht: 6 Treffer, Median vor Filter 266 €, nach Filter 266 € → marktwertGebraucht 234 € (−12%)
+- Neu: 3 Treffer, Median vor Filter 690 €, nach Filter 690 € → marktwertNeu(roh) 635 € **VERWORFEN** (Leitplanke 2: > 115% von UVP 549 €) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 205 € (bisher 245 €) → final 220 €
+  - sehrGut: 185 € (bisher 225 €) → final 205 €
+  - gut: 170 € (bisher 200 €) → final 180 €
+  - defekt: 60 € (bisher 70 €) → final 65 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt; marktwertNeu verworfen (Leitplanke 2: 635 € > 115% von UVP 549 € - vermutlich kontaminierter Treffer)
+
+**Apple iPad Pro 11" Gen 2 (2020) (128 GB)**
+- Gebraucht: 7 Treffer, Median vor Filter 550 €, nach Filter 550 € → marktwertGebraucht 484 € (−12%)
+- Neu: 1 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 425 € (bisher 180 €) → final 180 €
+  - sehrGut: 385 € (bisher 160 €) → final 160 €
+  - gut: 350 € (bisher 130 €) → final 130 €
+  - defekt: 120 € (bisher 50 €) → final 50 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Apple iPad Pro 12.9" Gen 5 (2021) (128 GB)**
+- Gebraucht: 11 Treffer, Median vor Filter 650 €, nach Filter 650 € → marktwertGebraucht 572 € (−12%)
+- Neu: 1 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 505 € (bisher 310 €) → final 310 €
+  - sehrGut: 460 € (bisher 280 €) → final 280 €
+  - gut: 410 € (bisher 225 €) → final 225 €
+  - defekt: 145 € (bisher 85 €) → final 85 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Apple iPad Pro 12.9" Gen 5 (2021) (256 GB)**
+- Gebraucht: 5 Treffer, Median vor Filter 598 €, nach Filter 598 € → marktwertGebraucht 527 € (−12%)
+- Neu: 1 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 465 € (bisher 310 €) → final 310 €
+  - sehrGut: 420 € (bisher 280 €) → final 280 €
+  - gut: 380 € (bisher 225 €) → final 225 €
+  - defekt: 130 € (bisher 85 €) → final 85 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Apple iPad Pro 12.9" Gen 6 (2022) (256 GB)**
+- Gebraucht: 8 Treffer, Median vor Filter 743 €, nach Filter 743 € → marktwertGebraucht 653 € (−12%)
+- Neu: 1 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis 730 € → final 640 €
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 575 € (bisher 455 €) → final 455 €
+  - sehrGut: 525 € (bisher 410 €) → final 410 €
+  - gut: 470 € (bisher 330 €) → final 330 €
+  - defekt: 165 € (bisher 120 €) → final 120 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Samsung Galaxy Tab S7 (128 GB)**
+- Gebraucht: 35 Treffer, Median vor Filter 280 €, nach Filter 280 € → marktwertGebraucht 246 € (−12%)
+- Neu: 8 Treffer, Median vor Filter 439 €, nach Filter 439 € → marktwertNeu 404 € (−8%)
 - neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 165 € (bisher 165 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 130 € (bisher 130 €) → final 130 €
-  - sehrGut: 120 € (bisher 120 €) → final 120 €
-  - gut: 95 € (bisher 95 €) → final 95 €
+  - wieNeu: 185 € (bisher 135 €) → final 135 €
+  - sehrGut: 170 € (bisher 120 €) → final 120 €
+  - gut: 135 € (bisher 100 €) → final 100 €
+  - defekt: 50 € (bisher 35 €) → final 35 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Samsung Galaxy Tab S7 (256 GB)**
+- Gebraucht: 19 Treffer, Median vor Filter 350 €, nach Filter 350 € → marktwertGebraucht 308 € (−12%)
+- Neu: 7 Treffer, Median vor Filter 500 €, nach Filter 500 € → marktwertNeu 460 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 165 € (bisher 165 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 230 € (bisher 135 €) → final 135 €
+  - sehrGut: 210 € (bisher 120 €) → final 120 €
+  - gut: 170 € (bisher 100 €) → final 100 €
+  - defekt: 60 € (bisher 35 €) → final 35 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Samsung Galaxy Tab S7+ (128 GB)**
+- Gebraucht: 35 Treffer, Median vor Filter 280 €, nach Filter 280 € → marktwertGebraucht 246 € (−12%)
+- Neu: 8 Treffer, Median vor Filter 439 €, nach Filter 439 € → marktwertNeu 404 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 330 € (bisher 355 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 185 € (bisher 175 €) → final 185 €
+  - sehrGut: 170 € (bisher 160 €) → final 170 €
+  - gut: 135 € (bisher 130 €) → final 135 €
+  - defekt: 50 € (bisher 45 €) → final 50 €
+- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
+
+**Samsung Galaxy Tab S8 (128 GB)**
+- Gebraucht: 43 Treffer, Median vor Filter 450 €, nach Filter 450 € → marktwertGebraucht 396 € (−12%)
+- Neu: 16 Treffer, Median vor Filter 600 €, nach Filter 600 € → marktwertNeu 552 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 445 € (bisher 445 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 295 € (bisher 270 €) → final 295 €
+  - sehrGut: 270 € (bisher 245 €) → final 270 €
+  - gut: 220 € (bisher 195 €) → final 215 €
+  - defekt: 80 € (bisher 70 €) → final 75 €
+- **Ausgelöste Regeln:** sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Samsung Galaxy Tab S8+ (128 GB)**
+- Gebraucht: 42 Treffer, Median vor Filter 450 €, nach Filter 450 € → marktwertGebraucht 396 € (−12%)
+- Neu: 16 Treffer, Median vor Filter 600 €, nach Filter 600 € → marktwertNeu 552 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 445 € (bisher 445 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 295 € (bisher 270 €) → final 295 €
+  - sehrGut: 270 € (bisher 245 €) → final 270 €
+  - gut: 220 € (bisher 200 €) → final 220 €
+  - defekt: 80 € (bisher 70 €) → final 75 €
+- **Ausgelöste Regeln:** sehrGut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Samsung Galaxy Tab S9+ (512 GB)**
+- Gebraucht: 16 Treffer, Median vor Filter 699 €, nach Filter 699 € → marktwertGebraucht 616 € (−12%)
+- Neu: 16 Treffer, Median vor Filter 1691 €, nach Filter 1691 € → marktwertNeu(roh) 1556 € **VERWORFEN** (Leitplanke 2: > 115% von UVP 1199 €) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 460 € (bisher 460 €) → final 460 €
+  - sehrGut: 420 € (bisher 420 €) → final 420 €
+  - gut: 340 € (bisher 340 €) → final 340 €
+  - defekt: 125 € (bisher 125 €) → final 125 €
+- **Ausgelöste Regeln:** marktwertNeu verworfen (Leitplanke 2: 1556 € > 115% von UVP 1199 € - vermutlich kontaminierter Treffer)
+
+**Samsung Galaxy Tab S9 Ultra (256 GB)**
+- Gebraucht: 20 Treffer, Median vor Filter 665 €, nach Filter 665 € → marktwertGebraucht 585 € (−12%)
+- Neu: 9 Treffer, Median vor Filter 1540 €, nach Filter 1540 € → marktwertNeu(roh) 1417 € **VERWORFEN** (Leitplanke 2: > 115% von UVP 1199 €) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 440 € (bisher 450 €) → final 440 €
+  - sehrGut: 400 € (bisher 405 €) → final 400 €
+  - gut: 320 € (bisher 330 €) → final 320 €
+  - defekt: 115 € (bisher 120 €) → final 115 €
+- **Ausgelöste Regeln:** marktwertNeu verworfen (Leitplanke 2: 1417 € > 115% von UVP 1199 € - vermutlich kontaminierter Treffer)
+
+**Samsung Galaxy Tab S9 Ultra (512 GB)**
+- Gebraucht: 10 Treffer, Median vor Filter 735 €, nach Filter 735 € → marktwertGebraucht 647 € (−12%)
+- Neu: 7 Treffer, Median vor Filter 1861 €, nach Filter 1861 € → marktwertNeu(roh) 1712 € **VERWORFEN** (Leitplanke 2: > 115% von UVP 1399 €) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 485 € (bisher 520 €) → final 485 €
+  - sehrGut: 440 € (bisher 470 €) → final 440 €
+  - gut: 355 € (bisher 380 €) → final 355 €
+  - defekt: 130 € (bisher 140 €) → final 130 €
+- **Ausgelöste Regeln:** marktwertNeu verworfen (Leitplanke 2: 1712 € > 115% von UVP 1399 € - vermutlich kontaminierter Treffer)
+
+**Samsung Galaxy Tab S9 FE (128 GB)**
+- Gebraucht: 28 Treffer, Median vor Filter 393 €, nach Filter 393 € → marktwertGebraucht 345 € (−12%)
+- Neu: 39 Treffer, Median vor Filter 500 €, nach Filter 500 € → marktwertNeu 460 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 375 € (bisher 370 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 260 € (bisher 235 €) → final 260 €
+  - sehrGut: 235 € (bisher 220 €) → final 235 €
+  - gut: 190 € (bisher 180 €) → final 190 €
+  - defekt: 70 € (bisher 60 €) → final 65 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Samsung Galaxy Tab S10 (256 GB)**
+- Gebraucht: 31 Treffer, Median vor Filter 660 €, nach Filter 660 € → marktwertGebraucht 581 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 700 €, nach Filter 700 € → marktwertNeu 644 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 525 € (bisher 375 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 435 € (bisher 345 €) → final 380 €
+  - sehrGut: 395 € (bisher 310 €) → final 340 €
+  - gut: 320 € (bisher 250 €) → final 275 €
+  - defekt: 115 € (bisher 90 €) → final 100 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Samsung Galaxy Tab A9 (64 GB)**
+- Gebraucht: 39 Treffer, Median vor Filter 140 €, nach Filter 140 € → marktwertGebraucht 123 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 190 €, nach Filter 190 € → marktwertNeu 175 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 140 € (bisher 150 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 90 € (bisher 85 €) → final 90 €
+  - sehrGut: 85 € (bisher 75 €) → final 85 €
+  - gut: 70 € (bisher 60 €) → final 65 €
+  - defekt: 25 € (bisher 20 €) → final 20 €
+- **Ausgelöste Regeln:** sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Samsung Galaxy Tab A11 (64 GB)**
+- Gebraucht: 19 Treffer, Median vor Filter 144 €, nach Filter 144 € → marktwertGebraucht 126 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 155 €, nach Filter 155 € → marktwertNeu 143 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 115 € (bisher 115 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 95 € (bisher 95 €) → final 95 €
+  - sehrGut: 85 € (bisher 85 €) → final 85 €
+  - gut: 70 € (bisher 70 €) → final 70 €
+  - defekt: 25 € (bisher 20 €) → final 20 €
+- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
+
+**Xiaomi Pad 6 (128 GB)**
+- Gebraucht: 35 Treffer, Median vor Filter 240 €, nach Filter 240 € → marktwertGebraucht 211 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 260 €, nach Filter 260 € → marktwertNeu 239 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 195 € (bisher 215 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 160 € (bisher 125 €) → final 140 €
+  - sehrGut: 145 € (bisher 110 €) → final 120 €
+  - gut: 115 € (bisher 95 €) → final 105 €
+  - defekt: 40 € (bisher 35 €) → final 40 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Xiaomi Pad 6 (256 GB)**
+- Gebraucht: 19 Treffer, Median vor Filter 293 €, nach Filter 293 € → marktwertGebraucht 258 € (−12%)
+- Neu: 14 Treffer, Median vor Filter 289 €, nach Filter 289 € → marktwertNeu 266 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 215 € (bisher 215 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 195 € (bisher 125 €) → final 140 €
+  - sehrGut: 175 € (bisher 110 €) → final 120 €
+  - gut: 140 € (bisher 95 €) → final 105 €
+  - defekt: 50 € (bisher 35 €) → final 40 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Xiaomi Pad 7 (128 GB)**
+- Gebraucht: 21 Treffer, Median vor Filter 243 €, nach Filter 243 € → marktwertGebraucht 214 € (−12%)
+- Neu: 40 Treffer, Median vor Filter 289 €, nach Filter 289 € → marktwertNeu 266 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 215 € (bisher 225 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 160 € (bisher 150 €) → final 160 €
+  - sehrGut: 145 € (bisher 135 €) → final 145 €
+  - gut: 120 € (bisher 110 €) → final 120 €
+  - defekt: 45 € (bisher 40 €) → final 45 €
+- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
+
+**Lenovo Tab P12 (128 GB)**
+- Gebraucht: 6 Treffer, Median vor Filter 265 €, nach Filter 265 € → marktwertGebraucht 233 € (−12%)
+- Neu: 6 Treffer, Median vor Filter 496 €, nach Filter 496 € → marktwertNeu 456 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 140 € (bisher 140 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 175 € (bisher 115 €) → final 115 €
+  - sehrGut: 160 € (bisher 100 €) → final 100 €
+  - gut: 130 € (bisher 85 €) → final 85 €
+  - defekt: 45 € (bisher 30 €) → final 30 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (+10%) gekappt; sehrGut: Tagesbremse (+10%) gekappt; gut: Tagesbremse (+10%) gekappt; defekt: Tagesbremse (+10%) gekappt
+
+**Apple Watch Series 4 (GPS + Cellular) (GPS + Cellular)**
+- Gebraucht: 20 Treffer, Median vor Filter 99 €, nach Filter 99 € → marktwertGebraucht 87 € (−12%)
+- Neu: 43 Treffer, Median vor Filter 640 €, nach Filter 640 € → marktwertNeu 589 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 425 € (bisher 425 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 75 € (bisher 115 €) → final 105 €
+  - sehrGut: 70 € (bisher 105 €) → final 95 €
+  - gut: 65 € (bisher 90 €) → final 80 €
+  - defekt: 20 € (bisher 30 €) → final 25 €
+- **Ausgelöste Regeln:** wieNeu: Tagesbremse (-10%) gekappt; sehrGut: Tagesbremse (-10%) gekappt; gut: Tagesbremse (-10%) gekappt; defekt: Tagesbremse (-10%) gekappt
+
+**Apple Watch Series 5 (GPS) (GPS)**
+- Gebraucht: 50 Treffer, Median vor Filter 83 €, nach Filter 83 € → marktwertGebraucht 73 € (−12%)
+- Neu: 42 Treffer, Median vor Filter 164 €, nach Filter 164 € → marktwertNeu 151 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 120 € (bisher 125 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 65 € (bisher 60 €) → final 65 €
+  - sehrGut: 60 € (bisher 60 €) → final 60 €
+  - gut: 50 € (bisher 50 €) → final 50 €
+  - defekt: 20 € (bisher 15 €) → final 15 €
+- **Ausgelöste Regeln:** defekt: Tagesbremse (+10%) gekappt
+
+## Aktualisiert (32)
+**Nothing Phone (3) (256 GB)**
+- Gebraucht: 19 Treffer, Median vor Filter 350 €, nach Filter 350 € → marktwertGebraucht 308 € (−12%)
+- Neu: 30 Treffer, Median vor Filter 546 €, nach Filter 546 € → marktwertNeu 502 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 395 € (bisher 395 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 230 € (bisher 225 €) → final 230 €
+  - sehrGut: 210 € (bisher 205 €) → final 210 €
+  - gut: 170 € (bisher 165 €) → final 170 €
+  - defekt: 60 € (bisher 60 €) → final 60 €
+- Ausgelöste Regeln: keine
+
+**Motorola Edge 50 Pro (512 GB)**
+- Gebraucht: 5 Treffer, Median vor Filter 299 €, nach Filter 299 € → marktwertGebraucht 263 € (−12%)
+- Neu: 8 Treffer, Median vor Filter 578 €, nach Filter 578 € → marktwertNeu 532 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 345 € (bisher 345 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 195 € (bisher 230 €) → final 195 €
+  - sehrGut: 180 € (bisher 210 €) → final 180 €
+  - gut: 145 € (bisher 170 €) → final 145 €
+  - defekt: 55 € (bisher 60 €) → final 55 €
+- Ausgelöste Regeln: keine
+
+**Motorola Razr 50 Ultra (512 GB)**
+- Gebraucht: 8 Treffer, Median vor Filter 436 €, nach Filter 436 € → marktwertGebraucht 384 € (−12%)
+- Neu: 23 Treffer, Median vor Filter 818 €, nach Filter 818 € → marktwertNeu 752 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 595 € (bisher 595 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 290 € (bisher 295 €) → final 290 €
+  - sehrGut: 260 € (bisher 265 €) → final 260 €
+  - gut: 210 € (bisher 215 €) → final 210 €
+  - defekt: 75 € (bisher 80 €) → final 75 €
+- Ausgelöste Regeln: keine
+
+**Oppo Find X5 Pro (256 GB)**
+- Gebraucht: 9 Treffer, Median vor Filter 281 €, nach Filter 281 € → marktwertGebraucht 247 € (−12%)
+- Neu: 4 Treffer, Median vor Filter 454 €, nach Filter 454 € → marktwertNeu 418 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 375 € (bisher 405 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 185 € (bisher 180 €) → final 185 €
+  - sehrGut: 170 € (bisher 165 €) → final 170 €
+  - gut: 135 € (bisher 130 €) → final 135 €
+  - defekt: 50 € (bisher 50 €) → final 50 €
+- Ausgelöste Regeln: keine
+
+**Oppo Reno 12 Pro (256 GB)**
+- Gebraucht: 15 Treffer, Median vor Filter 292 €, nach Filter 292 € → marktwertGebraucht 257 € (−12%)
+- Neu: 35 Treffer, Median vor Filter 652 €, nach Filter 652 € → marktwertNeu 600 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 320 € (bisher 320 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 195 € (bisher 195 €) → final 195 €
+  - sehrGut: 175 € (bisher 175 €) → final 175 €
+  - gut: 140 € (bisher 140 €) → final 140 €
+  - defekt: 50 € (bisher 50 €) → final 50 €
+- Ausgelöste Regeln: keine
+
+**Honor Magic 7 Pro (512 GB)**
+- Gebraucht: 11 Treffer, Median vor Filter 558 €, nach Filter 558 € → marktwertGebraucht 491 € (−12%)
+- Neu: 21 Treffer, Median vor Filter 793 €, nach Filter 793 € → marktwertNeu 729 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 645 € (bisher 645 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 370 € (bisher 395 €) → final 370 €
+  - sehrGut: 335 € (bisher 360 €) → final 335 €
+  - gut: 270 € (bisher 290 €) → final 270 €
+  - defekt: 100 € (bisher 105 €) → final 100 €
+- Ausgelöste Regeln: keine
+
+**Honor 90 (256 GB)**
+- Gebraucht: 35 Treffer, Median vor Filter 193 €, nach Filter 193 € → marktwertGebraucht 170 € (−12%)
+- Neu: 20 Treffer, Median vor Filter 243 €, nach Filter 243 € → marktwertNeu 223 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 200 € (bisher 220 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 125 € (bisher 125 €) → final 125 €
+  - sehrGut: 115 € (bisher 110 €) → final 115 €
+  - gut: 95 € (bisher 90 €) → final 95 €
   - defekt: 35 € (bisher 35 €) → final 35 €
 - Ausgelöste Regeln: keine
 
-**Google Pixel 8 (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 240 €, nach Filter 240 € → marktwertGebraucht 211 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 350 €, nach Filter 350 € → marktwertNeu 322 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 285 € (bisher 310 €)
+**Honor 90 (512 GB)**
+- Gebraucht: 15 Treffer, Median vor Filter 204 €, nach Filter 204 € → marktwertGebraucht 179 € (−12%)
+- Neu: 12 Treffer, Median vor Filter 290 €, nach Filter 290 € → marktwertNeu 267 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 240 € (bisher 240 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 160 € (bisher 160 €) → final 160 €
-  - sehrGut: 145 € (bisher 145 €) → final 145 €
-  - gut: 115 € (bisher 115 €) → final 115 €
-  - defekt: 40 € (bisher 40 €) → final 40 €
+  - wieNeu: 135 € (bisher 135 €) → final 135 €
+  - sehrGut: 120 € (bisher 125 €) → final 120 €
+  - gut: 100 € (bisher 100 €) → final 100 €
+  - defekt: 35 € (bisher 35 €) → final 35 €
 - Ausgelöste Regeln: keine
 
-**Google Pixel 8 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 369 €, nach Filter 369 € → marktwertGebraucht 325 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 400 €, nach Filter 400 € → marktwertNeu 368 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 330 € (bisher 330 €)
+**Apple iPad Air 3 (2019) (256 GB)**
+- Gebraucht: 6 Treffer, Median vor Filter 272 €, nach Filter 272 € → marktwertGebraucht 239 € (−12%)
+- Neu: 1 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 245 € (bisher 225 €) → final 245 €
-  - sehrGut: 220 € (bisher 205 €) → final 220 €
-  - gut: 180 € (bisher 165 €) → final 180 €
-  - defekt: 65 € (bisher 60 €) → final 65 €
-- Ausgelöste Regeln: keine
-
-**Google Pixel 8 Pro (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 339 €, nach Filter 339 € → marktwertGebraucht 299 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 435 €, nach Filter 435 € → marktwertNeu 400 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 360 € (bisher 360 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 225 € (bisher 220 €) → final 225 €
-  - sehrGut: 205 € (bisher 200 €) → final 205 €
-  - gut: 165 € (bisher 160 €) → final 165 €
+  - wieNeu: 210 € (bisher 210 €) → final 210 €
+  - sehrGut: 190 € (bisher 190 €) → final 190 €
+  - gut: 170 € (bisher 170 €) → final 170 €
   - defekt: 60 € (bisher 60 €) → final 60 €
 - Ausgelöste Regeln: keine
 
-**Google Pixel 8 Pro (512 GB)**
-- Gebraucht: 44 Treffer, Median vor Filter 495 €, nach Filter 495 € → marktwertGebraucht 435 € (−12%)
-- Neu: 15 Treffer, Median vor Filter 1546 €, nach Filter 1546 € → marktwertNeu 1423 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 695 € (bisher 695 €)
+**Apple iPad Mini 6 (2021) (256 GB)**
+- Gebraucht: 5 Treffer, Median vor Filter 334 €, nach Filter 334 € → marktwertGebraucht 294 € (−12%)
+- Neu: 3 Treffer, Median vor Filter 639 €, nach Filter 639 € → marktwertNeu 588 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis 400 € → final 350 €
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 325 € (bisher 315 €) → final 325 €
-  - sehrGut: 295 € (bisher 285 €) → final 295 €
-  - gut: 240 € (bisher 230 €) → final 240 €
-  - defekt: 85 € (bisher 85 €) → final 85 €
+  - wieNeu: 260 € (bisher 260 €) → final 260 €
+  - sehrGut: 235 € (bisher 235 €) → final 235 €
+  - gut: 210 € (bisher 210 €) → final 210 €
+  - defekt: 75 € (bisher 75 €) → final 75 €
 - Ausgelöste Regeln: keine
 
-**Google Pixel 9 (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 418 €, nach Filter 418 € → marktwertGebraucht 368 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 535 €, nach Filter 535 € → marktwertNeu 492 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 440 € (bisher 410 €)
+**Apple iPad Pro 12.9" Gen 4 (2020) (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 6 Treffer, Median vor Filter 415 €, nach Filter 415 € → marktwertGebraucht 365 € (−12%)
+- Neu: 0 Treffer (< 3) → marktwertNeu = null
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final – (kein Anker vorhanden)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 320 € (bisher 250 €) → final 250 €
+  - sehrGut: 290 € (bisher 225 €) → final 225 €
+  - gut: 265 € (bisher 185 €) → final 185 €
+  - defekt: 90 € (bisher 65 €) → final 65 €
+- Ausgelöste Regeln: keine
+
+**Samsung Galaxy Tab S7+ (256 GB)**
+- Gebraucht: 19 Treffer, Median vor Filter 350 €, nach Filter 350 € → marktwertGebraucht 308 € (−12%)
+- Neu: 7 Treffer, Median vor Filter 500 €, nach Filter 500 € → marktwertNeu 460 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 375 € (bisher 375 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 230 € (bisher 220 €) → final 230 €
+  - sehrGut: 210 € (bisher 200 €) → final 210 €
+  - gut: 170 € (bisher 160 €) → final 170 €
+  - defekt: 60 € (bisher 60 €) → final 60 €
+- Ausgelöste Regeln: keine
+
+**Samsung Galaxy Tab S8 (256 GB)**
+- Gebraucht: 40 Treffer, Median vor Filter 599 €, nach Filter 599 € → marktwertGebraucht 527 € (−12%)
+- Neu: 9 Treffer, Median vor Filter 592 €, nach Filter 592 € → marktwertNeu 545 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 445 € (bisher 445 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 395 € (bisher 385 €) → final 395 €
+  - sehrGut: 360 € (bisher 345 €) → final 360 €
+  - gut: 290 € (bisher 275 €) → final 290 €
+  - defekt: 105 € (bisher 105 €) → final 105 €
+- Ausgelöste Regeln: keine
+
+**Samsung Galaxy Tab S8+ (256 GB)**
+- Gebraucht: 40 Treffer, Median vor Filter 599 €, nach Filter 599 € → marktwertGebraucht 527 € (−12%)
+- Neu: 9 Treffer, Median vor Filter 592 €, nach Filter 592 € → marktwertNeu 545 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 445 € (bisher 445 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 395 € (bisher 385 €) → final 395 €
+  - sehrGut: 360 € (bisher 345 €) → final 360 €
+  - gut: 290 € (bisher 275 €) → final 290 €
+  - defekt: 105 € (bisher 105 €) → final 105 €
+- Ausgelöste Regeln: keine
+
+**Samsung Galaxy Tab S9 (128 GB)**
+- Gebraucht: 42 Treffer, Median vor Filter 400 €, nach Filter 400 € → marktwertGebraucht 352 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 505 €, nach Filter 505 € → marktwertNeu 464 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 380 € (bisher 375 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 265 € (bisher 260 €) → final 265 €
+  - sehrGut: 240 € (bisher 240 €) → final 240 €
+  - gut: 195 € (bisher 195 €) → final 195 €
+  - defekt: 70 € (bisher 70 €) → final 70 €
+- Ausgelöste Regeln: keine
+
+**Samsung Galaxy Tab S9 (256 GB)**
+- Gebraucht: 41 Treffer, Median vor Filter 629 €, nach Filter 629 € → marktwertGebraucht 553 € (−12%)
+- Neu: 41 Treffer, Median vor Filter 752 €, nach Filter 752 € → marktwertNeu 691 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 565 € (bisher 545 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 415 € (bisher 415 €) → final 415 €
+  - sehrGut: 375 € (bisher 375 €) → final 375 €
+  - gut: 305 € (bisher 305 €) → final 305 €
+  - defekt: 110 € (bisher 110 €) → final 110 €
+- Ausgelöste Regeln: keine
+
+**Samsung Galaxy Tab S9+ (256 GB)**
+- Gebraucht: 41 Treffer, Median vor Filter 629 €, nach Filter 629 € → marktwertGebraucht 553 € (−12%)
+- Neu: 41 Treffer, Median vor Filter 752 €, nach Filter 752 € → marktwertNeu 691 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 565 € (bisher 545 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 415 € (bisher 415 €) → final 415 €
+  - sehrGut: 375 € (bisher 375 €) → final 375 €
+  - gut: 305 € (bisher 305 €) → final 305 €
+  - defekt: 110 € (bisher 110 €) → final 110 €
+- Ausgelöste Regeln: keine
+
+**Samsung Galaxy Tab S9 Ultra (1 TB)**
+- Gebraucht: 10 Treffer, Median vor Filter 964 €, nach Filter 964 € → marktwertGebraucht 848 € (−12%)
+- Neu: 7 Treffer, Median vor Filter 1249 €, nach Filter 1249 € → marktwertNeu 1149 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 940 € (bisher 940 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 635 € (bisher 645 €) → final 635 €
+  - sehrGut: 575 € (bisher 585 €) → final 575 €
+  - gut: 465 € (bisher 475 €) → final 465 €
+  - defekt: 170 € (bisher 170 €) → final 170 €
+- Ausgelöste Regeln: keine
+
+**Samsung Galaxy Tab S9 FE (256 GB)**
+- Gebraucht: 9 Treffer, Median vor Filter 520 €, nach Filter 520 € → marktwertGebraucht 458 € (−12%)
+- Neu: 12 Treffer, Median vor Filter 529 €, nach Filter 529 € → marktwertNeu 487 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 395 € (bisher 440 €)
+- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
+  - wieNeu: 345 € (bisher 350 €) → final 345 €
+  - sehrGut: 310 € (bisher 315 €) → final 310 €
+  - gut: 250 € (bisher 250 €) → final 250 €
+  - defekt: 90 € (bisher 95 €) → final 90 €
+- Ausgelöste Regeln: keine
+
+**Samsung Galaxy Tab S10 (128 GB)**
+- Gebraucht: 32 Treffer, Median vor Filter 419 €, nach Filter 419 € → marktwertGebraucht 368 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 416 €, nach Filter 416 € → marktwertNeu 382 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 310 € (bisher 335 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
   - wieNeu: 275 € (bisher 265 €) → final 275 €
-  - sehrGut: 250 € (bisher 240 €) → final 250 €
-  - gut: 200 € (bisher 195 €) → final 200 €
+  - sehrGut: 250 € (bisher 235 €) → final 250 €
+  - gut: 205 € (bisher 195 €) → final 205 €
   - defekt: 75 € (bisher 70 €) → final 75 €
 - Ausgelöste Regeln: keine
 
-**Google Pixel 9 Pro (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 511 €, nach Filter 511 € → marktwertGebraucht 450 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 540 €, nach Filter 540 € → marktwertNeu 497 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 445 € (bisher 445 €)
+**Samsung Galaxy Tab S10+ (256 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 31 Treffer, Median vor Filter 660 €, nach Filter 660 € → marktwertGebraucht 581 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 700 €, nach Filter 700 € → marktwertNeu 644 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 525 € (bisher 475 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 335 € (bisher 325 €) → final 335 €
-  - sehrGut: 305 € (bisher 295 €) → final 305 €
-  - gut: 245 € (bisher 240 €) → final 245 €
-  - defekt: 90 € (bisher 85 €) → final 90 €
+  - wieNeu: 435 € (bisher 380 €) → final 435 €
+  - sehrGut: 395 € (bisher 345 €) → final 395 €
+  - gut: 320 € (bisher 280 €) → final 320 €
+  - defekt: 115 € (bisher 100 €) → final 115 €
 - Ausgelöste Regeln: keine
 
-**Google Pixel 9 Pro (512 GB)**
-- Gebraucht: 32 Treffer, Median vor Filter 812 €, nach Filter 812 € → marktwertGebraucht 714 € (−12%)
-- Neu: 25 Treffer, Median vor Filter 1687 €, nach Filter 1687 € → marktwertNeu 1552 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 695 € (bisher 695 €)
+**Samsung Galaxy Tab S10+ (512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
+- Gebraucht: 10 Treffer, Median vor Filter 862 €, nach Filter 862 € → marktwertGebraucht 759 € (−12%)
+- Neu: 33 Treffer, Median vor Filter 1260 €, nach Filter 1260 € → marktwertNeu 1159 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 950 € (bisher 985 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 535 € (bisher 540 €) → final 535 €
-  - sehrGut: 485 € (bisher 490 €) → final 485 €
-  - gut: 395 € (bisher 395 €) → final 395 €
-  - defekt: 145 € (bisher 145 €) → final 145 €
+  - wieNeu: 570 € (bisher 570 €) → final 570 €
+  - sehrGut: 515 € (bisher 515 €) → final 515 €
+  - gut: 415 € (bisher 420 €) → final 415 €
+  - defekt: 150 € (bisher 150 €) → final 150 €
 - Ausgelöste Regeln: keine
 
-**Google Pixel 9a (128 GB)**
-- Gebraucht: 24 Treffer, Median vor Filter 350 €, nach Filter 350 € → marktwertGebraucht 308 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 380 €, nach Filter 380 € → marktwertNeu 350 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 270 € (bisher 270 €)
+**Samsung Galaxy Tab S10 Ultra (256 GB)**
+- Gebraucht: 8 Treffer, Median vor Filter 872 €, nach Filter 872 € → marktwertGebraucht 767 € (−12%)
+- Neu: 33 Treffer, Median vor Filter 1130 €, nach Filter 1130 € → marktwertNeu 1040 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 850 € (bisher 860 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 220 € (bisher 220 €) → final 220 €
-  - sehrGut: 205 € (bisher 205 €) → final 205 €
-  - gut: 160 € (bisher 160 €) → final 160 €
-  - defekt: 60 € (bisher 60 €) → final 60 €
+  - wieNeu: 575 € (bisher 545 €) → final 570 €
+  - sehrGut: 520 € (bisher 490 €) → final 515 €
+  - gut: 420 € (bisher 400 €) → final 415 €
+  - defekt: 155 € (bisher 145 €) → final 150 €
 - Ausgelöste Regeln: keine
 
-**Google Pixel 10 (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 512 €, nach Filter 512 € → marktwertGebraucht 451 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 520 €, nach Filter 520 € → marktwertNeu 478 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis 460 € → final 400 € (bisher 400 €)
+**Samsung Galaxy Tab S10 Ultra (512 GB)**
+- Gebraucht: 7 Treffer, Median vor Filter 860 €, nach Filter 860 € → marktwertGebraucht 757 € (−12%)
+- Neu: 16 Treffer, Median vor Filter 1300 €, nach Filter 1300 € → marktwertNeu 1196 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 980 € (bisher 980 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 330 € (bisher 325 €) → final 330 €
-  - sehrGut: 300 € (bisher 295 €) → final 300 €
-  - gut: 240 € (bisher 240 €) → final 240 €
-  - defekt: 90 € (bisher 85 €) → final 90 €
+  - wieNeu: 570 € (bisher 570 €) → final 570 €
+  - sehrGut: 515 € (bisher 515 €) → final 515 €
+  - gut: 415 € (bisher 415 €) → final 415 €
+  - defekt: 150 € (bisher 150 €) → final 150 €
 - Ausgelöste Regeln: keine
 
-**Google Pixel 10 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 759 €, nach Filter 759 € → marktwertGebraucht 668 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 790 €, nach Filter 790 € → marktwertNeu 727 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 495 € (bisher 495 €)
+**Samsung Galaxy Tab S10 Ultra (1 TB)**
+- Gebraucht: 7 Treffer, Median vor Filter 900 €, nach Filter 900 € → marktwertGebraucht 792 € (−12%)
+- Neu: 15 Treffer, Median vor Filter 1545 €, nach Filter 1545 € → marktwertNeu 1421 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 1165 € (bisher 1325 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 405 € (bisher 405 €) → final 405 €
-  - sehrGut: 370 € (bisher 370 €) → final 370 €
-  - gut: 295 € (bisher 295 €) → final 295 €
-  - defekt: 135 € (bisher 135 €) → final 135 €
+  - wieNeu: 595 € (bisher 655 €) → final 595 €
+  - sehrGut: 540 € (bisher 590 €) → final 540 €
+  - gut: 435 € (bisher 480 €) → final 435 €
+  - defekt: 160 € (bisher 175 €) → final 160 €
 - Ausgelöste Regeln: keine
 
-**Google Pixel 10 Pro (128 GB)**
-- Gebraucht: 23 Treffer, Median vor Filter 584 €, nach Filter 584 € → marktwertGebraucht 513 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 725 €, nach Filter 725 € → marktwertNeu 667 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 545 € (bisher 545 €)
+**Samsung Galaxy Tab S11 (256 GB)**
+- Gebraucht: 17 Treffer, Median vor Filter 1087 €, nach Filter 1087 € → marktwertGebraucht 957 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1126 €, nach Filter 1126 € → marktwertNeu 1036 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 815 € (bisher 695 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 385 € (bisher 420 €) → final 385 €
-  - sehrGut: 350 € (bisher 380 €) → final 350 €
-  - gut: 280 € (bisher 305 €) → final 280 €
-  - defekt: 105 € (bisher 110 €) → final 105 €
+  - wieNeu: 720 € (bisher 720 €) → final 720 €
+  - sehrGut: 650 € (bisher 650 €) → final 650 €
+  - gut: 525 € (bisher 525 €) → final 525 €
+  - defekt: 190 € (bisher 190 €) → final 190 €
 - Ausgelöste Regeln: keine
 
-**Google Pixel 10 Pro XL (256 GB)**
-- Gebraucht: 27 Treffer, Median vor Filter 830 €, nach Filter 830 € → marktwertGebraucht 730 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 894 €, nach Filter 894 € → marktwertNeu 822 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 645 € (bisher 645 €)
+**Samsung Galaxy Tab S11+ (256 GB)**
+- Gebraucht: 17 Treffer, Median vor Filter 1087 €, nach Filter 1087 € → marktwertGebraucht 957 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1126 €, nach Filter 1126 € → marktwertNeu 1036 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 845 € (bisher 800 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 530 € (bisher 510 €) → final 530 €
-  - sehrGut: 485 € (bisher 460 €) → final 485 €
-  - gut: 385 € (bisher 370 €) → final 385 €
-  - defekt: 145 € (bisher 135 €) → final 145 €
+  - wieNeu: 720 € (bisher 720 €) → final 720 €
+  - sehrGut: 650 € (bisher 650 €) → final 650 €
+  - gut: 525 € (bisher 525 €) → final 525 €
+  - defekt: 190 € (bisher 190 €) → final 190 €
 - Ausgelöste Regeln: keine
 
-**Google Pixel 10 Pro Fold (256 GB)**
-- Gebraucht: 11 Treffer, Median vor Filter 1289 €, nach Filter 1289 € → marktwertGebraucht 1134 € (−12%)
-- Neu: 16 Treffer, Median vor Filter 1430 €, nach Filter 1430 € → marktwertNeu 1315 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis 1100 € → final 945 € (bisher 945 €)
+**Samsung Galaxy Tab S11 Ultra (256 GB)**
+- Gebraucht: 16 Treffer, Median vor Filter 1087 €, nach Filter 1087 € → marktwertGebraucht 957 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 1220 €, nach Filter 1220 € → marktwertNeu 1122 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 920 € (bisher 865 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 775 € (bisher 775 €) → final 760 €
-  - sehrGut: 710 € (bisher 710 €) → final 690 €
-  - gut: 565 € (bisher 565 €) → final 555 €
-  - defekt: 225 € (bisher 210 €) → final 205 €
+  - wieNeu: 720 € (bisher 715 €) → final 715 €
+  - sehrGut: 650 € (bisher 650 €) → final 650 €
+  - gut: 525 € (bisher 525 €) → final 525 €
+  - defekt: 190 € (bisher 190 €) → final 190 €
 - Ausgelöste Regeln: keine
 
-**Xiaomi 12 (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 113 €, nach Filter 113 € → marktwertGebraucht 99 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 190 €, nach Filter 190 € → marktwertNeu 175 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 155 € (bisher 155 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 75 € (bisher 70 €) → final 75 €
-  - sehrGut: 70 € (bisher 60 €) → final 70 €
-  - gut: 55 € (bisher 50 €) → final 55 €
-  - defekt: 20 € (bisher 20 €) → final 20 €
-- Ausgelöste Regeln: keine
-
-**Xiaomi 12 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 260 €, nach Filter 260 € → marktwertGebraucht 229 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 424 €, nach Filter 424 € → marktwertNeu 390 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 350 € (bisher 355 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 170 € (bisher 165 €) → final 170 €
-  - sehrGut: 155 € (bisher 150 €) → final 155 €
-  - gut: 125 € (bisher 120 €) → final 125 €
-  - defekt: 45 € (bisher 45 €) → final 45 €
-- Ausgelöste Regeln: keine
-
-**Xiaomi 13T Pro (512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 32 Treffer, Median vor Filter 300 €, nach Filter 300 € → marktwertGebraucht 264 € (−12%)
-- Neu: 27 Treffer, Median vor Filter 495 €, nach Filter 495 € → marktwertNeu 455 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 405 € (bisher 400 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 200 € (bisher 200 €) → final 200 €
-  - sehrGut: 180 € (bisher 180 €) → final 180 €
-  - gut: 145 € (bisher 145 €) → final 145 €
-  - defekt: 55 € (bisher 55 €) → final 55 €
-- Ausgelöste Regeln: keine
-
-**Xiaomi 13T Pro (1 TB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 14 Treffer, Median vor Filter 300 €, nach Filter 300 € → marktwertGebraucht 264 € (−12%)
-- Neu: 7 Treffer, Median vor Filter 650 €, nach Filter 650 € → marktwertNeu 598 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 535 € (bisher 535 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 200 € (bisher 200 €) → final 200 €
-  - sehrGut: 180 € (bisher 180 €) → final 180 €
-  - gut: 145 € (bisher 145 €) → final 145 €
-  - defekt: 55 € (bisher 55 €) → final 55 €
-- Ausgelöste Regeln: keine
-
-**Xiaomi 14 (512 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 370 €, nach Filter 370 € → marktwertGebraucht 325 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 364 €, nach Filter 364 € → marktwertNeu 335 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 300 € (bisher 300 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 245 € (bisher 245 €) → final 245 €
-  - sehrGut: 220 € (bisher 225 €) → final 220 €
-  - gut: 180 € (bisher 180 €) → final 180 €
-  - defekt: 65 € (bisher 65 €) → final 65 €
-- Ausgelöste Regeln: keine
-
-**Xiaomi 14T Pro (512 GB)** _(erster echter Marktlauf – Tagesbremse übersprungen)_
-- Gebraucht: 18 Treffer, Median vor Filter 504 €, nach Filter 504 € → marktwertGebraucht 443 € (−12%)
-- Neu: 23 Treffer, Median vor Filter 641 €, nach Filter 641 € → marktwertNeu 589 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 495 € (bisher 495 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 330 € (bisher 315 €) → final 330 €
-  - sehrGut: 300 € (bisher 290 €) → final 300 €
-  - gut: 245 € (bisher 235 €) → final 245 €
-  - defekt: 90 € (bisher 85 €) → final 90 €
-- Ausgelöste Regeln: keine
-
-**Xiaomi 15T Pro (512 GB)**
-- Gebraucht: 13 Treffer, Median vor Filter 543 €, nach Filter 543 € → marktwertGebraucht 478 € (−12%)
-- Neu: 17 Treffer, Median vor Filter 760 €, nach Filter 760 € → marktwertNeu 700 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 495 € (bisher 495 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 360 € (bisher 360 €) → final 360 €
-  - sehrGut: 325 € (bisher 325 €) → final 325 €
-  - gut: 265 € (bisher 265 €) → final 265 €
-  - defekt: 95 € (bisher 95 €) → final 95 €
-- Ausgelöste Regeln: keine
-
-**Xiaomi 17 Ultra (512 GB)**
-- Gebraucht: 14 Treffer, Median vor Filter 1014 €, nach Filter 1014 € → marktwertGebraucht 892 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 1278 €, nach Filter 1278 € → marktwertNeu 1176 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 745 € (bisher 745 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 610 € (bisher 610 €) → final 610 €
-  - sehrGut: 560 € (bisher 560 €) → final 560 €
-  - gut: 445 € (bisher 445 €) → final 445 €
-  - defekt: 180 € (bisher 175 €) → final 180 €
-- Ausgelöste Regeln: keine
-
-**Redmi Note 11 (64 GB)**
-- Gebraucht: 26 Treffer, Median vor Filter 90 €, nach Filter 90 € → marktwertGebraucht 79 € (−12%)
-- Neu: 9 Treffer, Median vor Filter 115 €, nach Filter 115 € → marktwertNeu 106 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 95 € (bisher 95 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 60 € (bisher 55 €) → final 60 €
-  - sehrGut: 55 € (bisher 50 €) → final 55 €
-  - gut: 45 € (bisher 40 €) → final 45 €
-  - defekt: 15 € (bisher 15 €) → final 15 €
-- Ausgelöste Regeln: keine
-
-**Redmi Note 11 (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 93 €, nach Filter 93 € → marktwertGebraucht 82 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 190 €, nach Filter 190 € → marktwertNeu 175 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 120 € (bisher 120 €)
+**Samsung Galaxy Tab A8 (32 GB)**
+- Gebraucht: 50 Treffer, Median vor Filter 90 €, nach Filter 90 € → marktwertGebraucht 79 € (−12%)
+- Neu: 42 Treffer, Median vor Filter 150 €, nach Filter 150 € → marktwertNeu 138 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 110 € (bisher 105 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
   - wieNeu: 60 € (bisher 60 €) → final 60 €
   - sehrGut: 55 € (bisher 55 €) → final 55 €
@@ -677,394 +877,112 @@ Kleinere Speichervariante lag über einer größeren - auf deren Niveau gekappt 
   - defekt: 15 € (bisher 15 €) → final 15 €
 - Ausgelöste Regeln: keine
 
-**Redmi Note 12 (64 GB)**
-- Gebraucht: 23 Treffer, Median vor Filter 53 €, nach Filter 53 € → marktwertGebraucht 46 € (−12%)
-- Neu: 3 Treffer, Median vor Filter 199 €, nach Filter 199 € → marktwertNeu 183 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 110 € (bisher 110 €)
+**Samsung Galaxy Tab A9 (128 GB)**
+- Gebraucht: 10 Treffer, Median vor Filter 197 €, nach Filter 197 € → marktwertGebraucht 174 € (−12%)
+- Neu: 41 Treffer, Median vor Filter 246 €, nach Filter 246 € → marktwertNeu 226 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 185 € (bisher 180 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 35 € (bisher 35 €) → final 35 €
-  - sehrGut: 30 € (bisher 30 €) → final 30 €
-  - gut: 25 € (bisher 25 €) → final 25 €
-  - defekt: 10 € (bisher 10 €) → final 10 €
+  - wieNeu: 130 € (bisher 130 €) → final 130 €
+  - sehrGut: 120 € (bisher 120 €) → final 120 €
+  - gut: 95 € (bisher 95 €) → final 95 €
+  - defekt: 35 € (bisher 35 €) → final 35 €
 - Ausgelöste Regeln: keine
 
-**Redmi Note 12 (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 110 €, nach Filter 110 € → marktwertGebraucht 97 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 221 €, nach Filter 221 € → marktwertNeu 203 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 135 € (bisher 135 €)
+**Samsung Galaxy Tab A11 (128 GB)**
+- Gebraucht: 17 Treffer, Median vor Filter 212 €, nach Filter 212 € → marktwertGebraucht 186 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 233 €, nach Filter 233 € → marktwertNeu 214 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 175 € (bisher 180 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 75 € (bisher 80 €) → final 75 €
-  - sehrGut: 65 € (bisher 70 €) → final 65 €
-  - gut: 55 € (bisher 60 €) → final 55 €
-  - defekt: 20 € (bisher 20 €) → final 20 €
+  - wieNeu: 140 € (bisher 140 €) → final 140 €
+  - sehrGut: 125 € (bisher 125 €) → final 125 €
+  - gut: 100 € (bisher 100 €) → final 100 €
+  - defekt: 35 € (bisher 35 €) → final 35 €
 - Ausgelöste Regeln: keine
 
-**Redmi Note 13 (128 GB)**
-- Gebraucht: 35 Treffer, Median vor Filter 116 €, nach Filter 116 € → marktwertGebraucht 102 € (−12%)
-- Neu: 11 Treffer, Median vor Filter 185 €, nach Filter 185 € → marktwertNeu 170 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 110 € (bisher 110 €)
+**Apple Watch Series 4 (GPS) (GPS)**
+- Gebraucht: 50 Treffer, Median vor Filter 80 €, nach Filter 80 € → marktwertGebraucht 70 € (−12%)
+- Neu: 50 Treffer, Median vor Filter 379 €, nach Filter 379 € → marktwertNeu 349 € (−8%)
+- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 285 € (bisher 285 €)
 - Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 75 € (bisher 75 €) → final 75 €
-  - sehrGut: 70 € (bisher 70 €) → final 70 €
-  - gut: 55 € (bisher 55 €) → final 55 €
-  - defekt: 20 € (bisher 20 €) → final 20 €
-- Ausgelöste Regeln: keine
-
-**Redmi Note 13 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 155 €, nach Filter 155 € → marktwertGebraucht 136 € (−12%)
-- Neu: 43 Treffer, Median vor Filter 238 €, nach Filter 238 € → marktwertNeu 219 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 160 € (bisher 160 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 100 € (bisher 100 €) → final 100 €
-  - sehrGut: 95 € (bisher 90 €) → final 95 €
-  - gut: 75 € (bisher 70 €) → final 75 €
-  - defekt: 25 € (bisher 25 €) → final 25 €
-- Ausgelöste Regeln: keine
-
-**Redmi Note 13 Pro (256 GB)**
-- Gebraucht: 32 Treffer, Median vor Filter 177 €, nach Filter 177 € → marktwertGebraucht 156 € (−12%)
-- Neu: 25 Treffer, Median vor Filter 278 €, nach Filter 278 € → marktwertNeu 255 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 195 € (bisher 195 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 115 € (bisher 105 €) → final 115 €
-  - sehrGut: 105 € (bisher 95 €) → final 105 €
-  - gut: 85 € (bisher 80 €) → final 85 €
-  - defekt: 30 € (bisher 30 €) → final 30 €
-- Ausgelöste Regeln: keine
-
-**Redmi Note 14 (128 GB)**
-- Gebraucht: 30 Treffer, Median vor Filter 119 €, nach Filter 119 € → marktwertGebraucht 105 € (−12%)
-- Neu: 35 Treffer, Median vor Filter 221 €, nach Filter 221 € → marktwertNeu 203 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 110 € (bisher 110 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 80 € (bisher 80 €) → final 80 €
-  - sehrGut: 70 € (bisher 70 €) → final 70 €
-  - gut: 60 € (bisher 55 €) → final 60 €
-  - defekt: 20 € (bisher 20 €) → final 20 €
-- Ausgelöste Regeln: keine
-
-**Redmi Note 14 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 183 €, nach Filter 183 € → marktwertGebraucht 161 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 269 €, nach Filter 269 € → marktwertNeu 247 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 160 € (bisher 160 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 120 € (bisher 110 €) → final 120 €
-  - sehrGut: 110 € (bisher 100 €) → final 110 €
-  - gut: 90 € (bisher 80 €) → final 90 €
-  - defekt: 30 € (bisher 30 €) → final 30 €
-- Ausgelöste Regeln: keine
-
-**Redmi Note 14 Pro (512 GB)**
-- Gebraucht: 13 Treffer, Median vor Filter 220 €, nach Filter 220 € → marktwertGebraucht 194 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 359 €, nach Filter 359 € → marktwertNeu 330 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 295 € (bisher 270 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 145 € (bisher 145 €) → final 145 €
-  - sehrGut: 130 € (bisher 130 €) → final 130 €
-  - gut: 105 € (bisher 105 €) → final 105 €
-  - defekt: 40 € (bisher 40 €) → final 40 €
-- Ausgelöste Regeln: keine
-
-**Redmi Note 15 Pro (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 287 €, nach Filter 287 € → marktwertGebraucht 253 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 320 €, nach Filter 320 € → marktwertNeu 294 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 195 € (bisher 195 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 160 € (bisher 160 €) → final 160 €
-  - sehrGut: 145 € (bisher 145 €) → final 145 €
-  - gut: 115 € (bisher 115 €) → final 115 €
-  - defekt: 50 € (bisher 50 €) → final 50 €
-- Ausgelöste Regeln: keine
-
-**Redmi Note 15 Pro+ (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 287 €, nach Filter 287 € → marktwertGebraucht 253 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 320 €, nach Filter 320 € → marktwertNeu 294 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 245 € (bisher 245 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 190 € (bisher 190 €) → final 190 €
-  - sehrGut: 170 € (bisher 175 €) → final 170 €
-  - gut: 140 € (bisher 140 €) → final 140 €
-  - defekt: 50 € (bisher 50 €) → final 50 €
-- Ausgelöste Regeln: keine
-
-**Redmi Note 15 Pro+ (512 GB)**
-- Gebraucht: 14 Treffer, Median vor Filter 312 €, nach Filter 312 € → marktwertGebraucht 274 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 339 €, nach Filter 339 € → marktwertNeu 311 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 280 € (bisher 265 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 205 € (bisher 195 €) → final 205 €
-  - sehrGut: 185 € (bisher 180 €) → final 185 €
-  - gut: 150 € (bisher 145 €) → final 150 €
-  - defekt: 55 € (bisher 55 €) → final 55 €
-- Ausgelöste Regeln: keine
-
-**Redmi 14C (128 GB)**
-- Gebraucht: 12 Treffer, Median vor Filter 95 €, nach Filter 95 € → marktwertGebraucht 84 € (−12%)
-- Neu: 15 Treffer, Median vor Filter 128 €, nach Filter 128 € → marktwertNeu 118 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 60 € (bisher 60 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 50 € (bisher 50 €) → final 50 €
-  - sehrGut: 45 € (bisher 45 €) → final 45 €
-  - gut: 35 € (bisher 35 €) → final 35 €
+  - wieNeu: 60 € (bisher 60 €) → final 60 €
+  - sehrGut: 55 € (bisher 55 €) → final 55 €
+  - gut: 50 € (bisher 50 €) → final 50 €
   - defekt: 15 € (bisher 15 €) → final 15 €
 - Ausgelöste Regeln: keine
 
-**Redmi 15C (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 116 €, nach Filter 116 € → marktwertGebraucht 102 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 128 €, nach Filter 128 € → marktwertNeu 117 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 60 € (bisher 60 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 50 € (bisher 50 €) → final 50 €
-  - sehrGut: 45 € (bisher 45 €) → final 45 €
-  - gut: 35 € (bisher 35 €) → final 35 €
-  - defekt: 20 € (bisher 20 €) → final 20 €
-- Ausgelöste Regeln: keine
-
-**Redmi 15C (256 GB)**
-- Gebraucht: 5 Treffer, Median vor Filter 115 €, nach Filter 115 € → marktwertGebraucht 101 € (−12%)
-- Neu: 20 Treffer, Median vor Filter 190 €, nach Filter 190 € → marktwertNeu 175 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 110 € (bisher 110 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 75 € (bisher 70 €) → final 75 €
-  - sehrGut: 70 € (bisher 65 €) → final 70 €
-  - gut: 55 € (bisher 55 €) → final 55 €
-  - defekt: 20 € (bisher 20 €) → final 20 €
-- Ausgelöste Regeln: keine
-
-**Poco X7 Pro (512 GB)**
-- Gebraucht: 5 Treffer, Median vor Filter 349 €, nach Filter 349 € → marktwertGebraucht 307 € (−12%)
-- Neu: 23 Treffer, Median vor Filter 399 €, nach Filter 399 € → marktwertNeu 367 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 280 € (bisher 280 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 230 € (bisher 230 €) → final 230 €
-  - sehrGut: 210 € (bisher 210 €) → final 210 €
-  - gut: 170 € (bisher 170 €) → final 170 €
-  - defekt: 60 € (bisher 65 €) → final 60 €
-- Ausgelöste Regeln: keine
-
-**OnePlus 9 (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 153 €, nach Filter 153 € → marktwertGebraucht 135 € (−12%)
-- Neu: 6 Treffer, Median vor Filter 224 €, nach Filter 224 € → marktwertNeu 207 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 155 € (bisher 160 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 100 € (bisher 100 €) → final 100 €
-  - sehrGut: 90 € (bisher 90 €) → final 90 €
-  - gut: 75 € (bisher 75 €) → final 75 €
-  - defekt: 25 € (bisher 25 €) → final 25 €
-- Ausgelöste Regeln: keine
-
-**OnePlus 11 (128 GB)**
-- Gebraucht: 49 Treffer, Median vor Filter 174 €, nach Filter 174 € → marktwertGebraucht 153 € (−12%)
-- Neu: 11 Treffer, Median vor Filter 410 €, nach Filter 410 € → marktwertNeu 377 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 335 € (bisher 335 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 115 € (bisher 115 €) → final 115 €
-  - sehrGut: 105 € (bisher 105 €) → final 105 €
-  - gut: 85 € (bisher 85 €) → final 85 €
-  - defekt: 30 € (bisher 30 €) → final 30 €
-- Ausgelöste Regeln: keine
-
-**OnePlus 12 (256 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 253 €, nach Filter 253 € → marktwertGebraucht 223 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 552 €, nach Filter 552 € → marktwertNeu 508 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 455 € (bisher 370 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 165 € (bisher 190 €) → final 165 €
-  - sehrGut: 150 € (bisher 175 €) → final 150 €
-  - gut: 120 € (bisher 140 €) → final 120 €
-  - defekt: 45 € (bisher 50 €) → final 45 €
-- Ausgelöste Regeln: keine
-
-**OnePlus 12 (512 GB)**
-- Gebraucht: 24 Treffer, Median vor Filter 442 €, nach Filter 442 € → marktwertGebraucht 389 € (−12%)
-- Neu: 50 Treffer, Median vor Filter 554 €, nach Filter 554 € → marktwertNeu 510 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 455 € (bisher 420 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 290 € (bisher 275 €) → final 290 €
-  - sehrGut: 265 € (bisher 250 €) → final 265 €
-  - gut: 215 € (bisher 205 €) → final 215 €
-  - defekt: 80 € (bisher 75 €) → final 80 €
-- Ausgelöste Regeln: keine
-
-**OnePlus 13 (512 GB)**
-- Gebraucht: 21 Treffer, Median vor Filter 546 €, nach Filter 546 € → marktwertGebraucht 480 € (−12%)
-- Neu: 43 Treffer, Median vor Filter 650 €, nach Filter 650 € → marktwertNeu 598 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 535 € (bisher 535 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 360 € (bisher 360 €) → final 360 €
-  - sehrGut: 325 € (bisher 325 €) → final 325 €
-  - gut: 265 € (bisher 265 €) → final 265 €
-  - defekt: 95 € (bisher 95 €) → final 95 €
-- Ausgelöste Regeln: keine
-
-**OnePlus Nord 3 (128 GB)**
-- Gebraucht: 21 Treffer, Median vor Filter 123 €, nach Filter 123 € → marktwertGebraucht 108 € (−12%)
-- Neu: 4 Treffer, Median vor Filter 335 €, nach Filter 335 € → marktwertNeu 309 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 220 € (bisher 220 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 80 € (bisher 80 €) → final 80 €
-  - sehrGut: 75 € (bisher 75 €) → final 75 €
-  - gut: 60 € (bisher 60 €) → final 60 €
-  - defekt: 20 € (bisher 20 €) → final 20 €
-- Ausgelöste Regeln: keine
-
-**OnePlus Nord 3 (256 GB)**
-- Gebraucht: 9 Treffer, Median vor Filter 185 €, nach Filter 185 € → marktwertGebraucht 163 € (−12%)
-- Neu: 3 Treffer, Median vor Filter 546 €, nach Filter 546 € → marktwertNeu 502 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 270 € (bisher 270 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 120 € (bisher 120 €) → final 120 €
-  - sehrGut: 110 € (bisher 110 €) → final 110 €
-  - gut: 90 € (bisher 90 €) → final 90 €
-  - defekt: 35 € (bisher 35 €) → final 35 €
-- Ausgelöste Regeln: keine
-
-**Huawei P30 (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 100 €, nach Filter 100 € → marktwertGebraucht 88 € (−12%)
-- Neu: 39 Treffer, Median vor Filter 250 €, nach Filter 250 € → marktwertNeu 230 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 205 € (bisher 170 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 65 € (bisher 65 €) → final 65 €
-  - sehrGut: 60 € (bisher 60 €) → final 60 €
-  - gut: 50 € (bisher 50 €) → final 50 €
-  - defekt: 20 € (bisher 20 €) → final 20 €
-- Ausgelöste Regeln: keine
-
-**Huawei P30 Pro (128 GB)**
-- Gebraucht: 50 Treffer, Median vor Filter 135 €, nach Filter 135 € → marktwertGebraucht 119 € (−12%)
-- Neu: 20 Treffer, Median vor Filter 409 €, nach Filter 409 € → marktwertNeu 376 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 240 € (bisher 320 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 90 € (bisher 100 €) → final 90 €
-  - sehrGut: 80 € (bisher 90 €) → final 80 €
-  - gut: 65 € (bisher 75 €) → final 65 €
-  - defekt: 25 € (bisher 25 €) → final 25 €
-- Ausgelöste Regeln: keine
-
-**Sony Xperia 1 IV (256 GB)**
-- Gebraucht: 12 Treffer, Median vor Filter 289 €, nach Filter 289 € → marktwertGebraucht 254 € (−12%)
-- Neu: 38 Treffer, Median vor Filter 435 €, nach Filter 435 € → marktwertNeu 401 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 360 € (bisher 390 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 190 € (bisher 190 €) → final 190 €
-  - sehrGut: 175 € (bisher 175 €) → final 175 €
-  - gut: 140 € (bisher 140 €) → final 140 €
-  - defekt: 50 € (bisher 50 €) → final 50 €
-- Ausgelöste Regeln: keine
-
-**Sony Xperia 1 V (256 GB)**
-- Gebraucht: 25 Treffer, Median vor Filter 457 €, nach Filter 457 € → marktwertGebraucht 402 € (−12%)
-- Neu: 11 Treffer, Median vor Filter 626 €, nach Filter 626 € → marktwertNeu 576 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 515 € (bisher 570 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 300 € (bisher 300 €) → final 300 €
-  - sehrGut: 275 € (bisher 270 €) → final 275 €
-  - gut: 220 € (bisher 220 €) → final 220 €
-  - defekt: 80 € (bisher 80 €) → final 80 €
-- Ausgelöste Regeln: keine
-
-**Sony Xperia 1 VI (256 GB)**
-- Gebraucht: 6 Treffer, Median vor Filter 935 €, nach Filter 935 € → marktwertGebraucht 823 € (−12%)
-- Neu: 12 Treffer, Median vor Filter 1199 €, nach Filter 1199 € → marktwertNeu 1103 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 695 € (bisher 695 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 570 € (bisher 570 €) → final 570 €
-  - sehrGut: 520 € (bisher 520 €) → final 520 €
-  - gut: 415 € (bisher 415 €) → final 415 €
-  - defekt: 165 € (bisher 170 €) → final 165 €
-- Ausgelöste Regeln: keine
-
-**Sony Xperia 10 V (128 GB)**
-- Gebraucht: 24 Treffer, Median vor Filter 157 €, nach Filter 157 € → marktwertGebraucht 138 € (−12%)
-- Neu: 35 Treffer, Median vor Filter 220 €, nach Filter 220 € → marktwertNeu 202 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 180 € (bisher 180 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 105 € (bisher 105 €) → final 105 €
-  - sehrGut: 95 € (bisher 95 €) → final 95 €
-  - gut: 75 € (bisher 80 €) → final 75 €
-  - defekt: 30 € (bisher 30 €) → final 30 €
-- Ausgelöste Regeln: keine
-
-**Sony Xperia 10 VI (128 GB)**
-- Gebraucht: 8 Treffer, Median vor Filter 279 €, nach Filter 279 € → marktwertGebraucht 246 € (−12%)
-- Neu: 13 Treffer, Median vor Filter 312 €, nach Filter 312 € → marktwertNeu 287 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 220 € (bisher 220 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 180 € (bisher 180 €) → final 180 €
-  - sehrGut: 165 € (bisher 165 €) → final 165 €
-  - gut: 130 € (bisher 130 €) → final 130 €
-  - defekt: 50 € (bisher 55 €) → final 50 €
-- Ausgelöste Regeln: keine
-
-**Nothing Phone (1) (128 GB)**
-- Gebraucht: 18 Treffer, Median vor Filter 188 €, nach Filter 188 € → marktwertGebraucht 165 € (−12%)
-- Neu: 6 Treffer, Median vor Filter 301 €, nach Filter 301 € → marktwertNeu 277 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 230 € (bisher 210 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 125 € (bisher 120 €) → final 125 €
-  - sehrGut: 110 € (bisher 110 €) → final 110 €
-  - gut: 90 € (bisher 90 €) → final 90 €
-  - defekt: 35 € (bisher 35 €) → final 35 €
-- Ausgelöste Regeln: keine
-
-**Nothing Phone (2) (256 GB)**
-- Gebraucht: 31 Treffer, Median vor Filter 300 €, nach Filter 300 € → marktwertGebraucht 264 € (−12%)
-- Neu: 9 Treffer, Median vor Filter 525 €, nach Filter 525 € → marktwertNeu 483 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 320 € (bisher 320 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 200 € (bisher 185 €) → final 200 €
-  - sehrGut: 180 € (bisher 165 €) → final 180 €
-  - gut: 145 € (bisher 135 €) → final 145 €
-  - defekt: 55 € (bisher 50 €) → final 55 €
-- Ausgelöste Regeln: keine
-
-**Nothing Phone (2) (128 GB)**
-- Gebraucht: 32 Treffer, Median vor Filter 182 €, nach Filter 182 € → marktwertGebraucht 160 € (−12%)
-- Neu: 6 Treffer, Median vor Filter 425 €, nach Filter 425 € → marktwertNeu 391 € (−8%)
-- neuVersiegelt (eigene Formel, siehe Regel 9): eigener Verkaufspreis – (kein bestand.json-Eintrag) → final 290 € (bisher 290 €)
-- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):
-  - wieNeu: 120 € (bisher 110 €) → final 120 €
-  - sehrGut: 110 € (bisher 100 €) → final 110 €
-  - gut: 90 € (bisher 80 €) → final 90 €
-  - defekt: 30 € (bisher 30 €) → final 30 €
-- Ausgelöste Regeln: keine
-
-## Übersprungen (38)
-- Google Pixel 7 Pro (256 GB): Datenfehler: marktwertNeu (304 €) <= marktwertGebraucht (393 €)
-- Google Pixel 8 Pro (256 GB): Datenfehler: marktwertNeu (405 €) <= marktwertGebraucht (589 €)
-- Google Pixel 8a (256 GB): zu wenige Gebraucht-Treffer (3 < 5)
-- Google Pixel 9 (256 GB): Datenfehler: marktwertNeu (497 €) <= marktwertGebraucht (515 €)
-- Google Pixel 9 Pro (256 GB): Datenfehler: marktwertNeu (497 €) <= marktwertGebraucht (602 €)
-- Google Pixel 9 Pro XL (128 GB): Datenfehler: marktwertNeu (497 €) <= marktwertGebraucht (501 €)
-- Google Pixel 9 Pro XL (256 GB): Datenfehler: marktwertNeu (497 €) <= marktwertGebraucht (598 €)
-- Google Pixel 9 Pro XL (1 TB): zu wenige Gebraucht-Treffer (3 < 5)
-- Google Pixel 9a (256 GB): zu wenige Gebraucht-Treffer (3 < 5)
-- Google Pixel 10 Pro XL (1 TB): zu wenige Gebraucht-Treffer (3 < 5)
-- Xiaomi 13T Pro (256 GB): zu wenige Gebraucht-Treffer (1 < 5)
-- Xiaomi 14T Pro (256 GB): zu wenige Gebraucht-Treffer (3 < 5)
-- Xiaomi 14T Pro (1 TB): zu wenige Gebraucht-Treffer (1 < 5)
-- Xiaomi 15 (512 GB): Datenfehler: marktwertNeu (349 €) <= marktwertGebraucht (495 €)
-- Xiaomi 15T Pro (256 GB): zu wenige Gebraucht-Treffer (3 < 5)
-- Xiaomi 15T Pro (1 TB): zu wenige Gebraucht-Treffer (2 < 5)
-- Xiaomi 17 (256 GB): Datenfehler: marktwertNeu (437 €) <= marktwertGebraucht (518 €)
-- Xiaomi 17 (512 GB): Datenfehler: marktwertNeu (604 €) <= marktwertGebraucht (774 €)
-- Xiaomi 17 Ultra (1 TB): zu wenige Gebraucht-Treffer (0 < 5)
-- Redmi 14C (256 GB): zu wenige Gebraucht-Treffer (3 < 5)
-- Poco X6 Pro (256 GB): zu wenige Gebraucht-Treffer (3 < 5)
-- Poco X6 Pro (512 GB): zu wenige Gebraucht-Treffer (2 < 5)
-- Poco F6 Pro (256 GB): zu wenige Gebraucht-Treffer (0 < 5)
-- Poco F6 Pro (512 GB): zu wenige Gebraucht-Treffer (2 < 5)
-- Poco F7 Pro (256 GB): zu wenige Gebraucht-Treffer (3 < 5)
-- Poco F7 Pro (512 GB): zu wenige Gebraucht-Treffer (0 < 5)
-- OnePlus Nord 4 (512 GB): zu wenige Gebraucht-Treffer (1 < 5)
-- Huawei P30 Pro (512 GB): zu wenige Gebraucht-Treffer (1 < 5)
-- Huawei Mate 40 Pro (256 GB): Datenfehler: marktwertNeu (164 €) <= marktwertGebraucht (219 €)
-- Huawei Nova-Serie (Sammelmodell) (128 GB): zu wenige Gebraucht-Treffer (0 < 5)
-- Huawei Nova-Serie (Sammelmodell) (256 GB): zu wenige Gebraucht-Treffer (0 < 5)
-- Sony Xperia 1 IV (512 GB): zu wenige Gebraucht-Treffer (0 < 5)
-- Sony Xperia 1 VI (512 GB): zu wenige Gebraucht-Treffer (1 < 5)
-- Sony Xperia 1 VII (256 GB): zu wenige Gebraucht-Treffer (4 < 5)
-- Sony Xperia 1 VII (512 GB): zu wenige Gebraucht-Treffer (2 < 5)
-- Sony Xperia 5 IV (128 GB): Datenfehler: marktwertNeu (184 €) <= marktwertGebraucht (207 €)
-- Sony Xperia 5 V (128 GB): Datenfehler: marktwertNeu (212 €) <= marktwertGebraucht (297 €)
-- Sony Xperia 10 VII (128 GB): zu wenige Gebraucht-Treffer (1 < 5)
+## Übersprungen (75)
+- Motorola Razr 60 Ultra (512 GB): zu wenige Gebraucht-Treffer (2 < 5)
+- Oppo Reno 10 Pro (256 GB): zu wenige Gebraucht-Treffer (4 < 5)
+- Nokia G22 (128 GB): zu wenige Gebraucht-Treffer (4 < 5)
+- Nokia X30 (128 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Nokia X30 (256 GB): zu wenige Gebraucht-Treffer (1 < 5)
+- Nokia 105/110/150 (Neuware-Sammelposten) (Standard): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad 10 (2022) (256 GB): Datenfehler: marktwertNeu (473 €) <= marktwertGebraucht (615 €)
+- Apple iPad 11 (2025) (512 GB): zu wenige Gebraucht-Treffer (2 < 5)
+- Apple iPad Air 5 (2022) (256 GB): zu wenige Gebraucht-Treffer (4 < 5)
+- Apple iPad Air 6 11" (2024) (256 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Air 6 11" (2024) (512 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Air 6 11" (2024) (1 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Air 6 13" (2024) (128 GB): zu wenige Gebraucht-Treffer (2 < 5)
+- Apple iPad Air 6 13" (2024) (256 GB): zu wenige Gebraucht-Treffer (1 < 5)
+- Apple iPad Air 6 13" (2024) (512 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Air 6 13" (2024) (1 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Air 7 (2025) (128 GB): zu wenige Gebraucht-Treffer (3 < 5)
+- Apple iPad Air 7 (2025) (256 GB): zu wenige Gebraucht-Treffer (2 < 5)
+- Apple iPad Air 7 (2025) (512 GB): zu wenige Gebraucht-Treffer (2 < 5)
+- Apple iPad Air 7 (2025) (1 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Mini 5 (2019) (64 GB): zu wenige Gebraucht-Treffer (4 < 5)
+- Apple iPad Mini 5 (2019) (256 GB): zu wenige Gebraucht-Treffer (3 < 5)
+- Apple iPad Mini 7 (2024) (128 GB): zu wenige Gebraucht-Treffer (2 < 5)
+- Apple iPad Mini 7 (2024) (256 GB): zu wenige Gebraucht-Treffer (1 < 5)
+- Apple iPad Mini 7 (2024) (512 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 11" Gen 1 (2018) (128 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 11" Gen 1 (2018) (256 GB): zu wenige Gebraucht-Treffer (2 < 5)
+- Apple iPad Pro 11" Gen 1 (2018) (512 GB): zu wenige Gebraucht-Treffer (1 < 5)
+- Apple iPad Pro 11" Gen 1 (2018) (1 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 11" Gen 2 (2020) (256 GB): zu wenige Gebraucht-Treffer (4 < 5)
+- Apple iPad Pro 11" Gen 2 (2020) (512 GB): zu wenige Gebraucht-Treffer (4 < 5)
+- Apple iPad Pro 11" Gen 2 (2020) (1 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 11" Gen 3 (2021) (128 GB): zu wenige Gebraucht-Treffer (2 < 5)
+- Apple iPad Pro 11" Gen 3 (2021) (256 GB): zu wenige Gebraucht-Treffer (4 < 5)
+- Apple iPad Pro 11" Gen 3 (2021) (512 GB): zu wenige Gebraucht-Treffer (2 < 5)
+- Apple iPad Pro 11" Gen 3 (2021) (1 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 11" Gen 3 (2021) (2 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 11" Gen 4 (2022) (128 GB): zu wenige Gebraucht-Treffer (1 < 5)
+- Apple iPad Pro 11" Gen 4 (2022) (256 GB): zu wenige Gebraucht-Treffer (1 < 5)
+- Apple iPad Pro 11" Gen 4 (2022) (512 GB): zu wenige Gebraucht-Treffer (2 < 5)
+- Apple iPad Pro 11" Gen 4 (2022) (1 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 11" Gen 4 (2022) (2 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 11" Gen 5 (2024) (256 GB): zu wenige Gebraucht-Treffer (2 < 5)
+- Apple iPad Pro 11" Gen 5 (2024) (512 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 11" Gen 5 (2024) (1 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 11" Gen 5 (2024) (2 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 12.9" Gen 3 (2018) (128 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 12.9" Gen 3 (2018) (256 GB): zu wenige Gebraucht-Treffer (1 < 5)
+- Apple iPad Pro 12.9" Gen 3 (2018) (512 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 12.9" Gen 3 (2018) (1 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 12.9" Gen 4 (2020) (128 GB): zu wenige Gebraucht-Treffer (4 < 5)
+- Apple iPad Pro 12.9" Gen 4 (2020) (512 GB): zu wenige Gebraucht-Treffer (1 < 5)
+- Apple iPad Pro 12.9" Gen 4 (2020) (1 TB): zu wenige Gebraucht-Treffer (1 < 5)
+- Apple iPad Pro 12.9" Gen 5 (2021) (512 GB): zu wenige Gebraucht-Treffer (3 < 5)
+- Apple iPad Pro 12.9" Gen 5 (2021) (1 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 12.9" Gen 5 (2021) (2 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 12.9" Gen 6 (2022) (128 GB): zu wenige Gebraucht-Treffer (3 < 5)
+- Apple iPad Pro 12.9" Gen 6 (2022) (512 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 12.9" Gen 6 (2022) (1 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 12.9" Gen 6 (2022) (2 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 13" Gen 7 (2024, M4) (256 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 13" Gen 7 (2024, M4) (512 GB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 13" Gen 7 (2024, M4) (1 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Apple iPad Pro 13" Gen 7 (2024, M4) (2 TB): zu wenige Gebraucht-Treffer (0 < 5)
+- Samsung Galaxy Tab S7 (512 GB): zu wenige Gebraucht-Treffer (1 < 5)
+- Samsung Galaxy Tab S8 Ultra (128 GB): zu wenige Gebraucht-Treffer (4 < 5)
+- Samsung Galaxy Tab S8 Ultra (256 GB): Datenfehler: marktwertNeu (545 €) <= marktwertGebraucht (576 €)
+- Samsung Galaxy Tab S8 Ultra (512 GB): zu wenige Gebraucht-Treffer (3 < 5)
+- Samsung Galaxy Tab S11 (128 GB): zu wenige Gebraucht-Treffer (4 < 5)
+- Samsung Galaxy Tab S11+ (512 GB): zu wenige Gebraucht-Treffer (3 < 5)
+- Samsung Galaxy Tab S11 Ultra (512 GB): zu wenige Gebraucht-Treffer (1 < 5)
+- Samsung Galaxy Tab S11 Ultra (1 TB): zu wenige Gebraucht-Treffer (1 < 5)
+- Samsung Galaxy Tab A8 (64 GB): Datenfehler: marktwertNeu (28 €) <= marktwertGebraucht (87 €)
+- Xiaomi Pad 7 (256 GB): Datenfehler: marktwertNeu (280 €) <= marktwertGebraucht (295 €)
+- Lenovo Tab P12 (256 GB): zu wenige Gebraucht-Treffer (2 < 5)
