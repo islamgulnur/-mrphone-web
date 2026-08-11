@@ -460,29 +460,59 @@ Wert stehen, aber als Datenqualitäts-Verdacht festgehalten werden:
 gegenchecken, bevor sie – z. B. durch eine künftige Senkung an anderer Stelle, die die Sperre nicht
 mehr greift – doch noch live gehen.
 
-## NOCH OFFEN: 51 Varianten haben neuVersiegelt: null - kein Ankaufspreis für "Neu versiegelt" (gefunden 12.08.2026)
+## GELÖST 12.08.2026: 96 Geräte laufen jetzt "Preis auf Anfrage" statt automatisch berechnetem Preis
+
+Beim vollständigen Avatel-Abgleich (11./12.08.2026, siehe Eintrag unten) zeigte Avatel für viele
+Geräte gar keinen Festpreis, sondern "Preisanfrage", oder führte das Modell überhaupt nicht in
+seinem Ankaufssortiment. Betreiber-Entscheidung: dieselben 96 Geräte laufen jetzt auch bei Mr.
+Phone "auf Anfrage" statt eines Preises, der nie gegen einen echten Vergleichswert geprüft werden
+konnte. Betroffen: alle Kameras (18), Garmin-Uhren (7), iMac + generische Gaming-/Office-PCs (7),
+generische Laptop-Klassen Acer/Asus/Dell/HP/Lenovo + MacBook M1/M2/M3 Pro/Max (17), Bose/Sony-
+Kopfhörer + Galaxy Buds 2/2 Pro + JBL-Sammelposten (13), Huawei Watch GT4/5 + Apple Watch Ultra
+Original 2022 (10), alle 5 generischen Monitor-Einträge, Kleinzubehör wie Pencils/HomePod/
+Ladegeräte/Kabel/Hüllen (15), sowie 3 seltene iPads (Mini 7, Pro 12.9" Gen 3/4).
+
+**Umgesetzt:** `scripts/markiere-auf-anfrage-2026-08-12.js` setzt für diese Geräte alle 5
+Preisstufen auf `null` und `preisQuelle` auf `"manuell"` (Notventil, wird von automatischen
+Preisläufen nicht mehr angefasst). `ankauf-rechner.js` erkennt Varianten ohne jeden Preis
+(`hatKeinenPreis()`) und überspringt die Zustandsauswahl komplett - stattdessen
+`zeigeErgebnisAufAnfrage()`: "Preis auf Anfrage" statt Betrag, WhatsApp-Nachricht fragt nach
+einem Angebot statt einen Preis zu bestätigen. `validate-data.js` akzeptiert "alle 5 Stufen null"
+jetzt explizit als gültigen Zustand (vorher: Validierungsfehler).
+
+**To-Do (optional):** falls für einzelne dieser Geräte doch mal ein echter Referenzpreis
+auftaucht (z. B. eigene Erfahrungswerte aus dem Laden), über das Admin-Preisformular oder eine
+gezielte Korrektur wieder auf einen echten Betrag umstellen (preisQuelle bleibt dann "manuell").
+
+## GELÖST 12.08.2026: 51 Varianten hatten neuVersiegelt: null - kein Ankaufspreis für "Neu versiegelt"
 
 Beim vollständigen Avatel-Abgleich (siehe Eintrag unten) an `kat-0200` (iPad Pro 11" Gen 3, 2021,
-256GB) zufällig aufgefallen, dann per Vollscan über `ankauf-preise.json` bestätigt: **51 Varianten
-über 40+ Geräte** haben `neuVersiegelt: null`, während alle anderen 4 Zustandsstufen
-(wieNeu/sehrGut/gut/defekt) für dieselbe Variante normal befüllt sind. Anderes Problem als die
-Avatel-Überschreitungen unten - hier fehlt der Preis komplett statt zu hoch zu sein, betrifft
-also den Ankaufsrechner direkt (diese Varianten können aktuell gar nicht "neu versiegelt"
-angekauft werden).
-
-Betroffen u. a.: mehrere ältere iPads (7/8/9/11, Air 3/4/5, Mini 5/6, Pro 11"/12.9" diverse
-Generationen), Samsung Galaxy Tab S8 Ultra/S9+/S9 Ultra, alle Samsung Galaxy Watch 4/5/6/6
-Classic/7/8 (jeweils eine Größenvariante), mehrere MacBook Air/Pro-Konfigurationen, einzelne
-Kamera-Gehäuse (Sony Alpha 6700, Nikon Z6 III/Zf), Xbox Series X 2TB, alle 4 Steam-Deck-Varianten,
+256GB) zufällig aufgefallen, dann per Vollscan über `ankauf-preise.json` bestätigt: 51 Varianten
+über 40+ Geräte hatten `neuVersiegelt: null`, während alle anderen 4 Zustandsstufen
+(wieNeu/sehrGut/gut/defekt) für dieselbe Variante normal befüllt waren - betraf u. a. mehrere
+ältere iPads (7/8/9/11, Air 3/4/5, Mini 5/6, Pro 11"/12.9" diverse Generationen), Samsung Galaxy
+Tab S8 Ultra/S9+/S9 Ultra, alle Samsung Galaxy Watch 4/5/6/6 Classic/7/8, mehrere MacBook Air/Pro-
+Konfigurationen, einzelne Kamera-Gehäuse, Xbox Series X 2TB, alle 4 Steam-Deck-Varianten,
 DualSense Controller, Magic Keyboard für iPad, MagSafe Ladegerät.
 
-Ursache vermutlich eine Sonderregel in `berechneNeuVersiegelt()`/`ermittleWiederverkaufswerte()`,
-die für eine bestimmte Kombination (vermutlich: `marktwertNeu` explizit `null` im Katalog bei
-gleichzeitig vorhandenem `marktwertGebraucht`, oder eine bestimmte Speicherstufe ohne eigenen
-Varianten-Anker) keinen Fallback liefert. Nicht spekulativ gefixt - Auswirkung ist zu groß und
-Root Cause noch nicht verifiziert. **To-Do:** die genaue Bedingung in `pricing-config.js`
-nachvollziehen (Gemeinsamkeit der 51 Fälle prüfen), dann gezielt fixen und `validate-data.js`
-erweitern, damit `neuVersiegelt: null` künftig als Fehler auffällt statt still durchzurutschen.
+**Root Cause verifiziert:** `berechneNeuVersiegelt()` in `pricing-config.js` gibt nur dann `null`
+zurück, wenn WEDER ein eigener Verkaufspreis (`bestand.json`) NOCH ein Marktanker vorliegt - der
+Marktanker (`marktAnkerNeuSchaetzung` in `ermittleWiederverkaufswerte()`) fällt aber inzwischen
+IMMER auf `marktwertGebraucht × NEUWARE_AUFSCHLAG` zurück und ist damit fast nie mehr `null`.
+Die gespeicherten `null`-Werte waren stehengebliebene Altdaten von VOR Einführung dieses
+Fallbacks - kein aktueller Code-Bug, sondern nie nachgezogene alte Berechnungen (Preisänderungen
+wirken laut `pricing-config.js` grundsätzlich nicht rückwirkend). Beleg: `pricing.berechnePreise()`
+frisch auf `kat-0200` 256GB angewendet lieferte bereits regulär 430€ statt `null`.
+
+50 der 51 Varianten (die 51. war `kat-0204`, inzwischen Teil der 96 "Preis auf Anfrage"-Geräte,
+siehe oben) mit `scripts/fixe-null-neuversiegelt-2026-08-12.js` neu berechnet (alle 5 Stufen
+einheitlich über `pricing.berechnePreise()`, `preisQuelle` bleibt `"auto"`), anschließend
+Speicherstufen-Konsistenz je Gerät neu geprüft - hat nebenbei einige der oben unter "43 Modell/
+Varianten-Paare mit Speichergrößen-Inversion" dokumentierten Altfälle mit gelöst (z. B. iPad Pro
+12.9" Gen 5, iPad Mini 5, Xbox Series X). `validate-data.js` erweitert: akzeptiert jetzt zusätzlich
+"alle 5 Stufen null" als bewussten Ganz-Geräte-Zustand ("Preis auf Anfrage", siehe oben), meldet
+aber weiterhin einen Fehler, wenn nur `neuVersiegelt` allein `null` ist und der Rest nicht - genau
+dieses Muster hätte den ursprünglichen Bug sofort auffallen lassen.
 
 ## NOCH OFFEN: 8 Katalog-Lücken ohne belastbare UVP (11.08.2026)
 
