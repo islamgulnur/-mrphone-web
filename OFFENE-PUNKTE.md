@@ -460,6 +460,30 @@ Wert stehen, aber als Datenqualitäts-Verdacht festgehalten werden:
 gegenchecken, bevor sie – z. B. durch eine künftige Senkung an anderer Stelle, die die Sperre nicht
 mehr greift – doch noch live gehen.
 
+## NOCH OFFEN: 51 Varianten haben neuVersiegelt: null - kein Ankaufspreis für "Neu versiegelt" (gefunden 12.08.2026)
+
+Beim vollständigen Avatel-Abgleich (siehe Eintrag unten) an `kat-0200` (iPad Pro 11" Gen 3, 2021,
+256GB) zufällig aufgefallen, dann per Vollscan über `ankauf-preise.json` bestätigt: **51 Varianten
+über 40+ Geräte** haben `neuVersiegelt: null`, während alle anderen 4 Zustandsstufen
+(wieNeu/sehrGut/gut/defekt) für dieselbe Variante normal befüllt sind. Anderes Problem als die
+Avatel-Überschreitungen unten - hier fehlt der Preis komplett statt zu hoch zu sein, betrifft
+also den Ankaufsrechner direkt (diese Varianten können aktuell gar nicht "neu versiegelt"
+angekauft werden).
+
+Betroffen u. a.: mehrere ältere iPads (7/8/9/11, Air 3/4/5, Mini 5/6, Pro 11"/12.9" diverse
+Generationen), Samsung Galaxy Tab S8 Ultra/S9+/S9 Ultra, alle Samsung Galaxy Watch 4/5/6/6
+Classic/7/8 (jeweils eine Größenvariante), mehrere MacBook Air/Pro-Konfigurationen, einzelne
+Kamera-Gehäuse (Sony Alpha 6700, Nikon Z6 III/Zf), Xbox Series X 2TB, alle 4 Steam-Deck-Varianten,
+DualSense Controller, Magic Keyboard für iPad, MagSafe Ladegerät.
+
+Ursache vermutlich eine Sonderregel in `berechneNeuVersiegelt()`/`ermittleWiederverkaufswerte()`,
+die für eine bestimmte Kombination (vermutlich: `marktwertNeu` explizit `null` im Katalog bei
+gleichzeitig vorhandenem `marktwertGebraucht`, oder eine bestimmte Speicherstufe ohne eigenen
+Varianten-Anker) keinen Fallback liefert. Nicht spekulativ gefixt - Auswirkung ist zu groß und
+Root Cause noch nicht verifiziert. **To-Do:** die genaue Bedingung in `pricing-config.js`
+nachvollziehen (Gemeinsamkeit der 51 Fälle prüfen), dann gezielt fixen und `validate-data.js`
+erweitern, damit `neuVersiegelt: null` künftig als Fehler auffällt statt still durchzurutschen.
+
 ## NOCH OFFEN: 8 Katalog-Lücken ohne belastbare UVP (11.08.2026)
 
 Beim systematischen Katalog-Scan (alle Kategorien, siehe auch Eintrag "Katalog-Lücken nach
