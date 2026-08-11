@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mr. Phone — Startseiten-Entwurf (Vorschau, nicht live)</title>
+<style>
+  /* ============ Design-Tokens ============
+     Farbe: ink (Grund) trägt eine minimale grüne Untertönung statt reinem
+     Schwarz, damit Grund und Signalfarbe aus derselben Familie stammen.
+     signal = Logo-Grün #8DC63F, bleibt der einzige kräftige Akzent.
+     Typografie: Systemsans durchgängig - Display (H1/H2) über Gewicht 800 +
+     engerer Laufweite von Fließtext abgesetzt, dazu Systemmono für
+     Statuspille/Ziffern. Alles Systemschriften, kein Webfont. (Serifen-Variante
+     im Vergleich verworfen - wirkte laut Betreiber-Feedback nach Kanzlei statt
+     Handy-Fachgeschäft.)
+  */
+  :root {
+    --ink: #0a0c08;
+    --ink-raised: #12150e;
+    --ink-raised-2: #1a1e13;
+    --glass: rgba(237, 241, 230, 0.055);
+    --glass-strong: rgba(237, 241, 230, 0.09);
+    --hairline: rgba(141, 198, 63, 0.20);
+    --hairline-strong: rgba(141, 198, 63, 0.4);
+    --signal: #8dc63f;
+    --signal-deep: #6a9e2e;
+    --signal-wash: rgba(141, 198, 63, 0.12);
+    --paper: #edf1e6;
+    --steel: #8c917f;
+
+    --font-display: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --font-display-weight: 800;
+    --font-display-tracking: -0.03em;
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas, monospace;
+
+    --edge: 1.1rem;
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  :focus-visible {
+    outline: 2px solid var(--signal);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  .wrap {
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: var(--edge);
+  }
+
+  .eyebrow {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--signal);
+    margin-bottom: 0.6rem;
+  }
+
+  h1, h2 {
+    font-family: var(--font-display);
+    font-weight: var(--font-display-weight);
+    letter-spacing: var(--font-display-tracking);
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  /* ============ Vorschau-Hinweisleiste ============ */
+  .preview-note {
+    background: var(--ink-raised);
+    border-bottom: 1px solid var(--hairline);
+    padding: 0.65rem var(--edge);
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    color: var(--steel);
+    text-align: center;
+  }
+  .preview-note strong { color: var(--signal); }
+
+  /* ============ Header ============ */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(10, 12, 8, 0.74);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding-block: 0.75rem;
+  }
+  /* logo.png hat keinen Alpha-Kanal (weißer Grund) - bewusste weiße Plakette
+     statt eines Invert-Filters, der die Grün-/Dunkel-Zeichnung plattmachen würde. */
+  .logo-link {
+    display: flex; align-items: center; flex-shrink: 0;
+    background: var(--paper);
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-sm);
+  }
+  .logo-link img { height: 26px; width: auto; }
+
+  .status-pill {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+    background: var(--glass);
+    border: 1px solid var(--hairline);
+    padding: 0.38rem 0.75rem 0.38rem 0.6rem;
+    border-radius: 999px;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+  .status-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--signal);
+    box-shadow: 0 0 0 3px var(--signal-wash);
+  }
+  .status-pill .until { color: var(--steel); }
+
+  .burger-label {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 40px; height: 40px;
+    cursor: pointer;
+  }
+  .burger-label span {
+    display: block; height: 2px; width: 22px;
+    background: var(--paper);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  #nav-toggle { display: none; }
+
+  .main-nav {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: rgba(10, 12, 8, 0.97);
+    border-bottom: 1px solid var(--hairline);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  #nav-toggle:checked ~ .main-nav { max-height: 480px; }
+  .main-nav ul {
+    list-style: none;
+    margin: 0; padding: 0.5rem var(--edge) 1rem;
+    display: flex; flex-direction: column;
+  }
+  .main-nav a {
+    display: block;
+    padding: 0.7rem 0.2rem;
+    border-bottom: 1px solid var(--glass);
+    font-size: 0.95rem;
+    color: var(--paper);
+  }
+  .main-nav a[aria-current="page"] { color: var(--signal); }
+  .nav-cta {
+    display: flex; gap: 0.6rem;
+    padding: 0.85rem var(--edge) 1rem;
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 0.45rem;
+    font-family: var(--font-body);
+    font-size: 0.88rem; font-weight: 600;
+    padding: 0.68rem 1.1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  }
+  .btn-primary { background: var(--signal); color: #0a0c08; }
+  .btn-primary:hover { background: var(--signal-deep); }
+  .btn-glass {
+    background: var(--glass);
+    border-color: var(--hairline);
+    color: var(--paper);
+  }
+  .btn-glass:hover { border-color: var(--hairline-strong); background: var(--glass-strong); }
+  .btn:active { transform: scale(0.97); }
+  .btn.full { width: 100%; }
+
+  /* ============ Hero ============ */
+  .hero {
+    position: relative;
+    padding-block: 3rem 3.5rem;
+    overflow: clip;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -20%; right: -10%;
+    width: 60vw; height: 60vw;
+    max-width: 640px; max-height: 640px;
+    background: radial-gradient(circle, var(--signal-wash), transparent 70%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    position: relative;
+    display: grid;
+    gap: 2.2rem;
+  }
+  .hero-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--signal);
+    background: var(--signal-wash);
+    border: 1px solid var(--hairline);
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: 1.1rem;
+  }
+  .hero h1 {
+    font-size: clamp(1.9rem, 6vw, 3rem);
+    line-height: 1.14;
+  }
+  .hero h1 .accent { color: var(--signal); }
+  .hero-lead {
+    font-size: 1.02rem;
+    color: var(--steel);
+    max-width: 46ch;
+    margin: 1.1rem 0 1.6rem;
+  }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+
+  .facts-card {
+    background: var(--glass);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 1.3rem;
+    display: grid;
+    gap: 1rem;
+  }
+  .fact { display: flex; gap: 0.8rem; align-items: flex-start; }
+  .fact-icon {
+    flex-shrink: 0;
+    width: 34px; height: 34px;
+    border-radius: 9px;
+    background: var(--signal-wash);
+    border: 1px solid var(--hairline);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+  }
+  .fact h3 {
+    margin: 0 0 0.15rem;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+  .fact p { margin: 0; font-size: 0.82rem; color: var(--steel); }
+  .fact .tabular { font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--paper); }
+
+  /* ============ Ankaufsrechner-Teaser ============ */
+  .ankauf-teaser { padding-block: 0 2.4rem; position: relative; }
+  .ankauf-card {
+    display: block;
+    background: linear-gradient(155deg, var(--signal-wash), var(--glass) 55%);
+    border: 1px solid var(--hairline-strong);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .ankauf-card:hover { border-color: var(--signal); transform: translateY(-2px); }
+  .ankauf-card-head p { color: var(--steel); margin: 0.6rem 0 0; max-width: 42ch; }
+  .ankauf-mock-form {
+    margin-top: 1.3rem;
+    display: grid;
+    gap: 0.7rem;
+  }
+  .mock-field {
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--ink-raised-2);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-sm);
+    padding: 0.65rem 0.9rem;
+  }
+  .mock-label { font-size: 0.78rem; color: var(--steel); }
+  .mock-select { font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; }
+  .mock-caret { color: var(--signal); font-size: 0.7rem; }
+
+  /* ============ Bewertungen ============
+     bewertungen.json hat echte Kennzahlen (5,0/490) aber noch keine echten
+     Zitate eingetragen (Datei selbst sagt "Platzhalter" bei jedem Eintrag) -
+     Zitate hier entsprechend als Platzhalter beschriftet, nicht erfunden. */
+  .bewertungen-section { padding-block: 2.6rem; }
+  .bewertungen-summary {
+    display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap;
+    margin-bottom: 1.6rem;
+  }
+  .stars { color: var(--signal); font-size: 1.1rem; letter-spacing: 0.1em; }
+  .bewertungen-note { font-family: var(--font-mono); font-size: 0.95rem; color: var(--paper); }
+  .bewertungen-anzahl { font-size: 0.85rem; color: var(--steel); }
+  .quote-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    margin-bottom: 1.4rem;
+  }
+  .quote-card {
+    background: var(--glass);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.2rem;
+  }
+  .quote-card .stars { display: block; font-size: 0.85rem; margin-bottom: 0.5rem; }
+  .quote-card p { margin: 0 0 0.6rem; font-size: 0.9rem; color: var(--paper); font-style: italic; }
+  .quote-card cite { font-style: normal; font-size: 0.78rem; color: var(--steel); }
+  .quote-placeholder-tag {
+    font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.04em;
+    color: var(--steel); border: 1px dashed var(--hairline); border-radius: 4px;
+    padding: 0.1rem 0.35rem; margin-left: 0.4rem;
+  }
+  .section-link { font-size: 0.85rem; font-weight: 600; color: var(--signal); }
+
+  /* ============ Angebote ============ */
+  .angebote-section { padding-block: 2.6rem; }
+  .angebot-grid { display: grid; grid-template-columns: 1fr; gap: 0.9rem; }
+  .angebot-card {
+    background: var(--glass);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    padding: 1.1rem;
+  }
+  .angebot-card .kat { font-family: var(--font-mono); font-size: 0.68rem; color: var(--steel); text-transform: uppercase; }
+  .angebot-card h3 { font-family: var(--font-body); font-size: 0.98rem; margin: 0.35rem 0 0.5rem; }
+  .angebot-preise { display: flex; align-items: baseline; gap: 0.5rem; }
+  .preis-alt { text-decoration: line-through; color: var(--steel); font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+  .preis-neu { color: var(--signal); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+  /* ============ Sortiment-Vorschau ============ */
+  .sortiment-preview { padding-block: 2.6rem 1.8rem; }
+  .produkt-grid { display: grid; grid-template-columns: 1fr; gap: 0.9rem; margin-bottom: 1.4rem; }
+  .produkt-card {
+    background: var(--glass);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    padding: 1.1rem;
+    display: flex; align-items: center; gap: 0.9rem;
+  }
+  .produkt-glyph {
+    flex-shrink: 0; width: 42px; height: 42px; border-radius: 10px;
+    background: var(--ink-raised-2); border: 1px solid var(--hairline);
+    display: flex; align-items: center; justify-content: center; font-size: 1.15rem;
+  }
+  .produkt-card h3 { font-family: var(--font-body); font-size: 0.92rem; margin: 0 0 0.15rem; }
+  .produkt-card .meta { font-size: 0.78rem; color: var(--steel); }
+  .produkt-card .preis { margin-left: auto; font-weight: 700; color: var(--signal); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  /* ============ Leistungen ============ */
+  /* weniger unten als oben: Footer bringt gleich seinen eigenen Top-Abstand mit,
+     zwei volle 3rem-Lücken hintereinander lasen den Übergang unnötig leer wirken */
+  .leistungen { padding-block: 3rem 1.8rem; }
+  .section-intro { max-width: 56ch; margin-bottom: 2.2rem; }
+  .section-intro h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.2; margin-bottom: 0.7rem; }
+  .section-intro p { color: var(--steel); margin: 0; font-size: 0.96rem; }
+
+  .tile-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .tile {
+    background: var(--glass);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    padding: 1.4rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  }
+  a.tile {
+    border-color: var(--hairline-strong);
+    background: linear-gradient(160deg, var(--signal-wash), var(--glass) 60%);
+  }
+  .tile:hover { transform: translateY(-3px); border-color: var(--hairline-strong); background: var(--glass-strong); }
+  a.tile:hover { background: linear-gradient(160deg, rgba(141,198,63,0.2), var(--glass-strong) 60%); }
+  .tile-icon {
+    width: 44px; height: 44px;
+    border-radius: 11px;
+    background: var(--ink-raised-2);
+    border: 1px solid var(--hairline);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 0.9rem;
+  }
+  .tile h3 {
+    font-family: var(--font-body);
+    font-size: 1.01rem;
+    margin: 0 0 0.4rem;
+  }
+  .tile p { margin: 0; font-size: 0.86rem; color: var(--steel); }
+  .tile-arrow {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    margin-top: 0.8rem;
+    font-size: 0.78rem; font-weight: 600; color: var(--signal);
+  }
+
+  /* ============ Footer ============ */
+  .site-footer {
+    background: var(--ink-raised);
+    border-top: 1px solid var(--hairline);
+    padding-block: 2.2rem 1.6rem;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footer-col h3 {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin: 0 0 0.9rem;
+  }
+  .footer-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.55rem; }
+  .footer-col a { font-size: 0.9rem; color: var(--paper); }
+  .footer-col a:hover { color: var(--signal); }
+  .footer-new-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    background: var(--signal);
+    color: #0a0c08;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+  .footer-bottom {
+    margin-top: 2.2rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--glass);
+    font-size: 0.8rem;
+    color: var(--steel);
+    display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem;
+    justify-content: space-between;
+  }
+
+  /* ============ SEO-Fix-Beispiel (Cross-Links) ============ */
+  .seo-example {
+    background: var(--ink);
+    border-top: 1px dashed var(--hairline);
+    padding-block: 2.2rem;
+  }
+  .seo-example .label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--steel);
+    margin-bottom: 0.9rem;
+  }
+  .seo-example .label strong { color: var(--signal); }
+  .mock-subpage {
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    padding: 1.3rem;
+    background: var(--glass);
+  }
+  .mock-subpage .crumb { font-size: 0.78rem; color: var(--steel); margin-bottom: 0.5rem; }
+  .mock-subpage h4 { font-family: var(--font-display); margin: 0 0 0.9rem; font-size: 1.15rem; }
+  .chip-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .chip {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--hairline);
+    background: var(--ink-raised-2);
+    color: var(--paper);
+  }
+  .chip:hover { border-color: var(--signal); color: var(--signal); }
+
+  /* ============ Reveal-Animation (ein orchestrierter Einstieg) ============ */
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal { animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .reveal-1 { animation-delay: 0.05s; }
+    .reveal-2 { animation-delay: 0.16s; }
+    .reveal-3 { animation-delay: 0.27s; }
+    .tile-grid .tile:nth-child(1) { animation: rise 0.6s cubic-bezier(0.16,1,0.3,1) both 0.05s; }
+    .tile-grid .tile:nth-child(2) { animation: rise 0.6s cubic-bezier(0.16,1,0.3,1) both 0.11s; }
+    .tile-grid .tile:nth-child(3) { animation: rise 0.6s cubic-bezier(0.16,1,0.3,1) both 0.17s; }
+    .tile-grid .tile:nth-child(4) { animation: rise 0.6s cubic-bezier(0.16,1,0.3,1) both 0.23s; }
+    .tile-grid .tile:nth-child(5) { animation: rise 0.6s cubic-bezier(0.16,1,0.3,1) both 0.29s; }
+    .tile-grid .tile:nth-child(6) { animation: rise 0.6s cubic-bezier(0.16,1,0.3,1) both 0.35s; }
+    .tile-grid .tile:nth-child(7) { animation: rise 0.6s cubic-bezier(0.16,1,0.3,1) both 0.41s; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .status-dot { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 3px var(--signal-wash); }
+      50% { box-shadow: 0 0 0 6px transparent; }
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tile:hover, .btn:hover { transform: none; }
+  }
+
+  /* ============ Breakpoint 640px ============ */
+  @media (min-width: 640px) {
+    .status-pill { display: inline-flex; }
+    .hero-actions .btn { width: auto; }
+    .tile-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    .facts-card { grid-template-columns: 1fr 1fr; }
+    .ankauf-card { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2rem; align-items: center; padding: 2rem; }
+    .ankauf-mock-form { margin-top: 0; }
+    .quote-row { grid-template-columns: repeat(2, 1fr); }
+    .angebot-grid { grid-template-columns: repeat(2, 1fr); }
+    .produkt-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ============ Breakpoint 980px ============ */
+  @media (min-width: 980px) {
+    .burger-label, #nav-toggle ~ .main-nav { display: none; }
+    .main-nav {
+      position: static;
+      max-height: none;
+      background: none;
+      border: none;
+      overflow: visible;
+      margin-left: 1.5rem;
+    }
+    .main-nav ul { flex-direction: row; padding: 0; gap: 0.4rem; }
+    .main-nav a { border-bottom: none; padding: 0.5rem 0.7rem; border-radius: 8px; font-size: 0.88rem; }
+    .main-nav a:hover { background: var(--glass); }
+    .nav-cta { padding: 0; margin-left: 0.6rem; }
+    .status-pill { order: 3; }
+
+    .hero-grid { grid-template-columns: 1.15fr 0.85fr; align-items: center; gap: 3rem; }
+    .facts-card { grid-template-columns: 1fr; }
+
+    .tile-grid { grid-template-columns: repeat(3, 1fr); }
+    .footer-grid { grid-template-columns: 1.3fr repeat(3, 1fr); }
+    .quote-row { grid-template-columns: repeat(4, 1fr); }
+    .angebot-grid { grid-template-columns: repeat(3, 1fr); }
+    .produkt-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+  <div class="preview-note">
+    <strong>ENTWURF — nicht live.</strong> Zeigt Header, Hero, Ankaufsrechner-Teaser, Bewertungen, Angebote, Leistungs-Kacheln, Sortiment-Vorschau + den SEO-Fix (Kategorien im Footer). Typografie: Systemsans final (Serifen-Variante verworfen). Wird erst nach Freigabe in index.html übernommen.
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#" class="logo-link" aria-label="Mr. Phone – Startseite">
+        <img src="data:image/png;base64,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" alt="Mr. Phone">
+      </a>
+
+      <span class="status-pill">
+        <span class="status-dot"></span>
+        Geöffnet <span class="until tabular">· bis 21:00 Uhr</span>
+      </span>
+
+      <input type="checkbox" id="nav-toggle">
+      <label for="nav-toggle" class="burger-label" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#" aria-current="page">Startseite</a></li>
+          <li><a href="#">Handy Reparatur</a></li>
+          <li><a href="#">Handy Ankauf</a></li>
+          <li><a href="#">Unser Sortiment</a></li>
+          <li><a href="#">Ratgeber</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="#" class="btn btn-glass full">069 95632281</a>
+          <a href="#" class="btn btn-primary full">WhatsApp</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal reveal-1">
+        <span class="hero-badge">Mitten auf der Zeil in Frankfurt</span>
+        <h1>Handy Shop Frankfurt Zeil: <span class="accent">Verkauf, Ankauf</span> &amp; Reparatur bei Mr. Phone</h1>
+        <p class="hero-lead">Ob neues Smartphone, Sofort-Ankauf Ihres Altgeräts oder eine Express-Reparatur: Mr. Phone ist Ihr Fachgeschäft mitten in der Frankfurter Innenstadt – persönlich beraten, schnell erledigt, fair bewertet.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary">Per WhatsApp anfragen</a>
+          <a href="#" class="btn btn-glass">069 95632281 anrufen</a>
+        </div>
+      </div>
+
+      <div class="facts-card reveal reveal-2">
+        <div class="fact">
+          <span class="fact-icon">🛡️</span>
+          <div>
+            <h3>6 Monate Garantie</h3>
+            <p>Auf jedes bei uns erworbene Gebrauchtgerät.</p>
+          </div>
+        </div>
+        <div class="fact">
+          <span class="fact-icon">📍</span>
+          <div>
+            <h3 class="tabular">Zeil 115–117</h3>
+            <p>60313 Frankfurt am Main</p>
+          </div>
+        </div>
+        <div class="fact">
+          <span class="fact-icon">🕘</span>
+          <div>
+            <h3 class="tabular">Mo–Fr 9:30–21:00</h3>
+            <p>Sa 9:30–21:30 · So geschlossen</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ankauf-teaser">
+    <div class="wrap">
+      <a class="ankauf-card reveal" href="#">
+        <div class="ankauf-card-head">
+          <span class="eyebrow">Sofort-Ankauf</span>
+          <h2>Was ist Ihr altes Handy wert?</h2>
+          <p>Gerät und Zustand wählen, Preis in Sekunden sehen – unverbindlich, dann per WhatsApp 24&nbsp;h sichern und im Laden bar auszahlen lassen.</p>
+        </div>
+        <div class="ankauf-mock-form" aria-hidden="true">
+          <div class="mock-field">
+            <span class="mock-label">Gerät</span>
+            <span class="mock-select">iPhone 14 Pro <span class="mock-caret">▾</span></span>
+          </div>
+          <div class="mock-field">
+            <span class="mock-label">Zustand</span>
+            <span class="mock-select">Sehr gut <span class="mock-caret">▾</span></span>
+          </div>
+          <span class="btn btn-primary full">Preis berechnen →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="bewertungen-section">
+    <div class="wrap">
+      <div class="section-intro reveal">
+        <span class="eyebrow">Kundenstimmen</span>
+        <h2>Das sagen unsere Kunden</h2>
+        <p>Eine Auswahl unserer Google-Bewertungen</p>
+      </div>
+      <div class="bewertungen-summary">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span class="bewertungen-note">5,0 / 5</span>
+        <span class="bewertungen-anzahl">490 Google-Bewertungen</span>
+      </div>
+      <div class="quote-row">
+        <div class="quote-card">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <p>[Platzhalter-Zitat – wird durch echten Wortlaut aus eurem Google-Profil ersetzt]<span class="quote-placeholder-tag">PLATZHALTER</span></p>
+          <cite>— Michael K.</cite>
+        </div>
+        <div class="quote-card">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <p>[Platzhalter-Zitat – wird durch echten Wortlaut aus eurem Google-Profil ersetzt]<span class="quote-placeholder-tag">PLATZHALTER</span></p>
+          <cite>— Sarah B.</cite>
+        </div>
+        <div class="quote-card">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <p>[Platzhalter-Zitat – wird durch echten Wortlaut aus eurem Google-Profil ersetzt]<span class="quote-placeholder-tag">PLATZHALTER</span></p>
+          <cite>— Ahmed T.</cite>
+        </div>
+        <div class="quote-card">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <p>[Platzhalter-Zitat – wird durch echten Wortlaut aus eurem Google-Profil ersetzt]<span class="quote-placeholder-tag">PLATZHALTER</span></p>
+          <cite>— Lena M.</cite>
+        </div>
+      </div>
+      <a href="#" class="section-link">Alle Bewertungen auf Google lesen →</a>
+    </div>
+  </section>
+
+  <section class="angebote-section">
+    <div class="wrap">
+      <div class="section-intro reveal">
+        <span class="eyebrow">Aktuelle Angebote</span>
+        <h2>Diese Geräte sind gerade reduziert</h2>
+        <p>Eine Auswahl aktueller Top-Angebote aus unserem Laden auf der Zeil – solange der Vorrat reicht.</p>
+      </div>
+      <div class="angebot-grid">
+        <div class="angebot-card">
+          <span class="kat">Beispiel – angebote.json ist aktuell leer</span>
+          <h3>iPhone 13 128GB</h3>
+          <div class="angebot-preise">
+            <span class="preis-alt">479&nbsp;€</span>
+            <span class="preis-neu">429&nbsp;€</span>
+          </div>
+        </div>
+        <div class="angebot-card">
+          <span class="kat">Beispiel – angebote.json ist aktuell leer</span>
+          <h3>iPad 10. Generation</h3>
+          <div class="angebot-preise">
+            <span class="preis-alt">399&nbsp;€</span>
+            <span class="preis-neu">349&nbsp;€</span>
+          </div>
+        </div>
+        <div class="angebot-card">
+          <span class="kat">Beispiel – angebote.json ist aktuell leer</span>
+          <h3>Galaxy Watch 6</h3>
+          <div class="angebot-preise">
+            <span class="preis-alt">249&nbsp;€</span>
+            <span class="preis-neu">199&nbsp;€</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="leistungen">
+    <div class="wrap">
+      <div class="section-intro reveal reveal-3">
+        <span class="eyebrow">Unsere Leistungen</span>
+        <h2>Alles rund um Ihr Smartphone – unter einem Dach</h2>
+        <p>Von Neugeräten über Reparatur bis Mobilfunkvertrag: In unserem Ladengeschäft auf der Zeil finden Sie ein umfassendes Angebot für Smartphones, Tablets und Zubehör in Frankfurt.</p>
+      </div>
+
+      <div class="tile-grid">
+        <div class="tile">
+          <div class="tile-icon">📱</div>
+          <h3>Verkauf: Neu &amp; Gebraucht</h3>
+          <p>Smartphones von Apple, Samsung, Xiaomi/Redmi, Google Pixel u.&nbsp;a. sowie Tablets, iPads, Notebooks und Smartwatches – neu oder geprüft gebraucht.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-icon">⚡</div>
+          <h3>Express-Reparatur</h3>
+          <p>Display, Akku, Wasserschaden, Kamera oder Ladebuchse defekt? Wir reparieren fachgerecht – oft noch am selben Tag.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-icon">🛡️</div>
+          <h3>6 Monate Garantie</h3>
+          <p>Alle bei uns erworbenen Gebrauchtgeräte erhalten 6 Monate Garantie – für Ihre Sicherheit beim Kauf.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-icon">🎨</div>
+          <h3>Zubehör &amp; Hüllendruck</h3>
+          <p>Großes Sortiment an Hüllen, Panzergläsern, Ladegeräten und Kopfhörern – inklusive individuellem Hüllendruck nach Ihrem Wunsch.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-icon">📶</div>
+          <h3>Mobilfunk &amp; SIM</h3>
+          <p>1&amp;1- und yourfone-Verträge sowie Prepaid-Karten von Ortel und Lyca – wir beraten Sie zum passenden Tarif.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-icon">🌍</div>
+          <h3>Geldtransfer im Laden</h3>
+          <p>Geld schnell und sicher ins Ausland senden: Bei uns nutzen Sie Ria Money Transfer und MoneyGram direkt vor Ort.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sortiment-preview">
+    <div class="wrap">
+      <div class="section-intro reveal">
+        <span class="eyebrow">Unser Sortiment</span>
+        <h2>Direkt aus unserem aktuellen Bestand</h2>
+        <p>4 echte Einträge aus bestand.json – kein Fotomaterial hinterlegt, deshalb Platzhalter-Icon statt Produktbild.</p>
+      </div>
+      <div class="produkt-grid">
+        <div class="produkt-card">
+          <span class="produkt-glyph">📱</span>
+          <div>
+            <h3>Apple iPhone 17 Pro Max</h3>
+            <span class="meta">512 GB · neu</span>
+          </div>
+          <span class="preis">1.299&nbsp;€</span>
+        </div>
+        <div class="produkt-card">
+          <span class="produkt-glyph">📱</span>
+          <div>
+            <h3>Samsung Galaxy S26 Ultra</h3>
+            <span class="meta">256 GB · neu</span>
+          </div>
+          <span class="preis">849&nbsp;€</span>
+        </div>
+        <div class="produkt-card">
+          <span class="produkt-glyph">📱</span>
+          <div>
+            <h3>Samsung Galaxy S26 Ultra</h3>
+            <span class="meta">512 GB · neu</span>
+          </div>
+          <span class="preis">999,99&nbsp;€</span>
+        </div>
+        <div class="produkt-card">
+          <span class="produkt-glyph">📱</span>
+          <div>
+            <h3>Samsung Galaxy S26 Ultra</h3>
+            <span class="meta">1 TB · neu</span>
+          </div>
+          <span class="preis">1.100&nbsp;€</span>
+        </div>
+      </div>
+      <a href="#" class="section-link">Zum vollständigen Sortiment →</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-col">
+        <img src="data:image/png;base64,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" alt="Mr. Phone" style="height:22px;background:var(--paper);padding:0.25rem 0.5rem;border-radius:8px;margin-bottom:0.9rem;">
+        <p style="font-size:0.86rem;color:var(--steel);max-width:32ch;">Ihr Handy-Fachgeschäft mitten auf der Zeil in Frankfurt am Main: Verkauf, Ankauf und Reparatur aus einer Hand.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Kontakt</h3>
+        <ul>
+          <li>Zeil 115–117, 60313 Frankfurt am Main</li>
+          <li><a href="#">069 95632281</a></li>
+          <li><a href="#">WhatsApp schreiben</a></li>
+          <li><a href="#">mr.phone.zeil@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="#">Handy Reparatur Frankfurt</a></li>
+          <li><a href="#">Handy Ankauf Frankfurt</a></li>
+          <li><a href="#">Unser Sortiment</a></li>
+          <li><a href="#">Ratgeber</a></li>
+          <li><a href="#">Kontakt &amp; Öffnungszeiten</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Kategorien<span class="footer-new-tag">NEU</span></h3>
+        <ul>
+          <li><a href="#">Smartphones</a></li>
+          <li><a href="#">Tablets &amp; iPads</a></li>
+          <li><a href="#">Smartwatches</a></li>
+          <li><a href="#">Laptops &amp; Notebooks</a></li>
+          <li><a href="#">Kameras</a></li>
+          <li><a href="#">PCs, Monitore, Konsolen &amp; mehr</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 Mr. Phone GbR, Zeil 115–117, 60313 Frankfurt am Main</span>
+      <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a></span>
+    </div>
+  </footer>
+
+  <div class="seo-example">
+    <div class="wrap">
+      <p class="label">VORSCHAU — <strong>so löst der Footer das SEO-Problem</strong>: die Kategorien-Spalte oben erscheint künftig auf allen 26 Seiten, nicht nur auf der Startseite. Zusätzlich bekommt jede der 5 bisher verwaisten Kategorieseiten unten am Seitenende Cross-Links zu verwandten Kategorien, z.&nbsp;B. so auf kameras-frankfurt.html:</p>
+      <div class="mock-subpage">
+        <div class="crumb">Startseite / Kameras</div>
+        <h4>Das könnte Sie auch interessieren</h4>
+        <div class="chip-row">
+          <a href="#" class="chip">Smartphones</a>
+          <a href="#" class="chip">Tablets &amp; iPads</a>
+          <a href="#" class="chip">Laptops &amp; Notebooks</a>
+          <a href="#" class="chip">Unser gesamtes Sortiment</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
