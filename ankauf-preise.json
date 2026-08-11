@@ -6837,11 +6837,11 @@
         "bezeichnung": "32 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 80,
           "wieNeu": 75,
           "sehrGut": 70,
-          "gut": 60,
-          "defekt": 15
+          "gut": 65,
+          "defekt": 20
         },
         "preisQuelle": "auto"
       },
@@ -6849,11 +6849,11 @@
         "bezeichnung": "128 GB",
         "uvpDelta": 95,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 95,
           "wieNeu": 90,
-          "sehrGut": 75,
-          "gut": 65,
-          "defekt": 15
+          "sehrGut": 80,
+          "gut": 75,
+          "defekt": 25
         },
         "preisQuelle": "auto"
       }
@@ -6872,7 +6872,7 @@
         "bezeichnung": "32 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 175,
+          "neuVersiegelt": 165,
           "wieNeu": 110,
           "sehrGut": 100,
           "gut": 70,
@@ -6884,11 +6884,11 @@
         "bezeichnung": "128 GB",
         "uvpDelta": 95,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 130,
-          "sehrGut": 120,
-          "gut": 105,
-          "defekt": 40
+          "neuVersiegelt": 165,
+          "wieNeu": 200,
+          "sehrGut": 185,
+          "gut": 165,
+          "defekt": 55
         },
         "preisQuelle": "auto"
       }
@@ -6919,11 +6919,11 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 330,
           "wieNeu": 310,
           "sehrGut": 285,
-          "gut": 235,
-          "defekt": 85
+          "gut": 255,
+          "defekt": 90
         },
         "preisQuelle": "auto"
       }
@@ -6989,11 +6989,11 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 350,
-          "sehrGut": 320,
-          "gut": 260,
-          "defekt": 95
+          "neuVersiegelt": 345,
+          "wieNeu": 375,
+          "sehrGut": 340,
+          "gut": 275,
+          "defekt": 100
         },
         "preisQuelle": "auto"
       },
@@ -7024,7 +7024,7 @@
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 145,
           "wieNeu": 140,
           "sehrGut": 125,
           "gut": 115,
@@ -7036,7 +7036,7 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 225,
           "wieNeu": 210,
           "sehrGut": 190,
           "gut": 170,
@@ -7059,11 +7059,11 @@
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 265,
           "wieNeu": 250,
           "sehrGut": 230,
-          "gut": 180,
-          "defekt": 60
+          "gut": 205,
+          "defekt": 70
         },
         "preisQuelle": "auto"
       },
@@ -7071,11 +7071,11 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 250,
+          "neuVersiegelt": 275,
+          "wieNeu": 260,
           "sehrGut": 235,
-          "gut": 185,
-          "defekt": 65
+          "gut": 210,
+          "defekt": 75
         },
         "preisQuelle": "auto"
       }
@@ -7106,11 +7106,11 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 380,
-          "sehrGut": 345,
-          "gut": 265,
-          "defekt": 105
+          "neuVersiegelt": 495,
+          "wieNeu": 465,
+          "sehrGut": 420,
+          "gut": 380,
+          "defekt": 130
         },
         "preisQuelle": "auto"
       }
@@ -7306,7 +7306,7 @@
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 140,
           "wieNeu": 85,
           "sehrGut": 75,
           "gut": 60,
@@ -7341,11 +7341,11 @@
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 220,
-          "sehrGut": 205,
-          "gut": 180,
-          "defekt": 65
+          "neuVersiegelt": 220,
+          "wieNeu": 205,
+          "sehrGut": 185,
+          "gut": 170,
+          "defekt": 60
         },
         "preisQuelle": "auto"
       },
@@ -7376,37 +7376,37 @@
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 310,
-          "wieNeu": 250,
-          "sehrGut": 225,
-          "gut": 180,
-          "defekt": 65
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
         "preise": {
-          "neuVersiegelt": 360,
-          "wieNeu": 290,
-          "sehrGut": 260,
-          "gut": 210,
-          "defekt": 75
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
         "preise": {
-          "neuVersiegelt": 465,
-          "wieNeu": 370,
-          "sehrGut": 335,
-          "gut": 270,
-          "defekt": 100
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -7482,7 +7482,7 @@
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 455,
           "wieNeu": 180,
           "sehrGut": 160,
           "gut": 130,
@@ -7553,7 +7553,7 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 330,
           "wieNeu": 265,
           "sehrGut": 240,
           "gut": 195,
@@ -7742,49 +7742,49 @@
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 140,
-          "wieNeu": 115,
-          "sehrGut": 100,
-          "gut": 85,
-          "defekt": 30
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
         "preise": {
-          "neuVersiegelt": 150,
-          "wieNeu": 125,
-          "sehrGut": 110,
-          "gut": 90,
-          "defekt": 35
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
         "preise": {
-          "neuVersiegelt": 180,
-          "wieNeu": 145,
-          "sehrGut": 130,
-          "gut": 105,
-          "defekt": 40
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 550,
         "preise": {
-          "neuVersiegelt": 210,
-          "wieNeu": 170,
-          "sehrGut": 155,
-          "gut": 125,
-          "defekt": 45
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -7801,49 +7801,49 @@
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 245,
-          "wieNeu": 200,
-          "sehrGut": 180,
-          "gut": 145,
-          "defekt": 55
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
         "preise": {
           "neuVersiegelt": null,
-          "wieNeu": 250,
-          "sehrGut": 225,
-          "gut": 185,
-          "defekt": 65
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
         "preise": {
-          "neuVersiegelt": 315,
-          "wieNeu": 250,
-          "sehrGut": 225,
-          "gut": 185,
-          "defekt": 65
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 550,
         "preise": {
-          "neuVersiegelt": 365,
-          "wieNeu": 295,
-          "sehrGut": 265,
-          "gut": 215,
-          "defekt": 80
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -7860,7 +7860,7 @@
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 495,
           "wieNeu": 310,
           "sehrGut": 280,
           "gut": 225,
@@ -7872,7 +7872,7 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 495,
           "wieNeu": 310,
           "sehrGut": 280,
           "gut": 225,
@@ -7931,11 +7931,11 @@
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 425,
-          "sehrGut": 380,
-          "gut": 295,
-          "defekt": 110
+          "neuVersiegelt": 530,
+          "wieNeu": 455,
+          "sehrGut": 410,
+          "gut": 330,
+          "defekt": 120
         },
         "preisQuelle": "auto"
       },
@@ -8213,7 +8213,7 @@
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 350,
           "wieNeu": 280,
           "sehrGut": 255,
           "gut": 205,
@@ -8237,11 +8237,11 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 395,
-          "sehrGut": 355,
-          "gut": 290,
-          "defekt": 105
+          "neuVersiegelt": 725,
+          "wieNeu": 580,
+          "sehrGut": 525,
+          "gut": 425,
+          "defekt": 155
         },
         "preisQuelle": "auto"
       }
@@ -8307,7 +8307,7 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 580,
           "wieNeu": 460,
           "sehrGut": 420,
           "gut": 340,
@@ -8330,7 +8330,7 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 550,
           "wieNeu": 440,
           "sehrGut": 400,
           "gut": 320,
@@ -8342,7 +8342,7 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 610,
           "wieNeu": 485,
           "sehrGut": 440,
           "gut": 355,
@@ -9224,13 +9224,13 @@
         "bezeichnung": "49mm",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 325,
-          "wieNeu": 260,
-          "sehrGut": 235,
-          "gut": 190,
-          "defekt": 70
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -9362,10 +9362,10 @@
         "bezeichnung": "40mm GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 45,
           "wieNeu": 35,
           "sehrGut": 35,
-          "gut": 20,
+          "gut": 25,
           "defekt": 10
         },
         "preisQuelle": "auto"
@@ -9374,7 +9374,7 @@
         "bezeichnung": "44mm GB",
         "uvpDelta": 4,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 45,
           "wieNeu": 40,
           "sehrGut": 35,
           "gut": 30,
@@ -9397,7 +9397,7 @@
         "bezeichnung": "40mm GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 65,
           "wieNeu": 55,
           "sehrGut": 50,
           "gut": 40,
@@ -9455,11 +9455,11 @@
         "bezeichnung": "40mm GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 75,
+          "neuVersiegelt": 95,
+          "wieNeu": 80,
           "sehrGut": 70,
-          "gut": 55,
-          "defekt": 15
+          "gut": 60,
+          "defekt": 20
         },
         "preisQuelle": "auto"
       },
@@ -9467,7 +9467,7 @@
         "bezeichnung": "44mm GB",
         "uvpDelta": 4,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 105,
           "wieNeu": 85,
           "sehrGut": 75,
           "gut": 60,
@@ -9490,11 +9490,11 @@
         "bezeichnung": "43mm GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 95,
           "wieNeu": 80,
           "sehrGut": 70,
           "gut": 55,
-          "defekt": 15
+          "defekt": 20
         },
         "preisQuelle": "auto"
       },
@@ -9502,11 +9502,11 @@
         "bezeichnung": "47mm GB",
         "uvpDelta": 4,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 105,
           "wieNeu": 85,
           "sehrGut": 75,
           "gut": 60,
-          "defekt": 20
+          "defekt": 25
         },
         "preisQuelle": "auto"
       }
@@ -9525,11 +9525,11 @@
         "bezeichnung": "40mm GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 110,
           "wieNeu": 90,
-          "sehrGut": 85,
-          "gut": 70,
-          "defekt": 20
+          "sehrGut": 80,
+          "gut": 65,
+          "defekt": 25
         },
         "preisQuelle": "auto"
       },
@@ -9537,10 +9537,10 @@
         "bezeichnung": "44mm GB",
         "uvpDelta": 4,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 110,
           "wieNeu": 90,
-          "sehrGut": 85,
-          "gut": 70,
+          "sehrGut": 80,
+          "gut": 65,
           "defekt": 25
         },
         "preisQuelle": "auto"
@@ -9583,9 +9583,9 @@
         "bezeichnung": "40mm GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 125,
-          "sehrGut": 115,
+          "neuVersiegelt": 165,
+          "wieNeu": 135,
+          "sehrGut": 120,
           "gut": 100,
           "defekt": 35
         },
@@ -9664,13 +9664,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 160,
-          "wieNeu": 130,
-          "sehrGut": 115,
-          "gut": 95,
-          "defekt": 35
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -9687,13 +9687,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 360,
-          "wieNeu": 290,
-          "sehrGut": 260,
-          "gut": 210,
-          "defekt": 75
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -9710,13 +9710,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 200,
-          "wieNeu": 160,
-          "sehrGut": 145,
-          "gut": 120,
-          "defekt": 45
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -9733,13 +9733,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 80,
-          "wieNeu": 65,
-          "sehrGut": 60,
-          "gut": 45,
-          "defekt": 15
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -9756,13 +9756,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 125,
-          "wieNeu": 100,
-          "sehrGut": 90,
-          "gut": 75,
-          "defekt": 25
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -9779,13 +9779,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 135,
-          "wieNeu": 110,
-          "sehrGut": 100,
-          "gut": 80,
-          "defekt": 30
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -9802,13 +9802,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 180,
-          "wieNeu": 145,
-          "sehrGut": 135,
-          "gut": 105,
-          "defekt": 40
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -9848,13 +9848,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 70,
-          "wieNeu": 55,
-          "sehrGut": 50,
-          "gut": 40,
-          "defekt": 15
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -9871,13 +9871,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 105,
-          "wieNeu": 85,
-          "sehrGut": 80,
-          "gut": 65,
-          "defekt": 25
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -9906,7 +9906,7 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
         "preise": {
-          "neuVersiegelt": 1195,
+          "neuVersiegelt": 960,
           "wieNeu": 695,
           "sehrGut": 635,
           "gut": 570,
@@ -9918,7 +9918,7 @@
         "bezeichnung": "1 TB",
         "uvpDelta": 450,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 960,
           "wieNeu": 900,
           "sehrGut": 815,
           "gut": 735,
@@ -9941,37 +9941,37 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 375,
-          "wieNeu": 300,
-          "sehrGut": 270,
-          "gut": 220,
-          "defekt": 80
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
         "preise": {
-          "neuVersiegelt": 425,
-          "wieNeu": 340,
-          "sehrGut": 310,
-          "gut": 250,
-          "defekt": 90
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 450,
         "preise": {
-          "neuVersiegelt": 490,
-          "wieNeu": 395,
-          "sehrGut": 355,
-          "gut": 290,
-          "defekt": 105
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -9988,37 +9988,37 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 650,
-          "wieNeu": 520,
-          "sehrGut": 470,
-          "gut": 380,
-          "defekt": 140
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 250,
         "preise": {
-          "neuVersiegelt": 715,
-          "wieNeu": 570,
-          "sehrGut": 515,
-          "gut": 415,
-          "defekt": 150
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "2 TB",
         "uvpDelta": 550,
         "preise": {
-          "neuVersiegelt": 790,
-          "wieNeu": 630,
-          "sehrGut": 570,
-          "gut": 465,
-          "defekt": 170
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10035,37 +10035,37 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 905,
-          "wieNeu": 720,
-          "sehrGut": 655,
-          "gut": 530,
-          "defekt": 190
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 250,
         "preise": {
-          "neuVersiegelt": 1005,
-          "wieNeu": 800,
-          "sehrGut": 725,
-          "gut": 590,
-          "defekt": 215
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "2 TB",
         "uvpDelta": 550,
         "preise": {
-          "neuVersiegelt": 1130,
-          "wieNeu": 900,
-          "sehrGut": 815,
-          "gut": 660,
-          "defekt": 240
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10082,37 +10082,37 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 905,
-          "wieNeu": 720,
-          "sehrGut": 655,
-          "gut": 530,
-          "defekt": 190
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 250,
         "preise": {
-          "neuVersiegelt": 1005,
-          "wieNeu": 800,
-          "sehrGut": 725,
-          "gut": 590,
-          "defekt": 215
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "2 TB",
         "uvpDelta": 550,
         "preise": {
-          "neuVersiegelt": 1130,
-          "wieNeu": 900,
-          "sehrGut": 815,
-          "gut": 660,
-          "defekt": 240
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10176,37 +10176,37 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 750,
-          "wieNeu": 600,
-          "sehrGut": 545,
-          "gut": 440,
-          "defekt": 160
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 250,
         "preise": {
-          "neuVersiegelt": 815,
-          "wieNeu": 650,
-          "sehrGut": 590,
-          "gut": 480,
-          "defekt": 175
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "2 TB",
         "uvpDelta": 550,
         "preise": {
-          "neuVersiegelt": 895,
-          "wieNeu": 715,
-          "sehrGut": 645,
-          "gut": 525,
-          "defekt": 190
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10223,37 +10223,37 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 1190,
-          "wieNeu": 950,
-          "sehrGut": 860,
-          "gut": 695,
-          "defekt": 255
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 250,
         "preise": {
-          "neuVersiegelt": 1295,
-          "wieNeu": 1030,
-          "sehrGut": 935,
-          "gut": 755,
-          "defekt": 275
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "2 TB",
         "uvpDelta": 550,
         "preise": {
-          "neuVersiegelt": 1415,
-          "wieNeu": 1130,
-          "sehrGut": 1025,
-          "gut": 830,
-          "defekt": 300
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10270,37 +10270,37 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 1190,
-          "wieNeu": 950,
-          "sehrGut": 860,
-          "gut": 695,
-          "defekt": 255
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 250,
         "preise": {
-          "neuVersiegelt": 1295,
-          "wieNeu": 1030,
-          "sehrGut": 935,
-          "gut": 755,
-          "defekt": 275
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "2 TB",
         "uvpDelta": 550,
         "preise": {
-          "neuVersiegelt": 1415,
-          "wieNeu": 1130,
-          "sehrGut": 1025,
-          "gut": 830,
-          "defekt": 300
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10364,37 +10364,37 @@
         "bezeichnung": "8GB/256GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 370,
-          "wieNeu": 295,
-          "sehrGut": 270,
-          "gut": 215,
-          "defekt": 80
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "16GB/512GB",
         "uvpDelta": 350,
         "preise": {
-          "neuVersiegelt": 470,
-          "wieNeu": 375,
-          "sehrGut": 340,
-          "gut": 275,
-          "defekt": 100
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "32GB/1TB",
         "uvpDelta": 800,
         "preise": {
-          "neuVersiegelt": 600,
-          "wieNeu": 480,
-          "sehrGut": 435,
-          "gut": 350,
-          "defekt": 130
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10411,37 +10411,37 @@
         "bezeichnung": "8GB/256GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 195,
-          "wieNeu": 160,
-          "sehrGut": 145,
-          "gut": 115,
-          "defekt": 40
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "16GB/512GB",
         "uvpDelta": 250,
         "preise": {
-          "neuVersiegelt": 265,
-          "wieNeu": 215,
-          "sehrGut": 195,
-          "gut": 155,
-          "defekt": 55
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "32GB/1TB",
         "uvpDelta": 600,
         "preise": {
-          "neuVersiegelt": 365,
-          "wieNeu": 295,
-          "sehrGut": 265,
-          "gut": 215,
-          "defekt": 80
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10458,37 +10458,37 @@
         "bezeichnung": "8GB/256GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 400,
-          "wieNeu": 320,
-          "sehrGut": 290,
-          "gut": 235,
-          "defekt": 85
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "16GB/512GB",
         "uvpDelta": 350,
         "preise": {
-          "neuVersiegelt": 500,
-          "wieNeu": 400,
-          "sehrGut": 360,
-          "gut": 290,
-          "defekt": 105
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "32GB/1TB",
         "uvpDelta": 800,
         "preise": {
-          "neuVersiegelt": 625,
-          "wieNeu": 500,
-          "sehrGut": 455,
-          "gut": 365,
-          "defekt": 135
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10505,37 +10505,37 @@
         "bezeichnung": "8GB/256GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 195,
-          "wieNeu": 160,
-          "sehrGut": 145,
-          "gut": 115,
-          "defekt": 40
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "16GB/512GB",
         "uvpDelta": 250,
         "preise": {
-          "neuVersiegelt": 265,
-          "wieNeu": 215,
-          "sehrGut": 195,
-          "gut": 155,
-          "defekt": 55
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "32GB/1TB",
         "uvpDelta": 600,
         "preise": {
-          "neuVersiegelt": 365,
-          "wieNeu": 295,
-          "sehrGut": 265,
-          "gut": 215,
-          "defekt": 80
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10552,37 +10552,37 @@
         "bezeichnung": "8GB/256GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 425,
-          "wieNeu": 340,
-          "sehrGut": 310,
-          "gut": 250,
-          "defekt": 90
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "16GB/512GB",
         "uvpDelta": 350,
         "preise": {
-          "neuVersiegelt": 525,
-          "wieNeu": 420,
-          "sehrGut": 380,
-          "gut": 310,
-          "defekt": 110
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "32GB/1TB",
         "uvpDelta": 800,
         "preise": {
-          "neuVersiegelt": 655,
-          "wieNeu": 525,
-          "sehrGut": 475,
-          "gut": 385,
-          "defekt": 140
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10599,37 +10599,37 @@
         "bezeichnung": "8GB/256GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 340,
-          "wieNeu": 275,
-          "sehrGut": 250,
-          "gut": 200,
-          "defekt": 75
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "16GB/512GB",
         "uvpDelta": 350,
         "preise": {
-          "neuVersiegelt": 440,
-          "wieNeu": 355,
-          "sehrGut": 320,
-          "gut": 260,
-          "defekt": 95
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "32GB/1TB",
         "uvpDelta": 800,
         "preise": {
-          "neuVersiegelt": 570,
-          "wieNeu": 455,
-          "sehrGut": 415,
-          "gut": 335,
-          "defekt": 120
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10646,37 +10646,37 @@
         "bezeichnung": "8GB/256GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 315,
-          "wieNeu": 250,
-          "sehrGut": 230,
-          "gut": 185,
-          "defekt": 65
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "16GB/512GB",
         "uvpDelta": 300,
         "preise": {
-          "neuVersiegelt": 400,
-          "wieNeu": 320,
-          "sehrGut": 290,
-          "gut": 235,
-          "defekt": 85
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "32GB/1TB",
         "uvpDelta": 700,
         "preise": {
-          "neuVersiegelt": 515,
-          "wieNeu": 410,
-          "sehrGut": 375,
-          "gut": 300,
-          "defekt": 110
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10693,37 +10693,37 @@
         "bezeichnung": "8GB/256GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 180,
-          "wieNeu": 145,
-          "sehrGut": 135,
-          "gut": 105,
-          "defekt": 40
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "16GB/512GB",
         "uvpDelta": 250,
         "preise": {
-          "neuVersiegelt": 250,
-          "wieNeu": 205,
-          "sehrGut": 185,
-          "gut": 150,
-          "defekt": 55
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "32GB/1TB",
         "uvpDelta": 600,
         "preise": {
-          "neuVersiegelt": 350,
-          "wieNeu": 280,
-          "sehrGut": 255,
-          "gut": 205,
-          "defekt": 75
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10740,37 +10740,37 @@
         "bezeichnung": "8GB/256GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 285,
-          "wieNeu": 230,
-          "sehrGut": 205,
-          "gut": 170,
-          "defekt": 60
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "16GB/512GB",
         "uvpDelta": 300,
         "preise": {
-          "neuVersiegelt": 370,
-          "wieNeu": 295,
-          "sehrGut": 270,
-          "gut": 220,
-          "defekt": 80
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "32GB/1TB",
         "uvpDelta": 700,
         "preise": {
-          "neuVersiegelt": 485,
-          "wieNeu": 390,
-          "sehrGut": 355,
-          "gut": 285,
-          "defekt": 105
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10787,37 +10787,37 @@
         "bezeichnung": "8GB/256GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 165,
-          "wieNeu": 135,
-          "sehrGut": 120,
-          "gut": 100,
-          "defekt": 35
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "16GB/512GB",
         "uvpDelta": 250,
         "preise": {
-          "neuVersiegelt": 240,
-          "wieNeu": 190,
-          "sehrGut": 175,
-          "gut": 140,
-          "defekt": 50
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "32GB/1TB",
         "uvpDelta": 600,
         "preise": {
-          "neuVersiegelt": 335,
-          "wieNeu": 270,
-          "sehrGut": 245,
-          "gut": 200,
-          "defekt": 70
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10834,13 +10834,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 215,
-          "wieNeu": 175,
-          "sehrGut": 155,
-          "gut": 125,
-          "defekt": 45
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10857,13 +10857,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 485,
-          "wieNeu": 385,
-          "sehrGut": 350,
-          "gut": 285,
-          "defekt": 105
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10880,13 +10880,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 1025,
-          "wieNeu": 820,
-          "sehrGut": 740,
-          "gut": 600,
-          "defekt": 220
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10903,13 +10903,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 135,
-          "wieNeu": 110,
-          "sehrGut": 100,
-          "gut": 80,
-          "defekt": 30
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10926,13 +10926,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 375,
-          "wieNeu": 300,
-          "sehrGut": 270,
-          "gut": 220,
-          "defekt": 80
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10949,13 +10949,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 660,
-          "wieNeu": 525,
-          "sehrGut": 475,
-          "gut": 385,
-          "defekt": 140
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10972,13 +10972,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 885,
-          "wieNeu": 705,
-          "sehrGut": 640,
-          "gut": 515,
-          "defekt": 190
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -10995,13 +10995,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 45,
-          "wieNeu": 40,
-          "sehrGut": 35,
-          "gut": 30,
-          "defekt": 10
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11018,13 +11018,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 80,
-          "wieNeu": 65,
-          "sehrGut": 60,
-          "gut": 45,
-          "defekt": 15
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11041,13 +11041,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 155,
-          "wieNeu": 125,
-          "sehrGut": 110,
-          "gut": 90,
-          "defekt": 35
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11064,13 +11064,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 140,
-          "wieNeu": 115,
-          "sehrGut": 100,
-          "gut": 85,
-          "defekt": 30
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11087,13 +11087,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 325,
-          "wieNeu": 260,
-          "sehrGut": 235,
-          "gut": 190,
-          "defekt": 70
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11271,13 +11271,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 30,
-          "wieNeu": 25,
-          "sehrGut": 25,
-          "gut": 20,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11294,13 +11294,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 65,
-          "wieNeu": 55,
-          "sehrGut": 50,
-          "gut": 40,
-          "defekt": 15
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11363,13 +11363,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 30,
-          "wieNeu": 25,
-          "sehrGut": 25,
-          "gut": 20,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11386,13 +11386,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 55,
-          "wieNeu": 45,
-          "sehrGut": 40,
-          "gut": 35,
-          "defekt": 10
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11409,13 +11409,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 85,
-          "wieNeu": 70,
-          "sehrGut": 65,
-          "gut": 50,
-          "defekt": 20
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11432,13 +11432,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 160,
-          "wieNeu": 130,
-          "sehrGut": 115,
-          "gut": 95,
-          "defekt": 35
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11455,13 +11455,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 50,
-          "wieNeu": 40,
-          "sehrGut": 35,
-          "gut": 30,
-          "defekt": 10
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11478,13 +11478,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 80,
-          "wieNeu": 65,
-          "sehrGut": 60,
-          "gut": 45,
-          "defekt": 15
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11501,13 +11501,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 50,
-          "wieNeu": 40,
-          "sehrGut": 35,
-          "gut": 30,
-          "defekt": 10
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11524,13 +11524,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 125,
-          "wieNeu": 100,
-          "sehrGut": 90,
-          "gut": 75,
-          "defekt": 25
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11547,13 +11547,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 65,
-          "wieNeu": 55,
-          "sehrGut": 50,
-          "gut": 40,
-          "defekt": 15
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11570,13 +11570,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 90,
-          "wieNeu": 75,
-          "sehrGut": 70,
-          "gut": 55,
-          "defekt": 20
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11593,13 +11593,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 55,
-          "wieNeu": 45,
-          "sehrGut": 40,
-          "gut": 35,
-          "defekt": 10
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11685,13 +11685,13 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 345,
-          "wieNeu": 280,
-          "sehrGut": 250,
-          "gut": 205,
-          "defekt": 75
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11731,13 +11731,13 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 245,
-          "wieNeu": 200,
-          "sehrGut": 180,
-          "gut": 145,
-          "defekt": 55
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11800,7 +11800,7 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 845,
           "wieNeu": 675,
           "sehrGut": 610,
           "gut": 495,
@@ -11892,13 +11892,13 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 630,
-          "wieNeu": 505,
-          "sehrGut": 455,
-          "gut": 370,
-          "defekt": 135
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11938,13 +11938,13 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 110,
-          "wieNeu": 90,
-          "sehrGut": 80,
-          "gut": 65,
-          "defekt": 25
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11961,13 +11961,13 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 250,
-          "wieNeu": 205,
-          "sehrGut": 185,
-          "gut": 150,
-          "defekt": 55
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -11984,13 +11984,13 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 330,
-          "wieNeu": 265,
-          "sehrGut": 240,
-          "gut": 195,
-          "defekt": 70
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12007,7 +12007,7 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 1510,
           "wieNeu": 1200,
           "sehrGut": 1090,
           "gut": 880,
@@ -12030,13 +12030,13 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 1320,
-          "wieNeu": 1050,
-          "sehrGut": 950,
-          "gut": 770,
-          "defekt": 280
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12053,11 +12053,11 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 600,
-          "sehrGut": 540,
-          "gut": 430,
-          "defekt": 145
+          "neuVersiegelt": 520,
+          "wieNeu": 415,
+          "sehrGut": 375,
+          "gut": 305,
+          "defekt": 110
         },
         "preisQuelle": "auto"
       }
@@ -12099,13 +12099,13 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 405,
-          "wieNeu": 325,
-          "sehrGut": 290,
-          "gut": 235,
-          "defekt": 85
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12122,13 +12122,13 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 370,
-          "wieNeu": 295,
-          "sehrGut": 270,
-          "gut": 215,
-          "defekt": 80
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12145,13 +12145,13 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 210,
-          "wieNeu": 170,
-          "sehrGut": 155,
-          "gut": 125,
-          "defekt": 45
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12168,13 +12168,13 @@
         "bezeichnung": "Gehäuse",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 610,
-          "wieNeu": 490,
-          "sehrGut": 440,
-          "gut": 360,
-          "defekt": 130
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12191,13 +12191,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 50,
-          "wieNeu": 40,
-          "sehrGut": 35,
-          "gut": 30,
-          "defekt": 10
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12214,13 +12214,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 70,
-          "wieNeu": 55,
-          "sehrGut": 50,
-          "gut": 40,
-          "defekt": 15
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12237,13 +12237,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 85,
-          "wieNeu": 70,
-          "sehrGut": 65,
-          "gut": 50,
-          "defekt": 20
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12260,13 +12260,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 120,
-          "wieNeu": 100,
-          "sehrGut": 90,
-          "gut": 70,
-          "defekt": 25
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12283,13 +12283,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 160,
-          "wieNeu": 130,
-          "sehrGut": 115,
-          "gut": 95,
-          "defekt": 35
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12352,13 +12352,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 135,
-          "wieNeu": 110,
-          "sehrGut": 100,
-          "gut": 80,
-          "defekt": 30
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12375,13 +12375,13 @@
         "bezeichnung": "Preis auf Anfrage",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 5,
-          "wieNeu": 5,
-          "sehrGut": 5,
-          "gut": 5,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12686,11 +12686,11 @@
         "bezeichnung": "1TB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 450,
-          "wieNeu": 300,
-          "sehrGut": 270,
-          "gut": 220,
-          "defekt": 80
+          "neuVersiegelt": 270,
+          "wieNeu": 220,
+          "sehrGut": 195,
+          "gut": 160,
+          "defekt": 60
         },
         "preisQuelle": "auto"
       },
@@ -12698,11 +12698,11 @@
         "bezeichnung": "2TB",
         "uvpDelta": 180,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 300,
-          "sehrGut": 270,
-          "gut": 220,
-          "defekt": 80
+          "neuVersiegelt": 270,
+          "wieNeu": 220,
+          "sehrGut": 195,
+          "gut": 160,
+          "defekt": 60
         },
         "preisQuelle": "auto"
       }
@@ -12721,13 +12721,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 15,
-          "wieNeu": 15,
-          "sehrGut": 15,
-          "gut": 10,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12744,13 +12744,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 35,
-          "wieNeu": 30,
-          "sehrGut": 25,
-          "gut": 20,
-          "defekt": 10
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12767,13 +12767,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 25,
-          "wieNeu": 25,
-          "sehrGut": 20,
-          "gut": 15,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12790,13 +12790,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 60,
-          "wieNeu": 50,
-          "sehrGut": 45,
-          "gut": 35,
-          "defekt": 15
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12836,7 +12836,7 @@
         "bezeichnung": "256GB GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 290,
           "wieNeu": 270,
           "sehrGut": 245,
           "gut": 200,
@@ -12848,10 +12848,10 @@
         "bezeichnung": "512GB GB",
         "uvpDelta": 200,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 315,
-          "sehrGut": 280,
-          "gut": 225,
+          "neuVersiegelt": 405,
+          "wieNeu": 325,
+          "sehrGut": 295,
+          "gut": 235,
           "defekt": 85
         },
         "preisQuelle": "auto"
@@ -12860,11 +12860,11 @@
         "bezeichnung": "64GB GB",
         "uvpDelta": -150,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 220,
-          "sehrGut": 195,
-          "gut": 160,
-          "defekt": 60
+          "neuVersiegelt": 185,
+          "wieNeu": 265,
+          "sehrGut": 240,
+          "gut": 195,
+          "defekt": 70
         },
         "preisQuelle": "auto"
       }
@@ -12883,7 +12883,7 @@
         "bezeichnung": "512GB GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 395,
           "wieNeu": 415,
           "sehrGut": 375,
           "gut": 305,
@@ -12930,7 +12930,7 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 45,
           "wieNeu": 60,
           "sehrGut": 55,
           "gut": 45,
@@ -12953,13 +12953,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 70,
-          "wieNeu": 55,
-          "sehrGut": 50,
-          "gut": 40,
-          "defekt": 15
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12976,13 +12976,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 5,
-          "wieNeu": 10,
-          "sehrGut": 5,
-          "gut": 5,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -12999,13 +12999,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 20,
-          "wieNeu": 20,
-          "sehrGut": 15,
-          "gut": 15,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -13022,13 +13022,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 5,
-          "wieNeu": 5,
-          "sehrGut": 5,
-          "gut": 5,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -13045,13 +13045,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 5,
-          "wieNeu": 10,
-          "sehrGut": 5,
-          "gut": 5,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -13068,13 +13068,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 15,
-          "wieNeu": 15,
-          "sehrGut": 15,
-          "gut": 10,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -13091,13 +13091,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 75,
-          "wieNeu": 60,
-          "sehrGut": 55,
-          "gut": 45,
-          "defekt": 15
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -13114,13 +13114,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 35,
-          "wieNeu": 30,
-          "sehrGut": 25,
-          "gut": 20,
-          "defekt": 10
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -13137,10 +13137,10 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 145,
           "wieNeu": 140,
           "sehrGut": 125,
-          "gut": 105,
+          "gut": 115,
           "defekt": 40
         },
         "preisQuelle": "auto"
@@ -13230,13 +13230,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 145,
-          "wieNeu": 115,
-          "sehrGut": 105,
-          "gut": 85,
-          "defekt": 30
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -13253,13 +13253,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 20,
-          "wieNeu": 20,
-          "sehrGut": 15,
-          "gut": 15,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -14416,7 +14416,7 @@
         "bezeichnung": "16 GB · 512 GB",
         "uvpDelta": 400,
         "preise": {
-          "neuVersiegelt": 980,
+          "neuVersiegelt": 790,
           "wieNeu": 700,
           "sehrGut": 635,
           "gut": 570,
@@ -14428,7 +14428,7 @@
         "bezeichnung": "24 GB · 512 GB",
         "uvpDelta": 630,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 790,
           "wieNeu": 740,
           "sehrGut": 675,
           "gut": 605,
@@ -14510,11 +14510,11 @@
         "bezeichnung": "24 GB · 1 TB",
         "uvpDelta": 460,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 1305,
-          "sehrGut": 1185,
-          "gut": 950,
-          "defekt": 345
+          "neuVersiegelt": 1640,
+          "wieNeu": 2165,
+          "sehrGut": 1970,
+          "gut": 1775,
+          "defekt": 615
         },
         "preisQuelle": "auto"
       },
@@ -14522,11 +14522,11 @@
         "bezeichnung": "32 GB · 1 TB",
         "uvpDelta": 690,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 1305,
-          "sehrGut": 1185,
-          "gut": 950,
-          "defekt": 345
+          "neuVersiegelt": 1800,
+          "wieNeu": 2165,
+          "sehrGut": 1970,
+          "gut": 1775,
+          "defekt": 615
         },
         "preisQuelle": "auto"
       }
@@ -14651,11 +14651,11 @@
         "bezeichnung": "16 GB · 1 TB",
         "uvpDelta": 460,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 2410,
-          "sehrGut": 2230,
-          "gut": 1795,
-          "defekt": 610
+          "neuVersiegelt": 1570,
+          "wieNeu": 2090,
+          "sehrGut": 1900,
+          "gut": 1710,
+          "defekt": 595
         },
         "preisQuelle": "auto"
       }
@@ -14721,7 +14721,7 @@
         "bezeichnung": "8 GB · 256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 545,
+          "neuVersiegelt": 395,
           "wieNeu": 310,
           "sehrGut": 280,
           "gut": 240,
@@ -14733,7 +14733,7 @@
         "bezeichnung": "8 GB · 512 GB",
         "uvpDelta": 230,
         "preise": {
-          "neuVersiegelt": 750,
+          "neuVersiegelt": 395,
           "wieNeu": 350,
           "sehrGut": 315,
           "gut": 275,
@@ -14745,10 +14745,10 @@
         "bezeichnung": "16 GB · 256 GB",
         "uvpDelta": 230,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 395,
           "wieNeu": 370,
-          "sehrGut": 335,
-          "gut": 275,
+          "sehrGut": 340,
+          "gut": 305,
           "defekt": 105
         },
         "preisQuelle": "auto"
@@ -14757,10 +14757,10 @@
         "bezeichnung": "16 GB · 512 GB",
         "uvpDelta": 460,
         "preise": {
-          "neuVersiegelt": null,
+          "neuVersiegelt": 530,
           "wieNeu": 495,
           "sehrGut": 450,
-          "gut": 385,
+          "gut": 405,
           "defekt": 140
         },
         "preisQuelle": "auto"
@@ -14849,11 +14849,11 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": null,
-          "wieNeu": 20,
-          "sehrGut": 20,
-          "gut": 15,
-          "defekt": 15
+          "neuVersiegelt": 15,
+          "wieNeu": 15,
+          "sehrGut": 15,
+          "gut": 10,
+          "defekt": 5
         },
         "preisQuelle": "auto"
       }
@@ -14872,13 +14872,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 15,
-          "wieNeu": 15,
-          "sehrGut": 15,
-          "gut": 10,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -14895,13 +14895,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 5,
-          "wieNeu": 5,
-          "sehrGut": 5,
-          "gut": 5,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -14918,13 +14918,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 5,
-          "wieNeu": 5,
-          "sehrGut": 5,
-          "gut": 5,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -14941,13 +14941,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 20,
-          "wieNeu": 20,
-          "sehrGut": 15,
-          "gut": 15,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -14964,13 +14964,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 10,
-          "wieNeu": 10,
-          "sehrGut": 10,
-          "gut": 10,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -14987,13 +14987,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 5,
-          "wieNeu": 5,
-          "sehrGut": 5,
-          "gut": 5,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -15010,13 +15010,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 5,
-          "wieNeu": 5,
-          "sehrGut": 5,
-          "gut": 5,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -15033,13 +15033,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 5,
-          "wieNeu": 5,
-          "sehrGut": 5,
-          "gut": 5,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
@@ -15056,13 +15056,13 @@
         "bezeichnung": "Standard",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 5,
-          "wieNeu": 5,
-          "sehrGut": 5,
-          "gut": 5,
-          "defekt": 5
+          "neuVersiegelt": null,
+          "wieNeu": null,
+          "sehrGut": null,
+          "gut": null,
+          "defekt": null
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },

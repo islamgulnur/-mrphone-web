@@ -99,15 +99,21 @@ if (Array.isArray(ankaufRoh)) {
         fehler.push(vOrt + ": fehlendes preise-Objekt.");
         return;
       }
-      ZUSTANDS_FELDER.forEach((feld) => {
-        // neuVersiegelt darf null sein: Gerät wird laut eBay-Marktdaten nicht mehr
-        // versiegelt gehandelt (marktwertNeu fehlt) -> Ankaufsrechner blendet die
-        // Stufe dann aus. Alle anderen Stufen bleiben Pflicht-Zahlen >= 0.
-        if (feld === "neuVersiegelt" && v.preise[feld] === null) return;
-        if (typeof v.preise[feld] !== "number" || v.preise[feld] < 0) {
-          fehler.push(vOrt + ": preise." + feld + " ist keine gültige Zahl.");
-        }
-      });
+      // Alle 5 Stufen null = Gerät läuft komplett "Preis auf Anfrage" (siehe
+      // scripts/markiere-auf-anfrage-2026-08-12.js, ankauf-rechner.js hatKeinenPreis()) -
+      // bewusster Ganz-Geräte-Zustand, kein Rechenfehler. Gültig für jede Kategorie.
+      const alleStufenNull = ZUSTANDS_FELDER.every((feld) => v.preise[feld] === null);
+      if (!alleStufenNull) {
+        ZUSTANDS_FELDER.forEach((feld) => {
+          // neuVersiegelt darf einzeln null sein: Gerät wird laut eBay-Marktdaten nicht mehr
+          // versiegelt gehandelt (marktwertNeu fehlt) -> Ankaufsrechner blendet die
+          // Stufe dann aus. Alle anderen Stufen bleiben Pflicht-Zahlen >= 0.
+          if (feld === "neuVersiegelt" && v.preise[feld] === null) return;
+          if (typeof v.preise[feld] !== "number" || v.preise[feld] < 0) {
+            fehler.push(vOrt + ": preise." + feld + " ist keine gültige Zahl.");
+          }
+        });
+      }
       if (v.preisQuelle !== "auto" && v.preisQuelle !== "manuell") {
         fehler.push(vOrt + ": preisQuelle muss 'auto' oder 'manuell' sein, ist '" + v.preisQuelle + "'.");
       }
