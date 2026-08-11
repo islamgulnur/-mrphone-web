@@ -1,8 +1,5 @@
 [
   {
-    "_kommentar": "AUTO-PREISE aus echten eBay-Marktdaten (Browse API, siehe scripts/lib/search-client.js) - siehe scripts/update-ankaufspreise.js + scripts/ankaufspreis-config.js. Je Gerät+Variante zwei Marktanker (gebraucht/neu), Ausreißerfilter + Median + Abschlag. defekt IMMER als fester, markenabhängiger Prozentsatz vom Gebraucht-Marktanker (pricing-config.js: ANKAUF_PROZENTSAETZE_APPLE / _REST, einzige Quelle dieser Prozentsätze). Kategorie \"smartphones\" (seit 06.08.2026, siehe OFFENE-PUNKTE.md): neuVersiegelt = niedrigerer von eigenem Verkaufspreis × 0,88 / UVP × markenabhängigem Prozentsatz (Apple 71%, Rest 50%, kalibriert auf 5 Avatel-Referenzpreise) / echtem eBay-Marktwert × 0,90 (Korrektiv gegen Marktverfall, gedeckelt auf 100% UVP) - wieNeu/sehrGut/gut leiten sich als Prozentsatz vom so ermittelten neuVersiegelt-Wert ab (ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_APPLE/_REST). Alle ANDEREN Kategorien: neuVersiegelt weiterhin die alte, rein eBay-basierte Formel (pricing.berechneNeuVersiegelt(), seit 28.07.2026) - niedrigerer Wert von eigenem Verkaufspreis × 0,88 ODER marktwertNeu × 0,82 (gedeckelt auf 90% von marktwertNeu), wieNeu/sehrGut/gut als Prozentsatz vom Gebraucht-Marktanker. Zusätzlich (alle Marken/Kategorien, keine Ausnahme): marktwertNeu > 115% UVP gilt als kontaminiert und wird verworfen, verbleibender Anker zusätzlich hart auf 100% UVP gedeckelt. Alles zusätzlich global verschiebbar über pricing-niveau.json. preisQuelle \"manuell\" wird nie automatisch überschrieben. Geräte, die noch keinen echten Marktlauf hatten (marktwertQuelle \"geschaetzt\" im Katalog), tragen weiterhin die ältere Schätzformel aus pricing-config.js, bis sie an der Reihe sind (siehe Rotation, scripts/rotation-state.json)."
-  },
-  {
     "id": "kat-0001",
     "kategorie": "smartphones",
     "marke": "Apple",
@@ -9636,19 +9633,19 @@
     "kategorie": "smartwatches",
     "marke": "Samsung",
     "modell": "Galaxy Watch Ultra 2",
-    "jahr": 2025,
-    "neupreisUvp": 699,
+    "jahr": 2026,
+    "neupreisUvp": 749,
     "beliebt": false,
     "varianten": [
       {
         "bezeichnung": "47mm",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 410,
-          "wieNeu": 325,
-          "sehrGut": 295,
-          "gut": 240,
-          "defekt": 85
+          "neuVersiegelt": 520,
+          "wieNeu": 450,
+          "sehrGut": 410,
+          "gut": 330,
+          "defekt": 120
         },
         "preisQuelle": "auto"
       }
@@ -15064,6 +15061,508 @@
           "sehrGut": 5,
           "gut": 5,
           "defekt": 5
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0493",
+    "kategorie": "smartphones",
+    "marke": "Samsung",
+    "modell": "Galaxy A37",
+    "jahr": 2026,
+    "neupreisUvp": 429,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 210,
+          "wieNeu": 170,
+          "sehrGut": 160,
+          "gut": 125,
+          "defekt": 60
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 90,
+        "preise": {
+          "neuVersiegelt": 255,
+          "wieNeu": 210,
+          "sehrGut": 190,
+          "gut": 155,
+          "defekt": 70
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0494",
+    "kategorie": "smartphones",
+    "marke": "Samsung",
+    "modell": "Galaxy A57",
+    "jahr": 2026,
+    "neupreisUvp": 529,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 260,
+          "wieNeu": 215,
+          "sehrGut": 195,
+          "gut": 155,
+          "defekt": 70
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 60,
+        "preise": {
+          "neuVersiegelt": 290,
+          "wieNeu": 240,
+          "sehrGut": 220,
+          "gut": 175,
+          "defekt": 80
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0495",
+    "kategorie": "tablets",
+    "marke": "Apple",
+    "modell": "iPad Pro 11\" Gen 6 (2025, M5)",
+    "jahr": 2025,
+    "neupreisUvp": 1299,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 870,
+          "wieNeu": 815,
+          "sehrGut": 740,
+          "gut": 665,
+          "defekt": 230
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 250,
+        "preise": {
+          "neuVersiegelt": 1040,
+          "wieNeu": 970,
+          "sehrGut": 880,
+          "gut": 795,
+          "defekt": 275
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 730,
+        "preise": {
+          "neuVersiegelt": 1360,
+          "wieNeu": 1270,
+          "sehrGut": 1155,
+          "gut": 1040,
+          "defekt": 360
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "2 TB",
+        "uvpDelta": 1350,
+        "preise": {
+          "neuVersiegelt": 1775,
+          "wieNeu": 1660,
+          "sehrGut": 1510,
+          "gut": 1360,
+          "defekt": 470
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0496",
+    "kategorie": "tablets",
+    "marke": "Apple",
+    "modell": "iPad Pro 13\" Gen 8 (2025, M5)",
+    "jahr": 2025,
+    "neupreisUvp": 1649,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 1105,
+          "wieNeu": 1035,
+          "sehrGut": 940,
+          "gut": 845,
+          "defekt": 295
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 250,
+        "preise": {
+          "neuVersiegelt": 1275,
+          "wieNeu": 1190,
+          "sehrGut": 1085,
+          "gut": 975,
+          "defekt": 340
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 730,
+        "preise": {
+          "neuVersiegelt": 1595,
+          "wieNeu": 1490,
+          "sehrGut": 1355,
+          "gut": 1220,
+          "defekt": 425
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "2 TB",
+        "uvpDelta": 1350,
+        "preise": {
+          "neuVersiegelt": 2015,
+          "wieNeu": 1880,
+          "sehrGut": 1710,
+          "gut": 1540,
+          "defekt": 535
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0497",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Pro 14\" M5",
+    "jahr": 2025,
+    "neupreisUvp": 1899,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "16 GB · 1 TB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 1275,
+          "wieNeu": 1190,
+          "sehrGut": 1085,
+          "gut": 975,
+          "defekt": 340
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0498",
+    "kategorie": "smartphones",
+    "marke": "Samsung",
+    "modell": "Galaxy Z Flip 8",
+    "jahr": 2026,
+    "neupreisUvp": 1299,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 645,
+          "wieNeu": 530,
+          "sehrGut": 485,
+          "gut": 385,
+          "defekt": 210
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 200,
+        "preise": {
+          "neuVersiegelt": 745,
+          "wieNeu": 610,
+          "sehrGut": 560,
+          "gut": 445,
+          "defekt": 240
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0499",
+    "kategorie": "smartphones",
+    "marke": "Xiaomi",
+    "modell": "Redmi A5",
+    "jahr": 2025,
+    "neupreisUvp": 120,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "64 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 55,
+          "wieNeu": 45,
+          "sehrGut": 40,
+          "gut": 35,
+          "defekt": 10
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 20,
+        "preise": {
+          "neuVersiegelt": 65,
+          "wieNeu": 55,
+          "sehrGut": 50,
+          "gut": 40,
+          "defekt": 15
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0500",
+    "kategorie": "tablets",
+    "marke": "Samsung",
+    "modell": "Galaxy Tab A9+",
+    "jahr": 2023,
+    "neupreisUvp": 249,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "64 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 85,
+          "wieNeu": 70,
+          "sehrGut": 65,
+          "gut": 50,
+          "defekt": 20
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 50,
+        "preise": {
+          "neuVersiegelt": 105,
+          "wieNeu": 85,
+          "sehrGut": 80,
+          "gut": 65,
+          "defekt": 25
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0501",
+    "kategorie": "tablets",
+    "marke": "Xiaomi",
+    "modell": "Pad 7 Pro",
+    "jahr": 2024,
+    "neupreisUvp": 500,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 175,
+          "wieNeu": 145,
+          "sehrGut": 130,
+          "gut": 105,
+          "defekt": 40
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 100,
+        "preise": {
+          "neuVersiegelt": 215,
+          "wieNeu": 170,
+          "sehrGut": 155,
+          "gut": 125,
+          "defekt": 45
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0502",
+    "kategorie": "tablets",
+    "marke": "Apple",
+    "modell": "iPad Air 7 13\" (2025)",
+    "jahr": 2025,
+    "neupreisUvp": 949,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 635,
+          "wieNeu": 595,
+          "sehrGut": 540,
+          "gut": 485,
+          "defekt": 170
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0503",
+    "kategorie": "smartwatches",
+    "marke": "Samsung",
+    "modell": "Galaxy Watch9",
+    "jahr": 2026,
+    "neupreisUvp": 409,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "40mm",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 285,
+          "wieNeu": 245,
+          "sehrGut": 220,
+          "gut": 180,
+          "defekt": 65
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "44mm",
+        "uvpDelta": 30,
+        "preise": {
+          "neuVersiegelt": 305,
+          "wieNeu": 260,
+          "sehrGut": 235,
+          "gut": 190,
+          "defekt": 70
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "44mm LTE",
+        "uvpDelta": 80,
+        "preise": {
+          "neuVersiegelt": 340,
+          "wieNeu": 290,
+          "sehrGut": 265,
+          "gut": 215,
+          "defekt": 80
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0504",
+    "kategorie": "smartphones",
+    "marke": "OnePlus",
+    "modell": "15",
+    "jahr": 2025,
+    "neupreisUvp": 949,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 440,
+          "wieNeu": 355,
+          "sehrGut": 320,
+          "gut": 260,
+          "defekt": 95
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 151,
+        "preise": {
+          "neuVersiegelt": 510,
+          "wieNeu": 410,
+          "sehrGut": 370,
+          "gut": 300,
+          "defekt": 110
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0505",
+    "kategorie": "tablets",
+    "marke": "Lenovo",
+    "modell": "Tab Plus",
+    "jahr": 2024,
+    "neupreisUvp": 329,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 115,
+          "wieNeu": 95,
+          "sehrGut": 85,
+          "gut": 70,
+          "defekt": 25
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0506",
+    "kategorie": "smartphones",
+    "marke": "Samsung",
+    "modell": "Galaxy A06",
+    "jahr": 2024,
+    "neupreisUvp": 103,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "64 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 35,
+          "wieNeu": 30,
+          "sehrGut": 25,
+          "gut": 20,
+          "defekt": 10
         },
         "preisQuelle": "auto"
       }

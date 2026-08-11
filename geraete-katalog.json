@@ -7480,15 +7480,15 @@
     "kategorie": "smartwatches",
     "marke": "Samsung",
     "modell": "Galaxy Watch Ultra 2",
-    "jahr": 2025,
-    "uvp": 699,
+    "jahr": 2026,
+    "uvp": 749,
     "varianten": [
       {
         "bezeichnung": "47mm",
         "uvpDelta": 0
       }
     ],
-    "marktwertGebraucht": 435,
+    "marktwertGebraucht": 600,
     "marktwertQuelle": "geschaetzt"
   },
   {
@@ -11451,6 +11451,290 @@
       }
     ],
     "marktwertGebraucht": 5,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0493",
+    "kategorie": "smartphones",
+    "marke": "Samsung",
+    "modell": "Galaxy A37",
+    "jahr": 2026,
+    "uvp": 429,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 90
+      }
+    ],
+    "marktwertGebraucht": 290,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0494",
+    "kategorie": "smartphones",
+    "marke": "Samsung",
+    "modell": "Galaxy A57",
+    "jahr": 2026,
+    "uvp": 529,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 60
+      }
+    ],
+    "marktwertGebraucht": 360,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0495",
+    "kategorie": "tablets",
+    "marke": "Apple",
+    "modell": "iPad Pro 11\" Gen 6 (2025, M5)",
+    "jahr": 2025,
+    "uvp": 1299,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 250
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 730
+      },
+      {
+        "bezeichnung": "2 TB",
+        "uvpDelta": 1350
+      }
+    ],
+    "marktwertGebraucht": 925,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0496",
+    "kategorie": "tablets",
+    "marke": "Apple",
+    "modell": "iPad Pro 13\" Gen 8 (2025, M5)",
+    "jahr": 2025,
+    "uvp": 1649,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 250
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 730
+      },
+      {
+        "bezeichnung": "2 TB",
+        "uvpDelta": 1350
+      }
+    ],
+    "marktwertGebraucht": 1175,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0497",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Pro 14\" M5",
+    "jahr": 2025,
+    "uvp": 1899,
+    "varianten": [
+      {
+        "bezeichnung": "16 GB · 1 TB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 1355,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0498",
+    "kategorie": "smartphones",
+    "marke": "Samsung",
+    "modell": "Galaxy Z Flip 8",
+    "jahr": 2026,
+    "uvp": 1299,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 200
+      }
+    ],
+    "marktwertGebraucht": 1040,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0499",
+    "kategorie": "smartphones",
+    "marke": "Xiaomi",
+    "modell": "Redmi A5",
+    "jahr": 2025,
+    "uvp": 120,
+    "varianten": [
+      {
+        "bezeichnung": "64 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 20
+      }
+    ],
+    "marktwertGebraucht": 60,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0500",
+    "kategorie": "tablets",
+    "marke": "Samsung",
+    "modell": "Galaxy Tab A9+",
+    "jahr": 2023,
+    "uvp": 249,
+    "varianten": [
+      {
+        "bezeichnung": "64 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 50
+      }
+    ],
+    "marktwertGebraucht": 95,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0501",
+    "kategorie": "tablets",
+    "marke": "Xiaomi",
+    "modell": "Pad 7 Pro",
+    "jahr": 2024,
+    "uvp": 500,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 100
+      }
+    ],
+    "marktwertGebraucht": 190,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0502",
+    "kategorie": "tablets",
+    "marke": "Apple",
+    "modell": "iPad Air 7 13\" (2025)",
+    "jahr": 2025,
+    "uvp": 949,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 675,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0503",
+    "kategorie": "smartwatches",
+    "marke": "Samsung",
+    "modell": "Galaxy Watch9",
+    "jahr": 2026,
+    "uvp": 409,
+    "varianten": [
+      {
+        "bezeichnung": "40mm",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "44mm",
+        "uvpDelta": 30
+      },
+      {
+        "bezeichnung": "44mm LTE",
+        "uvpDelta": 80
+      }
+    ],
+    "marktwertGebraucht": 325,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0504",
+    "kategorie": "smartphones",
+    "marke": "OnePlus",
+    "modell": "15",
+    "jahr": 2025,
+    "uvp": 949,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 151
+      }
+    ],
+    "marktwertGebraucht": 470,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0505",
+    "kategorie": "tablets",
+    "marke": "Lenovo",
+    "modell": "Tab Plus",
+    "jahr": 2024,
+    "uvp": 329,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 125,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0506",
+    "kategorie": "smartphones",
+    "marke": "Samsung",
+    "modell": "Galaxy A06",
+    "jahr": 2024,
+    "uvp": 103,
+    "varianten": [
+      {
+        "bezeichnung": "64 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 40,
     "marktwertQuelle": "geschaetzt"
   }
 ]

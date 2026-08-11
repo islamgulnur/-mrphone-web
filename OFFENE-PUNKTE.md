@@ -460,6 +460,40 @@ Wert stehen, aber als Datenqualitäts-Verdacht festgehalten werden:
 gegenchecken, bevor sie – z. B. durch eine künftige Senkung an anderer Stelle, die die Sperre nicht
 mehr greift – doch noch live gehen.
 
+## NOCH OFFEN: 8 Katalog-Lücken ohne belastbare UVP (11.08.2026)
+
+Beim systematischen Katalog-Scan (alle Kategorien, siehe auch Eintrag "Katalog-Lücken nach
+Kassensystem-Import" oben) wurden 14 fehlende Geräte recherchiert und eingetragen (Samsung
+Galaxy A06 64GB/A37/A57/Z Flip 8, Apple iPad Pro 11"+13" M5/iPad Air 7 13"/MacBook Pro 14" M5,
+Xiaomi Redmi A5/Pad 7 Pro, Samsung Galaxy Tab A9+/Watch9, OnePlus 15, Lenovo Tab Plus 128GB;
+zusätzlich `kat-0260` Galaxy Watch Ultra 2 von UVP 699€/Jahr 2025 auf 749€/2026 aktualisiert -
+Samsung behält den Produktnamen über zwei Modelljahre bei). Für folgende 8 Geräte aus dem
+Kassensystem-Import (`bestand.json`) wurde **bewusst keine UVP eingetragen** - die Websuche
+lieferte keine belastbare Herstellerangabe (nur Marktpreise Dritter, widersprüchliche Quellen,
+oder gar keinen Treffer), und eine geratene UVP würde bei aktiver UVP-Formel direkt einen
+falschen Ankaufspreis erzeugen:
+
+- **Galaxy A06 128GB** - nur die 64GB-Variante (103€) hatte eine belastbare DE-Quelle.
+- **Galaxy A07** (beide Varianten) - noch kein offizieller Samsung-DE-Marktstart gefunden, nur
+  widersprüchliche Marktpreise (110-180€) von Drittanbietern.
+- **Redmi Note 14S 256GB** - nur Marktpreis (175,80€) gefunden, keine bestätigte Launch-UVP.
+- **Xperia 10 IV 128GB** - widersprüchliche Quellenangaben selbst bei derselben Quelle (419€
+  vs. 479€ vs. 499€ genannt).
+- **Xperia L1** - `bestand.json` nennt "64 GB", offizielle Spezifikation kennt aber nur eine
+  16GB-Version (siehe Wikipedia/teltarif) - Speicherangabe im Bestand vermutlich falsch, vor
+  Import prüfen statt für eine vermutlich nie existierende Variante einen Preis zu erfinden.
+- **Lenovo Tab Plus 64GB** - nur die 128GB-Variante (329€) ist bei Lenovo DE offiziell
+  auffindbar, eine 64GB-SKU wirkt wie eine eigene Konfiguration ohne Beleg.
+- **HP Pro 14 Plus Core Ultra 7 (2025), 16GB·512GB** - kein Preis auffindbar, auch das Modell
+  selbst ließ sich im HP-DE-Shop nicht eindeutig identifizieren (evtl. sehr neu/Nischenmodell).
+- **Realme Note 50 3GB/64GB** - Marktstart-Preis (85€) mehrfach genannt, aber ohne belastbare
+  Herstellerquelle (Realme hat keine starke offizielle DE-Preisliste); mittlere statt hoher
+  Sicherheit.
+
+**To-Do:** Betreiber prüft diese 8 Werte anhand eigener Einkaufsrechnungen/Lieferantenbelege und
+liefert sie nach (siehe Absprache 11.08.2026). Bis dahin bekommen diese Positionen in
+`bestand.json` weiterhin keinen automatischen Ankaufspreis.
+
 ## NOCH OFFEN: Kontaminationsprüfung kennt kein Alters-Kriterium (08.08.2026)
 
 Am Galaxy-Note-9-Fall (siehe oben) sichtbar geworden: `pruefeMarktwertNeuPlausibilitaet()` prüft
