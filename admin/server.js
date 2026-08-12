@@ -4,6 +4,7 @@ const sharp = require("sharp");
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const cookie = require("cookie");
 const { execFile } = require("child_process");
 const pricing = require("../pricing-config");
 const { backupIfChanged } = require("../scripts/backup-data");
@@ -60,8 +61,114 @@ function findeKatalogEintrag(id) {
 }
 
 const app = express();
+
+// --- Login (E-Mail + Passwort, serverseitig geprüft) --------------------------------
+// Zugangsdaten liegen NICHT im Repo: admin/auth-config.json (per .gitignore ausgeschlossen)
+// wird einmalig per `node admin/set-password.js` erzeugt, siehe admin/README.md.
+const AUTH_CONFIG_FILE = path.join(__dirname, "auth-config.json");
+const SESSION_COOKIE = "admin_session";
+const SESSION_DAUER_MS = 7 * 24 * 60 * 60 * 1000; // 7 Tage
+
+function liesAuthConfig() {
+  if (!fs.existsSync(AUTH_CONFIG_FILE)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(AUTH_CONFIG_FILE, "utf8"));
+  } catch (e) {
+    return null;
+  }
+}
+
+function pruefePasswort(passwort, saltHex, hashHex) {
+  const erwarteterHash = Buffer.from(hashHex, "hex");
+  const eingegebenerHash = crypto.scryptSync(String(passwort || ""), Buffer.from(saltHex, "hex"), 64);
+  if (erwarteterHash.length !== eingegebenerHash.length) return false;
+  return crypto.timingSafeEqual(erwarteterHash, eingegebenerHash);
+}
+
+function signiereSession(email, secretHex) {
+  const payload = Buffer.from(JSON.stringify({ email, exp: Date.now() + SESSION_DAUER_MS })).toString("base64url");
+  const sig = crypto.createHmac("sha256", Buffer.from(secretHex, "hex")).update(payload).digest("base64url");
+  return payload + "." + sig;
+}
+
+function pruefeSession(token, secretHex) {
+  if (!token || typeof token !== "string" || token.indexOf(".") === -1) return null;
+  const [payload, sig] = token.split(".");
+  const erwarteteSig = crypto.createHmac("sha256", Buffer.from(secretHex, "hex")).update(payload).digest("base64url");
+  const a = Buffer.from(sig || "");
+  const b = Buffer.from(erwarteteSig);
+  if (a.length !== b.length || !crypto.timingSafeEqual(a, b)) return null;
+  try {
+    const daten = JSON.parse(Buffer.from(payload, "base64url").toString("utf8"));
+    if (!daten.exp || daten.exp < Date.now()) return null;
+    return daten;
+  } catch (e) {
+    return null;
+  }
+}
+
+function requireAuth(req, res, next) {
+  const config = liesAuthConfig();
+  if (!config) {
+    return res
+      .status(500)
+      .send("Admin-Login noch nicht eingerichtet. Auf dem Server-Rechner ausführen: node admin/set-password.js");
+  }
+  const cookies = cookie.parse(req.headers.cookie || "");
+  const session = pruefeSession(cookies[SESSION_COOKIE], config.sessionSecret);
+  if (!session) {
+    if (req.path.indexOf("/api") === 0 || req.originalUrl.indexOf("/api") === 0) {
+      return res.status(401).json({ error: "Nicht angemeldet" });
+    }
+    return res.redirect("/admin/login");
+  }
+  next();
+}
+
 app.use(express.json());
-app.use("/admin", express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({ extended: false }));
+
+app.get("/admin/login", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "login.html"));
+});
+
+app.post("/admin/login", (req, res) => {
+  const config = liesAuthConfig();
+  if (!config) {
+    return res
+      .status(500)
+      .send("Admin-Login noch nicht eingerichtet. Auf dem Server-Rechner ausführen: node admin/set-password.js");
+  }
+  const email = String((req.body && req.body.email) || "").trim().toLowerCase();
+  const passwort = (req.body && req.body.passwort) || "";
+  const emailOk = email && email === config.email.toLowerCase();
+  const passwortOk = emailOk && pruefePasswort(passwort, config.salt, config.passwordHash);
+  if (!emailOk || !passwortOk) {
+    return res
+      .status(401)
+      .send('Login fehlgeschlagen - E-Mail oder Passwort falsch. <a href="/admin/login">Zurück</a>');
+  }
+  const token = signiereSession(config.email, config.sessionSecret);
+  res.setHeader(
+    "Set-Cookie",
+    cookie.serialize(SESSION_COOKIE, token, {
+      httpOnly: true,
+      sameSite: "lax",
+      path: "/",
+      maxAge: SESSION_DAUER_MS / 1000,
+    })
+  );
+  res.redirect("/admin/");
+});
+
+app.post("/admin/logout", (req, res) => {
+  res.setHeader("Set-Cookie", cookie.serialize(SESSION_COOKIE, "", { httpOnly: true, path: "/", maxAge: 0 }));
+  res.redirect("/admin/login");
+});
+// --------------------------------------------------------------------------------------
+
+app.use("/admin", requireAuth, express.static(path.join(__dirname, "public")));
+app.use("/api", requireAuth);
 app.use("/images", express.static(path.join(ROOT, "images")));
 app.use(express.static(ROOT));
 

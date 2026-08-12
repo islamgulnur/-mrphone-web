@@ -22,7 +22,31 @@ per JS eingeblendet – **kurz prüfen, ob das tatsächlich zuverlässig so pass
 entweder regelmäßig echte Angebote in `angebote.json` pflegen, oder sicherstellen, dass die
 Sektion bei leerem Array zuverlässig ausgeblendet bleibt statt leer sichtbar zu sein.
 
-## NOCH OFFEN: /admin/ hat keinen Zugriffsschutz im Code (02.08.2026)
+## GELÖST 13.08.2026: /admin/ hat jetzt echten Zugriffsschutz (E-Mail + Passwort)
+
+Ergänzung zum Befund vom 02.08.2026 unten: serverseitiger Login eingebaut, damit der
+"aktuell kein ausnutzbares Risiko in der Praxis"-Status auch gilt, falls `admin/` irgendwann
+doch mitdeployed wird oder als Serverless Function läuft.
+
+- Neue Route `GET/POST /admin/login` (`admin/public/login.html`, Formular mit E-Mail +
+  Passwort) und `POST /admin/logout` (Button im Admin-Header).
+- `admin/server.js`: `requireAuth`-Middleware vor `/admin` (statische Dateien, redirectet
+  unangemeldet auf `/admin/login`) und vor `/api` (liefert unangemeldet `401` JSON) gehängt.
+- Passwort wird nie im Klartext gespeichert: `node admin/set-password.js` fragt E-Mail +
+  Passwort interaktiv ab, speichert nur scrypt-Hash + Salt + zufälligen Session-Secret in
+  `admin/auth-config.json` (per `.gitignore` vom Repo ausgeschlossen, landet nie im Commit).
+- Session läuft über signiertes, httpOnly-Cookie (HMAC-SHA256 mit dem Session-Secret, 7 Tage
+  gültig) - kein Server-seitiger Session-Store nötig, kein zusätzliches npm-Paket außer dem
+  bereits über Express transitiv vorhandenen `cookie`-Paket.
+- Getestet (13.08.2026, lokal via curl): ohne Cookie `/admin/` → 302 auf Login, `/api/*` → 401;
+  falsches Passwort → 401; richtige Daten → Cookie gesetzt, danach `/admin/` und `/api/*` → 200;
+  Logout löscht Cookie, danach wieder gesperrt.
+- Einmaliges Setup auf dem Heim-PC (und bei jedem Passwortwechsel): `cd admin && node
+  set-password.js`, danach Admin-Server neu starten. Siehe ADMIN-ZUGRIFF.md.
+
+---
+
+## NOCH OFFEN (historisch, siehe Lösung oben): /admin/ hatte keinen Zugriffsschutz im Code (02.08.2026)
 
 **Ausgangspunkt:** Betreiber ging davon aus, eine 5-Tap-Geste auf die E-Mail-Adresse öffne ein
 Login-Formular für den Admin-Bereich. Prüfung ergab: **diese Geste existiert nicht** - weder im

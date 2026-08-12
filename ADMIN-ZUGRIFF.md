@@ -138,9 +138,17 @@ Admin-Panel – genau wie bei jeder anderen App, die dauerhaft eingeloggt bleibt
 3. **2FA auf dem Google-/Microsoft-Konto**, mit dem Tailscale angemeldet ist
    (siehe Schritt 1) – verhindert, dass jemand mit gestohlenem Handy zusätzlich
    ein komplett neues Gerät unter deinem Namen ins Tailnet holt.
-4. **Optional, zusätzliche Sicherheitsebene:** ein einfaches Passwort direkt
-   auf dem Admin-Panel selbst (serverseitig geprüft, kein Bastel-JavaScript –
-   siehe die frühere Sicherheitsanalyse in diesem Repo). Dann reicht ein
-   entsperrtes Handy allein nicht mehr – es braucht zusätzlich das
-   Admin-Passwort. Aufwand ca. 2–4 Stunden, aktuell nicht eingebaut. Sag
-   Bescheid, falls gewünscht.
+4. **Eingebaut (13.08.2026): Login mit E-Mail + Passwort direkt auf dem
+   Admin-Panel**, serverseitig geprüft (`admin/server.js`, kein Bastel-JavaScript
+   im Frontend – siehe OFFENE-PUNKTE.md). Ein entsperrtes Handy allein reicht
+   jetzt nicht mehr – es braucht zusätzlich E-Mail + Passwort. Einrichtung
+   einmalig auf dem Heim-PC:
+   ```
+   cd admin
+   node set-password.js
+   ```
+   Fragt E-Mail und Passwort ab (mind. 8 Zeichen), speichert nur einen
+   Hash davon in `admin/auth-config.json` (nicht im Git-Repo). Danach den
+   Admin-Server neu starten. Passwort später ändern: Script einfach erneut
+   ausführen, überschreibt die alten Zugangsdaten. Abmelden über den
+   "Abmelden"-Button oben rechts im Admin-Panel.
