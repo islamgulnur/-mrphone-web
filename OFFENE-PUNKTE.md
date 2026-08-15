@@ -587,3 +587,29 @@ altersabhängige Obergrenze ergänzen – z. B. gestaffelt analog zu `ALTERSFAKT
 je älter das Modelljahr, desto niedriger die zulässige Prozent-Schwelle relativ zur UVP. Separates
 Thema von der Kategorie-Ausweitung oben – betrifft auch `smartphones`, wo die UVP-Leitplanken sonst
 schon greifen.
+
+## NOCH OFFEN: Katalog-Lücken nach POS-Bestandsabgleich (15.08.2026)
+
+Beim Import der aktuellen POS-Inventarliste in `bestand.json` (94 Handy- + 1 Watch-Position nach
+Filterung) blieben folgende Positionen ohne Treffer in `geraete-katalog.json` – sie stehen jetzt im
+Sortiment, bekommen aber **keinen automatischen Ankaufspreis**, bis der Katalog ergänzt wird:
+
+- **Xiaomi 17T** (256 GB, neu + gebraucht) – Katalog kennt "Xiaomi 17" und "17 Ultra", aber kein "17T".
+  Unsicher ob eigenständiges Modell oder Namensvariante; nach Absprache trotzdem importiert.
+- **Samsung Galaxy Z Flip 7 FE** (128 GB, neu) – neuer als Katalogstand.
+- **Samsung Galaxy A27** (128 GB, neu) – neuer als Katalogstand.
+- **Samsung Galaxy A17 "128 GB (5G)"** – POS führte "Galaxy A17 5G 128GB" (179,99 €) und
+  "Galaxy A17 128GB" (159,99 €) als zwei Zeilen mit unterschiedlichem Preis. Nach Absprache als
+  eigene Variante mit Speicher-Label "128 GB (5G)" angelegt, da der Katalog nur eine pauschale
+  "128 GB"-Variante kennt (keine 4G/5G-Unterscheidung) – kein automatischer Anker für dieses Label.
+- **Apple Watch SE 3 "44mm Cellular"** – POS-Position "Watch SE 3 44MM CEL" (279,99 €), Katalog kennt
+  für "Watch SE 3" nur eine "GPS"-Variante, keine Cellular-Variante.
+
+**Zurückgestellt (nicht importiert):** Samsung Galaxy A16 128GB neu – POS führte zwei widersprüchliche
+Zeilen ("Galaxy A16 128GB", Menge 1 vs. "Galaxy A16 5G 128GB", Menge 4, beide 169,99 €) ohne erkennbaren
+Unterschied außer der Bezeichnung. Bestehender bestand.json-Eintrag (169,99 €, Menge 6) unverändert
+gelassen, bis geklärt ist ob echte 4G/5G-Varianten oder ein doppelt gepflegter POS-Artikel.
+
+**Ankaufspreis-Prüfung:** Für alle oben genannten (bereits im Katalog vorhandenen) betroffenen Geräte
+wurde Konsistenzregel 1 (Ankaufspreis nie über eigenem Verkaufspreis) gegen den neuen `bestand.json`-
+Stand geprüft – keine Verletzung gefunden, `ankauf-preise.json` blieb unverändert.

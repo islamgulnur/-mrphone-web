@@ -1,18 +1,5 @@
 [
   {
-    "id": "2447f167-d0f5-4b40-b380-065116acb6db",
-    "modell": "iPhone 17 Pro Max",
-    "marke": "Apple",
-    "speicher": "512 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1299,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-07-28"
-  },
-  {
     "id": "f2f9d628-1f68-4a15-9f6a-031a169b623b",
     "modell": "Galaxy S26 Ultra",
     "marke": "Samsung",
@@ -39,19 +26,6 @@
     "datum": "2026-07-28"
   },
   {
-    "id": "6939a2cc-cf7b-4738-8900-5cfce8ca2298",
-    "modell": "Galaxy S26 Ultra",
-    "marke": "Samsung",
-    "speicher": "1 TB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1100,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-07-28"
-  },
-  {
     "id": "bcfb7ccb-6ff7-4b27-bc4d-f34429d3ef60",
     "modell": "Galaxy A55",
     "marke": "Samsung",
@@ -66,20 +40,6 @@
     "datum": "2026-08-08"
   },
   {
-    "id": "83f5c4dc-578a-4b4b-bb87-06cb7e66be29",
-    "modell": "Galaxy A36",
-    "marke": "Samsung",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 259.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
     "id": "eac4f9e6-61df-49c8-9123-963822190789",
     "modell": "Galaxy A35",
     "marke": "Samsung",
@@ -87,11 +47,11 @@
     "farbe": "",
     "kategorie": "smartphones",
     "zustand": "neu",
-    "preis": 279.99,
+    "preis": 249.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "d7d72c58-d56e-40bd-a75a-0b9468134373",
@@ -102,10 +62,10 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 229.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "de1eed7c-f880-43b2-8c4c-73c68034c330",
@@ -130,10 +90,10 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 179.99,
-    "menge": 1,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "f0cf7887-ce6b-4fd5-8516-f2519b910d52",
@@ -158,10 +118,10 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 199.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "812f8e91-cf9d-4239-8a5c-b3d21d8791bc",
@@ -228,10 +188,10 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 114.99,
-    "menge": 4,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "244b2793-8b7f-4214-b6fb-7b14e747cd29",
@@ -256,10 +216,10 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 359.99,
-    "menge": 1,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "fa65628e-6676-43e8-ac2a-876e009a1249",
@@ -290,48 +250,6 @@
     "datum": "2026-08-08"
   },
   {
-    "id": "e9277db0-a01d-4071-bfaf-e0628e41e899",
-    "modell": "Galaxy A17",
-    "marke": "Samsung",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 159.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
-    "id": "95d92358-2c28-4603-9ddc-0a6efc727d49",
-    "modell": "Galaxy A07",
-    "marke": "Samsung",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 119.99,
-    "menge": 3,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
-    "id": "d0a98eee-207b-40f1-b6b3-b877243395fa",
-    "modell": "Galaxy A07",
-    "marke": "Samsung",
-    "speicher": "64 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 109.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
     "id": "e2110273-74e3-4bb9-a62e-f89a69abb57e",
     "modell": "iPhone 17 Pro",
     "marke": "Apple",
@@ -340,25 +258,10 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 979.99,
-    "menge": 4,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
-    "id": "b9b60717-716d-49a4-a8e3-74731f21370d",
-    "modell": "Galaxy S22 Ultra",
-    "marke": "Samsung",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 279.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08",
-    "ankaufsAnker": false
+    "datum": "2026-08-15"
   },
   {
     "id": "34370567-0a5a-480f-95d4-17fd4c7314fb",
@@ -369,10 +272,10 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 569.99,
-    "menge": 3,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "701e7c96-e225-4e4d-afd5-f3a18314ca6f",
@@ -397,10 +300,10 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 199.99,
-    "menge": 2,
+    "menge": 4,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "0d1669d6-b6b4-4404-8d00-0cdee593487a",
@@ -425,10 +328,10 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 549.99,
-    "menge": 3,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "0ca6beb4-756e-4f80-a47d-a7ec725ad564",
@@ -459,20 +362,6 @@
     "datum": "2026-08-08"
   },
   {
-    "id": "2d7f4f90-ccbb-4afc-902e-469ed23b0834",
-    "modell": "Galaxy Z Flip 8",
-    "marke": "Samsung",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 899.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
     "id": "74904601-3467-4474-b50a-307071e455cf",
     "modell": "Redmi A5",
     "marke": "Xiaomi",
@@ -481,10 +370,10 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 109.99,
-    "menge": 1,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "d0967d6b-0f5a-492e-a7cf-e2589d500d08",
@@ -495,24 +384,10 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1099.99,
-    "menge": 6,
+    "menge": 7,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
-    "id": "ef70c294-fe62-4592-8066-8d750fe75a71",
-    "modell": "Galaxy S26 Ultra",
-    "marke": "Samsung",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 849.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "27ad5883-bc3d-45f7-a0e6-8b97e528071f",
@@ -523,10 +398,10 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 999.99,
-    "menge": 2,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "866f9af1-5063-4668-9ad4-858c0cdfbbd1",
@@ -565,10 +440,10 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1219.99,
-    "menge": 2,
+    "menge": 5,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "3c9d12be-a196-4fb9-afb0-38dc2f1b5465",
@@ -823,21 +698,6 @@
     "datum": "2026-08-08"
   },
   {
-    "id": "596c3d37-6ac4-46ea-aae9-6702ff009446",
-    "modell": "iPhone 12",
-    "marke": "Apple",
-    "speicher": "64 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 199.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08",
-    "ankaufsAnker": false
-  },
-  {
     "id": "14ed9a87-95d0-4383-8f0e-74c35b8dd321",
     "modell": "iPad 11 (2025)",
     "marke": "Apple",
@@ -874,10 +734,10 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 459.99,
-    "menge": 3,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "0fdfeb31-44f8-496c-8cf8-006852014c8d",
@@ -908,20 +768,6 @@
     "datum": "2026-08-08"
   },
   {
-    "id": "dc7ab804-1e93-4959-94b1-13655487d07c",
-    "modell": "Galaxy S26 Ultra",
-    "marke": "Samsung",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 729.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
     "id": "1bc7a66d-5e41-46c8-ac7b-40418ed491ad",
     "modell": "iPhone 12",
     "marke": "Apple",
@@ -945,20 +791,6 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 99.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
-    "id": "cfdb20cb-d2dd-450a-bc60-bceb3198634c",
-    "modell": "Xperia L1",
-    "marke": "Sony",
-    "speicher": "64 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 49.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -1057,10 +889,10 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 149.99,
-    "menge": 2,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "9fee48ae-552c-4d85-a691-d8c0222c4758",
@@ -1086,20 +918,6 @@
     "zustand": "gebraucht",
     "preis": 189.99,
     "menge": 2,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
-    "id": "3c373f13-2ff5-4284-b5b2-f2d59e16c9a4",
-    "modell": "Galaxy S23 FE",
-    "marke": "Samsung",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 289.99,
-    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-08"
@@ -1147,20 +965,6 @@
     "datum": "2026-08-08"
   },
   {
-    "id": "24c4e0ac-6ef7-45ed-b698-48ab6f531962",
-    "modell": "Note 50",
-    "marke": "Realme",
-    "speicher": "64 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 79.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
     "id": "382b9aa2-b45e-4a3d-b399-f6f0b13e3484",
     "modell": "Pixel 10 Pro",
     "marke": "Google",
@@ -1175,20 +979,6 @@
     "datum": "2026-08-08"
   },
   {
-    "id": "13eb64c2-3a1d-4f1b-ad41-2f2a80f59cd5",
-    "modell": "iPhone 17 Pro Max",
-    "marke": "Apple",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 1049.99,
-    "menge": 2,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
     "id": "39601e2c-7d92-4c5a-bb7e-8f07b886111f",
     "modell": "iPhone 17 Pro Max",
     "marke": "Apple",
@@ -1197,10 +987,10 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 1249.99,
-    "menge": 3,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "d7ae7dc9-2248-4654-a411-d735d36a0834",
@@ -1211,20 +1001,6 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 1599.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
-    "id": "e14de8be-1335-4c25-8517-837a239036aa",
-    "modell": "iPhone 17 Air",
-    "marke": "Apple",
-    "speicher": "512 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 799.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -1273,34 +1049,6 @@
     "datum": "2026-08-08"
   },
   {
-    "id": "b3ee5ae6-2164-4693-8f0e-f7cc92a30651",
-    "modell": "iPhone 15 Pro Max",
-    "marke": "Apple",
-    "speicher": "512 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 699.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
-    "id": "f5e484ec-f860-4db4-89b6-95c2017a07a2",
-    "modell": "iPhone 15",
-    "marke": "Apple",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 499.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
     "id": "ac5f4087-dda8-49c6-b2e1-f5e7de3a4c54",
     "modell": "iPhone 15",
     "marke": "Apple",
@@ -1308,11 +1056,11 @@
     "farbe": "",
     "kategorie": "smartphones",
     "zustand": "gebraucht",
-    "preis": 439.99,
+    "preis": 449.99,
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "46f051f5-025c-4bd5-a0fd-42559e8bd4d7",
@@ -1337,10 +1085,10 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 549.99,
-    "menge": 1,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "f8278caa-9eb4-4713-a031-2e7c75f68400",
@@ -1351,20 +1099,6 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 619.99,
-    "menge": 2,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
-    "id": "d004ba1d-c58e-4034-8822-888ccd993c55",
-    "modell": "iPhone 14 Pro",
-    "marke": "Apple",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 479.99,
     "menge": 2,
     "bild": "",
     "aktiv": true,
@@ -1394,34 +1128,6 @@
     "zustand": "gebraucht",
     "preis": 399.99,
     "menge": 2,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
-    "id": "34b63bd7-065e-44b9-8142-c6897c96f88b",
-    "modell": "iPhone 14 (stark gebraucht)",
-    "marke": "Apple",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 319.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
-    "id": "87a2bcf9-f8d4-4a8e-99e3-dade92ec82d4",
-    "modell": "iPhone 13 Pro",
-    "marke": "Apple",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 399.99,
-    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-08"
@@ -1477,53 +1183,10 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 329.99,
-    "menge": 2,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
-    "id": "392e8b59-a9ec-443a-bad6-725c7cfa571f",
-    "modell": "iPhone 13 mini",
-    "marke": "Apple",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 299.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
-    "id": "1582ea19-472e-432e-936e-99b5c2ca8429",
-    "modell": "iPhone 12 Pro Max",
-    "marke": "Apple",
-    "speicher": "512 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 249.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08",
-    "ankaufsAnker": false
-  },
-  {
-    "id": "dbfce4c5-f33e-4971-9fd4-13ae8ddcd668",
-    "modell": "iPhone 12 Pro",
-    "marke": "Apple",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 279.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "222db4fc-6585-4072-b3f8-5bbe4074e43a",
@@ -1534,10 +1197,10 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 199.99,
-    "menge": 3,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "6406831b-741a-443b-9ba6-cc1f2b76bd87",
@@ -1604,10 +1267,10 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 119.99,
-    "menge": 1,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "71add418-39e6-42d9-b255-e5944c85a25c",
@@ -1618,10 +1281,10 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 189.99,
-    "menge": 1,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "6c42a0a8-d0ba-4c4c-88f8-6890fc43a3c4",
@@ -1652,20 +1315,6 @@
     "datum": "2026-08-08"
   },
   {
-    "id": "ca22867f-d1e5-4b70-bbb7-fe68af8b2411",
-    "modell": "iPhone 16",
-    "marke": "Apple",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 599.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
     "id": "8e77ca43-dc7b-4d9e-b3c5-1002ee9ce537",
     "modell": "iPhone X",
     "marke": "Apple",
@@ -1674,20 +1323,6 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 169.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
-    "id": "9675cce3-1f26-4686-840d-bfa7e9c22c2e",
-    "modell": "iPhone 8",
-    "marke": "Apple",
-    "speicher": "64 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 99.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -1716,24 +1351,10 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 699.99,
-    "menge": 4,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
-  },
-  {
-    "id": "74cf6f7a-fcd7-43ba-9ee3-cec6cd7ca0d2",
-    "modell": "iPhone 16 Pro Max",
-    "marke": "Apple",
-    "speicher": "",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 799.99,
-    "menge": 2,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "86425d37-868b-443c-a396-cec3370908a0",
@@ -1772,10 +1393,10 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 459.99,
-    "menge": 5,
+    "menge": 4,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-08-08"
+    "datum": "2026-08-15"
   },
   {
     "id": "a93e4276-aae9-4e5f-97d9-ac6b096447e1",
@@ -1790,5 +1411,229 @@
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-08"
+  },
+  {
+    "id": "33a76752-4a35-4c4f-b178-deff1d5b0a84",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "iPhone 17",
+    "marke": "Apple",
+    "speicher": "256 GB",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 799.99,
+    "menge": 2
+  },
+  {
+    "id": "9426a9e8-85b7-451f-88c8-b068c96a5624",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "iPhone 17 Pro Max",
+    "marke": "Apple",
+    "speicher": "1 TB",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1599.99,
+    "menge": 1
+  },
+  {
+    "id": "c10864a2-6031-4a8e-9770-b67a06800db9",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "17 Ultra",
+    "marke": "Xiaomi",
+    "speicher": "512 GB",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 829.99,
+    "menge": 1
+  },
+  {
+    "id": "e2196481-5e48-4e01-8229-455e9bee7b91",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "Galaxy S22",
+    "marke": "Samsung",
+    "speicher": "128 GB",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 239.99,
+    "menge": 1
+  },
+  {
+    "id": "218cecd5-d843-4e4b-abcd-bf1ee90aac1d",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "Galaxy Z Fold 7",
+    "marke": "Samsung",
+    "speicher": "256 GB",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1199.99,
+    "menge": 1
+  },
+  {
+    "id": "2709775f-6d8d-4141-a92d-cfd188df99da",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "Galaxy Z Flip 7 FE",
+    "marke": "Samsung",
+    "speicher": "128 GB",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 499.99,
+    "menge": 2
+  },
+  {
+    "id": "f4c5257f-a1b6-462e-a919-568228788349",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "Galaxy A27",
+    "marke": "Samsung",
+    "speicher": "128 GB",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 229.99,
+    "menge": 3
+  },
+  {
+    "id": "3615552a-c919-464f-9c9f-86c7332fbfe9",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "Galaxy S23 Ultra",
+    "marke": "Samsung",
+    "speicher": "256 GB",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 479.99,
+    "menge": 1
+  },
+  {
+    "id": "8c75ffb9-5443-40e3-bf02-1ccba276a143",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "Galaxy S26",
+    "marke": "Samsung",
+    "speicher": "256 GB",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 599.99,
+    "menge": 1
+  },
+  {
+    "id": "b7a311ad-b679-455c-afef-19bfc8c8e36d",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "iPhone 16 Pro Max",
+    "marke": "Apple",
+    "speicher": "256 GB",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 819.99,
+    "menge": 3
+  },
+  {
+    "id": "cd8ac99b-4fb6-4f5a-9549-25421fda83ee",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "iPhone 17 Air",
+    "marke": "Apple",
+    "speicher": "256 GB",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 819.99,
+    "menge": 1
+  },
+  {
+    "id": "6c448364-132c-4a39-b353-24df2a9f47f4",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "iPhone 13 mini",
+    "marke": "Apple",
+    "speicher": "128 GB",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 259.99,
+    "menge": 1
+  },
+  {
+    "id": "fd49d9c2-6443-4bc6-b801-6dac8bda99cb",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "Galaxy A17",
+    "marke": "Samsung",
+    "speicher": "128 GB (5G)",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 179.99,
+    "menge": 1
+  },
+  {
+    "id": "669cb19f-9371-4c3c-bbf3-48ef2cd50ffe",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "17T",
+    "marke": "Xiaomi",
+    "speicher": "256 GB",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 479.99,
+    "menge": 2
+  },
+  {
+    "id": "7f1f5143-2532-45b2-a3f0-d8b19b35f7c4",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "17T",
+    "marke": "Xiaomi",
+    "speicher": "256 GB",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 379.99,
+    "menge": 1
+  },
+  {
+    "id": "d76c9fa8-41f7-4bcb-aa58-5c9667aa822a",
+    "farbe": "",
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-15",
+    "modell": "Watch SE 3",
+    "marke": "Apple",
+    "speicher": "44mm Cellular",
+    "kategorie": "smartwatches",
+    "zustand": "neu",
+    "preis": 279.99,
+    "menge": 1
   }
 ]
