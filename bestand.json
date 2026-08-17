@@ -1470,20 +1470,6 @@
     "menge": 1
   },
   {
-    "id": "fd49d9c2-6443-4bc6-b801-6dac8bda99cb",
-    "farbe": "",
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-15",
-    "modell": "Galaxy A17",
-    "marke": "Samsung",
-    "speicher": "128 GB (5G)",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 179.99,
-    "menge": 1
-  },
-  {
     "id": "669cb19f-9371-4c3c-bbf3-48ef2cd50ffe",
     "farbe": "",
     "bild": "",
@@ -1618,7 +1604,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 179.99,
-    "menge": 2,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-17"
