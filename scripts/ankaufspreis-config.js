@@ -35,6 +35,23 @@ const ABSCHLAG_NEU = 0.08;       // -8%  -> marktwertNeu
 // siehe scripts/update-ankaufspreise.js.
 const TAGESBREMSE_PROZENT = 0.10;
 
+// Zielabstand zum niedrigsten sicher erkannten Ankaufspreis für Neuware. Ein
+// gestaffelter Euro-Abstand verhindert, dass günstige Geräte durch einen festen
+// Prozentwert zu knapp und Premiumgeräte durch einen festen Betrag zu teuer werden.
+function wettbewerbsAbstand(preis) {
+  const wert = Number(preis);
+  if (wert <= 250) return 15;
+  if (wert <= 500) return 25;
+  if (wert <= 800) return 40;
+  return Math.min(60, wert * 0.05);
+}
+
+function wettbewerbsZiel(preis) {
+  const wert = Number(preis);
+  if (!Number.isFinite(wert) || wert <= 0) return null;
+  return Math.max(5, wert - wettbewerbsAbstand(wert));
+}
+
 // Tages-Call-Budget der Marktdaten-API (zwei Abfragen je Gerät+Variante: gebraucht/neu).
 const API_BUDGET_TAEGLICH = 5000;
 const CALLS_JE_VARIANTE = 2;
@@ -46,6 +63,8 @@ module.exports = {
   ABSCHLAG_GEBRAUCHT,
   ABSCHLAG_NEU,
   TAGESBREMSE_PROZENT,
+  wettbewerbsAbstand,
+  wettbewerbsZiel,
   API_BUDGET_TAEGLICH,
   CALLS_JE_VARIANTE,
 };

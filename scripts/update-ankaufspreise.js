@@ -1,6 +1,8 @@
 /**
  * Vollautomatisches, tägliches Ankaufspreis-Update auf Basis echter Marktdaten.
  * Datenquelle: eBay Browse API (Marktplatz EBAY_DE), siehe scripts/lib/search-client.js.
+ * Neuware wird zusätzlich mit einem exakt erkannten öffentlichen Avatel-Tagespreis gedeckelt;
+ * siehe scripts/lib/competitor-client.js. Unklare oder fehlende Treffer ändern nichts.
  * Ermittelt zwei echte Marktanker je Gerät+Variante (gebraucht/neu) und wendet darauf die
  * Zustands-Prozentsätze aus pricing-config.js an (ANKAUF_PROZENTSAETZE_APPLE / _REST,
  * prozentsaetzeFuerMarke() - je nach Marke, EINZIGE Quelle für diese Prozentsätze).
@@ -58,6 +60,7 @@ const { execFileSync } = require("child_process");
 const pricing = require("../pricing-config");
 const config = require("./ankaufspreis-config");
 const searchClient = require("./lib/search-client");
+const competitorClient = require("./lib/competitor-client");
 const { backupIfChanged } = require("./backup-data");
 
 const ROOT = path.join(__dirname, "..");
@@ -95,7 +98,10 @@ const ANKAUF_KOMMENTAR =
   "Alles zusätzlich global verschiebbar über pricing-niveau.json. preisQuelle \"manuell\" wird " +
   "nie automatisch überschrieben. Geräte, die noch keinen echten Marktlauf hatten (marktwertQuelle " +
   "\"geschaetzt\" im Katalog), tragen weiterhin die ältere Schätzformel aus pricing-config.js, bis " +
-  "sie an der Reihe sind (siehe Rotation, scripts/rotation-state.json).";
+  "sie an der Reihe sind (siehe Rotation, scripts/rotation-state.json). Ein exakt erkannter " +
+  "öffentlicher Avatel-Neupreis ersetzt bei der Neuware-Berechnung den groben UVP-Anker und " +
+  "wird mit gestaffeltem Zielabstand verwendet; Marktwert und eigener Verkaufspreis bleiben " +
+  "zusätzliche Obergrenzen. Unklare Treffer werden verworfen.";
 
 function parseArgs(argv) {
   const dryRun = argv.includes("--dry-run");
@@ -259,7 +265,7 @@ function wendeKonsistenzregel1An({ stufenFinal, geraet, variante, bestandListe }
 // Hauptlogik je Variante - gibt { variante-Objekt für ankauf-preise.json,
 // protokollEintrag } zurück.
 // ---------------------------------------------------------------------------
-async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontext, budgetZaehler, niveauFaktor, bestandListe, log, debugTreffer }) {
+async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontext, budgetZaehler, niveauFaktor, bestandListe, log, debugTreffer, wettbewerbAktiv }) {
   const basis = { marke: geraet.marke, modell: geraet.modell, variante: variante.bezeichnung };
 
   if (altVariante && altVariante.preisQuelle === "manuell") {
@@ -309,6 +315,24 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     };
   }
 
+  // Avatel ist als lokaler Frankfurter Wettbewerber die einzige der gewünschten
+  // Quellen, die einen Neuware-Preis öffentlich und eindeutig auf der Produktseite
+  // ausweist. Unklare Suchtreffer oder unplausible Werte werden nicht verwendet.
+  const wettbewerb = wettbewerbAktiv
+    ? await competitorClient.holeAvatelNeu({ geraet, variante })
+    : { quelle: "avatel", status: "deaktiviert", preis: null };
+  let wettbewerbsPreis = wettbewerb.status === "ok" ? Number(wettbewerb.preis) : null;
+  if (wettbewerbsPreis != null) {
+    const minimum = uvpVariante > 0 ? uvpVariante * 0.20 : 5;
+    const maximum = uvpVariante > 0 ? uvpVariante * 1.10 : Infinity;
+    if (wettbewerbsPreis < minimum || wettbewerbsPreis > maximum) {
+      wettbewerb.status = "unplausibel";
+      wettbewerb.preis = null;
+      wettbewerbsPreis = null;
+    }
+  }
+  const wettbewerbsZiel = config.wettbewerbsZiel(wettbewerbsPreis);
+
   // Regel 8 (siehe Kommentarblock oben): "neuVersiegelt" umgeht Tagesbremse komplett - eigene,
   // strukturell sichere Formel statt Prozentsatz vom Marktwert. Bewusst OHNE Tagesbremse: die
   // Formel selbst ist bereits hart gegen eigenen Verkaufspreis/marktwertNeu gedeckelt, ein
@@ -332,6 +356,7 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
         uvpVariante,
         marke: geraet.marke,
         niveauFaktor,
+        wettbewerbsZiel,
       })
     : pricing.berechneNeuVersiegelt({
         eigenerVK: eigenerVKNeu,
@@ -343,6 +368,7 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
         marktAnkerNeuUrsprung: "echt",
         uvpVariante,
         niveauFaktor,
+        wettbewerbsZiel,
       });
 
   const stufenRoh = berechneStufen({ marktwertGebraucht: gebraucht.marktwert, niveauFaktor, marke: geraet.marke });
@@ -362,6 +388,22 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     stufenRoh: stufenFuerBremse, altPreise: altVariante && altVariante.preise, istErsterLauf,
   });
   stufenOhneBremse.forEach((s) => { stufenFinal[s] = stufenRoh[s]; });
+
+  // Sichere Senkungen (insbesondere wenn wir über dem Wettbewerb liegen) gelten
+  // sofort. Erhöhungen erfolgen höchstens in 10%-Schritten, damit ein einzelner
+  // fehlerhafter Tageswert keine großen Sprünge verursacht.
+  if (!istErsterLauf && altVariante && altVariante.preise) {
+    stufenOhneBremse.forEach((stufe) => {
+      const alt = Number(altVariante.preise[stufe]);
+      const neuWert = Number(stufenFinal[stufe]);
+      if (!Number.isFinite(alt) || alt <= 0 || !Number.isFinite(neuWert) || neuWert <= alt) return;
+      const maximum = pricing.rundeAbAuf5(alt * (1 + config.TAGESBREMSE_PROZENT));
+      if (neuWert > maximum) {
+        stufenFinal[stufe] = maximum;
+        bremseGruende.push(stufe + ": Erhöhungsbremse (+" + Math.round(config.TAGESBREMSE_PROZENT * 100) + "%) gekappt");
+      }
+    });
+  }
 
   const konsistenzGruende = wendeKonsistenzregel1An({ stufenFinal, geraet, variante, bestandListe });
 
@@ -390,6 +432,9 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     marktwertNeuVerworfen,
     uvpVariante,
     eigenerVKNeu,
+    wettbewerb,
+    wettbewerbsPreis,
+    wettbewerbsZiel,
     stufenBerechnet: stufenRoh,
     stufen: stufenFinal,
     altStufen: altVariante && altVariante.preise,
@@ -432,6 +477,12 @@ function formatiereRechnung(r) {
     (altVK == null ? "– (kein bestand.json-Eintrag)" : rund(altVK) + " €") +
     " → final " + (r.stufen.neuVersiegelt == null ? "– (kein Anker vorhanden)" : rund(r.stufen.neuVersiegelt) + " €") +
     (r.altStufen && r.altStufen.neuVersiegelt != null ? " (bisher " + rund(r.altStufen.neuVersiegelt) + " €)" : "")
+  );
+  zeilen.push(
+    "- Wettbewerb Neu: Avatel " +
+    (r.wettbewerbsPreis == null
+      ? "– (" + ((r.wettbewerb && r.wettbewerb.status) || "nicht verfügbar") + ")"
+      : rund(r.wettbewerbsPreis) + " € → Ziel höchstens " + rund(r.wettbewerbsZiel) + " €")
   );
   zeilen.push("- Übrige Stufen (berechnet aus Marktanker × Zustands-Prozentsatz → final nach Tagesbremse/Konsistenz):");
   pricing.ZUSTANDS_REIHENFOLGE.filter((s) => s !== "neuVersiegelt").forEach((stufe) => {
@@ -582,6 +633,7 @@ async function main() {
         geraet, variante, altVariante, zugangskontext, budgetZaehler, niveauFaktor, bestandListe,
         log: (r) => { if (dryRun) console.log("\n" + formatiereRechnung(r)); },
         debugTreffer: debugTrifftZu,
+        wettbewerbAktiv: !mockModus,
       });
       neueVarianten.push(ergebnis.variante);
       protokolle.push(ergebnis.protokoll);
@@ -657,10 +709,12 @@ async function main() {
   const aktualisiertAnzahl = protokolle.filter((p) => p.typ === "aktualisiert").length;
   const uebersprungenAnzahl = protokolle.filter((p) => p.typ === "uebersprungen").length;
   const pruefenAnzahl = protokolle.filter((p) => p.typ === "pruefen").length;
+  const wettbewerbTrefferAnzahl = protokolle.filter((p) => p.rechnung && p.rechnung.wettbewerbsPreis != null).length;
 
   console.log(
     "\nZusammenfassung: " + aktualisiertAnzahl + " Geräte aktualisiert, " +
     uebersprungenAnzahl + " übersprungen, " + pruefenAnzahl + " PRÜFEN-Fälle." +
+    " Avatel-Treffer: " + wettbewerbTrefferAnzahl + "." +
     (speicherKonsistenzProtokoll.length
       ? " " + speicherKonsistenzProtokoll.length + " Speicher-Konsistenzkappung(en) (kleinere Variante > größere)."
       : "")
@@ -707,6 +761,7 @@ async function main() {
   fs.writeFileSync(ROTATION_STATE_FILE, JSON.stringify({ naechsterIndex: neuerRotationIndex, letzterLauf: datum }, null, 2) + "\n", "utf8");
   fs.writeFileSync(META_FILE, JSON.stringify({
     datum, aktualisiert: aktualisiertAnzahl, uebersprungen: uebersprungenAnzahl, pruefen: pruefenAnzahl,
+    wettbewerbTreffer: wettbewerbTrefferAnzahl,
   }, null, 2) + "\n", "utf8");
 
   console.log("\nFertig. validate-data.js grün, Dateien geschrieben.");

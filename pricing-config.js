@@ -166,9 +166,10 @@ function pruefeMarktwertNeuPlausibilitaet(marktwertNeu, uvp) {
     : null;
 }
 
-function berechneNeuVersiegelt({ eigenerVK, marktAnkerNeu, marktAnkerNeuUrsprung, uvpVariante, niveauFaktor }) {
+function berechneNeuVersiegelt({ eigenerVK, marktAnkerNeu, marktAnkerNeuUrsprung, uvpVariante, niveauFaktor, wettbewerbsZiel }) {
   const faktor = Number.isFinite(niveauFaktor) ? niveauFaktor : 1;
   const kandidaten = [];
+  const hatWettbewerb = Number.isFinite(Number(wettbewerbsZiel)) && Number(wettbewerbsZiel) > 0;
   if (eigenerVK != null && Number.isFinite(Number(eigenerVK))) {
     kandidaten.push(Number(eigenerVK) * NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG * faktor);
   }
@@ -183,10 +184,12 @@ function berechneNeuVersiegelt({ eigenerVK, marktAnkerNeu, marktAnkerNeuUrsprung
         anker = Math.min(anker, Number(uvpVariante) * NEU_VERSIEGELT_GESCHAETZT_UVP_DECKEL);
       }
     }
-    const basis = anker * NEU_VERSIEGELT_MARKTANKER_PROZENT * faktor;
+    const basisProzent = hatWettbewerb ? NEU_VERSIEGELT_MARKTANKER_DECKEL : NEU_VERSIEGELT_MARKTANKER_PROZENT;
+    const basis = anker * basisProzent * faktor;
     const deckel = anker * NEU_VERSIEGELT_MARKTANKER_DECKEL * faktor;
     kandidaten.push(Math.min(basis, deckel));
   }
+  if (hatWettbewerb) kandidaten.push(Number(wettbewerbsZiel));
   if (!kandidaten.length) return null;
   return rundeAbAuf5(Math.min(...kandidaten));
 }
@@ -242,10 +245,11 @@ function istUvpBasierteKategorie(kategorie) {
   return String(kategorie || "").trim().toLowerCase() === "smartphones";
 }
 
-// Neuversiegelt-Preis für die UVP-basierte Formel: niedrigerer von bis zu 4 Kandidaten (gleiches
+// Neuversiegelt-Preis für die UVP-basierte Formel: niedrigster sicherer Kandidat (gleiches
 // "immer der niedrigere Anker gewinnt"-Prinzip wie berechneNeuVersiegelt oben).
 //   1. eigener VK × 0,88 (unverändert)
-//   2. UVP-Variante × Marken-Prozent (siehe ANKAUF_UVP_PROZENT_NEU) - immer verfügbar
+//   2. Wettbewerbspreis minus gestaffeltem Abstand, wenn exakt erkannt; andernfalls als
+//      Fallback UVP-Variante × Marken-Prozent (siehe ANKAUF_UVP_PROZENT_NEU)
 //   3. echter eBay-Marktwert (NUR marktAnkerNeuUrsprung "echt") × 0,90, vorher auf UVP gedeckelt
 //      (Leitplanke 1, wie bei der alten Formel)
 //   4. Sicherheitsnetz NUR ohne echten eBay-Lauf (ergänzt 06.08.2026, siehe OFFENE-PUNKTE.md):
@@ -259,13 +263,16 @@ function istUvpBasierteKategorie(kategorie) {
 //      für diese Variante) fehlte bislang jeder Deckel - dort greift jetzt der alte 85%-UVP-Deckel
 //      (Leitplanke 3 in berechneNeuVersiegelt) als Sicherheitsnetz (gefunden beim Testlauf: 51 von
 //      844 Varianten mit Konsistenzregel-1-Verstoß, u.a. iPhone 13 mini 512GB).
-function berechneNeuVersiegeltUvpBasiert({ eigenerVK, marktAnkerNeuEcht, marktAnkerNeu, marktAnkerNeuUrsprung, uvpVariante, marke, niveauFaktor }) {
+function berechneNeuVersiegeltUvpBasiert({ eigenerVK, marktAnkerNeuEcht, marktAnkerNeu, marktAnkerNeuUrsprung, uvpVariante, marke, niveauFaktor, wettbewerbsZiel }) {
   const faktor = Number.isFinite(niveauFaktor) ? niveauFaktor : 1;
   const kandidaten = [];
+  const hatWettbewerb = Number.isFinite(Number(wettbewerbsZiel)) && Number(wettbewerbsZiel) > 0;
   if (eigenerVK != null && Number.isFinite(Number(eigenerVK))) {
     kandidaten.push(Number(eigenerVK) * NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG * faktor);
   }
-  if (Number.isFinite(uvpVariante) && uvpVariante > 0) {
+  // Der feste UVP-Prozentsatz ist nur noch ein Fallback. Sobald ein exakt
+  // erkannter Tagespreis vorliegt, soll er Premiumgeräte nicht künstlich tief halten.
+  if (!hatWettbewerb && Number.isFinite(uvpVariante) && uvpVariante > 0) {
     const prozent = String(marke || "").trim().toLowerCase() === "apple"
       ? ANKAUF_UVP_PROZENT_NEU.apple
       : ANKAUF_UVP_PROZENT_NEU.rest;
@@ -278,9 +285,10 @@ function berechneNeuVersiegeltUvpBasiert({ eigenerVK, marktAnkerNeuEcht, marktAn
     }
     kandidaten.push(anker * NEU_VERSIEGELT_EBAY_KORREKTIV_PROZENT * faktor);
   }
+  if (hatWettbewerb) kandidaten.push(Number(wettbewerbsZiel));
   if (marktAnkerNeuUrsprung !== "echt") {
     const altesSicherheitsnetz = berechneNeuVersiegelt({
-      eigenerVK, marktAnkerNeu, marktAnkerNeuUrsprung, uvpVariante, niveauFaktor,
+      eigenerVK, marktAnkerNeu, marktAnkerNeuUrsprung, uvpVariante, niveauFaktor, wettbewerbsZiel,
     });
     if (altesSicherheitsnetz != null) kandidaten.push(altesSicherheitsnetz);
   }

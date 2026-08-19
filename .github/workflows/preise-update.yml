@@ -43,6 +43,9 @@ jobs:
       - name: Abhängigkeiten installieren
         run: npm install
 
+      - name: Preisautomatik testen
+        run: npm run test:preise
+
       - name: Ankaufspreise aktualisieren
         env:
           EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
@@ -75,3 +78,13 @@ jobs:
           git add geraete-katalog.json ankauf-preise.json ankauf/ preisupdate-meta.json scripts/rotation-state.json logs/
           git commit -m "Auto-Preisupdate ${DATUM} (${AKTUALISIERT} Geräte aktualisiert, ${UEBERSPRUNGEN} übersprungen, ${PRUEFEN} Prüffälle)"
           git push
+
+      - name: Lauf zusammenfassen
+        if: ${{ always() }}
+        run: |
+          echo "## Automatische Ankaufspreise" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f preisupdate-meta.json ]; then
+            node -e "const m=require('./preisupdate-meta.json'); console.log('| Datum | Aktualisiert | Übersprungen | Sicherheitsfälle | Avatel-Treffer |\n|---|---:|---:|---:|---:|\n| '+m.datum+' | '+m.aktualisiert+' | '+m.uebersprungen+' | '+m.pruefen+' | '+(m.wettbewerbTreffer||0)+' |')" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Der Lauf wurde vor der Preisberechnung beendet. Es wurden keine Preise veröffentlicht." >> "$GITHUB_STEP_SUMMARY"
+          fi
