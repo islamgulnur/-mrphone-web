@@ -1,6 +1,6 @@
 [
   {
-    "_kommentar": "AUTO-PREISE aus echten eBay-Marktdaten (Browse API, siehe scripts/lib/search-client.js) - siehe scripts/update-ankaufspreise.js + scripts/ankaufspreis-config.js. Je Gerät+Variante zwei Marktanker (gebraucht/neu), Ausreißerfilter + Median + Abschlag. defekt IMMER als fester, markenabhängiger Prozentsatz vom Gebraucht-Marktanker (pricing-config.js: ANKAUF_PROZENTSAETZE_APPLE / _REST, einzige Quelle dieser Prozentsätze). Kategorie \"smartphones\" (seit 06.08.2026, siehe OFFENE-PUNKTE.md): neuVersiegelt = niedrigerer von eigenem Verkaufspreis × 0,88 / UVP × markenabhängigem Prozentsatz (Apple 71%, Rest 50%, kalibriert auf 5 Avatel-Referenzpreise) / echtem eBay-Marktwert × 0,90 (Korrektiv gegen Marktverfall, gedeckelt auf 100% UVP) - wieNeu/sehrGut/gut leiten sich als Prozentsatz vom so ermittelten neuVersiegelt-Wert ab (ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_APPLE/_REST). Alle ANDEREN Kategorien: neuVersiegelt weiterhin die alte, rein eBay-basierte Formel (pricing.berechneNeuVersiegelt(), seit 28.07.2026) - niedrigerer Wert von eigenem Verkaufspreis × 0,88 ODER marktwertNeu × 0,82 (gedeckelt auf 90% von marktwertNeu), wieNeu/sehrGut/gut als Prozentsatz vom Gebraucht-Marktanker. Zusätzlich (alle Marken/Kategorien, keine Ausnahme): marktwertNeu > 115% UVP gilt als kontaminiert und wird verworfen, verbleibender Anker zusätzlich hart auf 100% UVP gedeckelt. Alles zusätzlich global verschiebbar über pricing-niveau.json. preisQuelle \"manuell\" wird nie automatisch überschrieben. Geräte, die noch keinen echten Marktlauf hatten (marktwertQuelle \"geschaetzt\" im Katalog), tragen weiterhin die ältere Schätzformel aus pricing-config.js, bis sie an der Reihe sind (siehe Rotation, scripts/rotation-state.json)."
+    "_kommentar": "AUTO-PREISE aus echten eBay-Marktdaten (Browse API, siehe scripts/lib/search-client.js) - siehe scripts/update-ankaufspreise.js + scripts/ankaufspreis-config.js. Je Gerät+Variante zwei Marktanker (gebraucht/neu), Ausreißerfilter + Median + Abschlag. defekt IMMER als fester, markenabhängiger Prozentsatz vom Gebraucht-Marktanker (pricing-config.js: ANKAUF_PROZENTSAETZE_APPLE / _REST, einzige Quelle dieser Prozentsätze). Kategorie \"smartphones\" (seit 06.08.2026, siehe OFFENE-PUNKTE.md): neuVersiegelt = niedrigerer von eigenem Verkaufspreis × 0,88 / UVP × markenabhängigem Prozentsatz (Apple 71%, Rest 50%, kalibriert auf 5 Avatel-Referenzpreise) / echtem eBay-Marktwert × 0,90 (Korrektiv gegen Marktverfall, gedeckelt auf 100% UVP) - wieNeu/sehrGut/gut leiten sich als Prozentsatz vom so ermittelten neuVersiegelt-Wert ab (ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_APPLE/_REST). Alle ANDEREN Kategorien: neuVersiegelt weiterhin die alte, rein eBay-basierte Formel (pricing.berechneNeuVersiegelt(), seit 28.07.2026) - niedrigerer Wert von eigenem Verkaufspreis × 0,88 ODER marktwertNeu × 0,82 (gedeckelt auf 90% von marktwertNeu), wieNeu/sehrGut/gut als Prozentsatz vom Gebraucht-Marktanker. Zusätzlich (alle Marken/Kategorien, keine Ausnahme): marktwertNeu > 115% UVP gilt als kontaminiert und wird verworfen, verbleibender Anker zusätzlich hart auf 100% UVP gedeckelt. Alles zusätzlich global verschiebbar über pricing-niveau.json. preisQuelle \"manuell\" wird nie automatisch überschrieben. Geräte, die noch keinen echten Marktlauf hatten (marktwertQuelle \"geschaetzt\" im Katalog), tragen weiterhin die ältere Schätzformel aus pricing-config.js, bis sie an der Reihe sind (siehe Rotation, scripts/rotation-state.json). Ein exakt erkannter öffentlicher Avatel-Neupreis ersetzt bei der Neuware-Berechnung den groben UVP-Anker und wird mit gestaffeltem Zielabstand verwendet; Marktwert und eigener Verkaufspreis bleiben zusätzliche Obergrenzen. Unklare Treffer werden verworfen."
   },
   {
     "id": "kat-0001",
@@ -9089,11 +9089,11 @@
         "bezeichnung": "GPS",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 225,
-          "wieNeu": 170,
-          "sehrGut": 155,
-          "gut": 140,
-          "defekt": 50
+          "neuVersiegelt": 235,
+          "wieNeu": 155,
+          "sehrGut": 140,
+          "gut": 125,
+          "defekt": 45
         },
         "preisQuelle": "auto"
       }
@@ -9112,10 +9112,10 @@
         "bezeichnung": "GPS + Cellular",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 335,
-          "wieNeu": 265,
-          "sehrGut": 240,
-          "gut": 215,
+          "neuVersiegelt": 345,
+          "wieNeu": 260,
+          "sehrGut": 235,
+          "gut": 210,
           "defekt": 75
         },
         "preisQuelle": "auto"
@@ -9158,7 +9158,7 @@
         "bezeichnung": "GPS + Cellular",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 405,
+          "neuVersiegelt": 400,
           "wieNeu": 330,
           "sehrGut": 300,
           "gut": 270,
@@ -9181,11 +9181,11 @@
         "bezeichnung": "GPS",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 300,
-          "wieNeu": 270,
-          "sehrGut": 245,
-          "gut": 220,
-          "defekt": 75
+          "neuVersiegelt": 320,
+          "wieNeu": 295,
+          "sehrGut": 270,
+          "gut": 240,
+          "defekt": 85
         },
         "preisQuelle": "auto"
       }
@@ -9204,10 +9204,10 @@
         "bezeichnung": "GPS + Cellular",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 510,
-          "wieNeu": 295,
-          "sehrGut": 265,
-          "gut": 240,
+          "neuVersiegelt": 495,
+          "wieNeu": 305,
+          "sehrGut": 280,
+          "gut": 250,
           "defekt": 85
         },
         "preisQuelle": "auto"
@@ -9343,10 +9343,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 200,
-          "wieNeu": 130,
-          "sehrGut": 115,
-          "gut": 105,
-          "defekt": 35
+          "wieNeu": 145,
+          "sehrGut": 125,
+          "gut": 115,
+          "defekt": 40
         },
         "preisQuelle": "auto"
       }
@@ -9380,7 +9380,7 @@
           "neuVersiegelt": null,
           "wieNeu": 45,
           "sehrGut": 40,
-          "gut": 30,
+          "gut": 35,
           "defekt": 10
         },
         "preisQuelle": "auto"
@@ -9401,9 +9401,9 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": null,
-          "wieNeu": 60,
-          "sehrGut": 55,
-          "gut": 45,
+          "wieNeu": 55,
+          "sehrGut": 50,
+          "gut": 40,
           "defekt": 15
         },
         "preisQuelle": "auto"
@@ -9460,7 +9460,7 @@
         "preise": {
           "neuVersiegelt": null,
           "wieNeu": 80,
-          "sehrGut": 75,
+          "sehrGut": 70,
           "gut": 60,
           "defekt": 20
         },
@@ -9472,7 +9472,7 @@
         "preise": {
           "neuVersiegelt": null,
           "wieNeu": 80,
-          "sehrGut": 75,
+          "sehrGut": 70,
           "gut": 60,
           "defekt": 20
         },
@@ -9494,7 +9494,7 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": null,
-          "wieNeu": 75,
+          "wieNeu": 80,
           "sehrGut": 70,
           "gut": 55,
           "defekt": 20
@@ -9506,9 +9506,9 @@
         "uvpDelta": 4,
         "preise": {
           "neuVersiegelt": null,
-          "wieNeu": 90,
-          "sehrGut": 85,
-          "gut": 65,
+          "wieNeu": 85,
+          "sehrGut": 75,
+          "gut": 60,
           "defekt": 25
         },
         "preisQuelle": "auto"
@@ -9530,8 +9530,8 @@
         "preise": {
           "neuVersiegelt": null,
           "wieNeu": 90,
-          "sehrGut": 80,
-          "gut": 65,
+          "sehrGut": 85,
+          "gut": 70,
           "defekt": 25
         },
         "preisQuelle": "auto"
@@ -9542,8 +9542,8 @@
         "preise": {
           "neuVersiegelt": null,
           "wieNeu": 90,
-          "sehrGut": 80,
-          "gut": 65,
+          "sehrGut": 85,
+          "gut": 70,
           "defekt": 25
         },
         "preisQuelle": "auto"
@@ -9588,7 +9588,7 @@
         "preise": {
           "neuVersiegelt": null,
           "wieNeu": 130,
-          "sehrGut": 115,
+          "sehrGut": 120,
           "gut": 95,
           "defekt": 35
         },
@@ -9599,10 +9599,10 @@
         "uvpDelta": 4,
         "preise": {
           "neuVersiegelt": null,
-          "wieNeu": 160,
-          "sehrGut": 140,
-          "gut": 120,
-          "defekt": 45
+          "wieNeu": 145,
+          "sehrGut": 130,
+          "gut": 110,
+          "defekt": 40
         },
         "preisQuelle": "auto"
       }
@@ -9898,10 +9898,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 675,
-          "wieNeu": 635,
-          "sehrGut": 575,
-          "gut": 520,
-          "defekt": 180
+          "wieNeu": 620,
+          "sehrGut": 565,
+          "gut": 505,
+          "defekt": 175
         },
         "preisQuelle": "auto"
       },
@@ -9922,10 +9922,10 @@
         "uvpDelta": 450,
         "preise": {
           "neuVersiegelt": null,
-          "wieNeu": 865,
-          "sehrGut": 785,
-          "gut": 710,
-          "defekt": 245
+          "wieNeu": 815,
+          "sehrGut": 740,
+          "gut": 665,
+          "defekt": 230
         },
         "preisQuelle": "auto"
       }
