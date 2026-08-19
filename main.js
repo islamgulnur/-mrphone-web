@@ -193,7 +193,11 @@
         badge.classList.remove("is-open", "is-closing-soon", "is-closed");
         badge.classList.add("is-" + status.state);
         var textEl = badge.querySelector(".status-text");
-        if (textEl) textEl.textContent = status.text;
+        if (textEl) {
+          var istMobil = badge.classList.contains("status-badge--mobile");
+          textEl.textContent = istMobil ? status.text.replace("öffnet ", "") : status.text;
+          if (istMobil) badge.title = status.text;
+        }
       });
     }
 

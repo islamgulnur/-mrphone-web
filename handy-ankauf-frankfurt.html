@@ -9,6 +9,7 @@
 <link rel="alternate" hreflang="de" href="https://www.mr-phone-frankfurt.de/handy-ankauf-frankfurt.html">
 <link rel="alternate" hreflang="en" href="https://www.mr-phone-frankfurt.de/en/handy-ankauf-frankfurt.html">
 <link rel="alternate" hreflang="x-default" href="https://www.mr-phone-frankfurt.de/handy-ankauf-frankfurt.html">
+<link rel="icon" href="images/logo.png" type="image/png">
 
 <meta property="og:type" content="business.business">
 <meta property="og:site_name" content="Mr. Phone">
@@ -142,7 +143,7 @@
       "name": "Muss mein Gerät noch voll funktionsfähig sein?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nicht zwingend. Im Ankaufsrechner können Sie auch die Zustandsstufe „Defekt" wählen – auch beschädigte oder eingeschränkt funktionsfähige Geräte kaufen wir häufig an, allerdings zu einem entsprechend reduzierten Preis."
+        "text": "Nicht zwingend. Im Ankaufsrechner können Sie auch die Zustandsstufe Defekt wählen – auch beschädigte oder eingeschränkt funktionsfähige Geräte kaufen wir häufig an, allerdings zu einem entsprechend reduzierten Preis."
       }
     },
     {
@@ -157,7 +158,7 @@
 }
 </script>
 </head>
-<body>
+<body class="ankauf-page">
 <a href="#main" class="skip-link">Zum Inhalt springen</a>
 
 <header class="site-header">
@@ -253,6 +254,8 @@
             </button>
           </div>
 
+          <p class="rechner-auswahl" id="rechner-auswahl" hidden aria-live="polite"></p>
+
           <!-- Schritt 1: Kategorie -->
           <div class="rechner-step" data-step="1">
             <h2>Was möchten Sie verkaufen?</h2>
@@ -270,6 +273,7 @@
             </label>
             <p class="empty-hint" id="rechner-modelle-lade" hidden>Modelle werden geladen …</p>
             <div class="rechner-modell-liste" id="rechner-modelle"></div>
+            <p class="rechner-listen-hinweis" id="rechner-listen-hinweis" hidden></p>
             <p class="empty-hint" id="rechner-modelle-leer" hidden>Für diese Auswahl haben wir gerade kein Modell hinterlegt. Nutzen Sie gerne die individuelle Preisanfrage unten.</p>
             <div class="empty-hint" id="rechner-modelle-fehler" hidden>
               <p>Diese Kategorie konnte gerade nicht geladen werden.</p>
@@ -295,8 +299,10 @@
           <!-- Ergebnis -->
           <div class="rechner-ergebnis" data-step="ergebnis" hidden>
             <button type="button" class="rechner-back" data-back>← Zurück</button>
+            <h2 class="visually-hidden">Ihr Ankaufspreis</h2>
             <p class="rechner-ergebnis-label" id="rechner-ergebnis-label">Wir zahlen bis zu</p>
-            <p class="rechner-ergebnis-preis" id="rechner-preis">0 €</p>
+            <p class="rechner-ergebnis-auswahl" id="rechner-ergebnis-auswahl"></p>
+            <p class="rechner-ergebnis-preis" id="rechner-preis" role="status" aria-live="polite" aria-atomic="true">0 €</p>
             <p class="rechner-ergebnis-sub" id="rechner-ergebnis-sub">bar bei Abgabe im Laden auf der Zeil</p>
             <a href="https://wa.me/496995632281" id="rechner-whatsapp-btn" class="btn btn-primary" target="_blank" rel="noopener">Preis jetzt 24h sichern</a>
             <p class="rechner-hinweis" id="rechner-ergebnis-hinweis">Ihr Preis gilt 24 Stunden ab Anfrage. Zeigen Sie die WhatsApp-Anfrage einfach bei uns im Laden vor – Barauszahlung sofort.</p>

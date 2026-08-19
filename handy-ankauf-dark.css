@@ -35,6 +35,9 @@
 
 .rechner-zustand-btn { border-color: var(--hairline-strong); background: var(--glass); color: var(--paper); }
 .rechner-zustand-btn span { color: var(--steel); }
+.rechner-auswahl,
+.rechner-ergebnis-auswahl,
+.rechner-listen-hinweis { color: var(--steel); }
 
 .rechner-ergebnis-label { color: var(--steel); }
 .rechner-ergebnis-preis { color: var(--signal); }

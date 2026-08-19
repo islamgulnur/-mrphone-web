@@ -35,44 +35,44 @@
 
   var ZUSTAENDE = LANG === "en" ? [
     {
-      id: "neuVersiegelt", titel: "New & sealed", beschreibung: "Original packaging, sealed.",
+      id: "neuVersiegelt", titel: "New & sealed", beschreibung: "Original packaging, factory sealed.", bild: "images/ankauf-zustand-neu-versiegelt.jpg",
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a4 4 0 0 1 8 0v2"></path></svg>',
     },
     {
-      id: "wieNeu", titel: "Like new", beschreibung: "No signs of use, technically flawless.",
+      id: "wieNeu", titel: "Like new", beschreibung: "No scratches on screen or housing; technically flawless.", bild: "images/ankauf-zustand-wie-neu.jpg",
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.6 6.6L21 10l-5.4 3.9L17 21l-5-3.9L7 21l1.4-7.1L3 10l6.4-1.4z"></path></svg>',
     },
     {
-      id: "sehrGut", titel: "Very good", beschreibung: "Minimal signs of use, technically flawless.",
+      id: "sehrGut", titel: "Very good", beschreibung: "Only tiny hairline marks; screen and functions flawless.", bild: "images/ankauf-zustand-sehr-gut.jpg",
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>',
     },
     {
-      id: "gut", titel: "Good", beschreibung: "Visible signs of use, fully functional.",
+      id: "gut", titel: "Good", beschreibung: "Visible scratches or worn edges; fully functional.", bild: "images/ankauf-zustand-gut.jpg",
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9 12l2 2 4-4"></path></svg>',
     },
     {
-      id: "defekt", titel: "Defective", beschreibung: "Damaged or of limited functionality.",
+      id: "defekt", titel: "Defective", beschreibung: "For example cracked screen, camera fault or limited functionality.", bild: "images/ankauf-zustand-defekt.jpg",
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01"></path><path d="M10.3 3.9L2.5 18a1.5 1.5 0 0 0 1.3 2.2h16.4a1.5 1.5 0 0 0 1.3-2.2L13.7 3.9a1.5 1.5 0 0 0-2.6 0z"></path></svg>',
     },
   ] : [
     {
-      id: "neuVersiegelt", titel: "Neu & versiegelt", beschreibung: "Originalverpackt, versiegelt (OVP).",
+      id: "neuVersiegelt", titel: "Neu & versiegelt", beschreibung: "Originalverpackt und ab Werk versiegelt (OVP).", bild: "images/ankauf-zustand-neu-versiegelt.jpg",
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a4 4 0 0 1 8 0v2"></path></svg>',
     },
     {
-      id: "wieNeu", titel: "Wie neu", beschreibung: "Keine Gebrauchsspuren, technisch einwandfrei.",
+      id: "wieNeu", titel: "Wie neu", beschreibung: "Keine Kratzer an Display oder Gehäuse; technisch einwandfrei.", bild: "images/ankauf-zustand-wie-neu.jpg",
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.6 6.6L21 10l-5.4 3.9L17 21l-5-3.9L7 21l1.4-7.1L3 10l6.4-1.4z"></path></svg>',
     },
     {
-      id: "sehrGut", titel: "Sehr gut", beschreibung: "Minimale Spuren, technisch einwandfrei.",
+      id: "sehrGut", titel: "Sehr gut", beschreibung: "Nur feinste Spuren; Display und Funktionen einwandfrei.", bild: "images/ankauf-zustand-sehr-gut.jpg",
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>',
     },
     {
-      id: "gut", titel: "Gut", beschreibung: "Sichtbare Gebrauchsspuren, voll funktionsfähig.",
+      id: "gut", titel: "Gut", beschreibung: "Sichtbare Kratzer oder Kantenabrieb; voll funktionsfähig.", bild: "images/ankauf-zustand-gut.jpg",
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9 12l2 2 4-4"></path></svg>',
     },
     {
-      id: "defekt", titel: "Defekt", beschreibung: "Beschädigt oder eingeschränkt funktionsfähig.",
+      id: "defekt", titel: "Defekt", beschreibung: "Zum Beispiel Displaybruch, Kamerafehler oder eingeschränkte Funktion.", bild: "images/ankauf-zustand-defekt.jpg",
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01"></path><path d="M10.3 3.9L2.5 18a1.5 1.5 0 0 0 1.3 2.2h16.4a1.5 1.5 0 0 0 1.3-2.2L13.7 3.9a1.5 1.5 0 0 0-2.6 0z"></path></svg>',
     },
   ];
@@ -99,6 +99,9 @@
   var step2Lokal = root.querySelector("#rechner-modelle-lokal");
   var modelleRetryBtn = root.querySelector("#rechner-modelle-retry");
   var preisupdateHinweis = root.querySelector("#rechner-preisupdate-hinweis");
+  var auswahlEl = root.querySelector("#rechner-auswahl");
+  var ergebnisAuswahl = root.querySelector("#rechner-ergebnis-auswahl");
+  var listenHinweis = root.querySelector("#rechner-listen-hinweis");
 
   var kategorieCache = {};
   var aktuelleGeraeteListe = [];
@@ -106,6 +109,28 @@
   var state = { kategorie: null, marke: null, geraet: null, variante: null, zustand: null };
   var aktuellerSchritt = 1;
   var erreichteSchritte = 1;
+  var MODELL_LIMIT = 20;
+
+  function auswahlText() {
+    var teile = [];
+    if (state.geraet) teile.push(state.geraet.marke, state.geraet.modell);
+    if (state.variante) teile.push(state.variante.bezeichnung);
+    if (state.zustand) {
+      var zustand = ZUSTAENDE.find(function (z) { return z.id === state.zustand; });
+      if (zustand) teile.push(zustand.titel);
+    }
+    return teile.filter(Boolean).join(" · ");
+  }
+
+  function updateAuswahl() {
+    var text = auswahlText();
+    if (auswahlEl) {
+      auswahlEl.textContent = text;
+      var ergebnisSichtbar = !root.querySelector('[data-step="ergebnis"]').hidden;
+      auswahlEl.hidden = !text || ergebnisSichtbar;
+    }
+    if (ergebnisAuswahl) ergebnisAuswahl.textContent = text;
+  }
 
   function formatPreis(zahl) {
     return Number(zahl).toLocaleString(LANG === "en" ? "en-GB" : "de-DE", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
@@ -178,6 +203,14 @@
       });
   }
 
+  // Der globale WhatsApp-Button ist im Rechner redundant und kann auf kleinen Bildschirmen
+  // Auswahlkarten verdecken. Deshalb ausblenden, solange der Rechner sichtbar ist.
+  if ("IntersectionObserver" in window && document.body.classList.contains("ankauf-page")) {
+    new IntersectionObserver(function (eintraege) {
+      document.body.classList.toggle("rechner-in-view", eintraege.some(function (e) { return e.isIntersecting; }));
+    }, { threshold: 0.08 }).observe(root);
+  }
+
   /* ---------- Fortschrittsanzeige ---------- */
   function updateProgress() {
     if (!progressEl) return;
@@ -202,6 +235,7 @@
         el.removeAttribute("aria-current");
       }
     });
+    updateAuswahl();
   }
 
   function zeigeSchritt(schritt) {
@@ -212,6 +246,14 @@
     });
     updateProgress();
     rechnerCard.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.requestAnimationFrame(function () {
+      var sichtbar = root.querySelector('[data-step="' + schritt + '"]');
+      var fokusZiel = sichtbar && (sichtbar.querySelector("h2") || sichtbar);
+      if (fokusZiel) {
+        fokusZiel.setAttribute("tabindex", "-1");
+        fokusZiel.focus({ preventScroll: true });
+      }
+    });
   }
 
   function gehZuSchritt(n) {
@@ -370,8 +412,21 @@
       return (a.marke + a.modell).localeCompare(b.marke + b.modell);
     });
 
+    var anzahlTreffer = geraete.length;
+    var listeBegrenzt = !state.marke && !sucheAktiv && anzahlTreffer > MODELL_LIMIT;
+    if (listeBegrenzt) geraete = geraete.slice(0, MODELL_LIMIT);
+    if (listenHinweis) {
+      listenHinweis.textContent = listeBegrenzt
+        ? (LANG === "en"
+          ? "Showing 20 popular and recent models. Choose a brand or enter at least 2 characters to see more."
+          : "20 beliebte und aktuelle Modelle werden angezeigt. Wählen Sie eine Marke oder geben Sie mindestens 2 Zeichen ein, um weitere Modelle zu sehen.")
+        : (LANG === "en" ? anzahlTreffer + " models found" : anzahlTreffer + " Modelle gefunden");
+      listenHinweis.hidden = false;
+    }
+
     if (!geraete.length) {
       modellListe.innerHTML = "";
+      if (listenHinweis) listenHinweis.hidden = true;
       // Leer-Meldung nur bei erfolgreich geladener, aber leerer Kategorie – bei Ladefehler
       // oder file://-Aufruf übernehmen die jeweils eigenen Hinweise (siehe ladeKategorieDaten).
       if (step2Empty) step2Empty.hidden = aktuellerLadeStatus !== "ok";
@@ -473,9 +528,12 @@
       var aktivKlasse = state.zustand === z.id ? " active" : "";
       return (
         '<button type="button" class="rechner-zustand-btn' + aktivKlasse + '" data-zustand="' + z.id + '">' +
+        '<img class="rechner-zustand-bild" src="' + assetUrl(z.bild) + '" alt="" width="480" height="480" loading="lazy">' +
+        '<span class="rechner-zustand-inhalt">' +
         '<span class="rechner-zustand-icon">' + z.icon + "</span>" +
         "<strong>" + z.titel + "</strong>" +
         "<span>" + z.beschreibung + "</span>" +
+        "</span>" +
         "</button>"
       );
     }).join("");
@@ -504,6 +562,7 @@
 
     var zustandLabel = ZUSTAENDE.find(function (z) { return z.id === state.zustand; }).titel;
     var geraeteBezeichnung = [state.geraet.marke, state.geraet.modell, state.variante.bezeichnung].filter(Boolean).join(" ");
+    updateAuswahl();
     var nummer = anfrageNummer();
 
     var nachricht = LANG === "en"
