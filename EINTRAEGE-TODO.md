@@ -15,7 +15,7 @@ PLZ/Ort:   60313 Frankfurt am Main
 Telefon:   069 95632281
 Telefon (international): +49 69 95632281
 E-Mail:    mr.phone.zeil@gmail.com
-Website:   https://www.mr-phone-frankfurt.de
+Website:   https://mrphone-frankfurt.de
 Kategorie: Handy-Fachgeschäft / Mobilfunkshop / Handy-Reparatur
 Öffnungszeiten:
   Mo–Fr: 09:30–21:00
