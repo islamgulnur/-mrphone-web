@@ -10,24 +10,24 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 48,
-        "marktwertNeu": 216,
+        "marktwertGebraucht": 50,
+        "marktwertNeu": 212,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
-        "marktwertGebraucht": 79,
-        "marktwertNeu": 338,
+        "marktwertGebraucht": 87,
+        "marktwertNeu": 367,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 48,
+    "marktwertGebraucht": 50,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 216,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 212,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0002",
@@ -40,24 +40,24 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 83,
+        "marktwertGebraucht": 79,
         "marktwertNeu": 281,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
-        "marktwertGebraucht": 141,
-        "marktwertNeu": 309,
+        "marktwertGebraucht": 144,
+        "marktwertNeu": 322,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 83,
+    "marktwertGebraucht": 79,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 281,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0003",
@@ -70,24 +70,24 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 79,
-        "marktwertNeu": 190,
+        "marktwertGebraucht": 81,
+        "marktwertNeu": 185,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
-        "marktwertGebraucht": 96,
-        "marktwertNeu": 184,
+        "marktwertGebraucht": 97,
+        "marktwertNeu": 190,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 79,
+    "marktwertGebraucht": 81,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 190,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 185,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0004",
@@ -100,18 +100,18 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 81,
-        "marktwertNeu": 216,
+        "marktwertGebraucht": 83,
+        "marktwertNeu": 205,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 50,
         "marktwertGebraucht": 106,
-        "marktwertNeu": 214,
+        "marktwertNeu": 217,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
@@ -119,13 +119,13 @@
         "marktwertGebraucht": 154,
         "marktwertNeu": 217,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 81,
+    "marktwertGebraucht": 83,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 216,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 205,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0005",
@@ -138,32 +138,32 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 85,
+        "marktwertGebraucht": 84,
         "marktwertNeu": 220,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
-        "marktwertGebraucht": 120,
-        "marktwertNeu": 220,
+        "marktwertGebraucht": 123,
+        "marktwertNeu": 221,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 350,
-        "marktwertGebraucht": 161,
+        "marktwertGebraucht": 150,
         "marktwertNeu": 394,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 85,
+    "marktwertGebraucht": 84,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 220,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0006",
@@ -176,18 +176,18 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 152,
+        "marktwertGebraucht": 147,
         "marktwertNeu": 238,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
-        "marktwertGebraucht": 142,
+        "marktwertGebraucht": 158,
         "marktwertNeu": 231,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
@@ -195,13 +195,13 @@
         "marktwertGebraucht": 184,
         "marktwertNeu": 417,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 152,
+    "marktwertGebraucht": 147,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 238,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0007",
@@ -214,32 +214,32 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 103,
-        "marktwertNeu": 257,
+        "marktwertGebraucht": 101,
+        "marktwertNeu": 258,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 50,
-        "marktwertGebraucht": 118,
+        "marktwertGebraucht": 114,
         "marktwertNeu": 306,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
         "marktwertGebraucht": 158,
-        "marktwertNeu": 299,
+        "marktwertNeu": 303,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 103,
+    "marktwertGebraucht": 101,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 257,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 258,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0008",
@@ -252,32 +252,32 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 140,
-        "marktwertNeu": 299,
+        "marktwertGebraucht": 156,
+        "marktwertNeu": 300,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
-        "marktwertGebraucht": 161,
-        "marktwertNeu": 307,
+        "marktwertGebraucht": 166,
+        "marktwertNeu": 313,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 350,
-        "marktwertGebraucht": 220,
+        "marktwertGebraucht": 224,
         "marktwertNeu": 258,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 140,
+    "marktwertGebraucht": 156,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 299,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 300,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0009",
@@ -290,18 +290,18 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 202,
-        "marktwertNeu": 311,
+        "marktwertGebraucht": 178,
+        "marktwertNeu": 310,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
-        "marktwertGebraucht": 227,
-        "marktwertNeu": 322,
+        "marktwertGebraucht": 224,
+        "marktwertNeu": 313,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
@@ -309,13 +309,13 @@
         "marktwertGebraucht": 229,
         "marktwertNeu": 258,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 202,
+    "marktwertGebraucht": 178,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 311,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 310,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0010",
@@ -331,15 +331,15 @@
         "marktwertGebraucht": 70,
         "marktwertNeu": 184,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 50,
-        "marktwertGebraucht": 83,
-        "marktwertNeu": 193,
+        "marktwertGebraucht": 78,
+        "marktwertNeu": 221,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
@@ -347,13 +347,13 @@
         "marktwertGebraucht": 95,
         "marktwertNeu": 267,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
     "marktwertGebraucht": 70,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 184,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0011",
@@ -367,31 +367,31 @@
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
         "marktwertGebraucht": 131,
-        "marktwertNeu": 230,
+        "marktwertNeu": 220,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 50,
-        "marktwertGebraucht": 154,
-        "marktwertNeu": 225,
+        "marktwertGebraucht": 146,
+        "marktwertNeu": 221,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
-        "marktwertGebraucht": 186,
+        "marktwertGebraucht": 200,
         "marktwertNeu": 221,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
     "marktwertGebraucht": 131,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 230,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 220,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0012",
@@ -404,32 +404,32 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 132,
+        "marktwertGebraucht": 131,
         "marktwertNeu": 248,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 50,
         "marktwertGebraucht": 154,
-        "marktwertNeu": 260,
+        "marktwertNeu": 248,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
-        "marktwertGebraucht": 182,
-        "marktwertNeu": 276,
+        "marktwertGebraucht": 193,
+        "marktwertNeu": 301,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 132,
+    "marktwertGebraucht": 131,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 248,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0013",
@@ -442,32 +442,32 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 180,
+        "marktwertGebraucht": 185,
         "marktwertNeu": 317,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
         "marktwertGebraucht": 202,
-        "marktwertNeu": 317,
+        "marktwertNeu": 318,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
         "marktwertGebraucht": 310,
-        "marktwertNeu": 529,
+        "marktwertNeu": 643,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 180,
+    "marktwertGebraucht": 185,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 317,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0014",
@@ -480,32 +480,32 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 277,
+        "marktwertGebraucht": 255,
         "marktwertNeu": 322,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
         "marktwertGebraucht": 273,
-        "marktwertNeu": 324,
+        "marktwertNeu": 322,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
-        "marktwertGebraucht": 372,
-        "marktwertNeu": 414,
+        "marktwertGebraucht": 359,
+        "marktwertNeu": 529,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 277,
+    "marktwertGebraucht": 255,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 322,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0015",
@@ -518,32 +518,32 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 195,
-        "marktwertNeu": 320,
+        "marktwertGebraucht": 194,
+        "marktwertNeu": 316,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
-        "marktwertGebraucht": 268,
-        "marktwertNeu": 313,
+        "marktwertGebraucht": 264,
+        "marktwertNeu": 318,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
-        "marktwertGebraucht": 253,
+        "marktwertGebraucht": 267,
         "marktwertNeu": null,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 195,
+    "marktwertGebraucht": 194,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 320,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 316,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0016",
@@ -556,32 +556,32 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 190,
-        "marktwertNeu": 317,
+        "marktwertGebraucht": 192,
+        "marktwertNeu": 312,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
-        "marktwertGebraucht": 244,
-        "marktwertNeu": 322,
+        "marktwertGebraucht": 253,
+        "marktwertNeu": 329,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
-        "marktwertGebraucht": 306,
-        "marktwertNeu": 736,
+        "marktwertGebraucht": 315,
+        "marktwertNeu": 703,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 190,
+    "marktwertGebraucht": 192,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 317,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 312,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0017",
@@ -594,40 +594,40 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 264,
-        "marktwertNeu": 414,
+        "marktwertGebraucht": 270,
+        "marktwertNeu": 386,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
-        "marktwertGebraucht": 308,
-        "marktwertNeu": 414,
+        "marktwertGebraucht": 306,
+        "marktwertNeu": 409,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
-        "marktwertGebraucht": 383,
-        "marktwertNeu": 672,
+        "marktwertGebraucht": 348,
+        "marktwertNeu": 782,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 550,
-        "marktwertGebraucht": 473,
-        "marktwertNeu": 834,
+        "marktwertGebraucht": 440,
+        "marktwertNeu": 823,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 264,
+    "marktwertGebraucht": 270,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 414,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 386,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0018",
@@ -640,40 +640,40 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 326,
-        "marktwertNeu": 460,
+        "marktwertGebraucht": 334,
+        "marktwertNeu": 457,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
-        "marktwertGebraucht": 332,
-        "marktwertNeu": 464,
+        "marktwertGebraucht": 338,
+        "marktwertNeu": 454,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
-        "marktwertGebraucht": 420,
-        "marktwertNeu": 672,
+        "marktwertGebraucht": 416,
+        "marktwertNeu": 736,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 550,
-        "marktwertGebraucht": 497,
-        "marktwertNeu": 834,
+        "marktwertGebraucht": 458,
+        "marktwertNeu": 728,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 326,
+    "marktwertGebraucht": 334,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 460,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 457,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0019",
@@ -686,32 +686,32 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 131,
-        "marktwertNeu": 212,
+        "marktwertGebraucht": 132,
+        "marktwertNeu": 214,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 50,
-        "marktwertGebraucht": 154,
-        "marktwertNeu": 209,
+        "marktwertGebraucht": 156,
+        "marktwertNeu": 210,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
-        "marktwertGebraucht": 141,
-        "marktwertNeu": 209,
+        "marktwertGebraucht": 137,
+        "marktwertNeu": 208,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 131,
+    "marktwertGebraucht": 132,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 212,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 214,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0020",
@@ -724,18 +724,18 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 247,
-        "marktwertNeu": 361,
+        "marktwertGebraucht": 253,
+        "marktwertNeu": 358,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
-        "marktwertGebraucht": 312,
-        "marktwertNeu": 384,
+        "marktwertGebraucht": 338,
+        "marktwertNeu": 375,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
@@ -746,10 +746,10 @@
         "marktDatenStand": "2026-08-02"
       }
     ],
-    "marktwertGebraucht": 247,
+    "marktwertGebraucht": 253,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 361,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 358,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0021",
@@ -762,10 +762,10 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 290,
-        "marktwertNeu": 370,
+        "marktwertGebraucht": 282,
+        "marktwertNeu": 399,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
@@ -774,16 +774,16 @@
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
-        "marktwertGebraucht": 418,
-        "marktwertNeu": 861,
+        "marktwertGebraucht": 414,
+        "marktwertNeu": 858,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 290,
+    "marktwertGebraucht": 282,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 370,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 399,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0022",
@@ -797,39 +797,39 @@
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
         "marktwertGebraucht": 334,
-        "marktwertNeu": 460,
+        "marktwertNeu": 462,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
-        "marktwertGebraucht": 372,
-        "marktwertNeu": 472,
+        "marktwertGebraucht": 365,
+        "marktwertNeu": 492,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
-        "marktwertGebraucht": 440,
-        "marktwertNeu": 905,
+        "marktwertGebraucht": 438,
+        "marktwertNeu": 875,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 550,
-        "marktwertGebraucht": 525,
-        "marktwertNeu": 1357,
+        "marktwertGebraucht": 528,
+        "marktwertNeu": 1334,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
     "marktwertGebraucht": 334,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 460,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 462,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0023",
@@ -845,37 +845,37 @@
         "marktwertGebraucht": 378,
         "marktwertNeu": 524,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
-        "marktwertGebraucht": 438,
-        "marktwertNeu": 543,
+        "marktwertGebraucht": 439,
+        "marktwertNeu": 551,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
-        "marktwertGebraucht": 487,
-        "marktwertNeu": 938,
+        "marktwertGebraucht": 482,
+        "marktwertNeu": 929,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 550,
-        "marktwertGebraucht": 528,
-        "marktwertNeu": 1380,
+        "marktwertGebraucht": 550,
+        "marktwertNeu": 1357,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
     "marktwertGebraucht": 378,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 524,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0024",
@@ -891,29 +891,29 @@
         "marktwertGebraucht": 343,
         "marktwertNeu": 533,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
-        "marktwertGebraucht": 440,
-        "marktwertNeu": 547,
+        "marktwertGebraucht": 483,
+        "marktwertNeu": 524,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
-        "marktwertGebraucht": 536,
+        "marktwertGebraucht": 515,
         "marktwertNeu": 745,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
     "marktwertGebraucht": 343,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 533,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0025",
@@ -926,32 +926,32 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 334,
-        "marktwertNeu": 469,
+        "marktwertGebraucht": 338,
+        "marktwertNeu": 474,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
-        "marktwertGebraucht": 371,
-        "marktwertNeu": 470,
+        "marktwertGebraucht": 370,
+        "marktwertNeu": 474,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
-        "marktwertGebraucht": 427,
-        "marktwertNeu": 1229,
+        "marktwertGebraucht": 425,
+        "marktwertNeu": null,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 334,
+    "marktwertGebraucht": 338,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 469,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 474,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0026",
@@ -964,40 +964,40 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 439,
+        "marktwertGebraucht": 440,
         "marktwertNeu": 626,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
-        "marktwertGebraucht": 528,
+        "marktwertGebraucht": 525,
         "marktwertNeu": 626,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
         "marktwertGebraucht": 563,
-        "marktwertNeu": 768,
+        "marktwertNeu": 745,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 550,
-        "marktwertGebraucht": 651,
-        "marktwertNeu": 1567,
+        "marktwertGebraucht": 624,
+        "marktwertNeu": 1563,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 439,
+    "marktwertGebraucht": 440,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 626,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0027",
@@ -1013,29 +1013,29 @@
         "marktwertGebraucht": 528,
         "marktwertNeu": 745,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
-        "marktwertGebraucht": 636,
-        "marktwertNeu": 750,
+        "marktwertGebraucht": 576,
+        "marktwertNeu": 745,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 450,
-        "marktwertGebraucht": 692,
-        "marktwertNeu": 1645,
+        "marktwertGebraucht": 658,
+        "marktwertNeu": 1639,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
     "marktwertGebraucht": 528,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 745,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0028",
@@ -1048,32 +1048,32 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 488,
+        "marktwertGebraucht": 484,
         "marktwertNeu": 644,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
-        "marktwertGebraucht": 660,
-        "marktwertNeu": 667,
+        "marktwertGebraucht": 616,
+        "marktwertNeu": 644,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
-        "marktwertGebraucht": 708,
-        "marktwertNeu": 1155,
+        "marktwertGebraucht": 700,
+        "marktwertNeu": 1027,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 488,
+    "marktwertGebraucht": 484,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 644,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0029",
@@ -1086,32 +1086,32 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 484,
-        "marktwertNeu": 681,
+        "marktwertGebraucht": 492,
+        "marktwertNeu": 735,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
-        "marktwertGebraucht": 473,
+        "marktwertGebraucht": 499,
         "marktwertNeu": 639,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
-        "marktwertGebraucht": 563,
-        "marktwertNeu": 1030,
+        "marktwertGebraucht": 528,
+        "marktwertNeu": 959,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 484,
+    "marktwertGebraucht": 492,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 681,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 735,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0030",
@@ -1124,40 +1124,40 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 590,
+        "marktwertGebraucht": 607,
         "marktwertNeu": 947,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 100,
-        "marktwertGebraucht": 693,
-        "marktwertNeu": 1010,
+        "marktwertGebraucht": 695,
+        "marktwertNeu": 1012,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
-        "marktwertGebraucht": 704,
-        "marktwertNeu": 1306,
+        "marktwertGebraucht": 719,
+        "marktwertNeu": 1272,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 550,
-        "marktwertGebraucht": 605,
-        "marktwertNeu": 1440,
+        "marktwertGebraucht": 616,
+        "marktwertNeu": 1397,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 590,
+    "marktwertGebraucht": 607,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 947,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0031",
@@ -1170,32 +1170,32 @@
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 704,
-        "marktwertNeu": 1104,
+        "marktwertGebraucht": 703,
+        "marktwertNeu": 1079,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
-        "marktwertGebraucht": 792,
-        "marktwertNeu": 1311,
+        "marktwertGebraucht": 750,
+        "marktwertNeu": 1242,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 450,
-        "marktwertGebraucht": 669,
-        "marktwertNeu": 1440,
+        "marktwertGebraucht": 683,
+        "marktwertNeu": 1401,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 704,
+    "marktwertGebraucht": 703,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 1104,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 1079,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0032",
@@ -1208,10 +1208,10 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 410,
-        "marktwertNeu": 479,
+        "marktwertGebraucht": 405,
+        "marktwertNeu": 454,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
@@ -1226,10 +1226,10 @@
         "uvpDelta": 300
       }
     ],
-    "marktwertGebraucht": 410,
+    "marktwertGebraucht": 405,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 479,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 454,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0033",
@@ -1243,23 +1243,23 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "marktwertGebraucht": 704,
-        "marktwertNeu": 961,
+        "marktwertNeu": 975,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
-        "marktwertGebraucht": 853,
-        "marktwertNeu": 1263,
+        "marktwertGebraucht": 911,
+        "marktwertNeu": 1232,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
     "marktwertGebraucht": 704,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 961,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 975,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0034",
@@ -1272,10 +1272,10 @@
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 668,
-        "marktwertNeu": 805,
+        "marktwertGebraucht": 665,
+        "marktwertNeu": 807,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
@@ -1286,10 +1286,10 @@
         "uvpDelta": 450
       }
     ],
-    "marktwertGebraucht": 668,
+    "marktwertGebraucht": 665,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 805,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 807,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0035",
@@ -1302,32 +1302,32 @@
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 924,
-        "marktwertNeu": 1021,
+        "marktwertGebraucht": 920,
+        "marktwertNeu": 1029,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
-        "marktwertGebraucht": 958,
-        "marktwertNeu": 1287,
+        "marktwertGebraucht": 1018,
+        "marktwertNeu": 1301,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 450,
-        "marktwertGebraucht": 844,
-        "marktwertNeu": 1480,
+        "marktwertGebraucht": 832,
+        "marktwertNeu": 1489,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 924,
+    "marktwertGebraucht": 920,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 1021,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 1029,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0036",
@@ -1340,40 +1340,40 @@
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 967,
-        "marktwertNeu": 1149,
+        "marktwertGebraucht": 968,
+        "marktwertNeu": 1147,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
-        "marktwertGebraucht": 989,
-        "marktwertNeu": 1334,
+        "marktwertGebraucht": 1060,
+        "marktwertNeu": 1349,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 450,
-        "marktwertGebraucht": 968,
-        "marktwertNeu": 1564,
+        "marktwertGebraucht": 927,
+        "marktwertNeu": 1545,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "2 TB",
         "uvpDelta": 750,
-        "marktwertGebraucht": 1451,
-        "marktwertNeu": 2098,
+        "marktwertGebraucht": 1410,
+        "marktwertNeu": 2190,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 967,
+    "marktwertGebraucht": 968,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 1149,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 1147,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0037",
@@ -1386,16 +1386,16 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 58,
+        "marktwertGebraucht": 62,
         "marktwertNeu": 191,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-16"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 58,
+    "marktwertGebraucht": 62,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 191,
-    "marktDatenStand": "2026-08-16"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0038",
@@ -1408,16 +1408,16 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 58,
-        "marktwertNeu": 193,
+        "marktwertGebraucht": 62,
+        "marktwertNeu": 191,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-16"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 58,
+    "marktwertGebraucht": 62,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 193,
-    "marktDatenStand": "2026-08-16"
+    "marktwertNeu": 191,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0039",
@@ -1433,21 +1433,21 @@
         "marktwertGebraucht": 70,
         "marktwertNeu": 221,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-16"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
-        "marktwertGebraucht": 488,
+        "marktwertGebraucht": 484,
         "marktwertNeu": null,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-16"
+        "marktDatenStand": "2026-08-21"
       }
     ],
     "marktwertGebraucht": 70,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 221,
-    "marktDatenStand": "2026-08-16"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0040",
@@ -1460,24 +1460,24 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 70,
+        "marktwertGebraucht": 68,
         "marktwertNeu": 221,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-16"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
-        "marktwertGebraucht": 488,
+        "marktwertGebraucht": 484,
         "marktwertNeu": null,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-16"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 70,
+    "marktwertGebraucht": 68,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 221,
-    "marktDatenStand": "2026-08-16"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0041",
@@ -1490,20 +1490,20 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 110,
+        "marktwertGebraucht": 109,
         "marktwertNeu": 222,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-16"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 50
       }
     ],
-    "marktwertGebraucht": 110,
+    "marktwertGebraucht": 109,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 222,
-    "marktDatenStand": "2026-08-16"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0042",
@@ -1517,9 +1517,9 @@
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
         "marktwertGebraucht": 101,
-        "marktwertNeu": 292,
+        "marktwertNeu": 301,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-16"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
@@ -1527,13 +1527,13 @@
         "marktwertGebraucht": 242,
         "marktwertNeu": null,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-16"
+        "marktDatenStand": "2026-08-21"
       }
     ],
     "marktwertGebraucht": 101,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 292,
-    "marktDatenStand": "2026-08-16"
+    "marktwertNeu": 301,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0043",
@@ -11370,16 +11370,16 @@
       {
         "bezeichnung": "Standard",
         "uvpDelta": 0,
-        "marktwertGebraucht": 16,
+        "marktwertGebraucht": 17,
         "marktwertNeu": null,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 16,
+    "marktwertGebraucht": 17,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": null,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0484",
@@ -11536,20 +11536,20 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 198,
-        "marktwertNeu": 241,
+        "marktwertGebraucht": 203,
+        "marktwertNeu": 251,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 90
       }
     ],
-    "marktwertGebraucht": 198,
+    "marktwertGebraucht": 203,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 241,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 251,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0494",
@@ -11561,19 +11561,25 @@
     "varianten": [
       {
         "bezeichnung": "128 GB",
-        "uvpDelta": 0
+        "uvpDelta": 0,
+        "marktwertGebraucht": 281,
+        "marktwertNeu": 293,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 60,
-        "marktwertGebraucht": 334,
-        "marktwertNeu": 376,
+        "marktwertGebraucht": 313,
+        "marktwertNeu": 383,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 360,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 281,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 293,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0495",
@@ -11664,24 +11670,24 @@
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 255,
-        "marktwertNeu": 848,
+        "marktwertGebraucht": 239,
+        "marktwertNeu": 828,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
-        "marktwertGebraucht": 299,
-        "marktwertNeu": 940,
+        "marktwertGebraucht": 283,
+        "marktwertNeu": 903,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 255,
+    "marktwertGebraucht": 239,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 848,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 828,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0499",
@@ -11694,20 +11700,20 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 67,
+        "marktwertGebraucht": 62,
         "marktwertNeu": 87,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 20
       }
     ],
-    "marktwertGebraucht": 67,
+    "marktwertGebraucht": 62,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 87,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0500",
@@ -11720,24 +11726,24 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 111,
-        "marktwertNeu": 170,
+        "marktwertGebraucht": 121,
+        "marktwertNeu": 171,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 50,
-        "marktwertGebraucht": 172,
-        "marktwertNeu": 226,
+        "marktwertGebraucht": 181,
+        "marktwertNeu": 240,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 111,
+    "marktwertGebraucht": 121,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 170,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 171,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0501",
@@ -11750,20 +11756,20 @@
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 272,
+        "marktwertGebraucht": 263,
         "marktwertNeu": 312,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 100
       }
     ],
-    "marktwertGebraucht": 272,
+    "marktwertGebraucht": 263,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 312,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0502",
@@ -11816,24 +11822,24 @@
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 351,
+        "marktwertGebraucht": 421,
         "marktwertNeu": 547,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 151,
-        "marktwertGebraucht": 408,
-        "marktwertNeu": 753,
+        "marktwertGebraucht": 496,
+        "marktwertNeu": 761,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 351,
+    "marktwertGebraucht": 421,
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 547,
-    "marktDatenStand": "2026-08-15"
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0505",
@@ -11846,16 +11852,16 @@
       {
         "bezeichnung": "128 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 158,
-        "marktwertNeu": 224,
+        "marktwertGebraucht": 172,
+        "marktwertNeu": 256,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 158,
+    "marktwertGebraucht": 172,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 224,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 256,
+    "marktDatenStand": "2026-08-21"
   },
   {
     "id": "kat-0506",
@@ -11868,15 +11874,15 @@
       {
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
-        "marktwertGebraucht": 83,
-        "marktwertNeu": 99,
+        "marktwertGebraucht": 74,
+        "marktwertNeu": 100,
         "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-15"
+        "marktDatenStand": "2026-08-21"
       }
     ],
-    "marktwertGebraucht": 83,
+    "marktwertGebraucht": 74,
     "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 99,
-    "marktDatenStand": "2026-08-15"
+    "marktwertNeu": 100,
+    "marktDatenStand": "2026-08-21"
   }
 ]
