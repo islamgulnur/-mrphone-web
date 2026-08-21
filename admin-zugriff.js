@@ -1,14 +1,14 @@
 /* Mr. Phone – 5x schnelles Antippen der E-Mail-Adresse öffnet den Admin-Bereich.
  * Reine Navigations-Abkürzung, KEINE Sicherheitsfunktion - der eigentliche Passwortschutz
- * sitzt server-seitig in admin/server.js (Login-Route + Session-Cookie). Funktioniert nur,
- * wenn der Admin-Server lokal auf demselben Rechner läuft (127.0.0.1, siehe admin/server.js). */
+ * sitzt server-seitig in admin/server.js (Login-Route + Session-Cookie). Der Zugriff läuft
+ * privat über Tailscale Serve und ist nur für Geräte im eigenen Tailnet erreichbar. */
 (function () {
   "use strict";
 
   var link = document.querySelector('a[href^="mailto:mr.phone.zeil@gmail.com"]');
   if (!link) return;
 
-  var ADMIN_URL = "http://localhost:3000/admin/";
+  var ADMIN_URL = "https://ak74u.taile87e8a.ts.net/admin/";
   var NOETIGE_TAPS = 5;
   var TAP_FENSTER_MS = 2500;
   var NORMALES_VERHALTEN_VERZOEGERUNG_MS = 350;
