@@ -165,6 +165,9 @@ a.tile { border-color: var(--hairline-strong); }
 /* ---------- Zubehör-Badge ---------- */
 .badge-inline { background: var(--signal-wash); color: var(--signal); border: 1px solid var(--hairline); }
 
+/* ---------- FAQ (weiße Karte bleibt hell, .faq-item summary erbt sonst --paper vom Dark-Body) ---------- */
+.faq-item summary { color: var(--ink); }
+
 /* ---------- Bewertungs-CTA ---------- */
 .review-cta { background: var(--ink-raised); }
 .review-cta h2, .review-cta p { color: var(--paper); }
