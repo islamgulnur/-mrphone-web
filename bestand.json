@@ -434,20 +434,6 @@
     "datum": "2026-08-26"
   },
   {
-    "id": "pos-5ced178d73438c957e1b",
-    "marke": "Apple",
-    "modell": "iPhone 17 pro max",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1149.99,
-    "menge": 14,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-26"
-  },
-  {
     "id": "9426a9e8-85b7-451f-88c8-b068c96a5624",
     "marke": "Apple",
     "modell": "iPhone 17 Pro Max",
@@ -499,6 +485,20 @@
     "zustand": "neu",
     "preis": 1059.99,
     "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-26"
+  },
+  {
+    "id": "pos-5ced178d73438c957e1b",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro Max",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1149.99,
+    "menge": 13,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-26"
@@ -1654,7 +1654,7 @@
   {
     "id": "pos-c6c47634b666b335f3ea",
     "marke": "Samsung",
-    "modell": "Galaxy Tab S10 Ultra 5G",
+    "modell": "Galaxy Tab S10 Ulter 5G",
     "speicher": "256 GB",
     "farbe": "",
     "kategorie": "tablets",
