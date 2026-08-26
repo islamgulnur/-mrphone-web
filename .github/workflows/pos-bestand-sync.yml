@@ -1,0 +1,43 @@
+name: POS-Bestand mit Website synchronisieren
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pos-bestand-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Website laden
+        uses: actions/checkout@v4
+
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Aktuellen POS-Bestand laden
+        run: npm run test:pos && node scripts/fetch-pos-bestand.js
+
+      - name: Bestand und Google-Seiten aktualisieren
+        run: node scripts/sync-pos-bestand.js --apply
+
+      - name: Änderungen veröffentlichen
+        run: |
+          if [ -z "$(git status --porcelain -- bestand.json produkte sitemap.xml scripts/produktseiten-manifest.json)" ]; then
+            echo "Keine Bestandsänderung – kein Commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add bestand.json produkte/ sitemap.xml scripts/produktseiten-manifest.json
+          git commit -m "chore(stock): sync public POS inventory"
+          git push

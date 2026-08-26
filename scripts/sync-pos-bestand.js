@@ -36,10 +36,13 @@ function mappePosGeraet(pos) {
     modell = /^flip\b/i.test(modell) ? `Galaxy Z ${modell}` : `Galaxy ${modell}`;
   }
 
-  let kategorie = "smartphones";
-  if (/\b(iPad|Tab)\b/i.test(modell)) kategorie = "tablets";
-  else if (/MacBook|ThinkPad|Pro 14 Plus/i.test(modell)) kategorie = "laptops";
-  else if (/Watch/i.test(modell)) kategorie = "smartwatches";
+  const erlaubteKategorien = new Set(["smartphones", "tablets", "smartwatches", "laptops", "konsolen", "kopfhoerer"]);
+  let kategorie = erlaubteKategorien.has(pos.kategorie) ? pos.kategorie : "smartphones";
+  if (!erlaubteKategorien.has(pos.kategorie)) {
+    if (/\b(iPad|Tab)\b/i.test(modell)) kategorie = "tablets";
+    else if (/MacBook|ThinkPad|Pro 14 Plus/i.test(modell)) kategorie = "laptops";
+    else if (/Watch/i.test(modell)) kategorie = "smartwatches";
+  }
 
   return {
     marke,
@@ -129,4 +132,22 @@ const backup = spawnSync(process.execPath, [path.join(__dirname, "backup-data.js
 if (backup.status !== 0) throw new Error("Backup von bestand.json fehlgeschlagen.");
 
 fs.writeFileSync(BESTAND, `${JSON.stringify(neu, null, 2)}\n`, "utf8");
-console.log("bestand.json wurde aus dem aktuellen POS-Lagerbestand synchronisiert.");
+
+function fuehreSkriptAus(datei, args = []) {
+  const ergebnis = spawnSync(process.execPath, [path.join(ROOT, datei), ...args], {
+    cwd: ROOT,
+    stdio: "inherit",
+  });
+  if (ergebnis.status !== 0) throw new Error(`${datei} ist fehlgeschlagen.`);
+}
+
+try {
+  fuehreSkriptAus("validate-data.js");
+  fuehreSkriptAus(path.join("scripts", "build-produktseiten.js"));
+  fuehreSkriptAus(path.join("scripts", "test-produktseiten.js"));
+  console.log("bestand.json und die zugehörigen Google-Produktseiten wurden aktualisiert.");
+} catch (error) {
+  fs.writeFileSync(BESTAND, `${JSON.stringify(alt, null, 2)}\n`, "utf8");
+  try { fuehreSkriptAus(path.join("scripts", "build-produktseiten.js")); } catch (_) { /* ursprünglichen Fehler bewahren */ }
+  throw new Error(`POS-Synchronisierung zurückgerollt: ${error.message}`);
+}

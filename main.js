@@ -557,6 +557,19 @@
     return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text);
   }
 
+  function produktSlug(a) {
+    return [a.marke, a.modell].filter(Boolean).join(" ")
+      .replace(/ß/g, "ss")
+      .replace(/&/g, " und ")
+      .replace(/\+/g, " plus ")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .replace(/-+/g, "-");
+  }
+
   function bestandCardHtml(a) {
     var istNeu = a.zustand === "neu";
     var badgeClass = istNeu ? "badge-neu" : "badge-gebraucht";
@@ -564,16 +577,19 @@
     var titel = [a.marke, a.modell, a.speicher, a.farbe].filter(Boolean).join(" · ");
     var preisText = a.preis != null ? formatPreis(a.preis) + " €" : (LANG === "en" ? "Price on request" : "Preis auf Anfrage");
     var whatsappLabel = LANG === "en" ? "Ask about availability via WhatsApp" : "Verfügbarkeit per WhatsApp anfragen";
+    var detailsLabel = LANG === "en" ? "View all variants and details" : "Alle Varianten und Details ansehen";
     var ladenpreisPhrase = LANG === "en" ? "the in-store price (please confirm in store)" : "dem Ladenpreis (bitte im Laden bestätigen)";
+    var produktUrl = "/produkte/" + produktSlug(a) + ".html";
 
     return (
       '<article class="angebot-card reveal">' +
       mediaHtml(a.bild, titel) +
       '<div class="angebot-body">' +
       '<span class="angebot-badge ' + badgeClass + '">' + badgeText + "</span>" +
-      "<h3>" + escapeHtml(titel) + "</h3>" +
+      '<h3><a href="' + produktUrl + '">' + escapeHtml(titel) + "</a></h3>" +
       '<p class="angebot-price">' + preisText + "</p>" +
       '<p class="angebot-warranty">' + garantieHinweis(a.zustand) + "</p>" +
+      '<p><a href="' + produktUrl + '">' + detailsLabel + " →</a></p>" +
       '<div class="angebot-actions">' +
       '<a href="' + buildBestandWhatsappUrl(a) + '" class="btn btn-primary" target="_blank" rel="noopener">' + whatsappLabel + "</a>" +
       reservierenButtonHtml(titel, a.preis != null ? formatPreis(a.preis) + " €" : ladenpreisPhrase) +
@@ -665,13 +681,51 @@
     if (zustandSelect) zustandSelect.addEventListener("change", render);
     if (sortSelect) sortSelect.addEventListener("change", render);
 
-    fetch(assetUrl("bestand.json"))
-      .then(function (res) {
-        if (!res.ok) throw new Error("bestand.json nicht erreichbar");
-        return res.json();
+    function normalisierePosDaten(payload, lokalerBestand) {
+      if (!payload || payload.ok !== true || !Array.isArray(payload.daten)) throw new Error("POS-Antwort ungültig");
+      var bilder = new Map();
+      lokalerBestand.forEach(function (item) {
+        var key = [item.marke, item.modell, item.speicher, item.zustand, Number(item.preis)].join("|").toLowerCase();
+        if (item.bild) bilder.set(key, item.bild);
+      });
+      return payload.daten.map(function (item, index) {
+        var key = [item.marke, item.modell, item.speicher, item.zustand, Number(item.preis)].join("|").toLowerCase();
+        return {
+          id: "pos-live-" + index,
+          marke: item.marke,
+          modell: item.modell,
+          speicher: item.speicher || "",
+          farbe: item.farbe || "",
+          kategorie: item.kategorie || "smartphones",
+          zustand: String(item.zustand || "").toLowerCase(),
+          preis: Number(item.preis),
+          menge: Number(item.menge) || 1,
+          bild: bilder.get(key) || "",
+          aktiv: true,
+          datum: item.datum || payload.stand || "",
+        };
+      }).filter(function (item) { return item.marke && item.modell && item.preis > 0 && item.menge > 0; });
+    }
+
+    function holeJson(url, timeoutMs) {
+      var controller = new AbortController();
+      var timeout = window.setTimeout(function () { controller.abort(); }, timeoutMs);
+      return fetch(url, { headers: { Accept: "application/json" }, signal: controller.signal })
+        .then(function (res) {
+          if (!res.ok) throw new Error(url + " nicht erreichbar");
+          return res.json();
+        })
+        .finally(function () { window.clearTimeout(timeout); });
+    }
+
+    holeJson(assetUrl("bestand.json"), 5000)
+      .then(function (lokalerBestand) {
+        var lokal = Array.isArray(lokalerBestand) ? lokalerBestand : [];
+        return holeJson("https://pos.mrphone-frankfurt.de/api/public/bestand", 5000)
+          .then(function (payload) { return normalisierePosDaten(payload, lokal); })
+          .catch(function () { return lokal; });
       })
-      .then(function (data) {
-        var alle = Array.isArray(data) ? data : [];
+      .then(function (alle) {
         aktiveDaten = alle.filter(function (a) { return a.aktiv === true; });
         befuelleMarkenFilter();
 

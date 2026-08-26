@@ -710,6 +710,19 @@ function runGit(args) {
   });
 }
 
+function runNodeScript(relativePath, args = []) {
+  return new Promise((resolve, reject) => {
+    execFile(process.execPath, [path.join(ROOT, relativePath), ...args], { cwd: ROOT }, (err, stdout, stderr) => {
+      if (err) {
+        err.stdout = stdout;
+        err.stderr = stderr;
+        return reject(err);
+      }
+      resolve((stdout || "") + (stderr || ""));
+    });
+  });
+}
+
 function readBewertungen() {
   if (!fs.existsSync(BEWERTUNGEN_FILE)) {
     return { gesamtnote: 0, anzahlBewertungen: 0, stand: "", googleProfilUrl: "", zitate: [] };
@@ -837,7 +850,25 @@ app.post("/api/publish", async (req, res) => {
         return res.json({ ok: false, warnung: true, warnungen });
       }
     }
-    log += await runGit(dateien ? ["add", ...dateien] : ["add", "-A"]);
+    const produktseitenAktualisieren = !dateien || dateien.includes("bestand.json");
+    let stageDateien = dateien;
+    if (produktseitenAktualisieren) {
+      log += await runNodeScript("scripts/build-produktseiten.js");
+      log += await runNodeScript("scripts/build-produktseiten.js", ["--check"]);
+      log += await runNodeScript("scripts/test-produktseiten.js");
+      if (dateien) {
+        stageDateien = [...new Set([
+          ...dateien,
+          "produkte",
+          "produktseiten.css",
+          "sitemap.xml",
+          "scripts/produktseiten-manifest.json",
+        ])];
+      }
+    }
+    log += await runGit(stageDateien
+      ? ["add", ...stageDateien]
+      : ["add", "-A", "--", ".", ":(exclude).agents/**", ":(exclude)AGENTS.md"]);
     try {
       log += await runGit(["commit", "-m", nachricht]);
     } catch (commitErr) {
