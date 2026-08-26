@@ -106,9 +106,11 @@ const NEUWARE_AUFSCHLAG = 1.15;
 // ersetzt den früheren, sich mit dem Wettbewerbs-Abstand überlagernden "Markenkorrektur"-Faktor
 // (siehe Kommentar oben) durch EINEN einzigen, transparenten Satz Zahlen pro Marke.
 const ANKAUF_PROZENTSAETZE_APPLE = {
-  wieNeu: 0.88,
-  sehrGut: 0.80,
-  gut: 0.72,
+  // Harte Margenreserve: Auch bei einem zu hohen Marktanker oder einem positiven
+  // globalen Preisniveau darf der Ankauf nicht gefaehrlich nah an den VK rutschen.
+  wieNeu: 0.80,
+  sehrGut: 0.75,
+  gut: 0.65,
   defekt: 0.25,
 };
 const ANKAUF_PROZENTSAETZE_REST = {
@@ -142,6 +144,51 @@ const NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG = 0.88; // -12 % vom eigenen Verkaufspr
 const NEU_VERSIEGELT_MARKTANKER_PROZENT = 0.82;  // Basis-Prozentsatz vom Marktanker
 const NEU_VERSIEGELT_MARKTANKER_DECKEL = 0.90;   // harte Obergrenze: nie über 90 % des Ankers
 
+// Universelle Mindestmarge gegen den realistischsten verfuegbaren Wiederverkaufswert.
+// Diese Deckel gelten NACH dem globalen Preisregler und koennen daher nie durch +15 %
+// Ankaufsniveau ausgehebelt werden. Der Euro-Mindestabstand schuetzt guenstige Artikel,
+// bei denen ein reiner Prozentsatz zu wenig Puffer fuer Pruefung, Gewaehrleistung und
+// Preisnachlass lassen wuerde.
+const MINDESTABSTAND_VK_EURO = {
+  neuVersiegelt: 15,
+  gebraucht: 20,
+};
+
+function berechneVkSicherheitsdeckel(verkaufspreis, stufe, marke) {
+  const vk = Number(verkaufspreis);
+  if (!Number.isFinite(vk) || vk <= 0) return null;
+
+  const istNeu = stufe === "neuVersiegelt";
+  const prozent = istNeu
+    ? NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG
+    : prozentsaetzeFuerMarke(marke)[stufe];
+  if (!Number.isFinite(prozent)) return null;
+
+  const mindestabstand = istNeu
+    ? MINDESTABSTAND_VK_EURO.neuVersiegelt
+    : MINDESTABSTAND_VK_EURO.gebraucht;
+  return rundeAbAuf5(Math.min(vk * prozent, vk - mindestabstand));
+}
+
+function wendeVkSicherheitsdeckelAn(preise, wiederverkaufswerte, marke) {
+  const aenderungen = [];
+  if (!preise || !wiederverkaufswerte) return aenderungen;
+
+  ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
+    const wert = Number(preise[stufe]);
+    if (!Number.isFinite(wert)) return;
+    const referenz = stufe === "neuVersiegelt"
+      ? wiederverkaufswerte.neu
+      : wiederverkaufswerte.gebraucht;
+    const deckel = berechneVkSicherheitsdeckel(referenz, stufe, marke);
+    if (deckel != null && wert > deckel) {
+      preise[stufe] = deckel;
+      aenderungen.push({ stufe, alt: wert, neu: deckel, verkaufspreis: Number(referenz) });
+    }
+  });
+  return aenderungen;
+}
+
 // Leitplanken 1-3 (28.07.2026, Fall Nicht-Apple-Neupreise zu hoch, siehe OFFENE-PUNKTE.md):
 // marktAnkerNeu (echter eBay-Marktwert ODER Schätzung) hatte bislang KEINEN Bezug zur eigenen
 // UVP - ein kontaminierter Scraper-Treffer (Bundle, falsche Variante, Sammlerpreis) lief
@@ -171,7 +218,9 @@ function berechneNeuVersiegelt({ eigenerVK, marktAnkerNeu, marktAnkerNeuUrsprung
   const kandidaten = [];
   const hatWettbewerb = Number.isFinite(Number(wettbewerbsZiel)) && Number(wettbewerbsZiel) > 0;
   if (eigenerVK != null && Number.isFinite(Number(eigenerVK))) {
-    kandidaten.push(Number(eigenerVK) * NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG * faktor);
+    const eigenerKandidat = Number(eigenerVK) * NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG * faktor;
+    const eigenerDeckel = berechneVkSicherheitsdeckel(eigenerVK, "neuVersiegelt");
+    kandidaten.push(eigenerDeckel == null ? eigenerKandidat : Math.min(eigenerKandidat, eigenerDeckel));
   }
   if (marktAnkerNeu != null && Number.isFinite(Number(marktAnkerNeu))) {
     let anker = Number(marktAnkerNeu);
@@ -268,7 +317,9 @@ function berechneNeuVersiegeltUvpBasiert({ eigenerVK, marktAnkerNeuEcht, marktAn
   const kandidaten = [];
   const hatWettbewerb = Number.isFinite(Number(wettbewerbsZiel)) && Number(wettbewerbsZiel) > 0;
   if (eigenerVK != null && Number.isFinite(Number(eigenerVK))) {
-    kandidaten.push(Number(eigenerVK) * NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG * faktor);
+    const eigenerKandidat = Number(eigenerVK) * NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG * faktor;
+    const eigenerDeckel = berechneVkSicherheitsdeckel(eigenerVK, "neuVersiegelt");
+    kandidaten.push(eigenerDeckel == null ? eigenerKandidat : Math.min(eigenerKandidat, eigenerDeckel));
   }
   // Der feste UVP-Prozentsatz ist nur noch ein Fallback. Sobald ein exakt
   // erkannter Tagespreis vorliegt, soll er Premiumgeräte nicht künstlich tief halten.
@@ -480,6 +531,13 @@ function berechnePreise(geraet, variante, bestandListe, niveauProzent) {
     });
   }
 
+  // Letzte, quellenunabhaengige Leitplanke. Sie greift sowohl bei eigenem POS-VK
+  // als auch beim externen Marktanker und nur nach unten.
+  wendeVkSicherheitsdeckelAn(ergebnis, {
+    neu: wiederverkauf.neu,
+    gebraucht: wiederverkauf.gebraucht,
+  }, geraet.marke);
+
   return {
     preise: ergebnis,
     wiederverkaufswertNeu: wiederverkauf.neu,
@@ -534,12 +592,18 @@ function wendeSpeicherKonsistenzAn(varianten) {
   return aenderungen;
 }
 
-function pruefeKonsistenz(preise, wiederverkaufswerte) {
+function pruefeKonsistenz(preise, wiederverkaufswerte, marke) {
   const verstoesse = [];
   ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
     const referenz = stufe === "neuVersiegelt" ? wiederverkaufswerte.neu : wiederverkaufswerte.gebraucht;
-    if (Number.isFinite(referenz) && preise[stufe] > referenz) {
-      verstoesse.push({ stufe, ankaufPreis: preise[stufe], eigenerVerkaufspreis: referenz });
+    const deckel = berechneVkSicherheitsdeckel(referenz, stufe, marke);
+    if (deckel != null && preise[stufe] > deckel) {
+      verstoesse.push({
+        stufe,
+        ankaufPreis: preise[stufe],
+        eigenerVerkaufspreis: referenz,
+        maximalerAnkaufspreis: deckel,
+      });
     }
   });
   return verstoesse;
@@ -552,6 +616,9 @@ module.exports = {
   ANKAUF_PROZENTSAETZE_APPLE,
   ANKAUF_PROZENTSAETZE_REST,
   prozentsaetzeFuerMarke,
+  MINDESTABSTAND_VK_EURO,
+  berechneVkSicherheitsdeckel,
+  wendeVkSicherheitsdeckelAn,
   NEUWARE_AUFSCHLAG,
   NIVEAU_MIN,
   NIVEAU_MAX,

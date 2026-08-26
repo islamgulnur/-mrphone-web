@@ -602,13 +602,17 @@ function berechneMassenanpassung(list, body) {
         neu[feld] = angepassterPreis(v.preise[feld], einheit, richtung, wert);
       });
       if (katalogEintrag) {
-        // Konsistenzregel: Ankaufspreis darf nie über dem eigenen Verkaufspreis liegen.
+        // Konsistenzregel: Ankaufspreis muss die zentrale Mindestmarge einhalten.
         const wiederverkauf = pricing.ermittleWiederverkaufswerte(
           { uvp: katalogEintrag.uvp, marktwertGebraucht: katalogEintrag.marktwertGebraucht, marke: geraet.marke, modell: geraet.modell },
           v,
           bestand
         );
-        const verstoesse = pricing.pruefeKonsistenz(neu, { neu: wiederverkauf.neu, gebraucht: wiederverkauf.gebraucht });
+        const verstoesse = pricing.pruefeKonsistenz(
+          neu,
+          { neu: wiederverkauf.neu, gebraucht: wiederverkauf.gebraucht },
+          geraet.marke
+        );
         if (verstoesse.length) {
           warnungen.push({ geraet: geraet.marke + " " + geraet.modell, variante: v.bezeichnung, verstoesse });
         }

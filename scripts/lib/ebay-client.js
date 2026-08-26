@@ -31,19 +31,86 @@ const EBAY_KATEGORIE_ID = {
   smartphones: "9355", // eBay DE: "Handys ohne Vertrag"
 };
 
-// Ausschluss-Keywords für die NEW-Abfrage (siehe Diagnose 27.07.2026): filtert Zubehör/
-// Ersatzteile/Reparaturteile heraus, deren Titel den Modellnamen enthält, aber keine echten
-// Geräte-Angebote sind. Nur für zustand === "NEW" angehängt (siehe sucheMarkt).
-const NEW_AUSSCHLUSS_KEYWORDS =
-  "-hülle -case -schutzfolie -display -akku -ersatzteil -defekt -bastler -adapter -ladekabel";
+// Ausschluss-Keywords fuer alle Geraete-Abfragen. Die serverseitige Suche reduziert damit
+// offensichtliches Zubehoer bereits vorab; titelPasstExakt() prueft die Treffer danach noch
+// einmal lokal. Fuer die Kategorie zubehoer werden diese Begriffe nicht pauschal angehaengt.
+const GERAETE_AUSSCHLUSS_KEYWORDS =
+  "-hülle -case -cover -schutzfolie -display -akku -ersatzteil -defekt -bastler " +
+  "-adapter -ladekabel -armband -strap -dummy -karton";
+
+const TITEL_AUSSCHLUSS = [
+  "hülle", "huelle", "case", "cover", "schutzfolie", "panzerglas", "display", "lcd",
+  "ersatzteil", "spare part", "parts only", "akku", "battery", "ladekabel", "charging cable",
+  "adapter", "armband", "watch band", "strap", "gehäuse", "gehaeuse", "housing", "dummy",
+  "attrappe", "karton", "ovp leer", "box only", "ohne gerät", "ohne geraet", "bastler",
+  "defekt", "displaybruch", "bundle", "zubehör paket", "zubehoer paket",
+];
 
 let cachedToken = null; // { wert, ablauf } - Ablauf als Date.now()-Millisekunden
 
 class BudgetErschoepftFehler extends Error {}
 
-function baueSuchstring(marke, modell, variante, zustand) {
+function baueSuchstring(marke, modell, variante, zustand, kategorie) {
   const basis = [marke, modell, variante].filter(Boolean).join(" ").trim();
-  return zustand === "NEW" ? basis + " " + NEW_AUSSCHLUSS_KEYWORDS : basis;
+  return kategorie === "zubehoer" ? basis : basis + " " + GERAETE_AUSSCHLUSS_KEYWORDS;
+}
+
+function normalisiereTitel(text) {
+  return String(text || "")
+    .toLowerCase()
+    .replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function enthaeltToken(text, token) {
+  return (" " + text + " ").includes(" " + token + " ");
+}
+
+function extrahiereMasse(text) {
+  const normalisiert = normalisiereTitel(text);
+  const treffer = normalisiert.match(/\b\d+\s*(?:gb|tb|mm)\b/g) || [];
+  return [...new Set(treffer.map((wert) => wert.replace(/\s+/g, "")))];
+}
+
+/**
+ * Lokale Exaktpruefung fuer alle Kategorien. Sie verhindert insbesondere, dass
+ * Zubehoer, falsche Speichergroessen oder benachbarte Pro/Max/Ultra-Modelle als
+ * Preisanker in die Automatik gelangen.
+ */
+function titelPasstExakt(titel, { marke, modell, variante, kategorie }) {
+  const titelNorm = normalisiereTitel(titel);
+  const modellNorm = normalisiereTitel([marke, modell].filter(Boolean).join(" "));
+  if (!titelNorm || !modellNorm) return false;
+
+  const modellTokens = [...new Set(modellNorm.split(" ").filter((token) => token.length > 1 || /^\d+$/.test(token)))];
+  if (!modellTokens.every((token) => enthaeltToken(titelNorm, token))) return false;
+
+  if (kategorie !== "zubehoer") {
+    const titelMitUmlauten = String(titel || "").toLowerCase();
+    if (TITEL_AUSSCHLUSS.some((wort) => titelMitUmlauten.includes(wort))) return false;
+  }
+
+  const varianteNorm = normalisiereTitel(variante);
+  const geforderteMasse = extrahiereMasse(variante);
+  const titelKompakt = titelNorm.replace(/\s+/g, "");
+  if (!geforderteMasse.every((mass) => titelKompakt.includes(mass))) return false;
+  if (enthaeltToken(varianteNorm, "cellular") && !(
+    enthaeltToken(titelNorm, "cellular") || enthaeltToken(titelNorm, "lte")
+  )) return false;
+  if (enthaeltToken(varianteNorm, "gps") && !enthaeltToken(titelNorm, "gps")) return false;
+
+  // Modellnachbarn nicht vermischen: z. B. iPhone 17 mit 17 Pro/Pro Max,
+  // Galaxy S24 mit S24 FE/Ultra oder Watch GPS mit einer Cellular-Version.
+  const unterscheider = ["pro", "max", "ultra", "plus", "mini", "air", "fe", "cellular", "lte"];
+  for (const token of unterscheider) {
+    const imTitel = enthaeltToken(titelNorm, token);
+    const imGesuchtenModell = enthaeltToken(modellNorm + " " + varianteNorm, token);
+    if (imTitel && !imGesuchtenModell) return false;
+  }
+
+  return true;
 }
 
 async function holeAccessToken(clientId, clientSecret) {
@@ -95,7 +162,7 @@ function erstelleBudgetZaehler(maxCalls) {
 async function sucheMarkt({ accessToken, marke, modell, variante, zustand, kategorie, budgetZaehler, limit }) {
   if (budgetZaehler) budgetZaehler.pruefeUndZaehle();
 
-  const suchstring = baueSuchstring(marke, modell, variante, zustand);
+  const suchstring = baueSuchstring(marke, modell, variante, zustand, kategorie);
   const params = new URLSearchParams({
     q: suchstring,
     filter: "conditions:{" + FILTER_ZUSTAND[zustand] + "}",
@@ -117,7 +184,11 @@ async function sucheMarkt({ accessToken, marke, modell, variante, zustand, kateg
   }
 
   const daten = await antwort.json();
-  const treffer = Array.isArray(daten.itemSummaries) ? daten.itemSummaries : [];
+  const rohdaten = Array.isArray(daten.itemSummaries) ? daten.itemSummaries : [];
+  const treffer = rohdaten.filter((treffer) => (
+    treffer && treffer.price && treffer.price.currency === "EUR" &&
+    titelPasstExakt(treffer.title, { marke, modell, variante, kategorie })
+  ));
   const preise = treffer
     .map((t) => t.price && Number(t.price.value))
     .filter((p) => Number.isFinite(p) && p > 0);
@@ -125,14 +196,22 @@ async function sucheMarkt({ accessToken, marke, modell, variante, zustand, kateg
   // Erste 5 Rohtreffer (Titel/Preis/Zustand/Item-ID) für Diagnosezwecke, z. B. über
   // --debug-treffer=id:variante in scripts/update-ankaufspreise.js, damit z. B. eine zu
   // knappe Neuware-Trefferzahl (condition NEW) direkt im Log nachvollziehbar ist.
-  const rohtreffer = treffer.slice(0, 5).map((t) => ({
+  const rohtreffer = rohdaten.slice(0, 10).map((t) => ({
     titel: t.title,
     preis: t.price && t.price.value,
     zustand: t.condition,
     itemId: t.itemId,
+    akzeptiert: !!(t.price && t.price.currency === "EUR" &&
+      titelPasstExakt(t.title, { marke, modell, variante, kategorie })),
   }));
 
-  return { preise, gesamtTreffer: treffer.length, suchstring, rohtreffer };
+  return {
+    preise,
+    gesamtTreffer: treffer.length,
+    gesamtTrefferRoh: rohdaten.length,
+    suchstring,
+    rohtreffer,
+  };
 }
 
 /**
@@ -147,13 +226,29 @@ function quartilMedian(preise, quartilKappen) {
   const kappung = Math.floor(sortiert.length * quartilKappen);
   const gefiltert = kappung > 0 ? sortiert.slice(kappung, sortiert.length - kappung) : sortiert;
   const basis = gefiltert.length ? gefiltert : sortiert; // nie leer laufen lassen
+  const medianWert = median(basis);
+  const q1 = quantil(sortiert, 0.25);
+  const q3 = quantil(sortiert, 0.75);
 
   return {
     medianVorFilter,
-    medianNachFilter: median(basis),
+    medianNachFilter: medianWert,
     anzahlVorFilter: sortiert.length,
     anzahlNachFilter: basis.length,
+    q1,
+    q3,
+    streuungProzent: medianWert > 0 ? (q3 - q1) / medianWert : Infinity,
   };
+}
+
+function quantil(sortierteListe, anteil) {
+  if (!sortierteListe.length) return 0;
+  const position = (sortierteListe.length - 1) * anteil;
+  const unten = Math.floor(position);
+  const oben = Math.ceil(position);
+  if (unten === oben) return sortierteListe[unten];
+  const gewicht = position - unten;
+  return sortierteListe[unten] * (1 - gewicht) + sortierteListe[oben] * gewicht;
 }
 
 function median(sortierteListe) {
@@ -171,4 +266,5 @@ module.exports = {
   sucheMarkt,
   quartilMedian,
   baueSuchstring,
+  titelPasstExakt,
 };

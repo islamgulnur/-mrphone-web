@@ -1265,9 +1265,9 @@
     "id": "kat-0034",
     "kategorie": "smartphones",
     "marke": "Apple",
-    "modell": "iPhone 17 Air",
+    "modell": "iPhone Air",
     "jahr": 2025,
-    "uvp": 1249,
+    "uvp": 1199,
     "varianten": [
       {
         "bezeichnung": "256 GB",
@@ -1279,11 +1279,11 @@
       },
       {
         "bezeichnung": "512 GB",
-        "uvpDelta": 200
+        "uvpDelta": 250
       },
       {
         "bezeichnung": "1 TB",
-        "uvpDelta": 450
+        "uvpDelta": 500
       }
     ],
     "marktwertGebraucht": 665,
@@ -4196,30 +4196,8 @@
     "kategorie": "smartphones",
     "marke": "Redmi",
     "modell": "Note 15 Pro",
-    "jahr": 2025,
-    "uvp": 399,
-    "varianten": [
-      {
-        "bezeichnung": "256 GB",
-        "uvpDelta": 0,
-        "marktwertGebraucht": 293,
-        "marktwertNeu": 294,
-        "marktwertQuelle": "ebay-auto",
-        "marktDatenStand": "2026-08-17"
-      }
-    ],
-    "marktwertGebraucht": 293,
-    "marktwertQuelle": "ebay-auto",
-    "marktwertNeu": 294,
-    "marktDatenStand": "2026-08-17"
-  },
-  {
-    "id": "kat-0132",
-    "kategorie": "smartphones",
-    "marke": "Redmi",
-    "modell": "Note 15 Pro+",
-    "jahr": 2025,
-    "uvp": 499,
+    "jahr": 2026,
+    "uvp": 349.9,
     "varianten": [
       {
         "bezeichnung": "256 GB",
@@ -4231,7 +4209,33 @@
       },
       {
         "bezeichnung": "512 GB",
-        "uvpDelta": 200,
+        "uvpDelta": 50
+      }
+    ],
+    "marktwertGebraucht": 293,
+    "marktwertQuelle": "ebay-auto",
+    "marktwertNeu": 294,
+    "marktDatenStand": "2026-08-17"
+  },
+  {
+    "id": "kat-0132",
+    "kategorie": "smartphones",
+    "marke": "Redmi",
+    "modell": "Note 15 Pro+ 5G",
+    "jahr": 2026,
+    "uvp": 499.9,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "marktwertGebraucht": 293,
+        "marktwertNeu": 294,
+        "marktwertQuelle": "ebay-auto",
+        "marktDatenStand": "2026-08-17"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 30,
         "marktwertGebraucht": 274,
         "marktwertNeu": 294,
         "marktwertQuelle": "ebay-auto",
@@ -11918,5 +11922,1553 @@
     "marktwertQuelle": "ebay-auto",
     "marktwertNeu": 100,
     "marktDatenStand": "2026-08-21"
+  },
+  {
+    "id": "kat-0507",
+    "kategorie": "smartphones",
+    "marke": "Apple",
+    "modell": "iPhone 17e",
+    "jahr": 2026,
+    "uvp": 699,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 250
+      }
+    ],
+    "marktwertGebraucht": 645,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0508",
+    "kategorie": "tablets",
+    "marke": "Apple",
+    "modell": "iPad Air 11\" (M4, 2026)",
+    "jahr": 2026,
+    "uvp": 649,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 130
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 380
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 760
+      }
+    ],
+    "marktwertGebraucht": 595,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0509",
+    "kategorie": "tablets",
+    "marke": "Apple",
+    "modell": "iPad Air 13\" (M4, 2026)",
+    "jahr": 2026,
+    "uvp": 849,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 130
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 380
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 760
+      }
+    ],
+    "marktwertGebraucht": 780,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0510",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Neo 13\"",
+    "jahr": 2026,
+    "uvp": 699,
+    "varianten": [
+      {
+        "bezeichnung": "8 GB · 256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "8 GB · 512 GB",
+        "uvpDelta": 200
+      }
+    ],
+    "marktwertGebraucht": 645,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0511",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Air 13\" M5",
+    "jahr": 2026,
+    "uvp": 1199,
+    "varianten": [
+      {
+        "bezeichnung": "16 GB · 512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 1105,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0512",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Air 15\" M5",
+    "jahr": 2026,
+    "uvp": 1499,
+    "varianten": [
+      {
+        "bezeichnung": "16 GB · 512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 1380,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0513",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Pro 14\" M5 Pro",
+    "jahr": 2026,
+    "uvp": 2499,
+    "varianten": [
+      {
+        "bezeichnung": "24 GB · 1 TB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 2300,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0514",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Pro 16\" M5 Pro",
+    "jahr": 2026,
+    "uvp": 2999,
+    "varianten": [
+      {
+        "bezeichnung": "24 GB · 1 TB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 2760,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0515",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Pro 14\" M5 Max",
+    "jahr": 2026,
+    "uvp": 4199,
+    "varianten": [
+      {
+        "bezeichnung": "36 GB · 2 TB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 3865,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0516",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Pro 16\" M5 Max",
+    "jahr": 2026,
+    "uvp": 4499,
+    "varianten": [
+      {
+        "bezeichnung": "36 GB · 2 TB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 4140,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0517",
+    "kategorie": "kopfhoerer",
+    "marke": "Apple",
+    "modell": "AirPods Max 2",
+    "jahr": 2026,
+    "uvp": 579,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 535,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0518",
+    "kategorie": "smartphones",
+    "marke": "Google",
+    "modell": "Pixel 10a",
+    "jahr": 2026,
+    "uvp": 549,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 100
+      }
+    ],
+    "marktwertGebraucht": 395,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0519",
+    "kategorie": "smartphones",
+    "marke": "Google",
+    "modell": "Pixel 11",
+    "jahr": 2026,
+    "uvp": 999,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 130
+      }
+    ],
+    "marktwertGebraucht": 720,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0520",
+    "kategorie": "smartphones",
+    "marke": "Google",
+    "modell": "Pixel 11 Pro",
+    "jahr": 2026,
+    "uvp": 1199,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 130
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 390
+      }
+    ],
+    "marktwertGebraucht": 865,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0521",
+    "kategorie": "smartphones",
+    "marke": "Google",
+    "modell": "Pixel 11 Pro XL",
+    "jahr": 2026,
+    "uvp": 1399,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 130
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 390
+      }
+    ],
+    "marktwertGebraucht": 1005,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0522",
+    "kategorie": "smartphones",
+    "marke": "Google",
+    "modell": "Pixel 11 Pro Fold",
+    "jahr": 2026,
+    "uvp": 1999,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 130
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 390
+      }
+    ],
+    "marktwertGebraucht": 1440,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0523",
+    "kategorie": "smartwatches",
+    "marke": "Google",
+    "modell": "Pixel Watch 5",
+    "jahr": 2026,
+    "uvp": 419,
+    "varianten": [
+      {
+        "bezeichnung": "41mm",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "45mm",
+        "uvpDelta": 30
+      },
+      {
+        "bezeichnung": "41mm LTE",
+        "uvpDelta": 100
+      },
+      {
+        "bezeichnung": "45mm LTE",
+        "uvpDelta": 130
+      }
+    ],
+    "marktwertGebraucht": 300,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0524",
+    "kategorie": "smartphones",
+    "marke": "Samsung",
+    "modell": "Galaxy Z Fold 8",
+    "jahr": 2026,
+    "uvp": 1999,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 200
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 450
+      }
+    ],
+    "marktwertGebraucht": 1600,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0525",
+    "kategorie": "smartphones",
+    "marke": "Samsung",
+    "modell": "Galaxy Z Fold 8 Ultra",
+    "jahr": 2026,
+    "uvp": 2199,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 200
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 450
+      }
+    ],
+    "marktwertGebraucht": 1760,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0526",
+    "kategorie": "kopfhoerer",
+    "marke": "Samsung",
+    "modell": "Galaxy Buds 4",
+    "jahr": 2026,
+    "uvp": 179,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 145,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0527",
+    "kategorie": "kopfhoerer",
+    "marke": "Samsung",
+    "modell": "Galaxy Buds 4 Pro",
+    "jahr": 2026,
+    "uvp": 249,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 200,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0528",
+    "kategorie": "smartphones",
+    "marke": "Xiaomi",
+    "modell": "15T",
+    "jahr": 2025,
+    "uvp": 649.9,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 50
+      }
+    ],
+    "marktwertGebraucht": 320,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0529",
+    "kategorie": "smartphones",
+    "marke": "Xiaomi",
+    "modell": "17T",
+    "jahr": 2026,
+    "uvp": 749.9,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 50
+      }
+    ],
+    "marktwertGebraucht": 480,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0530",
+    "kategorie": "smartphones",
+    "marke": "Xiaomi",
+    "modell": "17T Pro",
+    "jahr": 2026,
+    "uvp": 899.9,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 100
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 200
+      }
+    ],
+    "marktwertGebraucht": 575,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0531",
+    "kategorie": "smartphones",
+    "marke": "Redmi",
+    "modell": "Note 15",
+    "jahr": 2026,
+    "uvp": 199.9,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 50
+      }
+    ],
+    "marktwertGebraucht": 130,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0532",
+    "kategorie": "smartphones",
+    "marke": "Redmi",
+    "modell": "Note 15 5G",
+    "jahr": 2026,
+    "uvp": 279.9,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 20
+      }
+    ],
+    "marktwertGebraucht": 180,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0533",
+    "kategorie": "smartphones",
+    "marke": "Redmi",
+    "modell": "Note 15 Pro 5G",
+    "jahr": 2026,
+    "uvp": 399.9,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 30
+      }
+    ],
+    "marktwertGebraucht": 255,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0534",
+    "kategorie": "smartphones",
+    "marke": "Redmi",
+    "modell": "A7 Pro",
+    "jahr": 2026,
+    "uvp": 129.9,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 20
+      }
+    ],
+    "marktwertGebraucht": 85,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0535",
+    "kategorie": "smartphones",
+    "marke": "POCO",
+    "modell": "F8 Ultra",
+    "jahr": 2025,
+    "uvp": 829.9,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 70
+      }
+    ],
+    "marktwertGebraucht": 410,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0536",
+    "kategorie": "smartphones",
+    "marke": "POCO",
+    "modell": "F8 Pro",
+    "jahr": 2025,
+    "uvp": 649.9,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 50
+      }
+    ],
+    "marktwertGebraucht": 320,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0537",
+    "kategorie": "smartphones",
+    "marke": "POCO",
+    "modell": "X8 Pro Max",
+    "jahr": 2026,
+    "uvp": 529.9,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 50
+      }
+    ],
+    "marktwertGebraucht": 340,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0538",
+    "kategorie": "smartphones",
+    "marke": "POCO",
+    "modell": "X8 Pro",
+    "jahr": 2026,
+    "uvp": 399.9,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 50
+      }
+    ],
+    "marktwertGebraucht": 255,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0539",
+    "kategorie": "smartphones",
+    "marke": "POCO",
+    "modell": "M8 Pro 5G",
+    "jahr": 2026,
+    "uvp": 349.9,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 50
+      }
+    ],
+    "marktwertGebraucht": 225,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0540",
+    "kategorie": "smartphones",
+    "marke": "POCO",
+    "modell": "M8 5G",
+    "jahr": 2026,
+    "uvp": 269.9,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 30
+      }
+    ],
+    "marktwertGebraucht": 175,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0541",
+    "kategorie": "tablets",
+    "marke": "Xiaomi",
+    "modell": "Pad 8",
+    "jahr": 2025,
+    "uvp": 449.9,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 50
+      }
+    ],
+    "marktwertGebraucht": 225,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0542",
+    "kategorie": "tablets",
+    "marke": "Xiaomi",
+    "modell": "Pad 8 Pro",
+    "jahr": 2025,
+    "uvp": 599.9,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 150
+      }
+    ],
+    "marktwertGebraucht": 300,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0543",
+    "kategorie": "smartphones",
+    "marke": "Nothing",
+    "modell": "Phone (4a)",
+    "jahr": 2026,
+    "uvp": 349,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 80
+      }
+    ],
+    "marktwertGebraucht": 225,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0544",
+    "kategorie": "smartphones",
+    "marke": "Nothing",
+    "modell": "Phone (4a) Pro",
+    "jahr": 2026,
+    "uvp": 529,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 100
+      }
+    ],
+    "marktwertGebraucht": 340,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0545",
+    "kategorie": "smartphones",
+    "marke": "Nothing",
+    "modell": "Phone (4b)",
+    "jahr": 2026,
+    "uvp": 329,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 210,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0546",
+    "kategorie": "smartphones",
+    "marke": "Nothing",
+    "modell": "Phone (3a) Lite",
+    "jahr": 2025,
+    "uvp": 249,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 30
+      }
+    ],
+    "marktwertGebraucht": 125,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0547",
+    "kategorie": "smartphones",
+    "marke": "CMF",
+    "modell": "Phone 2 Pro",
+    "jahr": 2025,
+    "uvp": 249,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 30
+      }
+    ],
+    "marktwertGebraucht": 125,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0548",
+    "kategorie": "smartphones",
+    "marke": "Sony",
+    "modell": "Xperia 1 VIII",
+    "jahr": 2026,
+    "uvp": 1499,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 500
+      }
+    ],
+    "marktwertGebraucht": 960,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0549",
+    "kategorie": "smartphones",
+    "marke": "OnePlus",
+    "modell": "15R",
+    "jahr": 2025,
+    "uvp": 699,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 100
+      }
+    ],
+    "marktwertGebraucht": 345,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0550",
+    "kategorie": "smartphones",
+    "marke": "Honor",
+    "modell": "Magic V6",
+    "jahr": 2026,
+    "uvp": 2299.99,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 1470,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0551",
+    "kategorie": "smartphones",
+    "marke": "Honor",
+    "modell": "Magic 8 Pro",
+    "jahr": 2026,
+    "uvp": 1299.9,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 830,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0552",
+    "kategorie": "smartphones",
+    "marke": "Honor",
+    "modell": "600",
+    "jahr": 2026,
+    "uvp": 599.9,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 385,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0553",
+    "kategorie": "smartphones",
+    "marke": "Honor",
+    "modell": "600 Pro",
+    "jahr": 2026,
+    "uvp": 999.9,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 640,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0554",
+    "kategorie": "smartphones",
+    "marke": "Fairphone",
+    "modell": "Fairphone (Gen. 6)",
+    "jahr": 2025,
+    "uvp": 599,
+    "varianten": [
+      {
+        "bezeichnung": "8 GB · 256 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 295,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0555",
+    "kategorie": "smartphones",
+    "marke": "Fairphone",
+    "modell": "Fairphone (Gen. 6+)",
+    "jahr": 2026,
+    "uvp": 649,
+    "varianten": [
+      {
+        "bezeichnung": "12 GB · 256 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 415,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0556",
+    "kategorie": "smartphones",
+    "marke": "Asus",
+    "modell": "Asus Zenfone 12 Ultra",
+    "jahr": 2025,
+    "uvp": 1099,
+    "varianten": [
+      {
+        "bezeichnung": "16 GB · 512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 545,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0557",
+    "kategorie": "smartphones",
+    "marke": "Asus",
+    "modell": "Asus ROG Phone 9",
+    "jahr": 2025,
+    "uvp": 1149.99,
+    "varianten": [
+      {
+        "bezeichnung": "12 GB · 512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 570,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0558",
+    "kategorie": "smartphones",
+    "marke": "Asus",
+    "modell": "Asus ROG Phone 9 Pro",
+    "jahr": 2025,
+    "uvp": 1299.99,
+    "varianten": [
+      {
+        "bezeichnung": "16 GB · 512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 645,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0559",
+    "kategorie": "smartphones",
+    "marke": "Oppo",
+    "modell": "Oppo Find X9 Pro",
+    "jahr": 2025,
+    "uvp": 1299,
+    "varianten": [
+      {
+        "bezeichnung": "16 GB · 512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 645,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0560",
+    "kategorie": "smartphones",
+    "marke": "Huawei",
+    "modell": "Mate X6",
+    "jahr": 2025,
+    "uvp": 1999,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 990,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0561",
+    "kategorie": "smartphones",
+    "marke": "Huawei",
+    "modell": "Mate X7",
+    "jahr": 2026,
+    "uvp": 2099,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 1345,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0562",
+    "kategorie": "smartphones",
+    "marke": "Huawei",
+    "modell": "Pura 80 Pro",
+    "jahr": 2025,
+    "uvp": 1099,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 545,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0563",
+    "kategorie": "smartphones",
+    "marke": "Huawei",
+    "modell": "Pura 80 Ultra",
+    "jahr": 2025,
+    "uvp": 1499,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 745,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0564",
+    "kategorie": "smartphones",
+    "marke": "Huawei",
+    "modell": "nova 14 Pro",
+    "jahr": 2025,
+    "uvp": 699,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 345,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0565",
+    "kategorie": "tablets",
+    "marke": "Lenovo",
+    "modell": "Legion Tab Gen 3",
+    "jahr": 2025,
+    "uvp": 649,
+    "varianten": [
+      {
+        "bezeichnung": "12 GB · 256 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 320,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0566",
+    "kategorie": "tablets",
+    "marke": "Huawei",
+    "modell": "MatePad Pro Max",
+    "jahr": 2026,
+    "uvp": 1299,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 830,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0567",
+    "kategorie": "tablets",
+    "marke": "Huawei",
+    "modell": "MatePad Pro 12.2\"",
+    "jahr": 2025,
+    "uvp": 999,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 495,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0568",
+    "kategorie": "tablets",
+    "marke": "Huawei",
+    "modell": "MatePad 12 X",
+    "jahr": 2025,
+    "uvp": 649,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 320,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0569",
+    "kategorie": "tablets",
+    "marke": "Huawei",
+    "modell": "MatePad 11.5 S",
+    "jahr": 2025,
+    "uvp": 499,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 250,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0570",
+    "kategorie": "tablets",
+    "marke": "Huawei",
+    "modell": "MatePad 11.5",
+    "jahr": 2025,
+    "uvp": 349,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 175,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0571",
+    "kategorie": "smartwatches",
+    "marke": "Huawei",
+    "modell": "Watch 5",
+    "jahr": 2025,
+    "uvp": 449,
+    "varianten": [
+      {
+        "bezeichnung": "42mm",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "46mm",
+        "uvpDelta": 100
+      },
+      {
+        "bezeichnung": "46mm Titanarmband",
+        "uvpDelta": 200
+      }
+    ],
+    "marktwertGebraucht": 225,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0572",
+    "kategorie": "smartwatches",
+    "marke": "Huawei",
+    "modell": "Watch GT 6",
+    "jahr": 2025,
+    "uvp": 249,
+    "varianten": [
+      {
+        "bezeichnung": "41mm",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "46mm",
+        "uvpDelta": 20
+      }
+    ],
+    "marktwertGebraucht": 125,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0573",
+    "kategorie": "smartwatches",
+    "marke": "Huawei",
+    "modell": "Watch GT 6 Pro",
+    "jahr": 2025,
+    "uvp": 379,
+    "varianten": [
+      {
+        "bezeichnung": "46mm",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "46mm Titanarmband",
+        "uvpDelta": 120
+      }
+    ],
+    "marktwertGebraucht": 190,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0574",
+    "kategorie": "smartwatches",
+    "marke": "Huawei",
+    "modell": "Watch Buds 2",
+    "jahr": 2026,
+    "uvp": 499,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 320,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0575",
+    "kategorie": "smartwatches",
+    "marke": "Huawei",
+    "modell": "Watch Fit 5",
+    "jahr": 2025,
+    "uvp": 199,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 100,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0576",
+    "kategorie": "smartwatches",
+    "marke": "Huawei",
+    "modell": "Watch Fit 5 Pro",
+    "jahr": 2025,
+    "uvp": 299,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 150,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0577",
+    "kategorie": "smartwatches",
+    "marke": "Garmin",
+    "modell": "Forerunner 570",
+    "jahr": 2025,
+    "uvp": 549.99,
+    "varianten": [
+      {
+        "bezeichnung": "42mm",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "47mm",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 275,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0578",
+    "kategorie": "smartwatches",
+    "marke": "Garmin",
+    "modell": "Forerunner 970",
+    "jahr": 2025,
+    "uvp": 749.99,
+    "varianten": [
+      {
+        "bezeichnung": "47mm",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 370,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0579",
+    "kategorie": "smartwatches",
+    "marke": "Garmin",
+    "modell": "Venu 4",
+    "jahr": 2025,
+    "uvp": 549.99,
+    "varianten": [
+      {
+        "bezeichnung": "41mm",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "45mm",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 275,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0580",
+    "kategorie": "smartwatches",
+    "marke": "Garmin",
+    "modell": "Venu X1",
+    "jahr": 2025,
+    "uvp": 799.99,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 395,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0581",
+    "kategorie": "kopfhoerer",
+    "marke": "Sony",
+    "modell": "WF-1000XM6",
+    "jahr": 2026,
+    "uvp": 299,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 190,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0582",
+    "kategorie": "kopfhoerer",
+    "marke": "Bose",
+    "modell": "QuietComfort Ultra (2. Gen.)",
+    "jahr": 2025,
+    "uvp": 449,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 225,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0583",
+    "kategorie": "kopfhoerer",
+    "marke": "Bose",
+    "modell": "QuietComfort Ultra Earbuds (2. Gen.)",
+    "jahr": 2025,
+    "uvp": 299,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 150,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0584",
+    "kategorie": "kopfhoerer",
+    "marke": "JBL",
+    "modell": "Tour One M3",
+    "jahr": 2025,
+    "uvp": 349.99,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 175,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0585",
+    "kategorie": "kopfhoerer",
+    "marke": "JBL",
+    "modell": "Tour One M3 Smart Tx",
+    "jahr": 2025,
+    "uvp": 399.99,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 200,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0586",
+    "kategorie": "kopfhoerer",
+    "marke": "Huawei",
+    "modell": "FreeClip 2",
+    "jahr": 2025,
+    "uvp": 199,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 100,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0587",
+    "kategorie": "kopfhoerer",
+    "marke": "Huawei",
+    "modell": "FreeClip 2 S",
+    "jahr": 2026,
+    "uvp": 229,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 145,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0588",
+    "kategorie": "kopfhoerer",
+    "marke": "Huawei",
+    "modell": "FreeBuds Pro 5",
+    "jahr": 2025,
+    "uvp": 199,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 100,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0589",
+    "kategorie": "kopfhoerer",
+    "marke": "Huawei",
+    "modell": "FreeBuds 7i",
+    "jahr": 2025,
+    "uvp": 99.99,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 50,
+    "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0590",
+    "kategorie": "kopfhoerer",
+    "marke": "Huawei",
+    "modell": "FreeBuds SE 4",
+    "jahr": 2025,
+    "uvp": 59.99,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0
+      }
+    ],
+    "marktwertGebraucht": 30,
+    "marktwertQuelle": "geschaetzt"
   }
 ]

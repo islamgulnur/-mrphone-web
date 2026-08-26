@@ -4,6 +4,7 @@
  */
 const fs = require("fs");
 const path = require("path");
+const pricing = require("./pricing-config");
 
 const ROOT = __dirname;
 const KATEGORIEN = [
@@ -149,6 +150,7 @@ KATEGORIEN.forEach((k) => {
 });
 
 // --- bestand.json / angebote.json (Struktur, keine Mindestzahl) -----------
+let bestandListe = [];
 ["bestand.json", "angebote.json"].forEach((datei) => {
   const liste = ladeJson(datei);
   if (liste === null) return;
@@ -156,6 +158,7 @@ KATEGORIEN.forEach((k) => {
     fehler.push(datei + ": Wurzelelement muss ein Array sein.");
     return;
   }
+  if (datei === "bestand.json") bestandListe = liste;
   liste.forEach((eintrag, i) => {
     const ort = datei + "[" + i + "]";
     if (!eintrag || typeof eintrag !== "object") { fehler.push(ort + ": kein Objekt."); return; }
@@ -165,6 +168,43 @@ KATEGORIEN.forEach((k) => {
     }
   });
 });
+
+// --- Wirtschaftliche Sicherheitsgrenze gegen eigenen POS-VK --------------
+// Auto-Preise duerfen die zentrale Mindestmarge nie verletzen. Manuelle Preise
+// bleiben ein bewusstes Notventil und erzeugen deshalb nur eine Warnung.
+if (Array.isArray(katalog) && Array.isArray(ankaufListe) && Array.isArray(bestandListe)) {
+  const katalogById = new Map(katalog.map((geraet) => [geraet.id, geraet]));
+  ankaufListe.forEach((ankaufGeraet) => {
+    const katalogGeraet = katalogById.get(ankaufGeraet.id);
+    if (!katalogGeraet) return;
+    (ankaufGeraet.varianten || []).forEach((ankaufVariante) => {
+      const katalogVariante = (katalogGeraet.varianten || []).find(
+        (variante) => variante.bezeichnung === ankaufVariante.bezeichnung
+      );
+      if (!katalogVariante || !ankaufVariante.preise) return;
+      const eigenerNeu = pricing.findeEigenenVerkaufspreis(
+        bestandListe, katalogGeraet, katalogVariante, "neu"
+      );
+      const eigenerGebraucht = pricing.findeEigenenVerkaufspreis(
+        bestandListe, katalogGeraet, katalogVariante, "gebraucht"
+      );
+      const pruefPreise = { ...ankaufVariante.preise };
+      const deckelungen = pricing.wendeVkSicherheitsdeckelAn(
+        pruefPreise,
+        { neu: eigenerNeu, gebraucht: eigenerGebraucht },
+        katalogGeraet.marke
+      );
+      deckelungen.forEach((deckelung) => {
+        const meldung = ankaufGeraet.marke + " " + ankaufGeraet.modell + " / " +
+          ankaufVariante.bezeichnung + " / " + deckelung.stufe + ": Ankauf " +
+          deckelung.alt + " EUR, bei POS-VK " + deckelung.verkaufspreis +
+          " EUR sind maximal " + deckelung.neu + " EUR sicher.";
+        if (ankaufVariante.preisQuelle === "manuell") warnungen.push(meldung + " (manuell)");
+        else fehler.push(meldung);
+      });
+    });
+  });
+}
 
 // --- Ergebnis ---------------------------------------------------------------
 if (warnungen.length) {

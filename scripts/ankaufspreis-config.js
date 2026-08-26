@@ -17,12 +17,17 @@
 // Mindestanzahl Treffer je Marktabfrage, sonst Stufe überspringen (bzw. bei Gebraucht
 // das ganze Gerät). Neuware/versiegelt hat am deutschen Markt strukturell weniger
 // Angebote als Gebrauchtware, daher eigene (niedrigere) Schwelle.
-const MIN_TREFFER_GEBRAUCHT = 5;
-const MIN_TREFFER_NEU = 3;
+const MIN_TREFFER_GEBRAUCHT = 8;
+const MIN_TREFFER_NEU = 5;
 
 // Ausreißerfilter: unteres UND oberes Viertel der sortierten Trefferliste kappen,
 // bevor der Median gebildet wird (0.25 = je 25% an beiden Enden).
 const QUARTIL_KAPPEN = 0.25;
+
+// Wenn das mittlere Preisfeld trotz Titel-/Variantenfilter weiter zu stark streut,
+// ist der Marktanker nicht verlaesslich genug und wird an diesem Tag nicht verwendet.
+// 0.55 bedeutet: Abstand zwischen 25-%- und 75-%-Quantil maximal 55 % des Medians.
+const MAX_STREUUNG_PROZENT = 0.55;
 
 // Abschlag vom Median auf den jeweiligen Marktwert (Angebots-/Handelsabschlag).
 const ABSCHLAG_GEBRAUCHT = 0.12; // -12% -> marktwertGebraucht
@@ -60,6 +65,7 @@ module.exports = {
   MIN_TREFFER_GEBRAUCHT,
   MIN_TREFFER_NEU,
   QUARTIL_KAPPEN,
+  MAX_STREUUNG_PROZENT,
   ABSCHLAG_GEBRAUCHT,
   ABSCHLAG_NEU,
   TAGESBREMSE_PROZENT,

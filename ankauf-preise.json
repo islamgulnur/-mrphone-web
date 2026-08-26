@@ -803,9 +803,9 @@
         "uvpDelta": 100,
         "preise": {
           "neuVersiegelt": 375,
-          "wieNeu": 300,
-          "sehrGut": 270,
-          "gut": 240,
+          "wieNeu": 275,
+          "sehrGut": 260,
+          "gut": 225,
           "defekt": 85
         },
         "preisQuelle": "auto"
@@ -1512,7 +1512,7 @@
           "wieNeu": 290,
           "sehrGut": 265,
           "gut": 230,
-          "defekt": 100
+          "defekt": 95
         },
         "preisQuelle": "auto"
       },
@@ -1581,9 +1581,9 @@
     "id": "kat-0034",
     "kategorie": "smartphones",
     "marke": "Apple",
-    "modell": "iPhone 17 Air",
+    "modell": "iPhone Air",
     "jahr": 2025,
-    "neupreisUvp": 1249,
+    "neupreisUvp": 1199,
     "beliebt": false,
     "varianten": [
       {
@@ -1591,33 +1591,33 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 720,
-          "wieNeu": 575,
-          "sehrGut": 530,
-          "gut": 460,
+          "wieNeu": 530,
+          "sehrGut": 495,
+          "gut": 430,
           "defekt": 165
         },
         "preisQuelle": "auto"
       },
       {
         "bezeichnung": "512 GB",
-        "uvpDelta": 200,
+        "uvpDelta": 250,
         "preise": {
-          "neuVersiegelt": 840,
-          "wieNeu": 670,
-          "sehrGut": 620,
-          "gut": 540,
+          "neuVersiegelt": 855,
+          "wieNeu": 640,
+          "sehrGut": 600,
+          "gut": 520,
           "defekt": 200
         },
         "preisQuelle": "auto"
       },
       {
         "bezeichnung": "1 TB",
-        "uvpDelta": 450,
+        "uvpDelta": 500,
         "preise": {
-          "neuVersiegelt": 990,
-          "wieNeu": 790,
-          "sehrGut": 735,
-          "gut": 635,
+          "neuVersiegelt": 1005,
+          "wieNeu": 750,
+          "sehrGut": 705,
+          "gut": 610,
           "defekt": 235
         },
         "preisQuelle": "auto"
@@ -1684,7 +1684,7 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 1025,
+          "neuVersiegelt": 1010,
           "wieNeu": 815,
           "sehrGut": 740,
           "gut": 655,
@@ -2553,7 +2553,7 @@
           "wieNeu": 295,
           "sehrGut": 270,
           "gut": 215,
-          "defekt": 80
+          "defekt": 75
         },
         "preisQuelle": "auto"
       }
@@ -3837,8 +3837,8 @@
           "neuVersiegelt": 155,
           "wieNeu": 125,
           "sehrGut": 115,
-          "gut": 95,
-          "defekt": 40
+          "gut": 90,
+          "defekt": 30
         },
         "preisQuelle": "auto"
       },
@@ -4560,10 +4560,10 @@
         "uvpDelta": 100,
         "preise": {
           "neuVersiegelt": 595,
-          "wieNeu": 490,
-          "sehrGut": 445,
-          "gut": 355,
-          "defekt": 150
+          "wieNeu": 470,
+          "sehrGut": 425,
+          "gut": 345,
+          "defekt": 125
         },
         "preisQuelle": "auto"
       },
@@ -5229,19 +5229,31 @@
     "kategorie": "smartphones",
     "marke": "Redmi",
     "modell": "Note 15 Pro",
-    "jahr": 2025,
-    "neupreisUvp": 399,
+    "jahr": 2026,
+    "neupreisUvp": 349.9,
     "beliebt": false,
     "varianten": [
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
+          "neuVersiegelt": 170,
+          "wieNeu": 140,
+          "sehrGut": 130,
+          "gut": 100,
+          "defekt": 55
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 50,
+        "preise": {
           "neuVersiegelt": 195,
           "wieNeu": 160,
           "sehrGut": 145,
           "gut": 115,
-          "defekt": 55
+          "defekt": 65
         },
         "preisQuelle": "auto"
       }
@@ -5251,9 +5263,9 @@
     "id": "kat-0132",
     "kategorie": "smartphones",
     "marke": "Redmi",
-    "modell": "Note 15 Pro+",
-    "jahr": 2025,
-    "neupreisUvp": 499,
+    "modell": "Note 15 Pro+ 5G",
+    "jahr": 2026,
+    "neupreisUvp": 499.9,
     "beliebt": false,
     "varianten": [
       {
@@ -5261,22 +5273,22 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 245,
-          "wieNeu": 195,
-          "sehrGut": 180,
+          "wieNeu": 200,
+          "sehrGut": 185,
           "gut": 145,
-          "defekt": 55
+          "defekt": 50
         },
         "preisQuelle": "auto"
       },
       {
         "bezeichnung": "512 GB",
-        "uvpDelta": 200,
+        "uvpDelta": 30,
         "preise": {
-          "neuVersiegelt": 260,
+          "neuVersiegelt": 255,
           "wieNeu": 205,
           "sehrGut": 185,
           "gut": 150,
-          "defekt": 55
+          "defekt": 50
         },
         "preisQuelle": "auto"
       }
@@ -7098,9 +7110,9 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 425,
-          "wieNeu": 310,
+          "wieNeu": 300,
           "sehrGut": 280,
-          "gut": 255,
+          "gut": 245,
           "defekt": 85
         },
         "preisQuelle": "auto"
@@ -8147,10 +8159,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 450,
-          "wieNeu": 230,
-          "sehrGut": 230,
-          "gut": 195,
-          "defekt": 70
+          "wieNeu": 170,
+          "sehrGut": 155,
+          "gut": 125,
+          "defekt": 45
         },
         "preisQuelle": "auto"
       },
@@ -15566,6 +15578,2550 @@
           "sehrGut": 40,
           "gut": 30,
           "defekt": 15
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0507",
+    "kategorie": "smartphones",
+    "marke": "Apple",
+    "modell": "iPhone 17e",
+    "jahr": 2026,
+    "neupreisUvp": 699,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 485,
+          "wieNeu": 390,
+          "sehrGut": 360,
+          "gut": 310,
+          "defekt": 160
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 250,
+        "preise": {
+          "neuVersiegelt": 660,
+          "wieNeu": 530,
+          "sehrGut": 490,
+          "gut": 420,
+          "defekt": 215
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0508",
+    "kategorie": "tablets",
+    "marke": "Apple",
+    "modell": "iPad Air 11\" (M4, 2026)",
+    "jahr": 2026,
+    "neupreisUvp": 649,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 450,
+          "wieNeu": 475,
+          "sehrGut": 445,
+          "gut": 385,
+          "defekt": 145
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 130,
+        "preise": {
+          "neuVersiegelt": 540,
+          "wieNeu": 570,
+          "sehrGut": 535,
+          "gut": 460,
+          "defekt": 175
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 380,
+        "preise": {
+          "neuVersiegelt": 715,
+          "wieNeu": 750,
+          "sehrGut": 705,
+          "gut": 610,
+          "defekt": 235
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 760,
+        "preise": {
+          "neuVersiegelt": 980,
+          "wieNeu": 1030,
+          "sehrGut": 965,
+          "gut": 835,
+          "defekt": 320
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0509",
+    "kategorie": "tablets",
+    "marke": "Apple",
+    "modell": "iPad Air 13\" (M4, 2026)",
+    "jahr": 2026,
+    "neupreisUvp": 849,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 590,
+          "wieNeu": 620,
+          "sehrGut": 585,
+          "gut": 505,
+          "defekt": 195
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 130,
+        "preise": {
+          "neuVersiegelt": 680,
+          "wieNeu": 715,
+          "sehrGut": 670,
+          "gut": 580,
+          "defekt": 220
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 380,
+        "preise": {
+          "neuVersiegelt": 855,
+          "wieNeu": 900,
+          "sehrGut": 845,
+          "gut": 730,
+          "defekt": 280
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 760,
+        "preise": {
+          "neuVersiegelt": 1120,
+          "wieNeu": 1180,
+          "sehrGut": 1105,
+          "gut": 960,
+          "defekt": 365
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0510",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Neo 13\"",
+    "jahr": 2026,
+    "neupreisUvp": 699,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "8 GB · 256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 485,
+          "wieNeu": 515,
+          "sehrGut": 480,
+          "gut": 415,
+          "defekt": 160
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "8 GB · 512 GB",
+        "uvpDelta": 200,
+        "preise": {
+          "neuVersiegelt": 625,
+          "wieNeu": 660,
+          "sehrGut": 620,
+          "gut": 535,
+          "defekt": 205
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0511",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Air 13\" M5",
+    "jahr": 2026,
+    "neupreisUvp": 1199,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "16 GB · 512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 835,
+          "wieNeu": 880,
+          "sehrGut": 825,
+          "gut": 715,
+          "defekt": 275
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0512",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Air 15\" M5",
+    "jahr": 2026,
+    "neupreisUvp": 1499,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "16 GB · 512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 1040,
+          "wieNeu": 1100,
+          "sehrGut": 1035,
+          "gut": 895,
+          "defekt": 345
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0513",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Pro 14\" M5 Pro",
+    "jahr": 2026,
+    "neupreisUvp": 2499,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "24 GB · 1 TB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 1740,
+          "wieNeu": 1840,
+          "sehrGut": 1725,
+          "gut": 1495,
+          "defekt": 575
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0514",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Pro 16\" M5 Pro",
+    "jahr": 2026,
+    "neupreisUvp": 2999,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "24 GB · 1 TB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 2090,
+          "wieNeu": 2205,
+          "sehrGut": 2070,
+          "gut": 1790,
+          "defekt": 690
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0515",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Pro 14\" M5 Max",
+    "jahr": 2026,
+    "neupreisUvp": 4199,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "36 GB · 2 TB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 2925,
+          "wieNeu": 3090,
+          "sehrGut": 2895,
+          "gut": 2510,
+          "defekt": 965
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0516",
+    "kategorie": "laptops",
+    "marke": "Apple",
+    "modell": "MacBook Pro 16\" M5 Max",
+    "jahr": 2026,
+    "neupreisUvp": 4499,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "36 GB · 2 TB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 3135,
+          "wieNeu": 3310,
+          "sehrGut": 3105,
+          "gut": 2690,
+          "defekt": 1035
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0517",
+    "kategorie": "kopfhoerer",
+    "marke": "Apple",
+    "modell": "AirPods Max 2",
+    "jahr": 2026,
+    "neupreisUvp": 579,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 400,
+          "wieNeu": 425,
+          "sehrGut": 400,
+          "gut": 345,
+          "defekt": 130
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0518",
+    "kategorie": "smartphones",
+    "marke": "Google",
+    "modell": "Pixel 10a",
+    "jahr": 2026,
+    "neupreisUvp": 549,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 270,
+          "wieNeu": 220,
+          "sehrGut": 205,
+          "gut": 160,
+          "defekt": 75
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 100,
+        "preise": {
+          "neuVersiegelt": 320,
+          "wieNeu": 260,
+          "sehrGut": 240,
+          "gut": 190,
+          "defekt": 90
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0519",
+    "kategorie": "smartphones",
+    "marke": "Google",
+    "modell": "Pixel 11",
+    "jahr": 2026,
+    "neupreisUvp": 999,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 495,
+          "wieNeu": 405,
+          "sehrGut": 370,
+          "gut": 295,
+          "defekt": 140
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 130,
+        "preise": {
+          "neuVersiegelt": 560,
+          "wieNeu": 460,
+          "sehrGut": 420,
+          "gut": 335,
+          "defekt": 160
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0520",
+    "kategorie": "smartphones",
+    "marke": "Google",
+    "modell": "Pixel 11 Pro",
+    "jahr": 2026,
+    "neupreisUvp": 1199,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 595,
+          "wieNeu": 490,
+          "sehrGut": 445,
+          "gut": 355,
+          "defekt": 170
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 130,
+        "preise": {
+          "neuVersiegelt": 660,
+          "wieNeu": 540,
+          "sehrGut": 495,
+          "gut": 395,
+          "defekt": 190
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 390,
+        "preise": {
+          "neuVersiegelt": 790,
+          "wieNeu": 650,
+          "sehrGut": 595,
+          "gut": 475,
+          "defekt": 225
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0521",
+    "kategorie": "smartphones",
+    "marke": "Google",
+    "modell": "Pixel 11 Pro XL",
+    "jahr": 2026,
+    "neupreisUvp": 1399,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 695,
+          "wieNeu": 570,
+          "sehrGut": 520,
+          "gut": 415,
+          "defekt": 200
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 130,
+        "preise": {
+          "neuVersiegelt": 760,
+          "wieNeu": 625,
+          "sehrGut": 570,
+          "gut": 455,
+          "defekt": 215
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 390,
+        "preise": {
+          "neuVersiegelt": 890,
+          "wieNeu": 730,
+          "sehrGut": 670,
+          "gut": 535,
+          "defekt": 255
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0522",
+    "kategorie": "smartphones",
+    "marke": "Google",
+    "modell": "Pixel 11 Pro Fold",
+    "jahr": 2026,
+    "neupreisUvp": 1999,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 995,
+          "wieNeu": 815,
+          "sehrGut": 745,
+          "gut": 595,
+          "defekt": 285
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 130,
+        "preise": {
+          "neuVersiegelt": 1060,
+          "wieNeu": 870,
+          "sehrGut": 795,
+          "gut": 635,
+          "defekt": 305
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 390,
+        "preise": {
+          "neuVersiegelt": 1190,
+          "wieNeu": 975,
+          "sehrGut": 895,
+          "gut": 715,
+          "defekt": 340
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0523",
+    "kategorie": "smartwatches",
+    "marke": "Google",
+    "modell": "Pixel Watch 5",
+    "jahr": 2026,
+    "neupreisUvp": 419,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "41mm",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 280,
+          "wieNeu": 225,
+          "sehrGut": 200,
+          "gut": 165,
+          "defekt": 60
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "45mm",
+        "uvpDelta": 30,
+        "preise": {
+          "neuVersiegelt": 300,
+          "wieNeu": 240,
+          "sehrGut": 215,
+          "gut": 175,
+          "defekt": 60
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "41mm LTE",
+        "uvpDelta": 100,
+        "preise": {
+          "neuVersiegelt": 350,
+          "wieNeu": 275,
+          "sehrGut": 250,
+          "gut": 200,
+          "defekt": 70
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "45mm LTE",
+        "uvpDelta": 130,
+        "preise": {
+          "neuVersiegelt": 370,
+          "wieNeu": 290,
+          "sehrGut": 265,
+          "gut": 215,
+          "defekt": 75
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0524",
+    "kategorie": "smartphones",
+    "marke": "Samsung",
+    "modell": "Galaxy Z Fold 8",
+    "jahr": 2026,
+    "neupreisUvp": 1999,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 995,
+          "wieNeu": 815,
+          "sehrGut": 745,
+          "gut": 595,
+          "defekt": 320
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 200,
+        "preise": {
+          "neuVersiegelt": 1095,
+          "wieNeu": 900,
+          "sehrGut": 820,
+          "gut": 655,
+          "defekt": 350
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 450,
+        "preise": {
+          "neuVersiegelt": 1220,
+          "wieNeu": 1000,
+          "sehrGut": 915,
+          "gut": 730,
+          "defekt": 390
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0525",
+    "kategorie": "smartphones",
+    "marke": "Samsung",
+    "modell": "Galaxy Z Fold 8 Ultra",
+    "jahr": 2026,
+    "neupreisUvp": 2199,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 1095,
+          "wieNeu": 900,
+          "sehrGut": 820,
+          "gut": 655,
+          "defekt": 350
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 200,
+        "preise": {
+          "neuVersiegelt": 1195,
+          "wieNeu": 980,
+          "sehrGut": 895,
+          "gut": 715,
+          "defekt": 380
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 450,
+        "preise": {
+          "neuVersiegelt": 1320,
+          "wieNeu": 1080,
+          "sehrGut": 990,
+          "gut": 790,
+          "defekt": 420
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0526",
+    "kategorie": "kopfhoerer",
+    "marke": "Samsung",
+    "modell": "Galaxy Buds 4",
+    "jahr": 2026,
+    "neupreisUvp": 179,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 120,
+          "wieNeu": 105,
+          "sehrGut": 95,
+          "gut": 75,
+          "defekt": 25
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0527",
+    "kategorie": "kopfhoerer",
+    "marke": "Samsung",
+    "modell": "Galaxy Buds 4 Pro",
+    "jahr": 2026,
+    "neupreisUvp": 249,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 170,
+          "wieNeu": 150,
+          "sehrGut": 135,
+          "gut": 110,
+          "defekt": 40
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0528",
+    "kategorie": "smartphones",
+    "marke": "Xiaomi",
+    "modell": "15T",
+    "jahr": 2025,
+    "neupreisUvp": 649.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 300,
+          "wieNeu": 240,
+          "sehrGut": 215,
+          "gut": 175,
+          "defekt": 60
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 50,
+        "preise": {
+          "neuVersiegelt": 320,
+          "wieNeu": 255,
+          "sehrGut": 230,
+          "gut": 185,
+          "defekt": 65
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0529",
+    "kategorie": "smartphones",
+    "marke": "Xiaomi",
+    "modell": "17T",
+    "jahr": 2026,
+    "neupreisUvp": 749.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 370,
+          "wieNeu": 280,
+          "sehrGut": 255,
+          "gut": 205,
+          "defekt": 75
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 50,
+        "preise": {
+          "neuVersiegelt": 395,
+          "wieNeu": 325,
+          "sehrGut": 295,
+          "gut": 235,
+          "defekt": 100
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0530",
+    "kategorie": "smartphones",
+    "marke": "Xiaomi",
+    "modell": "17T Pro",
+    "jahr": 2026,
+    "neupreisUvp": 899.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 445,
+          "wieNeu": 335,
+          "sehrGut": 305,
+          "gut": 245,
+          "defekt": 85
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 100,
+        "preise": {
+          "neuVersiegelt": 495,
+          "wieNeu": 405,
+          "sehrGut": 370,
+          "gut": 295,
+          "defekt": 125
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 200,
+        "preise": {
+          "neuVersiegelt": 545,
+          "wieNeu": 445,
+          "sehrGut": 410,
+          "gut": 325,
+          "defekt": 140
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0531",
+    "kategorie": "smartphones",
+    "marke": "Redmi",
+    "modell": "Note 15",
+    "jahr": 2026,
+    "neupreisUvp": 199.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 95,
+          "wieNeu": 80,
+          "sehrGut": 70,
+          "gut": 55,
+          "defekt": 25
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 50,
+        "preise": {
+          "neuVersiegelt": 120,
+          "wieNeu": 100,
+          "sehrGut": 90,
+          "gut": 70,
+          "defekt": 30
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0532",
+    "kategorie": "smartphones",
+    "marke": "Redmi",
+    "modell": "Note 15 5G",
+    "jahr": 2026,
+    "neupreisUvp": 279.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 135,
+          "wieNeu": 110,
+          "sehrGut": 100,
+          "gut": 80,
+          "defekt": 35
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 20,
+        "preise": {
+          "neuVersiegelt": 145,
+          "wieNeu": 120,
+          "sehrGut": 110,
+          "gut": 85,
+          "defekt": 35
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0533",
+    "kategorie": "smartphones",
+    "marke": "Redmi",
+    "modell": "Note 15 Pro 5G",
+    "jahr": 2026,
+    "neupreisUvp": 399.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 195,
+          "wieNeu": 160,
+          "sehrGut": 145,
+          "gut": 115,
+          "defekt": 50
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 30,
+        "preise": {
+          "neuVersiegelt": 210,
+          "wieNeu": 170,
+          "sehrGut": 160,
+          "gut": 125,
+          "defekt": 50
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0534",
+    "kategorie": "smartphones",
+    "marke": "Redmi",
+    "modell": "A7 Pro",
+    "jahr": 2026,
+    "neupreisUvp": 129.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 60,
+          "wieNeu": 50,
+          "sehrGut": 45,
+          "gut": 35,
+          "defekt": 15
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 20,
+        "preise": {
+          "neuVersiegelt": 70,
+          "wieNeu": 55,
+          "sehrGut": 55,
+          "gut": 40,
+          "defekt": 15
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0535",
+    "kategorie": "smartphones",
+    "marke": "POCO",
+    "modell": "F8 Ultra",
+    "jahr": 2025,
+    "neupreisUvp": 829.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 385,
+          "wieNeu": 305,
+          "sehrGut": 275,
+          "gut": 225,
+          "defekt": 80
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 70,
+        "preise": {
+          "neuVersiegelt": 415,
+          "wieNeu": 330,
+          "sehrGut": 300,
+          "gut": 240,
+          "defekt": 85
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0536",
+    "kategorie": "smartphones",
+    "marke": "POCO",
+    "modell": "F8 Pro",
+    "jahr": 2025,
+    "neupreisUvp": 649.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 300,
+          "wieNeu": 240,
+          "sehrGut": 215,
+          "gut": 175,
+          "defekt": 60
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 50,
+        "preise": {
+          "neuVersiegelt": 320,
+          "wieNeu": 255,
+          "sehrGut": 230,
+          "gut": 185,
+          "defekt": 65
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0537",
+    "kategorie": "smartphones",
+    "marke": "POCO",
+    "modell": "X8 Pro Max",
+    "jahr": 2026,
+    "neupreisUvp": 529.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 260,
+          "wieNeu": 215,
+          "sehrGut": 195,
+          "gut": 155,
+          "defekt": 65
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 50,
+        "preise": {
+          "neuVersiegelt": 285,
+          "wieNeu": 235,
+          "sehrGut": 215,
+          "gut": 170,
+          "defekt": 70
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0538",
+    "kategorie": "smartphones",
+    "marke": "POCO",
+    "modell": "X8 Pro",
+    "jahr": 2026,
+    "neupreisUvp": 399.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 195,
+          "wieNeu": 160,
+          "sehrGut": 145,
+          "gut": 115,
+          "defekt": 50
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 50,
+        "preise": {
+          "neuVersiegelt": 220,
+          "wieNeu": 180,
+          "sehrGut": 165,
+          "gut": 130,
+          "defekt": 55
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0539",
+    "kategorie": "smartphones",
+    "marke": "POCO",
+    "modell": "M8 Pro 5G",
+    "jahr": 2026,
+    "neupreisUvp": 349.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 170,
+          "wieNeu": 140,
+          "sehrGut": 130,
+          "gut": 100,
+          "defekt": 45
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 50,
+        "preise": {
+          "neuVersiegelt": 195,
+          "wieNeu": 160,
+          "sehrGut": 145,
+          "gut": 115,
+          "defekt": 50
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0540",
+    "kategorie": "smartphones",
+    "marke": "POCO",
+    "modell": "M8 5G",
+    "jahr": 2026,
+    "neupreisUvp": 269.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 130,
+          "wieNeu": 105,
+          "sehrGut": 100,
+          "gut": 80,
+          "defekt": 35
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 30,
+        "preise": {
+          "neuVersiegelt": 145,
+          "wieNeu": 120,
+          "sehrGut": 110,
+          "gut": 85,
+          "defekt": 35
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0541",
+    "kategorie": "tablets",
+    "marke": "Xiaomi",
+    "modell": "Pad 8",
+    "jahr": 2025,
+    "neupreisUvp": 449.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 210,
+          "wieNeu": 165,
+          "sehrGut": 150,
+          "gut": 120,
+          "defekt": 45
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 50,
+        "preise": {
+          "neuVersiegelt": 235,
+          "wieNeu": 185,
+          "sehrGut": 170,
+          "gut": 135,
+          "defekt": 50
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0542",
+    "kategorie": "tablets",
+    "marke": "Xiaomi",
+    "modell": "Pad 8 Pro",
+    "jahr": 2025,
+    "neupreisUvp": 599.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 280,
+          "wieNeu": 225,
+          "sehrGut": 200,
+          "gut": 165,
+          "defekt": 60
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 150,
+        "preise": {
+          "neuVersiegelt": 350,
+          "wieNeu": 280,
+          "sehrGut": 255,
+          "gut": 205,
+          "defekt": 75
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0543",
+    "kategorie": "smartphones",
+    "marke": "Nothing",
+    "modell": "Phone (4a)",
+    "jahr": 2026,
+    "neupreisUvp": 349,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 170,
+          "wieNeu": 140,
+          "sehrGut": 130,
+          "gut": 100,
+          "defekt": 45
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 80,
+        "preise": {
+          "neuVersiegelt": 210,
+          "wieNeu": 170,
+          "sehrGut": 160,
+          "gut": 125,
+          "defekt": 55
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0544",
+    "kategorie": "smartphones",
+    "marke": "Nothing",
+    "modell": "Phone (4a) Pro",
+    "jahr": 2026,
+    "neupreisUvp": 529,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 260,
+          "wieNeu": 215,
+          "sehrGut": 195,
+          "gut": 155,
+          "defekt": 65
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 100,
+        "preise": {
+          "neuVersiegelt": 310,
+          "wieNeu": 255,
+          "sehrGut": 235,
+          "gut": 185,
+          "defekt": 80
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0545",
+    "kategorie": "smartphones",
+    "marke": "Nothing",
+    "modell": "Phone (4b)",
+    "jahr": 2026,
+    "neupreisUvp": 329,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 160,
+          "wieNeu": 130,
+          "sehrGut": 120,
+          "gut": 95,
+          "defekt": 40
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0546",
+    "kategorie": "smartphones",
+    "marke": "Nothing",
+    "modell": "Phone (3a) Lite",
+    "jahr": 2025,
+    "neupreisUvp": 249,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 115,
+          "wieNeu": 90,
+          "sehrGut": 85,
+          "gut": 65,
+          "defekt": 25
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 30,
+        "preise": {
+          "neuVersiegelt": 130,
+          "wieNeu": 105,
+          "sehrGut": 95,
+          "gut": 75,
+          "defekt": 25
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0547",
+    "kategorie": "smartphones",
+    "marke": "CMF",
+    "modell": "Phone 2 Pro",
+    "jahr": 2025,
+    "neupreisUvp": 249,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 115,
+          "wieNeu": 90,
+          "sehrGut": 85,
+          "gut": 65,
+          "defekt": 25
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 30,
+        "preise": {
+          "neuVersiegelt": 130,
+          "wieNeu": 105,
+          "sehrGut": 95,
+          "gut": 75,
+          "defekt": 25
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0548",
+    "kategorie": "smartphones",
+    "marke": "Sony",
+    "modell": "Xperia 1 VIII",
+    "jahr": 2026,
+    "neupreisUvp": 1499,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 745,
+          "wieNeu": 610,
+          "sehrGut": 560,
+          "gut": 445,
+          "defekt": 190
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 500,
+        "preise": {
+          "neuVersiegelt": 995,
+          "wieNeu": 815,
+          "sehrGut": 745,
+          "gut": 595,
+          "defekt": 255
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0549",
+    "kategorie": "smartphones",
+    "marke": "OnePlus",
+    "modell": "15R",
+    "jahr": 2025,
+    "neupreisUvp": 699,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 325,
+          "wieNeu": 255,
+          "sehrGut": 230,
+          "gut": 185,
+          "defekt": 65
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 100,
+        "preise": {
+          "neuVersiegelt": 370,
+          "wieNeu": 295,
+          "sehrGut": 265,
+          "gut": 215,
+          "defekt": 75
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0550",
+    "kategorie": "smartphones",
+    "marke": "Honor",
+    "modell": "Magic V6",
+    "jahr": 2026,
+    "neupreisUvp": 2299.99,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 1145,
+          "wieNeu": 940,
+          "sehrGut": 860,
+          "gut": 685,
+          "defekt": 290
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0551",
+    "kategorie": "smartphones",
+    "marke": "Honor",
+    "modell": "Magic 8 Pro",
+    "jahr": 2026,
+    "neupreisUvp": 1299.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 645,
+          "wieNeu": 530,
+          "sehrGut": 485,
+          "gut": 385,
+          "defekt": 165
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0552",
+    "kategorie": "smartphones",
+    "marke": "Honor",
+    "modell": "600",
+    "jahr": 2026,
+    "neupreisUvp": 599.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 295,
+          "wieNeu": 240,
+          "sehrGut": 220,
+          "gut": 175,
+          "defekt": 75
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0553",
+    "kategorie": "smartphones",
+    "marke": "Honor",
+    "modell": "600 Pro",
+    "jahr": 2026,
+    "neupreisUvp": 999.9,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 495,
+          "wieNeu": 405,
+          "sehrGut": 370,
+          "gut": 295,
+          "defekt": 125
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0554",
+    "kategorie": "smartphones",
+    "marke": "Fairphone",
+    "modell": "Fairphone (Gen. 6)",
+    "jahr": 2025,
+    "neupreisUvp": 599,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "8 GB · 256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 275,
+          "wieNeu": 220,
+          "sehrGut": 200,
+          "gut": 160,
+          "defekt": 55
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0555",
+    "kategorie": "smartphones",
+    "marke": "Fairphone",
+    "modell": "Fairphone (Gen. 6+)",
+    "jahr": 2026,
+    "neupreisUvp": 649,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "12 GB · 256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 320,
+          "wieNeu": 260,
+          "sehrGut": 240,
+          "gut": 190,
+          "defekt": 80
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0556",
+    "kategorie": "smartphones",
+    "marke": "Asus",
+    "modell": "Asus Zenfone 12 Ultra",
+    "jahr": 2025,
+    "neupreisUvp": 1099,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "16 GB · 512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 510,
+          "wieNeu": 405,
+          "sehrGut": 370,
+          "gut": 295,
+          "defekt": 105
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0557",
+    "kategorie": "smartphones",
+    "marke": "Asus",
+    "modell": "Asus ROG Phone 9",
+    "jahr": 2025,
+    "neupreisUvp": 1149.99,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "12 GB · 512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 535,
+          "wieNeu": 425,
+          "sehrGut": 385,
+          "gut": 310,
+          "defekt": 110
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0558",
+    "kategorie": "smartphones",
+    "marke": "Asus",
+    "modell": "Asus ROG Phone 9 Pro",
+    "jahr": 2025,
+    "neupreisUvp": 1299.99,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "16 GB · 512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 605,
+          "wieNeu": 480,
+          "sehrGut": 435,
+          "gut": 350,
+          "defekt": 125
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0559",
+    "kategorie": "smartphones",
+    "marke": "Oppo",
+    "modell": "Oppo Find X9 Pro",
+    "jahr": 2025,
+    "neupreisUvp": 1299,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "16 GB · 512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 605,
+          "wieNeu": 480,
+          "sehrGut": 435,
+          "gut": 350,
+          "defekt": 125
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0560",
+    "kategorie": "smartphones",
+    "marke": "Huawei",
+    "modell": "Mate X6",
+    "jahr": 2025,
+    "neupreisUvp": 1999,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 930,
+          "wieNeu": 740,
+          "sehrGut": 670,
+          "gut": 540,
+          "defekt": 195
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0561",
+    "kategorie": "smartphones",
+    "marke": "Huawei",
+    "modell": "Mate X7",
+    "jahr": 2026,
+    "neupreisUvp": 2099,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 1045,
+          "wieNeu": 855,
+          "sehrGut": 785,
+          "gut": 625,
+          "defekt": 265
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0562",
+    "kategorie": "smartphones",
+    "marke": "Huawei",
+    "modell": "Pura 80 Pro",
+    "jahr": 2025,
+    "neupreisUvp": 1099,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 510,
+          "wieNeu": 405,
+          "sehrGut": 370,
+          "gut": 295,
+          "defekt": 105
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0563",
+    "kategorie": "smartphones",
+    "marke": "Huawei",
+    "modell": "Pura 80 Ultra",
+    "jahr": 2025,
+    "neupreisUvp": 1499,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 700,
+          "wieNeu": 555,
+          "sehrGut": 505,
+          "gut": 405,
+          "defekt": 145
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0564",
+    "kategorie": "smartphones",
+    "marke": "Huawei",
+    "modell": "nova 14 Pro",
+    "jahr": 2025,
+    "neupreisUvp": 699,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 325,
+          "wieNeu": 255,
+          "sehrGut": 230,
+          "gut": 185,
+          "defekt": 65
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0565",
+    "kategorie": "tablets",
+    "marke": "Lenovo",
+    "modell": "Legion Tab Gen 3",
+    "jahr": 2025,
+    "neupreisUvp": 649,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "12 GB · 256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 300,
+          "wieNeu": 240,
+          "sehrGut": 215,
+          "gut": 175,
+          "defekt": 60
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0566",
+    "kategorie": "tablets",
+    "marke": "Huawei",
+    "modell": "MatePad Pro Max",
+    "jahr": 2026,
+    "neupreisUvp": 1299,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 780,
+          "wieNeu": 620,
+          "sehrGut": 560,
+          "gut": 455,
+          "defekt": 165
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0567",
+    "kategorie": "tablets",
+    "marke": "Huawei",
+    "modell": "MatePad Pro 12.2\"",
+    "jahr": 2025,
+    "neupreisUvp": 999,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 465,
+          "wieNeu": 370,
+          "sehrGut": 335,
+          "gut": 270,
+          "defekt": 95
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0568",
+    "kategorie": "tablets",
+    "marke": "Huawei",
+    "modell": "MatePad 12 X",
+    "jahr": 2025,
+    "neupreisUvp": 649,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 300,
+          "wieNeu": 240,
+          "sehrGut": 215,
+          "gut": 175,
+          "defekt": 60
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0569",
+    "kategorie": "tablets",
+    "marke": "Huawei",
+    "modell": "MatePad 11.5 S",
+    "jahr": 2025,
+    "neupreisUvp": 499,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 235,
+          "wieNeu": 185,
+          "sehrGut": 170,
+          "gut": 135,
+          "defekt": 50
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0570",
+    "kategorie": "tablets",
+    "marke": "Huawei",
+    "modell": "MatePad 11.5",
+    "jahr": 2025,
+    "neupreisUvp": 349,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 165,
+          "wieNeu": 130,
+          "sehrGut": 115,
+          "gut": 95,
+          "defekt": 35
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0571",
+    "kategorie": "smartwatches",
+    "marke": "Huawei",
+    "modell": "Watch 5",
+    "jahr": 2025,
+    "neupreisUvp": 449,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "42mm",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 210,
+          "wieNeu": 165,
+          "sehrGut": 150,
+          "gut": 120,
+          "defekt": 45
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "46mm",
+        "uvpDelta": 100,
+        "preise": {
+          "neuVersiegelt": 255,
+          "wieNeu": 205,
+          "sehrGut": 185,
+          "gut": 150,
+          "defekt": 55
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "46mm Titanarmband",
+        "uvpDelta": 200,
+        "preise": {
+          "neuVersiegelt": 305,
+          "wieNeu": 240,
+          "sehrGut": 220,
+          "gut": 175,
+          "defekt": 65
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0572",
+    "kategorie": "smartwatches",
+    "marke": "Huawei",
+    "modell": "Watch GT 6",
+    "jahr": 2025,
+    "neupreisUvp": 249,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "41mm",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 115,
+          "wieNeu": 90,
+          "sehrGut": 85,
+          "gut": 65,
+          "defekt": 25
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "46mm",
+        "uvpDelta": 20,
+        "preise": {
+          "neuVersiegelt": 125,
+          "wieNeu": 100,
+          "sehrGut": 90,
+          "gut": 70,
+          "defekt": 25
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0573",
+    "kategorie": "smartwatches",
+    "marke": "Huawei",
+    "modell": "Watch GT 6 Pro",
+    "jahr": 2025,
+    "neupreisUvp": 379,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "46mm",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 175,
+          "wieNeu": 140,
+          "sehrGut": 125,
+          "gut": 100,
+          "defekt": 35
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "46mm Titanarmband",
+        "uvpDelta": 120,
+        "preise": {
+          "neuVersiegelt": 235,
+          "wieNeu": 185,
+          "sehrGut": 170,
+          "gut": 135,
+          "defekt": 50
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0574",
+    "kategorie": "smartwatches",
+    "marke": "Huawei",
+    "modell": "Watch Buds 2",
+    "jahr": 2026,
+    "neupreisUvp": 499,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 300,
+          "wieNeu": 240,
+          "sehrGut": 215,
+          "gut": 175,
+          "defekt": 60
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0575",
+    "kategorie": "smartwatches",
+    "marke": "Huawei",
+    "modell": "Watch Fit 5",
+    "jahr": 2025,
+    "neupreisUvp": 199,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 90,
+          "wieNeu": 75,
+          "sehrGut": 65,
+          "gut": 55,
+          "defekt": 20
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0576",
+    "kategorie": "smartwatches",
+    "marke": "Huawei",
+    "modell": "Watch Fit 5 Pro",
+    "jahr": 2025,
+    "neupreisUvp": 299,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 140,
+          "wieNeu": 110,
+          "sehrGut": 100,
+          "gut": 80,
+          "defekt": 30
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0577",
+    "kategorie": "smartwatches",
+    "marke": "Garmin",
+    "modell": "Forerunner 570",
+    "jahr": 2025,
+    "neupreisUvp": 549.99,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "42mm",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 255,
+          "wieNeu": 205,
+          "sehrGut": 185,
+          "gut": 150,
+          "defekt": 55
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "47mm",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 255,
+          "wieNeu": 205,
+          "sehrGut": 185,
+          "gut": 150,
+          "defekt": 55
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0578",
+    "kategorie": "smartwatches",
+    "marke": "Garmin",
+    "modell": "Forerunner 970",
+    "jahr": 2025,
+    "neupreisUvp": 749.99,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "47mm",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 345,
+          "wieNeu": 275,
+          "sehrGut": 250,
+          "gut": 200,
+          "defekt": 70
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0579",
+    "kategorie": "smartwatches",
+    "marke": "Garmin",
+    "modell": "Venu 4",
+    "jahr": 2025,
+    "neupreisUvp": 549.99,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "41mm",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 255,
+          "wieNeu": 205,
+          "sehrGut": 185,
+          "gut": 150,
+          "defekt": 55
+        },
+        "preisQuelle": "auto"
+      },
+      {
+        "bezeichnung": "45mm",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 255,
+          "wieNeu": 205,
+          "sehrGut": 185,
+          "gut": 150,
+          "defekt": 55
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0580",
+    "kategorie": "smartwatches",
+    "marke": "Garmin",
+    "modell": "Venu X1",
+    "jahr": 2025,
+    "neupreisUvp": 799.99,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 370,
+          "wieNeu": 295,
+          "sehrGut": 265,
+          "gut": 215,
+          "defekt": 75
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0581",
+    "kategorie": "kopfhoerer",
+    "marke": "Sony",
+    "modell": "WF-1000XM6",
+    "jahr": 2026,
+    "neupreisUvp": 299,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 175,
+          "wieNeu": 140,
+          "sehrGut": 125,
+          "gut": 100,
+          "defekt": 35
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0582",
+    "kategorie": "kopfhoerer",
+    "marke": "Bose",
+    "modell": "QuietComfort Ultra (2. Gen.)",
+    "jahr": 2025,
+    "neupreisUvp": 449,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 210,
+          "wieNeu": 165,
+          "sehrGut": 150,
+          "gut": 120,
+          "defekt": 45
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0583",
+    "kategorie": "kopfhoerer",
+    "marke": "Bose",
+    "modell": "QuietComfort Ultra Earbuds (2. Gen.)",
+    "jahr": 2025,
+    "neupreisUvp": 299,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 140,
+          "wieNeu": 110,
+          "sehrGut": 100,
+          "gut": 80,
+          "defekt": 30
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0584",
+    "kategorie": "kopfhoerer",
+    "marke": "JBL",
+    "modell": "Tour One M3",
+    "jahr": 2025,
+    "neupreisUvp": 349.99,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 165,
+          "wieNeu": 130,
+          "sehrGut": 115,
+          "gut": 95,
+          "defekt": 35
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0585",
+    "kategorie": "kopfhoerer",
+    "marke": "JBL",
+    "modell": "Tour One M3 Smart Tx",
+    "jahr": 2025,
+    "neupreisUvp": 399.99,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 185,
+          "wieNeu": 150,
+          "sehrGut": 135,
+          "gut": 110,
+          "defekt": 40
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0586",
+    "kategorie": "kopfhoerer",
+    "marke": "Huawei",
+    "modell": "FreeClip 2",
+    "jahr": 2025,
+    "neupreisUvp": 199,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 90,
+          "wieNeu": 75,
+          "sehrGut": 65,
+          "gut": 55,
+          "defekt": 20
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0587",
+    "kategorie": "kopfhoerer",
+    "marke": "Huawei",
+    "modell": "FreeClip 2 S",
+    "jahr": 2026,
+    "neupreisUvp": 229,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 135,
+          "wieNeu": 105,
+          "sehrGut": 95,
+          "gut": 75,
+          "defekt": 25
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0588",
+    "kategorie": "kopfhoerer",
+    "marke": "Huawei",
+    "modell": "FreeBuds Pro 5",
+    "jahr": 2025,
+    "neupreisUvp": 199,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 90,
+          "wieNeu": 75,
+          "sehrGut": 65,
+          "gut": 55,
+          "defekt": 20
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0589",
+    "kategorie": "kopfhoerer",
+    "marke": "Huawei",
+    "modell": "FreeBuds 7i",
+    "jahr": 2025,
+    "neupreisUvp": 99.99,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 40,
+          "wieNeu": 30,
+          "sehrGut": 30,
+          "gut": 25,
+          "defekt": 10
+        },
+        "preisQuelle": "auto"
+      }
+    ]
+  },
+  {
+    "id": "kat-0590",
+    "kategorie": "kopfhoerer",
+    "marke": "Huawei",
+    "modell": "FreeBuds SE 4",
+    "jahr": 2025,
+    "neupreisUvp": 59.99,
+    "beliebt": false,
+    "varianten": [
+      {
+        "bezeichnung": "Standard",
+        "uvpDelta": 0,
+        "preise": {
+          "neuVersiegelt": 15,
+          "wieNeu": 10,
+          "sehrGut": 10,
+          "gut": 10,
+          "defekt": 5
         },
         "preisQuelle": "auto"
       }

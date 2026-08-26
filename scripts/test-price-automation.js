@@ -2,6 +2,7 @@ const assert = require("assert");
 const config = require("./ankaufspreis-config");
 const pricing = require("../pricing-config");
 const competitor = require("./lib/competitor-client");
+const ebay = require("./lib/ebay-client");
 
 async function test() {
   assert.strictEqual(config.wettbewerbsZiel(200), 185);
@@ -52,6 +53,54 @@ async function test() {
   });
   assert.strictEqual(ohneWettbewerb, 1065);
   assert.strictEqual(mitWettbewerb, 950);
+
+  assert.strictEqual(pricing.berechneVkSicherheitsdeckel(1000, "neuVersiegelt", "Apple"), 880);
+  assert.strictEqual(pricing.berechneVkSicherheitsdeckel(100, "neuVersiegelt", "Apple"), 85);
+  assert.strictEqual(pricing.berechneVkSicherheitsdeckel(230, "wieNeu", "Samsung"), 170);
+  assert.strictEqual(pricing.berechneVkSicherheitsdeckel(230, "sehrGut", "Samsung"), 155);
+  assert.strictEqual(pricing.berechneVkSicherheitsdeckel(230, "sehrGut", "Apple"), 170);
+
+  const unsicherePreise = { neuVersiegelt: 950, wieNeu: 220, sehrGut: 210, gut: 200, defekt: 100 };
+  const deckelAenderungen = pricing.wendeVkSicherheitsdeckelAn(
+    unsicherePreise,
+    { neu: 1000, gebraucht: 230 },
+    "Samsung"
+  );
+  assert.deepStrictEqual(unsicherePreise, {
+    neuVersiegelt: 880,
+    wieNeu: 170,
+    sehrGut: 155,
+    gut: 125,
+    defekt: 45,
+  });
+  assert.strictEqual(deckelAenderungen.length, 5);
+
+  assert(ebay.titelPasstExakt("Apple iPhone 17 Pro 256 GB Schwarz", {
+    marke: "Apple", modell: "iPhone 17 Pro", variante: "256 GB", kategorie: "smartphones",
+  }));
+  assert(!ebay.titelPasstExakt("Apple iPhone 17 Pro Max 256 GB Schwarz", {
+    marke: "Apple", modell: "iPhone 17 Pro", variante: "256 GB", kategorie: "smartphones",
+  }));
+  assert(!ebay.titelPasstExakt("Hülle für Apple iPhone 17 Pro 256 GB", {
+    marke: "Apple", modell: "iPhone 17 Pro", variante: "256 GB", kategorie: "smartphones",
+  }));
+  assert(ebay.titelPasstExakt("Samsung Galaxy Watch9 GPS 44mm Bluetooth", {
+    marke: "Samsung", modell: "Galaxy Watch9", variante: "44mm", kategorie: "smartwatches",
+  }));
+  assert(!ebay.titelPasstExakt("Samsung Galaxy Watch9 GPS 40mm Bluetooth", {
+    marke: "Samsung", modell: "Galaxy Watch9", variante: "44mm", kategorie: "smartwatches",
+  }));
+  assert(ebay.titelPasstExakt("Apple MacBook Air 13 M4 16GB 256GB", {
+    marke: "Apple", modell: "MacBook Air 13\" M4", variante: "16 GB · 256 GB", kategorie: "laptops",
+  }));
+  assert(!ebay.titelPasstExakt("Apple MacBook Air 13 M4 16GB 512GB", {
+    marke: "Apple", modell: "MacBook Air 13\" M4", variante: "16 GB · 256 GB", kategorie: "laptops",
+  }));
+
+  const stabilePreise = ebay.quartilMedian([95, 98, 100, 102, 105, 107, 110, 112], 0.25);
+  const gestreutePreise = ebay.quartilMedian([20, 35, 60, 90, 140, 220, 400, 700], 0.25);
+  assert(stabilePreise.streuungProzent < config.MAX_STREUUNG_PROZENT);
+  assert(gestreutePreise.streuungProzent > config.MAX_STREUUNG_PROZENT);
 
   console.log("Preisautomatik-Tests erfolgreich.");
 }

@@ -33,7 +33,8 @@
  *   1. preisQuelle:"manuell" wird nie angefasst.
  *   2. Tagesbremse ±10 %/Tag (Ausnahme: allererster echter Marktlauf eines Geräts, s. u.).
  *   3. Konsistenzregel 1 (EINZIGE verbleibende Sicherheitsregel neben neuVersiegelt):
- *      Ankaufspreis nie über eigenem Verkaufspreis (bestand.json).
+ *      Harte Mindestmarge zum eigenen Verkaufspreis (bestand.json): Neu maximal 88 %, gebrauchte
+ *      Stufen je nach Marke/Zustand maximal 20-80 %, zusaetzlich mindestens 15/20 Euro Abstand.
  *   4. Konsistenzregel 2: marktwertNeu muss > marktwertGebraucht sein, sonst Skip.
  *   5. validate-data.js muss nach der Berechnung grün sein, sonst kein Commit/Schreiben.
  *   6. API-Ausfall/Fehler: alte Preise bleiben unverändert, sichtbarer Fehlschlag.
@@ -199,6 +200,15 @@ async function holeMarktwert({ geraet, variante, zustand, zugangskontext, budget
   }
 
   const quartil = searchClient.quartilMedian(ergebnis.preise, config.QUARTIL_KAPPEN);
+  if (quartil.streuungProzent > config.MAX_STREUUNG_PROZENT) {
+    return {
+      treffer: ergebnis.preise.length,
+      marktwert: null,
+      quartil,
+      grund: "Preise zu stark gestreut (" + Math.round(quartil.streuungProzent * 100) + "% > " +
+        Math.round(config.MAX_STREUUNG_PROZENT * 100) + "%)",
+    };
+  }
   const abschlag = zustand === "NEW" ? config.ABSCHLAG_NEU : config.ABSCHLAG_GEBRAUCHT;
   const marktwert = quartil.medianNachFilter * (1 - abschlag);
   return { treffer: ergebnis.preise.length, marktwert, quartil, abschlag };
@@ -247,18 +257,20 @@ function wendeTagesbremseAn({ stufenRoh, altPreise, istErsterLauf }) {
   return { stufenFinal, pruefenGruende };
 }
 
-function wendeKonsistenzregel1An({ stufenFinal, geraet, variante, bestandListe }) {
-  const pruefenGruende = [];
-  pricing.ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
-    if (stufenFinal[stufe] == null) return;
-    const zustandKey = stufe === "neuVersiegelt" ? "neu" : "gebraucht";
-    const eigenerPreis = pricing.findeEigenenVerkaufspreis(bestandListe, geraet, variante, zustandKey);
-    if (eigenerPreis != null && stufenFinal[stufe] > eigenerPreis) {
-      stufenFinal[stufe] = pricing.rundeAuf5(eigenerPreis);
-      pruefenGruende.push(stufe + ": über eigenem Verkaufspreis (" + eigenerPreis + " €) gekappt");
-    }
-  });
-  return pruefenGruende;
+function wendeKonsistenzregel1An({ stufenFinal, geraet, variante, bestandListe, marktwertNeu, marktwertGebraucht }) {
+  const eigenerNeu = pricing.findeEigenenVerkaufspreis(bestandListe, geraet, variante, "neu");
+  const eigenerGebraucht = pricing.findeEigenenVerkaufspreis(bestandListe, geraet, variante, "gebraucht");
+  const niedrigsterGueltigerWert = (...werte) => {
+    const gueltig = werte.map(Number).filter((wert) => Number.isFinite(wert) && wert > 0);
+    return gueltig.length ? Math.min(...gueltig) : null;
+  };
+  return pricing.wendeVkSicherheitsdeckelAn(stufenFinal, {
+    neu: niedrigsterGueltigerWert(eigenerNeu, marktwertNeu),
+    gebraucht: niedrigsterGueltigerWert(eigenerGebraucht, marktwertGebraucht),
+  }, geraet.marke).map((aenderung) => (
+    aenderung.stufe + ": Mindestmarge zum niedrigsten VK-/Marktanker " + aenderung.verkaufspreis +
+    " € eingehalten (maximal " + aenderung.neu + " €)"
+  ));
 }
 
 // ---------------------------------------------------------------------------
@@ -286,7 +298,7 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
   if (gebraucht.marktwert == null) {
     return {
       variante: altVariante || bauePlatzhalterVariante(variante),
-      protokoll: { typ: "uebersprungen", ...basis, grund: "zu wenige Gebraucht-Treffer (" + gebraucht.treffer + " < " + config.MIN_TREFFER_GEBRAUCHT + ")" },
+        protokoll: { typ: "uebersprungen", ...basis, grund: gebraucht.grund || ("zu wenige Gebraucht-Treffer (" + gebraucht.treffer + " < " + config.MIN_TREFFER_GEBRAUCHT + ")") },
     };
   }
 
@@ -405,7 +417,10 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     });
   }
 
-  const konsistenzGruende = wendeKonsistenzregel1An({ stufenFinal, geraet, variante, bestandListe });
+  const konsistenzGruende = wendeKonsistenzregel1An({
+    stufenFinal, geraet, variante, bestandListe,
+    marktwertNeu, marktwertGebraucht: gebraucht.marktwert,
+  });
 
   const alleGruende = [...bremseGruende, ...konsistenzGruende];
   if (marktwertNeuVerworfen) {
@@ -425,6 +440,7 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     gebrauchtMedianNach: gebraucht.quartil.medianNachFilter,
     marktwertGebraucht: gebraucht.marktwert,
     neuTreffer: neu.treffer,
+    neuGrund: neu.grund,
     neuMedianVor: neu.quartil && neu.quartil.medianVorFilter,
     neuMedianNach: neu.quartil && neu.quartil.medianNachFilter,
     marktwertNeuRoh,
@@ -469,7 +485,7 @@ function formatiereRechnung(r) {
   } else if (r.marktwertNeu != null) {
     zeilen.push("- Neu: " + r.neuTreffer + " Treffer, Median vor Filter " + rund(r.neuMedianVor) + " €, nach Filter " + rund(r.neuMedianNach) + " € → marktwertNeu " + rund(r.marktwertNeu) + " € (−" + Math.round(config.ABSCHLAG_NEU * 100) + "%)");
   } else {
-    zeilen.push("- Neu: " + r.neuTreffer + " Treffer (< " + config.MIN_TREFFER_NEU + ") → marktwertNeu = null");
+    zeilen.push("- Neu: " + (r.neuGrund || (r.neuTreffer + " Treffer (< " + config.MIN_TREFFER_NEU + ")")) + " → marktwertNeu = null");
   }
   const altVK = r.eigenerVKNeu;
   zeilen.push(
