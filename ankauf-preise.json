@@ -1696,7 +1696,7 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
         "preise": {
-          "neuVersiegelt": 1180,
+          "neuVersiegelt": 1170,
           "wieNeu": 815,
           "sehrGut": 740,
           "gut": 665,
@@ -8077,9 +8077,9 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 165,
-          "wieNeu": 135,
+          "wieNeu": 130,
           "sehrGut": 120,
-          "gut": 100,
+          "gut": 95,
           "defekt": 35
         },
         "preisQuelle": "auto"
@@ -9193,7 +9193,7 @@
         "bezeichnung": "GPS",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 325,
+          "neuVersiegelt": 305,
           "wieNeu": 315,
           "sehrGut": 285,
           "gut": 260,

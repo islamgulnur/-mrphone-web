@@ -6,7 +6,7 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const SNAPSHOT = path.join(ROOT, ".pos-stock-snapshot.json");
-const POS_URL = process.env.POS_BESTAND_URL || "https://pos.mrphone-frankfurt.de/api/public/bestand";
+const POS_URL = process.env.POS_BESTAND_URL || "https://mrphone-pos.vercel.app/api/public/bestand";
 const TIMEOUT_MS = 15000;
 
 function pruefeSnapshot(payload) {

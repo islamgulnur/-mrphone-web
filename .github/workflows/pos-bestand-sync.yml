@@ -32,12 +32,12 @@ jobs:
 
       - name: Änderungen veröffentlichen
         run: |
-          if [ -z "$(git status --porcelain -- bestand.json produkte sitemap.xml scripts/produktseiten-manifest.json)" ]; then
+          if [ -z "$(git status --porcelain -- bestand.json ankauf-preise.json ankauf produkte sitemap.xml scripts/produktseiten-manifest.json)" ]; then
             echo "Keine Bestandsänderung – kein Commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add bestand.json produkte/ sitemap.xml scripts/produktseiten-manifest.json
+          git add bestand.json ankauf-preise.json ankauf/ produkte/ sitemap.xml scripts/produktseiten-manifest.json
           git commit -m "chore(stock): sync public POS inventory"
           git push

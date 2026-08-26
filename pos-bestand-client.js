@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var POS_URL = "https://pos.mrphone-frankfurt.de/api/public/bestand";
+  var POS_URL = "https://mrphone-pos.vercel.app/api/public/bestand";
 
   function sauber(value) {
     return String(value == null ? "" : value).trim().replace(/\s+/g, " ");

@@ -9,6 +9,9 @@ const { spawnSync } = require("child_process");
 const ROOT = path.resolve(__dirname, "..");
 const BESTAND = path.join(ROOT, "bestand.json");
 const SNAPSHOT = path.join(ROOT, ".pos-stock-snapshot.json");
+const ANKAUF = path.join(ROOT, "ankauf-preise.json");
+const ANKAUF_SPLIT = ["smartphones", "tablets", "smartwatches", "laptops", "pcs", "monitore", "kopfhoerer", "kameras", "konsolen", "zubehoer"]
+  .map((kategorie) => path.join(ROOT, "ankauf", `${kategorie}.json`));
 const APPLY = process.argv.includes("--apply");
 
 function sauber(value) {
@@ -70,7 +73,8 @@ function stabileId(key) {
   return `pos-${crypto.createHash("sha256").update(key).digest("hex").slice(0, 20)}`;
 }
 
-const alt = JSON.parse(fs.readFileSync(BESTAND, "utf8"));
+const originalDateien = new Map([BESTAND, ANKAUF, ...ANKAUF_SPLIT].map((datei) => [datei, fs.readFileSync(datei, "utf8")]));
+const alt = JSON.parse(originalDateien.get(BESTAND));
 const snapshot = JSON.parse(fs.readFileSync(SNAPSHOT, "utf8"));
 if (!Array.isArray(snapshot.daten) || snapshot.daten.length === 0) {
   throw new Error("POS-Snapshot ist leer oder ungueltig; Bestand bleibt unveraendert.");
@@ -142,12 +146,13 @@ function fuehreSkriptAus(datei, args = []) {
 }
 
 try {
+  fuehreSkriptAus(path.join("scripts", "wende-vk-sicherheitsdeckel.js"));
   fuehreSkriptAus("validate-data.js");
   fuehreSkriptAus(path.join("scripts", "build-produktseiten.js"));
   fuehreSkriptAus(path.join("scripts", "test-produktseiten.js"));
   console.log("bestand.json und die zugehörigen Google-Produktseiten wurden aktualisiert.");
 } catch (error) {
-  fs.writeFileSync(BESTAND, `${JSON.stringify(alt, null, 2)}\n`, "utf8");
+  originalDateien.forEach((inhalt, datei) => fs.writeFileSync(datei, inhalt, "utf8"));
   try { fuehreSkriptAus(path.join("scripts", "build-produktseiten.js")); } catch (_) { /* ursprünglichen Fehler bewahren */ }
   throw new Error(`POS-Synchronisierung zurückgerollt: ${error.message}`);
 }

@@ -721,7 +721,7 @@
     holeJson(assetUrl("bestand.json"), 5000)
       .then(function (lokalerBestand) {
         var lokal = Array.isArray(lokalerBestand) ? lokalerBestand : [];
-        return holeJson("https://pos.mrphone-frankfurt.de/api/public/bestand", 5000)
+        return holeJson("https://mrphone-pos.vercel.app/api/public/bestand", 5000)
           .then(function (payload) { return normalisierePosDaten(payload, lokal); })
           .catch(function () { return lokal; });
       })
