@@ -248,7 +248,8 @@ function produktSeite(gruppe, alleGruppen, bilder) {
   const angeboteHtml = gruppe.items.map((item, index) => {
     const details = [sauber(item.speicher), sauber(item.farbe)].filter(Boolean).join(" · ") || "Standardausführung";
     const menge = Number(item.menge);
-    return `<article class="produkt-angebot" id="angebot-${index + 1}"><div><h2>${html(details)}</h2><p><span class="produkt-badge">${html(zustandLabel(item.zustand))}</span> ${menge === 1 ? "1 Stück verfügbar" : `${menge} Stück verfügbar`}</p></div><strong>${html(preis(item.preis))}</strong><a class="produkt-btn produkt-btn--klein" href="${html(whatsapp)}" target="_blank" rel="noopener">Verfügbarkeit anfragen</a></article>`;
+    const badgeKlasse = sauber(item.zustand).toLowerCase() === "neu" ? "produkt-badge--neu" : "produkt-badge--gebraucht";
+    return `<article class="produkt-angebot" id="angebot-${index + 1}"><div><h2>${html(details)}</h2><p><span class="produkt-badge ${badgeKlasse}">${html(zustandLabel(item.zustand))}</span> ${menge === 1 ? "1 Stück verfügbar" : `${menge} Stück verfügbar`}</p></div><strong>${html(preis(item.preis))}</strong><a class="produkt-btn produkt-btn--klein" href="${html(whatsapp)}" target="_blank" rel="noopener">Verfügbarkeit anfragen</a></article>`;
   }).join("\n");
   const verwandte = alleGruppen
     .filter((item) => item.slug !== gruppe.slug && (item.marke === gruppe.marke || item.kategorie === gruppe.kategorie))

@@ -20,6 +20,9 @@ for (const gruppe of artefakte.gruppen) {
   const title = inhalt.match(/<title>([^<]+)<\/title>/)?.[1] || "";
   const description = inhalt.match(/<meta name="description" content="([^"]+)">/)?.[1] || "";
   const offers = (inhalt.match(/"@type": "Offer"/g) || []).length;
+  const neuBadges = (inhalt.match(/produkt-badge--neu/g) || []).length;
+  const gebrauchtBadges = (inhalt.match(/produkt-badge--gebraucht/g) || []).length;
+  const erwartetNeu = gruppe.items.filter((item) => String(item.zustand || "").trim().toLowerCase() === "neu").length;
   if (h1 !== 1) fehler.push(`${gruppe.slug}: erwartet genau eine H1, gefunden ${h1}`);
   if (title.length < 30 || title.length > 65) fehler.push(`${gruppe.slug}: Title-Länge ${title.length}`);
   if (description.length < 110 || description.length > 165) fehler.push(`${gruppe.slug}: Meta-Description-Länge ${description.length}`);
@@ -31,7 +34,14 @@ for (const gruppe of artefakte.gruppen) {
   if (!inhalt.includes('href="/dark-theme.css"')) fehler.push(`${gruppe.slug}: gemeinsames Dark-Theme fehlt`);
   if (!inhalt.includes('src="/main.js"')) fehler.push(`${gruppe.slug}: gemeinsame Website-Funktionen fehlen`);
   if (offers !== gruppe.items.length) fehler.push(`${gruppe.slug}: ${offers} Schema-Angebote statt ${gruppe.items.length}`);
+  if (neuBadges !== erwartetNeu) fehler.push(`${gruppe.slug}: ${neuBadges} Neu-Badges statt ${erwartetNeu}`);
+  if (gebrauchtBadges !== gruppe.items.length - erwartetNeu) fehler.push(`${gruppe.slug}: ${gebrauchtBadges} Gebraucht-Badges statt ${gruppe.items.length - erwartetNeu}`);
   if (/noindex/i.test(inhalt)) fehler.push(`${gruppe.slug}: enthält noindex`);
+}
+
+const liveClient = fs.readFileSync(path.join(ROOT, "pos-bestand-client.js"), "utf8");
+if (!liveClient.includes('produkt-badge--neu') || !liveClient.includes('produkt-badge--gebraucht')) {
+  fehler.push("POS-Live-Anzeige unterscheidet Neu- und Gebraucht-Badges nicht");
 }
 
 const sitemap = fs.readFileSync(path.join(ROOT, "sitemap.xml"), "utf8");

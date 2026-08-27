@@ -52,7 +52,8 @@
     titel.textContent = [sauber(item.speicher), sauber(item.farbe)].filter(Boolean).join(" · ") || "Standardausführung";
     var meta = document.createElement("p");
     var badge = document.createElement("span");
-    badge.className = "produkt-badge";
+    var istNeu = sauber(item.zustand).toLowerCase() === "neu";
+    badge.className = "produkt-badge " + (istNeu ? "produkt-badge--neu" : "produkt-badge--gebraucht");
     badge.textContent = zustand(item.zustand);
     meta.appendChild(badge);
     meta.appendChild(document.createTextNode(" " + (Number(item.menge) === 1 ? "1 Stück verfügbar" : Number(item.menge) + " Stück verfügbar")));

@@ -256,12 +256,21 @@
   display: inline-flex;
   margin-right: 0.3rem;
   padding: 0.2rem 0.58rem;
-  border: 1px solid var(--hairline);
   border-radius: 999px;
-  background: var(--signal-wash);
-  color: var(--signal);
   font-size: 0.76rem;
   font-weight: 700;
+}
+
+.produkt-badge--neu {
+  border: 1px solid var(--signal);
+  background: var(--signal);
+  color: var(--ink);
+}
+
+.produkt-badge--gebraucht {
+  border: 1px solid var(--hairline-strong);
+  background: var(--glass-strong);
+  color: var(--steel);
 }
 
 .produkt-ausverkauft {
