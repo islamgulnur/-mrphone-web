@@ -26,6 +26,10 @@ for (const gruppe of artefakte.gruppen) {
   if (!inhalt.includes(`rel="canonical" href="https://mrphone-frankfurt.de/produkte/${gruppe.slug}.html"`)) fehler.push(`${gruppe.slug}: Canonical fehlt`);
   if (!inhalt.includes('"@type": "Product"')) fehler.push(`${gruppe.slug}: Product-Schema fehlt`);
   if (!inhalt.includes('"@type": "BreadcrumbList"')) fehler.push(`${gruppe.slug}: Breadcrumb-Schema fehlt`);
+  if (!inhalt.includes('class="site-header"')) fehler.push(`${gruppe.slug}: gemeinsamer Website-Header fehlt`);
+  if (!inhalt.includes('class="site-footer"')) fehler.push(`${gruppe.slug}: gemeinsamer Website-Footer fehlt`);
+  if (!inhalt.includes('href="/dark-theme.css"')) fehler.push(`${gruppe.slug}: gemeinsames Dark-Theme fehlt`);
+  if (!inhalt.includes('src="/main.js"')) fehler.push(`${gruppe.slug}: gemeinsame Website-Funktionen fehlen`);
   if (offers !== gruppe.items.length) fehler.push(`${gruppe.slug}: ${offers} Schema-Angebote statt ${gruppe.items.length}`);
   if (/noindex/i.test(inhalt)) fehler.push(`${gruppe.slug}: enthält noindex`);
 }
