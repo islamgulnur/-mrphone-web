@@ -274,7 +274,7 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 449.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-27"
@@ -504,15 +504,15 @@
     "datum": "2026-08-27"
   },
   {
-    "id": "39601e2c-7d92-4c5a-bb7e-8f07b886111f",
+    "id": "pos-b87dc2aafd9b629c180a",
     "marke": "Apple",
     "modell": "iPhone 17 Pro Max",
     "speicher": "512 GB",
     "farbe": "",
     "kategorie": "smartphones",
     "zustand": "gebraucht",
-    "preis": 1249.99,
-    "menge": 2,
+    "preis": 1199.99,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-27"
@@ -625,6 +625,20 @@
     "zustand": "gebraucht",
     "preis": 189.99,
     "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-27"
+  },
+  {
+    "id": "pos-81c4e220355408b4e3a4",
+    "marke": "Apple",
+    "modell": "MacBook Pro 14 M5",
+    "speicher": "1 TB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1729.99,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-27"
@@ -798,20 +812,6 @@
     "datum": "2026-08-27"
   },
   {
-    "id": "2d5f8863-26c5-4288-8965-a4b6c3c1c48d",
-    "marke": "Samsung",
-    "modell": "Galaxy A13",
-    "speicher": "64 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 99.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-27"
-  },
-  {
     "id": "170e2763-59c7-4e59-aea2-711ae5a9cd93",
     "marke": "Samsung",
     "modell": "Galaxy A15",
@@ -862,7 +862,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 159.99,
-    "menge": 3,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-27"
@@ -1274,6 +1274,20 @@
     "datum": "2026-08-27"
   },
   {
+    "id": "pos-8aaa2504650d8d1e948b",
+    "marke": "Samsung",
+    "modell": "Galaxy Z Flip 7",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 579.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-27"
+  },
+  {
     "id": "218cecd5-d843-4e4b-abcd-bf1ee90aac1d",
     "marke": "Samsung",
     "modell": "Galaxy Z Fold 7",
@@ -1646,20 +1660,6 @@
     "kategorie": "tablets",
     "zustand": "gebraucht",
     "preis": 229.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-27"
-  },
-  {
-    "id": "pos-c6c47634b666b335f3ea",
-    "marke": "Samsung",
-    "modell": "Galaxy Tab S10 Ulter 5G",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "tablets",
-    "zustand": "gebraucht",
-    "preis": 599.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,

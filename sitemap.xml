@@ -408,6 +408,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mrphone-frankfurt.de/produkte/apple-macbook-pro-14-m5.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mrphone-frankfurt.de/produkte/apple-watch-se-3-44mm-cel.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>daily</changefreq>
@@ -505,12 +511,6 @@
   </url>
   <url>
     <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-a07-5g.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-a13.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -690,12 +690,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-tab-s10-ulter-5g.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-tab-s11-ultra-5g.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>daily</changefreq>
@@ -703,6 +697,12 @@
   </url>
   <url>
     <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-z-flip-5.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-z-flip-7.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
