@@ -7,14 +7,12 @@ const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 const BESTAND = path.join(ROOT, "bestand.json");
 const PRODUKTE_DIR = path.join(ROOT, "produkte");
-const BILDQUELLEN = path.join(ROOT, "images", "produkte", "quellen.json");
 const MANIFEST = path.join(__dirname, "produktseiten-manifest.json");
 const SITEMAP = path.join(ROOT, "sitemap.xml");
 const BASE_URL = "https://mrphone-frankfurt.de";
 const START_MARKER = "  <!-- AUTO-PRODUKTE START -->";
 const END_MARKER = "  <!-- AUTO-PRODUKTE ENDE -->";
 const PAGE_MARKER = "<!-- AUTO-GENERATED: POS-PRODUKTSEITE -->";
-const MODELL_ZUSAETZE = new Set(["pro", "max", "plus", "ultra", "mini", "air", "fe", "edge", "fold", "flip", "note", "lite"]);
 
 const KATEGORIEN = {
   smartphones: { label: "Smartphones", singular: "Smartphone", landing: "/gebrauchte-smartphones-frankfurt.html", ratgeber: "/ratgeber/gebrauchtes-smartphone-kaufen.html" },
@@ -133,41 +131,18 @@ function findeBild(gruppe, bilder) {
     const direkt = sichereLokaleBildUrl(item.bild);
     if (direkt) return direkt;
   }
-  const exakt = bilder.find((bild) => bild.slug === gruppe.slug);
-  if (exakt) return exakt.url;
   const ignorieren = new Set(["5g", "4g", "lte", "wifi", "cellular", "gb", "tb", "gen"]);
   const tokens = slugify(gruppe.modell).split("-").filter((token) => token.length > 1 && !ignorieren.has(token));
-  const zielTokens = new Set(slugify(`${gruppe.marke} ${gruppe.modell}`).split("-"));
   const markenToken = slugify(gruppe.marke);
   const kandidaten = bilder
     .map((bild) => {
       const dateiTokens = bild.slug.split("-");
       const treffer = tokens.filter((token) => dateiTokens.includes(token)).length;
-      const falscherZusatz = [...MODELL_ZUSAETZE].some((zusatz) => dateiTokens.includes(zusatz) && !zielTokens.has(zusatz));
-      return { bild, treffer, falscherZusatz, score: treffer + (dateiTokens.includes(markenToken) ? 1 : 0) };
+      return { bild, treffer, score: treffer + (dateiTokens.includes(markenToken) ? 1 : 0) };
     })
-    .filter(({ treffer, falscherZusatz }) => !falscherZusatz && treffer === tokens.length && treffer >= 2)
+    .filter(({ treffer }) => treffer === tokens.length && treffer >= 2)
     .sort((a, b) => b.score - a.score || a.bild.name.localeCompare(b.bild.name, "de"));
   return kandidaten[0]?.bild.url || "";
-}
-
-function bildQuellen() {
-  if (!fs.existsSync(BILDQUELLEN)) return {};
-  try {
-    const daten = JSON.parse(fs.readFileSync(BILDQUELLEN, "utf8"));
-    return daten && typeof daten.bilder === "object" ? daten.bilder : {};
-  } catch (_) {
-    return {};
-  }
-}
-
-function sichereQuellseite(value) {
-  try {
-    const url = new URL(value);
-    return url.protocol === "https:" && url.hostname === "commons.wikimedia.org" ? url.href : "";
-  } catch (_) {
-    return "";
-  }
 }
 
 function seitenTitel(name) {
@@ -232,15 +207,13 @@ function footer() {
 </footer>`;
 }
 
-function produktSeite(gruppe, alleGruppen, bilder, quellen) {
+function produktSeite(gruppe, alleGruppen, bilder) {
   const name = `${gruppe.marke} ${gruppe.modell}`;
   const canonical = `${BASE_URL}/produkte/${gruppe.slug}.html`;
   const kategorie = KATEGORIEN[gruppe.kategorie] || KATEGORIEN.smartphones;
   const abPreis = preis(gruppe.items[0].preis);
   const meta = beschreibung(name, abPreis, gruppe.items.length);
   const bild = findeBild(gruppe, bilder);
-  const bildSlug = bild ? slugify(path.parse(decodeURIComponent(bild)).name) : "";
-  const bildQuelle = bildSlug ? quellen[bildSlug] : null;
   const whatsapp = `https://wa.me/496995632281?text=${encodeURIComponent(`Hallo, ich interessiere mich für das ${name} aus Ihrem Sortiment. Ist es noch verfügbar?`)}`;
   const angebote = gruppe.items.map((item, index) => ({
     "@type": "Offer",
@@ -283,12 +256,8 @@ function produktSeite(gruppe, alleGruppen, bilder, quellen) {
     .slice(0, 6)
     .map((item) => `<li><a href="/produkte/${item.slug}.html">${html(`${item.marke} ${item.modell}`)}</a> <span>ab ${html(preis(item.items[0].preis))}</span></li>`)
     .join("");
-  const quellseite = sichereQuellseite(bildQuelle?.quellseite);
-  const bildnachweis = quellseite
-    ? ` <a href="${html(quellseite)}" target="_blank" rel="noopener">Bild: ${html(bildQuelle.urheber || "Wikimedia Commons")} · ${html(bildQuelle.lizenz || "Lizenzhinweis")}</a>`
-    : "";
   const media = bild
-    ? `<img src="${html(bild)}" alt="${html(`${name} bei Mr. Phone Frankfurt`)}" width="720" height="720"><p class="produkt-bild-hinweis">Vorschaubild – Farbe und Ausführung können vom tatsächlich verfügbaren Gerät abweichen.${bildnachweis}</p>`
+    ? `<img src="${html(bild)}" alt="${html(`${name} bei Mr. Phone Frankfurt`)}" width="720" height="720">`
     : `<div class="produkt-placeholder" role="img" aria-label="Für ${html(name)} ist noch kein Produktfoto hinterlegt"><span>${html(gruppe.marke)}</span><strong>${html(gruppe.modell)}</strong><small>Produktfoto folgt</small></div>`;
 
   return `<!DOCTYPE html>
@@ -378,8 +347,7 @@ function artefakteErstellen() {
   const gruppen = aktiveGruppen(bestand);
   if (!gruppen.length) throw new Error("Keine aktiven POS-Geräte gefunden; vorhandene Produktseiten bleiben unverändert.");
   const bilder = bildDateien();
-  const quellen = bildQuellen();
-  const pages = new Map(gruppen.map((gruppe) => [`${gruppe.slug}.html`, produktSeite(gruppe, gruppen, bilder, quellen)]));
+  const pages = new Map(gruppen.map((gruppe) => [`${gruppe.slug}.html`, produktSeite(gruppe, gruppen, bilder)]));
   pages.set("index.html", indexSeite(gruppen));
   const sitemap = sitemapMitProdukten(fs.readFileSync(SITEMAP, "utf8"), gruppen);
   const manifest = `${JSON.stringify({ version: 1, index: "index.html", pages: gruppen.map((g) => `${g.slug}.html`) }, null, 2)}\n`;
@@ -436,4 +404,4 @@ if (require.main === module) {
   catch (error) { console.error(error.message); process.exit(1); }
 }
 
-module.exports = { aktiveGruppen, artefakteErstellen, bildDateien, findeBild, slugify };
+module.exports = { aktiveGruppen, artefakteErstellen, slugify };

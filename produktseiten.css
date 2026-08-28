@@ -63,7 +63,6 @@
   aspect-ratio: 1;
   display: grid;
   place-items: center;
-  position: relative;
   overflow: hidden;
   border: 1px solid var(--hairline-strong);
   border-radius: 16px;
@@ -260,23 +259,6 @@
   border-radius: 999px;
   font-size: 0.76rem;
   font-weight: 700;
-}
-
-.produkt-bild-hinweis {
-  position: absolute;
-  inset: auto 0 0;
-  margin: 0;
-  padding: 1.2rem 0.8rem 0.65rem;
-  background: linear-gradient(transparent, rgba(10, 12, 8, 0.94) 42%);
-  color: var(--steel);
-  font-size: 0.7rem;
-  line-height: 1.35;
-  text-align: center;
-}
-
-.produkt-bild-hinweis a {
-  color: var(--signal);
-  white-space: nowrap;
 }
 
 .produkt-badge--neu {
