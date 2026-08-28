@@ -19,22 +19,37 @@
      aktuelle HTML-Seite selbst als "Bild" nach und zeigt ein kaputtes Icon.
      Deshalb hier fruehzeitig abfangen und ein Platzhalter-SVG (gleicher
      Line-Stil wie die Sortiment-Icons) statt <img> rendern. */
-  function mediaHtml(bild, alt) {
-    if (!bild) {
-      return (
-        '<div class="angebot-media angebot-media--empty" role="img" aria-label="' + escapeHtml(alt) + '">' +
+  function platzhalterMediaInhalt(alt) {
+    return (
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
         '<rect x="3" y="4" width="18" height="16" rx="2"></rect>' +
         '<circle cx="8.5" cy="9.5" r="1.5"></circle>' +
         '<path d="M21 16l-5.5-5.5a2 2 0 0 0-2.8 0L5 18"></path>' +
-        "</svg></div>"
-      );
-    }
-    return (
-      '<div class="angebot-media"><img src="' + assetUrl(escapeHtml(bild)) + '" alt="' + escapeHtml(alt) +
-      '" width="800" height="800" loading="lazy"></div>'
+        "</svg>" + '<span class="sr-only">' + escapeHtml(alt) + "</span>"
     );
   }
+
+  function mediaHtml(bild, alt, fallbackBild, istVorschau) {
+    var quelle = bild || fallbackBild || "";
+    var vorschauText = LANG === "en" ? "Preview image · colour may vary" : "Vorschaubild · Farbe kann abweichen";
+    if (!quelle) return '<div class="angebot-media angebot-media--empty" role="img" aria-label="' + escapeHtml(alt) + '">' + platzhalterMediaInhalt(alt) + "</div>";
+    return (
+      '<div class="angebot-media"><img data-produktbild src="' + assetUrl(escapeHtml(quelle)) + '" alt="' + escapeHtml(alt) +
+      '" width="800" height="800" loading="lazy">' +
+      (istVorschau ? '<span class="angebot-media-hinweis">' + vorschauText + "</span>" : "") + "</div>"
+    );
+  }
+
+  document.addEventListener("error", function (event) {
+    var bild = event.target;
+    if (!bild || !bild.matches || !bild.matches("img[data-produktbild]")) return;
+    var media = bild.parentElement;
+    if (!media) return;
+    media.classList.add("angebot-media--empty");
+    media.setAttribute("role", "img");
+    media.setAttribute("aria-label", bild.alt || "Produktbild nicht verfügbar");
+    media.innerHTML = platzhalterMediaInhalt(bild.alt || "Produktbild nicht verfügbar");
+  }, true);
 
   /* ---------- Scroll-Reveal ---------- */
   function revealElements(items) {
@@ -583,7 +598,7 @@
 
     return (
       '<article class="angebot-card reveal">' +
-      mediaHtml(a.bild, titel) +
+      mediaHtml(a.bild, titel, "/images/produkte/" + produktSlug(a) + ".webp", true) +
       '<div class="angebot-body">' +
       '<span class="angebot-badge ' + badgeClass + '">' + badgeText + "</span>" +
       '<h3><a href="' + produktUrl + '">' + escapeHtml(titel) + "</a></h3>" +

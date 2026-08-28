@@ -1,0 +1,60 @@
+name: Fehlende Produktbilder automatisch ergänzen
+
+on:
+  schedule:
+    - cron: "43 3 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Auch kürzlich erfolglos geprüfte Modelle erneut suchen"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: produktbilder-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Website laden
+        uses: actions/checkout@v4
+
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Bildverarbeitung installieren
+        run: npm install --no-audit --no-fund
+
+      - name: Trefferschutz testen
+        run: npm run test:bilder
+
+      - name: Fehlende Bilder suchen
+        env:
+          FORCE_INPUT: ${{ inputs.force }}
+        run: |
+          ARGS=(--limit=12 --max-queries=25)
+          if [ "$FORCE_INPUT" = "true" ]; then ARGS+=(--force); fi
+          node scripts/update-produktbilder.js "${ARGS[@]}"
+
+      - name: Produktseiten neu erstellen und prüfen
+        run: npm run build:produkte && npm run test:produkte && node validate-data.js
+
+      - name: Neue Bilder veröffentlichen
+        run: |
+          if [ -z "$(git status --porcelain -- images/produkte produkte sitemap.xml scripts/produktseiten-manifest.json)" ]; then
+            echo "Keine neuen sicheren Produktbilder gefunden."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add images/produkte/ produkte/ sitemap.xml scripts/produktseiten-manifest.json
+          git commit -m "chore(products): add verified preview images"
+          git pull --rebase
+          git push

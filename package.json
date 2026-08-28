@@ -9,6 +9,8 @@
     "test:preise": "node scripts/test-price-automation.js",
     "build:produkte": "node scripts/build-produktseiten.js",
     "test:produkte": "node scripts/build-produktseiten.js --check && node scripts/test-produktseiten.js",
+    "update:bilder": "node scripts/update-produktbilder.js",
+    "test:bilder": "node scripts/test-produktbilder.js",
     "sync:pos": "node scripts/fetch-pos-bestand.js && node scripts/sync-pos-bestand.js --apply",
     "test:pos": "node scripts/test-pos-bestand.js"
   },

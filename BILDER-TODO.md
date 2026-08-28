@@ -1,5 +1,17 @@
 # Bilder-TODO
 
+## Automatische Produktbilder
+
+Fehlende Modellbilder werden täglich kostenlos über Openverse aus Wikimedia Commons gesucht. Der
+Import übernimmt ausschließlich exakte Modelltreffer mit kommerziell nutzbarer Lizenz, speichert die
+Dateien lokal unter `images/produkte/` und veröffentlicht den Bildnachweis auf der Produktseite.
+Unsichere Treffer (beispielsweise Plus, Pro oder Ultra statt des Basismodells) werden verworfen.
+
+Da der POS aktuell keine Gerätefarben liefert, kennzeichnet die Website jedes Modellfoto als
+Vorschaubild und weist darauf hin, dass Farbe und Ausführung vom verfügbaren Gerät abweichen können.
+Ein fehlendes oder nicht mehr erreichbares Bild fällt automatisch auf den bisherigen Platzhalter
+zurück. Vorhandene manuell hinterlegte Bilder werden niemals überschrieben.
+
 Diese Dateien werden von der Website referenziert, existieren aber noch nicht. Bis sie ergänzt sind,
 zeigen die betroffenen Stellen automatisch einen dezenten Platzhalter ("Bild folgt – siehe
 BILDER-TODO.md") statt eines kaputten Bild-Icons.
