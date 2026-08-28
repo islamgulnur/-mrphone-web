@@ -26,6 +26,21 @@ function normalisiert(value) {
   return sauber(value).toLocaleLowerCase("de-DE");
 }
 
+function sichereProduktbildUrl(value) {
+  const eingabe = sauber(value);
+  if (!eingabe) return "";
+  try {
+    const url = new URL(eingabe);
+    const freigegeben =
+      url.protocol === "https:" &&
+      /^[a-z0-9-]+\.supabase\.co$/i.test(url.hostname) &&
+      url.pathname.startsWith("/storage/v1/object/public/produktbilder/");
+    return freigegeben ? url.toString() : "";
+  } catch {
+    return "";
+  }
+}
+
 function mappePosGeraet(pos) {
   let marke = sauber(pos.marke);
   let modell = sauber(pos.modell);
@@ -51,11 +66,12 @@ function mappePosGeraet(pos) {
     marke,
     modell,
     speicher: speicherFormat(pos.speicher),
-    farbe: "",
+    farbe: sauber(pos.farbe),
     kategorie,
     zustand: normalisiert(pos.zustand),
     preis: Number(pos.preis),
     menge: Number(pos.menge) || 1,
+    bild: sichereProduktbildUrl(pos.bild),
   };
 }
 
@@ -64,6 +80,7 @@ function schluessel(geraet) {
     normalisiert(geraet.marke),
     normalisiert(geraet.modell),
     normalisiert(speicherFormat(geraet.speicher)),
+    normalisiert(geraet.farbe),
     normalisiert(geraet.zustand),
     Number(geraet.preis),
   ].join("|");
@@ -96,7 +113,7 @@ const neu = [...gruppen.entries()].map(([key, item]) => {
   return {
     id: vorher?.id || stabileId(key),
     ...item,
-    bild: vorher?.bild || "",
+    bild: item.bild || vorher?.bild || "",
     aktiv: true,
     datum,
   };

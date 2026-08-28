@@ -3,11 +3,16 @@
 
 const fs = require("fs");
 const path = require("path");
-const { artefakteErstellen } = require("./build-produktseiten");
+const { artefakteErstellen, sichereBildUrl, absoluteBildUrl } = require("./build-produktseiten");
 
 const ROOT = path.resolve(__dirname, "..");
 const artefakte = artefakteErstellen();
 const fehler = [];
+
+const testBild = "https://abc123.supabase.co/storage/v1/object/public/produktbilder/4006381333931.jpg";
+if (sichereBildUrl(testBild) !== testBild) fehler.push("Eigener Supabase-Produktbildpfad wird fälschlich blockiert");
+if (sichereBildUrl("https://example.com/fremdes-bild.jpg")) fehler.push("Fremde Bildquelle wird nicht blockiert");
+if (absoluteBildUrl(testBild) !== testBild) fehler.push("Externe Produktbild-URL wird fehlerhaft verändert");
 
 for (const gruppe of artefakte.gruppen) {
   const datei = path.join(ROOT, "produkte", `${gruppe.slug}.html`);

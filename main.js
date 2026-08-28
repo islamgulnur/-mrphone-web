@@ -685,11 +685,21 @@
       if (!payload || payload.ok !== true || !Array.isArray(payload.daten)) throw new Error("POS-Antwort ungültig");
       var bilder = new Map();
       lokalerBestand.forEach(function (item) {
-        var key = [item.marke, item.modell, item.speicher, item.zustand, Number(item.preis)].join("|").toLowerCase();
+        var key = [item.marke, item.modell, item.speicher, item.farbe, item.zustand, Number(item.preis)].join("|").toLowerCase();
         if (item.bild) bilder.set(key, item.bild);
       });
+      function sichereProduktbildUrl(value) {
+        try {
+          var url = new URL(String(value || ""));
+          return url.protocol === "https:" && /^[a-z0-9-]+\.supabase\.co$/i.test(url.hostname) && url.pathname.indexOf("/storage/v1/object/public/produktbilder/") === 0
+            ? url.toString()
+            : "";
+        } catch (_) {
+          return "";
+        }
+      }
       return payload.daten.map(function (item, index) {
-        var key = [item.marke, item.modell, item.speicher, item.zustand, Number(item.preis)].join("|").toLowerCase();
+        var key = [item.marke, item.modell, item.speicher, item.farbe, item.zustand, Number(item.preis)].join("|").toLowerCase();
         return {
           id: "pos-live-" + index,
           marke: item.marke,
@@ -700,7 +710,7 @@
           zustand: String(item.zustand || "").toLowerCase(),
           preis: Number(item.preis),
           menge: Number(item.menge) || 1,
-          bild: bilder.get(key) || "",
+          bild: sichereProduktbildUrl(item.bild) || bilder.get(key) || "",
           aktiv: true,
           datum: item.datum || payload.stand || "",
         };

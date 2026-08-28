@@ -110,9 +110,21 @@ function aktiveGruppen(bestand) {
     .sort((a, b) => `${a.marke} ${a.modell}`.localeCompare(`${b.marke} ${b.modell}`, "de", { numeric: true }));
 }
 
-function sichereLokaleBildUrl(bild) {
-  const relativ = sauber(bild).replace(/^\/+/, "").replace(/\\/g, "/");
-  if (!relativ || /^https?:/i.test(relativ) || relativ.includes("..")) return "";
+function sichereBildUrl(bild) {
+  const eingabe = sauber(bild);
+  if (/^https:/i.test(eingabe)) {
+    try {
+      const url = new URL(eingabe);
+      const freigegeben =
+        /^[a-z0-9-]+\.supabase\.co$/i.test(url.hostname) &&
+        url.pathname.startsWith("/storage/v1/object/public/produktbilder/");
+      return freigegeben ? url.toString() : "";
+    } catch {
+      return "";
+    }
+  }
+  const relativ = eingabe.replace(/^\/+/, "").replace(/\\/g, "/");
+  if (!relativ || relativ.includes("..")) return "";
   const vollpfad = path.resolve(ROOT, relativ);
   if (!vollpfad.startsWith(`${ROOT}${path.sep}`) || !fs.existsSync(vollpfad)) return "";
   return `/${relativ.split("/").map(encodeURIComponent).join("/")}`;
@@ -128,7 +140,7 @@ function bildDateien() {
 
 function findeBild(gruppe, bilder) {
   for (const item of gruppe.items) {
-    const direkt = sichereLokaleBildUrl(item.bild);
+    const direkt = sichereBildUrl(item.bild);
     if (direkt) return direkt;
   }
   const ignorieren = new Set(["5g", "4g", "lte", "wifi", "cellular", "gb", "tb", "gen"]);
@@ -143,6 +155,10 @@ function findeBild(gruppe, bilder) {
     .filter(({ treffer }) => treffer === tokens.length && treffer >= 2)
     .sort((a, b) => b.score - a.score || a.bild.name.localeCompare(b.bild.name, "de"));
   return kandidaten[0]?.bild.url || "";
+}
+
+function absoluteBildUrl(bild) {
+  return /^https:/i.test(bild) ? bild : `${BASE_URL}${bild}`;
 }
 
 function seitenTitel(name) {
@@ -214,6 +230,7 @@ function produktSeite(gruppe, alleGruppen, bilder) {
   const abPreis = preis(gruppe.items[0].preis);
   const meta = beschreibung(name, abPreis, gruppe.items.length);
   const bild = findeBild(gruppe, bilder);
+  const bildAbsolute = bild ? absoluteBildUrl(bild) : "";
   const whatsapp = `https://wa.me/496995632281?text=${encodeURIComponent(`Hallo, ich interessiere mich für das ${name} aus Ihrem Sortiment. Ist es noch verfügbar?`)}`;
   const angebote = gruppe.items.map((item, index) => ({
     "@type": "Offer",
@@ -233,7 +250,7 @@ function produktSeite(gruppe, alleGruppen, bilder) {
     name,
     brand: { "@type": "Brand", name: gruppe.marke },
     description: meta,
-    ...(bild ? { image: [`${BASE_URL}${bild}`] } : {}),
+    ...(bildAbsolute ? { image: [bildAbsolute] } : {}),
     offers: angebote,
   };
   const breadcrumbSchema = {
@@ -257,7 +274,7 @@ function produktSeite(gruppe, alleGruppen, bilder) {
     .map((item) => `<li><a href="/produkte/${item.slug}.html">${html(`${item.marke} ${item.modell}`)}</a> <span>ab ${html(preis(item.items[0].preis))}</span></li>`)
     .join("");
   const media = bild
-    ? `<img src="${html(bild)}" alt="${html(`${name} bei Mr. Phone Frankfurt`)}" width="720" height="720">`
+    ? `<figure class="produkt-media-abbildung"><img src="${html(bild)}" alt="${html(`${name} bei Mr. Phone Frankfurt`)}" width="720" height="720"><figcaption>Produktabbildung der Variante. Farbton, Zustand und Lieferumfang des Einzelgeräts können abweichen.</figcaption></figure>`
     : `<div class="produkt-placeholder" role="img" aria-label="Für ${html(name)} ist noch kein Produktfoto hinterlegt"><span>${html(gruppe.marke)}</span><strong>${html(gruppe.modell)}</strong><small>Produktfoto folgt</small></div>`;
 
   return `<!DOCTYPE html>
@@ -270,7 +287,7 @@ function produktSeite(gruppe, alleGruppen, bilder) {
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="${canonical}">
 <link rel="icon" type="image/png" href="/images/logo.png">
-<meta property="og:type" content="product"><meta property="og:site_name" content="Mr. Phone"><meta property="og:title" content="${html(seitenTitel(name))}"><meta property="og:description" content="${html(meta)}"><meta property="og:url" content="${canonical}">${bild ? `<meta property="og:image" content="${BASE_URL}${html(bild)}">` : ""}
+<meta property="og:type" content="product"><meta property="og:site_name" content="Mr. Phone"><meta property="og:title" content="${html(seitenTitel(name))}"><meta property="og:description" content="${html(meta)}"><meta property="og:url" content="${canonical}">${bildAbsolute ? `<meta property="og:image" content="${html(bildAbsolute)}">` : ""}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="/dark-theme.css">
@@ -404,4 +421,4 @@ if (require.main === module) {
   catch (error) { console.error(error.message); process.exit(1); }
 }
 
-module.exports = { aktiveGruppen, artefakteErstellen, slugify };
+module.exports = { aktiveGruppen, artefakteErstellen, slugify, sichereBildUrl, absoluteBildUrl };
