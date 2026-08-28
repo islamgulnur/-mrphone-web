@@ -92,7 +92,7 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 299.99,
-    "menge": 3,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-28"
@@ -434,6 +434,20 @@
     "datum": "2026-08-28"
   },
   {
+    "id": "pos-396de8c3293c8c938b72",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro max",
+    "speicher": "2 TB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1699.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-28"
+  },
+  {
     "id": "9426a9e8-85b7-451f-88c8-b068c96a5624",
     "marke": "Apple",
     "modell": "iPhone 17 Pro Max",
@@ -498,7 +512,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 13,
+    "menge": 14,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-28"
@@ -1086,7 +1100,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 329.99,
-    "menge": 3,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-28"
@@ -1470,20 +1484,6 @@
     "datum": "2026-08-28"
   },
   {
-    "id": "pos-7f6cbe5d63573066bf8c",
-    "marke": "Apple",
-    "modell": "iPad Pro 4. GEN",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "tablets",
-    "zustand": "gebraucht",
-    "preis": 499.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-28"
-  },
-  {
     "id": "pos-2b130edd5524c7de7918",
     "marke": "Apple",
     "modell": "iPad Pro 9,7",
@@ -1688,20 +1688,6 @@
     "kategorie": "smartwatches",
     "zustand": "neu",
     "preis": 279.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-28"
-  },
-  {
-    "id": "pos-a0bb318392a7025f6ad2",
-    "marke": "Apple",
-    "modell": "Watch Series 11 (GPS)",
-    "speicher": "GPS",
-    "farbe": "",
-    "kategorie": "smartwatches",
-    "zustand": "neu",
-    "preis": 349.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
