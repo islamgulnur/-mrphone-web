@@ -140,20 +140,6 @@
     "datum": "2026-08-29"
   },
   {
-    "id": "pos-0545f06757026707c1ac",
-    "marke": "Apple",
-    "modell": "iPhone 14",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 319.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-29"
-  },
-  {
     "id": "a3842a16-52fc-413d-a84e-c09501aab4f0",
     "marke": "Apple",
     "modell": "iPhone 14",
@@ -294,6 +280,20 @@
     "datum": "2026-08-29"
   },
   {
+    "id": "pos-47c13343a6077ea5cd1a",
+    "marke": "Apple",
+    "modell": "iPhone 15 Pro",
+    "speicher": "128 GB",
+    "farbe": "Titan Natur",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 529.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-29"
+  },
+  {
     "id": "4f96ca1a-ee45-4b75-a62a-3f3c977ec38f",
     "marke": "Apple",
     "modell": "iPhone 15 Pro",
@@ -330,7 +330,7 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 629.99,
-    "menge": 1,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-29"
@@ -504,6 +504,20 @@
     "datum": "2026-08-29"
   },
   {
+    "id": "pos-98f0d9ca9039f4f12796",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro Max",
+    "speicher": "256 GB",
+    "farbe": "Cosmic Orange",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1149.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-29"
+  },
+  {
     "id": "pos-5ced178d73438c957e1b",
     "marke": "Apple",
     "modell": "iPhone 17 Pro Max",
@@ -512,7 +526,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 14,
+    "menge": 13,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-29"
@@ -568,20 +582,6 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 169.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-29"
-  },
-  {
-    "id": "6bf868f4-fdad-4844-a826-26ae38fd3346",
-    "marke": "Apple",
-    "modell": "iPhone XR",
-    "speicher": "64 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 119.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -1268,7 +1268,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 999.99,
-    "menge": 3,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-29"
@@ -1380,7 +1380,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 109.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-29"
