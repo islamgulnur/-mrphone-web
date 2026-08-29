@@ -252,20 +252,6 @@
     "datum": "2026-08-29"
   },
   {
-    "id": "ac5f4087-dda8-49c6-b2e1-f5e7de3a4c54",
-    "marke": "Apple",
-    "modell": "iPhone 15",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 449.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-29"
-  },
-  {
     "id": "e79c2ff2-1743-41f5-9902-b1fa265c050f",
     "marke": "Apple",
     "modell": "iPhone 15 Plus",
@@ -498,20 +484,6 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1059.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-29"
-  },
-  {
-    "id": "pos-98f0d9ca9039f4f12796",
-    "marke": "Apple",
-    "modell": "iPhone 17 Pro Max",
-    "speicher": "256 GB",
-    "farbe": "Cosmic Orange",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1149.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -1190,20 +1162,6 @@
     "datum": "2026-08-29"
   },
   {
-    "id": "71143563-c1af-4bb3-a319-f93148aa603b",
-    "marke": "Samsung",
-    "modell": "Galaxy S24",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 399.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-29"
-  },
-  {
     "id": "1b0d658d-c7f0-4294-9493-4fe4f182179b",
     "marke": "Samsung",
     "modell": "Galaxy S25",
@@ -1590,20 +1548,6 @@
     "kategorie": "tablets",
     "zustand": "neu",
     "preis": 1549.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-08-29"
-  },
-  {
-    "id": "30f1c36a-dc7b-45eb-b79b-fb61bdc068a3",
-    "marke": "Lenovo",
-    "modell": "Tab Plus",
-    "speicher": "64 GB",
-    "farbe": "",
-    "kategorie": "tablets",
-    "zustand": "neu",
-    "preis": 159.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
