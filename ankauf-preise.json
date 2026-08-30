@@ -1678,16 +1678,16 @@
     "modell": "iPhone 17 Pro Max",
     "jahr": 2025,
     "neupreisUvp": 1449,
-    "beliebt": false,
+    "beliebt": true,
     "varianten": [
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 1000,
-          "wieNeu": 880,
-          "sehrGut": 830,
-          "gut": 780,
+          "neuVersiegelt": 930,
+          "wieNeu": 745,
+          "sehrGut": 690,
+          "gut": 595,
           "defekt": 250
         },
         "preisQuelle": "manuell"
@@ -1696,10 +1696,10 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
         "preise": {
-          "neuVersiegelt": 1150,
-          "wieNeu": 1060,
-          "sehrGut": 1000,
-          "gut": 950,
+          "neuVersiegelt": 1170,
+          "wieNeu": 895,
+          "sehrGut": 810,
+          "gut": 730,
           "defekt": 255
         },
         "preisQuelle": "manuell"
@@ -1708,10 +1708,10 @@
         "bezeichnung": "1 TB",
         "uvpDelta": 450,
         "preise": {
-          "neuVersiegelt": 1280,
-          "wieNeu": 1160,
-          "sehrGut": 1100,
-          "gut": 1050,
+          "neuVersiegelt": 1290,
+          "wieNeu": 895,
+          "sehrGut": 810,
+          "gut": 730,
           "defekt": 255
         },
         "preisQuelle": "manuell"
@@ -1720,10 +1720,10 @@
         "bezeichnung": "2 TB",
         "uvpDelta": 750,
         "preise": {
-          "neuVersiegelt": 1450,
-          "wieNeu": 1260,
-          "sehrGut": 1200,
-          "gut": 1150,
+          "neuVersiegelt": 1495,
+          "wieNeu": 1195,
+          "sehrGut": 1105,
+          "gut": 955,
           "defekt": 385
         },
         "preisQuelle": "manuell"
