@@ -2870,31 +2870,31 @@
     "modell": "Galaxy S26",
     "jahr": 2026,
     "neupreisUvp": 899,
-    "beliebt": false,
+    "beliebt": true,
     "varianten": [
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 470,
-          "wieNeu": 385,
-          "sehrGut": 355,
-          "gut": 280,
+          "wieNeu": 430,
+          "sehrGut": 390,
+          "gut": 360,
           "defekt": 105
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
         "preise": {
-          "neuVersiegelt": 570,
-          "wieNeu": 465,
-          "sehrGut": 425,
-          "gut": 340,
+          "neuVersiegelt": 550,
+          "wieNeu": 520,
+          "sehrGut": 490,
+          "gut": 450,
           "defekt": 125
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
