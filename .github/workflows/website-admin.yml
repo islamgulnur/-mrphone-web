@@ -1,0 +1,67 @@
+name: Website-Admin Änderung prüfen und veröffentlichen
+
+on:
+  repository_dispatch:
+    types: [website-admin]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: website-admin
+  cancel-in-progress: false
+
+jobs:
+  aktualisieren:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Website laden
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+
+      - name: Tatsächlich geladenen Website-Stand festhalten
+        shell: bash
+        run: echo "WEBSITE_ADMIN_CHECKOUT_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Abhängigkeiten installieren
+        run: npm install
+
+      - name: Änderungsauftrag anwenden
+        run: node scripts/cloud-admin-command.js
+
+      - name: Datendateien vollständig prüfen
+        run: node validate-data.js
+
+      - name: Cloud-Admin und Preislogik testen
+        run: npm run test:cloud-admin && npm run test:preise
+
+      - name: Produktseiten unverändert lauffähig prüfen
+        run: npm run test:produkte
+
+      - name: Sicherheitskopien als Workflow-Artefakt sichern
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-admin-backup-${{ github.run_id }}
+          path: backups/
+          if-no-files-found: ignore
+          retention-days: 90
+
+      - name: Geprüfte Änderungen committen und veröffentlichen
+        run: |
+          if git diff --quiet; then
+            echo "Keine Änderung – kein Commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A -- . ':(exclude)backups/**' ':(exclude).agents/**' ':(exclude)AGENTS.md'
+          git commit -m "Website-Admin: ${{ github.event.client_payload.command }}"
+          git push
