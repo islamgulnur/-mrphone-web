@@ -1590,37 +1590,37 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 640,
-          "wieNeu": 510,
-          "sehrGut": 475,
-          "gut": 410,
+          "neuVersiegelt": 630,
+          "wieNeu": 550,
+          "sehrGut": 500,
+          "gut": 470,
           "defekt": 175
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 250,
         "preise": {
-          "neuVersiegelt": 730,
-          "wieNeu": 585,
-          "sehrGut": 540,
-          "gut": 465,
+          "neuVersiegelt": 700,
+          "wieNeu": 610,
+          "sehrGut": 560,
+          "gut": 510,
           "defekt": 210
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 500,
         "preise": {
-          "neuVersiegelt": 1005,
-          "wieNeu": 750,
-          "sehrGut": 705,
-          "gut": 610,
+          "neuVersiegelt": 800,
+          "wieNeu": 680,
+          "sehrGut": 630,
+          "gut": 580,
           "defekt": 235
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
