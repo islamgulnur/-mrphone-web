@@ -1549,31 +1549,31 @@
     "modell": "iPhone 17",
     "jahr": 2025,
     "neupreisUvp": 949,
-    "beliebt": false,
+    "beliebt": true,
     "varianten": [
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 645,
-          "wieNeu": 530,
-          "sehrGut": 490,
-          "gut": 420,
+          "neuVersiegelt": 650,
+          "wieNeu": 600,
+          "sehrGut": 550,
+          "gut": 500,
           "defekt": 175
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
         "preise": {
-          "neuVersiegelt": 870,
-          "wieNeu": 695,
-          "sehrGut": 645,
-          "gut": 555,
+          "neuVersiegelt": 820,
+          "wieNeu": 770,
+          "sehrGut": 720,
+          "gut": 680,
           "defekt": 230
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
