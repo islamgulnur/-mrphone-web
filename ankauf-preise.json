@@ -1631,43 +1631,43 @@
     "modell": "iPhone 17 Pro",
     "jahr": 2025,
     "neupreisUvp": 1299,
-    "beliebt": false,
+    "beliebt": true,
     "varianten": [
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 885,
-          "wieNeu": 720,
-          "sehrGut": 665,
-          "gut": 575,
+          "neuVersiegelt": 900,
+          "wieNeu": 820,
+          "sehrGut": 770,
+          "gut": 730,
           "defekt": 210
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
         "preise": {
-          "neuVersiegelt": 1060,
-          "wieNeu": 730,
-          "sehrGut": 665,
-          "gut": 600,
+          "neuVersiegelt": 1070,
+          "wieNeu": 900,
+          "sehrGut": 850,
+          "gut": 800,
           "defekt": 210
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 450,
         "preise": {
-          "neuVersiegelt": 1230,
-          "wieNeu": 730,
-          "sehrGut": 665,
-          "gut": 600,
+          "neuVersiegelt": 1200,
+          "wieNeu": 1100,
+          "sehrGut": 1050,
+          "gut": 1000,
           "defekt": 210
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
