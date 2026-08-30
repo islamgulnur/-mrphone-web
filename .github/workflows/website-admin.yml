@@ -56,12 +56,17 @@ jobs:
 
       - name: Geprüfte Änderungen committen und veröffentlichen
         run: |
-          if git diff --quiet; then
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A -- angebote.json bewertungen.json reparatur-preise.json ankauf-preise.json pricing-niveau.json ankauf images/angebote
+          if git diff --cached --quiet; then
             echo "Keine Änderung – kein Commit."
             exit 0
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A -- . ':(exclude)backups/**' ':(exclude).agents/**' ':(exclude)AGENTS.md'
+          if ! git diff --quiet; then
+            echo "Unerwartete Änderungen außerhalb der erlaubten Website-Dateien:"
+            git diff --name-only
+            exit 1
+          fi
           git commit -m "Website-Admin: ${{ github.event.client_payload.command }}"
           git push
