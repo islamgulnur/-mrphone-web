@@ -1,14 +1,13 @@
 /* Mr. Phone – 5x schnelles Antippen der E-Mail-Adresse öffnet den Admin-Bereich.
- * Reine Navigations-Abkürzung, KEINE Sicherheitsfunktion - der eigentliche Passwortschutz
- * sitzt server-seitig in admin/server.js (Login-Route + Session-Cookie). Der Zugriff läuft
- * privat über Tailscale Serve und ist nur für Geräte im eigenen Tailnet erreichbar. */
+ * Reine Navigations-Abkürzung, KEINE Sicherheitsfunktion. Der eigentliche Schutz
+ * erfolgt über das POS-Login und die serverseitig geprüfte Betreiberrolle. */
 (function () {
   "use strict";
 
   var link = document.querySelector('a[href^="mailto:mr.phone.zeil@gmail.com"]');
   if (!link) return;
 
-  var ADMIN_URL = "https://ak74u.taile87e8a.ts.net/admin/";
+  var ADMIN_URL = "https://mrphone-pos.vercel.app/website-admin";
   var NOETIGE_TAPS = 5;
   var TAP_FENSTER_MS = 2500;
   var NORMALES_VERHALTEN_VERZOEGERUNG_MS = 350;
