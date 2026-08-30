@@ -2940,43 +2940,43 @@
     "modell": "Galaxy S26 Ultra",
     "jahr": 2026,
     "neupreisUvp": 1449,
-    "beliebt": false,
+    "beliebt": true,
     "varianten": [
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 740,
-          "wieNeu": 590,
-          "sehrGut": 535,
-          "gut": 435,
+          "neuVersiegelt": 700,
+          "wieNeu": 600,
+          "sehrGut": 550,
+          "gut": 500,
           "defekt": 155
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "512 GB",
         "uvpDelta": 200,
         "preise": {
-          "neuVersiegelt": 845,
-          "wieNeu": 685,
-          "sehrGut": 620,
-          "gut": 500,
+          "neuVersiegelt": 800,
+          "wieNeu": 730,
+          "sehrGut": 680,
+          "gut": 630,
           "defekt": 180
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "1 TB",
         "uvpDelta": 450,
         "preise": {
-          "neuVersiegelt": 945,
-          "wieNeu": 775,
-          "sehrGut": 710,
-          "gut": 565,
+          "neuVersiegelt": 1000,
+          "wieNeu": 910,
+          "sehrGut": 870,
+          "gut": 830,
           "defekt": 305
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       }
     ]
   },
