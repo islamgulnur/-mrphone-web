@@ -1,5 +1,19 @@
 [
   {
+    "id": "pos-55f95cccb8a4b4202f6d",
+    "marke": "Apple",
+    "modell": "AirPods Max",
+    "speicher": "",
+    "farbe": "",
+    "kategorie": "kopfhoerer",
+    "zustand": "gebraucht",
+    "preis": 450,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-08-31"
+  },
+  {
     "id": "pos-f2a7f50a9f55c23b0817",
     "marke": "Apple",
     "modell": "iPhone 8 Plus",
@@ -1184,7 +1198,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 599.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-08-31"
