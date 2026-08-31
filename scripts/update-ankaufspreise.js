@@ -22,6 +22,9 @@
  *   node scripts/update-ankaufspreise.js --dry-run --mock (wie oben, erzwingt Mock-Daten)
  *   node scripts/update-ankaufspreise.js --quelle=ebay|mock
  *       (Datenquelle erzwingen statt Auto-Erkennung anhand vorhandener Secrets)
+ *   node scripts/update-ankaufspreise.js --alle --manuelle-freigeben
+ *       (ausdruecklicher Voll-Lauf: alle Varianten aktualisieren und bisher manuelle
+ *        Varianten einmalig wieder der Automatik uebergeben)
  *   node scripts/update-ankaufspreise.js --dry-run --nur=kat-0024:128 GB,kat-0016:128 GB
  *       (nur die angegebenen Geräte+Varianten verarbeiten, ignoriert Rotation/Budget -
  *        für gezielte Demo-/Testläufe)
@@ -30,7 +33,8 @@
  *        Quelle) für genau dieses Gerät+Variante aus - zur Diagnose bei zu wenigen Treffern)
  *
  * Sicherheitsregeln (siehe CLAUDE.md + Anforderungsspezifikation):
- *   1. preisQuelle:"manuell" wird nie angefasst.
+ *   1. preisQuelle:"manuell" wird nie angefasst, ausser der Betreiber fordert mit
+ *      --manuelle-freigeben ausdruecklich eine einmalige Rueckgabe an die Automatik an.
  *   2. Tagesbremse ±10 %/Tag (Ausnahme: allererster echter Marktlauf eines Geräts, s. u.).
  *   3. Konsistenzregel 1 (EINZIGE verbleibende Sicherheitsregel neben neuVersiegelt):
  *      Harte Mindestmarge zum eigenen Verkaufspreis (bestand.json): Neu maximal 88 %, gebrauchte
@@ -101,7 +105,8 @@ const ANKAUF_KOMMENTAR =
   "Zusätzlich (alle Marken/Kategorien, keine Ausnahme): marktwertNeu > 115% UVP gilt als " +
   "kontaminiert und wird verworfen, verbleibender Anker zusätzlich hart auf 100% UVP gedeckelt. " +
   "Alles zusätzlich global verschiebbar über pricing-niveau.json. preisQuelle \"manuell\" wird " +
-  "nie automatisch überschrieben. Geräte, die noch keinen echten Marktlauf hatten (marktwertQuelle " +
+  "nur bei einem ausdrücklich gestarteten Voll-Lauf mit --manuelle-freigeben wieder der Automatik " +
+  "übergeben, sonst nie automatisch überschrieben. Geräte, die noch keinen echten Marktlauf hatten (marktwertQuelle " +
   "\"geschaetzt\" im Katalog), tragen weiterhin die ältere Schätzformel aus pricing-config.js, bis " +
   "sie an der Reihe sind (siehe Rotation, scripts/rotation-state.json). Ein exakt erkannter " +
   "öffentlicher Avatel-Neupreis ersetzt bei der Neuware-Berechnung den groben UVP-Anker und " +
@@ -127,7 +132,9 @@ function parseArgs(argv) {
         return { id: (id || "").trim(), bezeichnung: (bezeichnung || "").trim() };
       })()
     : null;
-  return { dryRun, mockErzwungen, quelleErzwungen, nur, debugTreffer };
+  const alle = argv.includes("--alle");
+  const manuelleFreigeben = argv.includes("--manuelle-freigeben");
+  return { dryRun, mockErzwungen, quelleErzwungen, nur, debugTreffer, alle, manuelleFreigeben };
 }
 
 function heutigesDatum() {
@@ -144,7 +151,7 @@ function ladeJson(datei, fallback) {
 // ---------------------------------------------------------------------------
 // Rotation / Budget-Auswahl (Anforderung E)
 // ---------------------------------------------------------------------------
-function waehleHeutigeGeraete({ katalog, ankaufAltById, rotationState, nurFilter }) {
+function waehleHeutigeGeraete({ katalog, ankaufAltById, rotationState, nurFilter, alle }) {
   if (nurFilter) {
     const nurIds = new Set(nurFilter.map((n) => n.id));
     return {
@@ -152,6 +159,15 @@ function waehleHeutigeGeraete({ katalog, ankaufAltById, rotationState, nurFilter
       neuerRotationIndex: rotationState.naechsterIndex,
       rotationsGroesse: 0,
       rotationsGesamt: 0,
+    };
+  }
+
+  if (alle) {
+    return {
+      heutigeIds: new Set(katalog.map((geraet) => geraet.id)),
+      neuerRotationIndex: rotationState.naechsterIndex,
+      rotationsGroesse: katalog.length,
+      rotationsGesamt: katalog.length,
     };
   }
 
@@ -281,7 +297,7 @@ function wendeKonsistenzregel1An({ stufenFinal, geraet, variante, bestandListe, 
 // Hauptlogik je Variante - gibt { variante-Objekt für ankauf-preise.json,
 // protokollEintrag } zurück.
 // ---------------------------------------------------------------------------
-async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontext, budgetZaehler, niveauFaktor, bestandListe, log, debugTreffer, wettbewerbAktiv, rebuyAktiv }) {
+async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontext, budgetZaehler, niveauFaktor, bestandListe, log, debugTreffer, wettbewerbAktiv, rebuyAktiv, manuellFreigegeben }) {
   const basis = { marke: geraet.marke, modell: geraet.modell, variante: variante.bezeichnung };
 
   if (altVariante && altVariante.preisQuelle === "manuell") {
@@ -422,7 +438,9 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     stufenRoh.gut = abgeleitet.gut;
   }
 
-  const istErsterLauf = !geraet.marktwertQuelle || geraet.marktwertQuelle === "geschaetzt";
+  // Ein ausdruecklich freigegebener manueller Preis soll beim Vergleich sofort das echte
+  // Automatik-Ergebnis zeigen. Die normale Tagesbremse greift ab dem naechsten Lauf wieder.
+  const istErsterLauf = manuellFreigegeben || !geraet.marktwertQuelle || geraet.marktwertQuelle === "geschaetzt";
   const stufenOhneBremse = ["neuVersiegelt", ...(istSmartphone ? ["wieNeu", "sehrGut", "gut"] : [])];
   const stufenFuerBremse = { ...stufenRoh };
   stufenOhneBremse.forEach((s) => { stufenFuerBremse[s] = null; });
@@ -500,6 +518,7 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     stufen: stufenFinal,
     altStufen: altVariante && altVariante.preise,
     istErsterLauf,
+    manuellFreigegeben,
     gruende: alleGruende,
   };
 
@@ -523,7 +542,12 @@ function bauePlatzhalterVariante(variante) {
 // ---------------------------------------------------------------------------
 function formatiereRechnung(r) {
   const zeilen = [];
-  zeilen.push("**" + r.marke + " " + r.modell + " (" + r.variante + ")**" + (r.istErsterLauf ? " _(erster echter Marktlauf – Tagesbremse übersprungen)_" : ""));
+  const laufHinweis = r.manuellFreigegeben
+    ? " _(manuell freigegeben – Tagesbremse einmalig übersprungen)_"
+    : r.istErsterLauf
+      ? " _(erster echter Marktlauf – Tagesbremse übersprungen)_"
+      : "";
+  zeilen.push("**" + r.marke + " " + r.modell + " (" + r.variante + ")**" + laufHinweis);
   zeilen.push("- Gebraucht eBay: " + r.gebrauchtTreffer + " Treffer, Median vor Filter " + rund(r.gebrauchtMedianVor) + " €, nach Filter " + rund(r.gebrauchtMedianNach) + " € → Sicherheitsanker " + rund(r.ebayMarktwertGebraucht) + " € (−" + Math.round(config.ABSCHLAG_GEBRAUCHT * 100) + "%)");
   zeilen.push(
     "- Gebraucht Rebuy-VK: " +
@@ -623,7 +647,9 @@ function schreibeLog({ datum, protokolle, speicherKonsistenzProtokoll, dryRun })
 // Hauptprogramm
 // ---------------------------------------------------------------------------
 async function main() {
-  const { dryRun, mockErzwungen, quelleErzwungen, nur, debugTreffer } = parseArgs(process.argv.slice(2));
+  const {
+    dryRun, mockErzwungen, quelleErzwungen, nur, debugTreffer, alle, manuelleFreigeben,
+  } = parseArgs(process.argv.slice(2));
   const quelle = searchClient.bestimmeDatenquelle({
     quelleErzwungen: quelleErzwungen || (mockErzwungen ? searchClient.DATENQUELLEN.MOCK : null),
   });
@@ -656,12 +682,19 @@ async function main() {
   const rotationState = ladeJson(ROTATION_STATE_FILE, { naechsterIndex: 0, letzterLauf: null });
 
   const { heutigeIds, neuerRotationIndex, rotationsGroesse, rotationsGesamt } = waehleHeutigeGeraete({
-    katalog, ankaufAltById, rotationState, nurFilter: nur,
+    katalog, ankaufAltById, rotationState, nurFilter: nur, alle,
   });
   console.log(
     "Heute ausgewählt: " + heutigeIds.size + " Gerät(e)" +
-    (nur ? " (--nur-Filter aktiv)" : " (davon Rotationsscheibe " + rotationsGroesse + "/" + rotationsGesamt + ")")
+    (nur
+      ? " (--nur-Filter aktiv)"
+      : alle
+        ? " (--alle: kompletter Katalog)"
+        : " (davon Rotationsscheibe " + rotationsGroesse + "/" + rotationsGesamt + ")")
   );
+  if (manuelleFreigeben) {
+    console.log("Manuelle Preisvarianten werden in diesem Lauf ausdrücklich wieder der Automatik übergeben.");
+  }
 
   const budgetZaehler = mockModus ? null : searchClient.erstelleBudgetZaehler(config.API_BUDGET_TAEGLICH);
   const zugangskontext = await searchClient.holeZugangskontext(quelle);
@@ -689,7 +722,13 @@ async function main() {
     const neueVarianten = [];
     for (const variante of geraet.varianten) {
       const nurVerarbeiten = !nur || variantenGefiltert.includes(variante);
-      const altVariante = altGeraet && altGeraet.varianten.find((v) => v.bezeichnung === variante.bezeichnung);
+      const altVarianteGespeichert = altGeraet && altGeraet.varianten.find((v) => v.bezeichnung === variante.bezeichnung);
+      const varianteManuellFreigegeben = !!(
+        manuelleFreigeben && altVarianteGespeichert && altVarianteGespeichert.preisQuelle === "manuell"
+      );
+      const altVariante = varianteManuellFreigegeben
+        ? { ...altVarianteGespeichert, preisQuelle: "auto" }
+        : altVarianteGespeichert;
 
       if (!nurVerarbeiten) {
         neueVarianten.push(altVariante || bauePlatzhalterVariante(variante));
@@ -707,6 +746,7 @@ async function main() {
           geraet.kategorie === "kopfhoerer" ||
           /airpods|earbuds|buds/i.test(geraet.modell)
         ),
+        manuellFreigegeben: varianteManuellFreigegeben,
       });
       neueVarianten.push(ergebnis.variante);
       protokolle.push(ergebnis.protokoll);
