@@ -61,6 +61,13 @@ function wettbewerbsZiel(preis) {
 const API_BUDGET_TAEGLICH = 5000;
 const CALLS_JE_VARIANTE = 2;
 
+// Rebuy-Verkaufspreise enthalten Aufbereitung, Garantie und Versand. 90 % davon sind ein
+// konservativer lokaler Wiederverkaufsanker. Weichen eBay und Rebuy stark voneinander ab, wird
+// ausschließlich der niedrigere Wert verwendet und der Fall sichtbar markiert.
+const REBUY_VK_SICHERHEITSFAKTOR = 0.90;
+const MAX_QUELLEN_ABWEICHUNG = 0.30;
+const REBUY_MAX_ANFRAGEN_TAEGLICH = 80;
+
 module.exports = {
   MIN_TREFFER_GEBRAUCHT,
   MIN_TREFFER_NEU,
@@ -73,4 +80,7 @@ module.exports = {
   wettbewerbsZiel,
   API_BUDGET_TAEGLICH,
   CALLS_JE_VARIANTE,
+  REBUY_VK_SICHERHEITSFAKTOR,
+  MAX_QUELLEN_ABWEICHUNG,
+  REBUY_MAX_ANFRAGEN_TAEGLICH,
 };

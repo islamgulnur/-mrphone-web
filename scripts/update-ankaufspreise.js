@@ -62,6 +62,7 @@ const pricing = require("../pricing-config");
 const config = require("./ankaufspreis-config");
 const searchClient = require("./lib/search-client");
 const competitorClient = require("./lib/competitor-client");
+const rebuyClient = require("./lib/rebuy-client");
 const { backupIfChanged } = require("./backup-data");
 
 const ROOT = path.join(__dirname, "..");
@@ -80,7 +81,10 @@ const KATEGORIEN = [
 ];
 
 const ANKAUF_KOMMENTAR =
-  "AUTO-PREISE aus echten eBay-Marktdaten (Browse API, siehe scripts/lib/search-client.js) " +
+  "AUTO-PREISE aus echten eBay-Marktdaten plus öffentlichem Rebuy-Wiederverkaufswert als " +
+  "kostenloser zweiter Gebrauchtmarkt-Quelle (siehe scripts/lib/search-client.js und " +
+  "scripts/lib/rebuy-client.js). Erhöhungen bei Smartphones und Kopfhörern werden ohne " +
+  "bestätigende zweite Quelle nicht veröffentlicht. " +
   "- siehe scripts/update-ankaufspreise.js + " +
   "scripts/ankaufspreis-config.js. Je Gerät+Variante zwei Marktanker (gebraucht/neu), " +
   "Ausreißerfilter + Median + Abschlag. defekt IMMER als fester, markenabhängiger Prozentsatz vom " +
@@ -222,8 +226,8 @@ async function holeMarktwert({ geraet, variante, zustand, zugangskontext, budget
 // dieser Prozentsätze im Projekt) direkt auf den echten Gebraucht-Marktanker angewendet.
 // Kein Wettbewerbs-Abstand, keine zusätzliche Markenkorrektur mehr (siehe Kommentarblock
 // oben: bereinigt am 28.07.2026, überlagerten sich und kollidierten bei teuren Geräten).
-function berechneStufen({ marktwertGebraucht, niveauFaktor, marke }) {
-  const prozentsaetze = pricing.prozentsaetzeFuerMarke(marke);
+function berechneStufen({ marktwertGebraucht, niveauFaktor, geraet }) {
+  const prozentsaetze = pricing.prozentsaetzeFuerGeraet(geraet);
   const stufen = { neuVersiegelt: null }; // wird separat über pricing.berechneNeuVersiegelt() gesetzt
   pricing.ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
     if (stufe === "neuVersiegelt") return;
@@ -267,7 +271,7 @@ function wendeKonsistenzregel1An({ stufenFinal, geraet, variante, bestandListe, 
   return pricing.wendeVkSicherheitsdeckelAn(stufenFinal, {
     neu: niedrigsterGueltigerWert(eigenerNeu, marktwertNeu),
     gebraucht: niedrigsterGueltigerWert(eigenerGebraucht, marktwertGebraucht),
-  }, geraet.marke).map((aenderung) => (
+  }, geraet).map((aenderung) => (
     aenderung.stufe + ": Mindestmarge zum niedrigsten VK-/Marktanker " + aenderung.verkaufspreis +
     " € eingehalten (maximal " + aenderung.neu + " €)"
   ));
@@ -277,7 +281,7 @@ function wendeKonsistenzregel1An({ stufenFinal, geraet, variante, bestandListe, 
 // Hauptlogik je Variante - gibt { variante-Objekt für ankauf-preise.json,
 // protokollEintrag } zurück.
 // ---------------------------------------------------------------------------
-async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontext, budgetZaehler, niveauFaktor, bestandListe, log, debugTreffer, wettbewerbAktiv }) {
+async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontext, budgetZaehler, niveauFaktor, bestandListe, log, debugTreffer, wettbewerbAktiv, rebuyAktiv }) {
   const basis = { marke: geraet.marke, modell: geraet.modell, variante: variante.bezeichnung };
 
   if (altVariante && altVariante.preisQuelle === "manuell") {
@@ -300,6 +304,32 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
       variante: altVariante || bauePlatzhalterVariante(variante),
         protokoll: { typ: "uebersprungen", ...basis, grund: gebraucht.grund || ("zu wenige Gebraucht-Treffer (" + gebraucht.treffer + " < " + config.MIN_TREFFER_GEBRAUCHT + ")") },
     };
+  }
+
+  const rebuy = rebuyAktiv
+    ? await rebuyClient.holeRebuyGebraucht({
+        geraet,
+        variante,
+        maxAnfragen: config.REBUY_MAX_ANFRAGEN_TAEGLICH,
+      })
+    : { quelle: "rebuy-vk", status: "deaktiviert", preis: null, treffer: 0 };
+  const ebayMarktwertGebraucht = gebraucht.marktwert;
+  const rebuyMarktwertGebraucht = rebuy.status === "ok"
+    ? Number(rebuy.preis) * config.REBUY_VK_SICHERHEITSFAKTOR
+    : null;
+  const gebrauchtQuellenWarnungen = [];
+  let gebrauchtQuellenBestaetigt = false;
+  if (rebuyMarktwertGebraucht != null) {
+    const kleiner = Math.min(ebayMarktwertGebraucht, rebuyMarktwertGebraucht);
+    const groesser = Math.max(ebayMarktwertGebraucht, rebuyMarktwertGebraucht);
+    const abweichung = kleiner > 0 ? (groesser - kleiner) / kleiner : Infinity;
+    gebraucht.marktwert = kleiner;
+    gebrauchtQuellenBestaetigt = abweichung <= config.MAX_QUELLEN_ABWEICHUNG;
+    if (abweichung > config.MAX_QUELLEN_ABWEICHUNG) {
+      gebrauchtQuellenWarnungen.push(
+        "Gebrauchtquellen weichen " + Math.round(abweichung * 100) + "% ab; sicherheitshalber niedrigeren Anker verwendet"
+      );
+    }
   }
 
   try {
@@ -383,7 +413,7 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
         wettbewerbsZiel,
       });
 
-  const stufenRoh = berechneStufen({ marktwertGebraucht: gebraucht.marktwert, niveauFaktor, marke: geraet.marke });
+  const stufenRoh = berechneStufen({ marktwertGebraucht: gebraucht.marktwert, niveauFaktor, geraet });
   stufenRoh.neuVersiegelt = neuVersiegeltWert;
   if (istSmartphone) {
     const abgeleitet = pricing.berechneGebrauchtAusNeu(neuVersiegeltWert, geraet.marke, gebraucht.marktwert);
@@ -400,6 +430,18 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     stufenRoh: stufenFuerBremse, altPreise: altVariante && altVariante.preise, istErsterLauf,
   });
   stufenOhneBremse.forEach((s) => { stufenFinal[s] = stufenRoh[s]; });
+
+  // Eine einzelne Quelle darf einen Gebrauchtpreis senken, aber niemals erhöhen. Erhöhungen
+  // werden erst veröffentlicht, wenn eBay und Rebuy denselben Markt grob bestätigen.
+  if (rebuyAktiv && !gebrauchtQuellenBestaetigt && altVariante && altVariante.preise) {
+    ["wieNeu", "sehrGut", "gut", "defekt"].forEach((stufe) => {
+      const alt = Number(altVariante.preise[stufe]);
+      const neuWert = Number(stufenFinal[stufe]);
+      if (!Number.isFinite(alt) || !Number.isFinite(neuWert) || neuWert <= alt) return;
+      stufenFinal[stufe] = alt;
+      gebrauchtQuellenWarnungen.push(stufe + ": Erhöhung ohne bestätigende zweite Quelle ausgesetzt");
+    });
+  }
 
   // Sichere Senkungen (insbesondere wenn wir über dem Wettbewerb liegen) gelten
   // sofort. Erhöhungen erfolgen höchstens in 10%-Schritten, damit ein einzelner
@@ -422,7 +464,7 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     marktwertNeu, marktwertGebraucht: gebraucht.marktwert,
   });
 
-  const alleGruende = [...bremseGruende, ...konsistenzGruende];
+  const alleGruende = [...gebrauchtQuellenWarnungen, ...bremseGruende, ...konsistenzGruende];
   if (marktwertNeuVerworfen) {
     alleGruende.push(
       "marktwertNeu verworfen (Leitplanke 2: " + Math.round(marktwertNeuRoh) + " € > " +
@@ -439,6 +481,9 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     gebrauchtMedianVor: gebraucht.quartil.medianVorFilter,
     gebrauchtMedianNach: gebraucht.quartil.medianNachFilter,
     marktwertGebraucht: gebraucht.marktwert,
+    ebayMarktwertGebraucht,
+    rebuy,
+    rebuyMarktwertGebraucht,
     neuTreffer: neu.treffer,
     neuGrund: neu.grund,
     neuMedianVor: neu.quartil && neu.quartil.medianVorFilter,
@@ -479,7 +524,14 @@ function bauePlatzhalterVariante(variante) {
 function formatiereRechnung(r) {
   const zeilen = [];
   zeilen.push("**" + r.marke + " " + r.modell + " (" + r.variante + ")**" + (r.istErsterLauf ? " _(erster echter Marktlauf – Tagesbremse übersprungen)_" : ""));
-  zeilen.push("- Gebraucht: " + r.gebrauchtTreffer + " Treffer, Median vor Filter " + rund(r.gebrauchtMedianVor) + " €, nach Filter " + rund(r.gebrauchtMedianNach) + " € → marktwertGebraucht " + rund(r.marktwertGebraucht) + " € (−" + Math.round(config.ABSCHLAG_GEBRAUCHT * 100) + "%)");
+  zeilen.push("- Gebraucht eBay: " + r.gebrauchtTreffer + " Treffer, Median vor Filter " + rund(r.gebrauchtMedianVor) + " €, nach Filter " + rund(r.gebrauchtMedianNach) + " € → Sicherheitsanker " + rund(r.ebayMarktwertGebraucht) + " € (−" + Math.round(config.ABSCHLAG_GEBRAUCHT * 100) + "%)");
+  zeilen.push(
+    "- Gebraucht Rebuy-VK: " +
+    (r.rebuyMarktwertGebraucht == null
+      ? "– (" + ((r.rebuy && r.rebuy.status) || "nicht verfügbar") + ")"
+      : rund(r.rebuy.preis) + " € × " + Math.round(config.REBUY_VK_SICHERHEITSFAKTOR * 100) + "% = " + rund(r.rebuyMarktwertGebraucht) + " €") +
+    " → verwendeter Gebrauchtanker " + rund(r.marktwertGebraucht) + " €"
+  );
   if (r.marktwertNeuVerworfen) {
     zeilen.push("- Neu: " + r.neuTreffer + " Treffer, Median vor Filter " + rund(r.neuMedianVor) + " €, nach Filter " + rund(r.neuMedianNach) + " € → marktwertNeu(roh) " + rund(r.marktwertNeuRoh) + " € **VERWORFEN** (Leitplanke 2: > " + Math.round(pricing.NEU_VERSIEGELT_MARKTWERT_VERWERFEN_SCHWELLE * 100) + "% von UVP " + rund(r.uvpVariante) + " €) → marktwertNeu = null");
   } else if (r.marktwertNeu != null) {
@@ -650,6 +702,11 @@ async function main() {
         log: (r) => { if (dryRun) console.log("\n" + formatiereRechnung(r)); },
         debugTreffer: debugTrifftZu,
         wettbewerbAktiv: !mockModus,
+        rebuyAktiv: !mockModus && (
+          geraet.kategorie === "smartphones" ||
+          geraet.kategorie === "kopfhoerer" ||
+          /airpods|earbuds|buds/i.test(geraet.modell)
+        ),
       });
       neueVarianten.push(ergebnis.variante);
       protokolle.push(ergebnis.protokoll);

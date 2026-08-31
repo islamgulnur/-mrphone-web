@@ -70,7 +70,7 @@ const ergebnis = katalog.map((geraet) => {
     const verstoesse = pricing.pruefeKonsistenz(berechnung.preise, {
       neu: berechnung.wiederverkaufswertNeu,
       gebraucht: berechnung.wiederverkaufswertGebraucht,
-    }, geraet.marke);
+    }, geraet);
     if (verstoesse.length) {
       konsistenzWarnungen.push({ marke: geraet.marke, modell: geraet.modell, variante: v.bezeichnung, verstoesse });
     }

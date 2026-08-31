@@ -120,10 +120,42 @@ const ANKAUF_PROZENTSAETZE_REST = {
   defekt: 0.20,
 };
 
+// Kopfhörer brauchen wegen Fälschungsrisiko, Hygiene, fehlender Einzelteile und hoher
+// Gewährleistungsquote deutlich mehr Reserve als Smartphones. Insbesondere AirPods Max dürfen
+// deshalb nie mit der allgemeinen Apple-Tabelle (80 % des Gebrauchtwerts) kalkuliert werden.
+const ANKAUF_PROZENTSAETZE_KOPFHOERER = {
+  wieNeu: 0.50,
+  sehrGut: 0.45,
+  gut: 0.35,
+  defekt: 0.10,
+};
+
+// Aktuelle Smartphones werden wettbewerbsnäher kalkuliert. Der zugrunde liegende Marktanker ist
+// bereits um den Angebots-/Handelsabschlag reduziert; 84 % davon entsprechen bei eBay-Daten
+// ungefähr 74 % des sichtbaren Wiederverkaufspreises.
+const ANKAUF_PROZENTSAETZE_SMARTPHONE_APPLE = {
+  wieNeu: 0.84,
+  sehrGut: 0.78,
+  gut: 0.68,
+  defekt: 0.25,
+};
+
 function prozentsaetzeFuerMarke(marke) {
   return String(marke || "").trim().toLowerCase() === "apple"
     ? ANKAUF_PROZENTSAETZE_APPLE
     : ANKAUF_PROZENTSAETZE_REST;
+}
+
+function prozentsaetzeFuerGeraet(geraet) {
+  const kategorie = String(geraet && geraet.kategorie || "").trim().toLowerCase();
+  const modell = String(geraet && geraet.modell || "").trim().toLowerCase();
+  if (kategorie === "kopfhoerer" || /\b(airpods|headphones?|earbuds?|buds)\b/.test(modell)) {
+    return ANKAUF_PROZENTSAETZE_KOPFHOERER;
+  }
+  if (kategorie === "smartphones" && String(geraet && geraet.marke || "").trim().toLowerCase() === "apple") {
+    return ANKAUF_PROZENTSAETZE_SMARTPHONE_APPLE;
+  }
+  return prozentsaetzeFuerMarke(geraet && geraet.marke);
 }
 
 // ---------------------------------------------------------------------------
@@ -154,14 +186,17 @@ const MINDESTABSTAND_VK_EURO = {
   gebraucht: 20,
 };
 
-function berechneVkSicherheitsdeckel(verkaufspreis, stufe, marke) {
+function berechneVkSicherheitsdeckel(verkaufspreis, stufe, markeOderGeraet) {
   const vk = Number(verkaufspreis);
   if (!Number.isFinite(vk) || vk <= 0) return null;
 
   const istNeu = stufe === "neuVersiegelt";
+  const marke = typeof markeOderGeraet === "object" ? markeOderGeraet.marke : markeOderGeraet;
   const prozent = istNeu
     ? NEU_VERSIEGELT_EIGENER_VK_ABSCHLAG
-    : prozentsaetzeFuerMarke(marke)[stufe];
+    : (typeof markeOderGeraet === "object"
+        ? prozentsaetzeFuerGeraet(markeOderGeraet)
+        : prozentsaetzeFuerMarke(marke))[stufe];
   if (!Number.isFinite(prozent)) return null;
 
   const mindestabstand = istNeu
@@ -170,7 +205,7 @@ function berechneVkSicherheitsdeckel(verkaufspreis, stufe, marke) {
   return rundeAbAuf5(Math.min(vk * prozent, vk - mindestabstand));
 }
 
-function wendeVkSicherheitsdeckelAn(preise, wiederverkaufswerte, marke) {
+function wendeVkSicherheitsdeckelAn(preise, wiederverkaufswerte, markeOderGeraet) {
   const aenderungen = [];
   if (!preise || !wiederverkaufswerte) return aenderungen;
 
@@ -180,7 +215,7 @@ function wendeVkSicherheitsdeckelAn(preise, wiederverkaufswerte, marke) {
     const referenz = stufe === "neuVersiegelt"
       ? wiederverkaufswerte.neu
       : wiederverkaufswerte.gebraucht;
-    const deckel = berechneVkSicherheitsdeckel(referenz, stufe, marke);
+    const deckel = berechneVkSicherheitsdeckel(referenz, stufe, markeOderGeraet);
     if (deckel != null && wert > deckel) {
       preise[stufe] = deckel;
       aenderungen.push({ stufe, alt: wert, neu: deckel, verkaufspreis: Number(referenz) });
@@ -366,14 +401,18 @@ function berechneGebrauchtAusNeu(neuWert, marke, marktwertGebraucht) {
   const tabelleAusNeu = String(marke || "").trim().toLowerCase() === "apple"
     ? ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_APPLE
     : ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_REST;
-  const tabelleAusMarkt = prozentsaetzeFuerMarke(marke);
+  const tabelleAusMarkt = String(marke || "").trim().toLowerCase() === "apple"
+    ? ANKAUF_PROZENTSAETZE_SMARTPHONE_APPLE
+    : prozentsaetzeFuerMarke(marke);
   const ergebnis = {};
   ["wieNeu", "sehrGut", "gut"].forEach((stufe) => {
-    const kandidaten = [neuWert * tabelleAusNeu[stufe]];
-    if (marktwertGebraucht != null && Number.isFinite(Number(marktwertGebraucht))) {
-      kandidaten.push(Number(marktwertGebraucht) * tabelleAusMarkt[stufe]);
-    }
-    ergebnis[stufe] = rundeAuf5(Math.min(...kandidaten));
+    // Ein vorhandener echter Gebrauchtmarkt ist der passendere Anker. Die frühere MIN-Verknüpfung
+    // mit dem Neugeräte-Ankauf drückte aktuelle iPhones unnötig weit unter den Wettbewerb.
+    const hatGebrauchtmarkt = marktwertGebraucht != null && Number.isFinite(Number(marktwertGebraucht));
+    const basis = hatGebrauchtmarkt
+      ? Number(marktwertGebraucht) * tabelleAusMarkt[stufe]
+      : neuWert * tabelleAusNeu[stufe];
+    ergebnis[stufe] = rundeAuf5(basis);
   });
   return ergebnis;
 }
@@ -493,7 +532,7 @@ function berechnePreise(geraet, variante, bestandListe, niveauProzent) {
   const niveau = Number.isFinite(niveauProzent) ? niveauProzent : liesAnkaufsniveau();
   const niveauFaktor = 1 + niveau / 100;
   const wiederverkauf = ermittleWiederverkaufswerte(geraet, variante, bestandListe);
-  const prozentsaetze = prozentsaetzeFuerMarke(geraet.marke);
+  const prozentsaetze = prozentsaetzeFuerGeraet(geraet);
 
   const ergebnis = {};
   if (istUvpBasierteKategorie(geraet.kategorie)) {
@@ -536,7 +575,7 @@ function berechnePreise(geraet, variante, bestandListe, niveauProzent) {
   wendeVkSicherheitsdeckelAn(ergebnis, {
     neu: wiederverkauf.neu,
     gebraucht: wiederverkauf.gebraucht,
-  }, geraet.marke);
+  }, geraet);
 
   return {
     preise: ergebnis,
@@ -592,11 +631,11 @@ function wendeSpeicherKonsistenzAn(varianten) {
   return aenderungen;
 }
 
-function pruefeKonsistenz(preise, wiederverkaufswerte, marke) {
+function pruefeKonsistenz(preise, wiederverkaufswerte, markeOderGeraet) {
   const verstoesse = [];
   ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
     const referenz = stufe === "neuVersiegelt" ? wiederverkaufswerte.neu : wiederverkaufswerte.gebraucht;
-    const deckel = berechneVkSicherheitsdeckel(referenz, stufe, marke);
+    const deckel = berechneVkSicherheitsdeckel(referenz, stufe, markeOderGeraet);
     if (deckel != null && preise[stufe] > deckel) {
       verstoesse.push({
         stufe,
@@ -615,7 +654,10 @@ module.exports = {
   ALTERSFAKTOR_MINIMUM,
   ANKAUF_PROZENTSAETZE_APPLE,
   ANKAUF_PROZENTSAETZE_REST,
+  ANKAUF_PROZENTSAETZE_KOPFHOERER,
+  ANKAUF_PROZENTSAETZE_SMARTPHONE_APPLE,
   prozentsaetzeFuerMarke,
+  prozentsaetzeFuerGeraet,
   MINDESTABSTAND_VK_EURO,
   berechneVkSicherheitsdeckel,
   wendeVkSicherheitsdeckelAn,

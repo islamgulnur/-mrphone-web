@@ -541,7 +541,7 @@ app.post("/api/ankauf/:id/neu-berechnen", (req, res) => {
     const verstoesse = pricing.pruefeKonsistenz(berechnung.preise, {
       neu: berechnung.wiederverkaufswertNeu,
       gebraucht: berechnung.wiederverkaufswertGebraucht,
-    });
+    }, geraetFuerPricing);
     if (verstoesse.length) warnungen.push({ variante: v.bezeichnung, verstoesse });
     return { ...v, preise: berechnung.preise };
   });
@@ -611,7 +611,7 @@ function berechneMassenanpassung(list, body) {
         const verstoesse = pricing.pruefeKonsistenz(
           neu,
           { neu: wiederverkauf.neu, gebraucht: wiederverkauf.gebraucht },
-          geraet.marke
+          { ...katalogEintrag, marke: geraet.marke, modell: geraet.modell }
         );
         if (verstoesse.length) {
           warnungen.push({ geraet: geraet.marke + " " + geraet.modell, variante: v.bezeichnung, verstoesse });

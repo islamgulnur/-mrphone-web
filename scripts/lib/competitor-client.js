@@ -37,7 +37,7 @@ function ohneTags(text) {
 function produktTokens(geraet, variante) {
   return normalisiere([geraet.marke, geraet.modell, variante.bezeichnung].join(" "))
     .split(" ")
-    .filter((token) => token.length > 1 && !["gb", "tb", "ram", "wifi", "5g", "4g"].includes(token));
+    .filter((token) => (token.length > 1 || /^\d+$/.test(token)) && !["gb", "tb", "ram", "wifi", "5g", "4g", "standard"].includes(token));
 }
 
 function passtExakt(titel, geraet, variante) {

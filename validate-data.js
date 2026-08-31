@@ -192,7 +192,7 @@ if (Array.isArray(katalog) && Array.isArray(ankaufListe) && Array.isArray(bestan
       const deckelungen = pricing.wendeVkSicherheitsdeckelAn(
         pruefPreise,
         { neu: eigenerNeu, gebraucht: eigenerGebraucht },
-        katalogGeraet.marke
+        katalogGeraet
       );
       deckelungen.forEach((deckelung) => {
         const meldung = ankaufGeraet.marke + " " + ankaufGeraet.modell + " / " +

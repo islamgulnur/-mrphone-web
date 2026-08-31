@@ -3,6 +3,7 @@ const config = require("./ankaufspreis-config");
 const pricing = require("../pricing-config");
 const competitor = require("./lib/competitor-client");
 const ebay = require("./lib/ebay-client");
+const rebuy = require("./lib/rebuy-client");
 
 async function test() {
   assert.strictEqual(config.wettbewerbsZiel(200), 185);
@@ -17,6 +18,21 @@ async function test() {
   assert(!competitor.passtExakt("Apple iPhone 17 Pro 512GB", geraet, variante));
   assert(!competitor.passtExakt("Apple iPhone 17 256GB", geraet, variante));
   assert(!competitor.passtExakt("Apple iPhone 17e 256GB", { marke: "Apple", modell: "iPhone 17" }, variante));
+
+  assert.strictEqual(pricing.prozentsaetzeFuerGeraet({ marke: "Apple", modell: "AirPods Max 2", kategorie: "kopfhoerer" }).wieNeu, 0.50);
+  assert.strictEqual(pricing.prozentsaetzeFuerGeraet({ marke: "Apple", modell: "iPhone 17 Pro Max", kategorie: "smartphones" }).wieNeu, 0.84);
+  assert.strictEqual(pricing.berechneGebrauchtAusNeu(930, "Apple", 1012).wieNeu, 850);
+
+  const rebuyGeraet = { marke: "Apple", modell: "iPhone 17 Pro Max" };
+  const rebuyHtml = [1124.99, 1152.99].map((preis, index) => `
+    <ry-product>
+      <span data-cy="product-price">${preis.toFixed(2).replace(".", ",")}&nbsp;€</span>
+      <a data-cy="product-link" href="/i,${index}" title="Apple iPhone 17 Pro Max 256GB ${index ? "silber" : "orange"}">Produkt</a>
+    </ry-product>`).join("");
+  const rebuyErgebnis = rebuy.leseRebuySuchergebnis(rebuyHtml, rebuyGeraet, { bezeichnung: "256 GB" });
+  assert.strictEqual(rebuyErgebnis.treffer.length, 2);
+  assert.strictEqual(rebuyErgebnis.preis, 1138.99);
+  assert(!rebuy.passtRebuyTitel("Apple AirPods Max 2 mitternacht", { marke: "Apple", modell: "AirPods Max" }, { bezeichnung: "Standard" }));
 
   const searchHtml = '<a href="/apple-iphone-17-pro-256gb" title="Apple iPhone 17 Pro 256GB">Produkt</a>';
   const produktHtml = '<h1>Apple iPhone 17 Pro 256GB</h1><p>ARTIKELZUSTAND NEU:</p><h4>UNSER PREISANGEBOT:</h4><span>1.000,00€</span>';
@@ -59,6 +75,7 @@ async function test() {
   assert.strictEqual(pricing.berechneVkSicherheitsdeckel(230, "wieNeu", "Samsung"), 170);
   assert.strictEqual(pricing.berechneVkSicherheitsdeckel(230, "sehrGut", "Samsung"), 155);
   assert.strictEqual(pricing.berechneVkSicherheitsdeckel(230, "sehrGut", "Apple"), 170);
+  assert.strictEqual(pricing.berechneVkSicherheitsdeckel(1000, "wieNeu", { marke: "Apple", modell: "iPhone 17 Pro Max", kategorie: "smartphones" }), 840);
 
   const unsicherePreise = { neuVersiegelt: 950, wieNeu: 220, sehrGut: 210, gut: 200, defekt: 100 };
   const deckelAenderungen = pricing.wendeVkSicherheitsdeckelAn(

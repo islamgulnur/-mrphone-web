@@ -12180,8 +12180,9 @@
         "uvpDelta": 0
       }
     ],
-    "marktwertGebraucht": 535,
-    "marktwertQuelle": "geschaetzt"
+    "marktwertGebraucht": 450,
+    "marktwertQuelle": "rebuy-vk",
+    "marktDatenStand": "2026-08-31"
   },
   {
     "id": "kat-0518",
