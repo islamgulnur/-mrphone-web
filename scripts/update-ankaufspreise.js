@@ -84,10 +84,21 @@ const KATEGORIEN = [
   "monitore", "kopfhoerer", "kameras", "konsolen", "zubehoer",
 ];
 
+// Rebuy fuehrt fuer diese Warengruppen ausreichend viele gebrauchte Einzelgeraete. Die
+// zweite Quelle wird nur dann abgefragt, wenn eBay eine Preiserhoehung nahelegt; sichere
+// Senkungen brauchen keine zweite Bestaetigung und verbrauchen daher kein Rebuy-Budget.
+const REBUY_KATEGORIEN = new Set([
+  "smartphones", "tablets", "smartwatches", "laptops", "kopfhoerer", "kameras", "konsolen",
+]);
+
+function istRebuyKandidat(geraet) {
+  return REBUY_KATEGORIEN.has(geraet.kategorie) || /airpods|earbuds|buds/i.test(geraet.modell);
+}
+
 const ANKAUF_KOMMENTAR =
   "AUTO-PREISE aus echten eBay-Marktdaten plus öffentlichem Rebuy-Wiederverkaufswert als " +
   "kostenloser zweiter Gebrauchtmarkt-Quelle (siehe scripts/lib/search-client.js und " +
-  "scripts/lib/rebuy-client.js). Erhöhungen bei Smartphones und Kopfhörern werden ohne " +
+  "scripts/lib/rebuy-client.js). Erhöhungen in den von Rebuy geführten Gerätekategorien werden ohne " +
   "bestätigende zweite Quelle nicht veröffentlicht. " +
   "- siehe scripts/update-ankaufspreise.js + " +
   "scripts/ankaufspreis-config.js. Je Gerät+Variante zwei Marktanker (gebraucht/neu), " +
@@ -322,13 +333,26 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     };
   }
 
-  const rebuy = rebuyAktiv
+  const brauchtRebuyBestaetigung = rebuyAktiv && (() => {
+    if (!altVariante || !altVariante.preise) return true;
+    const vorschau = berechneStufen({ marktwertGebraucht: gebraucht.marktwert, niveauFaktor, geraet });
+    return ["wieNeu", "sehrGut", "gut", "defekt"].some((stufe) => (
+      Number.isFinite(Number(vorschau[stufe])) &&
+      Number(vorschau[stufe]) > Number(altVariante.preise[stufe] || 0)
+    ));
+  })();
+  const rebuy = brauchtRebuyBestaetigung
     ? await rebuyClient.holeRebuyGebraucht({
         geraet,
         variante,
         maxAnfragen: config.REBUY_MAX_ANFRAGEN_TAEGLICH,
       })
-    : { quelle: "rebuy-vk", status: "deaktiviert", preis: null, treffer: 0 };
+    : {
+        quelle: "rebuy-vk",
+        status: rebuyAktiv ? "nicht-benoetigt" : "deaktiviert",
+        preis: null,
+        treffer: 0,
+      };
   const ebayMarktwertGebraucht = gebraucht.marktwert;
   const rebuyMarktwertGebraucht = rebuy.status === "ok"
     ? Number(rebuy.preis) * config.REBUY_VK_SICHERHEITSFAKTOR
@@ -707,7 +731,22 @@ async function main() {
   const ergebnisListe = [];
   const speicherKonsistenzProtokoll = [];
 
-  for (const geraet of katalog) {
+  // Rebuy-Budget zuerst fuer beliebte und aktuelle Kandidaten einsetzen. Die resultierende
+  // Datendatei wird danach wieder exakt in die urspruengliche Katalogreihenfolge gebracht.
+  const katalogIndex = new Map(katalog.map((geraet, index) => [geraet.id, index]));
+  const katalogVerarbeitung = [...katalog].sort((a, b) => {
+    const aAlt = ankaufAltById.get(a.id);
+    const bAlt = ankaufAltById.get(b.id);
+    const beliebtDifferenz = Number(!!(bAlt && bAlt.beliebt)) - Number(!!(aAlt && aAlt.beliebt));
+    if (beliebtDifferenz) return beliebtDifferenz;
+    const rebuyDifferenz = Number(istRebuyKandidat(b)) - Number(istRebuyKandidat(a));
+    if (rebuyDifferenz) return rebuyDifferenz;
+    const jahrDifferenz = (Number(b.jahr) || 0) - (Number(a.jahr) || 0);
+    if (jahrDifferenz) return jahrDifferenz;
+    return katalogIndex.get(a.id) - katalogIndex.get(b.id);
+  });
+
+  for (const geraet of katalogVerarbeitung) {
     const altGeraet = ankaufAltById.get(geraet.id);
     const variantenGefiltert = nur
       ? geraet.varianten.filter((v) => nur.some((n) => n.id === geraet.id && n.bezeichnung === v.bezeichnung))
@@ -741,11 +780,7 @@ async function main() {
         log: (r) => { if (dryRun) console.log("\n" + formatiereRechnung(r)); },
         debugTreffer: debugTrifftZu,
         wettbewerbAktiv: !mockModus,
-        rebuyAktiv: !mockModus && (
-          geraet.kategorie === "smartphones" ||
-          geraet.kategorie === "kopfhoerer" ||
-          /airpods|earbuds|buds/i.test(geraet.modell)
-        ),
+        rebuyAktiv: !mockModus && istRebuyKandidat(geraet),
         manuellFreigegeben: varianteManuellFreigegeben,
       });
       neueVarianten.push(ergebnis.variante);
@@ -787,6 +822,8 @@ async function main() {
       varianten: neueVarianten,
     });
   }
+
+  ergebnisListe.sort((a, b) => katalogIndex.get(a.id) - katalogIndex.get(b.id));
 
   // geraete-katalog.json: nur betroffene Felder ergänzen, Rest 1:1 durchreichen.
   const katalogNeu = katalog.map((g) => {
