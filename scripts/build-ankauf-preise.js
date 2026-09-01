@@ -29,7 +29,7 @@ const KATEGORIEN = [
 const ANKAUF_KOMMENTAR =
   "AUTO-PLATZHALTER-PREISE – berechnet aus dem Wiederverkaufswert (eigener Verkaufspreis aus " +
   "bestand.json, sonst marktwertGebraucht aus geraete-katalog.json) über die zentrale Heuristik " +
-  "(siehe pricing-config.js, 5 Zustandsstufen: neuVersiegelt/wieNeu/sehrGut/gut/defekt, " +
+  "(siehe pricing-config.js, 6 interne Zustandsstufen: neuVersiegelt/wieNeu/sehrGut/gut/schlecht/defekt, " +
   "global verschiebbar über pricing-niveau.json). " +
   "preisQuelle \"auto\" wird bei manueller Preisänderung im Admin automatisch auf \"manuell\" " +
   "gesetzt und danach nie mehr automatisch überschrieben. Vor Livegang: mindestens die " +

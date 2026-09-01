@@ -27,7 +27,7 @@ const BEWERTUNGEN_HINWEIS =
   "echten Google-Gesamtnote entsprechen (keine geschönte Zahl) - VOM BETREIBER PRÜFEN.";
 const ANKAUF_KOMMENTAR =
   "AUTO-PLATZHALTER-PREISE – berechnet aus neupreisUvp/jahr/marke über die zentrale Heuristik " +
-  "(siehe pricing-config.js im Projekt-Root, 5 Zustandsstufen: neuVersiegelt/wieNeu/sehrGut/gut/defekt). " +
+  "(siehe pricing-config.js im Projekt-Root, 6 interne Zustandsstufen: neuVersiegelt/wieNeu/sehrGut/gut/schlecht/defekt). " +
   "preisQuelle \"auto\" wird bei manueller Preisänderung " +
   "im Admin automatisch auf \"manuell\" gesetzt und danach nie mehr automatisch überschrieben. " +
   "Vor Livegang: mindestens die Top-50-Modelle manuell prüfen (siehe PREISE-ANLEITUNG.md).";
@@ -47,7 +47,7 @@ const KATEGORIEN = [
   "monitore", "kopfhoerer", "kameras", "konsolen", "zubehoer",
 ];
 
-const ZUSTANDS_FELDER = pricing.ZUSTANDS_REIHENFOLGE; // ["neuVersiegelt","wieNeu","sehrGut","gut","defekt"]
+const ZUSTANDS_FELDER = pricing.ZUSTANDS_REIHENFOLGE;
 const rundeAuf5 = pricing.rundeAuf5;
 
 function berechnePreise(geraet, variante, bestandListe, niveauProzent) {
@@ -223,9 +223,10 @@ function normalisiereVarianten(varianten) {
     .filter((v) => v && v.bezeichnung)
     .map((v) => {
       const preise = {};
-      ZUSTANDS_FELDER.forEach((feld) => {
+      ZUSTANDS_FELDER.filter((feld) => feld !== "schlecht").forEach((feld) => {
         preise[feld] = preisZahl(v.preise && v.preise[feld]);
       });
+      preise.schlecht = pricing.berechneSchlechtAusGut(preise.gut, preise.defekt);
       return {
         bezeichnung: String(v.bezeichnung),
         uvpDelta: Number.isFinite(Number(v.uvpDelta)) ? Number(v.uvpDelta) : 0,
@@ -598,9 +599,10 @@ function berechneMassenanpassung(list, body) {
       betroffeneVarianten++;
       const alt = { ...v.preise };
       const neu = {};
-      ZUSTANDS_FELDER.forEach((feld) => {
+      ZUSTANDS_FELDER.filter((feld) => feld !== "schlecht").forEach((feld) => {
         neu[feld] = angepassterPreis(v.preise[feld], einheit, richtung, wert);
       });
+      neu.schlecht = pricing.berechneSchlechtAusGut(neu.gut, neu.defekt);
       if (katalogEintrag) {
         // Konsistenzregel: Ankaufspreis muss die zentrale Mindestmarge einhalten.
         const wiederverkauf = pricing.ermittleWiederverkaufswerte(
@@ -647,9 +649,10 @@ app.post("/api/ankauf/massenanpassung/anwenden", (req, res) => {
     geraet.varianten = geraet.varianten.map((v) => {
       betroffeneVarianten++;
       const preise = {};
-      ZUSTANDS_FELDER.forEach((feld) => {
+      ZUSTANDS_FELDER.filter((feld) => feld !== "schlecht").forEach((feld) => {
         preise[feld] = angepassterPreis(v.preise[feld], einheit, richtung, wert);
       });
+      preise.schlecht = pricing.berechneSchlechtAusGut(preise.gut, preise.defekt);
       return { ...v, preise, preisQuelle: "manuell" };
     });
   });

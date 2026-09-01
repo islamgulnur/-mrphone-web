@@ -39,15 +39,7 @@
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a4 4 0 0 1 8 0v2"></path></svg>',
     },
     {
-      id: "wieNeu", titel: "Like new", beschreibung: "No scratches on screen or housing; technically flawless.", bild: "images/ankauf-zustand-wie-neu.jpg",
-      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.6 6.6L21 10l-5.4 3.9L17 21l-5-3.9L7 21l1.4-7.1L3 10l6.4-1.4z"></path></svg>',
-    },
-    {
-      id: "sehrGut", titel: "Very good", beschreibung: "Only tiny hairline marks; screen and functions flawless.", bild: "images/ankauf-zustand-sehr-gut.jpg",
-      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>',
-    },
-    {
-      id: "gut", titel: "Good", beschreibung: "Visible scratches or worn edges; fully functional.", bild: "images/ankauf-zustand-gut.jpg",
+      id: "gebraucht", titel: "Used", beschreibung: "Fully functional. The final price depends on wear, battery and accessories.", bild: "images/ankauf-zustand-gut.jpg",
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9 12l2 2 4-4"></path></svg>',
     },
     {
@@ -60,15 +52,7 @@
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a4 4 0 0 1 8 0v2"></path></svg>',
     },
     {
-      id: "wieNeu", titel: "Wie neu", beschreibung: "Keine Kratzer an Display oder Gehäuse; technisch einwandfrei.", bild: "images/ankauf-zustand-wie-neu.jpg",
-      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.6 6.6L21 10l-5.4 3.9L17 21l-5-3.9L7 21l1.4-7.1L3 10l6.4-1.4z"></path></svg>',
-    },
-    {
-      id: "sehrGut", titel: "Sehr gut", beschreibung: "Nur feinste Spuren; Display und Funktionen einwandfrei.", bild: "images/ankauf-zustand-sehr-gut.jpg",
-      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>',
-    },
-    {
-      id: "gut", titel: "Gut", beschreibung: "Sichtbare Kratzer oder Kantenabrieb; voll funktionsfähig.", bild: "images/ankauf-zustand-gut.jpg",
+      id: "gebraucht", titel: "Gebraucht", beschreibung: "Voll funktionsfähig. Der Endpreis richtet sich nach Spuren, Akku und Zubehör.", bild: "images/ankauf-zustand-gut.jpg",
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9 12l2 2 4-4"></path></svg>',
     },
     {
@@ -134,6 +118,12 @@
 
   function formatPreis(zahl) {
     return Number(zahl).toLocaleString(LANG === "en" ? "en-GB" : "de-DE", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  function formatPreisspanne(von, bis) {
+    return Number(von) === Number(bis)
+      ? formatPreis(von) + " €"
+      : formatPreis(von) + "–" + formatPreis(bis) + " €";
   }
 
   // Ursprungstexte der Ergebnis-Anzeige merken, damit zeigeErgebnis() sie nach einem
@@ -522,7 +512,12 @@
     // scripts/update-ankaufspreise.js). Fehlen ALLE Stufen, greift bereits der
     // hatKeinenPreis()-Zweig oben und dieser Schritt wird gar nicht erst angezeigt.
     var verfuegbareZustaende = ZUSTAENDE.filter(function (z) {
-      return !!(state.variante && state.variante.preise && state.variante.preise[z.id] != null);
+      if (!state.variante || !state.variante.preise) return false;
+      if (z.id === "gebraucht") {
+        return state.variante.preise.wieNeu != null &&
+          (state.variante.preise.schlecht != null || state.variante.preise.gut != null);
+      }
+      return state.variante.preise[z.id] != null;
     });
     zustandGrid.innerHTML = verfuegbareZustaende.map(function (z) {
       var aktivKlasse = state.zustand === z.id ? " active" : "";
@@ -554,14 +549,46 @@
     if (ergebnisLabel) ergebnisLabel.textContent = ERGEBNIS_TEXT_NORMAL.label;
     if (ergebnisSub) ergebnisSub.textContent = ERGEBNIS_TEXT_NORMAL.sub;
     if (ergebnisHinweis) { ergebnisHinweis.textContent = ERGEBNIS_TEXT_NORMAL.hinweis; ergebnisHinweis.hidden = false; }
-    if (ergebnisDisclaimer) ergebnisDisclaimer.hidden = false;
+    if (ergebnisDisclaimer) { ergebnisDisclaimer.textContent = ERGEBNIS_TEXT_NORMAL.disclaimer; ergebnisDisclaimer.hidden = false; }
     whatsappBtn.textContent = ERGEBNIS_TEXT_NORMAL.whatsappBtn;
-
-    var preis = state.variante.preise[state.zustand];
-    ergebnisPreis.textContent = formatPreis(preis) + " €";
 
     var zustandLabel = ZUSTAENDE.find(function (z) { return z.id === state.zustand; }).titel;
     var geraeteBezeichnung = [state.geraet.marke, state.geraet.modell, state.variante.bezeichnung].filter(Boolean).join(" ");
+    var preise = state.variante.preise;
+    var preisZeile;
+    var typischerPreis = "";
+
+    if (state.zustand === "gebraucht") {
+      var gebrauchtMin = preise.schlecht != null ? preise.schlecht : preise.gut;
+      var gebrauchtMax = preise.wieNeu;
+      preisZeile = formatPreisspanne(gebrauchtMin, gebrauchtMax);
+      typischerPreis = formatPreisspanne(preise.gut, preise.sehrGut);
+      ergebnisPreis.textContent = preisZeile;
+      if (ergebnisLabel) ergebnisLabel.textContent = LANG === "en" ? "Estimated price range" : "Voraussichtliche Preisspanne";
+      if (ergebnisSub) ergebnisSub.textContent = LANG === "en"
+        ? "Most devices: " + typischerPreis + " · final price after inspection"
+        : "Die meisten Geräte: " + typischerPreis + " · Endpreis nach Prüfung";
+      if (ergebnisHinweis) ergebnisHinweis.textContent = LANG === "en"
+        ? "The range is valid for 24 hours. The exact amount depends on wear, battery and included accessories."
+        : "Die Spanne gilt 24 Stunden. Der genaue Betrag richtet sich nach Gebrauchsspuren, Akku und vorhandenem Zubehör.";
+      if (ergebnisDisclaimer) ergebnisDisclaimer.textContent = LANG === "en"
+        ? "The device must be fully functional. Hidden defects or account locks may reduce or exclude the purchase."
+        : "Das Gerät muss voll funktionsfähig sein. Verdeckte Defekte oder Kontosperren können den Ankaufspreis mindern oder einen Ankauf ausschließen.";
+      whatsappBtn.textContent = LANG === "en" ? "Secure price range via WhatsApp" : "Preisspanne per WhatsApp sichern";
+    } else if (state.zustand === "defekt") {
+      preisZeile = (LANG === "en" ? "up to " : "bis zu ") + formatPreis(preise.defekt) + " €";
+      ergebnisPreis.textContent = preisZeile;
+      if (ergebnisLabel) ergebnisLabel.textContent = LANG === "en" ? "Depending on the defect, we pay" : "Je nach Defekt zahlen wir";
+      if (ergebnisSub) ergebnisSub.textContent = LANG === "en" ? "exact price after a short inspection" : "genauer Preis nach kurzer Prüfung";
+      if (ergebnisHinweis) ergebnisHinweis.textContent = LANG === "en"
+        ? "Send us the defect via WhatsApp and we will check the possible purchase price."
+        : "Schicken Sie uns den Defekt per WhatsApp – wir prüfen den möglichen Ankaufspreis.";
+      whatsappBtn.textContent = LANG === "en" ? "Send defect enquiry" : "Defekt-Anfrage senden";
+    } else {
+      preisZeile = formatPreis(preise.neuVersiegelt) + " €";
+      ergebnisPreis.textContent = preisZeile;
+    }
+
     updateAuswahl();
     var nummer = anfrageNummer();
 
@@ -569,13 +596,15 @@
       ? "Hello, I would like to sell my device:\n" +
         "Device: " + geraeteBezeichnung + "\n" +
         "Condition: " + zustandLabel + "\n" +
-        "Offered price: " + formatPreis(preis) + " €\n" +
+        (state.zustand === "gebraucht" ? "Possible price range: " + preisZeile + "\nTypical purchase: " + typischerPreis + "\n" :
+          state.zustand === "defekt" ? "Maximum guide price: " + preisZeile + "\n" : "Offered price: " + preisZeile + "\n") +
         "Request no.: " + nummer + "\n" +
         "Date: " + formatDatumUhrzeit()
       : "Hallo, ich möchte mein Gerät verkaufen:\n" +
         "Gerät: " + geraeteBezeichnung + "\n" +
         "Zustand: " + zustandLabel + "\n" +
-        "Angebotener Preis: " + formatPreis(preis) + " €\n" +
+        (state.zustand === "gebraucht" ? "Mögliche Preisspanne: " + preisZeile + "\nTypischer Ankauf: " + typischerPreis + "\n" :
+          state.zustand === "defekt" ? "Maximaler Richtwert: " + preisZeile + "\n" : "Angebotener Preis: " + preisZeile + "\n") +
         "Anfrage-Nummer: " + nummer + "\n" +
         "Datum: " + formatDatumUhrzeit();
 

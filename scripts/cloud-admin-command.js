@@ -4,13 +4,14 @@ const crypto = require("crypto");
 const fs = require("fs");
 const path = require("path");
 const { backupIfChanged } = require("./backup-data");
+const pricing = require("../pricing-config");
 
 const ROOT = path.join(__dirname, "..");
 const KATEGORIEN = [
   "smartphones", "tablets", "smartwatches", "laptops", "pcs",
   "monitore", "kopfhoerer", "kameras", "konsolen", "zubehoer",
 ];
-const ZUSTAENDE = ["neuVersiegelt", "wieNeu", "sehrGut", "gut", "defekt"];
+const ZUSTAENDE_EDITIERBAR = ["neuVersiegelt", "wieNeu", "sehrGut", "gut", "defekt"];
 
 const DATEIEN = {
   angebote: path.join(ROOT, "angebote.json"),
@@ -172,7 +173,8 @@ function ankaufGeraetAktualisieren(listeMitKommentar, payload) {
     const eingabe = nachBezeichnung.get(alt.bezeichnung);
     if (!eingabe) throw new Error(`Variante fehlt: ${alt.bezeichnung}`);
     const preise = {};
-    for (const zustand of ZUSTAENDE) preise[zustand] = zahl(eingabe?.preise?.[zustand]);
+    for (const zustand of ZUSTAENDE_EDITIERBAR) preise[zustand] = zahl(eingabe?.preise?.[zustand]);
+    preise.schlecht = pricing.berechneSchlechtAusGut(preise.gut, preise.defekt);
     return { ...alt, preise, preisQuelle: "manuell" };
   });
   geraete[index] = { ...bisher, beliebt: bool(payload?.beliebt), varianten };

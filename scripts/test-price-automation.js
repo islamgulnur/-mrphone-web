@@ -22,6 +22,8 @@ async function test() {
   assert.strictEqual(pricing.prozentsaetzeFuerGeraet({ marke: "Apple", modell: "AirPods Max 2", kategorie: "kopfhoerer" }).wieNeu, 0.50);
   assert.strictEqual(pricing.prozentsaetzeFuerGeraet({ marke: "Apple", modell: "iPhone 17 Pro Max", kategorie: "smartphones" }).wieNeu, 0.84);
   assert.strictEqual(pricing.berechneGebrauchtAusNeu(930, "Apple", 1012).wieNeu, 850);
+  assert.strictEqual(pricing.berechneSchlechtAusGut(685, 250), 510);
+  assert.strictEqual(pricing.berechneSchlechtAusGut(15, 15), 15);
 
   const rebuyGeraet = { marke: "Apple", modell: "iPhone 17 Pro Max" };
   const rebuyHtml = [1124.99, 1152.99].map((preis, index) => `
@@ -77,7 +79,7 @@ async function test() {
   assert.strictEqual(pricing.berechneVkSicherheitsdeckel(230, "sehrGut", "Apple"), 170);
   assert.strictEqual(pricing.berechneVkSicherheitsdeckel(1000, "wieNeu", { marke: "Apple", modell: "iPhone 17 Pro Max", kategorie: "smartphones" }), 840);
 
-  const unsicherePreise = { neuVersiegelt: 950, wieNeu: 220, sehrGut: 210, gut: 200, defekt: 100 };
+  const unsicherePreise = { neuVersiegelt: 950, wieNeu: 220, sehrGut: 210, gut: 200, schlecht: 150, defekt: 100 };
   const deckelAenderungen = pricing.wendeVkSicherheitsdeckelAn(
     unsicherePreise,
     { neu: 1000, gebraucht: 230 },
@@ -88,6 +90,7 @@ async function test() {
     wieNeu: 170,
     sehrGut: 155,
     gut: 125,
+    schlecht: 90,
     defekt: 45,
   });
   assert.strictEqual(deckelAenderungen.length, 5);

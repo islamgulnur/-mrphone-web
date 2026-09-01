@@ -221,6 +221,9 @@ function wendeVkSicherheitsdeckelAn(preise, wiederverkaufswerte, markeOderGeraet
       aenderungen.push({ stufe, alt: wert, neu: deckel, verkaufspreis: Number(referenz) });
     }
   });
+  if (Object.prototype.hasOwnProperty.call(preise, "schlecht")) {
+    preise.schlecht = berechneSchlechtAusGut(preise.gut, preise.defekt);
+  }
   return aenderungen;
 }
 
@@ -325,6 +328,26 @@ const NEU_VERSIEGELT_EBAY_KORREKTIV_PROZENT = 0.90;
 const ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_APPLE = { wieNeu: 0.80, sehrGut: 0.74, gut: 0.64 };
 const ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_REST = { wieNeu: 0.82, sehrGut: 0.75, gut: 0.60 };
 
+// Untergrenze der öffentlich angezeigten Gebraucht-Preisspanne. "Schlecht" bedeutet starke
+// optische Gebrauchsspuren, aber ein technisch noch funktionsfähiges Gerät. Die Stufe wird
+// bewusst immer aus dem FINALEN Gut-Preis abgeleitet, damit Marktbremsen und Sicherheitsdeckel
+// bereits berücksichtigt sind und keine zweite unabhängige Preisformel entsteht.
+const SCHLECHT_FAKTOR_VON_GUT = 0.75;
+
+function berechneSchlechtAusGut(gutWert, defektWert) {
+  if (gutWert == null || !Number.isFinite(Number(gutWert))) return null;
+  const gut = Math.max(0, Number(gutWert));
+  if (gut === 0) return 0;
+
+  let schlecht = Math.max(5, Math.floor((gut * SCHLECHT_FAKTOR_VON_GUT) / 5) * 5);
+  const defekt = Number(defektWert);
+  if (Number.isFinite(defekt) && defekt >= 0) {
+    // Bei sehr günstigen Geräten dürfen Rundungen "Schlecht" nicht unter "Defekt" drücken.
+    schlecht = Math.max(schlecht, Math.min(gut, defekt + 5));
+  }
+  return Math.min(gut, schlecht);
+}
+
 function istUvpBasierteKategorie(kategorie) {
   return String(kategorie || "").trim().toLowerCase() === "smartphones";
 }
@@ -417,8 +440,9 @@ function berechneGebrauchtAusNeu(neuWert, marke, marktwertGebraucht) {
   return ergebnis;
 }
 
-// Reihenfolge, in der die 5 Stufen überall (UI, Validierung, Export) angezeigt werden.
-const ZUSTANDS_REIHENFOLGE = ["neuVersiegelt", "wieNeu", "sehrGut", "gut", "defekt"];
+// Reihenfolge, in der die 6 internen Stufen überall (UI, Validierung, Export) geführt werden.
+// Öffentlich fasst der Ankaufsrechner wieNeu..schlecht zu EINER Gebraucht-Spanne zusammen.
+const ZUSTANDS_REIHENFOLGE = ["neuVersiegelt", "wieNeu", "sehrGut", "gut", "schlecht", "defekt"];
 
 function rundeAuf5(zahl) {
   return Math.max(5, Math.round(zahl / 5) * 5);
@@ -525,7 +549,7 @@ function schreibeAnkaufsniveau(prozentWert, backupIfChanged) {
   return geklemmt;
 }
 
-// Berechnet die 5 Ankaufspreis-Stufen für ein Gerät+Variante. bestandListe = Inhalt von
+// Berechnet die 6 internen Ankaufspreis-Stufen für ein Gerät+Variante. bestandListe = Inhalt von
 // bestand.json (für den Primäranker). niveauProzent optional, sonst wird pricing-niveau.json
 // gelesen. Gibt zusätzlich die verwendete Anker-Quelle zurück (für UI/Reporting).
 function berechnePreise(geraet, variante, bestandListe, niveauProzent) {
@@ -556,6 +580,7 @@ function berechnePreise(geraet, variante, bestandListe, niveauProzent) {
       : rundeAuf5(wiederverkauf.gebraucht * prozentsaetze.defekt * niveauFaktor);
   } else {
     ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
+      if (stufe === "schlecht") return; // wird aus dem final gedeckelten Gut-Preis abgeleitet
       if (stufe === "neuVersiegelt") {
         ergebnis[stufe] = berechneNeuVersiegelt({
           eigenerVK: wiederverkauf.eigenerNeu,
@@ -576,6 +601,7 @@ function berechnePreise(geraet, variante, bestandListe, niveauProzent) {
     neu: wiederverkauf.neu,
     gebraucht: wiederverkauf.gebraucht,
   }, geraet);
+  ergebnis.schlecht = berechneSchlechtAusGut(ergebnis.gut, ergebnis.defekt);
 
   return {
     preise: ergebnis,
@@ -682,6 +708,8 @@ module.exports = {
   NEU_VERSIEGELT_EBAY_KORREKTIV_PROZENT,
   ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_APPLE,
   ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_REST,
+  SCHLECHT_FAKTOR_VON_GUT,
+  berechneSchlechtAusGut,
   istUvpBasierteKategorie,
   berechneNeuVersiegeltUvpBasiert,
   berechneGebrauchtAusNeu,

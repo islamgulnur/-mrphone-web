@@ -559,6 +559,15 @@
   var aktuelleAnkaufListe = [];
   var akSeite = 1;
 
+  function berechneSchlechtAusGut(gutWert, defektWert) {
+    var gut = Math.max(0, Number(gutWert) || 0);
+    if (gut === 0) return 0;
+    var schlecht = Math.max(5, Math.floor((gut * 0.75) / 5) * 5);
+    var defekt = Number(defektWert);
+    if (Number.isFinite(defekt) && defekt >= 0) schlecht = Math.max(schlecht, Math.min(gut, defekt + 5));
+    return Math.min(gut, schlecht);
+  }
+
   function leereVariantenZeile(bezeichnung, uvpDelta, preisQuelle) {
     var tr = document.createElement("tr");
     tr.dataset.uvpDelta = uvpDelta || 0;
@@ -569,12 +578,19 @@
       '<td><input type="number" class="ak-v-wieneu" min="0" step="1" value="0"></td>' +
       '<td><input type="number" class="ak-v-sehrgut" min="0" step="1" value="0"></td>' +
       '<td><input type="number" class="ak-v-gut" min="0" step="1" value="0"></td>' +
+      '<td><input type="number" class="ak-v-schlecht" min="0" step="5" value="0" readonly title="Wird automatisch aus Gut berechnet"></td>' +
       '<td><input type="number" class="ak-v-defekt" min="0" step="1" value="0"></td>' +
       '<td class="ak-v-quelle-zelle"><span class="quelle-badge ' + tr.dataset.quelle + '">' + tr.dataset.quelle + "</span></td>" +
       '<td><button type="button" class="variante-entfernen-btn" title="Variante entfernen">×</button></td>';
     tr.querySelector(".variante-entfernen-btn").addEventListener("click", function () { tr.remove(); });
     tr.querySelectorAll('input[type="number"]').forEach(function (input) {
       input.addEventListener("input", function () {
+        if (input.classList.contains("ak-v-gut") || input.classList.contains("ak-v-defekt")) {
+          tr.querySelector(".ak-v-schlecht").value = berechneSchlechtAusGut(
+            tr.querySelector(".ak-v-gut").value,
+            tr.querySelector(".ak-v-defekt").value
+          );
+        }
         tr.dataset.quelle = "manuell";
         var badge = tr.querySelector(".quelle-badge");
         badge.className = "quelle-badge manuell";
@@ -593,6 +609,9 @@
         tr.querySelector(".ak-v-wieneu").value = v.preise.wieNeu || 0;
         tr.querySelector(".ak-v-sehrgut").value = v.preise.sehrGut || 0;
         tr.querySelector(".ak-v-gut").value = v.preise.gut || 0;
+        tr.querySelector(".ak-v-schlecht").value = v.preise.schlecht != null
+          ? v.preise.schlecht
+          : berechneSchlechtAusGut(v.preise.gut, v.preise.defekt);
         tr.querySelector(".ak-v-defekt").value = v.preise.defekt || 0;
       }
       akVariantenBody.appendChild(tr);
@@ -613,6 +632,10 @@
             wieNeu: Number(tr.querySelector(".ak-v-wieneu").value) || 0,
             sehrGut: Number(tr.querySelector(".ak-v-sehrgut").value) || 0,
             gut: Number(tr.querySelector(".ak-v-gut").value) || 0,
+            schlecht: berechneSchlechtAusGut(
+              tr.querySelector(".ak-v-gut").value,
+              tr.querySelector(".ak-v-defekt").value
+            ),
             defekt: Number(tr.querySelector(".ak-v-defekt").value) || 0,
           },
         };
@@ -684,6 +707,7 @@
           '<label>Wie neu<input type="number" class="v-inline-preis" data-tier="wieNeu" min="0" step="1" value="' + v.preise.wieNeu + '"></label>' +
           '<label>Sehr gut<input type="number" class="v-inline-preis" data-tier="sehrGut" min="0" step="1" value="' + v.preise.sehrGut + '"></label>' +
           '<label>Gut<input type="number" class="v-inline-preis" data-tier="gut" min="0" step="1" value="' + v.preise.gut + '"></label>' +
+          '<label>Schlecht (auto)<input type="number" class="v-inline-schlecht" min="0" step="5" value="' + (v.preise.schlecht != null ? v.preise.schlecht : berechneSchlechtAusGut(v.preise.gut, v.preise.defekt)) + '" readonly></label>' +
           '<label>Defekt<input type="number" class="v-inline-preis" data-tier="defekt" min="0" step="1" value="' + v.preise.defekt + '"></label>' +
           "</div>"
         );
@@ -818,6 +842,11 @@
     if (variante.preise[tier] === neuerWert) return; // keine Änderung, kein Request nötig
 
     variante.preise[tier] = neuerWert;
+    if (tier === "gut" || tier === "defekt") {
+      variante.preise.schlecht = berechneSchlechtAusGut(variante.preise.gut, variante.preise.defekt);
+      var schlechtFeld = zeile.querySelector(".v-inline-schlecht");
+      if (schlechtFeld) schlechtFeld.value = variante.preise.schlecht;
+    }
     variante.preisQuelle = "manuell";
 
     fetch("/api/ankauf/" + geraet.id, {

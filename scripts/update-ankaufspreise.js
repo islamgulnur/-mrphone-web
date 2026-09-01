@@ -246,7 +246,7 @@ async function holeMarktwert({ geraet, variante, zustand, zugangskontext, budget
 }
 
 // ---------------------------------------------------------------------------
-// 4 Ankaufsstufen (ohne neuVersiegelt, siehe Regel 8 im Kommentarblock oben) berechnen +
+// 5 interne Ankaufsstufen (ohne neuVersiegelt, siehe Regel 8 im Kommentarblock oben) berechnen +
 // Tagesbremse + Konsistenzregel 1
 // ---------------------------------------------------------------------------
 // Markenabhängige Prozentsätze (pricing.prozentsaetzeFuerMarke - Apple/Rest, EINZIGE Quelle
@@ -257,9 +257,10 @@ function berechneStufen({ marktwertGebraucht, niveauFaktor, geraet }) {
   const prozentsaetze = pricing.prozentsaetzeFuerGeraet(geraet);
   const stufen = { neuVersiegelt: null }; // wird separat über pricing.berechneNeuVersiegelt() gesetzt
   pricing.ZUSTANDS_REIHENFOLGE.forEach((stufe) => {
-    if (stufe === "neuVersiegelt") return;
+    if (stufe === "neuVersiegelt" || stufe === "schlecht") return;
     stufen[stufe] = marktwertGebraucht == null ? null : pricing.rundeAuf5(marktwertGebraucht * prozentsaetze[stufe] * niveauFaktor);
   });
+  stufen.schlecht = pricing.berechneSchlechtAusGut(stufen.gut, stufen.defekt);
   return stufen;
 }
 
@@ -505,6 +506,9 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
     stufenFinal, geraet, variante, bestandListe,
     marktwertNeu, marktwertGebraucht: gebraucht.marktwert,
   });
+  // Immer aus den endgültigen, bereits gebremsten und gedeckelten Werten ableiten. Dadurch kann
+  // "Schlecht" weder durch einen alten Tageswert noch durch eine Einzelquelle verselbständigen.
+  stufenFinal.schlecht = pricing.berechneSchlechtAusGut(stufenFinal.gut, stufenFinal.defekt);
 
   const alleGruende = [...gebrauchtQuellenWarnungen, ...bremseGruende, ...konsistenzGruende];
   if (marktwertNeuVerworfen) {
@@ -557,7 +561,7 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
 
 function bauePlatzhalterVariante(variante) {
   return { bezeichnung: variante.bezeichnung, uvpDelta: variante.uvpDelta, preise: {
-    neuVersiegelt: null, wieNeu: 0, sehrGut: 0, gut: 0, defekt: 0,
+    neuVersiegelt: null, wieNeu: 0, sehrGut: 0, gut: 0, schlecht: 0, defekt: 0,
   }, preisQuelle: "auto" };
 }
 

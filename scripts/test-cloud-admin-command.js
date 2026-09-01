@@ -49,7 +49,7 @@ const geraet = {
   kategorie: "smartphones",
   beliebt: false,
   varianten: [
-    { bezeichnung: "128 GB", uvpDelta: 0, preisQuelle: "auto", preise: { neuVersiegelt: 1, wieNeu: 1, sehrGut: 1, gut: 1, defekt: 1 } },
+    { bezeichnung: "128 GB", uvpDelta: 0, preisQuelle: "auto", preise: { neuVersiegelt: 1, wieNeu: 1, sehrGut: 1, gut: 1, schlecht: 1, defekt: 1 } },
   ],
 };
 const ankauf = ankaufGeraetAktualisieren([kommentar, geraet], {
@@ -60,6 +60,7 @@ const ankauf = ankaufGeraetAktualisieren([kommentar, geraet], {
 assert.equal(ankauf.daten[0]._kommentar, "behalten");
 assert.equal(ankauf.ergebnis.varianten[0].preisQuelle, "manuell");
 assert.equal(ankauf.ergebnis.varianten[0].preise.gut, 200);
+assert.equal(ankauf.ergebnis.varianten[0].preise.schlecht, 150);
 assert.throws(() => ankaufGeraetAktualisieren([geraet], { id: "kat-1", varianten: [] }), /weder ergänzt noch entfernt/);
 
 assert.deepEqual(preisniveauNormalisieren({ prozent: 99 }), { prozent: 15 });

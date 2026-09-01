@@ -11,7 +11,7 @@ const KATEGORIEN = [
   "smartphones", "tablets", "smartwatches", "laptops", "pcs",
   "monitore", "kopfhoerer", "kameras", "konsolen", "zubehoer",
 ];
-const ZUSTANDS_FELDER = ["neuVersiegelt", "wieNeu", "sehrGut", "gut", "defekt"];
+const ZUSTANDS_FELDER = pricing.ZUSTANDS_REIHENFOLGE;
 
 // Mindestanzahl Geräte je Kategorie (aus dem aktuellen Vollkatalog abgeleitet, mit Puffer).
 const MINDESTANZAHL = {
@@ -100,7 +100,7 @@ if (Array.isArray(ankaufRoh)) {
         fehler.push(vOrt + ": fehlendes preise-Objekt.");
         return;
       }
-      // Alle 5 Stufen null = Gerät läuft komplett "Preis auf Anfrage" (siehe
+      // Alle 6 internen Stufen null = Gerät läuft komplett "Preis auf Anfrage" (siehe
       // scripts/markiere-auf-anfrage-2026-08-12.js, ankauf-rechner.js hatKeinenPreis()) -
       // bewusster Ganz-Geräte-Zustand, kein Rechenfehler. Gültig für jede Kategorie.
       const alleStufenNull = ZUSTANDS_FELDER.every((feld) => v.preise[feld] === null);
@@ -114,6 +114,13 @@ if (Array.isArray(ankaufRoh)) {
             fehler.push(vOrt + ": preise." + feld + " ist keine gültige Zahl.");
           }
         });
+        const erwartetSchlecht = pricing.berechneSchlechtAusGut(v.preise.gut, v.preise.defekt);
+        if (v.preise.schlecht !== erwartetSchlecht) {
+          fehler.push(
+            vOrt + ": preise.schlecht muss aus Gut automatisch abgeleitet sein (erwartet " +
+            erwartetSchlecht + ", ist " + v.preise.schlecht + ")."
+          );
+        }
       }
       if (v.preisQuelle !== "auto" && v.preisQuelle !== "manuell") {
         fehler.push(vOrt + ": preisQuelle muss 'auto' oder 'manuell' sein, ist '" + v.preisQuelle + "'.");
@@ -146,6 +153,11 @@ KATEGORIEN.forEach((k) => {
       datei + ": " + teil.length + " Einträge, aber ankauf-preise.json hat " + erwartet +
       " Einträge für diese Kategorie (Master/Split nicht konsistent)."
     );
+  } else {
+    const erwartetListe = ankaufListe.filter((g) => g.kategorie === k);
+    if (JSON.stringify(teil) !== JSON.stringify(erwartetListe)) {
+      fehler.push(datei + ": Inhalt weicht von der Master-Datei ab.");
+    }
   }
 });
 
