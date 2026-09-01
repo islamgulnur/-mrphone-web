@@ -1,6 +1,6 @@
 [
   {
-    "_kommentar": "AUTO-PREISE aus echten eBay-Marktdaten plus öffentlichem Rebuy-Wiederverkaufswert als kostenloser zweiter Gebrauchtmarkt-Quelle (siehe scripts/lib/search-client.js und scripts/lib/rebuy-client.js). Erhöhungen bei Smartphones und Kopfhörern werden ohne bestätigende zweite Quelle nicht veröffentlicht. - siehe scripts/update-ankaufspreise.js + scripts/ankaufspreis-config.js. Je Gerät+Variante zwei Marktanker (gebraucht/neu), Ausreißerfilter + Median + Abschlag. defekt IMMER als fester, markenabhängiger Prozentsatz vom Gebraucht-Marktanker (pricing-config.js: ANKAUF_PROZENTSAETZE_APPLE / _REST, einzige Quelle dieser Prozentsätze). Kategorie \"smartphones\" (seit 06.08.2026, siehe OFFENE-PUNKTE.md): neuVersiegelt = niedrigerer von eigenem Verkaufspreis × 0,88 / UVP × markenabhängigem Prozentsatz (Apple 71%, Rest 50%, kalibriert auf 5 Avatel-Referenzpreise) / echtem eBay-Marktwert × 0,90 (Korrektiv gegen Marktverfall, gedeckelt auf 100% UVP) - wieNeu/sehrGut/gut leiten sich als Prozentsatz vom so ermittelten neuVersiegelt-Wert ab (ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_APPLE/_REST). Alle ANDEREN Kategorien: neuVersiegelt weiterhin die alte, rein eBay-basierte Formel (pricing.berechneNeuVersiegelt(), seit 28.07.2026) - niedrigerer Wert von eigenem Verkaufspreis × 0,88 ODER marktwertNeu × 0,82 (gedeckelt auf 90% von marktwertNeu), wieNeu/sehrGut/gut als Prozentsatz vom Gebraucht-Marktanker. Zusätzlich (alle Marken/Kategorien, keine Ausnahme): marktwertNeu > 115% UVP gilt als kontaminiert und wird verworfen, verbleibender Anker zusätzlich hart auf 100% UVP gedeckelt. Alles zusätzlich global verschiebbar über pricing-niveau.json. preisQuelle \"manuell\" wird nur bei einem ausdrücklich gestarteten Voll-Lauf mit --manuelle-freigeben wieder der Automatik übergeben, sonst nie automatisch überschrieben. Geräte, die noch keinen echten Marktlauf hatten (marktwertQuelle \"geschaetzt\" im Katalog), tragen weiterhin die ältere Schätzformel aus pricing-config.js, bis sie an der Reihe sind (siehe Rotation, scripts/rotation-state.json). Ein exakt erkannter öffentlicher Avatel-Neupreis ersetzt bei der Neuware-Berechnung den groben UVP-Anker und wird mit gestaffeltem Zielabstand verwendet; Marktwert und eigener Verkaufspreis bleiben zusätzliche Obergrenzen. Unklare Treffer werden verworfen."
+    "_kommentar": "AUTO-PREISE aus echten eBay-Marktdaten plus öffentlichem Rebuy-Wiederverkaufswert als kostenloser zweiter Gebrauchtmarkt-Quelle (siehe scripts/lib/search-client.js und scripts/lib/rebuy-client.js). Erhöhungen in den von Rebuy geführten Gerätekategorien werden ohne bestätigende zweite Quelle nicht veröffentlicht. - siehe scripts/update-ankaufspreise.js + scripts/ankaufspreis-config.js. Je Gerät+Variante zwei Marktanker (gebraucht/neu), Ausreißerfilter + Median + Abschlag. defekt IMMER als fester, markenabhängiger Prozentsatz vom Gebraucht-Marktanker (pricing-config.js: ANKAUF_PROZENTSAETZE_APPLE / _REST, einzige Quelle dieser Prozentsätze). Kategorie \"smartphones\" (seit 06.08.2026, siehe OFFENE-PUNKTE.md): neuVersiegelt = niedrigerer von eigenem Verkaufspreis × 0,88 / UVP × markenabhängigem Prozentsatz (Apple 71%, Rest 50%, kalibriert auf 5 Avatel-Referenzpreise) / echtem eBay-Marktwert × 0,90 (Korrektiv gegen Marktverfall, gedeckelt auf 100% UVP) - wieNeu/sehrGut/gut leiten sich als Prozentsatz vom so ermittelten neuVersiegelt-Wert ab (ANKAUF_GEBRAUCHT_PROZENT_VON_NEU_APPLE/_REST). Alle ANDEREN Kategorien: neuVersiegelt weiterhin die alte, rein eBay-basierte Formel (pricing.berechneNeuVersiegelt(), seit 28.07.2026) - niedrigerer Wert von eigenem Verkaufspreis × 0,88 ODER marktwertNeu × 0,82 (gedeckelt auf 90% von marktwertNeu), wieNeu/sehrGut/gut als Prozentsatz vom Gebraucht-Marktanker. Zusätzlich (alle Marken/Kategorien, keine Ausnahme): marktwertNeu > 115% UVP gilt als kontaminiert und wird verworfen, verbleibender Anker zusätzlich hart auf 100% UVP gedeckelt. Alles zusätzlich global verschiebbar über pricing-niveau.json. preisQuelle \"manuell\" wird nur bei einem ausdrücklich gestarteten Voll-Lauf mit --manuelle-freigeben wieder der Automatik übergeben, sonst nie automatisch überschrieben. Geräte, die noch keinen echten Marktlauf hatten (marktwertQuelle \"geschaetzt\" im Katalog), tragen weiterhin die ältere Schätzformel aus pricing-config.js, bis sie an der Reihe sind (siehe Rotation, scripts/rotation-state.json). Ein exakt erkannter öffentlicher Avatel-Neupreis ersetzt bei der Neuware-Berechnung den groben UVP-Anker und wird mit gestaffeltem Zielabstand verwendet; Marktwert und eigener Verkaufspreis bleiben zusätzliche Obergrenzen. Unklare Treffer werden verworfen."
   },
   {
     "id": "kat-0001",
@@ -1685,9 +1685,9 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 930,
-          "wieNeu": 745,
-          "sehrGut": 690,
-          "gut": 595,
+          "wieNeu": 815,
+          "sehrGut": 755,
+          "gut": 650,
           "defekt": 250
         },
         "preisQuelle": "auto"
@@ -1697,10 +1697,10 @@
         "uvpDelta": 200,
         "preise": {
           "neuVersiegelt": 1170,
-          "wieNeu": 895,
-          "sehrGut": 810,
-          "gut": 730,
-          "defekt": 255
+          "wieNeu": 980,
+          "sehrGut": 890,
+          "gut": 795,
+          "defekt": 280
         },
         "preisQuelle": "auto"
       },
@@ -1709,10 +1709,10 @@
         "uvpDelta": 450,
         "preise": {
           "neuVersiegelt": 1290,
-          "wieNeu": 895,
-          "sehrGut": 810,
-          "gut": 730,
-          "defekt": 255
+          "wieNeu": 980,
+          "sehrGut": 890,
+          "gut": 800,
+          "defekt": 280
         },
         "preisQuelle": "auto"
       },
@@ -1721,9 +1721,9 @@
         "uvpDelta": 750,
         "preise": {
           "neuVersiegelt": 1495,
-          "wieNeu": 1195,
-          "sehrGut": 1105,
-          "gut": 955,
+          "wieNeu": 1305,
+          "sehrGut": 1210,
+          "gut": 1050,
           "defekt": 385
         },
         "preisQuelle": "auto"
