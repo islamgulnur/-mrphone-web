@@ -31,6 +31,7 @@
 <!-- Nur auf index.html: Schwarz+Grün-Glassmorphism-Reskin, siehe .design-preview/homepage-prototype.html.
      Systemschriften statt Google Fonts, deshalb kein Inter-Link mehr auf dieser Seite. -->
 <link rel="stylesheet" href="index-styles.css">
+<link rel="preload" as="image" href="images/mr-phone-zeil-frankfurt-aussenansicht-720.webp" type="image/webp" fetchpriority="high">
 
 <script type="application/ld+json" id="schema-localbusiness">
 {
@@ -204,7 +205,10 @@
   <section class="hero hero-home">
     <div class="container hero-grid">
       <div class="hero-image-wrap">
-        <img src="images/mr-phone-zeil-frankfurt-aussenansicht.jpg" alt="Außenansicht des Handy Shops Mr. Phone auf der Zeil in Frankfurt am Main" width="900" height="1600">
+        <picture>
+          <source srcset="images/mr-phone-zeil-frankfurt-aussenansicht-720.webp" type="image/webp">
+          <img src="images/mr-phone-zeil-frankfurt-aussenansicht.jpg" alt="Außenansicht des Handy Shops Mr. Phone auf der Zeil in Frankfurt am Main" width="720" height="1280" fetchpriority="high" decoding="async">
+        </picture>
       </div>
       <div class="hero-content">
         <span class="hero-badge">Mitten auf der Zeil in Frankfurt</span>
@@ -329,6 +333,19 @@
           <h3>Geldtransfer im Laden</h3>
           <p>Geld schnell und sicher ins Ausland senden: Bei uns nutzen Sie Ria Money Transfer und MoneyGram direkt vor Ort.</p>
         </div>
+      </div>
+
+      <div class="section-intro center reveal" style="margin-top: 3rem;">
+        <span class="eyebrow">Schnell zur passenden Reparatur</span>
+        <h2>Häufig gesuchte Reparaturen in Frankfurt</h2>
+        <p>Preise, Ablauf und wichtige Hinweise direkt für Ihren Schaden ansehen.</p>
+      </div>
+      <div class="service-list reveal reveal-stagger">
+        <a class="service-card" href="iphone-display-reparatur-frankfurt.html"><h3>iPhone Display</h3><p>Displaytausch mit aktuellen Ab-Preisen</p></a>
+        <a class="service-card" href="iphone-akku-wechsel-frankfurt.html"><h3>iPhone Akku</h3><p>Akku prüfen und wechseln lassen</p></a>
+        <a class="service-card" href="samsung-reparatur-frankfurt.html"><h3>Samsung Reparatur</h3><p>Galaxy Display und Akku reparieren</p></a>
+        <a class="service-card" href="handy-ladebuchse-reparatur-frankfurt.html"><h3>Ladebuchse</h3><p>Ladeprobleme fachgerecht prüfen lassen</p></a>
+        <a class="service-card" href="handy-wasserschaden-reparatur-frankfurt.html"><h3>Wasserschaden</h3><p>Schnelle Diagnose nach Flüssigkeitskontakt</p></a>
       </div>
     </div>
   </section>

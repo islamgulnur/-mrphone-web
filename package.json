@@ -13,7 +13,9 @@
     "sync:pos": "node scripts/fetch-pos-bestand.js && node scripts/sync-pos-bestand.js --apply",
     "test:pos": "node scripts/test-pos-bestand.js",
     "build:reparaturseiten": "node scripts/build-reparatur-landingpages.js",
-    "test:reparaturseiten": "node scripts/build-reparatur-landingpages.js --check"
+    "test:reparaturseiten": "node scripts/build-reparatur-landingpages.js --check",
+    "test:seo": "node scripts/test-seo.js",
+    "indexnow:check": "node scripts/submit-indexnow.js --all --dry-run"
   },
   "dependencies": {
     "express": "^4.19.2",

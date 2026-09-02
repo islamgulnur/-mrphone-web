@@ -53,7 +53,7 @@ jobs:
         run: node scripts/sync-pos-bestand.js --apply
 
       - name: Vollständigkeit erneut prüfen
-        run: node validate-data.js && npm run test:pos && npm run test:produkte
+        run: node validate-data.js && npm run test:pos && npm run test:produkte && npm run test:seo
 
       - name: Änderungen veröffentlichen
         run: |

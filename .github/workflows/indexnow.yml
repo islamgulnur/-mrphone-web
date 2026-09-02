@@ -1,0 +1,47 @@
+name: Neue Seiten an IndexNow melden
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "en/**/*.html"
+      - "ratgeber/**/*.html"
+      - "produkte/**/*.html"
+      - "sitemap.xml"
+      - "scripts/submit-indexnow.js"
+      - "aeeaa9d94af2647196535cff2480b6b2.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  melden:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Website laden
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Geänderte Seiten melden
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: |
+          for attempt in {1..12}; do
+            if curl --fail --silent "https://mrphone-frankfurt.de/aeeaa9d94af2647196535cff2480b6b2.txt" | grep --quiet "aeeaa9d94af2647196535cff2480b6b2"; then
+              node scripts/submit-indexnow.js --before="$BEFORE_SHA" --after="$AFTER_SHA"
+              exit 0
+            fi
+            echo "Website-Veröffentlichung noch nicht sichtbar (Versuch $attempt/12)."
+            sleep 10
+          done
+          echo "IndexNow-Schlüssel war nach 2 Minuten noch nicht öffentlich erreichbar."
+          exit 1

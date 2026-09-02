@@ -32,6 +32,9 @@ jobs:
       - name: Header/Footer aus Partials bauen
         run: node scripts/build-templates.js
 
+      - name: Suchmaschinen-Daten prüfen
+        run: npm run test:seo
+
       - name: Änderungen committen (nur bei echten Änderungen)
         run: |
           if git diff --quiet; then

@@ -134,6 +134,14 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
 .empty-hint a { color: var(--signal); }
 .empty-hint a:hover { color: var(--signal-deep); }
 
+.service-card {
+  background: var(--glass);
+  border-color: var(--hairline);
+  color: var(--paper);
+}
+.service-card:hover { border-color: var(--signal); }
+.service-card p { color: var(--steel); }
+
 /* ---------- FAQ ---------- */
 .faq-item {
   background: var(--glass);

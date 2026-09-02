@@ -24,6 +24,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const PARTIALS_DIR = path.join(ROOT, "templates", "partials");
+const GENERATED_REPAIR_MARKER = "<!-- Automatisch aus reparatur-preise.json erstellt: scripts/build-reparatur-landingpages.js -->";
 
 function ladePartial(name) {
   return fs.readFileSync(path.join(PARTIALS_DIR, name), "utf8");
@@ -138,6 +139,7 @@ function main() {
     const variante = ermittleVariante(seite);
     const vollpfad = path.join(ROOT, seite.relPath);
     const original = fs.readFileSync(vollpfad, "utf8");
+    if (original.includes(GENERATED_REPAIR_MARKER)) continue;
 
     let neu = ersetzeBlock(original, "header", baueHeader(variante, seite));
     if (neu === null) {

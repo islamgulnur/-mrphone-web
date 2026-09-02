@@ -45,8 +45,8 @@ jobs:
       - name: Cloud-Admin und Preislogik testen
         run: npm run test:cloud-admin && npm run test:preise
 
-      - name: Produktseiten unverändert lauffähig prüfen
-        run: npm run test:produkte && npm run test:reparaturseiten
+      - name: Produktseiten und Suchmaschinen-Daten prüfen
+        run: npm run test:produkte && npm run test:reparaturseiten && npm run test:seo
 
       - name: Sicherheitskopien als Workflow-Artefakt sichern
         if: always()
@@ -61,7 +61,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A -- angebote.json bewertungen.json reparatur-preise.json ankauf-preise.json pricing-niveau.json ankauf images/angebote iphone-display-reparatur-frankfurt.html iphone-akku-wechsel-frankfurt.html
+          git add -A -- angebote.json bewertungen.json reparatur-preise.json ankauf-preise.json pricing-niveau.json ankauf images/angebote iphone-display-reparatur-frankfurt.html iphone-akku-wechsel-frankfurt.html samsung-reparatur-frankfurt.html handy-ladebuchse-reparatur-frankfurt.html handy-wasserschaden-reparatur-frankfurt.html
           if git diff --cached --quiet; then
             echo "Keine Änderung – kein Commit."
             exit 0
