@@ -14,6 +14,20 @@
     "datum": "2026-09-02"
   },
   {
+    "id": "pos-b491bc908a2d20d96743",
+    "marke": "Apple",
+    "modell": "iPhone 8",
+    "speicher": "64 GB",
+    "farbe": "Rose Gold",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 99.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-02"
+  },
+  {
     "id": "cd4ad668-d97a-4605-859d-dd4643acde3d",
     "marke": "Apple",
     "modell": "iPhone 11",
@@ -140,6 +154,20 @@
     "datum": "2026-09-02"
   },
   {
+    "id": "pos-9ba2d0ec3e4a04447870",
+    "marke": "Apple",
+    "modell": "iPhone 13 Pro Max",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 449.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-02"
+  },
+  {
     "id": "f43cfba5-7e06-4d8e-a3de-4edb7a9a8d82",
     "marke": "Apple",
     "modell": "iPhone 13 Pro Max",
@@ -232,20 +260,6 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 419.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-02"
-  },
-  {
-    "id": "1893ebd7-4fba-44b0-b3f7-9161638528a0",
-    "marke": "Apple",
-    "modell": "iPhone 14 Pro",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 459.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -582,7 +596,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 2,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-02"
@@ -596,7 +610,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 12,
+    "menge": 11,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-02"
@@ -1801,20 +1815,6 @@
     "zustand": "neu",
     "preis": 699.99,
     "menge": 2,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-02"
-  },
-  {
-    "id": "pos-0479a8b0ff5e95d3738d",
-    "marke": "Apple",
-    "modell": "MacBook Air 13 (M1)",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "laptops",
-    "zustand": "gebraucht",
-    "preis": 479.99,
-    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-02"
