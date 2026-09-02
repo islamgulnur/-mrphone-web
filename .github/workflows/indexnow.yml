@@ -11,6 +11,7 @@ on:
       - "sitemap.xml"
       - "scripts/submit-indexnow.js"
       - "aeeaa9d94af2647196535cff2480b6b2.txt"
+      - ".github/workflows/indexnow.yml"
   workflow_dispatch:
 
 permissions:
@@ -23,7 +24,7 @@ jobs:
       - name: Website laden
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: Node einrichten
         uses: actions/setup-node@v4

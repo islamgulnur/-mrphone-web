@@ -34,8 +34,15 @@ function sitemapUrls() {
 function changedUrls(before, after) {
   if (process.argv.includes("--all")) return sitemapUrls();
   if (!/^[0-9a-f]{40}$/i.test(before) || !/^[0-9a-f]{40}$/i.test(after) || /^0+$/.test(before)) return sitemapUrls();
-  const output = execFileSync("git", ["diff", "--name-only", before, after, "--", "*.html", "en", "ratgeber", "produkte"], { cwd: ROOT, encoding: "utf8" });
-  return output.split(/\r?\n/).map(urlForFile).filter(Boolean);
+  const output = execFileSync("git", ["diff", "--name-only", before, after], { cwd: ROOT, encoding: "utf8" });
+  const files = output.split(/\r?\n/).filter(Boolean);
+  const indexNowFiles = new Set([
+    ".github/workflows/indexnow.yml",
+    "scripts/submit-indexnow.js",
+    KEY_FILE,
+  ]);
+  if (files.some((file) => indexNowFiles.has(file))) return sitemapUrls();
+  return files.map(urlForFile).filter(Boolean);
 }
 
 function post(payload) {
