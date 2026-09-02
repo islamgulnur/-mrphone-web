@@ -23,6 +23,10 @@ function schemaJson(wert) {
   return JSON.stringify(wert).replace(/</g, "\\u003c");
 }
 
+function normalisiereZeilenenden(wert) {
+  return String(wert).replace(/\r\n/g, "\n");
+}
+
 function kopf({ titel, beschreibung, slug, serviceName, serviceBeschreibung, faq }) {
   const canonical = `${BASE_URL}/${slug}`;
   const schema = {
@@ -220,7 +224,7 @@ function main() {
   for (const [name, inhalt] of dateien) {
     const ziel = path.join(ROOT, name);
     if (pruefen) {
-      if (!fs.existsSync(ziel) || fs.readFileSync(ziel, "utf8") !== inhalt) fehler.push(name);
+      if (!fs.existsSync(ziel) || normalisiereZeilenenden(fs.readFileSync(ziel, "utf8")) !== normalisiereZeilenenden(inhalt)) fehler.push(name);
     } else {
       fs.writeFileSync(ziel, inhalt, "utf8");
     }
