@@ -1372,6 +1372,20 @@
     "datum": "2026-09-02"
   },
   {
+    "id": "pos-ebaa347d3bf70440c8e4",
+    "marke": "Samsung",
+    "modell": "Galaxy Watch9",
+    "speicher": "40mm",
+    "farbe": "Cream",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 249.99,
+    "menge": 2,
+    "bild": "https://asabsxcfjdhedbeaudhi.supabase.co/storage/v1/object/public/produktbilder/8806099273163.jpg",
+    "aktiv": true,
+    "datum": "2026-09-02"
+  },
+  {
     "id": "9ede6df5-d18d-45ee-bdee-92486124ed91",
     "marke": "Samsung",
     "modell": "Galaxy Z Flip 5",
