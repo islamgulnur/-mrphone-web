@@ -1,12 +1,24 @@
 name: POS-Bestand mit Website synchronisieren
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "bestand.json"
+      - "scripts/build-produktseiten.js"
+      - "scripts/sync-pos-bestand.js"
+      - "scripts/pos-ankaufdeckel.js"
+      - "scripts/wende-vk-sicherheitsdeckel.js"
+      - "pos-bestand-client.js"
+      - "produktseiten.css"
+      - ".github/workflows/pos-bestand-sync.yml"
   schedule:
     - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+  id-token: write
 
 concurrency:
   group: pos-bestand-sync
@@ -27,8 +39,21 @@ jobs:
       - name: Aktuellen POS-Bestand laden
         run: npm run test:pos && node scripts/fetch-pos-bestand.js
 
+      - name: Geschützte POS-Lerngrenzen laden
+        shell: bash
+        run: |
+          OIDC_RESPONSE=$(curl --fail --silent --show-error -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=mrphone-pos-buyback-sync")
+          OIDC_TOKEN=$(printf '%s' "$OIDC_RESPONSE" | node -e "let d='';process.stdin.on('data',c=>d+=c).on('end',()=>process.stdout.write(JSON.parse(d).value))")
+          if ! curl --fail --silent --show-error -H "Authorization: Bearer $OIDC_TOKEN" "https://asabsxcfjdhedbeaudhi.supabase.co/functions/v1/ankauf-deckel" -o .pos-buyback-caps.json; then
+            rm -f .pos-buyback-caps.json
+            echo "POS-Lerngrenzen vorübergehend nicht verfügbar; Bestand wird ohne sie synchronisiert."
+          fi
+
       - name: Bestand und Google-Seiten aktualisieren
         run: node scripts/sync-pos-bestand.js --apply
+
+      - name: Vollständigkeit erneut prüfen
+        run: node validate-data.js && npm run test:pos && npm run test:produkte
 
       - name: Änderungen veröffentlichen
         run: |

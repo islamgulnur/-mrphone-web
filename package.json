@@ -11,7 +11,9 @@
     "test:produkte": "node scripts/build-produktseiten.js --check && node scripts/test-produktseiten.js",
     "test:cloud-admin": "node scripts/test-cloud-admin-command.js",
     "sync:pos": "node scripts/fetch-pos-bestand.js && node scripts/sync-pos-bestand.js --apply",
-    "test:pos": "node scripts/test-pos-bestand.js"
+    "test:pos": "node scripts/test-pos-bestand.js",
+    "build:reparaturseiten": "node scripts/build-reparatur-landingpages.js",
+    "test:reparaturseiten": "node scripts/build-reparatur-landingpages.js --check"
   },
   "dependencies": {
     "express": "^4.19.2",

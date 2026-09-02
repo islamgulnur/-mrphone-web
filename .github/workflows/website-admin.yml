@@ -36,6 +36,9 @@ jobs:
       - name: Änderungsauftrag anwenden
         run: node scripts/cloud-admin-command.js
 
+      - name: Reparatur-Landingpages mit aktuellen Preisen erzeugen
+        run: npm run build:reparaturseiten
+
       - name: Datendateien vollständig prüfen
         run: node validate-data.js
 
@@ -43,7 +46,7 @@ jobs:
         run: npm run test:cloud-admin && npm run test:preise
 
       - name: Produktseiten unverändert lauffähig prüfen
-        run: npm run test:produkte
+        run: npm run test:produkte && npm run test:reparaturseiten
 
       - name: Sicherheitskopien als Workflow-Artefakt sichern
         if: always()
@@ -58,7 +61,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A -- angebote.json bewertungen.json reparatur-preise.json ankauf-preise.json pricing-niveau.json ankauf images/angebote
+          git add -A -- angebote.json bewertungen.json reparatur-preise.json ankauf-preise.json pricing-niveau.json ankauf images/angebote iphone-display-reparatur-frankfurt.html iphone-akku-wechsel-frankfurt.html
           if git diff --cached --quiet; then
             echo "Keine Änderung – kein Commit."
             exit 0

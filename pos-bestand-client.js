@@ -18,6 +18,32 @@
     return new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(Number(value));
   }
 
+  function gruppiereSichtbareAngebote(items) {
+    var gruppen = new Map();
+    items.forEach(function (item) {
+      var key = [sauber(item.speicher), sauber(item.farbe), sauber(item.zustand)]
+        .map(function (wert) { return wert.toLocaleLowerCase("de-DE"); })
+        .join("|");
+      var preis = Number(item.preis);
+      var vorhanden = gruppen.get(key);
+      if (vorhanden) {
+        vorhanden.menge += Number(item.menge) || 0;
+        vorhanden.preisMin = Math.min(vorhanden.preisMin, preis);
+        vorhanden.preisMax = Math.max(vorhanden.preisMax, preis);
+      } else {
+        gruppen.set(key, {
+          speicher: sauber(item.speicher), farbe: sauber(item.farbe), zustand: sauber(item.zustand),
+          menge: Number(item.menge) || 0, preisMin: preis, preisMax: preis
+        });
+      }
+    });
+    return Array.from(gruppen.values()).sort(function (a, b) { return a.preisMin - b.preisMin; });
+  }
+
+  function preisSpanne(item) {
+    return item.preisMin === item.preisMax ? euro(item.preisMin) : euro(item.preisMin) + "–" + euro(item.preisMax);
+  }
+
   function zustand(value) {
     var text = sauber(value).toLowerCase();
     if (text === "neu") return "Neu";
@@ -61,7 +87,7 @@
     info.appendChild(meta);
 
     var preis = document.createElement("strong");
-    preis.textContent = euro(item.preis);
+    preis.textContent = preisSpanne(item);
     var link = document.createElement("a");
     link.className = "produkt-btn produkt-btn--klein";
     link.target = "_blank";
@@ -88,10 +114,10 @@
         if (beschreibung) beschreibung.textContent = "Dieses Modell ist aktuell ausverkauft. Unser Team hilft Ihnen gerne bei einer passenden Alternative.";
         return;
       }
-      treffer.sort(function (a, b) { return Number(a.preis) - Number(b.preis); });
+      treffer = gruppiereSichtbareAngebote(treffer);
       container.replaceChildren.apply(container, treffer.map(function (item, index) { return angebotElement(item, index, produktname); }));
       var abPreis = document.querySelector("[data-live-abpreis]");
-      if (abPreis) abPreis.textContent = euro(treffer[0].preis);
+      if (abPreis) abPreis.textContent = euro(treffer[0].preisMin);
       var beschreibung = document.querySelector("[data-live-beschreibung]");
       if (beschreibung) beschreibung.textContent = treffer.length === 1
         ? "Dieses Gerät ist aktuell bei uns auf der Zeil verfügbar. Der Preis wurde gerade live aus unserem POS geladen."

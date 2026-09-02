@@ -157,13 +157,48 @@ function findeBild(gruppe, bilder) {
   return kandidaten[0]?.bild.url || "";
 }
 
+function gruppiereSichtbareAngebote(items) {
+  const gruppen = new Map();
+  for (const item of items) {
+    const key = [sauber(item.speicher), sauber(item.farbe), sauber(item.zustand)]
+      .map((wert) => wert.toLocaleLowerCase("de-DE"))
+      .join("|");
+    const preisWert = Number(item.preis);
+    const vorhanden = gruppen.get(key);
+    if (vorhanden) {
+      vorhanden.menge += Number(item.menge) || 0;
+      vorhanden.preisMin = Math.min(vorhanden.preisMin, preisWert);
+      vorhanden.preisMax = Math.max(vorhanden.preisMax, preisWert);
+    } else {
+      gruppen.set(key, {
+        speicher: sauber(item.speicher),
+        farbe: sauber(item.farbe),
+        zustand: sauber(item.zustand),
+        menge: Number(item.menge) || 0,
+        preisMin: preisWert,
+        preisMax: preisWert,
+      });
+    }
+  }
+  return [...gruppen.values()].sort((a, b) => a.preisMin - b.preisMin);
+}
+
+function preisSpanne(item) {
+  return item.preisMin === item.preisMax
+    ? preis(item.preisMin)
+    : `${preis(item.preisMin)}–${preis(item.preisMax)}`;
+}
+
 function absoluteBildUrl(bild) {
   return /^https:/i.test(bild) ? bild : `${BASE_URL}${bild}`;
 }
 
 function seitenTitel(name) {
   const lang = `${name} in Frankfurt kaufen | Mr. Phone`;
-  return lang.length <= 65 ? lang : `${name} kaufen | Mr. Phone Frankfurt`;
+  if (lang.length <= 65) return lang;
+  const kompakt = `${name} Frankfurt | Mr. Phone`;
+  if (kompakt.length <= 65) return kompakt;
+  return `${name.slice(0, 45).trim()}… | Mr. Phone`;
 }
 
 function beschreibung(name, abPreis, anzahl) {
@@ -228,7 +263,8 @@ function produktSeite(gruppe, alleGruppen, bilder) {
   const canonical = `${BASE_URL}/produkte/${gruppe.slug}.html`;
   const kategorie = KATEGORIEN[gruppe.kategorie] || KATEGORIEN.smartphones;
   const abPreis = preis(gruppe.items[0].preis);
-  const meta = beschreibung(name, abPreis, gruppe.items.length);
+  const sichtbareAngebote = gruppiereSichtbareAngebote(gruppe.items);
+  const meta = beschreibung(name, abPreis, sichtbareAngebote.length);
   const bild = findeBild(gruppe, bilder);
   const bildAbsolute = bild ? absoluteBildUrl(bild) : "";
   const whatsapp = `https://wa.me/496995632281?text=${encodeURIComponent(`Hallo, ich interessiere mich für das ${name} aus Ihrem Sortiment. Ist es noch verfügbar?`)}`;
@@ -262,11 +298,11 @@ function produktSeite(gruppe, alleGruppen, bilder) {
       { "@type": "ListItem", position: 3, name, item: canonical },
     ],
   };
-  const angeboteHtml = gruppe.items.map((item, index) => {
+  const angeboteHtml = sichtbareAngebote.map((item, index) => {
     const details = [sauber(item.speicher), sauber(item.farbe)].filter(Boolean).join(" · ") || "Standardausführung";
     const menge = Number(item.menge);
     const badgeKlasse = sauber(item.zustand).toLowerCase() === "neu" ? "produkt-badge--neu" : "produkt-badge--gebraucht";
-    return `<article class="produkt-angebot" id="angebot-${index + 1}"><div><h2>${html(details)}</h2><p><span class="produkt-badge ${badgeKlasse}">${html(zustandLabel(item.zustand))}</span> ${menge === 1 ? "1 Stück verfügbar" : `${menge} Stück verfügbar`}</p></div><strong>${html(preis(item.preis))}</strong><a class="produkt-btn produkt-btn--klein" href="${html(whatsapp)}" target="_blank" rel="noopener">Verfügbarkeit anfragen</a></article>`;
+    return `<article class="produkt-angebot" id="angebot-${index + 1}"><div><h2>${html(details)}</h2><p><span class="produkt-badge ${badgeKlasse}">${html(zustandLabel(item.zustand))}</span> ${menge === 1 ? "1 Stück verfügbar" : `${menge} Stück verfügbar`}</p></div><strong>${html(preisSpanne(item))}</strong><a class="produkt-btn produkt-btn--klein" href="${html(whatsapp)}" target="_blank" rel="noopener">Verfügbarkeit anfragen</a></article>`;
   }).join("\n");
   const verwandte = alleGruppen
     .filter((item) => item.slug !== gruppe.slug && (item.marke === gruppe.marke || item.kategorie === gruppe.kategorie))
@@ -302,7 +338,7 @@ ${PAGE_MARKER}
 ${header()}
 <main id="inhalt">
   <div class="produkt-container"><nav class="produkt-breadcrumb" aria-label="Breadcrumb"><a href="/">Startseite</a><span>›</span><a href="/produkte/">Verfügbare Geräte</a><span>›</span><span>${html(name)}</span></nav></div>
-  <section class="produkt-hero"><div class="produkt-container produkt-hero-grid"><div class="produkt-media">${media}</div><div><p class="produkt-eyebrow">Aktuell im Laden verfügbar</p><h1>${html(name)} in Frankfurt kaufen</h1><p class="produkt-lead" data-live-beschreibung>${html(gruppe.items.length === 1 ? `Dieses ${kategorie.singular} ist aktuell bei uns auf der Zeil verfügbar.` : `Wählen Sie aus ${gruppe.items.length} aktuell verfügbaren Varianten bei uns auf der Zeil.`)} Die Preise stammen direkt aus unserem POS-Bestand.</p><p class="produkt-ab">Ab <strong data-live-abpreis>${html(abPreis)}</strong></p><div class="produkt-actions"><a class="produkt-btn" href="${html(whatsapp)}" target="_blank" rel="noopener">Per WhatsApp anfragen</a><a class="produkt-btn produkt-btn--sekundaer" href="tel:+496995632281">069 95632281 anrufen</a></div><p class="produkt-hinweis">Nur Verkauf und Abholung im Ladengeschäft. Bitte Verfügbarkeit vor der Anfahrt kurz bestätigen.</p></div></div></section>
+  <section class="produkt-hero"><div class="produkt-container produkt-hero-grid"><div class="produkt-media">${media}</div><div><p class="produkt-eyebrow">Aktuell im Laden verfügbar</p><h1>${html(name)} in Frankfurt kaufen</h1><p class="produkt-lead" data-live-beschreibung>${html(sichtbareAngebote.length === 1 ? `Dieses ${kategorie.singular} ist aktuell bei uns auf der Zeil verfügbar.` : `Wählen Sie aus ${sichtbareAngebote.length} aktuell verfügbaren Varianten bei uns auf der Zeil.`)} Die Preise stammen direkt aus unserem POS-Bestand.</p><p class="produkt-ab">Ab <strong data-live-abpreis>${html(abPreis)}</strong></p><div class="produkt-actions"><a class="produkt-btn" href="${html(whatsapp)}" target="_blank" rel="noopener">Per WhatsApp anfragen</a><a class="produkt-btn produkt-btn--sekundaer" href="tel:+496995632281">069 95632281 anrufen</a></div><p class="produkt-hinweis">Nur Verkauf und Abholung im Ladengeschäft. Bitte Verfügbarkeit vor der Anfahrt kurz bestätigen.</p></div></div></section>
   <section class="produkt-section"><div class="produkt-container"><p class="produkt-eyebrow">Aktuelle Auswahl</p><h2>Verfügbare ${html(name)} Angebote</h2><div class="produkt-angebote" data-produkt-slug="${gruppe.slug}">${angeboteHtml}</div></div></section>
   <section class="produkt-section produkt-section--hell"><div class="produkt-container produkt-info-grid"><div><p class="produkt-eyebrow">Direkt auf der Zeil</p><h2>Persönlich ansehen und mitnehmen</h2><p>Besuchen Sie Mr. Phone in der Zeil 115–117 in Frankfurt. Wir zeigen Ihnen das Gerät vor Ort und beantworten Ihre Fragen zu Zustand, Speicher und Lieferumfang.</p><a href="/kontakt.html">Adresse und Öffnungszeiten ansehen →</a></div><div><h2>Wichtiger Preis-Hinweis</h2><p>Diese Seite wird automatisch aus unserem aktuellen Kassenbestand erstellt. Zwischenverkauf und kurzfristige Preisänderungen sind möglich. Maßgeblich ist der ausgezeichnete Preis im Laden.</p>${kategorie.ratgeber ? `<p><a href="${kategorie.ratgeber}">Ratgeber: Worauf Sie beim Kauf eines gebrauchten Smartphones achten sollten →</a></p>` : ""}</div></div></section>
   ${verwandte ? `<section class="produkt-section"><div class="produkt-container"><p class="produkt-eyebrow">Weitere Auswahl</p><h2>Ähnliche verfügbare Geräte</h2><ul class="produkt-links">${verwandte}</ul><p><a href="${kategorie.landing}">Mehr ${html(kategorie.label)} in Frankfurt ansehen →</a></p></div></section>` : ""}
@@ -421,4 +457,4 @@ if (require.main === module) {
   catch (error) { console.error(error.message); process.exit(1); }
 }
 
-module.exports = { aktiveGruppen, artefakteErstellen, slugify, sichereBildUrl, absoluteBildUrl };
+module.exports = { aktiveGruppen, artefakteErstellen, slugify, sichereBildUrl, absoluteBildUrl, gruppiereSichtbareAngebote };

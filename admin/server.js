@@ -780,7 +780,7 @@ app.get("/api/reparatur-preise", (req, res) => {
   res.json(readReparaturPreise());
 });
 
-app.put("/api/reparatur-preise", (req, res) => {
+app.put("/api/reparatur-preise", async (req, res) => {
   const b = req.body || {};
   const daten = {
     _hinweis: REPARATUR_PREISE_HINWEIS,
@@ -793,8 +793,17 @@ app.put("/api/reparatur-preise", (req, res) => {
           .filter((r) => r.name)
       : [],
   };
-  writeReparaturPreise(daten);
-  res.json(daten);
+  const vorher = fs.existsSync(REPARATUR_PREISE_FILE) ? fs.readFileSync(REPARATUR_PREISE_FILE, "utf8") : null;
+  try {
+    writeReparaturPreise(daten);
+    await runNodeScript(path.join("scripts", "build-reparatur-landingpages.js"));
+    res.json(daten);
+  } catch (error) {
+    if (vorher == null) fs.rmSync(REPARATUR_PREISE_FILE, { force: true });
+    else fs.writeFileSync(REPARATUR_PREISE_FILE, vorher, "utf8");
+    try { await runNodeScript(path.join("scripts", "build-reparatur-landingpages.js")); } catch (_) { /* ursprünglichen Fehler melden */ }
+    res.status(500).json({ error: "Preise konnten nicht sicher gespeichert werden; die Änderung wurde zurückgerollt." });
+  }
 });
 
 // Dateien, deren Eintragsanzahl vor dem Veröffentlichen mit der letzten committeten

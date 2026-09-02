@@ -26,6 +26,17 @@ Websites mit bis zu 100.000 Aufrufen/Monat.
 - Browser/Betriebssystem-Kategorie, grobe Standortregion (Land)
 - **Keine** Cookies, **keine** IP-Adressen, **keine** Cross-Site-Verfolgung einzelner Personen
 
+Zusätzlich erfasst `main.js` seit September 2026 ausschließlich anonyme Erfolgsereignisse:
+
+- Klick auf WhatsApp
+- Klick auf Telefonnummer
+- Klick auf Routenplanung
+- Produktanfrage
+- abgeschlossenes Ergebnis oder individuelle Preisanfrage im Ankaufsrechner
+
+Die Ereignisse erscheinen in GoatCounter unter Pfaden wie `event/whatsapp-klick`. Es werden
+weder Gerätenummern noch Namen, Telefonnummern oder andere Kundendaten übertragen.
+
 ## Betroffene Dateien
 
 Snippet eingebunden in: `index.html`, `sortiment.html`, `kontakt.html`, `impressum.html`,

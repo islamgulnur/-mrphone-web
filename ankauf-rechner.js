@@ -139,6 +139,7 @@
   // Variante hat keinen einzigen Zustand mit hinterlegtem Preis -> komplettes Gerät läuft
   // "auf Anfrage" (siehe zeigeErgebnisAufAnfrage()), nicht nur eine einzelne Zustandsstufe.
   function hatKeinenPreis(variante) {
+    if (variante && variante.preisStatus === "anfrage") return true;
     if (!variante || !variante.preise) return true;
     return ZUSTAENDE.every(function (z) { return variante.preise[z.id] == null; });
   }
@@ -609,6 +610,7 @@
         "Datum: " + formatDatumUhrzeit();
 
     whatsappBtn.href = waLink(nachricht);
+    if (typeof window.mrphoneTrack === "function") window.mrphoneTrack("ankaufsrechner-ergebnis");
 
     if (hinweisKategorie) {
       var kategorieConfig = KATEGORIEN.find(function (k) { return k.id === state.kategorie; });
@@ -645,6 +647,7 @@
         "Anfrage-Nummer: " + nummer + "\n" +
         "Datum: " + formatDatumUhrzeit();
     whatsappBtn.href = waLink(nachricht);
+    if (typeof window.mrphoneTrack === "function") window.mrphoneTrack("ankaufsrechner-preisanfrage");
 
     if (hinweisKategorie) {
       var kategorieConfig = KATEGORIEN.find(function (k) { return k.id === state.kategorie; });

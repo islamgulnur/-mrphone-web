@@ -2,6 +2,29 @@
 (function () {
   "use strict";
 
+  function trackConversion(name) {
+    if (!name || !window.goatcounter || typeof window.goatcounter.count !== "function") return;
+    window.goatcounter.count({
+      path: "event/" + name,
+      title: name + " · " + window.location.pathname,
+      event: true,
+    });
+  }
+
+  window.mrphoneTrack = trackConversion;
+
+  function initConversionTracking() {
+    document.addEventListener("click", function (event) {
+      var link = event.target.closest && event.target.closest("a[href]");
+      if (!link) return;
+      var href = link.getAttribute("href") || "";
+      if (/^https:\/\/wa\.me\//i.test(href)) trackConversion("whatsapp-klick");
+      if (/^tel:/i.test(href)) trackConversion("anruf-klick");
+      if (/google\.[^/]+\/maps|maps\.app\.goo\.gl/i.test(href)) trackConversion("route-klick");
+      if (link.closest(".produkt-angebot, [data-bestand-grid], [data-angebote-grid]")) trackConversion("produkt-anfrage");
+    });
+  }
+
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------- Sprache & Asset-Pfade ---------- */
@@ -750,6 +773,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    initConversionTracking();
     initReveal();
     initCounters();
     initOeffnungsstatus();

@@ -3,16 +3,32 @@
 
 const fs = require("fs");
 const path = require("path");
-const { artefakteErstellen, sichereBildUrl, absoluteBildUrl } = require("./build-produktseiten");
+const { artefakteErstellen, sichereBildUrl, absoluteBildUrl, gruppiereSichtbareAngebote } = require("./build-produktseiten");
 
 const ROOT = path.resolve(__dirname, "..");
 const artefakte = artefakteErstellen();
 const fehler = [];
 
+function dekodiereHtmlText(value) {
+  return String(value || "")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
 const testBild = "https://abc123.supabase.co/storage/v1/object/public/produktbilder/4006381333931.jpg";
 if (sichereBildUrl(testBild) !== testBild) fehler.push("Eigener Supabase-Produktbildpfad wird fälschlich blockiert");
 if (sichereBildUrl("https://example.com/fremdes-bild.jpg")) fehler.push("Fremde Bildquelle wird nicht blockiert");
 if (absoluteBildUrl(testBild) !== testBild) fehler.push("Externe Produktbild-URL wird fehlerhaft verändert");
+const gruppiert = gruppiereSichtbareAngebote([
+  { speicher: "256 GB", farbe: "", zustand: "neu", preis: 1000, menge: 1 },
+  { speicher: "256 GB", farbe: "", zustand: "neu", preis: 1100, menge: 2 },
+]);
+if (gruppiert.length !== 1 || gruppiert[0].menge !== 3 || gruppiert[0].preisMin !== 1000 || gruppiert[0].preisMax !== 1100) {
+  fehler.push("Kundenseitig identische Varianten werden nicht korrekt als Preisspanne gruppiert");
+}
 
 for (const gruppe of artefakte.gruppen) {
   const datei = path.join(ROOT, "produkte", `${gruppe.slug}.html`);
@@ -22,12 +38,13 @@ for (const gruppe of artefakte.gruppen) {
   }
   const inhalt = fs.readFileSync(datei, "utf8");
   const h1 = (inhalt.match(/<h1\b/g) || []).length;
-  const title = inhalt.match(/<title>([^<]+)<\/title>/)?.[1] || "";
-  const description = inhalt.match(/<meta name="description" content="([^"]+)">/)?.[1] || "";
+  const title = dekodiereHtmlText(inhalt.match(/<title>([^<]+)<\/title>/)?.[1] || "");
+  const description = dekodiereHtmlText(inhalt.match(/<meta name="description" content="([^"]+)">/)?.[1] || "");
   const offers = (inhalt.match(/"@type": "Offer"/g) || []).length;
   const neuBadges = (inhalt.match(/produkt-badge--neu/g) || []).length;
   const gebrauchtBadges = (inhalt.match(/produkt-badge--gebraucht/g) || []).length;
-  const erwartetNeu = gruppe.items.filter((item) => String(item.zustand || "").trim().toLowerCase() === "neu").length;
+  const sichtbareAngebote = gruppiereSichtbareAngebote(gruppe.items);
+  const erwartetNeu = sichtbareAngebote.filter((item) => String(item.zustand || "").trim().toLowerCase() === "neu").length;
   if (h1 !== 1) fehler.push(`${gruppe.slug}: erwartet genau eine H1, gefunden ${h1}`);
   if (title.length < 30 || title.length > 65) fehler.push(`${gruppe.slug}: Title-Länge ${title.length}`);
   if (description.length < 110 || description.length > 165) fehler.push(`${gruppe.slug}: Meta-Description-Länge ${description.length}`);
@@ -40,7 +57,7 @@ for (const gruppe of artefakte.gruppen) {
   if (!inhalt.includes('src="/main.js"')) fehler.push(`${gruppe.slug}: gemeinsame Website-Funktionen fehlen`);
   if (offers !== gruppe.items.length) fehler.push(`${gruppe.slug}: ${offers} Schema-Angebote statt ${gruppe.items.length}`);
   if (neuBadges !== erwartetNeu) fehler.push(`${gruppe.slug}: ${neuBadges} Neu-Badges statt ${erwartetNeu}`);
-  if (gebrauchtBadges !== gruppe.items.length - erwartetNeu) fehler.push(`${gruppe.slug}: ${gebrauchtBadges} Gebraucht-Badges statt ${gruppe.items.length - erwartetNeu}`);
+  if (gebrauchtBadges !== sichtbareAngebote.length - erwartetNeu) fehler.push(`${gruppe.slug}: ${gebrauchtBadges} Gebraucht-Badges statt ${sichtbareAngebote.length - erwartetNeu}`);
   if (/noindex/i.test(inhalt)) fehler.push(`${gruppe.slug}: enthält noindex`);
 }
 

@@ -328,9 +328,10 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
   }
 
   if (gebraucht.marktwert == null) {
+    const grund = gebraucht.grund || ("zu wenige Gebraucht-Treffer (" + gebraucht.treffer + " < " + config.MIN_TREFFER_GEBRAUCHT + ")");
     return {
-      variante: altVariante || bauePlatzhalterVariante(variante),
-        protokoll: { typ: "uebersprungen", ...basis, grund: gebraucht.grund || ("zu wenige Gebraucht-Treffer (" + gebraucht.treffer + " < " + config.MIN_TREFFER_GEBRAUCHT + ")") },
+      variante: markierePreisAufAnfrage(altVariante || bauePlatzhalterVariante(variante), grund),
+      protokoll: { typ: "uebersprungen", ...basis, grund: `${grund}; öffentlicher Festpreis vorläufig ausgeblendet` },
     };
   }
 
@@ -392,9 +393,10 @@ async function verarbeiteVariante({ geraet, variante, altVariante, zugangskontex
   const marktwertNeuVerworfen = marktwertNeuRoh != null && marktwertNeu == null;
 
   if (marktwertNeu != null && marktwertNeu <= gebraucht.marktwert) {
+    const grund = "Datenfehler: marktwertNeu (" + Math.round(marktwertNeu) + " €) <= marktwertGebraucht (" + Math.round(gebraucht.marktwert) + " €)";
     return {
-      variante: altVariante || bauePlatzhalterVariante(variante),
-      protokoll: { typ: "uebersprungen", ...basis, grund: "Datenfehler: marktwertNeu (" + Math.round(marktwertNeu) + " €) <= marktwertGebraucht (" + Math.round(gebraucht.marktwert) + " €)" },
+      variante: markierePreisAufAnfrage(altVariante || bauePlatzhalterVariante(variante), grund),
+      protokoll: { typ: "uebersprungen", ...basis, grund: `${grund}; öffentlicher Festpreis vorläufig ausgeblendet` },
     };
   }
 
@@ -563,6 +565,15 @@ function bauePlatzhalterVariante(variante) {
   return { bezeichnung: variante.bezeichnung, uvpDelta: variante.uvpDelta, preise: {
     neuVersiegelt: null, wieNeu: 0, sehrGut: 0, gut: 0, schlecht: 0, defekt: 0,
   }, preisQuelle: "auto" };
+}
+
+function markierePreisAufAnfrage(variante, grund) {
+  return {
+    ...variante,
+    preisStatus: "anfrage",
+    preisStatusGrund: String(grund || "Marktdaten nicht ausreichend sicher").slice(0, 300),
+    preisStatusSeit: heutigesDatum(),
+  };
 }
 
 // ---------------------------------------------------------------------------

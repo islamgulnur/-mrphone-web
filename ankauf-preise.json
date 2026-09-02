@@ -853,10 +853,10 @@
         "uvpDelta": 100,
         "preise": {
           "neuVersiegelt": 375,
-          "wieNeu": 290,
-          "sehrGut": 270,
-          "gut": 235,
-          "schlecht": 175,
+          "wieNeu": 275,
+          "sehrGut": 260,
+          "gut": 225,
+          "schlecht": 165,
           "defekt": 85
         },
         "preisQuelle": "auto"
@@ -1229,10 +1229,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 415,
-          "wieNeu": 325,
+          "wieNeu": 315,
           "sehrGut": 295,
-          "gut": 265,
-          "schlecht": 195,
+          "gut": 255,
+          "schlecht": 190,
           "defekt": 95
         },
         "preisQuelle": "auto"
@@ -1742,10 +1742,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 885,
-          "wieNeu": 735,
-          "sehrGut": 685,
-          "gut": 595,
-          "schlecht": 445,
+          "wieNeu": 700,
+          "sehrGut": 660,
+          "gut": 570,
+          "schlecht": 425,
           "defekt": 210
         },
         "preisQuelle": "auto"
@@ -1792,7 +1792,7 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 930,
-          "wieNeu": 850,
+          "wieNeu": 845,
           "sehrGut": 785,
           "gut": 685,
           "schlecht": 510,
@@ -1805,10 +1805,10 @@
         "uvpDelta": 200,
         "preise": {
           "neuVersiegelt": 1170,
-          "wieNeu": 980,
-          "sehrGut": 910,
-          "gut": 795,
-          "schlecht": 595,
+          "wieNeu": 955,
+          "sehrGut": 895,
+          "gut": 775,
+          "schlecht": 580,
           "defekt": 290
         },
         "preisQuelle": "auto"
@@ -1831,10 +1831,10 @@
         "uvpDelta": 750,
         "preise": {
           "neuVersiegelt": 1495,
-          "wieNeu": 1305,
-          "sehrGut": 1210,
-          "gut": 1055,
-          "schlecht": 790,
+          "wieNeu": 1275,
+          "sehrGut": 1195,
+          "gut": 1035,
+          "schlecht": 775,
           "defekt": 385
         },
         "preisQuelle": "auto"

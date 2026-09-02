@@ -19,7 +19,19 @@ function sauber(value) {
 }
 
 function speicherFormat(value) {
-  return sauber(value).replace(/(\d+)\s*(TB|GB)/gi, "$1 $2");
+  return sauber(value).replace(/(\d+)\s*(TB|GB)/gi, (_, zahl, einheit) => `${zahl} ${einheit.toUpperCase()}`);
+}
+
+function normalisiereMarke(value) {
+  const marke = sauber(value);
+  if (/^ray[ -]?ban$/i.test(marke)) return "Ray-Ban";
+  return marke;
+}
+
+function normalisiereModell(value) {
+  return sauber(value)
+    .replace(/\bPro\s+max\b/gi, "Pro Max")
+    .replace(/\bPro\s+mini\b/gi, "Pro Mini");
 }
 
 function normalisiert(value) {
@@ -42,8 +54,8 @@ function sichereProduktbildUrl(value) {
 }
 
 function mappePosGeraet(pos) {
-  let marke = sauber(pos.marke);
-  let modell = sauber(pos.modell);
+  let marke = normalisiereMarke(pos.marke);
+  let modell = normalisiereModell(pos.modell);
 
   if (/^samsung galaxy$/i.test(marke)) marke = "Samsung";
   if (/^xiaomi redmi$/i.test(marke)) {

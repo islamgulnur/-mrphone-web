@@ -10,6 +10,7 @@ const path = require("path");
 const { execFileSync } = require("child_process");
 const pricing = require("../pricing-config");
 const { backupIfChanged } = require("./backup-data");
+const { pruefeDeckelPayload, schluessel: deckelSchluessel, stufenDeckel } = require("./pos-ankaufdeckel");
 
 const ROOT = path.join(__dirname, "..");
 const KATALOG_FILE = path.join(ROOT, "geraete-katalog.json");
@@ -17,6 +18,7 @@ const ANKAUF_FILE = path.join(ROOT, "ankauf-preise.json");
 const BESTAND_FILE = path.join(ROOT, "bestand.json");
 const SPLIT_DIR = path.join(ROOT, "ankauf");
 const VALIDATE_SCRIPT = path.join(ROOT, "validate-data.js");
+const POS_DECKEL_FILE = path.join(ROOT, ".pos-buyback-caps.json");
 const KATEGORIEN = [
   "smartphones", "tablets", "smartwatches", "laptops", "pcs",
   "monitore", "kopfhoerer", "kameras", "konsolen", "zubehoer",
@@ -33,7 +35,10 @@ const katalogById = new Map(katalog.map((geraet) => [geraet.id, geraet]));
 const ankaufRoh = ladeJson(ANKAUF_FILE);
 const ankaufListe = ankaufRoh.filter((geraet) => geraet && geraet.id);
 const bestand = ladeJson(BESTAND_FILE);
+const posDeckelPayload = fs.existsSync(POS_DECKEL_FILE) ? pruefeDeckelPayload(ladeJson(POS_DECKEL_FILE)) : { daten: [] };
+const posDeckelByKey = new Map(posDeckelPayload.daten.map((item) => [deckelSchluessel(item.marke, item.modell, item.speicher, item.zustand), item]));
 const aenderungen = [];
+const lernAenderungen = [];
 let manuellUebersprungen = 0;
 let katalogVarianteFehlt = 0;
 
@@ -76,11 +81,31 @@ ankaufListe.forEach((ankaufGeraet) => {
       variante: ankaufVariante.bezeichnung,
       ...aenderung,
     }));
+
+    for (const zustand of ["neu", "gebraucht"]) {
+      const signal = posDeckelByKey.get(deckelSchluessel(katalogGeraet.marke, katalogGeraet.modell, ankaufVariante.bezeichnung, zustand));
+      if (!signal) continue;
+      const deckelJeStufe = stufenDeckel(signal.maximaler_ankaufspreis, zustand);
+      Object.entries(deckelJeStufe).forEach(([stufe, deckel]) => {
+        const alt = Number(ankaufVariante.preise[stufe]);
+        if (!Number.isFinite(alt) || alt <= deckel) return;
+        ankaufVariante.preise[stufe] = deckel;
+        lernAenderungen.push({
+          id: ankaufGeraet.id,
+          geraet: `${ankaufGeraet.marke} ${ankaufGeraet.modell}`,
+          variante: ankaufVariante.bezeichnung,
+          stufe,
+          alt,
+          neu: deckel,
+        });
+      });
+    }
   });
 });
 
 console.log("VK-Sicherheitsdeckel" + (dryRun ? " (DRY-RUN)" : ""));
 console.log("Preisfelder gesenkt:", aenderungen.length);
+console.log("Durch anonymisierte POS-Lerngrenze gesenkt:", lernAenderungen.length);
 console.log("Manuelle Varianten unveraendert:", manuellUebersprungen);
 console.log("Fehlende Katalogvarianten:", katalogVarianteFehlt);
 aenderungen.forEach((aenderung) => {
@@ -91,7 +116,7 @@ aenderungen.forEach((aenderung) => {
   );
 });
 
-if (dryRun || !aenderungen.length) {
+if (dryRun || (!aenderungen.length && !lernAenderungen.length)) {
   console.log(dryRun ? "Dry-Run beendet: keine Datei geschrieben." : "Keine Aenderung erforderlich.");
   process.exit(0);
 }
