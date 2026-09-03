@@ -50,7 +50,7 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 199.99,
-    "menge": 4,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-03"
@@ -378,20 +378,6 @@
     "datum": "2026-09-03"
   },
   {
-    "id": "pos-c37036128e77b43a779f",
-    "marke": "Apple",
-    "modell": "iPhone 15 Pro Max",
-    "speicher": "256 GB",
-    "farbe": "Natural Titanium",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 619.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-03"
-  },
-  {
     "id": "8f0dfeb7-9832-489e-a3d9-dc80b090b841",
     "marke": "Apple",
     "modell": "iPhone 15 Pro Max",
@@ -498,7 +484,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1069.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-03"
@@ -596,7 +582,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 3,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-03"
@@ -610,7 +596,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 11,
+    "menge": 10,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-03"
@@ -904,7 +890,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 119.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-03"
@@ -1338,7 +1324,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 849.99,
-    "menge": 3,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-03"
