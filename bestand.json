@@ -28,6 +28,20 @@
     "datum": "2026-09-03"
   },
   {
+    "id": "pos-7308095ec7bee9cf43cd",
+    "marke": "Apple",
+    "modell": "iPhone 11",
+    "speicher": "64 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 179,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-03"
+  },
+  {
     "id": "cd4ad668-d97a-4605-859d-dd4643acde3d",
     "marke": "Apple",
     "modell": "iPhone 11",
@@ -92,20 +106,6 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 199.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-03"
-  },
-  {
-    "id": "pos-312cb96d97e7002ce84f",
-    "marke": "Apple",
-    "modell": "iPhone 13",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 279.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -364,20 +364,6 @@
     "datum": "2026-09-03"
   },
   {
-    "id": "4f96ca1a-ee45-4b75-a62a-3f3c977ec38f",
-    "marke": "Apple",
-    "modell": "iPhone 15 Pro",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 549.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-03"
-  },
-  {
     "id": "8f0dfeb7-9832-489e-a3d9-dc80b090b841",
     "marke": "Apple",
     "modell": "iPhone 15 Pro Max",
@@ -448,6 +434,20 @@
     "datum": "2026-09-03"
   },
   {
+    "id": "pos-936014fbd60c45c11c83",
+    "marke": "Apple",
+    "modell": "iPhone 16 Pro Max E-SIM",
+    "speicher": "256 GB",
+    "farbe": "Gold",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 699.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-03"
+  },
+  {
     "id": "pos-9d610d016dd17434c300",
     "marke": "Apple",
     "modell": "iPhone 17 Pro",
@@ -471,6 +471,20 @@
     "zustand": "gebraucht",
     "preis": 979.99,
     "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-03"
+  },
+  {
+    "id": "pos-b5f1ba50157839261695",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro",
+    "speicher": "256 GB",
+    "farbe": "Silver",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1069.99,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-03"
@@ -582,7 +596,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-03"
@@ -652,6 +666,20 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 169.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-03"
+  },
+  {
+    "id": "pos-089f16b89d12189df612",
+    "marke": "Apple",
+    "modell": "iPhone XR",
+    "speicher": "64 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 129.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
