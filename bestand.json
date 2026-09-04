@@ -742,20 +742,6 @@
     "datum": "2026-09-04"
   },
   {
-    "id": "pos-81c4e220355408b4e3a4",
-    "marke": "Apple",
-    "modell": "MacBook Pro 14 M5",
-    "speicher": "1 TB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1729.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
     "id": "pos-9f0bccacb1217469e022",
     "marke": "Aquosa",
     "modell": "706SH",
