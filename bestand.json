@@ -210,6 +210,20 @@
     "datum": "2026-09-04"
   },
   {
+    "id": "pos-2316af8ac359b0f6825f",
+    "marke": "Apple",
+    "modell": "iPhone 14",
+    "speicher": "128 GB",
+    "farbe": "Purple",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 349.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-04"
+  },
+  {
     "id": "pos-428c970edbca18f4b667",
     "marke": "Apple",
     "modell": "iPhone 14",
@@ -260,6 +274,20 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 419.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-04"
+  },
+  {
+    "id": "pos-e7a52dcf92348ebd7dd8",
+    "marke": "Apple",
+    "modell": "iPhone 14 Pro",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 449.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -317,6 +345,20 @@
     "zustand": "gebraucht",
     "preis": 619.99,
     "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-04"
+  },
+  {
+    "id": "pos-44b9ceacd22b4797b12c",
+    "marke": "Apple",
+    "modell": "iPhone 15",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 439.99,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-04"
@@ -574,6 +616,20 @@
     "datum": "2026-09-04"
   },
   {
+    "id": "pos-98f0d9ca9039f4f12796",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro Max",
+    "speicher": "256 GB",
+    "farbe": "Cosmic Orange",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1149.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-04"
+  },
+  {
     "id": "pos-9d592836bf919185be69",
     "marke": "Apple",
     "modell": "iPhone 17 Pro Max",
@@ -582,7 +638,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 1,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-04"
@@ -596,7 +652,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 1,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-04"
@@ -610,7 +666,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 10,
+    "menge": 7,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-04"
@@ -625,6 +681,20 @@
     "zustand": "gebraucht",
     "preis": 1199.99,
     "menge": 3,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-04"
+  },
+  {
+    "id": "pos-730b2539ea5060a63cf7",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro Max",
+    "speicher": "512 GB",
+    "farbe": "Cosmic Orange",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1329.99,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-04"
@@ -994,6 +1064,20 @@
     "datum": "2026-09-04"
   },
   {
+    "id": "pos-0243eb223ad6b2d3a94c",
+    "marke": "Samsung",
+    "modell": "Galaxy A17 5G",
+    "speicher": "128 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 179.99,
+    "menge": 1,
+    "bild": "https://asabsxcfjdhedbeaudhi.supabase.co/storage/v1/object/public/produktbilder/8806097642671.jpg",
+    "aktiv": true,
+    "datum": "2026-09-04"
+  },
+  {
     "id": "9d1ee4b1-9e04-422c-aee3-08f4e5b9a4dc",
     "marke": "Samsung",
     "modell": "Galaxy A17 5G",
@@ -1330,6 +1414,20 @@
     "datum": "2026-09-04"
   },
   {
+    "id": "pos-acced54a9675f711fe79",
+    "marke": "Samsung",
+    "modell": "Galaxy S26 Ultra",
+    "speicher": "256 GB",
+    "farbe": "Cobalt Violet",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 849.99,
+    "menge": 1,
+    "bild": "https://asabsxcfjdhedbeaudhi.supabase.co/storage/v1/object/public/produktbilder/8806097827092.jpg",
+    "aktiv": true,
+    "datum": "2026-09-04"
+  },
+  {
     "id": "pos-ef489a6ca184c90bfd43",
     "marke": "Samsung",
     "modell": "Galaxy S26 Ultra",
@@ -1442,6 +1540,20 @@
     "datum": "2026-09-04"
   },
   {
+    "id": "pos-26571c0dead9ec5f4fa4",
+    "marke": "Samsung",
+    "modell": "Galaxy Z Fold7",
+    "speicher": "256 GB",
+    "farbe": "Silver Shadow",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 999.99,
+    "menge": 1,
+    "bild": "https://asabsxcfjdhedbeaudhi.supabase.co/storage/v1/object/public/produktbilder/8806097423720.jpg",
+    "aktiv": true,
+    "datum": "2026-09-04"
+  },
+  {
     "id": "eee9a2c7-4318-4dd4-87a5-b4732a9cd1c5",
     "marke": "Sony",
     "modell": "Xperia 10 IV",
@@ -1464,6 +1576,20 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 199.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-04"
+  },
+  {
+    "id": "pos-3b14b00864af3c476ab4",
+    "marke": "Xiaomi",
+    "modell": "15T Pro",
+    "speicher": "512 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 449.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
