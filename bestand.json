@@ -162,7 +162,7 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 299.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-05"
@@ -1534,7 +1534,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 999.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "https://asabsxcfjdhedbeaudhi.supabase.co/storage/v1/object/public/produktbilder/8806097827016.jpg",
     "aktiv": true,
     "datum": "2026-09-05"
@@ -1912,6 +1912,20 @@
     "kategorie": "tablets",
     "zustand": "neu",
     "preis": 1549.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-05"
+  },
+  {
+    "id": "pos-0a6ddc6320cd48971db1",
+    "marke": "Lenovo",
+    "modell": "LEGION Y700",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "tablets",
+    "zustand": "gebraucht",
+    "preis": 99.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
