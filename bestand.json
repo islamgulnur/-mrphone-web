@@ -274,20 +274,6 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 339.99,
-    "menge": 2,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-05"
-  },
-  {
-    "id": "pos-7764f17358d54d330c0b",
-    "marke": "Apple",
-    "modell": "iPhone 14",
-    "speicher": "128 GB",
-    "farbe": "Midnight",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 349.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -1708,6 +1694,20 @@
     "datum": "2026-09-05"
   },
   {
+    "id": "pos-2e816bb08e8a2cb38d96",
+    "marke": "Xiaomi",
+    "modell": "Redmi A5",
+    "speicher": "64 GB",
+    "farbe": "Midnight Black",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 104.99,
+    "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-05"
+  },
+  {
     "id": "74904601-3467-4474-b50a-307071e455cf",
     "marke": "Xiaomi",
     "modell": "Redmi A5",
@@ -2039,6 +2039,20 @@
     "zustand": "neu",
     "preis": 699.99,
     "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-05"
+  },
+  {
+    "id": "pos-0947f21599599ca6f7cf",
+    "marke": "Apple",
+    "modell": "MacBook Air 13 M3",
+    "speicher": "8 GB · 256 GB",
+    "farbe": "",
+    "kategorie": "laptops",
+    "zustand": "gebraucht",
+    "preis": 799.99,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-05"
