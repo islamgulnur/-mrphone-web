@@ -826,20 +826,6 @@
     "datum": "2026-09-05"
   },
   {
-    "id": "pos-089f16b89d12189df612",
-    "marke": "Apple",
-    "modell": "iPhone XR",
-    "speicher": "64 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 129.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-05"
-  },
-  {
     "id": "5a6c6119-a725-4f09-bc5d-dd5054e5d4b1",
     "marke": "Apple",
     "modell": "iPhone XR",
@@ -974,7 +960,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 269.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-05"
@@ -1660,20 +1646,6 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 449.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-05"
-  },
-  {
-    "id": "7f1f5143-2532-45b2-a3f0-d8b19b35f7c4",
-    "marke": "Xiaomi",
-    "modell": "17T",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 379.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
