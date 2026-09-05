@@ -196,6 +196,34 @@
     "datum": "2026-09-05"
   },
   {
+    "id": "pos-1ae9ce32982a63921ccf",
+    "marke": "Apple",
+    "modell": "iPhone 13",
+    "speicher": "256 GB",
+    "farbe": "Grün",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 339.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-05"
+  },
+  {
+    "id": "pos-7a7d3d4e36e6152873bb",
+    "marke": "Apple",
+    "modell": "iPhone 13 Pro",
+    "speicher": "128 GB",
+    "farbe": "Gold",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 389.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-05"
+  },
+  {
     "id": "pos-880a3fa2788b51732b37",
     "marke": "Apple",
     "modell": "iPhone 13 Pro",
@@ -392,6 +420,20 @@
     "datum": "2026-09-05"
   },
   {
+    "id": "pos-38335871966fb951ad5c",
+    "marke": "Apple",
+    "modell": "iPhone 15",
+    "speicher": "128 GB",
+    "farbe": "Grün",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 439.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-05"
+  },
+  {
     "id": "pos-44b9ceacd22b4797b12c",
     "marke": "Apple",
     "modell": "iPhone 15",
@@ -456,6 +498,20 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 629.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-05"
+  },
+  {
+    "id": "pos-b028c1cc5b763ad198b6",
+    "marke": "Apple",
+    "modell": "iPhone 16",
+    "speicher": "128 GB",
+    "farbe": "Black",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 599.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -1596,20 +1652,6 @@
     "datum": "2026-09-05"
   },
   {
-    "id": "eee9a2c7-4318-4dd4-87a5-b4732a9cd1c5",
-    "marke": "Sony",
-    "modell": "Xperia 10 IV",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 99.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-05"
-  },
-  {
     "id": "3e3f4071-7697-4659-a3e6-946f5984e470",
     "marke": "Xiaomi",
     "modell": "13",
@@ -2010,20 +2052,6 @@
     "kategorie": "laptops",
     "zustand": "gebraucht",
     "preis": 1049.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-05"
-  },
-  {
-    "id": "pos-4ba0168c073028951f5b",
-    "marke": "Apple",
-    "modell": "MacBook Air 2020",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "laptops",
-    "zustand": "gebraucht",
-    "preis": 319.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
