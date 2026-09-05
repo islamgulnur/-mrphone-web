@@ -166,6 +166,20 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
 .tile p { color: var(--steel); }
 a.tile { border-color: var(--hairline-strong); }
 
+/* Bug behoben: .service-card (styles.css) ist eine weiße Karte mit --white-Hintergrund
+   fuer die hellen Reparatur-/Ankauf-Seiten gedacht. Auf dem dunklen Homepage-Reskin
+   erbte die Ueberschrift trotzdem body { color: var(--paper) } (helles Schriftgrau) -
+   auf weißem Grund praktisch unlesbar und optisch ein Fremdkoerper neben den
+   Glass-Kacheln direkt darueber. Gleiches Glass-Muster wie .tile angewendet. */
+.service-card {
+  background: var(--glass);
+  border: 1px solid var(--hairline);
+  color: var(--paper);
+  box-shadow: none;
+}
+.service-card:hover { border-color: var(--signal); box-shadow: none; }
+.service-card p { color: var(--steel); }
+
 /* ---------- Unser Sortiment (kategorie-grid war schon dunkel, nur Akzent nachschärfen) ---------- */
 #unser-sortiment { background: var(--ink-raised) !important; padding-block: 2.6rem; }
 .sortiment-seo-text { color: var(--steel); }
@@ -241,7 +255,8 @@ a.tile { border-color: var(--hairline-strong); }
    Hover auf 600ms statt ~200ms verlangsamt. Hier komplett neu gesetzt statt nur
    Timing-Funktion, sonst bleibt border-color/box-shadow uebergangslos hart. */
 .tile,
-.kategorie-tile {
+.kategorie-tile,
+.service-card {
   transition: transform 0.2s var(--ease-out), box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
@@ -253,6 +268,8 @@ a.tile { border-color: var(--hairline-strong); }
 .ankauf-card:active { transform: translateY(-2px) scale(0.99); }
 
 .tile:active { transform: translateY(-4px) scale(0.98); }
+
+.service-card:active { transform: translateY(-2px) scale(0.98); }
 
 .kategorie-tile:active,
 .kategorie-tile:focus-visible:active {
