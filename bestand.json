@@ -602,6 +602,34 @@
     "datum": "2026-09-07"
   },
   {
+    "id": "pos-7cfab3255e04a4867544",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro",
+    "speicher": "256 GB",
+    "farbe": "Blue",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1069,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-07"
+  },
+  {
+    "id": "pos-cb22826a3ab8315f4c83",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro",
+    "speicher": "256 GB",
+    "farbe": "Cosmic Orange",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1069,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-07"
+  },
+  {
     "id": "pos-b5f1ba50157839261695",
     "marke": "Apple",
     "modell": "iPhone 17 Pro",
@@ -736,7 +764,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 4,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-07"
@@ -1674,7 +1702,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 104.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-07"
