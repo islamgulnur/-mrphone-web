@@ -504,6 +504,20 @@
     "datum": "2026-09-07"
   },
   {
+    "id": "pos-d63e0549872e70487f47",
+    "marke": "Apple",
+    "modell": "iPhone 16",
+    "speicher": "128 GB",
+    "farbe": "Silver",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 699,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-07"
+  },
+  {
     "id": "239248d9-6731-401e-8f9e-119540748873",
     "marke": "Apple",
     "modell": "iPhone 16 Pro",
@@ -750,7 +764,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 3,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-07"
@@ -779,6 +793,20 @@
     "zustand": "neu",
     "preis": 1149.99,
     "menge": 6,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-07"
+  },
+  {
+    "id": "pos-db58f7720620376dcb3f",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro Max",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1150,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-07"
@@ -1030,6 +1058,20 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 114.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-07"
+  },
+  {
+    "id": "pos-9d5ce1d0f03027aed2f8",
+    "marke": "Samsung",
+    "modell": "Galaxy A06",
+    "speicher": "64 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 115,
     "menge": 1,
     "bild": "",
     "aktiv": true,
