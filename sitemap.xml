@@ -171,6 +171,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mrphone-frankfurt.de/produkte/apple-airpods-4.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mrphone-frankfurt.de/produkte/apple-airpods-max.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
@@ -190,6 +196,12 @@
   </url>
   <url>
     <loc>https://mrphone-frankfurt.de/produkte/apple-ipad-air-11-m4-5g.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mrphone-frankfurt.de/produkte/apple-ipad-air-11-inch-m4.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -387,6 +399,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mrphone-frankfurt.de/produkte/apple-iphone-17.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mrphone-frankfurt.de/produkte/apple-iphone-17-pro.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
@@ -465,6 +483,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mrphone-frankfurt.de/produkte/googel-pixel-11-pro-xl.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mrphone-frankfurt.de/produkte/google-pixel-9-pro-xl.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
@@ -514,6 +538,18 @@
   </url>
   <url>
     <loc>https://mrphone-frankfurt.de/produkte/redmi-15c-5g.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mrphone-frankfurt.de/produkte/redmi-17.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mrphone-frankfurt.de/produkte/redmi-17c-5g.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -622,6 +658,12 @@
   </url>
   <url>
     <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-a56.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-a57.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
