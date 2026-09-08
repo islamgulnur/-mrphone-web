@@ -1,5 +1,19 @@
 [
   {
+    "id": "pos-0e8f023d41f90a7abd7c",
+    "marke": "Apple",
+    "modell": "17 Pro",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1069.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-08"
+  },
+  {
     "id": "pos-a8993fea677adcd5974b",
     "marke": "Apple",
     "modell": "AirPods 4",
@@ -22,20 +36,6 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 329.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-08"
-  },
-  {
-    "id": "pos-b491bc908a2d20d96743",
-    "marke": "Apple",
-    "modell": "iPhone 8",
-    "speicher": "64 GB",
-    "farbe": "Rose Gold",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 99.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -848,7 +848,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 8,
+    "menge": 7,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-08"
@@ -1190,6 +1190,20 @@
     "datum": "2026-09-08"
   },
   {
+    "id": "pos-ab0d154b0f50a152b0bc",
+    "marke": "Samsung",
+    "modell": "Galaxy A07",
+    "speicher": "64 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 109.99,
+    "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-08"
+  },
+  {
     "id": "d62e8528-b120-43c6-ac6f-6a6f54412b8d",
     "marke": "Samsung",
     "modell": "Galaxy A07",
@@ -1199,20 +1213,6 @@
     "zustand": "neu",
     "preis": 109.99,
     "menge": 3,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-08"
-  },
-  {
-    "id": "pos-72b594651dd111faccfd",
-    "marke": "Samsung",
-    "modell": "Galaxy A07",
-    "speicher": "64 GB",
-    "farbe": "Schwarz",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 119.99,
-    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-08"
@@ -1409,6 +1409,20 @@
     "zustand": "neu",
     "preis": 229.99,
     "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-08"
+  },
+  {
+    "id": "pos-d059783ff64dcdbc813b",
+    "marke": "Samsung",
+    "modell": "Galaxy A27 5G",
+    "speicher": "128 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 229.99,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-08"
@@ -1820,6 +1834,20 @@
     "datum": "2026-09-08"
   },
   {
+    "id": "pos-87ae2ea2d9d4714f08d6",
+    "marke": "Samsung",
+    "modell": "Galaxy Z Flip 8",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 729.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-08"
+  },
+  {
     "id": "pos-feef5363aeead4e4fe3e",
     "marke": "Samsung",
     "modell": "Galaxy Z Flip8",
@@ -1988,14 +2016,14 @@
     "datum": "2026-09-08"
   },
   {
-    "id": "pos-839c9be612548348da91",
+    "id": "pos-0d26f645ad46890ac976",
     "marke": "Apple",
     "modell": "iPad Air 11—Inch M4",
     "speicher": "128 GB",
     "farbe": "",
     "kategorie": "tablets",
     "zustand": "gebraucht",
-    "preis": 649.99,
+    "preis": 599,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -2137,6 +2165,34 @@
     "zustand": "neu",
     "preis": 1549.99,
     "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-08"
+  },
+  {
+    "id": "pos-5e9b2d46708180d494e4",
+    "marke": "Apple",
+    "modell": "keyboard",
+    "speicher": "",
+    "farbe": "Silver",
+    "kategorie": "tablets",
+    "zustand": "gebraucht",
+    "preis": 150,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-08"
+  },
+  {
+    "id": "pos-1587e8ae264924712896",
+    "marke": "Gvill",
+    "modell": "G93",
+    "speicher": "128 GB",
+    "farbe": "Brown",
+    "kategorie": "tablets",
+    "zustand": "neu",
+    "preis": 79,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-08"

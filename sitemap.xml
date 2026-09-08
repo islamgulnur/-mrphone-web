@@ -171,6 +171,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mrphone-frankfurt.de/produkte/apple-17-pro.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mrphone-frankfurt.de/produkte/apple-airpods-4.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
@@ -262,12 +268,6 @@
   </url>
   <url>
     <loc>https://mrphone-frankfurt.de/produkte/apple-ipad-pro-13-m5-cellular.html</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mrphone-frankfurt.de/produkte/apple-iphone-8.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -447,6 +447,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mrphone-frankfurt.de/produkte/apple-keyboard.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mrphone-frankfurt.de/produkte/apple-macbook-air-13-m3.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
@@ -490,6 +496,12 @@
   </url>
   <url>
     <loc>https://mrphone-frankfurt.de/produkte/google-pixel-9-pro-xl.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mrphone-frankfurt.de/produkte/gvill-g93.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -772,6 +784,12 @@
   </url>
   <url>
     <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-z-flip-7.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-z-flip-8.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
