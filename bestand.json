@@ -22,7 +22,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 139.99,
-    "menge": 4,
+    "menge": 5,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-08"
@@ -848,7 +848,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 7,
+    "menge": 8,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-08"
@@ -1638,6 +1638,20 @@
     "datum": "2026-09-08"
   },
   {
+    "id": "pos-2aef5492feba17b179bf",
+    "marke": "Samsung",
+    "modell": "Galaxy Fold 6",
+    "speicher": "512 GB",
+    "farbe": "blau",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 679,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-08"
+  },
+  {
     "id": "de87e5e3-16a6-443c-9f83-9e65a8ccf42b",
     "marke": "Samsung",
     "modell": "Galaxy S20 FE",
@@ -2189,6 +2203,20 @@
     "modell": "G93",
     "speicher": "128 GB",
     "farbe": "Brown",
+    "kategorie": "tablets",
+    "zustand": "neu",
+    "preis": 79,
+    "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-08"
+  },
+  {
+    "id": "pos-3bb632e726d0f2064a00",
+    "marke": "Kids Tab",
+    "modell": "G92",
+    "speicher": "128 GB",
+    "farbe": "Schwarz",
     "kategorie": "tablets",
     "zustand": "neu",
     "preis": 79,
