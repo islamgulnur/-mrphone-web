@@ -1,5 +1,19 @@
 [
   {
+    "id": "pos-a8993fea677adcd5974b",
+    "marke": "Apple",
+    "modell": "AirPods 4",
+    "speicher": "",
+    "farbe": "Silver",
+    "kategorie": "kopfhoerer",
+    "zustand": "neu",
+    "preis": 139.99,
+    "menge": 4,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-09"
+  },
+  {
     "id": "pos-0e8f023d41f90a7abd7c",
     "marke": "Apple",
     "modell": "17 Pro",
@@ -9,20 +23,6 @@
     "zustand": "neu",
     "preis": 1069.99,
     "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-09"
-  },
-  {
-    "id": "pos-a8993fea677adcd5974b",
-    "marke": "Apple",
-    "modell": "AirPods 4",
-    "speicher": "",
-    "farbe": "Silver",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 139.99,
-    "menge": 5,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-09"
@@ -784,6 +784,20 @@
     "datum": "2026-09-09"
   },
   {
+    "id": "pos-641d8e4160c89ddfee46",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro Max",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 1069.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-09"
+  },
+  {
     "id": "pos-e0aa968108658bed61a0",
     "marke": "Apple",
     "modell": "iPhone 17 Pro Max",
@@ -848,7 +862,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 3,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-09"
@@ -862,7 +876,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 7,
+    "menge": 6,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-09"
@@ -1157,6 +1171,20 @@
     "zustand": "neu",
     "preis": 199.99,
     "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-09"
+  },
+  {
+    "id": "pos-ae2bdf66c84a703217da",
+    "marke": "Redmi",
+    "modell": "Note 15 Pro+",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 379.99,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-09"
