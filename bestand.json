@@ -798,6 +798,20 @@
     "datum": "2026-09-09"
   },
   {
+    "id": "pos-1338684f958922a2c686",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro Max",
+    "speicher": "256 GB",
+    "farbe": "blau",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1149.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-09"
+  },
+  {
     "id": "pos-98f0d9ca9039f4f12796",
     "marke": "Apple",
     "modell": "iPhone 17 Pro Max",
@@ -848,7 +862,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 8,
+    "menge": 7,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-09"
