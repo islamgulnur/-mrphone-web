@@ -588,6 +588,20 @@
     "datum": "2026-09-09"
   },
   {
+    "id": "pos-97f4132bcfb3c782cdca",
+    "marke": "Apple",
+    "modell": "iPhone 16 Pro Max",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 729.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-09"
+  },
+  {
     "id": "pos-732c467841bbab847688",
     "marke": "Apple",
     "modell": "iPhone 16 Pro Max",
@@ -1254,7 +1268,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 109.99,
-    "menge": 3,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-09"
