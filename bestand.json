@@ -714,20 +714,6 @@
     "datum": "2026-09-10"
   },
   {
-    "id": "pos-b5f1ba50157839261695",
-    "marke": "Apple",
-    "modell": "iPhone 17 Pro",
-    "speicher": "256 GB",
-    "farbe": "Silver",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1069.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-10"
-  },
-  {
     "id": "pos-0d01eb56446a76b735f9",
     "marke": "Apple",
     "modell": "iPhone 17 Pro",
