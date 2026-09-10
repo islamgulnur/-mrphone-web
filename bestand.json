@@ -504,20 +504,6 @@
     "datum": "2026-09-10"
   },
   {
-    "id": "pos-47c13343a6077ea5cd1a",
-    "marke": "Apple",
-    "modell": "iPhone 15 Pro",
-    "speicher": "128 GB",
-    "farbe": "Titan Natur",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 529.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-10"
-  },
-  {
     "id": "8f0dfeb7-9832-489e-a3d9-dc80b090b841",
     "marke": "Apple",
     "modell": "iPhone 15 Pro Max",
@@ -610,7 +596,7 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 799.99,
-    "menge": 4,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-10"
@@ -714,6 +700,20 @@
     "datum": "2026-09-10"
   },
   {
+    "id": "pos-55a96937d3af84961994",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1069,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-10"
+  },
+  {
     "id": "pos-b5f1ba50157839261695",
     "marke": "Apple",
     "modell": "iPhone 17 Pro",
@@ -736,6 +736,20 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1069.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-10"
+  },
+  {
+    "id": "pos-e495e5bd4ebebce45b6e",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1070,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -1058,20 +1072,6 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 899.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-10"
-  },
-  {
-    "id": "86425d37-868b-443c-a396-cec3370908a0",
-    "marke": "Google",
-    "modell": "Pixel 9 Pro XL",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 599.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -1834,20 +1834,6 @@
     "datum": "2026-09-10"
   },
   {
-    "id": "pos-e38465c0ffc1392f1fdb",
-    "marke": "Samsung",
-    "modell": "Galaxy S26 Ultra",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 850,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-10"
-  },
-  {
     "id": "pos-6659236ea23ca285a7eb",
     "marke": "Samsung",
     "modell": "Galaxy S26 Ultra",
@@ -2431,6 +2417,20 @@
     "zustand": "neu",
     "preis": 699.99,
     "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-10"
+  },
+  {
+    "id": "pos-69f334de1a3bf1f0955e",
+    "marke": "Google",
+    "modell": "Pixel watch LTE",
+    "speicher": "",
+    "farbe": "",
+    "kategorie": "smartwatches",
+    "zustand": "neu",
+    "preis": 100,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-10"

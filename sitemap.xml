@@ -363,12 +363,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mrphone-frankfurt.de/produkte/apple-iphone-15-pro.html</loc>
-    <lastmod>2026-09-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://mrphone-frankfurt.de/produkte/apple-iphone-15-pro-max.html</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>daily</changefreq>
@@ -501,7 +495,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mrphone-frankfurt.de/produkte/google-pixel-9-pro-xl.html</loc>
+    <loc>https://mrphone-frankfurt.de/produkte/google-pixel-watch-lte.html</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
