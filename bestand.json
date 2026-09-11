@@ -280,20 +280,6 @@
     "datum": "2026-09-11"
   },
   {
-    "id": "pos-880a3fa2788b51732b37",
-    "marke": "Apple",
-    "modell": "iPhone 13 Pro",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 399.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-11"
-  },
-  {
     "id": "pos-9ba2d0ec3e4a04447870",
     "marke": "Apple",
     "modell": "iPhone 13 Pro Max",
@@ -904,7 +890,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 4,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-11"
@@ -1050,20 +1036,6 @@
     "datum": "2026-09-11"
   },
   {
-    "id": "pos-97d6548c6ddec473e679",
-    "marke": "Googel",
-    "modell": "6a",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 99.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-11"
-  },
-  {
     "id": "pos-747c4fb9b95bc01b0689",
     "marke": "Googel",
     "modell": "Pixel 11 Pro Xl",
@@ -1114,20 +1086,6 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 159.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-11"
-  },
-  {
-    "id": "pos-35a494fba6cae6d5e71f",
-    "marke": "Ray-Ban",
-    "modell": "Meta Wayfarer Gen 2",
-    "speicher": "",
-    "farbe": "Matte Black",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 269.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -1268,7 +1226,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 109.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-11"
@@ -1456,20 +1414,6 @@
     "datum": "2026-09-11"
   },
   {
-    "id": "pos-5f2a1472d3aeb39f266b",
-    "marke": "Samsung",
-    "modell": "Galaxy A27 5G",
-    "speicher": "128 GB",
-    "farbe": "Black",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 229.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-11"
-  },
-  {
     "id": "pos-d059783ff64dcdbc813b",
     "marke": "Samsung",
     "modell": "Galaxy A27 5G",
@@ -1478,7 +1422,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 229.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-11"
@@ -1786,6 +1730,20 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 699.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-11"
+  },
+  {
+    "id": "pos-d92a54812c5029731bfc",
+    "marke": "Samsung",
+    "modell": "Galaxy S26 Ultra",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 849,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -2394,6 +2352,20 @@
     "datum": "2026-09-11"
   },
   {
+    "id": "pos-d35aadc49c4dc7fc6962",
+    "marke": "Apple",
+    "modell": "Watch Series 11 (GPS)",
+    "speicher": "GPS",
+    "farbe": "Black",
+    "kategorie": "smartwatches",
+    "zustand": "neu",
+    "preis": 349.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-11"
+  },
+  {
     "id": "pos-581334ae7bf24d60d303",
     "marke": "Apple",
     "modell": "Watch Series 11 46MM Cellular",
@@ -2417,6 +2389,20 @@
     "zustand": "neu",
     "preis": 699.99,
     "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-11"
+  },
+  {
+    "id": "pos-c29de746f594a0998935",
+    "marke": "Google",
+    "modell": "Pixel watch LTE",
+    "speicher": "",
+    "farbe": "",
+    "kategorie": "smartwatches",
+    "zustand": "neu",
+    "preis": 99.99,
+    "menge": 4,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-11"
