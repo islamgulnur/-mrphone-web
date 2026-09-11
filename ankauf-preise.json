@@ -1715,10 +1715,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 660,
-          "wieNeu": 570,
-          "sehrGut": 530,
-          "gut": 460,
-          "schlecht": 345,
+          "wieNeu": 540,
+          "sehrGut": 510,
+          "gut": 440,
+          "schlecht": 330,
           "defekt": 170
         },
         "preisQuelle": "auto"
@@ -1805,10 +1805,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 880,
-          "wieNeu": 735,
-          "sehrGut": 685,
-          "gut": 595,
-          "schlecht": 445,
+          "wieNeu": 700,
+          "sehrGut": 660,
+          "gut": 570,
+          "schlecht": 425,
           "defekt": 210
         },
         "preisQuelle": "auto"
@@ -1897,10 +1897,10 @@
         "uvpDelta": 750,
         "preise": {
           "neuVersiegelt": 1460,
-          "wieNeu": 1285,
+          "wieNeu": 1275,
           "sehrGut": 1195,
-          "gut": 1040,
-          "schlecht": 780,
+          "gut": 1035,
+          "schlecht": 775,
           "defekt": 380
         },
         "preisQuelle": "auto"

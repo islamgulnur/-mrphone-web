@@ -196,6 +196,20 @@
     "datum": "2026-09-11"
   },
   {
+    "id": "pos-8b8248168b6848f538c4",
+    "marke": "Apple",
+    "modell": "iPhone 13",
+    "speicher": "128 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 299.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-11"
+  },
+  {
     "id": "e741e15a-861f-4da9-8f07-f7b2805c7b3b",
     "marke": "Apple",
     "modell": "iPhone 13",
@@ -890,7 +904,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 5,
+    "menge": 4,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-11"
