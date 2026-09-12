@@ -14,20 +14,6 @@
     "datum": "2026-09-12"
   },
   {
-    "id": "pos-0e8f023d41f90a7abd7c",
-    "marke": "Apple",
-    "modell": "17 Pro",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1069.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-12"
-  },
-  {
     "id": "pos-e908548200b3b9a5b61e",
     "marke": "Apple",
     "modell": "AirPods Max",
@@ -863,20 +849,6 @@
     "zustand": "neu",
     "preis": 1149.99,
     "menge": 2,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-12"
-  },
-  {
-    "id": "pos-169cddd5af990ed7e740",
-    "marke": "Apple",
-    "modell": "iPhone 17 Pro Max",
-    "speicher": "256 GB",
-    "farbe": "Silver",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1149.99,
-    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-12"
