@@ -826,20 +826,6 @@
     "datum": "2026-09-12"
   },
   {
-    "id": "pos-98f0d9ca9039f4f12796",
-    "marke": "Apple",
-    "modell": "iPhone 17 Pro Max",
-    "speicher": "256 GB",
-    "farbe": "Cosmic Orange",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1149.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-12"
-  },
-  {
     "id": "pos-9d592836bf919185be69",
     "marke": "Apple",
     "modell": "iPhone 17 Pro Max",
@@ -848,7 +834,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-12"
@@ -932,6 +918,20 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 169.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-12"
+  },
+  {
+    "id": "pos-81e1fbb870743efff73e",
+    "marke": "Apple",
+    "modell": "iPhone X",
+    "speicher": "256 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 150,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -1072,7 +1072,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 269.99,
-    "menge": 3,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-12"
