@@ -585,6 +585,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-a07s.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-a15.html</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>daily</changefreq>
@@ -705,6 +711,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-s21-fe.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-s21-fe-5g.html</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>daily</changefreq>
@@ -790,12 +802,6 @@
   </url>
   <url>
     <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-z-flip-7.html</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-z-flip-8.html</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
