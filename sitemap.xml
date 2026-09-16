@@ -351,6 +351,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mrphone-frankfurt.de/produkte/apple-iphone-15-pro.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mrphone-frankfurt.de/produkte/apple-iphone-15-pro-max.html</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>daily</changefreq>
@@ -472,6 +478,12 @@
   </url>
   <url>
     <loc>https://mrphone-frankfurt.de/produkte/aquosa-706sh.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mrphone-frankfurt.de/produkte/asus-asus-zenfone-11-ultra.html</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>

@@ -490,6 +490,20 @@
     "datum": "2026-09-16"
   },
   {
+    "id": "pos-8d88ae81deb69b26f5d8",
+    "marke": "Apple",
+    "modell": "iPhone 15 Pro",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 599.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-16"
+  },
+  {
     "id": "pos-61d0f532584ca48f1997",
     "marke": "Apple",
     "modell": "iPhone 15 Pro Max",
@@ -1030,6 +1044,20 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 59.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-16"
+  },
+  {
+    "id": "pos-b1d98249c049506c8741",
+    "marke": "Asus",
+    "modell": "Asus Zenfone 11 Ultra",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 220,
     "menge": 1,
     "bild": "",
     "aktiv": true,
