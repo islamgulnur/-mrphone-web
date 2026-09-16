@@ -624,7 +624,7 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 819.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-16"
@@ -890,7 +890,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 4,
+    "menge": 5,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-16"
@@ -2612,7 +2612,7 @@
     "kategorie": "smartwatches",
     "zustand": "neu",
     "preis": 699.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-16"
