@@ -168,20 +168,6 @@
     "datum": "2026-09-16"
   },
   {
-    "id": "pos-daf849513c73b6af53ae",
-    "marke": "Apple",
-    "modell": "iPhone 13",
-    "speicher": "128 GB",
-    "farbe": "Midnight",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 299.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-16"
-  },
-  {
     "id": "pos-8b8248168b6848f538c4",
     "marke": "Apple",
     "modell": "iPhone 13",
@@ -708,6 +694,20 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 880,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-16"
+  },
+  {
+    "id": "pos-f02aca3985d9d26a01a2",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro",
+    "speicher": "256 GB",
+    "farbe": "Blau",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 949.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -2444,7 +2444,7 @@
     "kategorie": "tablets",
     "zustand": "neu",
     "preis": 79,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-16"
