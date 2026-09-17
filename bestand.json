@@ -490,6 +490,20 @@
     "datum": "2026-09-17"
   },
   {
+    "id": "pos-8451f87e4ba9582cd944",
+    "marke": "Apple",
+    "modell": "iPhone 15 Pro Max",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 629,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-17"
+  },
+  {
     "id": "pos-61d0f532584ca48f1997",
     "marke": "Apple",
     "modell": "iPhone 15 Pro Max",
@@ -546,6 +560,20 @@
     "datum": "2026-09-17"
   },
   {
+    "id": "pos-7e07638a1eeabfc87d7d",
+    "marke": "Apple",
+    "modell": "iPhone 16",
+    "speicher": "256 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 579.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-17"
+  },
+  {
     "id": "239248d9-6731-401e-8f9e-119540748873",
     "marke": "Apple",
     "modell": "iPhone 16 Pro",
@@ -574,20 +602,6 @@
     "datum": "2026-09-17"
   },
   {
-    "id": "pos-97f4132bcfb3c782cdca",
-    "marke": "Apple",
-    "modell": "iPhone 16 Pro Max",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 729.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-17"
-  },
-  {
     "id": "pos-732c467841bbab847688",
     "marke": "Apple",
     "modell": "iPhone 16 Pro Max",
@@ -610,6 +624,20 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 819.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-17"
+  },
+  {
+    "id": "pos-2c92b7af32579f7f553f",
+    "marke": "Apple",
+    "modell": "iPhone 16 Pro Max",
+    "speicher": "512 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 899,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -778,7 +806,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1069.99,
-    "menge": 1,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-17"
@@ -1288,20 +1316,6 @@
     "datum": "2026-09-17"
   },
   {
-    "id": "pos-5e1c3dd1741d5fbf161f",
-    "marke": "Samsung",
-    "modell": "Galaxy A07",
-    "speicher": "128 GB",
-    "farbe": "Schwarz",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 119.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-17"
-  },
-  {
     "id": "59504c62-390f-48ab-8faa-8983f5309025",
     "marke": "Samsung",
     "modell": "Galaxy A07",
@@ -1419,20 +1433,6 @@
     "modell": "Galaxy A17",
     "speicher": "128 GB",
     "farbe": "Gray",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 159.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-17"
-  },
-  {
-    "id": "pos-9124fd9ce792d2deee0a",
-    "marke": "Samsung",
-    "modell": "Galaxy A17",
-    "speicher": "128 GB",
-    "farbe": "Schwarz",
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 159.99,
@@ -1806,20 +1806,6 @@
     "datum": "2026-09-17"
   },
   {
-    "id": "pos-3f4bb97400b627c89bcf",
-    "marke": "Samsung",
-    "modell": "Galaxy A57",
-    "speicher": "256 GB",
-    "farbe": "Schwarz",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 359.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-17"
-  },
-  {
     "id": "pos-180398982c6ec7ff730e",
     "marke": "Samsung",
     "modell": "Galaxy A57 5G",
@@ -2054,20 +2040,6 @@
     "preis": 999.99,
     "menge": 1,
     "bild": "https://asabsxcfjdhedbeaudhi.supabase.co/storage/v1/object/public/produktbilder/8806097827016.jpg",
-    "aktiv": true,
-    "datum": "2026-09-17"
-  },
-  {
-    "id": "pos-51523b00d3f96b4f4c15",
-    "marke": "Samsung",
-    "modell": "Galaxy Watch Ultra2",
-    "speicher": "",
-    "farbe": "Titaniu Gray",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 519.99,
-    "menge": 1,
-    "bild": "",
     "aktiv": true,
     "datum": "2026-09-17"
   },
@@ -2310,6 +2282,20 @@
     "datum": "2026-09-17"
   },
   {
+    "id": "pos-534ec34eb722b74e4c46",
+    "marke": "Apple",
+    "modell": "iPad Mini 7 (2024)",
+    "speicher": "128 GB",
+    "farbe": "Silver",
+    "kategorie": "tablets",
+    "zustand": "gebraucht",
+    "preis": 449.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-17"
+  },
+  {
     "id": "pos-2eb2153fd342c8cbea30",
     "marke": "Apple",
     "modell": "iPad Pro 2. Gen",
@@ -2514,20 +2500,6 @@
     "kategorie": "tablets",
     "zustand": "gebraucht",
     "preis": 179.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-17"
-  },
-  {
-    "id": "pos-4fc7eb84dff12ea06612",
-    "marke": "Samsung",
-    "modell": "Galaxy Tab S8",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "tablets",
-    "zustand": "gebraucht",
-    "preis": 229.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
