@@ -14,6 +14,34 @@
     "datum": "2026-09-18"
   },
   {
+    "id": "pos-7fae8a21e6bf5de121b7",
+    "marke": "Apple",
+    "modell": "14",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 349.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-18"
+  },
+  {
+    "id": "pos-2341d8d08f7bda05bada",
+    "marke": "Apple",
+    "modell": "18 Pro Max",
+    "speicher": "1 TB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 2299.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-18"
+  },
+  {
     "id": "pos-e908548200b3b9a5b61e",
     "marke": "Apple",
     "modell": "AirPods Max",
@@ -288,6 +316,20 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 339.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-18"
+  },
+  {
+    "id": "pos-c5a92532a28d58071cde",
+    "marke": "Apple",
+    "modell": "iPhone 14",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 349.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -728,6 +770,20 @@
     "datum": "2026-09-18"
   },
   {
+    "id": "pos-e4f8e27acc66d76f3f46",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro",
+    "speicher": "256 GB",
+    "farbe": "Silver",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 980,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-18"
+  },
+  {
     "id": "pos-cb22826a3ab8315f4c83",
     "marke": "Apple",
     "modell": "iPhone 17 Pro",
@@ -764,20 +820,6 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1069.99,
-    "menge": 2,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-18"
-  },
-  {
-    "id": "pos-e495e5bd4ebebce45b6e",
-    "marke": "Apple",
-    "modell": "iPhone 17 Pro",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1070,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -840,6 +882,20 @@
     "datum": "2026-09-18"
   },
   {
+    "id": "pos-a9962f64ff92a801c7c3",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro Max",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 1029.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-18"
+  },
+  {
     "id": "pos-e0aa968108658bed61a0",
     "marke": "Apple",
     "modell": "iPhone 17 Pro Max",
@@ -876,7 +932,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 5,
+    "menge": 4,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-18"
@@ -1282,7 +1338,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 139.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-18"
@@ -1296,7 +1352,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 139.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-18"

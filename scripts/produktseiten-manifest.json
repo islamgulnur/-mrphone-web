@@ -2,6 +2,8 @@
   "version": 1,
   "index": "index.html",
   "pages": [
+    "apple-14.html",
+    "apple-18-pro-max.html",
     "apple-airpods-4.html",
     "apple-airpods-max.html",
     "apple-ipad-8th-gen.html",
