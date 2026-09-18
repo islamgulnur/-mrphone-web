@@ -28,20 +28,6 @@
     "datum": "2026-09-18"
   },
   {
-    "id": "pos-2341d8d08f7bda05bada",
-    "marke": "Apple",
-    "modell": "18 Pro Max",
-    "speicher": "1 TB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 2299.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-18"
-  },
-  {
     "id": "pos-e908548200b3b9a5b61e",
     "marke": "Apple",
     "modell": "AirPods Max",
@@ -106,6 +92,20 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 239.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-18"
+  },
+  {
+    "id": "pos-df3211b7e487e5441b97",
+    "marke": "Apple",
+    "modell": "iPhone 11 Pro Max",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 249,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -932,7 +932,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1149.99,
-    "menge": 4,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-18"
