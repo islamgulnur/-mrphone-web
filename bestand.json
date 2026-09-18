@@ -1232,20 +1232,6 @@
     "datum": "2026-09-18"
   },
   {
-    "id": "pos-490c9726bef019a9d424",
-    "marke": "Samsung",
-    "modell": "Galaxy A07",
-    "speicher": "64 GB",
-    "farbe": "Green",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 119.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-18"
-  },
-  {
     "id": "pos-8b995e98f88cbc1f1454",
     "marke": "Samsung",
     "modell": "Galaxy A07",
