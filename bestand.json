@@ -700,20 +700,6 @@
     "datum": "2026-09-19"
   },
   {
-    "id": "pos-792b069381a44bdbc371",
-    "marke": "Apple",
-    "modell": "iPhone 17",
-    "speicher": "256 GB",
-    "farbe": "Lavender",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 799.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-19"
-  },
-  {
     "id": "pos-153d5930528212a9bcd3",
     "marke": "Apple",
     "modell": "iPhone 17",
@@ -904,20 +890,6 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1059.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-19"
-  },
-  {
-    "id": "pos-9d592836bf919185be69",
-    "marke": "Apple",
-    "modell": "iPhone 17 Pro Max",
-    "speicher": "256 GB",
-    "farbe": "Deep Blue",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1149.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
