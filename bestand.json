@@ -190,7 +190,7 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 299.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-19"
@@ -2012,20 +2012,6 @@
     "preis": 249.99,
     "menge": 2,
     "bild": "https://asabsxcfjdhedbeaudhi.supabase.co/storage/v1/object/public/produktbilder/8806099273163.jpg",
-    "aktiv": true,
-    "datum": "2026-09-19"
-  },
-  {
-    "id": "9ede6df5-d18d-45ee-bdee-92486124ed91",
-    "marke": "Samsung",
-    "modell": "Galaxy Z Flip 5",
-    "speicher": "512 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 599.99,
-    "menge": 1,
-    "bild": "",
     "aktiv": true,
     "datum": "2026-09-19"
   },
