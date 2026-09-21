@@ -297,12 +297,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mrphone-frankfurt.de/produkte/apple-iphone-12-pro.html</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://mrphone-frankfurt.de/produkte/apple-iphone-12-pro-max.html</loc>
     <lastmod>2026-09-21</lastmod>
     <changefreq>daily</changefreq>
@@ -478,12 +472,6 @@
   </url>
   <url>
     <loc>https://mrphone-frankfurt.de/produkte/apple-watch-series-11-46mm-cellular.html</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mrphone-frankfurt.de/produkte/apple-watch-ultra-3.html</loc>
     <lastmod>2026-09-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -742,6 +730,12 @@
   </url>
   <url>
     <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-s21-plus.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-s22.html</loc>
     <lastmod>2026-09-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>

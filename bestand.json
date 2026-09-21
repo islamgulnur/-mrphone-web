@@ -182,20 +182,6 @@
     "datum": "2026-09-21"
   },
   {
-    "id": "pos-dd01152ea7a31c76bf60",
-    "marke": "Apple",
-    "modell": "iPhone 12 Pro",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 299.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-21"
-  },
-  {
     "id": "pos-13b1a4f1b0b3d3dc2b30",
     "marke": "Apple",
     "modell": "iPhone 12 Pro Max",
@@ -205,6 +191,20 @@
     "zustand": "gebraucht",
     "preis": 339.99,
     "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-21"
+  },
+  {
+    "id": "pos-d4efe2629a43fccc3d6e",
+    "marke": "Apple",
+    "modell": "iPhone 12 Pro Max",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 349,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-21"
@@ -560,20 +560,6 @@
     "datum": "2026-09-21"
   },
   {
-    "id": "pos-b028c1cc5b763ad198b6",
-    "marke": "Apple",
-    "modell": "iPhone 16",
-    "speicher": "128 GB",
-    "farbe": "Black",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 599.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-21"
-  },
-  {
     "id": "pos-d63e0549872e70487f47",
     "marke": "Apple",
     "modell": "iPhone 16",
@@ -680,20 +666,6 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 899,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-21"
-  },
-  {
-    "id": "pos-52ae4d6a235b96bd94f0",
-    "marke": "Apple",
-    "modell": "iPhone 16 Pro Max",
-    "speicher": "512 GB",
-    "farbe": "Schwarz",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 949.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -1876,6 +1848,20 @@
     "datum": "2026-09-21"
   },
   {
+    "id": "pos-e7979ac54d34bf7c5bce",
+    "marke": "Samsung",
+    "modell": "Galaxy S22",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 249.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-21"
+  },
+  {
     "id": "pos-ac21749b60b965b31cc9",
     "marke": "Samsung",
     "modell": "Galaxy S24 Ultra",
@@ -1982,7 +1968,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 849.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-21"
@@ -2500,20 +2486,6 @@
     "kategorie": "smartwatches",
     "zustand": "neu",
     "preis": 549.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-21"
-  },
-  {
-    "id": "pos-b8bccbff53ad62712332",
-    "marke": "Apple",
-    "modell": "Watch Ultra 3",
-    "speicher": "",
-    "farbe": "",
-    "kategorie": "smartwatches",
-    "zustand": "neu",
-    "preis": 699.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
