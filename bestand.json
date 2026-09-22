@@ -784,6 +784,20 @@
     "datum": "2026-09-22"
   },
   {
+    "id": "pos-ce0dff2ef872cbc21d5e",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 980,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-22"
+  },
+  {
     "id": "pos-cb22826a3ab8315f4c83",
     "marke": "Apple",
     "modell": "iPhone 17 Pro",
@@ -2136,6 +2150,20 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 849.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-22"
+  },
+  {
+    "id": "pos-e38465c0ffc1392f1fdb",
+    "marke": "Samsung",
+    "modell": "Galaxy S26 Ultra",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 850,
     "menge": 1,
     "bild": "",
     "aktiv": true,
