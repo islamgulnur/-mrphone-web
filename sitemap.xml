@@ -555,6 +555,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mrphone-frankfurt.de/produkte/poco-x7-pro.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mrphone-frankfurt.de/produkte/ray-ban-meta-wayfarer-gen-2.html</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>daily</changefreq>
@@ -574,6 +580,12 @@
   </url>
   <url>
     <loc>https://mrphone-frankfurt.de/produkte/redmi-17c-5g.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mrphone-frankfurt.de/produkte/redmi-a5.html</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -717,6 +729,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-laptop.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-s20-fe.html</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>daily</changefreq>
@@ -736,12 +754,6 @@
   </url>
   <url>
     <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-s21-plus.html</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-s22.html</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>

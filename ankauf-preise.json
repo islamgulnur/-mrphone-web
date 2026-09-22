@@ -1906,11 +1906,11 @@
         "uvpDelta": 750,
         "preise": {
           "neuVersiegelt": 1490,
-          "wieNeu": 1275,
-          "sehrGut": 1195,
-          "gut": 1035,
-          "schlecht": 775,
-          "defekt": 390
+          "wieNeu": 1155,
+          "sehrGut": 1085,
+          "gut": 940,
+          "schlecht": 705,
+          "defekt": 360
         },
         "preisQuelle": "auto"
       }
