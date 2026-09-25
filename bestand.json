@@ -1022,6 +1022,20 @@
     "datum": "2026-09-25"
   },
   {
+    "id": "pos-24c0c99ac74bcd6e1efc",
+    "marke": "Apple",
+    "modell": "iPhone 18 Pro",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1419,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-25"
+  },
+  {
     "id": "pos-e223978b0477dcd659c2",
     "marke": "Apple",
     "modell": "iPhone 18 Pro",
