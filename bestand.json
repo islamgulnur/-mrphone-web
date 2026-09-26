@@ -652,7 +652,7 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 649.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-26"
@@ -1078,6 +1078,20 @@
     "datum": "2026-09-26"
   },
   {
+    "id": "pos-aa8f6c4c2105afd4dac7",
+    "marke": "Apple",
+    "modell": "iPhone 18 Pro Max",
+    "speicher": "1 TB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 2199.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-26"
+  },
+  {
     "id": "8e77ca43-dc7b-4d9e-b3c5-1002ee9ce537",
     "marke": "Apple",
     "modell": "iPhone X",
@@ -1156,7 +1170,7 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 189.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-26"
