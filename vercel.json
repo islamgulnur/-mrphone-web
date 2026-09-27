@@ -1,0 +1,7 @@
+{
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/en/index.html", "destination": "/en/", "permanent": true },
+    { "source": "/ratgeber/index.html", "destination": "/ratgeber/", "permanent": true }
+  ]
+}

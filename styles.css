@@ -168,6 +168,15 @@ section {
   margin-top: 1.6rem;
 }
 
+.hero-route-link {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  color: var(--gray-200, #d1d5db);
+  text-decoration: underline;
+}
+.hero-route-link:hover { color: var(--white); }
+
 /* ---------- Header ---------- */
 .site-header {
   position: sticky;
@@ -319,6 +328,66 @@ section {
   .header-phone { display: inline-block; }
   .header-cta { display: flex; }
   .nav-mobile-actions { display: none; }
+}
+
+/* ---------- Hero-Video (Teil C) ---------- */
+.hero-has-video {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero-has-video > .container,
+.hero-has-video > .hero-grid {
+  position: relative;
+  z-index: 1;
+}
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-media video,
+.hero-media .hero-media-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% center;
+}
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 28%, rgba(0, 0, 0, 0) 75%);
+  pointer-events: none;
+}
+
+/* Ohne feste Hero-Hoehe skaliert object-fit:cover das Video auf die (viel
+   flachere) Container-Hoehe und schneidet dabei beidseitig stark vom Rand ab -
+   auf typischen Desktop-Breiten faellt das rechts stehende Geraet-Motiv fast
+   komplett weg. Ab 768px deshalb Hoehe an die 16:9-Video-Quelle koppeln, damit
+   object-fit so gut wie nichts mehr beschneidet, und rechtsbuendig zuschneiden
+   (object-position: right), falls doch minimal beschnitten wird. */
+@media (min-width: 768px) {
+  .hero-has-video,
+  .produkt-index-hero {
+    height: clamp(560px, 56.25vw, 88vh);
+    display: flex;
+    align-items: center;
+  }
+  .hero-has-video > .container,
+  .hero-has-video > .hero-grid,
+  .produkt-index-hero > .produkt-container {
+    width: 100%;
+  }
+  .hero-media video,
+  .hero-media .hero-media-poster {
+    object-position: right center;
+  }
+  .hero-media::after {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.45) 35%, rgba(0, 0, 0, 0) 60%);
+  }
 }
 
 /* ---------- Hero ---------- */
@@ -1602,6 +1671,15 @@ section {
 .bewertungen-kompakt.trust-badge .bewertungen-kompakt-text { color: var(--gray-900, #1a1a1a); }
 .hero-content .bewertungen-kompakt.trust-badge { margin-top: 0.9rem; }
 .hero-content .bewertungen-kompakt.trust-badge .bewertungen-kompakt-text { color: var(--gray-900, #1a1a1a); }
+
+/* Reserviert die Hoehe des Trust-Badges schon waehrend [hidden] (vor dem
+   asynchronen bewertungen.json-Fetch), damit das spaetere Einblenden nicht
+   Route-Link und alles darunter (u.a. .beliebte-reparaturen) verschiebt. */
+.hero-content .bewertungen-kompakt.trust-badge[hidden] {
+  display: inline-flex;
+  visibility: hidden;
+  min-height: 2.6rem;
+}
 
 .rechner-trust-badge {
   display: flex;

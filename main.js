@@ -333,6 +333,20 @@
     return LANG === "en" ? s : s.replace(".", ",");
   }
 
+  var MONATE_DE = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
+  var MONATE_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+  function formatMonatJahr(isoDatum) {
+    if (!isoDatum) return "";
+    var teile = String(isoDatum).split("-");
+    if (teile.length < 2) return "";
+    var jahr = teile[0];
+    var monatIndex = parseInt(teile[1], 10) - 1;
+    var monate = LANG === "en" ? MONATE_EN : MONATE_DE;
+    if (monatIndex < 0 || monatIndex > 11) return "";
+    return monate[monatIndex] + " " + jahr;
+  }
+
   function zitatKarteHtml(z) {
     return (
       '<figure class="zitat-karte">' +
@@ -392,9 +406,10 @@
           var link = section.querySelector("[data-bewertungen-link]");
           if (noteEl) noteEl.textContent = formatNote(data.gesamtnote);
           if (anzahlEl) {
+            var standText = formatMonatJahr(data.stand);
             anzahlEl.textContent = LANG === "en"
-              ? data.anzahlBewertungen + " Google reviews · as of " + (data.stand || "")
-              : data.anzahlBewertungen + " Google-Bewertungen · Stand " + (data.stand || "");
+              ? data.anzahlBewertungen + " Google reviews · " + (standText ? "as of " + standText : "")
+              : data.anzahlBewertungen + " Google-Bewertungen · " + (standText ? "Stand: " + standText : "");
           }
           if (sterneEl) sterneEl.innerHTML = sterneHtml(data.gesamtnote);
           if (link && data.googleProfilUrl) link.href = data.googleProfilUrl;

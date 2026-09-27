@@ -19,7 +19,9 @@
     { id: "smartwatches", label: "Smartwatches", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="3"></rect><line x1="9" y1="2" x2="9" y2="7"></line><line x1="15" y1="2" x2="15" y2="7"></line><line x1="9" y1="17" x2="9" y2="22"></line><line x1="15" y1="17" x2="15" y2="22"></line></svg>' },
     { id: "laptops", label: "Laptops & Notebooks", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><line x1="1" y1="20" x2="23" y2="20"></line></svg>' },
     { id: "pcs", label: "PCs", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="8" height="18" rx="1"></rect><circle cx="10" cy="7" r="1"></circle><line x1="8" y1="11" x2="12" y2="11"></line><line x1="8" y1="14" x2="12" y2="14"></line></svg>', hinweis: "Final price after a brief inspection of the specs in store." },
+    { id: "monitore", label: "Monitors", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>' },
     { id: "kopfhoerer", label: "Headphones & Audio", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"></path><rect x="2" y="14" width="4" height="6" rx="1.5"></rect><rect x="18" y="14" width="4" height="6" rx="1.5"></rect></svg>' },
+    { id: "kameras", label: "Cameras", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>' },
     { id: "konsolen", label: "Game Consoles", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9h12a4 4 0 0 1 4 4v3a3 3 0 0 1-5.5 1.7L15 16H9l-1.5 1.7A3 3 0 0 1 2 16v-3a4 4 0 0 1 4-4z"></path><line x1="6.5" y1="12" x2="6.5" y2="14.5"></line><line x1="5.25" y1="13.25" x2="7.75" y2="13.25"></line><circle cx="16.5" cy="12.5" r="0.9"></circle><circle cx="18.5" cy="14.25" r="0.9"></circle></svg>' },
     { id: "zubehoer", label: "Accessories", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v4M15 3v4M6 7h12l-1 5a5 5 0 0 1-10 0z"></path><line x1="12" y1="16" x2="12" y2="21"></line></svg>' },
   ] : [
@@ -28,16 +30,12 @@
     { id: "smartwatches", label: "Smartwatches", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="3"></rect><line x1="9" y1="2" x2="9" y2="7"></line><line x1="15" y1="2" x2="15" y2="7"></line><line x1="9" y1="17" x2="9" y2="22"></line><line x1="15" y1="17" x2="15" y2="22"></line></svg>' },
     { id: "laptops", label: "Laptops & Notebooks", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><line x1="1" y1="20" x2="23" y2="20"></line></svg>' },
     { id: "pcs", label: "PCs", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="8" height="18" rx="1"></rect><circle cx="10" cy="7" r="1"></circle><line x1="8" y1="11" x2="12" y2="11"></line><line x1="8" y1="14" x2="12" y2="14"></line></svg>', hinweis: "Endpreis nach kurzer Prüfung der Ausstattung vor Ort." },
+    { id: "monitore", label: "Monitore", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>' },
     { id: "kopfhoerer", label: "Kopfhörer & Audio", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"></path><rect x="2" y="14" width="4" height="6" rx="1.5"></rect><rect x="18" y="14" width="4" height="6" rx="1.5"></rect></svg>' },
+    { id: "kameras", label: "Kameras", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>' },
     { id: "konsolen", label: "Spielekonsolen", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9h12a4 4 0 0 1 4 4v3a3 3 0 0 1-5.5 1.7L15 16H9l-1.5 1.7A3 3 0 0 1 2 16v-3a4 4 0 0 1 4-4z"></path><line x1="6.5" y1="12" x2="6.5" y2="14.5"></line><line x1="5.25" y1="13.25" x2="7.75" y2="13.25"></line><circle cx="16.5" cy="12.5" r="0.9"></circle><circle cx="18.5" cy="14.25" r="0.9"></circle></svg>' },
     { id: "zubehoer", label: "Zubehör", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v4M15 3v4M6 7h12l-1 5a5 5 0 0 1-10 0z"></path><line x1="12" y1="16" x2="12" y2="21"></line></svg>' },
   ];
-
-  // Alle im Datenkatalog angebotenen Kategorien auch im Rechner erreichbar machen.
-  var monitorIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M12 17v4M7 21h10"></path></svg>';
-  var kameraIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 5l2-2h4l2 2h5v16H3V5z"></path><circle cx="12" cy="12" r="4"></circle></svg>';
-  KATEGORIEN.splice(5, 0, { id: "monitore", label: LANG === "en" ? "Monitors" : "Monitore", icon: monitorIcon });
-  KATEGORIEN.splice(7, 0, { id: "kameras", label: LANG === "en" ? "Cameras" : "Kameras", icon: kameraIcon });
 
   var ZUSTAENDE = LANG === "en" ? [
     {
@@ -266,9 +264,9 @@
     if (n === 2) { renderMarken(); renderModelle(); }
     if (n === 3) { renderVarianten(); }
     if (n === 4) {
-      // Variante ohne Preis (siehe hatKeinenPreis()) hat keinen Zustandsschritt - direkt zur
-      // "Preis auf Anfrage"-Ergebnisseite statt einer leeren Zustandsauswahl.
-      if (hatKeinenPreis(state.variante)) { zeigeErgebnisAufAnfrage(); return; }
+      // Auch ohne Preisdaten (siehe hatKeinenPreis()) wird der Zustand erfragt - renderZustaende()
+      // zeigt in diesem Fall alle Zustaende ungefiltert an, das Ergebnis geht dann als
+      // "Preis auf Anfrage" inkl. gewaehltem Zustand raus (siehe zustandGrid-Click-Handler).
       renderZustaende();
     }
     zeigeSchritt(n);
@@ -513,14 +511,6 @@
       state.variante = variante;
       state.zustand = null;
       renderVarianten();
-      if (hatKeinenPreis(variante)) {
-        // Kein Zustand hat einen Preis (z.B. Kameras/Garmin/generische Klassen - siehe
-        // OFFENE-PUNKTE.md) - Zustandsauswahl macht hier keinen Sinn, direkt zur
-        // "Preis auf Anfrage"-Ergebnisseite.
-        erreichteSchritte = 4;
-        zeigeErgebnisAufAnfrage();
-        return;
-      }
       erreichteSchritte = 4;
       renderZustaende();
       zeigeSchritt(4);
@@ -528,10 +518,6 @@
     }
 
     renderVarianten();
-    if (hatKeinenPreis(variante)) {
-      zeigeErgebnisAufAnfrage();
-      return;
-    }
     gehZuSchritt(4);
   });
 
@@ -539,9 +525,10 @@
   function renderZustaende() {
     // Zustand nur anzeigen, wenn für diese Variante in dieser Stufe ein Preis vorliegt
     // (einzelne Stufen können null sein, z.B. neuVersiegelt ohne Neu-Marktwert - siehe
-    // scripts/update-ankaufspreise.js). Fehlen ALLE Stufen, greift bereits der
-    // hatKeinenPreis()-Zweig oben und dieser Schritt wird gar nicht erst angezeigt.
-    var verfuegbareZustaende = ZUSTAENDE.filter(function (z) {
+    // scripts/update-ankaufspreise.js). Fehlen ALLE Stufen (hatKeinenPreis()), werden trotzdem
+    // alle Zustaende ungefiltert angeboten - das Ergebnis laeuft dann ueber
+    // zeigeErgebnisAufAnfrage() inkl. des hier gewaehlten Zustands.
+    var verfuegbareZustaende = hatKeinenPreis(state.variante) ? ZUSTAENDE : ZUSTAENDE.filter(function (z) {
       if (!state.variante || !state.variante.preise) return false;
       if (z.id === "gebraucht") {
         return gebrauchtWerte(state.variante.preise).length > 0;
@@ -568,7 +555,11 @@
     if (!btn || !state.variante) return;
     state.zustand = btn.getAttribute("data-zustand");
     renderZustaende();
-    zeigeErgebnis();
+    if (hatKeinenPreis(state.variante)) {
+      zeigeErgebnisAufAnfrage();
+    } else {
+      zeigeErgebnis();
+    }
   });
 
   /* ---------- Ergebnis ---------- */
@@ -659,20 +650,26 @@
   function zeigeErgebnisAufAnfrage() {
     ergebnisPreis.textContent = LANG === "en" ? "Price on request" : "Preis auf Anfrage";
     if (ergebnisLabel) ergebnisLabel.textContent = LANG === "en" ? "Your device" : "Ihr Gerät";
-    if (ergebnisSub) ergebnisSub.textContent = LANG === "en" ? "We will quote a price after a brief inspection in store or via WhatsApp" : "Wir nennen Ihnen den Preis nach kurzer Prüfung vor Ort oder per WhatsApp";
+    if (ergebnisSub) ergebnisSub.textContent = LANG === "en"
+      ? "Price on request – you'll receive your offer via WhatsApp within minutes."
+      : "Preis auf Anfrage – Sie erhalten Ihr Angebot in wenigen Minuten per WhatsApp.";
     if (ergebnisHinweis) ergebnisHinweis.hidden = true;
     if (ergebnisDisclaimer) ergebnisDisclaimer.hidden = true;
     whatsappBtn.textContent = LANG === "en" ? "Request price now" : "Preis jetzt anfragen";
 
+    var zustandConfig = ZUSTAENDE.find(function (z) { return z.id === state.zustand; });
+    var zustandLabel = zustandConfig ? zustandConfig.titel : "";
     var geraeteBezeichnung = [state.geraet.marke, state.geraet.modell, state.variante.bezeichnung].filter(Boolean).join(" ");
     var nummer = anfrageNummer();
     var nachricht = LANG === "en"
       ? "Hello, I would like a purchase offer for my device:\n" +
         "Device: " + geraeteBezeichnung + "\n" +
+        (zustandLabel ? "Condition: " + zustandLabel + "\n" : "") +
         "Request no.: " + nummer + "\n" +
         "Date: " + formatDatumUhrzeit()
       : "Hallo, ich möchte ein Ankaufsangebot für mein Gerät:\n" +
         "Gerät: " + geraeteBezeichnung + "\n" +
+        (zustandLabel ? "Zustand: " + zustandLabel + "\n" : "") +
         "Anfrage-Nummer: " + nummer + "\n" +
         "Datum: " + formatDatumUhrzeit();
     whatsappBtn.href = waLink(nachricht);
@@ -695,14 +692,7 @@
     var aktuellerSchrittEl = back.closest("[data-step]");
     var aktuellerSchrittWert = aktuellerSchrittEl.getAttribute("data-step");
     if (aktuellerSchrittWert === "ergebnis") {
-      // "Auf Anfrage"-Ergebnis hat keinen eigenen Zustandsschritt (siehe hatKeinenPreis()) -
-      // sonst würde "Zurück" auf dieselbe Seite zurückführen (gehZuSchritt(4) leitet dort
-      // wieder auf zeigeErgebnisAufAnfrage() um). Direkt zur Variantenauswahl statt Loop.
-      if (hatKeinenPreis(state.variante)) {
-        gehZuSchritt(3);
-      } else {
-        gehZuSchritt(4);
-      }
+      gehZuSchritt(4);
     } else {
       var vorheriger = Number(aktuellerSchrittWert) - 1;
       gehZuSchritt(vorheriger < 1 ? 1 : vorheriger);

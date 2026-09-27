@@ -86,9 +86,11 @@ function setzeAktivenNavLink(headerHtml, basename) {
 function baueHeader(variante, seite) {
   let html = PARTIALS[variante].header;
   if (variante === "root-main") {
-    html = html.replace(/\{\{EN_PATH\}\}/g, `/en/${seite.basename}`);
+    const enPath = seite.basename === "index.html" ? "/en/" : `/en/${seite.basename}`;
+    html = html.replace(/\{\{EN_PATH\}\}/g, enPath);
   } else if (variante === "en") {
-    html = html.replace(/\{\{DE_PATH\}\}/g, `/${seite.basename}`);
+    const dePath = seite.basename === "index.html" ? "/" : `/${seite.basename}`;
+    html = html.replace(/\{\{DE_PATH\}\}/g, dePath);
   }
   if (variante !== "ratgeber") {
     html = setzeAktivenNavLink(html, seite.basename);

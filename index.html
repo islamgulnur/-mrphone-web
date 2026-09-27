@@ -8,7 +8,7 @@
 <meta name="description" content="Mr. Phone auf der Zeil: Handy-Verkauf, Ankauf & Express-Reparatur in Frankfurt. Jetzt anrufen oder per WhatsApp anfragen.">
 <link rel="canonical" href="https://mrphone-frankfurt.de/">
 <link rel="alternate" hreflang="de" href="https://mrphone-frankfurt.de/">
-<link rel="alternate" hreflang="en" href="https://mrphone-frankfurt.de/en/index.html">
+<link rel="alternate" hreflang="en" href="https://mrphone-frankfurt.de/en/">
 <link rel="alternate" hreflang="x-default" href="https://mrphone-frankfurt.de/">
 
 <!-- Open Graph -->
@@ -31,7 +31,7 @@
 <!-- Nur auf index.html: Schwarz+Grün-Glassmorphism-Reskin, siehe .design-preview/homepage-prototype.html.
      Systemschriften statt Google Fonts, deshalb kein Inter-Link mehr auf dieser Seite. -->
 <link rel="stylesheet" href="index-styles.css">
-<link rel="preload" as="image" href="images/mr-phone-zeil-frankfurt-aussenansicht-720.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="/videos/hero/hero-home-poster.webp" type="image/webp" fetchpriority="high">
 
 <script type="application/ld+json" id="schema-localbusiness">
 {
@@ -40,7 +40,7 @@
   "name": "Mr. Phone",
   "image": "https://mrphone-frankfurt.de/images/mr-phone-zeil-frankfurt-aussenansicht.jpg",
   "url": "https://mrphone-frankfurt.de/",
-  "telephone": "+496995632281",
+  "telephone": "+49 69 95632281",
   "email": "mr.phone.zeil@gmail.com",
   "priceRange": "€€",
   "address": {
@@ -73,14 +73,7 @@
   "sameAs": [
     "https://g.page/r/CS-7cA2W6fQUEBM/review",
     "https://www.instagram.com/mr.phone_zeil/"
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": 5.0,
-    "reviewCount": 490,
-    "bestRating": 5,
-    "worstRating": 1
-  }
+  ]
 }
 </script>
 
@@ -164,11 +157,11 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="index.html" class="logo-link" aria-label="Mr. Phone – Startseite">
+    <a href="/" class="logo-link" aria-label="Mr. Phone – Startseite">
       <img src="images/logo.png" alt="Mr. Phone – Handy Verkauf, Ankauf & Reparatur Frankfurt Zeil" width="800" height="219" class="logo">
     </a>
 
-    <span class="status-badge status-badge--mobile" data-status-badge aria-live="polite"><span class="status-dot"></span><span class="status-text">Öffnungszeiten werden geladen…</span></span>
+    <span class="status-badge status-badge--mobile" data-status-badge aria-live="polite"><span class="status-dot"></span><span class="status-text">Mo–Fr 9:30–21:00 Uhr · Sa 9:30–21:30 Uhr · So geschlossen</span></span>
 
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <label for="nav-toggle" class="burger-label" aria-label="Menü öffnen">
@@ -177,25 +170,25 @@
 
     <nav class="main-nav" aria-label="Hauptnavigation">
       <ul>
-        <li><a href="index.html" aria-current="page">Startseite</a></li>
+        <li><a href="/">Startseite</a></li>
         <li><a href="handy-reparatur-frankfurt.html">Handy Reparatur</a></li>
         <li><a href="handy-ankauf-frankfurt.html">Handy Ankauf</a></li>
         <li><a href="sortiment.html">Unser Sortiment</a></li>
-        <li><a href="ratgeber/index.html">Ratgeber</a></li>
+        <li><a href="ratgeber/">Ratgeber</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
       </ul>
       <div class="nav-mobile-actions">
-        <a href="/en/index.html" class="lang-switch" hreflang="en" lang="en">English version</a>
+        <a href="/en/" class="lang-switch" hreflang="en" lang="en">English version</a>
         <a href="tel:+496995632281" class="btn btn-outline-dark">069 95632281 anrufen</a>
-        <a href="https://wa.me/496995632281" class="btn btn-primary" target="_blank" rel="noopener">Per WhatsApp anfragen</a>
+        <a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" class="btn btn-primary" target="_blank" rel="noopener">Per WhatsApp anfragen</a>
       </div>
     </nav>
 
     <div class="header-cta">
-      <a href="/en/index.html" class="lang-switch" hreflang="en" lang="en">EN</a>
-      <span class="status-badge status-badge--desktop" data-status-badge aria-live="polite"><span class="status-dot"></span><span class="status-text">Öffnungszeiten werden geladen…</span></span>
+      <a href="/en/" class="lang-switch" hreflang="en" lang="en">EN</a>
+      <span class="status-badge status-badge--desktop" data-status-badge aria-live="polite"><span class="status-dot"></span><span class="status-text">Mo–Fr 9:30–21:00 Uhr · Sa 9:30–21:30 Uhr · So geschlossen</span></span>
       <a href="tel:+496995632281" class="header-phone">069 95632281</a>
-      <a href="https://wa.me/496995632281" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </div>
 </header>
@@ -203,23 +196,35 @@
 <main id="main">
 
   <!-- HERO -->
-  <section class="hero hero-home">
-    <div class="container hero-grid">
-      <div class="hero-image-wrap">
-        <picture>
-          <source srcset="images/mr-phone-zeil-frankfurt-aussenansicht-720.webp" type="image/webp">
-          <img src="images/mr-phone-zeil-frankfurt-aussenansicht.jpg" alt="Außenansicht des Handy Shops Mr. Phone auf der Zeil in Frankfurt am Main" width="720" height="1280" fetchpriority="high" decoding="async">
-        </picture>
-      </div>
+  <section class="hero hero-home hero-has-video">
+    <div class="hero-media" data-hero-video aria-hidden="true">
+      <video data-hero-video-el muted loop playsinline preload="none" poster="/videos/hero/hero-home-poster.webp" data-webm="/videos/hero/hero-home-1280.webm" data-mp4="/videos/hero/hero-home-1280.mp4" data-mp4-mobile="/videos/hero/hero-home-720.mp4"></video>
+    </div>
+    <div class="container">
       <div class="hero-content">
         <span class="hero-badge">Mitten auf der Zeil in Frankfurt</span>
         <h1>Handy Shop Frankfurt Zeil: Verkauf, Ankauf &amp; Reparatur bei Mr. Phone</h1>
         <p class="hero-lead">Ob neues Smartphone, Sofort-Ankauf Ihres Altgeräts oder eine Express-Reparatur: Mr. Phone ist Ihr Fachgeschäft mitten in der Frankfurter Innenstadt – persönlich beraten, schnell erledigt, fair bewertet.</p>
         <span class="bewertungen-kompakt trust-badge" data-bewertungen-kompakt hidden></span>
         <div class="cta-row">
-          <a href="https://wa.me/496995632281" class="btn btn-primary" target="_blank" rel="noopener">Reparatur anfragen</a>
-          <a href="https://www.google.com/maps/dir/?api=1&destination=Zeil+115-117,+60313+Frankfurt+am+Main" class="btn btn-outline" target="_blank" rel="noopener">Route planen</a>
+          <a href="handy-reparatur-frankfurt.html" class="btn btn-primary">Reparieren</a>
+          <a href="handy-ankauf-frankfurt.html#ankaufsrechner" class="btn btn-primary">Verkaufen</a>
+          <a href="sortiment.html" class="btn btn-primary">Kaufen</a>
         </div>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Zeil+115-117,+60313+Frankfurt+am+Main" class="hero-route-link" target="_blank" rel="noopener">Route planen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BELIEBTE REPARATUREN -->
+  <section class="beliebte-reparaturen">
+    <div class="container">
+      <span class="eyebrow">Beliebte Reparaturen – Preise ab</span>
+      <div class="service-list reveal reveal-stagger">
+        <a class="service-card" href="iphone-display-reparatur-frankfurt.html"><h3>iPhone-Display</h3><p>ab 119&nbsp;€</p></a>
+        <a class="service-card" href="iphone-akku-wechsel-frankfurt.html"><h3>iPhone-Akku</h3><p>ab 49&nbsp;€</p></a>
+        <a class="service-card" href="samsung-reparatur-frankfurt.html"><h3>Samsung-Display</h3><p>ab 59&nbsp;€</p></a>
+        <a class="service-card" href="handy-ladebuchse-reparatur-frankfurt.html"><h3>Ladebuchse</h3><p>ab 39&nbsp;€</p></a>
       </div>
     </div>
   </section>
@@ -313,6 +318,7 @@
           <div class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"></path></svg></div>
           <h3>Express-Reparatur</h3>
           <p>Display, Akku, Wasserschaden, Kamera oder Ladebuchse defekt? Wir reparieren fachgerecht – oft noch am selben Tag.</p>
+          <p>Original oder Alternative – Sie haben die Wahl: Wir verbauen sowohl Originalteile als auch hochwertige kompatible Ersatzteile. Den Preisunterschied für Ihr Modell nennen wir Ihnen vorab – im Laden oder per WhatsApp.</p>
         </div>
         <div class="tile">
           <div class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5z"></path><path d="M9 12l2 2 4-4"></path></svg></div>
@@ -585,7 +591,7 @@
         </a>
       </div>
       <div class="cta-row">
-        <a href="https://wa.me/496995632281" class="btn btn-primary" target="_blank" rel="noopener">Gestalten Sie Ihre eigene Hülle – jetzt anfragen</a>
+        <a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20bedruckte%20H%C3%BClle.%20Modell%3A%20%E2%80%A6" class="btn btn-primary" target="_blank" rel="noopener">Gestalten Sie Ihre eigene Hülle – jetzt anfragen</a>
       </div>
     </div>
   </section>
@@ -607,7 +613,6 @@
         <span class="eyebrow">Anfahrt</span>
         <h2>So finden Sie uns auf der Zeil</h2>
         <p>Mr. Phone liegt mitten auf der Zeil, direkt auf Höhe der großen Einkaufszentren in der Frankfurter Innenstadt und fußläufig von den Haltestellen Hauptwache und Konstablerwache erreichbar. Egal ob Sie mit der U-Bahn, S-Bahn oder Straßenbahn anreisen – unser Ladengeschäft ist zentral und bequem zu erreichen, auch aus Stadtteilen wie Bornheim, Sachsenhausen oder dem Nordend.</p>
-        <p>Wer nach einem <strong>Handyladen in der Nähe</strong> oder einem <strong>Handydoktor in der Nähe</strong> sucht, wird in der gesamten Frankfurter Innenstadt schnell fündig: Unser Geschäft ist von praktisch jeder zentralen Lage aus in wenigen Minuten erreichbar.</p>
         <div class="cta-row">
           <a href="https://www.google.com/maps/dir/?api=1&destination=Zeil+115-117,+60313+Frankfurt+am+Main" class="btn btn-primary" target="_blank" rel="noopener">Route planen</a>
           <a href="kontakt.html" class="btn btn-outline-dark">Kontakt &amp; Öffnungszeiten</a>
@@ -687,7 +692,7 @@
         <ul>
           <li>Zeil 115–117, 60313 Frankfurt am Main</li>
           <li><a href="tel:+496995632281">069 95632281</a></li>
-          <li><a href="https://wa.me/496995632281" target="_blank" rel="noopener">WhatsApp schreiben</a></li>
+          <li><a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" target="_blank" rel="noopener">WhatsApp schreiben</a></li>
           <li><a href="mailto:mr.phone.zeil@gmail.com">mr.phone.zeil@gmail.com</a></li>
         </ul>
       </div>
@@ -697,7 +702,7 @@
           <li><a href="handy-reparatur-frankfurt.html">Handy Reparatur Frankfurt</a></li>
           <li><a href="handy-ankauf-frankfurt.html">Handy Ankauf Frankfurt</a></li>
           <li><a href="sortiment.html">Unser Sortiment</a></li>
-          <li><a href="ratgeber/index.html">Ratgeber</a></li>
+          <li><a href="ratgeber/">Ratgeber</a></li>
           <li><a href="kontakt.html">Kontakt &amp; Öffnungszeiten</a></li>
           <li><a href="https://g.page/r/CS-7cA2W6fQUEBM/review" target="_blank" rel="noopener">Google Bewertung abgeben</a></li>
         </ul>
@@ -713,9 +718,10 @@
   </div>
 </footer>
 
-<a href="https://wa.me/496995632281" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">💬</a>
+<a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">💬</a>
 
 <script defer src="main.js"></script>
+<script defer src="hero-video.js"></script>
 <script src="phone-bg.js" defer></script>
 <script src="admin-zugriff.js" defer></script>
 <!-- GoatCounter Analytics (privacy-freundlich, keine Cookies) – Setup: siehe ANALYTICS-SETUP.md -->
