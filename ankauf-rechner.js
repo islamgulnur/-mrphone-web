@@ -256,9 +256,9 @@
     if (n === 2) { renderMarken(); renderModelle(); }
     if (n === 3) { renderVarianten(); }
     if (n === 4) {
-      // Variante ohne Preis (siehe hatKeinenPreis()) hat keinen Zustandsschritt - direkt zur
-      // "Preis auf Anfrage"-Ergebnisseite statt einer leeren Zustandsauswahl.
-      if (hatKeinenPreis(state.variante)) { zeigeErgebnisAufAnfrage(); return; }
+      // Auch ohne Preisdaten (siehe hatKeinenPreis()) wird der Zustand erfragt - renderZustaende()
+      // zeigt in diesem Fall alle Zustaende ungefiltert an, das Ergebnis geht dann als
+      // "Preis auf Anfrage" inkl. gewaehltem Zustand raus (siehe zustandGrid-Click-Handler).
       renderZustaende();
     }
     zeigeSchritt(n);
@@ -488,14 +488,6 @@
       state.variante = variante;
       state.zustand = null;
       renderVarianten();
-      if (hatKeinenPreis(variante)) {
-        // Kein Zustand hat einen Preis (z.B. Kameras/Garmin/generische Klassen - siehe
-        // OFFENE-PUNKTE.md) - Zustandsauswahl macht hier keinen Sinn, direkt zur
-        // "Preis auf Anfrage"-Ergebnisseite.
-        erreichteSchritte = 4;
-        zeigeErgebnisAufAnfrage();
-        return;
-      }
       erreichteSchritte = 4;
       renderZustaende();
       zeigeSchritt(4);
@@ -503,10 +495,6 @@
     }
 
     renderVarianten();
-    if (hatKeinenPreis(variante)) {
-      zeigeErgebnisAufAnfrage();
-      return;
-    }
     gehZuSchritt(4);
   });
 
@@ -514,9 +502,10 @@
   function renderZustaende() {
     // Zustand nur anzeigen, wenn für diese Variante in dieser Stufe ein Preis vorliegt
     // (einzelne Stufen können null sein, z.B. neuVersiegelt ohne Neu-Marktwert - siehe
-    // scripts/update-ankaufspreise.js). Fehlen ALLE Stufen, greift bereits der
-    // hatKeinenPreis()-Zweig oben und dieser Schritt wird gar nicht erst angezeigt.
-    var verfuegbareZustaende = ZUSTAENDE.filter(function (z) {
+    // scripts/update-ankaufspreise.js). Fehlen ALLE Stufen (hatKeinenPreis()), werden trotzdem
+    // alle Zustaende ungefiltert angeboten - das Ergebnis laeuft dann ueber
+    // zeigeErgebnisAufAnfrage() inkl. des hier gewaehlten Zustands.
+    var verfuegbareZustaende = hatKeinenPreis(state.variante) ? ZUSTAENDE : ZUSTAENDE.filter(function (z) {
       if (!state.variante || !state.variante.preise) return false;
       if (z.id === "gebraucht") {
         return state.variante.preise.wieNeu != null &&
@@ -544,7 +533,11 @@
     if (!btn || !state.variante) return;
     state.zustand = btn.getAttribute("data-zustand");
     renderZustaende();
-    zeigeErgebnis();
+    if (hatKeinenPreis(state.variante)) {
+      zeigeErgebnisAufAnfrage();
+    } else {
+      zeigeErgebnis();
+    }
   });
 
   /* ---------- Ergebnis ---------- */
@@ -634,20 +627,26 @@
   function zeigeErgebnisAufAnfrage() {
     ergebnisPreis.textContent = "Preis auf Anfrage";
     if (ergebnisLabel) ergebnisLabel.textContent = "Ihr Gerät";
-    if (ergebnisSub) ergebnisSub.textContent = "Wir nennen Ihnen den Preis nach kurzer Prüfung vor Ort oder per WhatsApp";
+    if (ergebnisSub) ergebnisSub.textContent = LANG === "en"
+      ? "Price on request – you'll receive your offer via WhatsApp within minutes."
+      : "Preis auf Anfrage – Sie erhalten Ihr Angebot in wenigen Minuten per WhatsApp.";
     if (ergebnisHinweis) ergebnisHinweis.hidden = true;
     if (ergebnisDisclaimer) ergebnisDisclaimer.hidden = true;
     whatsappBtn.textContent = LANG === "en" ? "Request price now" : "Preis jetzt anfragen";
 
+    var zustandConfig = ZUSTAENDE.find(function (z) { return z.id === state.zustand; });
+    var zustandLabel = zustandConfig ? zustandConfig.titel : "";
     var geraeteBezeichnung = [state.geraet.marke, state.geraet.modell, state.variante.bezeichnung].filter(Boolean).join(" ");
     var nummer = anfrageNummer();
     var nachricht = LANG === "en"
       ? "Hello, I would like a purchase offer for my device:\n" +
         "Device: " + geraeteBezeichnung + "\n" +
+        (zustandLabel ? "Condition: " + zustandLabel + "\n" : "") +
         "Request no.: " + nummer + "\n" +
         "Date: " + formatDatumUhrzeit()
       : "Hallo, ich möchte ein Ankaufsangebot für mein Gerät:\n" +
         "Gerät: " + geraeteBezeichnung + "\n" +
+        (zustandLabel ? "Zustand: " + zustandLabel + "\n" : "") +
         "Anfrage-Nummer: " + nummer + "\n" +
         "Datum: " + formatDatumUhrzeit();
     whatsappBtn.href = waLink(nachricht);
@@ -670,14 +669,7 @@
     var aktuellerSchrittEl = back.closest("[data-step]");
     var aktuellerSchrittWert = aktuellerSchrittEl.getAttribute("data-step");
     if (aktuellerSchrittWert === "ergebnis") {
-      // "Auf Anfrage"-Ergebnis hat keinen eigenen Zustandsschritt (siehe hatKeinenPreis()) -
-      // sonst würde "Zurück" auf dieselbe Seite zurückführen (gehZuSchritt(4) leitet dort
-      // wieder auf zeigeErgebnisAufAnfrage() um). Direkt zur Variantenauswahl statt Loop.
-      if (hatKeinenPreis(state.variante)) {
-        gehZuSchritt(3);
-      } else {
-        gehZuSchritt(4);
-      }
+      gehZuSchritt(4);
     } else {
       var vorheriger = Number(aktuellerSchrittWert) - 1;
       gehZuSchritt(vorheriger < 1 ? 1 : vorheriger);
