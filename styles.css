@@ -168,6 +168,15 @@ section {
   margin-top: 1.6rem;
 }
 
+.hero-route-link {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  color: var(--gray-200, #d1d5db);
+  text-decoration: underline;
+}
+.hero-route-link:hover { color: var(--white); }
+
 /* ---------- Header ---------- */
 .site-header {
   position: sticky;

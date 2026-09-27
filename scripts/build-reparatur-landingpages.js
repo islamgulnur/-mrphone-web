@@ -94,8 +94,11 @@ function faqHtml(faq) {
   return faq.map((eintrag) => `<details class="faq-item"><summary>${html(eintrag.frage)}</summary><div class="faq-body"><p>${html(eintrag.antwort)}</p></div></details>`).join("\n");
 }
 
+const TEILE_TRANSPARENZ_TEXT = "Original oder Alternative – Sie haben die Wahl: Wir verbauen sowohl Originalteile als auch hochwertige kompatible Ersatzteile. Den Preisunterschied für Ihr Modell nennen wir Ihnen vorab – im Laden oder per WhatsApp.";
+
 function seite({ titel, beschreibung, slug, serviceName, serviceBeschreibung, eyebrow, h1, lead, inhalt, faq }) {
   const nachricht = encodeURIComponent(`Hallo Mr. Phone, ich möchte eine Reparatur anfragen. Modell: … Defekt: ${serviceName}`);
+  const faqMitTeile = faq.concat([{ frage: "Verbaut ihr Originalteile?", antwort: TEILE_TRANSPARENZ_TEXT }]);
   const serviceLinks = [
     ["iphone-display-reparatur-frankfurt.html", "iPhone Display reparieren"],
     ["iphone-akku-wechsel-frankfurt.html", "iPhone Akku wechseln"],
@@ -103,12 +106,13 @@ function seite({ titel, beschreibung, slug, serviceName, serviceBeschreibung, ey
     ["handy-ladebuchse-reparatur-frankfurt.html", "Ladebuchse reparieren"],
     ["handy-wasserschaden-reparatur-frankfurt.html", "Handy-Wasserschaden prüfen"],
   ].filter(([ziel]) => ziel !== slug);
-  return `${kopf({ titel, beschreibung, slug, serviceName, serviceBeschreibung, faq })}${header()}<main id="main">
+  return `${kopf({ titel, beschreibung, slug, serviceName, serviceBeschreibung, faq: faqMitTeile })}${header()}<main id="main">
 <nav class="breadcrumb container" aria-label="Breadcrumb"><a href="/">Startseite</a> / <a href="/handy-reparatur-frankfurt.html">Handy-Reparatur</a> / ${html(serviceName)}</nav>
 <section class="bg-dark"><div class="container"><span class="eyebrow" style="color: var(--green);">${html(eyebrow)}</span><h1>${html(h1)}</h1><p class="hero-lead">${html(lead)}</p><div class="cta-row"><a href="https://wa.me/496995632281?text=${nachricht}" class="btn btn-primary" target="_blank" rel="noopener">Preis per WhatsApp anfragen</a><a href="tel:+496995632281" class="btn btn-outline">069 95632281 anrufen</a></div></div></section>
+<section class="bg-light"><div class="container"><p>${html(TEILE_TRANSPARENZ_TEXT)}</p></div></section>
 ${inhalt}
 <section class="bg-light"><div class="container"><div class="section-intro"><span class="eyebrow">Weitere Reparaturen</span><h2>Direkt zur passenden Hilfe</h2></div><div class="service-list">${serviceLinks.map(([ziel, label]) => `<a class="service-card" href="/${ziel}"><h3>${html(label)}</h3><p>Preise, Ablauf und Hinweise ansehen →</p></a>`).join("")}</div></div></section>
-<section><div class="container"><div class="section-intro"><span class="eyebrow">Häufige Fragen</span><h2>Gut zu wissen</h2></div>${faqHtml(faq)}</div></section>
+<section><div class="container"><div class="section-intro"><span class="eyebrow">Häufige Fragen</span><h2>Gut zu wissen</h2></div>${faqHtml(faqMitTeile)}</div></section>
 <section class="review-cta"><div class="container"><h2>Gerät kurz prüfen lassen</h2><p>Bringen Sie Ihr Gerät auf die Zeil oder nennen Sie uns Modell und Schaden per WhatsApp. Nach der Diagnose erhalten Sie den verbindlichen Preis.</p><div class="cta-row" style="justify-content:center"><a href="https://wa.me/496995632281?text=${nachricht}" class="btn btn-outline-dark" target="_blank" rel="noopener">Reparatur anfragen</a><a href="/kontakt.html" class="btn btn-outline-dark">Anfahrt & Öffnungszeiten</a></div></div></section></main>${footer()}`;
 }
 
