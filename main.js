@@ -309,11 +309,11 @@
   function reservierenButtonHtml(bezeichnung, preisText) {
     var res = buildReservierungWhatsappUrl(bezeichnung, preisText);
     var label = LANG === "en"
-      ? (res.istOffen ? "Reserve free for 3 hrs" : "Ask for tomorrow")
-      : (res.istOffen ? "3 Std. kostenlos reservieren" : "Für morgen anfragen");
+      ? (res.istOffen ? "Request a 3-hour reservation" : "Ask for tomorrow")
+      : (res.istOffen ? "Reservierung für 3 Std. anfragen" : "Für morgen anfragen");
     var hinweis = LANG === "en"
-      ? "No obligation – the device is held for you for 3 hours, purchase &amp; payment in store."
-      : "Unverbindlich – Gerät wird 3 Stunden für Sie zurückgelegt, Kauf &amp; Bezahlung im Laden.";
+      ? "Only confirmed once we reply via WhatsApp. Purchase and payment in store."
+      : "Erst nach unserer Bestätigung per WhatsApp reserviert. Kauf und Bezahlung im Laden.";
     return (
       '<a href="' + res.url + '" class="btn btn-outline-dark btn-reservieren" target="_blank" rel="noopener">' + label + "</a>" +
       '<p class="reservieren-hinweis">' + hinweis + "</p>"
@@ -512,9 +512,19 @@
     });
   }
 
+  function normalisiereMarke(marke) {
+    var name = String(marke || "").trim();
+    var key = name.toLowerCase();
+    if (key === "poco") return "POCO";
+    if (key === "google" || key === "googel") return "Google";
+    if (key === "samsung" || key === "samsung galaxy") return "Samsung";
+    if (key === "xiaomi redmi" || key === "redmi") return "Redmi";
+    return name;
+  }
+
   function garantieHinweis(zustand) {
-    if (LANG === "en") return zustand === "neu" ? "1–2 years manufacturer warranty" : "6 months warranty";
-    return zustand === "neu" ? "1–2 Jahre Herstellergarantie" : "6 Monate Garantie";
+    if (LANG === "en") return zustand === "neu" ? "Manufacturer warranty: please ask for the exact term for this device" : "6 months warranty";
+    return zustand === "neu" ? "Herstellergarantie: genaue Laufzeit für dieses Gerät bitte erfragen" : "6 Monate Garantie";
   }
 
   function angebotCardHtml(a) {
@@ -641,7 +651,7 @@
 
       var gefiltert = aktiveDaten.filter(function (a) {
         if (aktuelleKategorie !== "alle" && a.kategorie !== aktuelleKategorie) return false;
-        if (marke !== "alle" && a.marke !== marke) return false;
+        if (marke !== "alle" && normalisiereMarke(a.marke) !== marke) return false;
         if (zustand !== "alle" && a.zustand !== zustand) return false;
         return true;
       });
@@ -688,7 +698,7 @@
 
     function befuelleMarkenFilter() {
       if (!markeSelect) return;
-      var marken = Array.from(new Set(aktiveDaten.map(function (a) { return a.marke; }).filter(Boolean))).sort();
+      var marken = Array.from(new Set(aktiveDaten.map(function (a) { return normalisiereMarke(a.marke); }).filter(Boolean))).sort();
       marken.forEach(function (m) {
         var opt = document.createElement("option");
         opt.value = m;
@@ -752,10 +762,15 @@
     }
 
     holeJson(assetUrl("bestand.json"), 5000)
+      .catch(function () { return []; })
       .then(function (lokalerBestand) {
         var lokal = Array.isArray(lokalerBestand) ? lokalerBestand : [];
         return holeJson("https://mrphone-pos.vercel.app/api/public/bestand", 5000)
-          .then(function (payload) { return normalisierePosDaten(payload, lokal); })
+          .then(function (payload) {
+            var live = normalisierePosDaten(payload, lokal);
+            if (!live.length && lokal.some(function (item) { return item.aktiv === true; })) throw new Error("Leerer POS-Bestand: lokaler Bestand bleibt sichtbar");
+            return live;
+          })
           .catch(function () { return lokal; });
       })
       .then(function (alle) {

@@ -33,6 +33,12 @@
     { id: "zubehoer", label: "Zubehör", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v4M15 3v4M6 7h12l-1 5a5 5 0 0 1-10 0z"></path><line x1="12" y1="16" x2="12" y2="21"></line></svg>' },
   ];
 
+  // Alle im Datenkatalog angebotenen Kategorien auch im Rechner erreichbar machen.
+  var monitorIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M12 17v4M7 21h10"></path></svg>';
+  var kameraIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 5l2-2h4l2 2h5v16H3V5z"></path><circle cx="12" cy="12" r="4"></circle></svg>';
+  KATEGORIEN.splice(5, 0, { id: "monitore", label: LANG === "en" ? "Monitors" : "Monitore", icon: monitorIcon });
+  KATEGORIEN.splice(7, 0, { id: "kameras", label: LANG === "en" ? "Cameras" : "Kameras", icon: kameraIcon });
+
   var ZUSTAENDE = LANG === "en" ? [
     {
       id: "neuVersiegelt", titel: "New & sealed", beschreibung: "Original packaging, factory sealed.", bild: "images/ankauf-zustand-neu-versiegelt.jpg",
@@ -138,10 +144,18 @@
 
   // Variante hat keinen einzigen Zustand mit hinterlegtem Preis -> komplettes Gerät läuft
   // "auf Anfrage" (siehe zeigeErgebnisAufAnfrage()), nicht nur eine einzelne Zustandsstufe.
+  function istPreis(wert) {
+    return typeof wert === "number" && Number.isFinite(wert) && wert > 0;
+  }
+
+  function gebrauchtWerte(preise) {
+    return ["schlecht", "gut", "sehrGut", "wieNeu"].map(function (id) { return preise[id]; }).filter(istPreis).sort(function (a, b) { return a - b; });
+  }
+
   function hatKeinenPreis(variante) {
     if (variante && variante.preisStatus === "anfrage") return true;
     if (!variante || !variante.preise) return true;
-    return ZUSTAENDE.every(function (z) { return variante.preise[z.id] == null; });
+    return ["neuVersiegelt", "wieNeu", "sehrGut", "gut", "schlecht", "defekt"].every(function (id) { return !istPreis(variante.preise[id]); });
   }
 
   function anfrageNummer() {
@@ -185,8 +199,8 @@
         if (teile.length !== 3) return;
         var datumFormatiert = teile[2] + "." + teile[1] + "." + teile[0];
         preisupdateHinweis.textContent = LANG === "en"
-          ? "Prices updated automatically every day – as of: " + datumFormatiert
-          : "Preise täglich automatisch aktualisiert – Stand: " + datumFormatiert;
+          ? "Latest automatic price check: " + datumFormatiert
+          : "Letzter automatischer Preisprüflauf: " + datumFormatiert;
         preisupdateHinweis.hidden = false;
       })
       .catch(function () {
@@ -312,11 +326,13 @@
       .then(function (daten) {
         var liste = Array.isArray(daten) ? daten : [];
         kategorieCache[kategorie] = liste;
+        if (state.kategorie !== kategorie) return liste;
         aktuellerLadeStatus = "ok";
         if (modelleLade) modelleLade.hidden = true;
         return liste;
       })
       .catch(function () {
+        if (state.kategorie !== kategorie) return [];
         aktuellerLadeStatus = "fehler";
         if (modelleLade) modelleLade.hidden = true;
         if (modelleFehler) modelleFehler.hidden = false;
@@ -327,7 +343,9 @@
   if (modelleRetryBtn) {
     modelleRetryBtn.addEventListener("click", function () {
       if (!state.kategorie) return;
-      ladeKategorieDaten(state.kategorie).then(function (liste) {
+      var kategorie = state.kategorie;
+      ladeKategorieDaten(kategorie).then(function (liste) {
+        if (state.kategorie !== kategorie) return;
         aktuelleGeraeteListe = liste;
         renderMarken();
         renderModelle();
@@ -353,6 +371,7 @@
     zeigeSchritt(2);
 
     ladeKategorieDaten(neu).then(function (liste) {
+      if (state.kategorie !== neu) return;
       aktuelleGeraeteListe = liste;
       renderMarken();
       renderModelle();
@@ -360,8 +379,18 @@
   });
 
   /* ---------- Schritt 2: Marke & Modell ---------- */
+  function normalisiereMarke(marke) {
+    var name = String(marke || "").trim();
+    var key = name.toLowerCase();
+    if (key === "poco") return "POCO";
+    if (key === "google" || key === "googel") return "Google";
+    if (key === "samsung" || key === "samsung galaxy") return "Samsung";
+    if (key === "xiaomi redmi" || key === "redmi") return "Redmi";
+    return name;
+  }
+
   function renderMarken() {
-    var marken = Array.from(new Set(aktuelleGeraeteListe.map(function (g) { return g.marke; }).filter(Boolean))).sort();
+    var marken = Array.from(new Set(aktuelleGeraeteListe.map(function (g) { return normalisiereMarke(g.marke); }).filter(Boolean))).sort();
 
     if (!marken.length) {
       markenChips.innerHTML = "";
@@ -389,7 +418,7 @@
     var sucheAktiv = suchbegriff.length >= 2;
 
     var geraete = aktuelleGeraeteListe.filter(function (g) {
-      if (state.marke && g.marke !== state.marke) return false;
+      if (state.marke && normalisiereMarke(g.marke) !== state.marke) return false;
       if (sucheAktiv) {
         var text = (g.marke + " " + g.modell).toLowerCase();
         if (text.indexOf(suchbegriff) === -1) return false;
@@ -515,10 +544,9 @@
     var verfuegbareZustaende = ZUSTAENDE.filter(function (z) {
       if (!state.variante || !state.variante.preise) return false;
       if (z.id === "gebraucht") {
-        return state.variante.preise.wieNeu != null &&
-          (state.variante.preise.schlecht != null || state.variante.preise.gut != null);
+        return gebrauchtWerte(state.variante.preise).length > 0;
       }
-      return state.variante.preise[z.id] != null;
+      return istPreis(state.variante.preise[z.id]);
     });
     zustandGrid.innerHTML = verfuegbareZustaende.map(function (z) {
       var aktivKlasse = state.zustand === z.id ? " active" : "";
@@ -560,10 +588,11 @@
     var typischerPreis = "";
 
     if (state.zustand === "gebraucht") {
-      var gebrauchtMin = preise.schlecht != null ? preise.schlecht : preise.gut;
-      var gebrauchtMax = preise.wieNeu;
+      var werte = gebrauchtWerte(preise);
+      var gebrauchtMin = werte[0];
+      var gebrauchtMax = werte[werte.length - 1];
       preisZeile = formatPreisspanne(gebrauchtMin, gebrauchtMax);
-      typischerPreis = formatPreisspanne(preise.gut, preise.sehrGut);
+      typischerPreis = formatPreisspanne(istPreis(preise.gut) ? preise.gut : gebrauchtMin, istPreis(preise.sehrGut) ? preise.sehrGut : gebrauchtMax);
       ergebnisPreis.textContent = preisZeile;
       if (ergebnisLabel) ergebnisLabel.textContent = LANG === "en" ? "Estimated price range" : "Voraussichtliche Preisspanne";
       if (ergebnisSub) ergebnisSub.textContent = LANG === "en"
@@ -598,14 +627,14 @@
         "Device: " + geraeteBezeichnung + "\n" +
         "Condition: " + zustandLabel + "\n" +
         (state.zustand === "gebraucht" ? "Possible price range: " + preisZeile + "\nTypical purchase: " + typischerPreis + "\n" :
-          state.zustand === "defekt" ? "Maximum guide price: " + preisZeile + "\n" : "Offered price: " + preisZeile + "\n") +
+          state.zustand === "defekt" ? "Maximum guide price: " + preisZeile + "\n" : "Fixed price, subject to device inspection: " + preisZeile + "\n") +
         "Request no.: " + nummer + "\n" +
         "Date: " + formatDatumUhrzeit()
       : "Hallo, ich möchte mein Gerät verkaufen:\n" +
         "Gerät: " + geraeteBezeichnung + "\n" +
         "Zustand: " + zustandLabel + "\n" +
         (state.zustand === "gebraucht" ? "Mögliche Preisspanne: " + preisZeile + "\nTypischer Ankauf: " + typischerPreis + "\n" :
-          state.zustand === "defekt" ? "Maximaler Richtwert: " + preisZeile + "\n" : "Angebotener Preis: " + preisZeile + "\n") +
+          state.zustand === "defekt" ? "Maximaler Richtwert: " + preisZeile + "\n" : "Festpreis vorbehaltlich Geräteprüfung: " + preisZeile + "\n") +
         "Anfrage-Nummer: " + nummer + "\n" +
         "Datum: " + formatDatumUhrzeit();
 
@@ -628,9 +657,9 @@
   // Zeigt "Preis auf Anfrage" statt eines Betrags, WhatsApp-Nachricht fragt nach einem Angebot
   // statt einen Preis zu bestätigen.
   function zeigeErgebnisAufAnfrage() {
-    ergebnisPreis.textContent = "Preis auf Anfrage";
-    if (ergebnisLabel) ergebnisLabel.textContent = "Ihr Gerät";
-    if (ergebnisSub) ergebnisSub.textContent = "Wir nennen Ihnen den Preis nach kurzer Prüfung vor Ort oder per WhatsApp";
+    ergebnisPreis.textContent = LANG === "en" ? "Price on request" : "Preis auf Anfrage";
+    if (ergebnisLabel) ergebnisLabel.textContent = LANG === "en" ? "Your device" : "Ihr Gerät";
+    if (ergebnisSub) ergebnisSub.textContent = LANG === "en" ? "We will quote a price after a brief inspection in store or via WhatsApp" : "Wir nennen Ihnen den Preis nach kurzer Prüfung vor Ort oder per WhatsApp";
     if (ergebnisHinweis) ergebnisHinweis.hidden = true;
     if (ergebnisDisclaimer) ergebnisDisclaimer.hidden = true;
     whatsappBtn.textContent = LANG === "en" ? "Request price now" : "Preis jetzt anfragen";
