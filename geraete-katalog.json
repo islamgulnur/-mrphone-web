@@ -13669,5 +13669,262 @@
     ],
     "marktwertGebraucht": 30,
     "marktwertQuelle": "geschaetzt"
+  },
+  {
+    "id": "kat-0591",
+    "kategorie": "smartphones",
+    "marke": "Apple",
+    "modell": "iPhone 18 Pro",
+    "jahr": 2026,
+    "uvp": 1449,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 250
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 750
+      },
+      {
+        "bezeichnung": "2 TB",
+        "uvpDelta": 1500
+      }
+    ],
+    "katalogQuelle": "https://www.apple.com/de/iphone-18-pro/specs/",
+    "katalogGeprueftAm": "2026-09-27"
+  },
+  {
+    "id": "kat-0592",
+    "kategorie": "smartphones",
+    "marke": "Apple",
+    "modell": "iPhone 18 Pro Max",
+    "jahr": 2026,
+    "uvp": 1599,
+    "varianten": [
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 250
+      },
+      {
+        "bezeichnung": "1 TB",
+        "uvpDelta": 750
+      },
+      {
+        "bezeichnung": "2 TB",
+        "uvpDelta": 1500
+      }
+    ],
+    "katalogQuelle": "https://www.apple.com/de/iphone-18-pro/specs/",
+    "katalogGeprueftAm": "2026-09-27"
+  },
+  {
+    "id": "kat-0593",
+    "kategorie": "smartphones",
+    "marke": "Samsung",
+    "modell": "Galaxy S26 FE",
+    "jahr": 2026,
+    "uvp": 799,
+    "varianten": [
+      {
+        "bezeichnung": "128 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "256 GB",
+        "uvpDelta": 100
+      },
+      {
+        "bezeichnung": "512 GB",
+        "uvpDelta": 300
+      }
+    ],
+    "katalogQuelle": "https://news.samsung.com/de/fokus-auf-das-wesentliche-samsung-prasentiert-das-galaxy-s26-fe",
+    "katalogGeprueftAm": "2026-09-27"
+  },
+  {
+    "id": "kat-0594",
+    "kategorie": "smartphones",
+    "marke": "Motorola",
+    "modell": "Edge 70",
+    "jahr": 2025,
+    "uvp": 799,
+    "varianten": [
+      {
+        "bezeichnung": "12 GB · 512 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "katalogQuelle": "https://www.motorola.com/gb/en/moto/knowledgebase/motorola-edge-70-battery-performance-and-feature-overview",
+    "katalogGeprueftAm": "2026-09-27"
+  },
+  {
+    "id": "kat-0595",
+    "kategorie": "smartphones",
+    "marke": "Motorola",
+    "modell": "Edge 70 Fusion",
+    "jahr": 2026,
+    "uvp": 449,
+    "varianten": [
+      {
+        "bezeichnung": "8 GB · 256 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "katalogQuelle": "https://www.motorola.com/gb/en/moto/knowledgebase/motorola-edge-70-fusion-5200-mah-battery-performance-and-camera-overview",
+    "katalogGeprueftAm": "2026-09-27"
+  },
+  {
+    "id": "kat-0596",
+    "kategorie": "smartphones",
+    "marke": "Motorola",
+    "modell": "Razr 70",
+    "jahr": 2026,
+    "uvp": 899,
+    "varianten": [
+      {
+        "bezeichnung": "8 GB · 256 GB",
+        "uvpDelta": 0
+      }
+    ],
+    "katalogQuelle": "https://www.materiel.net/produit/202606180010.html",
+    "katalogGeprueftAm": "2026-09-27"
+  },
+  {
+    "id": "kat-0597",
+    "kategorie": "smartwatches",
+    "marke": "Apple",
+    "modell": "Watch Series 12",
+    "jahr": 2026,
+    "uvp": 449,
+    "varianten": [
+      {
+        "bezeichnung": "42 mm · Aluminium · GPS",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "46 mm · Aluminium · GPS",
+        "uvpDelta": 0,
+        "uvpDeltaUnbekannt": true
+      },
+      {
+        "bezeichnung": "42 mm · Aluminium · GPS + Cellular",
+        "uvpDelta": 0,
+        "uvpDeltaUnbekannt": true
+      },
+      {
+        "bezeichnung": "46 mm · Aluminium · GPS + Cellular",
+        "uvpDelta": 0,
+        "uvpDeltaUnbekannt": true
+      },
+      {
+        "bezeichnung": "42 mm · Titan · GPS + Cellular",
+        "uvpDelta": 0,
+        "uvpDeltaUnbekannt": true
+      },
+      {
+        "bezeichnung": "46 mm · Titan · GPS + Cellular",
+        "uvpDelta": 0,
+        "uvpDeltaUnbekannt": true
+      },
+      {
+        "bezeichnung": "42 mm · Keramik · GPS + Cellular",
+        "uvpDelta": 0,
+        "uvpDeltaUnbekannt": true
+      },
+      {
+        "bezeichnung": "46 mm · Keramik · GPS + Cellular",
+        "uvpDelta": 0,
+        "uvpDeltaUnbekannt": true
+      }
+    ],
+    "katalogQuelle": "https://www.apple.com/de/apple-watch-series-12/",
+    "katalogGeprueftAm": "2026-09-27"
+  },
+  {
+    "id": "kat-0598",
+    "kategorie": "smartwatches",
+    "marke": "Apple",
+    "modell": "Watch Ultra 4",
+    "jahr": 2026,
+    "uvp": 899,
+    "varianten": [
+      {
+        "bezeichnung": "49 mm · Titan · GPS + Cellular",
+        "uvpDelta": 0
+      }
+    ],
+    "katalogQuelle": "https://www.apple.com/de/watch/",
+    "katalogGeprueftAm": "2026-09-27"
+  },
+  {
+    "id": "kat-0599",
+    "kategorie": "kopfhoerer",
+    "marke": "Apple",
+    "modell": "AirPods 5",
+    "jahr": 2026,
+    "uvp": 149,
+    "varianten": [
+      {
+        "bezeichnung": "USB-C Ladecase",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "Kabelloses Ladecase",
+        "uvpDelta": 20
+      }
+    ],
+    "katalogQuelle": "https://www.apple.com/de/airpods/",
+    "katalogGeprueftAm": "2026-09-27"
+  },
+  {
+    "id": "kat-0600",
+    "kategorie": "pcs",
+    "marke": "Apple",
+    "modell": "Mac mini M6",
+    "jahr": 2026,
+    "uvp": 1049,
+    "varianten": [
+      {
+        "bezeichnung": "16 GB · 256 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "Andere Konfiguration",
+        "uvpDelta": 0,
+        "uvpDeltaUnbekannt": true
+      }
+    ],
+    "katalogQuelle": "https://www.apple.com/de/mac-mini/specs/",
+    "katalogGeprueftAm": "2026-09-27"
+  },
+  {
+    "id": "kat-0601",
+    "kategorie": "pcs",
+    "marke": "Apple",
+    "modell": "Mac mini M5 Pro",
+    "jahr": 2026,
+    "uvp": 1999,
+    "varianten": [
+      {
+        "bezeichnung": "24 GB · 512 GB",
+        "uvpDelta": 0
+      },
+      {
+        "bezeichnung": "Andere Konfiguration",
+        "uvpDelta": 0,
+        "uvpDeltaUnbekannt": true
+      }
+    ],
+    "katalogQuelle": "https://www.apple.com/de/mac-mini/specs/",
+    "katalogGeprueftAm": "2026-09-27"
   }
 ]
