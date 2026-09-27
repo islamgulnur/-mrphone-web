@@ -1,5 +1,89 @@
 [
   {
+    "id": "pos-a8993fea677adcd5974b",
+    "marke": "Apple",
+    "modell": "AirPods 4",
+    "speicher": "",
+    "farbe": "Silver",
+    "kategorie": "kopfhoerer",
+    "zustand": "neu",
+    "preis": 139.99,
+    "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-7fae8a21e6bf5de121b7",
+    "marke": "Apple",
+    "modell": "14",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 349.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-0e8f023d41f90a7abd7c",
+    "marke": "Apple",
+    "modell": "17 Pro",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1069.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-58b846ab023f01133d36",
+    "marke": "Apple",
+    "modell": "17 Pro Max",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1149,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-d42becfb13fc6995be64",
+    "marke": "Apple",
+    "modell": "18 Pro",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1549.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-2341d8d08f7bda05bada",
+    "marke": "Apple",
+    "modell": "18 Pro Max",
+    "speicher": "1 TB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 2299.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
     "id": "pos-e908548200b3b9a5b61e",
     "marke": "Apple",
     "modell": "AirPods Max",
@@ -11,21 +95,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "pos-b491bc908a2d20d96743",
-    "marke": "Apple",
-    "modell": "iPhone 8",
-    "speicher": "64 GB",
-    "farbe": "Rose Gold",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 99.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-7308095ec7bee9cf43cd",
@@ -39,7 +109,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "cd4ad668-d97a-4605-859d-dd4643acde3d",
@@ -53,7 +123,7 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "13a288c9-93cf-47a6-bd1f-b9adc373baa2",
@@ -67,7 +137,7 @@
     "menge": 3,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "6406831b-741a-443b-9ba6-cc1f2b76bd87",
@@ -81,7 +151,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "1bc7a66d-5e41-46c8-ac7b-40418ed491ad",
@@ -95,7 +165,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-cf4d2768449fc9d8fd89",
@@ -109,7 +179,21 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-78f99bb94f1bd0a031fc",
+    "marke": "Apple",
+    "modell": "iPhone 12 mini",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 179.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "222db4fc-6585-4072-b3f8-5bbe4074e43a",
@@ -123,21 +207,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "pos-dd01152ea7a31c76bf60",
-    "marke": "Apple",
-    "modell": "iPhone 12 Pro",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 299.99,
-    "menge": 2,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-13b1a4f1b0b3d3dc2b30",
@@ -151,21 +221,35 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
-    "id": "pos-daf849513c73b6af53ae",
+    "id": "pos-d4efe2629a43fccc3d6e",
+    "marke": "Apple",
+    "modell": "iPhone 12 Pro Max",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 349,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-e78c87528d56f62b3951",
     "marke": "Apple",
     "modell": "iPhone 13",
     "speicher": "128 GB",
-    "farbe": "Midnight",
+    "farbe": "",
     "kategorie": "smartphones",
     "zustand": "gebraucht",
-    "preis": 299.99,
-    "menge": 2,
+    "preis": 299,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "e741e15a-861f-4da9-8f07-f7b2805c7b3b",
@@ -179,7 +263,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "9b5bd4a4-67a1-43fd-971d-b6472cc49e3a",
@@ -193,12 +277,26 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
-    "id": "pos-880a3fa2788b51732b37",
+    "id": "pos-1ae9ce32982a63921ccf",
     "marke": "Apple",
-    "modell": "iPhone 13 Pro",
+    "modell": "iPhone 13",
+    "speicher": "256 GB",
+    "farbe": "Grün",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 339.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-8e1f0b8e4d149c7ffb94",
+    "marke": "Apple",
+    "modell": "iPhone 13",
     "speicher": "256 GB",
     "farbe": "",
     "kategorie": "smartphones",
@@ -207,7 +305,35 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-7a7d3d4e36e6152873bb",
+    "marke": "Apple",
+    "modell": "iPhone 13 Pro",
+    "speicher": "128 GB",
+    "farbe": "Gold",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 389.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-40ce3214ca14e91490cb",
+    "marke": "Apple",
+    "modell": "iPhone 13 Pro",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 399.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-9ba2d0ec3e4a04447870",
@@ -221,7 +347,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "f43cfba5-7e06-4d8e-a3de-4edb7a9a8d82",
@@ -235,7 +361,7 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "a3842a16-52fc-413d-a84e-c09501aab4f0",
@@ -246,38 +372,24 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 339.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
-    "id": "pos-7764f17358d54d330c0b",
+    "id": "pos-c5a92532a28d58071cde",
     "marke": "Apple",
     "modell": "iPhone 14",
     "speicher": "128 GB",
-    "farbe": "Midnight",
+    "farbe": "",
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 349.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "pos-2316af8ac359b0f6825f",
-    "marke": "Apple",
-    "modell": "iPhone 14",
-    "speicher": "128 GB",
-    "farbe": "Purple",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 349.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "5f8a2127-7807-49ff-be1b-0b60261f82c3",
@@ -291,7 +403,7 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "0fdfeb31-44f8-496c-8cf8-006852014c8d",
@@ -302,10 +414,24 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 379.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-97446c9f2f38efa5a744",
+    "marke": "Apple",
+    "modell": "iPhone 14 Plus",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 380,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "cdfb74f7-55d4-4abc-a5c7-978d6c709ae7",
@@ -319,7 +445,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-e7a52dcf92348ebd7dd8",
@@ -333,21 +459,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "pos-2b8d28ae8b827a59fba9",
-    "marke": "Apple",
-    "modell": "iPhone 14 Pro",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 489.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "46f051f5-025c-4bd5-a0fd-42559e8bd4d7",
@@ -361,7 +473,21 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-fe35d24a4676d74a5388",
+    "marke": "Apple",
+    "modell": "iPhone 14 Pro Max",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 529.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "9b9ffd52-7460-4c11-8773-e89331cd9718",
@@ -375,7 +501,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "f8278caa-9eb4-4713-a031-2e7c75f68400",
@@ -389,7 +515,21 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-38335871966fb951ad5c",
+    "marke": "Apple",
+    "modell": "iPhone 15",
+    "speicher": "128 GB",
+    "farbe": "Grün",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 439.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-44b9ceacd22b4797b12c",
@@ -403,7 +543,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-9ace8c28ea2e72fae8d4",
@@ -417,7 +557,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "e79c2ff2-1743-41f5-9902-b1fa265c050f",
@@ -428,24 +568,52 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 399.99,
-    "menge": 1,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
-    "id": "pos-47c13343a6077ea5cd1a",
+    "id": "pos-8ab9424ea1ec73c9e71a",
     "marke": "Apple",
     "modell": "iPhone 15 Pro",
     "speicher": "128 GB",
-    "farbe": "Titan Natur",
+    "farbe": "",
     "kategorie": "smartphones",
     "zustand": "gebraucht",
-    "preis": 529.99,
+    "preis": 550,
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-8d88ae81deb69b26f5d8",
+    "marke": "Apple",
+    "modell": "iPhone 15 Pro",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 599.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-2dd0dc994dd9546f2131",
+    "marke": "Apple",
+    "modell": "iPhone 15 Pro Max",
+    "speicher": "256 GB",
+    "farbe": "natural",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 549.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "8f0dfeb7-9832-489e-a3d9-dc80b090b841",
@@ -456,10 +624,38 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 629.99,
+    "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-631bf9f7fdb35aa84ec3",
+    "marke": "Apple",
+    "modell": "iPhone 16",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 499.99,
+    "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-7e07638a1eeabfc87d7d",
+    "marke": "Apple",
+    "modell": "iPhone 16",
+    "speicher": "256 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 579.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "239248d9-6731-401e-8f9e-119540748873",
@@ -473,7 +669,7 @@
     "menge": 3,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "9f0fb5d6-b1ef-4bbf-85cb-e409c5deb76b",
@@ -487,7 +683,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-732c467841bbab847688",
@@ -498,10 +694,10 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 799.99,
-    "menge": 3,
+    "menge": 4,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "b7a311ad-b679-455c-afef-19bfc8c8e36d",
@@ -512,10 +708,24 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 819.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-2c92b7af32579f7f553f",
+    "marke": "Apple",
+    "modell": "iPhone 16 Pro Max",
+    "speicher": "512 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 899,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-936014fbd60c45c11c83",
@@ -529,7 +739,21 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-ae7c9eb5eaf0af5d2d5e",
+    "marke": "Apple",
+    "modell": "iPhone 17 Air",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 699.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-9d610d016dd17434c300",
@@ -543,7 +767,21 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-f02aca3985d9d26a01a2",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro",
+    "speicher": "256 GB",
+    "farbe": "Blau",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 949.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "e2110273-74e3-4bb9-a62e-f89a69abb57e",
@@ -554,38 +792,94 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 979.99,
-    "menge": 2,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "pos-b5f1ba50157839261695",
-    "marke": "Apple",
-    "modell": "iPhone 17 Pro",
-    "speicher": "256 GB",
-    "farbe": "Silver",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1069.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
-    "id": "pos-0d01eb56446a76b735f9",
+    "id": "pos-ce0dff2ef872cbc21d5e",
     "marke": "Apple",
     "modell": "iPhone 17 Pro",
     "speicher": "256 GB",
     "farbe": "",
     "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1069.99,
+    "zustand": "gebraucht",
+    "preis": 980,
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-3ba80b57a5315a59f951",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro",
+    "speicher": "256 GB",
+    "farbe": "Blau",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1049.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-84513f68dd3f30ce7d76",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro",
+    "speicher": "256 GB",
+    "farbe": "orange",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1049.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-f416292d8efc9825f796",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro",
+    "speicher": "512 GB",
+    "farbe": "Orange",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 1079.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-4be3b549e97425ed6ba2",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro Max",
+    "speicher": "",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 1049,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-f12dd77d86e362c38c43",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro Max",
+    "speicher": "1 TB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1199.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "9426a9e8-85b7-451f-88c8-b068c96a5624",
@@ -599,7 +893,21 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-7101f27fe05bb9c0f1eb",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro Max",
+    "speicher": "2 TB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 1449.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "d7ae7dc9-2248-4654-a411-d735d36a0834",
@@ -613,7 +921,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-396de8c3293c8c938b72",
@@ -627,21 +935,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "f07d5dcf-4688-4a95-bac9-e67a3e439b03",
-    "marke": "Apple",
-    "modell": "iPhone 17 Pro Max",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 1059.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-e0aa968108658bed61a0",
@@ -655,63 +949,21 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
-    "id": "pos-98f0d9ca9039f4f12796",
-    "marke": "Apple",
-    "modell": "iPhone 17 Pro Max",
-    "speicher": "256 GB",
-    "farbe": "Cosmic Orange",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1149.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "pos-9d592836bf919185be69",
-    "marke": "Apple",
-    "modell": "iPhone 17 Pro Max",
-    "speicher": "256 GB",
-    "farbe": "Deep Blue",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1149.99,
-    "menge": 3,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "pos-169cddd5af990ed7e740",
-    "marke": "Apple",
-    "modell": "iPhone 17 Pro Max",
-    "speicher": "256 GB",
-    "farbe": "Silver",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1149.99,
-    "menge": 4,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "pos-5ced178d73438c957e1b",
+    "id": "pos-a4b5b551efaf21861b3c",
     "marke": "Apple",
     "modell": "iPhone 17 Pro Max",
     "speicher": "256 GB",
     "farbe": "",
     "kategorie": "smartphones",
     "zustand": "neu",
-    "preis": 1149.99,
-    "menge": 7,
+    "preis": 1149,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-b87dc2aafd9b629c180a",
@@ -722,10 +974,10 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 1199.99,
-    "menge": 3,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-730b2539ea5060a63cf7",
@@ -739,7 +991,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-27db4b5bae4a254b3d0c",
@@ -753,21 +1005,91 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
-    "id": "20e2bcae-f1a9-4e19-9276-54bd84401ea8",
+    "id": "pos-cdd99c0f633dcc79e754",
     "marke": "Apple",
-    "modell": "iPhone Air",
+    "modell": "iPhone 18 Pro",
+    "speicher": "256 GB",
+    "farbe": "Burgundy",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 499.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-24c0c99ac74bcd6e1efc",
+    "marke": "Apple",
+    "modell": "iPhone 18 Pro",
     "speicher": "256 GB",
     "farbe": "",
     "kategorie": "smartphones",
     "zustand": "neu",
-    "preis": 819.99,
+    "preis": 1419,
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-e223978b0477dcd659c2",
+    "marke": "Apple",
+    "modell": "iPhone 18 Pro",
+    "speicher": "256 GB",
+    "farbe": "Blue",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1419.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-4ab37002dcdbf4baab82",
+    "marke": "Apple",
+    "modell": "iPhone 18 Pro",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1419.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-09da94cfb3c1f8b2b79e",
+    "marke": "Apple",
+    "modell": "iPhone 18 Pro",
+    "speicher": "256 GB",
+    "farbe": "Burgundy",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1499.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-aa8f6c4c2105afd4dac7",
+    "marke": "Apple",
+    "modell": "iPhone 18 Pro Max",
+    "speicher": "1 TB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 2199.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "8e77ca43-dc7b-4d9e-b3c5-1002ee9ce537",
@@ -781,21 +1103,21 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
-    "id": "pos-089f16b89d12189df612",
+    "id": "pos-81e1fbb870743efff73e",
     "marke": "Apple",
-    "modell": "iPhone XR",
-    "speicher": "64 GB",
-    "farbe": "",
+    "modell": "iPhone X",
+    "speicher": "256 GB",
+    "farbe": "Schwarz",
     "kategorie": "smartphones",
     "zustand": "gebraucht",
-    "preis": 129.99,
+    "preis": 150,
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "5a6c6119-a725-4f09-bc5d-dd5054e5d4b1",
@@ -809,7 +1131,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "bfcc5cec-091a-4fb4-b815-ab9464f30622",
@@ -823,7 +1145,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "add1c43c-0b52-4bda-9deb-f9a27a2dae1d",
@@ -837,7 +1159,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "71add418-39e6-42d9-b255-e5944c85a25c",
@@ -848,10 +1170,10 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 189.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-9f0bccacb1217469e022",
@@ -865,21 +1187,35 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
-    "id": "86425d37-868b-443c-a396-cec3370908a0",
-    "marke": "Google",
-    "modell": "Pixel 9 Pro XL",
-    "speicher": "128 GB",
+    "id": "pos-b1d98249c049506c8741",
+    "marke": "Asus",
+    "modell": "Asus Zenfone 11 Ultra",
+    "speicher": "256 GB",
     "farbe": "",
     "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 599.99,
+    "zustand": "gebraucht",
+    "preis": 220,
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-747c4fb9b95bc01b0689",
+    "marke": "Googel",
+    "modell": "Pixel 11 Pro Xl",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 899.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-4260f8eb58a90a099526",
@@ -893,7 +1229,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-3c1336b4a02e8a452a87",
@@ -907,7 +1243,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-fd01dccf39ce3fc1af2f",
@@ -921,21 +1257,21 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
-    "id": "pos-35a494fba6cae6d5e71f",
-    "marke": "Ray-Ban",
-    "modell": "Meta Wayfarer Gen 2",
-    "speicher": "",
-    "farbe": "Matte Black",
+    "id": "pos-3156d7133a10ade2477b",
+    "marke": "Poco",
+    "modell": "X7 Pro",
+    "speicher": "256 GB",
+    "farbe": "Schwarz",
     "kategorie": "smartphones",
     "zustand": "neu",
-    "preis": 269.99,
-    "menge": 2,
+    "preis": 319.99,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-c8df73f64a5b8bb03b68",
@@ -946,10 +1282,10 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 269.99,
-    "menge": 3,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-d7604ecdd30f6fb3cd60",
@@ -963,7 +1299,77 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-733622c6183df827c208",
+    "marke": "Redmi",
+    "modell": "17",
+    "speicher": "128 GB",
+    "farbe": "Grün",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 179.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-672d358598d279da4e2b",
+    "marke": "Redmi",
+    "modell": "17",
+    "speicher": "256 GB",
+    "farbe": "Black",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 209.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-6440e01b6fb6c969df3a",
+    "marke": "Redmi",
+    "modell": "17C 5G",
+    "speicher": "128 GB",
+    "farbe": "Brown",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 199.99,
+    "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-5c8d44d6d333b947c85d",
+    "marke": "Redmi",
+    "modell": "A5",
+    "speicher": "128 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 129.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-ae2bdf66c84a703217da",
+    "marke": "Redmi",
+    "modell": "Note 15 Pro+",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 379.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "e7501db7-c288-4c17-9af7-dc40c27eb551",
@@ -977,7 +1383,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "0d1669d6-b6b4-4404-8d00-0cdee593487a",
@@ -991,21 +1397,63 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
-    "id": "d62e8528-b120-43c6-ac6f-6a6f54412b8d",
+    "id": "pos-ab0d154b0f50a152b0bc",
     "marke": "Samsung",
     "modell": "Galaxy A07",
     "speicher": "64 GB",
-    "farbe": "",
+    "farbe": "Schwarz",
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 109.99,
-    "menge": 3,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-bca09004864b0cc49581",
+    "marke": "Samsung",
+    "modell": "Galaxy A07",
+    "speicher": "64 GB",
+    "farbe": "Green",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 109.99,
+    "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-8b995e98f88cbc1f1454",
+    "marke": "Samsung",
+    "modell": "Galaxy A07",
+    "speicher": "64 GB",
+    "farbe": "Lila",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 119.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-ab412f2dcf0a799f0249",
+    "marke": "Samsung",
+    "modell": "Galaxy A07",
+    "speicher": "64 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 129.94,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "59504c62-390f-48ab-8faa-8983f5309025",
@@ -1019,7 +1467,35 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-2ae10d79e1f7404ecff6",
+    "marke": "Samsung",
+    "modell": "Galaxy A07",
+    "speicher": "128 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 129.98,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-64635daa53c525eed85f",
+    "marke": "Samsung",
+    "modell": "Galaxy A07",
+    "speicher": "128 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 129.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "b28f4a02-b690-41d0-bc0b-bf8776f7f628",
@@ -1033,7 +1509,35 @@
     "menge": 4,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-cea417c79cb12e93f2d2",
+    "marke": "Samsung",
+    "modell": "Galaxy A07s",
+    "speicher": "64 GB",
+    "farbe": "Green",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 139.99,
+    "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-345369f9f88de8820478",
+    "marke": "Samsung",
+    "modell": "Galaxy A07s",
+    "speicher": "64 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 139.99,
+    "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "170e2763-59c7-4e59-aea2-711ae5a9cd93",
@@ -1047,7 +1551,7 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-b86cb7d4107d24be5421",
@@ -1058,10 +1562,10 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 149.99,
-    "menge": 2,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-dc79fae35b22d9dd4f40",
@@ -1075,7 +1579,21 @@
     "menge": 3,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-ea61c31977b3e73db45c",
+    "marke": "Samsung",
+    "modell": "Galaxy A17",
+    "speicher": "128 GB",
+    "farbe": "Black",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 159.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "9e618351-8fa8-4d0d-90ec-ff5b33f5b094",
@@ -1089,7 +1607,21 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-583c229fa20eab82ecc5",
+    "marke": "Samsung",
+    "modell": "Galaxy A17",
+    "speicher": "256 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 199.99,
+    "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "b5c63cb6-2552-4db5-bb5e-afd96a70aac9",
@@ -1103,21 +1635,7 @@
     "menge": 4,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "pos-0243eb223ad6b2d3a94c",
-    "marke": "Samsung",
-    "modell": "Galaxy A17 5G",
-    "speicher": "128 GB",
-    "farbe": "Schwarz",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 179.99,
-    "menge": 1,
-    "bild": "https://asabsxcfjdhedbeaudhi.supabase.co/storage/v1/object/public/produktbilder/8806097642671.jpg",
-    "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "9d1ee4b1-9e04-422c-aee3-08f4e5b9a4dc",
@@ -1131,7 +1649,7 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-9dfafa153c08b88befe5",
@@ -1145,7 +1663,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-a8d88920d703e6d64dce",
@@ -1159,7 +1677,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-acf9e114c409a151958e",
@@ -1173,7 +1691,35 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-8f82a1777c6ecf0a0f22",
+    "marke": "Samsung",
+    "modell": "Galaxy A26 5G",
+    "speicher": "128 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 209.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-e49aa3205406f532a130",
+    "marke": "Samsung",
+    "modell": "Galaxy A26 5G",
+    "speicher": "128 GB",
+    "farbe": "Silver",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 209.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-ecafb81e1463aa9e5466",
@@ -1187,7 +1733,35 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-6c65b670c6769523367e",
+    "marke": "Samsung",
+    "modell": "Galaxy A27 5G",
+    "speicher": "128 GB",
+    "farbe": "Blue",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 229.99,
+    "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-d059783ff64dcdbc813b",
+    "marke": "Samsung",
+    "modell": "Galaxy A27 5G",
+    "speicher": "128 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 229.99,
+    "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-f2d65fca71f355e202b3",
@@ -1201,7 +1775,7 @@
     "menge": 3,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-7668a0175de1dfb5c43c",
@@ -1215,7 +1789,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-690407be2dfd5857266f",
@@ -1229,7 +1803,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-12922b9c46a1e22696ad",
@@ -1243,7 +1817,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "7586b95f-bc40-47dc-b768-b4a90010e17d",
@@ -1257,7 +1831,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-cf3508e4100dfba05e0d",
@@ -1271,7 +1845,7 @@
     "menge": 6,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-0aa1330e084d665137b7",
@@ -1285,7 +1859,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-eb9685caf0927f25264c",
@@ -1299,7 +1873,7 @@
     "menge": 4,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "34fe4504-fcc9-4895-a2fd-056f71c9d529",
@@ -1313,7 +1887,7 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "ed1fa38e-6fc9-4f0d-bc8f-696ada238d3c",
@@ -1327,7 +1901,77 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-88237d20602c727a79a5",
+    "marke": "Samsung",
+    "modell": "Galaxy A57",
+    "speicher": "128 GB",
+    "farbe": "Grau",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 329,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-ab2e41a403d03d789366",
+    "marke": "Samsung",
+    "modell": "Galaxy A57",
+    "speicher": "128 GB",
+    "farbe": "Gray",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 329,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-6f02a8d439f3f6528952",
+    "marke": "Samsung",
+    "modell": "Galaxy A57",
+    "speicher": "128 GB",
+    "farbe": "Navy",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 329.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-d8fbd6e0cab304624606",
+    "marke": "Samsung",
+    "modell": "Galaxy A57",
+    "speicher": "256 GB",
+    "farbe": "IceBlue",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 359.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-55ddd1f7023a27303b87",
+    "marke": "Samsung",
+    "modell": "Galaxy A57",
+    "speicher": "256 GB",
+    "farbe": "Lilac",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 359.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-180398982c6ec7ff730e",
@@ -1341,7 +1985,21 @@
     "menge": 3,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-b1102035f0d3252145be",
+    "marke": "Samsung",
+    "modell": "Galaxy A57 5G",
+    "speicher": "256 GB",
+    "farbe": "Nevy",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 359.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-e633ac43d824c94c365a",
@@ -1352,10 +2010,24 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 359.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-2aef5492feba17b179bf",
+    "marke": "Samsung",
+    "modell": "Galaxy Fold 6",
+    "speicher": "512 GB",
+    "farbe": "blau",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 679,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "de87e5e3-16a6-443c-9f83-9e65a8ccf42b",
@@ -1369,7 +2041,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-6eb2b9c13c91056d0505",
@@ -1383,7 +2055,7 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-b6f6eb934eb0928123af",
@@ -1397,7 +2069,7 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-da190ac8d6cc157e98bd",
@@ -1411,7 +2083,21 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-ac21749b60b965b31cc9",
+    "marke": "Samsung",
+    "modell": "Galaxy S24 Ultra",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 499.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "8c75ffb9-5443-40e3-bf02-1ccba276a143",
@@ -1425,7 +2111,21 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-c21aab73abd5e18b6ba6",
+    "marke": "Samsung",
+    "modell": "Galaxy S26",
+    "speicher": "256 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 649.97,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-16ff4fcfbb79a10e05f2",
@@ -1439,7 +2139,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-27a184e41539523b38bf",
@@ -1453,7 +2153,21 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-98d31f2375ddcdf5dd5f",
+    "marke": "Samsung",
+    "modell": "Galaxy S26 Ultra",
+    "speicher": "256 GB",
+    "farbe": "Blue",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 849.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-acced54a9675f711fe79",
@@ -1467,7 +2181,21 @@
     "menge": 1,
     "bild": "https://asabsxcfjdhedbeaudhi.supabase.co/storage/v1/object/public/produktbilder/8806097827092.jpg",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-274986e56a317d9d443c",
+    "marke": "Samsung",
+    "modell": "Galaxy S26 Ultra",
+    "speicher": "256 GB",
+    "farbe": "Schwarz",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 849.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-ef489a6ca184c90bfd43",
@@ -1478,10 +2206,24 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 849.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-e38465c0ffc1392f1fdb",
+    "marke": "Samsung",
+    "modell": "Galaxy S26 Ultra",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 850,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-6659236ea23ca285a7eb",
@@ -1492,24 +2234,10 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 999.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "https://asabsxcfjdhedbeaudhi.supabase.co/storage/v1/object/public/produktbilder/8806097827016.jpg",
     "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "pos-51523b00d3f96b4f4c15",
-    "marke": "Samsung",
-    "modell": "Galaxy Watch Ultra2",
-    "speicher": "",
-    "farbe": "Titaniu Gray",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 519.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-ebaa347d3bf70440c8e4",
@@ -1523,21 +2251,7 @@
     "menge": 2,
     "bild": "https://asabsxcfjdhedbeaudhi.supabase.co/storage/v1/object/public/produktbilder/8806099273163.jpg",
     "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "9ede6df5-d18d-45ee-bdee-92486124ed91",
-    "marke": "Samsung",
-    "modell": "Galaxy Z Flip 5",
-    "speicher": "512 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 599.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-8aaa2504650d8d1e948b",
@@ -1551,7 +2265,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-feef5363aeead4e4fe3e",
@@ -1565,7 +2279,7 @@
     "menge": 1,
     "bild": "https://asabsxcfjdhedbeaudhi.supabase.co/storage/v1/object/public/produktbilder/8806099191832.jpg",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "218cecd5-d843-4e4b-abcd-bf1ee90aac1d",
@@ -1579,7 +2293,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-26571c0dead9ec5f4fa4",
@@ -1593,21 +2307,7 @@
     "menge": 1,
     "bild": "https://asabsxcfjdhedbeaudhi.supabase.co/storage/v1/object/public/produktbilder/8806097423720.jpg",
     "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "eee9a2c7-4318-4dd4-87a5-b4732a9cd1c5",
-    "marke": "Sony",
-    "modell": "Xperia 10 IV",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 99.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "3e3f4071-7697-4659-a3e6-946f5984e470",
@@ -1621,7 +2321,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-3b14b00864af3c476ab4",
@@ -1635,21 +2335,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "7f1f5143-2532-45b2-a3f0-d8b19b35f7c4",
-    "marke": "Xiaomi",
-    "modell": "17T",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 379.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "669cb19f-9371-4c3c-bbf3-48ef2cd50ffe",
@@ -1663,7 +2349,21 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-2e816bb08e8a2cb38d96",
+    "marke": "Xiaomi",
+    "modell": "Redmi A5",
+    "speicher": "64 GB",
+    "farbe": "Midnight Black",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 104.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "74904601-3467-4474-b50a-307071e455cf",
@@ -1677,7 +2377,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "866f9af1-5063-4668-9ad4-858c0cdfbbd1",
@@ -1691,7 +2391,7 @@
     "menge": 2,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-3537b3f3941866c3785d",
@@ -1705,7 +2405,21 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-bea81e1bb8e022fd5e5a",
+    "marke": "Apple",
+    "modell": "iPad A16",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "tablets",
+    "zustand": "gebraucht",
+    "preis": 299,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-ce0a038cf9d25615c1af",
@@ -1719,7 +2433,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-ed6e0368f1990ccda236",
@@ -1733,7 +2447,21 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-0d26f645ad46890ac976",
+    "marke": "Apple",
+    "modell": "iPad Air 11—Inch M4",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "tablets",
+    "zustand": "gebraucht",
+    "preis": 599,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-2df74c9edbb165f10ee7",
@@ -1747,7 +2475,21 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-534ec34eb722b74e4c46",
+    "marke": "Apple",
+    "modell": "iPad Mini 7 (2024)",
+    "speicher": "128 GB",
+    "farbe": "Silver",
+    "kategorie": "tablets",
+    "zustand": "gebraucht",
+    "preis": 449.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-2eb2153fd342c8cbea30",
@@ -1761,35 +2503,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "pos-2b130edd5524c7de7918",
-    "marke": "Apple",
-    "modell": "iPad Pro 9,7",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "tablets",
-    "zustand": "gebraucht",
-    "preis": 149.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "pos-6a14a65cea5ee565013c",
-    "marke": "Apple",
-    "modell": "iPad Pro 10,5 CELLULAR",
-    "speicher": "64 GB",
-    "farbe": "",
-    "kategorie": "tablets",
-    "zustand": "gebraucht",
-    "preis": 179.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-677680774786850e5d52",
@@ -1803,7 +2517,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-c45eb1ce972e6ff3ce0b",
@@ -1817,7 +2531,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-97a3e116652ab30ceae7",
@@ -1831,7 +2545,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-4a6219c8e337c41b735d",
@@ -1845,7 +2559,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-214b25e474369977e609",
@@ -1859,7 +2573,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-80dbe400ceec32336db8",
@@ -1873,7 +2587,63 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-5e9b2d46708180d494e4",
+    "marke": "Apple",
+    "modell": "keyboard",
+    "speicher": "",
+    "farbe": "Silver",
+    "kategorie": "tablets",
+    "zustand": "gebraucht",
+    "preis": 150,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-1587e8ae264924712896",
+    "marke": "Gvill",
+    "modell": "G93",
+    "speicher": "128 GB",
+    "farbe": "Brown",
+    "kategorie": "tablets",
+    "zustand": "neu",
+    "preis": 79,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-3bb632e726d0f2064a00",
+    "marke": "Kids Tab",
+    "modell": "G92",
+    "speicher": "128 GB",
+    "farbe": "Schwarz",
+    "kategorie": "tablets",
+    "zustand": "neu",
+    "preis": 79,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-0a6ddc6320cd48971db1",
+    "marke": "Lenovo",
+    "modell": "LEGION Y700",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "tablets",
+    "zustand": "gebraucht",
+    "preis": 99.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-69fdde3059a4a05f9379",
@@ -1887,7 +2657,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "3cb96faa-d7dd-4901-bb42-f0593386ace0",
@@ -1901,7 +2671,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-100c1e626bd03c143927",
@@ -1915,35 +2685,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "pos-4fc7eb84dff12ea06612",
-    "marke": "Samsung",
-    "modell": "Galaxy Tab S8",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "tablets",
-    "zustand": "gebraucht",
-    "preis": 229.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "pos-fb4ad3e89e1137af20d5",
-    "marke": "Samsung",
-    "modell": "Galaxy Tab S10 FE (10,9\")",
-    "speicher": "128 GB",
-    "farbe": "Gray",
-    "kategorie": "tablets",
-    "zustand": "neu",
-    "preis": 329.99,
-    "menge": 1,
-    "bild": "https://asabsxcfjdhedbeaudhi.supabase.co/storage/v1/object/public/produktbilder/8806097195740.jpg",
-    "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-6bba479c02582efbdb09",
@@ -1957,7 +2699,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-5f1b1e34723ad72e30d2",
@@ -1971,7 +2713,21 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-d35aadc49c4dc7fc6962",
+    "marke": "Apple",
+    "modell": "Watch Series 11 (GPS)",
+    "speicher": "GPS",
+    "farbe": "Black",
+    "kategorie": "smartwatches",
+    "zustand": "neu",
+    "preis": 349.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-581334ae7bf24d60d303",
@@ -1985,21 +2741,49 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
-    "id": "pos-b8bccbff53ad62712332",
-    "marke": "Apple",
-    "modell": "Watch Ultra 3",
+    "id": "pos-c29de746f594a0998935",
+    "marke": "Google",
+    "modell": "Pixel watch LTE",
     "speicher": "",
     "farbe": "",
     "kategorie": "smartwatches",
     "zustand": "neu",
-    "preis": 699.99,
-    "menge": 2,
+    "preis": 99.99,
+    "menge": 4,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-69f334de1a3bf1f0955e",
+    "marke": "Google",
+    "modell": "Pixel watch LTE",
+    "speicher": "",
+    "farbe": "",
+    "kategorie": "smartwatches",
+    "zustand": "neu",
+    "preis": 100,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-0947f21599599ca6f7cf",
+    "marke": "Apple",
+    "modell": "MacBook Air 13 M3",
+    "speicher": "8 GB · 256 GB",
+    "farbe": "",
+    "kategorie": "laptops",
+    "zustand": "gebraucht",
+    "preis": 799.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-6f147b7f4a7f02e15652",
@@ -2013,21 +2797,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
-  },
-  {
-    "id": "pos-4ba0168c073028951f5b",
-    "marke": "Apple",
-    "modell": "MacBook Air 2020",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "laptops",
-    "zustand": "gebraucht",
-    "preis": 319.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-384384a438235094250f",
@@ -2041,7 +2811,7 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
   },
   {
     "id": "pos-9123b2b5a566d31d3e89",
@@ -2055,6 +2825,20 @@
     "menge": 1,
     "bild": "",
     "aktiv": true,
-    "datum": "2026-09-04"
+    "datum": "2026-09-27"
+  },
+  {
+    "id": "pos-08bd82b52e02aeb6c8d1",
+    "marke": "Samsung",
+    "modell": "Galaxy Laptop",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "laptops",
+    "zustand": "gebraucht",
+    "preis": 199.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-09-27"
   }
 ]
