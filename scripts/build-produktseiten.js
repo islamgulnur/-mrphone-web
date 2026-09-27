@@ -214,7 +214,7 @@ function header() {
     <a href="/" class="logo-link" aria-label="Mr. Phone – Startseite">
       <img src="/images/logo.png" alt="Mr. Phone – Handy Verkauf, Ankauf &amp; Reparatur Frankfurt Zeil" width="800" height="219" class="logo">
     </a>
-    <span class="status-badge status-badge--mobile" data-status-badge aria-live="polite"><span class="status-dot"></span><span class="status-text">Öffnungszeiten werden geladen…</span></span>
+    <span class="status-badge status-badge--mobile" data-status-badge aria-live="polite"><span class="status-dot"></span><span class="status-text">Mo–Fr 9:30–21:00 Uhr · Sa 9:30–21:30 Uhr · So geschlossen</span></span>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <label for="nav-toggle" class="burger-label" aria-label="Menü öffnen"><span></span><span></span><span></span></label>
     <nav class="main-nav" aria-label="Hauptnavigation">
@@ -229,14 +229,14 @@ function header() {
       <div class="nav-mobile-actions">
         <a href="/en/sortiment.html" class="lang-switch" hreflang="en" lang="en">English version</a>
         <a href="tel:+496995632281" class="btn btn-outline-dark">069 95632281 anrufen</a>
-        <a href="https://wa.me/496995632281" class="btn btn-primary" target="_blank" rel="noopener">Per WhatsApp anfragen</a>
+        <a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" class="btn btn-primary" target="_blank" rel="noopener">Per WhatsApp anfragen</a>
       </div>
     </nav>
     <div class="header-cta">
       <a href="/en/sortiment.html" class="lang-switch" hreflang="en" lang="en">EN</a>
-      <span class="status-badge status-badge--desktop" data-status-badge aria-live="polite"><span class="status-dot"></span><span class="status-text">Öffnungszeiten werden geladen…</span></span>
+      <span class="status-badge status-badge--desktop" data-status-badge aria-live="polite"><span class="status-dot"></span><span class="status-text">Mo–Fr 9:30–21:00 Uhr · Sa 9:30–21:30 Uhr · So geschlossen</span></span>
       <a href="tel:+496995632281" class="header-phone">069 95632281</a>
-      <a href="https://wa.me/496995632281" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </div>
 </header>`;
@@ -250,7 +250,7 @@ function footer() {
         <img src="/images/logo.png" alt="Mr. Phone – Handy Verkauf, Ankauf &amp; Reparatur Frankfurt Zeil" width="800" height="219" class="footer-logo" loading="lazy">
         <p>Ihr Handy-Fachgeschäft mitten auf der Zeil in Frankfurt am Main: Verkauf, Ankauf und Reparatur aus einer Hand.</p>
       </div>
-      <div class="footer-col"><h3>Kontakt</h3><ul><li>Zeil 115–117, 60313 Frankfurt am Main</li><li><a href="tel:+496995632281">069 95632281</a></li><li><a href="https://wa.me/496995632281" target="_blank" rel="noopener">WhatsApp schreiben</a></li><li><a href="mailto:mr.phone.zeil@gmail.com">mr.phone.zeil@gmail.com</a></li></ul></div>
+      <div class="footer-col"><h3>Kontakt</h3><ul><li>Zeil 115–117, 60313 Frankfurt am Main</li><li><a href="tel:+496995632281">069 95632281</a></li><li><a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" target="_blank" rel="noopener">WhatsApp schreiben</a></li><li><a href="mailto:mr.phone.zeil@gmail.com">mr.phone.zeil@gmail.com</a></li></ul></div>
       <div class="footer-col"><h3>Navigation</h3><ul><li><a href="/handy-reparatur-frankfurt.html">Handy Reparatur Frankfurt</a></li><li><a href="/handy-ankauf-frankfurt.html">Handy Ankauf Frankfurt</a></li><li><a href="/sortiment.html">Unser Sortiment</a></li><li><a href="/ratgeber/">Ratgeber</a></li><li><a href="/kontakt.html">Kontakt &amp; Öffnungszeiten</a></li><li><a href="https://g.page/r/CS-7cA2W6fQUEBM/review" target="_blank" rel="noopener">Google Bewertung abgeben</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span class="bewertungen-kompakt" data-bewertungen-kompakt hidden></span><span>© 2026 Mr. Phone GbR, Zeil 115–117, 60313 Frankfurt am Main</span><span><a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></span></div>
@@ -267,7 +267,7 @@ function produktSeite(gruppe, alleGruppen, bilder) {
   const meta = beschreibung(name, abPreis, sichtbareAngebote.length);
   const bild = findeBild(gruppe, bilder);
   const bildAbsolute = bild ? absoluteBildUrl(bild) : "";
-  const whatsapp = `https://wa.me/496995632281?text=${encodeURIComponent(`Hallo, ich interessiere mich für das ${name} aus Ihrem Sortiment. Ist es noch verfügbar?`)}`;
+  const whatsapp = `https://wa.me/496995632281?text=${encodeURIComponent(`Hallo Mr. Phone, ich interessiere mich für ein Gerät aus Ihrem Sortiment: ${name}`)}`;
   const angebote = gruppe.items.map((item, index) => ({
     "@type": "Offer",
     sku: sauber(item.id) || `${gruppe.slug}-${index + 1}`,
@@ -343,7 +343,7 @@ ${header()}
   ${verwandte ? `<section class="produkt-section"><div class="produkt-container"><p class="produkt-eyebrow">Weitere Auswahl</p><h2>Ähnliche verfügbare Geräte</h2><ul class="produkt-links">${verwandte}</ul><p><a href="${kategorie.landing}">Mehr ${html(kategorie.label)} in Frankfurt ansehen →</a></p></div></section>` : ""}
 </main>
 ${footer()}
-<a href="https://wa.me/496995632281" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">💬</a>
+<a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">💬</a>
 <script defer src="/main.js"></script>
 </body>
 </html>
@@ -371,7 +371,7 @@ function indexSeite(gruppen) {
   const ogImage = `${BASE_URL}/images/mr-phone-zeil-frankfurt-aussenansicht.jpg`;
   return `<!DOCTYPE html>
 <html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Verfügbare Handys & Geräte | Mr. Phone Frankfurt</title><meta name="description" content="${html(meta)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="${canonical}"><link rel="icon" type="image/png" href="/images/logo.png"><meta property="og:type" content="website"><meta property="og:site_name" content="Mr. Phone"><meta property="og:title" content="Verfügbare Handys & Geräte | Mr. Phone Frankfurt"><meta property="og:description" content="${html(meta)}"><meta property="og:image" content="${ogImage}"><meta property="og:url" content="${canonical}"><meta property="og:locale" content="de_DE"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Verfügbare Handys & Geräte | Mr. Phone Frankfurt"><meta name="twitter:description" content="${html(meta)}"><meta name="twitter:image" content="${ogImage}"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/dark-theme.css"><link rel="stylesheet" href="/produktseiten.css"><script type="application/ld+json">${schemaJson(breadcrumb)}</script><script type="application/ld+json">${schemaJson(itemList)}</script></head>
-<body class="produkt-page">${PAGE_MARKER}<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>${header()}<main id="inhalt"><div class="produkt-container"><nav class="produkt-breadcrumb" aria-label="Breadcrumb"><a href="/">Startseite</a><span>›</span><span>Verfügbare Geräte</span></nav></div><section class="produkt-index-hero"><div class="produkt-container"><p class="produkt-eyebrow">Direkt aus unserem Ladenbestand</p><h1>Aktuell verfügbare Geräte bei Mr. Phone Frankfurt</h1><p class="produkt-lead">Hier finden Sie ${gruppen.length} Gerätemodelle, die derzeit bei uns auf der Zeil geführt werden. Öffnen Sie ein Modell für Varianten, Zustand und aktuelle Preise.</p><a class="produkt-btn" href="/sortiment.html">Kompletten Bestand mit Filtern öffnen</a></div></section><div class="produkt-container produkt-index">${bereiche}</div></main>${footer()}<a href="https://wa.me/496995632281" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">💬</a><script defer src="/main.js"></script></body></html>\n`;
+<body class="produkt-page">${PAGE_MARKER}<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>${header()}<main id="inhalt"><div class="produkt-container"><nav class="produkt-breadcrumb" aria-label="Breadcrumb"><a href="/">Startseite</a><span>›</span><span>Verfügbare Geräte</span></nav></div><section class="produkt-index-hero"><div class="produkt-container"><p class="produkt-eyebrow">Direkt aus unserem Ladenbestand</p><h1>Aktuell verfügbare Geräte bei Mr. Phone Frankfurt</h1><p class="produkt-lead">Hier finden Sie ${gruppen.length} Gerätemodelle, die derzeit bei uns auf der Zeil geführt werden. Öffnen Sie ein Modell für Varianten, Zustand und aktuelle Preise.</p><a class="produkt-btn" href="/sortiment.html">Kompletten Bestand mit Filtern öffnen</a></div></section><div class="produkt-container produkt-index">${bereiche}</div></main>${footer()}<a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">💬</a><script defer src="/main.js"></script></body></html>\n`;
 }
 
 function sitemapMitProdukten(ursprung, gruppen) {
