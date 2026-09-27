@@ -31,7 +31,7 @@
 <!-- Nur auf index.html: Schwarz+Grün-Glassmorphism-Reskin, siehe .design-preview/homepage-prototype.html.
      Systemschriften statt Google Fonts, deshalb kein Inter-Link mehr auf dieser Seite. -->
 <link rel="stylesheet" href="index-styles.css">
-<link rel="preload" as="image" href="images/mr-phone-zeil-frankfurt-aussenansicht-720.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="/videos/hero/hero-home-poster.webp" type="image/webp" fetchpriority="high">
 
 <script type="application/ld+json" id="schema-localbusiness">
 {
@@ -196,14 +196,11 @@
 <main id="main">
 
   <!-- HERO -->
-  <section class="hero hero-home">
-    <div class="container hero-grid">
-      <div class="hero-image-wrap">
-        <picture>
-          <source srcset="images/mr-phone-zeil-frankfurt-aussenansicht-720.webp" type="image/webp">
-          <img src="images/mr-phone-zeil-frankfurt-aussenansicht.jpg" alt="Außenansicht des Handy Shops Mr. Phone auf der Zeil in Frankfurt am Main" width="720" height="1280" fetchpriority="high" decoding="async">
-        </picture>
-      </div>
+  <section class="hero hero-home hero-has-video">
+    <div class="hero-media" data-hero-video aria-hidden="true">
+      <video data-hero-video-el muted loop playsinline preload="none" poster="/videos/hero/hero-home-poster.webp" data-webm="/videos/hero/hero-home-1280.webm" data-mp4="/videos/hero/hero-home-1280.mp4" data-mp4-mobile="/videos/hero/hero-home-720.mp4"></video>
+    </div>
+    <div class="container">
       <div class="hero-content">
         <span class="hero-badge">Mitten auf der Zeil in Frankfurt</span>
         <h1>Handy Shop Frankfurt Zeil: Verkauf, Ankauf &amp; Reparatur bei Mr. Phone</h1>
@@ -724,6 +721,7 @@
 <a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">💬</a>
 
 <script defer src="main.js"></script>
+<script defer src="hero-video.js"></script>
 <script src="phone-bg.js" defer></script>
 <script src="admin-zugriff.js" defer></script>
 <!-- GoatCounter Analytics (privacy-freundlich, keine Cookies) – Setup: siehe ANALYTICS-SETUP.md -->
