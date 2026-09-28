@@ -6,20 +6,27 @@
     if (!name || !window.goatcounter || typeof window.goatcounter.count !== "function") return;
     window.goatcounter.count({
       path: "event/" + name,
-      title: name + " · " + window.location.pathname,
+      title: window.location.pathname,
       event: true,
     });
   }
 
   window.mrphoneTrack = trackConversion;
 
+  // WhatsApp-/Anruf-Klicks per Event-Delegation auf document erfassen (ein Listener
+  // fuer die ganze Seite), damit auch per JS erzeugte/umgeschriebene Links (Ankaufsrechner,
+  // Sortiment-Produktseiten) erfasst werden, ohne die Links selbst anfassen zu muessen.
+  // Quelle kommt aus data-track am Link (oder einem umschliessenden Element), Fallback
+  // "sonstige". Nie blockierend: kein preventDefault, trackConversion() bricht bei
+  // fehlendem GoatCounter (z.B. Adblocker) still ab.
   function initConversionTracking() {
     document.addEventListener("click", function (event) {
       var link = event.target.closest && event.target.closest("a[href]");
       if (!link) return;
       var href = link.getAttribute("href") || "";
-      if (/^https:\/\/wa\.me\//i.test(href)) trackConversion("whatsapp-klick");
-      if (/^tel:/i.test(href)) trackConversion("anruf-klick");
+      var quelle = (link.closest("[data-track]") && link.closest("[data-track]").getAttribute("data-track")) || "sonstige";
+      if (/^https:\/\/wa\.me\//i.test(href)) trackConversion("whatsapp-" + quelle);
+      if (/^tel:/i.test(href)) trackConversion("anruf-" + quelle);
       if (/google\.[^/]+\/maps|maps\.app\.goo\.gl/i.test(href)) trackConversion("route-klick");
       if (link.closest(".produkt-angebot, [data-bestand-grid], [data-angebote-grid]")) trackConversion("produkt-anfrage");
     });
