@@ -132,7 +132,7 @@
 <main id="main">
 
   <nav class="breadcrumb container" aria-label="Breadcrumb">
-    <a href="index.html">Startseite</a> / Kontakt
+    <a href="/">Startseite</a> / Kontakt
   </nav>
 
   <!-- PAGE HEADER -->
@@ -175,12 +175,11 @@
       </div>
       <div class="split-media">
         <div class="map-embed">
-          <iframe
-            src="https://www.google.com/maps?q=Zeil+115-117,+60313+Frankfurt+am+Main&output=embed"
-            title="Standort von Mr. Phone auf der Zeil in Frankfurt am Main"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+          <div class="map-consent" data-map-consent data-map-src="https://www.google.com/maps?q=Zeil+115-117,+60313+Frankfurt+am+Main&output=embed" data-map-title="Standort von Mr. Phone auf der Zeil in Frankfurt am Main">
+            <svg class="map-consent-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+            <button type="button" class="btn btn-primary" data-map-load-btn>Karte laden</button>
+            <p class="map-consent-text">Beim Laden der Karte werden Daten an Google übertragen. Mehr in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+          </div>
           <a href="https://www.google.com/maps/dir/?api=1&destination=Zeil+115-117,+60313+Frankfurt+am+Main" class="btn btn-outline" target="_blank" rel="noopener" style="margin-top:0.8rem;display:inline-block;">Route planen</a>
         </div>
       </div>
@@ -258,6 +257,7 @@
 <a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">💬</a>
 
 <script defer src="main.js"></script>
+<script defer src="map-consent.js"></script>
 <script defer src="hero-video.js"></script>
 
 <!-- GoatCounter Analytics (privacy-freundlich, keine Cookies) – Setup: siehe ANALYTICS-SETUP.md -->

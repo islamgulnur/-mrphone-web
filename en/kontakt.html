@@ -113,7 +113,7 @@
 <main id="main">
 
   <nav class="breadcrumb container" aria-label="Breadcrumb">
-    <a href="index.html">Home</a> / Contact
+    <a href="/en/">Home</a> / Contact
   </nav>
 
   <!-- PAGE HEADER -->
@@ -156,12 +156,11 @@
       </div>
       <div class="split-media">
         <div class="map-embed">
-          <iframe
-            src="https://www.google.com/maps?q=Zeil+115-117,+60313+Frankfurt+am+Main&output=embed"
-            title="Location of Mr. Phone on the Zeil in Frankfurt am Main"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+          <div class="map-consent" data-map-consent data-map-src="https://www.google.com/maps?q=Zeil+115-117,+60313+Frankfurt+am+Main&output=embed" data-map-title="Location of Mr. Phone on the Zeil in Frankfurt am Main">
+            <svg class="map-consent-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+            <button type="button" class="btn btn-primary" data-map-load-btn>Load map</button>
+            <p class="map-consent-text">Loading the map transfers data to Google. More in our <a href="/en/datenschutz.html">privacy policy</a>.</p>
+          </div>
           <a href="https://www.google.com/maps/dir/?api=1&destination=Zeil+115-117,+60313+Frankfurt+am+Main" class="btn btn-outline" target="_blank" rel="noopener" style="margin-top:0.8rem;display:inline-block;">Get directions</a>
         </div>
       </div>
@@ -238,6 +237,7 @@
 <a href="https://wa.me/496995632281?text=Hello%20Mr.%20Phone%2C%20I%20have%20a%20question%3A%20" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Ask via WhatsApp">💬</a>
 
 <script defer src="/main.js"></script>
+<script defer src="/map-consent.js"></script>
 <script defer src="/hero-video.js"></script>
 
 <!-- GoatCounter Analytics (privacy-friendly, no cookies) – setup: see ANALYTICS-SETUP.md -->
