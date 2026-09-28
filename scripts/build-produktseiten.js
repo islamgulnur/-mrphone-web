@@ -209,7 +209,7 @@ function beschreibung(name, abPreis, anzahl) {
 }
 
 function header() {
-  return `<header class="site-header">
+  return `<header class="site-header" data-track="header">
   <div class="header-inner">
     <a href="/" class="logo-link" aria-label="Mr. Phone – Startseite">
       <img src="/images/logo.png" alt="Mr. Phone – Handy Verkauf, Ankauf &amp; Reparatur Frankfurt Zeil" width="800" height="219" class="logo">
@@ -243,7 +243,7 @@ function header() {
 }
 
 function footer() {
-  return `<footer class="site-footer">
+  return `<footer class="site-footer" data-track="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
@@ -302,7 +302,7 @@ function produktSeite(gruppe, alleGruppen, bilder) {
     const details = [sauber(item.speicher), sauber(item.farbe)].filter(Boolean).join(" · ") || "Standardausführung";
     const menge = Number(item.menge);
     const badgeKlasse = sauber(item.zustand).toLowerCase() === "neu" ? "produkt-badge--neu" : "produkt-badge--gebraucht";
-    return `<article class="produkt-angebot" id="angebot-${index + 1}"><div><h2>${html(details)}</h2><p><span class="produkt-badge ${badgeKlasse}">${html(zustandLabel(item.zustand))}</span> ${menge === 1 ? "1 Stück verfügbar" : `${menge} Stück verfügbar`}</p></div><strong>${html(preisSpanne(item))}</strong><a class="produkt-btn produkt-btn--klein" href="${html(whatsapp)}" target="_blank" rel="noopener">Verfügbarkeit anfragen</a></article>`;
+    return `<article class="produkt-angebot" id="angebot-${index + 1}" data-track="sortiment"><div><h2>${html(details)}</h2><p><span class="produkt-badge ${badgeKlasse}">${html(zustandLabel(item.zustand))}</span> ${menge === 1 ? "1 Stück verfügbar" : `${menge} Stück verfügbar`}</p></div><strong>${html(preisSpanne(item))}</strong><a class="produkt-btn produkt-btn--klein" href="${html(whatsapp)}" target="_blank" rel="noopener">Verfügbarkeit anfragen</a></article>`;
   }).join("\n");
   const verwandte = alleGruppen
     .filter((item) => item.slug !== gruppe.slug && (item.marke === gruppe.marke || item.kategorie === gruppe.kategorie))
@@ -343,7 +343,7 @@ ${header()}
   ${verwandte ? `<section class="produkt-section"><div class="produkt-container"><p class="produkt-eyebrow">Weitere Auswahl</p><h2>Ähnliche verfügbare Geräte</h2><ul class="produkt-links">${verwandte}</ul><p><a href="${kategorie.landing}">Mehr ${html(kategorie.label)} in Frankfurt ansehen →</a></p></div></section>` : ""}
 </main>
 ${footer()}
-<a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">💬</a>
+<a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" class="whatsapp-float" data-track="float" target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">💬</a>
 <script defer src="/main.js"></script>
 </body>
 </html>
@@ -371,7 +371,7 @@ function indexSeite(gruppen) {
   const ogImage = `${BASE_URL}/images/mr-phone-zeil-frankfurt-aussenansicht.jpg`;
   return `<!DOCTYPE html>
 <html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Verfügbare Handys & Geräte | Mr. Phone Frankfurt</title><meta name="description" content="${html(meta)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="${canonical}"><link rel="icon" type="image/png" href="/images/logo.png"><meta property="og:type" content="website"><meta property="og:site_name" content="Mr. Phone"><meta property="og:title" content="Verfügbare Handys & Geräte | Mr. Phone Frankfurt"><meta property="og:description" content="${html(meta)}"><meta property="og:image" content="${ogImage}"><meta property="og:url" content="${canonical}"><meta property="og:locale" content="de_DE"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Verfügbare Handys & Geräte | Mr. Phone Frankfurt"><meta name="twitter:description" content="${html(meta)}"><meta name="twitter:image" content="${ogImage}"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/dark-theme.css"><link rel="stylesheet" href="/produktseiten.css"><script type="application/ld+json">${schemaJson(breadcrumb)}</script><script type="application/ld+json">${schemaJson(itemList)}</script></head>
-<body class="produkt-page">${PAGE_MARKER}<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>${header()}<main id="inhalt"><div class="produkt-container"><nav class="produkt-breadcrumb" aria-label="Breadcrumb"><a href="/">Startseite</a><span>›</span><span>Verfügbare Geräte</span></nav></div><section class="produkt-index-hero"><div class="hero-media" data-hero-video aria-hidden="true"><video data-hero-video-el muted loop playsinline preload="none" poster="/videos/hero/hero-sortiment-poster.webp" data-webm="/videos/hero/hero-sortiment-1280.webm" data-mp4="/videos/hero/hero-sortiment-1280.mp4" data-mp4-mobile="/videos/hero/hero-sortiment-720.mp4"></video></div><div class="produkt-container"><p class="produkt-eyebrow">Direkt aus unserem Ladenbestand</p><h1>Aktuell verfügbare Geräte bei Mr. Phone Frankfurt</h1><p class="produkt-lead">Hier finden Sie ${gruppen.length} Gerätemodelle, die derzeit bei uns auf der Zeil geführt werden. Öffnen Sie ein Modell für Varianten, Zustand und aktuelle Preise.</p><a class="produkt-btn" href="/sortiment.html">Kompletten Bestand mit Filtern öffnen</a></div></section><div class="produkt-container produkt-index">${bereiche}</div></main>${footer()}<a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">💬</a><script defer src="/main.js"></script><script defer src="/hero-video.js"></script></body></html>\n`;
+<body class="produkt-page">${PAGE_MARKER}<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>${header()}<main id="inhalt"><div class="produkt-container"><nav class="produkt-breadcrumb" aria-label="Breadcrumb"><a href="/">Startseite</a><span>›</span><span>Verfügbare Geräte</span></nav></div><section class="produkt-index-hero"><div class="hero-media" data-hero-video aria-hidden="true"><video data-hero-video-el muted loop playsinline preload="none" poster="/videos/hero/hero-sortiment-poster.webp" data-webm="/videos/hero/hero-sortiment-1280.webm" data-mp4="/videos/hero/hero-sortiment-1280.mp4" data-mp4-mobile="/videos/hero/hero-sortiment-720.mp4"></video></div><div class="produkt-container"><p class="produkt-eyebrow">Direkt aus unserem Ladenbestand</p><h1>Aktuell verfügbare Geräte bei Mr. Phone Frankfurt</h1><p class="produkt-lead">Hier finden Sie ${gruppen.length} Gerätemodelle, die derzeit bei uns auf der Zeil geführt werden. Öffnen Sie ein Modell für Varianten, Zustand und aktuelle Preise.</p><a class="produkt-btn" href="/sortiment.html">Kompletten Bestand mit Filtern öffnen</a></div></section><div class="produkt-container produkt-index">${bereiche}</div></main>${footer()}<a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" class="whatsapp-float" data-track="float" target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">💬</a><script defer src="/main.js"></script><script defer src="/hero-video.js"></script></body></html>\n`;
 }
 
 function sitemapMitProdukten(ursprung, gruppen) {
