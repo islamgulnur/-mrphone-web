@@ -3273,11 +3273,11 @@
         "uvpDelta": 200,
         "preise": {
           "neuVersiegelt": 855,
-          "wieNeu": 665,
-          "sehrGut": 600,
-          "gut": 485,
-          "schlecht": 360,
-          "defekt": 175
+          "wieNeu": 595,
+          "sehrGut": 540,
+          "gut": 435,
+          "schlecht": 325,
+          "defekt": 155
         },
         "preisQuelle": "auto"
       },
