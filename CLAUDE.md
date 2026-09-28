@@ -64,3 +64,4 @@ ergänzen.
 - Hero-Videos: Einbindung nur über die zentrale Hero-Komponente.
 - E-Mail bleibt `mr.phone.zeil@gmail.com`.
 - Nach jeder Änderung: `node scripts/test-seo.js` und `node scripts/test-produktseiten.js` ausführen.
+- Zeilenenden werden per `.gitattributes` auf LF erzwungen.
