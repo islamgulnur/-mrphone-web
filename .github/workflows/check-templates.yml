@@ -1,0 +1,31 @@
+name: Header/Footer-Templates prüfen
+
+# Stellt sicher, dass niemand Header/Footer direkt in generierten HTML-Dateien
+# statt in templates/partials/*.html ändert. Läuft nur lesend (--check), committet
+# nichts. Nicht auf main (dort übernimmt build-templates.yml den echten Build).
+on:
+  push:
+    branches-ignore: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-templates-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Header/Footer gegen Partials prüfen
+        run: node scripts/build-templates.js --check

@@ -45,3 +45,23 @@ Die 10 Kategorien (`smartphones, tablets, smartwatches, laptops, pcs, monitore, 
 konsolen, zubehoer`) sind in `admin/server.js` (`KATEGORIEN`) definiert. Neue Kategorien nur dort plus
 an den bekannten Duplikationsstellen (`ankauf-rechner.js`, `index.html`, `sortiment.html`) synchron
 ergänzen.
+
+## Pflichtregeln für dieses Repo
+
+- **Header/Footer NUR in `templates/partials/*.html` ändern**, danach `scripts/build-templates.js`
+  ausführen. Niemals Header/Footer direkt in generierten HTML-Dateien ändern – der Bot-Workflow
+  `build-templates.yml` überschreibt solche Änderungen beim nächsten Partial-Push sonst kommentarlos.
+  Vor jedem Push prüfen: `node scripts/build-templates.js --check` (schreibt nichts, bricht mit
+  Exit 1 ab, wenn eine Seite vom Partial abweicht).
+- `produkte/*.html`, `ratgeber/*.html` und die Reparatur-Landingpages werden per Build-Skript erzeugt
+  (`scripts/build-produktseiten.js`, `scripts/build-reparatur-landingpages.js`): Änderungen immer im
+  Generator bzw. Template vornehmen, nie in der erzeugten Ausgabedatei.
+- `bestand.json`, `ankauf-preise.json`, `ankauf/*.json`, `sitemap.xml` werden vom Bot gepflegt: bei
+  Merge-Konflikten immer die Version von `main` nehmen, danach Build-Skripte neu laufen lassen.
+- Zwei Bots pushen auf `main`: `pos-bestand-sync.yml` (stündlich) und `build-templates.yml` (bei
+  Partial-Änderungen). Vor jedem Push auf `main`: `git pull`.
+- Jede Änderung über Feature-Branch + Vercel-Preview, auch Hotfixes. Nie force-push auf `main`.
+- Hero-Videos: Einbindung nur über die zentrale Hero-Komponente.
+- E-Mail bleibt `mr.phone.zeil@gmail.com`.
+- Nach jeder Änderung: `node scripts/test-seo.js` und `node scripts/test-produktseiten.js` ausführen.
+- Zeilenenden werden per `.gitattributes` auf LF erzwungen.

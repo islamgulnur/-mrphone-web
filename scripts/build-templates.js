@@ -26,8 +26,11 @@ const ROOT = path.join(__dirname, "..");
 const PARTIALS_DIR = path.join(ROOT, "templates", "partials");
 const GENERATED_REPAIR_MARKER = "<!-- Automatisch aus reparatur-preise.json erstellt: scripts/build-reparatur-landingpages.js -->";
 
+// Partials sollen intern immer als LF behandelt werden, unabhängig davon, ob sie auf der
+// Platte gerade als LF oder CRLF vorliegen (Windows-Checkouts normalisieren Textdateien oft
+// zu CRLF) - sonst verdoppelt ersetzeBlock() das \r bei CRLF-Zieldateien zu "\r\r\n".
 function ladePartial(name) {
-  return fs.readFileSync(path.join(PARTIALS_DIR, name), "utf8");
+  return fs.readFileSync(path.join(PARTIALS_DIR, name), "utf8").replace(/\r\n/g, "\n");
 }
 
 const PARTIALS = {
@@ -167,6 +170,7 @@ function main() {
   if (checkMode) {
     if (geaendert.length) {
       console.log(`Abweichend von den Partials (${geaendert.length}): ${geaendert.join(", ")}`);
+      console.log("Header/Footer werden aus templates/partials/*.html erzeugt - Änderung dort vornehmen, dann node scripts/build-templates.js ausführen.");
       process.exit(1);
     }
     console.log(`Alle ${seiten.length} geprüften Seiten stimmen mit den Partials überein.`);
