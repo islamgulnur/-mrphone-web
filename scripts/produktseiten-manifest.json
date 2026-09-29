@@ -3,7 +3,6 @@
   "index": "index.html",
   "pages": [
     "apple-14.html",
-    "apple-17-pro.html",
     "apple-17-pro-max.html",
     "apple-18-pro.html",
     "apple-18-pro-max.html",
@@ -102,7 +101,6 @@
     "samsung-galaxy-s20-plus.html",
     "samsung-galaxy-s21-fe-5g.html",
     "samsung-galaxy-s21-plus.html",
-    "samsung-galaxy-s24-ultra.html",
     "samsung-galaxy-s26.html",
     "samsung-galaxy-s26-plus.html",
     "samsung-galaxy-s26-ultra.html",

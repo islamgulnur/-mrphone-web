@@ -28,20 +28,6 @@
     "datum": "2026-09-29"
   },
   {
-    "id": "pos-0e8f023d41f90a7abd7c",
-    "marke": "Apple",
-    "modell": "17 Pro",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1069.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-29"
-  },
-  {
     "id": "pos-58b846ab023f01133d36",
     "marke": "Apple",
     "modell": "17 Pro Max",
@@ -219,20 +205,6 @@
     "zustand": "gebraucht",
     "preis": 339.99,
     "menge": 2,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-29"
-  },
-  {
-    "id": "pos-d4efe2629a43fccc3d6e",
-    "marke": "Apple",
-    "modell": "iPhone 12 Pro Max",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 349,
-    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-29"
@@ -1022,20 +994,6 @@
     "datum": "2026-09-29"
   },
   {
-    "id": "pos-e223978b0477dcd659c2",
-    "marke": "Apple",
-    "modell": "iPhone 18 Pro",
-    "speicher": "256 GB",
-    "farbe": "Blue",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1419.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-29"
-  },
-  {
     "id": "pos-4ab37002dcdbf4baab82",
     "marke": "Apple",
     "modell": "iPhone 18 Pro",
@@ -1050,11 +1008,11 @@
     "datum": "2026-09-29"
   },
   {
-    "id": "pos-09da94cfb3c1f8b2b79e",
+    "id": "pos-c50d04d5a6f14c418175",
     "marke": "Apple",
     "modell": "iPhone 18 Pro",
     "speicher": "256 GB",
-    "farbe": "Burgundy",
+    "farbe": "Blau",
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1499.99,
@@ -2053,20 +2011,6 @@
     "zustand": "gebraucht",
     "preis": 189.99,
     "menge": 2,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-29"
-  },
-  {
-    "id": "pos-ac21749b60b965b31cc9",
-    "marke": "Samsung",
-    "modell": "Galaxy S24 Ultra",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 499.99,
-    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-29"

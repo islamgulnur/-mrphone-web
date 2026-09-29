@@ -177,12 +177,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mrphone-frankfurt.de/produkte/apple-17-pro.html</loc>
-    <lastmod>2026-09-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://mrphone-frankfurt.de/produkte/apple-17-pro-max.html</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>daily</changefreq>
@@ -766,12 +760,6 @@
   </url>
   <url>
     <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-s21-plus.html</loc>
-    <lastmod>2026-09-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mrphone-frankfurt.de/produkte/samsung-galaxy-s24-ultra.html</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
