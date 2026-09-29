@@ -28,20 +28,6 @@
     "datum": "2026-09-29"
   },
   {
-    "id": "pos-58b846ab023f01133d36",
-    "marke": "Apple",
-    "modell": "17 Pro Max",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1149,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-29"
-  },
-  {
     "id": "pos-d42becfb13fc6995be64",
     "marke": "Apple",
     "modell": "18 Pro",
@@ -610,7 +596,7 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 629.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-09-29"
@@ -840,13 +826,13 @@
     "datum": "2026-09-29"
   },
   {
-    "id": "pos-f12dd77d86e362c38c43",
+    "id": "pos-7e3ab1eaa1d504ce824c",
     "marke": "Apple",
     "modell": "iPhone 17 Pro Max",
     "speicher": "1 TB",
     "farbe": "",
     "kategorie": "smartphones",
-    "zustand": "neu",
+    "zustand": "gebraucht",
     "preis": 1199.99,
     "menge": 1,
     "bild": "",
@@ -918,20 +904,6 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1059.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-29"
-  },
-  {
-    "id": "pos-a4b5b551efaf21861b3c",
-    "marke": "Apple",
-    "modell": "iPhone 17 Pro Max",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1149,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -1918,20 +1890,6 @@
     "datum": "2026-09-29"
   },
   {
-    "id": "pos-b1102035f0d3252145be",
-    "marke": "Samsung",
-    "modell": "Galaxy A57 5G",
-    "speicher": "256 GB",
-    "farbe": "Nevy",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 359.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-29"
-  },
-  {
     "id": "pos-e633ac43d824c94c365a",
     "marke": "Samsung",
     "modell": "Galaxy A57 5G",
@@ -2142,20 +2100,6 @@
     "datum": "2026-09-29"
   },
   {
-    "id": "pos-2b06848fcf3f9a8598a4",
-    "marke": "Samsung",
-    "modell": "Galaxy S26 Ultra",
-    "speicher": "512 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 799.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-29"
-  },
-  {
     "id": "pos-6659236ea23ca285a7eb",
     "marke": "Samsung",
     "modell": "Galaxy S26 Ultra",
@@ -2194,20 +2138,6 @@
     "preis": 579.99,
     "menge": 1,
     "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-29"
-  },
-  {
-    "id": "pos-feef5363aeead4e4fe3e",
-    "marke": "Samsung",
-    "modell": "Galaxy Z Flip8",
-    "speicher": "256 GB",
-    "farbe": "Graphite",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 759.99,
-    "menge": 1,
-    "bild": "https://asabsxcfjdhedbeaudhi.supabase.co/storage/v1/object/public/produktbilder/8806099191832.jpg",
     "aktiv": true,
     "datum": "2026-09-29"
   },
@@ -2332,20 +2262,6 @@
     "kategorie": "tablets",
     "zustand": "gebraucht",
     "preis": 229.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-29"
-  },
-  {
-    "id": "pos-bea81e1bb8e022fd5e5a",
-    "marke": "Apple",
-    "modell": "iPad A16",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "tablets",
-    "zustand": "gebraucht",
-    "preis": 299,
     "menge": 1,
     "bild": "",
     "aktiv": true,

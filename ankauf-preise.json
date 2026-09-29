@@ -1884,11 +1884,11 @@
         "uvpDelta": 450,
         "preise": {
           "neuVersiegelt": 1055,
-          "wieNeu": 1030,
-          "sehrGut": 960,
-          "gut": 835,
-          "schlecht": 625,
-          "defekt": 305
+          "wieNeu": 955,
+          "sehrGut": 895,
+          "gut": 775,
+          "schlecht": 580,
+          "defekt": 295
         },
         "preisQuelle": "auto"
       },
