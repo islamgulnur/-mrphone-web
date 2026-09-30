@@ -70,20 +70,6 @@
     "datum": "2026-09-30"
   },
   {
-    "id": "pos-f474ccd93ce61fb5f7d1",
-    "marke": "Apple",
-    "modell": "iPhone 11",
-    "speicher": "64 GB",
-    "farbe": "Silver",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 130,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-30"
-  },
-  {
     "id": "pos-7308095ec7bee9cf43cd",
     "marke": "Apple",
     "modell": "iPhone 11",
@@ -176,20 +162,6 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 179.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-09-30"
-  },
-  {
-    "id": "222db4fc-6585-4072-b3f8-5bbe4074e43a",
-    "marke": "Apple",
-    "modell": "iPhone 12 Mini",
-    "speicher": "64 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 199.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
