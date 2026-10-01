@@ -868,6 +868,20 @@
     "datum": "2026-10-01"
   },
   {
+    "id": "pos-a4b5b551efaf21861b3c",
+    "marke": "Apple",
+    "modell": "iPhone 17 Pro Max",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "neu",
+    "preis": 1149,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-10-01"
+  },
+  {
     "id": "pos-b87dc2aafd9b629c180a",
     "marke": "Apple",
     "modell": "iPhone 17 Pro Max",
@@ -946,7 +960,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 1419.99,
-    "menge": 1,
+    "menge": 2,
     "bild": "",
     "aktiv": true,
     "datum": "2026-10-01"
@@ -1296,20 +1310,6 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 109.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-10-01"
-  },
-  {
-    "id": "pos-8b995e98f88cbc1f1454",
-    "marke": "Samsung",
-    "modell": "Galaxy A07",
-    "speicher": "64 GB",
-    "farbe": "Lila",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 119.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -1806,34 +1806,6 @@
     "datum": "2026-10-01"
   },
   {
-    "id": "pos-d8fbd6e0cab304624606",
-    "marke": "Samsung",
-    "modell": "Galaxy A57",
-    "speicher": "256 GB",
-    "farbe": "IceBlue",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 359.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-10-01"
-  },
-  {
-    "id": "pos-55ddd1f7023a27303b87",
-    "marke": "Samsung",
-    "modell": "Galaxy A57",
-    "speicher": "256 GB",
-    "farbe": "Lilac",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 359.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-10-01"
-  },
-  {
     "id": "pos-180398982c6ec7ff730e",
     "marke": "Samsung",
     "modell": "Galaxy A57 5G",
@@ -1927,6 +1899,20 @@
     "zustand": "gebraucht",
     "preis": 189.99,
     "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-10-01"
+  },
+  {
+    "id": "pos-77d81c238adb7e1323a5",
+    "marke": "Samsung",
+    "modell": "Galaxy s25 Ultra",
+    "speicher": "256 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 679.99,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-10-01"
