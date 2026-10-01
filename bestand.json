@@ -8,7 +8,7 @@
     "kategorie": "kopfhoerer",
     "zustand": "neu",
     "preis": 139.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-10-01"
@@ -350,34 +350,6 @@
     "datum": "2026-10-01"
   },
   {
-    "id": "0fdfeb31-44f8-496c-8cf8-006852014c8d",
-    "marke": "Apple",
-    "modell": "iPhone 14 Plus",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 379.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-10-01"
-  },
-  {
-    "id": "pos-97446c9f2f38efa5a744",
-    "marke": "Apple",
-    "modell": "iPhone 14 Plus",
-    "speicher": "128 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 380,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-10-01"
-  },
-  {
     "id": "cdfb74f7-55d4-4abc-a5c7-978d6c709ae7",
     "marke": "Apple",
     "modell": "iPhone 14 Plus",
@@ -518,6 +490,20 @@
     "datum": "2026-10-01"
   },
   {
+    "id": "pos-802cd05021b0937fb8ec",
+    "marke": "Apple",
+    "modell": "iPhone 15 Pro",
+    "speicher": "128 GB",
+    "farbe": "Titan Natural",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 549.99,
+    "menge": 1,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-10-01"
+  },
+  {
     "id": "pos-8ab9424ea1ec73c9e71a",
     "marke": "Apple",
     "modell": "iPhone 15 Pro",
@@ -638,7 +624,7 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 799.99,
-    "menge": 4,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
     "datum": "2026-10-01"
