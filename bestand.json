@@ -148,7 +148,7 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 249.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-10-02"
@@ -246,20 +246,6 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 399.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-10-02"
-  },
-  {
-    "id": "pos-7a7d3d4e36e6152873bb",
-    "marke": "Apple",
-    "modell": "iPhone 13 Pro",
-    "speicher": "128 GB",
-    "farbe": "Gold",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 389.99,
     "menge": 1,
     "bild": "",
     "aktiv": true,
@@ -484,7 +470,7 @@
     "kategorie": "smartphones",
     "zustand": "gebraucht",
     "preis": 399.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-10-02"
@@ -546,20 +532,6 @@
     "datum": "2026-10-02"
   },
   {
-    "id": "pos-8451f87e4ba9582cd944",
-    "marke": "Apple",
-    "modell": "iPhone 15 Pro Max",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 629,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-10-02"
-  },
-  {
     "id": "8f0dfeb7-9832-489e-a3d9-dc80b090b841",
     "marke": "Apple",
     "modell": "iPhone 15 Pro Max",
@@ -583,6 +555,20 @@
     "zustand": "gebraucht",
     "preis": 499.99,
     "menge": 2,
+    "bild": "",
+    "aktiv": true,
+    "datum": "2026-10-02"
+  },
+  {
+    "id": "pos-9cfc927bb6660603de86",
+    "marke": "Apple",
+    "modell": "iPhone 16 Pro",
+    "speicher": "128 GB",
+    "farbe": "",
+    "kategorie": "smartphones",
+    "zustand": "gebraucht",
+    "preis": 679.99,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-10-02"
@@ -1576,7 +1562,7 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 229.99,
-    "menge": 2,
+    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-10-02"
@@ -1727,20 +1713,6 @@
     "modell": "Galaxy A57",
     "speicher": "128 GB",
     "farbe": "Grau",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 329,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-10-02"
-  },
-  {
-    "id": "pos-ab2e41a403d03d789366",
-    "marke": "Samsung",
-    "modell": "Galaxy A57",
-    "speicher": "128 GB",
-    "farbe": "Gray",
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 329,
@@ -1974,20 +1946,6 @@
     "datum": "2026-10-02"
   },
   {
-    "id": "pos-e38465c0ffc1392f1fdb",
-    "marke": "Samsung",
-    "modell": "Galaxy S26 Ultra",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 850,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-10-02"
-  },
-  {
     "id": "pos-ebaa347d3bf70440c8e4",
     "marke": "Samsung",
     "modell": "Galaxy Watch9",
@@ -2081,20 +2039,6 @@
     "zustand": "neu",
     "preis": 479.99,
     "menge": 2,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-10-02"
-  },
-  {
-    "id": "pos-2e816bb08e8a2cb38d96",
-    "marke": "Xiaomi",
-    "modell": "Redmi A5",
-    "speicher": "64 GB",
-    "farbe": "Midnight Black",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 104.99,
-    "menge": 1,
     "bild": "",
     "aktiv": true,
     "datum": "2026-10-02"
@@ -2472,7 +2416,7 @@
     "kategorie": "smartwatches",
     "zustand": "neu",
     "preis": 99.99,
-    "menge": 4,
+    "menge": 3,
     "bild": "",
     "aktiv": true,
     "datum": "2026-10-02"
