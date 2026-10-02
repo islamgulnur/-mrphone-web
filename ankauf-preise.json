@@ -1540,13 +1540,13 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 750,
-          "wieNeu": 435,
-          "sehrGut": 410,
-          "gut": 355,
-          "schlecht": 265,
-          "defekt": 135
+          "wieNeu": 345,
+          "sehrGut": 325,
+          "gut": 280,
+          "defekt": 105,
+          "schlecht": 210
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "256 GB",
@@ -1556,10 +1556,10 @@
           "wieNeu": 530,
           "sehrGut": 490,
           "gut": 425,
-          "schlecht": 315,
-          "defekt": 155
+          "defekt": 155,
+          "schlecht": 315
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "512 GB",
@@ -1569,10 +1569,10 @@
           "wieNeu": 540,
           "sehrGut": 490,
           "gut": 445,
-          "schlecht": 330,
-          "defekt": 155
+          "defekt": 155,
+          "schlecht": 330
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "manuell"
       },
       {
         "bezeichnung": "1 TB",
@@ -1582,10 +1582,10 @@
           "wieNeu": 540,
           "sehrGut": 490,
           "gut": 445,
-          "schlecht": 330,
-          "defekt": 155
+          "defekt": 155,
+          "schlecht": 330
         },
-        "preisQuelle": "auto",
+        "preisQuelle": "manuell",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (6 < 8)",
         "preisStatusSeit": "2026-09-26"
