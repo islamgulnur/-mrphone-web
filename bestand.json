@@ -826,20 +826,6 @@
     "datum": "2026-10-02"
   },
   {
-    "id": "pos-396de8c3293c8c938b72",
-    "marke": "Apple",
-    "modell": "iPhone 17 Pro Max",
-    "speicher": "2 TB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 1699.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-10-02"
-  },
-  {
     "id": "pos-e0aa968108658bed61a0",
     "marke": "Apple",
     "modell": "iPhone 17 Pro Max",
@@ -1310,20 +1296,6 @@
     "kategorie": "smartphones",
     "zustand": "neu",
     "preis": 119.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-10-02"
-  },
-  {
-    "id": "pos-2ae10d79e1f7404ecff6",
-    "marke": "Samsung",
-    "modell": "Galaxy A07",
-    "speicher": "128 GB",
-    "farbe": "Schwarz",
-    "kategorie": "smartphones",
-    "zustand": "neu",
-    "preis": 129.98,
     "menge": 1,
     "bild": "",
     "aktiv": true,
