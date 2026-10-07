@@ -2868,11 +2868,11 @@
         "uvpDelta": 200,
         "preise": {
           "neuVersiegelt": 670,
-          "wieNeu": 325,
-          "sehrGut": 295,
-          "gut": 240,
-          "schlecht": 180,
-          "defekt": 85
+          "wieNeu": 310,
+          "sehrGut": 285,
+          "gut": 230,
+          "schlecht": 170,
+          "defekt": 80
         },
         "preisQuelle": "auto"
       }
