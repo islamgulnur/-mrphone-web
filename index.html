@@ -3,6 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+/* Preloader-Entscheidung synchron VOR dem ersten Paint (kein FOUC): setzt die Klasse
+   auf <html>, bevor irgendein Stylesheet angewendet wird. redesign.js (defer) übernimmt
+   danach nur noch die Balken-Animation/das Ausblenden - die Sichtbarkeits-Entscheidung
+   selbst passiert hier, synchron, damit nie kurz die Seite und dann das Overlay aufblitzt. */
+(function () {
+  try {
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (sessionStorage.getItem("mrphone-preloader-seen")) return;
+    sessionStorage.setItem("mrphone-preloader-seen", "1");
+    document.documentElement.classList.add("rs-preloader-pending");
+  } catch (e) {}
+})();
+</script>
 <link rel="icon" type="image/png" href="/images/logo.png">
 <title>Handy Shop Frankfurt Zeil | Mr. Phone</title>
 <meta name="description" content="Mr. Phone auf der Zeil: Handy-Verkauf, Ankauf & Express-Reparatur in Frankfurt. Jetzt anrufen oder per WhatsApp anfragen.">
@@ -138,7 +152,7 @@
      wird nur per JS aktiv (siehe redesign.js initPreloader). Bots/no-JS sehen das hier nie. -->
 <div class="rs-preloader" data-rs-preloader aria-hidden="true">
   <div class="rs-preloader-phone">
-    <div class="rs-img-placeholder">images/redesign/geraete/preloader-phone.png</div>
+    <div class="rs-img-placeholder">images/redesign/geraete/preloader-phone.png<br>WebP, &lt; 40 KB</div>
   </div>
   <div class="rs-preloader-bar"><span class="rs-preloader-bar-fill"></span></div>
 </div>

@@ -1,0 +1,84 @@
+{
+  "generatedAt": "2026-10-09T08:16:51.240Z",
+  "tool": "lighthouse 13.5.0",
+  "pages": {
+    "de": {
+      "url": "https://mrphone-frankfurt.de/",
+      "device": "mobile",
+      "throttling": "simulate (Lighthouse default)",
+      "runs": 3,
+      "scores": {
+        "performance": 100,
+        "accessibility": 90,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1555,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0,
+        "speed-index": 1142,
+        "interactive": 1555
+      },
+      "failedAudits": {
+        "accessibility": [
+          {
+            "id": "aria-prohibited-attr",
+            "title": "Elements use prohibited ARIA attributes",
+            "score": 0
+          },
+          {
+            "id": "aria-required-children",
+            "title": "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+            "score": 0
+          },
+          {
+            "id": "heading-order",
+            "title": "Heading elements are not in a sequentially-descending order",
+            "score": 0
+          }
+        ],
+        "best-practices": []
+      }
+    },
+    "en": {
+      "url": "https://mrphone-frankfurt.de/en/",
+      "device": "mobile",
+      "throttling": "simulate (Lighthouse default)",
+      "runs": 3,
+      "scores": {
+        "performance": 100,
+        "accessibility": 90,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1580,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0,
+        "speed-index": 1101,
+        "interactive": 1580
+      },
+      "failedAudits": {
+        "accessibility": [
+          {
+            "id": "aria-prohibited-attr",
+            "title": "Elements use prohibited ARIA attributes",
+            "score": 0
+          },
+          {
+            "id": "aria-required-children",
+            "title": "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+            "score": 0
+          },
+          {
+            "id": "heading-order",
+            "title": "Heading elements are not in a sequentially-descending order",
+            "score": 0
+          }
+        ],
+        "best-practices": []
+      }
+    }
+  }
+}

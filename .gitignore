@@ -6,3 +6,4 @@ backups/
 admin/auth-config.json
 .pos-stock-snapshot.json
 .pos-buyback-caps.json
+.lighthouse-tmp/
