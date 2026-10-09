@@ -1,6 +1,6 @@
 # SEO-Vergleich: redesign/scroll-story gegen seo-baseline.json
 
-Generiert: 2026-10-09T09:58:58.202Z
+Generiert: 2026-10-09T10:01:23.690Z
 
 **Gesamtergebnis: OK – nichts verloren**
 

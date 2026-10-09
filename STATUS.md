@@ -23,7 +23,7 @@ eine Zeile pro Commit, Entscheidungen zur Prüfung am Ende.
 | Session 2 | Section 6: 4 Service-Vollflächensektionen (Display/Akku/Ankauf/Zubehör, Farbe+Nebel) | `af21c66` | OK | OK | Perf 99 (Median aus 3) / LCP 1,955s / CLS 0 / TBT 0 / A11y 99 | - |
 | Session 2 | Section 7: geprüft, keine Änderung nötig (siehe Entscheidung 7) | - | OK | OK | unverändert | - |
 | Session 2 | Section 8: Geräte-Teaser geprüft, weggelassen (siehe Entscheidung 8) | - | OK | OK | unverändert | - |
-| Session 2 | Section 9: Abschluss (Slogan, Script, CTAs, Adresse/Öffnungszeiten, Karte per Klick) | *(nach Commit ergänzen)* | OK | OK | Perf 99 (Median aus 3) / LCP 1,955s / CLS 0 / TBT 0 / A11y 99 | - |
+| Session 2 | Section 9: Abschluss (Slogan, Script, CTAs, Adresse/Öffnungszeiten, Karte per Klick) | `5c5b257` | OK | OK | Perf 99 (Median aus 3) / LCP 1,955s / CLS 0 / TBT 0 / A11y 99 | - |
 
 *(Tabelle wird nach jedem weiteren Commit fortgeführt)*
 
@@ -131,4 +131,9 @@ Alles, was im autonomen Lauf ohne Rückfrage entschieden wurde:
 
 ## Nächste Schritte
 
-Siehe `REDESIGN-HANDOFF.md` Abschnitt "Nächste Schritte bis Section 9".
+Alle 9 Sections fertig. Offen für ein echtes "fertig": die Bilderliste (siehe HANDOFF) - alle
+Fotos sind noch `.rs-img-placeholder`, da der User die Bilder selbst liefern muss (keine
+Internet-/KI-Bilder erlaubt). Sobald Fotos da sind: Pfade 1:1 ersetzen, AVIF+WebP-Sharp-Pipeline
+bauen (siehe HANDOFF "Bilder-Regeln"). Danach echte Vercel-Preview-LCP-Messung sobald SSO-
+Bypass-Secret eingerichtet ist (lokale Messung bereits ausführlich verifiziert, siehe
+Entscheidung 5).

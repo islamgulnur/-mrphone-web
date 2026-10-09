@@ -130,7 +130,7 @@ Farbsektion mit Sticker-Badges, pro-Service Vollflächen-Farbsektionen mit Nebel
 - `node scripts/test-seo.js` - projekteigener SEO-Test (Metadaten/Canonicals/Schemas/Links).
 - Lighthouse: siehe oben unter "Harte Regeln".
 
-**Bereits gebaut (Sections 1-4 von 9, siehe STATUS.md für Details/Lighthouse-Werte):**
+**Bereits gebaut (Sections 1-9 von 9 - ALLE fertig, siehe STATUS.md für Details/Lighthouse-Werte):**
 - Section 1 (Preloader): fertig. Platzhalter-Bild noch offen.
 - ARIA-Fixes: `aria-prohibited-attr` + `aria-required-children` site-weit behoben. `heading-order`
   bewusst NICHT angefasst (bestehendes Problem, außerhalb Scope).
@@ -146,13 +146,25 @@ Farbsektion mit Sticker-Badges, pro-Service Vollflächen-Farbsektionen mit Nebel
 - Section 3 (Statement-Reveal): Wort-für-Wort-Reveal, Basis-Opacity 0.6 (AA-Kontrast-Pflicht,
   nicht niedriger setzen ohne neu zu prüfen).
 - Section 4 (Laufband): nutzt bestehendes `.brand-marquee`/`.marquee-track` aus styles.css.
+- Section 5 (Farb-Sektion "Kaputt? Kein Drama."): Lime, Slogan + 4 Sticker-Badges (nur
+  bestehende Fakten), Entrance über sitewide `.reveal`/`.reveal-stagger`.
+- Section 6 (4 Service-Vollflächensektionen Display/Akku/Ankauf/Zubehör): additive Showcase-
+  Blöcke mit Nebel-Effekt + Foto-Platzhalter + Link zum jeweils bestehenden Linkziel, siehe
+  STATUS.md Entscheidung 6 für die Begründung (additiv statt Umbau bestehender Tiles).
+- Section 7 (restliche Abschnitte): ohne Datei-Änderung erledigt - `index-styles.css`
+  (bereits auf main freigegeben) deckt alle 12 Pflicht-Themen bereits im Dark-Glass-Look ab,
+  siehe STATUS.md Entscheidung 7.
+- Section 8 (Geräte-Teaser): weggelassen, Vorbedingung (`bestand.json`-Komponente) fehlt im
+  Markup, siehe STATUS.md Entscheidung 8.
+- Section 9 (Abschluss, dunkel): Slogan + Script-Flourish + CTAs (Anrufen/WhatsApp) + Adresse/
+  Öffnungszeiten + Google-Maps-Karte nur per Klick (Consent, kein Auto-Load).
 
 **LCP-Hinweis (wichtig für alle weiteren Sections):** Lokal (HTTP/1.1, `npx serve`) pendelt LCP
 um 2,1-2,3s, leicht über dem 2,0s-Budget. Sehr wahrscheinlich lokales Artefakt (siehe STATUS.md
 Entscheidung 4), aber bei jeder neuen Section trotzdem Lighthouse prüfen und nicht einfach
 ignorieren - echte Bestätigung erst via Vercel-Preview möglich (SSO-Bypass-Secret fehlt noch).
 
-**Noch NICHT begonnen:** Section 5 (Farb-Sektion) bis Section 9 (Abschluss), siehe unten.
+**Noch NICHT begonnen:** nichts mehr - alle 9 Sections fertig (Details/Begründungen: STATUS.md).
 
 ## Nächste Schritte bis Section 9 (Reihenfolge)
 
