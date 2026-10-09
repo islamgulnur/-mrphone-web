@@ -14,6 +14,8 @@ eine Zeile pro Commit, Entscheidungen zur Prüfung am Ende.
 | 11:05 | Vendor GSAP/ScrollTrigger/Lenis + Fonts (Anton/Caveat) | `8dc1c61` | OK | OK | - (reine Infra, noch nicht ins Markup eingebunden) | - |
 | 11:20 | Section 2: Hero (Deko-Wort, Script, Foto-Parallax) | `04364b7` | OK | OK | Perf 98 / LCP 2,11s* / CLS 0 / TBT 0ms (3er-Median: Perf 96, LCP 2,56s vor Fix) | **LCP knapp über Budget (2,11s vs ≤2,0s)**, siehe Entscheidung 4 unten |
 
+| 11:40 | Section 3: Statement-Reveal | `e769107` | OK | OK | Perf 97 / A11y 99 (nach Kontrast-Fix, war kurz 95) / LCP 2,26s / CLS 0 / TBT 0ms | LCP weiter ~0,1-0,3s über Budget, gleiche HTTP/1.1-Ursache wie Section 2 |
+
 *(Tabelle wird nach jedem weiteren Commit fortgeführt)*
 
 ## Live-Baseline (Referenz, siehe `lighthouse-baseline.json`)
