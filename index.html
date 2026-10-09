@@ -272,6 +272,18 @@
     </div>
   </section>
 
+  <!-- LAUFBAND (neu, CSS-only, reine Deko - kein Heading). Nutzt bestehendes
+       .brand-marquee/.marquee-track-System aus styles.css (bisher ungenutzt, siteweit
+       verfügbar) - keine neue Animation nötig. .marquee-group als div statt span, damit
+       die bestehende ".marquee-track span::after"-Bullet-Regel nicht zusätzlich zum
+       eigenen "✦"-Trenner greift. -->
+  <section class="brand-marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-group">iPHONE ✦ SAMSUNG ✦ DISPLAY ✦ AKKU ✦ ANKAUF ✦ ZUBEHÖR ✦&nbsp;</div>
+      <div class="marquee-group">iPHONE ✦ SAMSUNG ✦ DISPLAY ✦ AKKU ✦ ANKAUF ✦ ZUBEHÖR ✦&nbsp;</div>
+    </div>
+  </section>
+
   <section class="beliebte-reparaturen">
     <div class="container">
       <span class="eyebrow">Beliebte Reparaturen – Preise ab</span>

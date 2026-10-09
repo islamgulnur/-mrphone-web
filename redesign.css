@@ -243,7 +243,21 @@ html.rs-preloader-pending .rs-preloader-bar-fill { width: 100%; }
   .statement-photo { display: none; }
 }
 
-/* ---------- Laufband ---------- */
+/* ---------- Laufband ----------
+   Nutzt .brand-marquee/.marquee-track aus styles.css (siteweit vorhanden, bisher nirgends
+   eingebunden) - hier nur die Innentext-Typografie für .marquee-group als div (ersetzt die
+   ".marquee-track span"-Regel, die wegen des div-statt-span-Markups nicht mehr greift). */
+.marquee-group {
+  white-space: nowrap;
+  /* Bewusst Systemschrift statt --rs-font-display: das Anton-Subset deckt nur
+     Latin+Deutsch+Satzzeichen ab, kein "✦" (U+2726) - mit var(--font) volle Glyphenabdeckung. */
+  font-family: var(--font);
+  font-weight: 800;
+  font-size: clamp(1.2rem, 2.8vw, 1.8rem);
+  letter-spacing: 0.04em;
+  padding-inline: 0.75rem;
+  color: var(--paper, #edf1e6);
+}
 
 /* ---------- Farb-Sektion "Kaputt? Kein Drama." ---------- */
 
