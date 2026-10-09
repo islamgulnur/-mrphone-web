@@ -94,6 +94,38 @@
     revealElements(document.querySelectorAll(".reveal"));
   }
 
+  /* ---------- 3D-Scroll-Parallax für eigene Laden-/Produktfotos ---------- */
+  function initParallax3D() {
+    var items = document.querySelectorAll(".split-media img");
+    if (!items.length || reduceMotion) return;
+
+    var ticking = false;
+
+    function update() {
+      ticking = false;
+      var vh = window.innerHeight;
+      items.forEach(function (img) {
+        var rect = img.getBoundingClientRect();
+        var center = rect.top + rect.height / 2;
+        var offset = (center - vh / 2) / vh; // -0.5 (oben) … 0.5 (unten)
+        var translate = (offset * -36).toFixed(1);
+        var tilt = (offset * 4).toFixed(2);
+        img.style.transform = "perspective(800px) translateY(" + translate + "px) rotateX(" + tilt + "deg)";
+      });
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    update();
+  }
+
   /* ---------- Animierte Zähler ---------- */
   function animateCounter(el) {
     var target = parseFloat(el.getAttribute("data-counter-target"));
@@ -812,6 +844,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     initConversionTracking();
     initReveal();
+    initParallax3D();
     initCounters();
     initOeffnungsstatus();
     initGoogleBewertungen();
