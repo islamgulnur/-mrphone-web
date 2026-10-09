@@ -23,8 +23,70 @@
    unter /fonts/ liegen. Bis dahin fällt --rs-font-display/--rs-font-script auf
    die bestehende Systemschrift zurück (kein FOUT/FOIT-Risiko in der Zwischenzeit). */
 
+/* ---------- Bild-Platzhalter (bis echte Fotos geliefert werden) ---------- */
+/* Keine Fake-Bilder: neutraler grauer Kasten mit Dateiname, austauschbar sobald
+   das echte Foto unter dem Pfad liegt. Einfach per Grep "rs-img-placeholder"
+   alle offenen Stellen finden. */
+.rs-img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: repeating-linear-gradient(45deg, #23261e, #23261e 10px, #2b2f24 10px, #2b2f24 20px);
+  color: var(--steel);
+  font-size: 0.7rem;
+  font-family: var(--font-mono, monospace);
+  padding: 0.5rem;
+  border: 1px dashed var(--hairline-strong);
+  border-radius: var(--radius-sm, 8px);
+  word-break: break-all;
+  line-height: 1.3;
+}
+
 /* ---------- Preloader ---------- */
-/* siehe Commit "Section 1: Preloader" */
+/* Basis ohne JS/für Bots: unsichtbar (display:none) - reines Progressive
+   Enhancement, blockiert nichts, Inhalt darunter ist bereits vollständig im HTML. */
+.rs-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background: var(--ink, #0a0c08);
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+body.rs-preloader-active .rs-preloader { display: flex; }
+body.rs-preloader-hide .rs-preloader { opacity: 0; pointer-events: none; }
+
+.rs-preloader-phone { width: clamp(110px, 18vw, 190px); aspect-ratio: 3 / 4; }
+.rs-preloader-phone img,
+.rs-preloader-phone .rs-img-placeholder { width: 100%; height: 100%; }
+.rs-preloader-phone img { object-fit: contain; }
+
+.rs-preloader-bar {
+  width: clamp(150px, 28vw, 240px);
+  height: 3px;
+  background: var(--hairline, rgba(141, 198, 63, 0.2));
+  border-radius: 999px;
+  overflow: hidden;
+}
+.rs-preloader-bar-fill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: var(--signal, #8dc63f);
+  border-radius: inherit;
+  transition: width 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+body.rs-preloader-active .rs-preloader-bar-fill { width: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rs-preloader { display: none !important; }
+}
 
 /* ---------- Hero ---------- */
 /* siehe Commit "Section 2: Hero" */

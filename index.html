@@ -134,6 +134,17 @@
 <body class="has-phone-scene">
 <a href="#main" class="skip-link">Zum Inhalt springen</a>
 
+<!-- Preloader: reiner Overlay, Basis unsichtbar ohne JS (display:none in redesign.css),
+     wird nur per JS aktiv (siehe redesign.js initPreloader). Bots/no-JS sehen das hier nie. -->
+<div class="rs-preloader" data-rs-preloader aria-hidden="true">
+  <div class="rs-preloader-phone">
+    <div class="rs-img-placeholder">images/redesign/geraete/preloader-phone.png</div>
+  </div>
+  <div class="rs-preloader-bar"><span class="rs-preloader-bar-fill"></span></div>
+</div>
+
+<!-- phone-scene (CSS-3D-Phone) deaktiviert, siehe Kommentar bei phone-bg.css im <head> -
+     Hero ersetzt das durch echte freigestellte Gerätefotos. Markup bewusst nicht gelöscht:
 <div class="phone-scene" aria-hidden="true">
   <div class="phone-stage">
     <div class="phone-track">
@@ -159,6 +170,8 @@
     </div>
   </div>
 </div>
+-->
+
 
 <header class="site-header" data-track="header">
   <div class="header-inner">
