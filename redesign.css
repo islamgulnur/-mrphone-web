@@ -259,7 +259,55 @@ html.rs-preloader-pending .rs-preloader-bar-fill { width: 100%; }
   color: var(--paper, #edf1e6);
 }
 
-/* ---------- Farb-Sektion "Kaputt? Kein Drama." ---------- */
+/* ---------- Farb-Sektion "Kaputt? Kein Drama." ----------
+   .rs-color-section als gemeinsame Basis für Vollflächen-Farbsektionen (auch Section 6
+   Service-Sektionen nutzen diese Klasse + eigenes Modifier). Entrance per bestehendem
+   sitewide .reveal/.reveal-stagger - kein neues JS, reduced-motion bereits sitewide
+   abgedeckt (styles.css). */
+.rs-color-section {
+  position: relative;
+  padding-block: clamp(4rem, 11vw, 9rem);
+  overflow: clip;
+}
+.rs-color-section--lime {
+  background: var(--rs-lime);
+  color: var(--ink, #0a0c08);
+}
+
+.rs-color-slogan {
+  font-family: var(--rs-font-display);
+  font-size: clamp(2.4rem, 9vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 clamp(2rem, 6vw, 3.5rem);
+}
+.rs-color-slogan-word { display: inline-block; }
+
+.sticker-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(0.75rem, 2.5vw, 1.5rem);
+}
+.sticker-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6em 1.3em;
+  border-radius: 999px;
+  background: var(--ink, #0a0c08);
+  color: var(--rs-lime);
+  font-weight: 800;
+  font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+/* Statische Sticker-Verdrehung, keine Animation - unabhängig von reduced-motion sichtbar. */
+.sticker-badge--a { transform: rotate(-3deg); }
+.sticker-badge--b { transform: rotate(2deg); }
+.sticker-badge--c { transform: rotate(-2deg); }
+.sticker-badge--d { transform: rotate(3deg); }
 
 /* ---------- Service-Sektionen (Vollflächen-Farbe + Nebel) ---------- */
 

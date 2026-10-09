@@ -1,6 +1,6 @@
 # SEO-Vergleich: redesign/scroll-story gegen seo-baseline.json
 
-Generiert: 2026-10-09T09:13:25.019Z
+Generiert: 2026-10-09T09:48:38.780Z
 
 **Gesamtergebnis: OK – nichts verloren**
 
@@ -14,8 +14,9 @@ Nichts entfernt oder geändert.
 
 **Neue Textabsätze (z. B. Slogans, Badges):**
 - "WIR REPARIEREN NICHT EINFACH HANDYS – WIR HOLEN DEIN ALLTAG ZURÜCK."
+- "Kaputt? Kein Drama."
 
-Wortanzahl: 1254 → 1302
+Wortanzahl: 1254 → 1313
 
 ## en/index.html — ✅ OK
 

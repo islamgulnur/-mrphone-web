@@ -18,9 +18,12 @@ eine Zeile pro Commit, Entscheidungen zur Prüfung am Ende.
 
 | 11:55 | Section 4: Laufband | `930a861` | OK | OK | Perf 97 / A11y 99 (nur heading-order) / LCP 2,26s / CLS 0 | Anton-Font-Subset enthielt kein "✦" (U+2726) - behoben durch Systemschrift statt Anton für den Laufband-Text |
 
+| *(neue Session)* | LCP-Verifikation (main vs Branch, siehe Entscheidung 5) | - | - | - | main 1,75s / Branch 1,95s (Delta +0,20s) | Artefakt-Annahme bestätigt, Details s.u. |
+| *(folgt)* | Section 5: Farb-Sektion "Kaputt? Kein Drama." | *(nach Commit ergänzen)* | OK | OK | Perf 99 (Median aus 3) / LCP 1,95s / CLS 0 / TBT 0 / A11y 99 | Einzelmessung 1 von 3 Läufen bei 2,25s (Ausreißer, nicht reproduzierbar - Median entscheidend) |
+
 *(Tabelle wird nach jedem weiteren Commit fortgeführt)*
 
-## AUTONOMER LAUF PAUSIERT (Session-Kosten-Vorsicht)
+## Historie: erste Pause (Session-Kosten-Vorsicht, vor Session 2)
 
 Letzter bestätigter Kosten-Stand vor diesem Abschnitt: ~$136 von $200. Angesichts des Umfangs
 der verbleibenden 5 Sections (Farb-Sektion, Service-Sektionen, Rest-Inhalte-Umbau, Geräte-Teaser-
@@ -32,10 +35,10 @@ gestoppt statt das Risiko einzugehen. Alles bisher Gebaute ist getestet, gepusht
 Infrastruktur (SEO-Tooling, Vendor-Libs, Fonts, ARIA-Fixes) - für die restlichen 5 Sections ist
 nichts an Grundlagenarbeit mehr nötig, nur noch Markup/CSS/JS pro Section wie bei 1-4 gezeigt.
 
-**Fortsetzung:** Diese Session (`/remote-control`-Kontext bleibt gültig) oder neue Session -
-`REDESIGN-HANDOFF.md` komplett lesen, dann bei "Nächste Schritte bis Section 9" Punkt 4
-(Section 5: Farb-Sektion) weitermachen. Alle bisherigen Commits + dieser Status sind der
-vollständige Kontext, nichts geht verloren.
+## Session 2 (fortgesetzt, 2026-10-09, neuer Kosten-Stopp bei $150 für DIESE Session)
+
+Fortsetzung nach LCP-Verifikation (Entscheidung 5) mit Section 5 (Farb-Sektion "Kaputt? Kein
+Drama."). `REDESIGN-HANDOFF.md` + `STATUS.md` zu Beginn vollständig gelesen, Branch verifiziert.
 
 ## Live-Baseline (Referenz, siehe `lighthouse-baseline.json`)
 
@@ -69,7 +72,23 @@ Alles, was im autonomen Lauf ohne Rückfrage entschieden wurde:
    auf SSO-Bypass-Secret. Session-Kosten bei diesem Zeitpunkt bereits >$135 von $200 -
    bewusste Entscheidung, hier nicht tiefer zu optimieren, sondern mit Section 3 weiterzumachen
    und dies hier für die Prüfung zu markieren statt stillschweigend zu akzeptieren.
-5. *(wird nach jeder weiteren Section-Entscheidung ergänzt)*
+5. **LCP-Artefakt-Verifikation (neue Session, vor Section 5):** main in temporären Worktree
+   (`git worktree add ../mrphone-web-main-lcp main`) ausgecheckt, mit identischem Server
+   (`npx serve -l 4174 .`) serviert, 3x Lighthouse Mobile gemessen, dann redesign/scroll-story
+   (Port 4173, bereits laufender Server) genauso 3x gemessen:
+   - **main (Median):** LCP 1,75s (1741,6/1752,2/1788,9ms), Performance 100.
+   - **Branch (Median):** LCP 1,95s (1805,6/1955,2/1954,9ms), Performance 99.
+   - **Delta:** +0,20s gegenüber main, Branch selbst bei 1,95s ≤ 2,0s-Budget. Beide Kriterien aus
+     dem Auftrag erfüllt (≤2,0s absolut, ≤+0,3s relativ zu main lokal).
+   - Frühere Section-2/3/4-Messungen (2,11-2,26s, siehe oben) vermutlich Messrauschen/System-
+     last der damaligen Session, nicht reproduzierbare Regression - mit dieser saubereren
+     Rück-zu-Rück-Messung (gleicher Lauf, gleiche Maschine, kurz hintereinander) kein Hinweis
+     auf echtes Performance-Problem. Trotzdem: nach jeder weiteren Section erneut Lighthouse
+     prüfen (Auftrag), falls Werte wieder Richtung 2,1s+ wandern, genauer untersuchen statt
+     automatisch als Artefakt abzutun.
+   - Worktree danach entfernt (`git worktree remove`), temporärer main-Server (PID-gezielt)
+     beendet.
+6. *(wird nach jeder weiteren Section-Entscheidung ergänzt)*
 
 ## Nächste Schritte
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T09:13:25.019Z",
+  "generatedAt": "2026-10-09T09:48:38.780Z",
   "allOk": true,
   "results": [
     {
@@ -17,7 +17,8 @@
       "paragraphDiff": {
         "missing": [],
         "added": [
-          "WIR REPARIEREN NICHT EINFACH HANDYS – WIR HOLEN DEIN ALLTAG ZURÜCK."
+          "WIR REPARIEREN NICHT EINFACH HANDYS – WIR HOLEN DEIN ALLTAG ZURÜCK.",
+          "Kaputt? Kein Drama."
         ]
       },
       "faqMissing": [],
@@ -25,7 +26,7 @@
       "jsonLdMissing": [],
       "jsonLdAdded": [],
       "wordCountBaseline": 1254,
-      "wordCountCurrent": 1302,
+      "wordCountCurrent": 1313,
       "ok": true
     },
     {
