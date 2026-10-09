@@ -1717,7 +1717,7 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 700,
+          "neuVersiegelt": 655,
           "wieNeu": 570,
           "sehrGut": 525,
           "gut": 460,
@@ -1807,11 +1807,11 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 910,
-          "wieNeu": 735,
-          "sehrGut": 685,
-          "gut": 595,
-          "schlecht": 445,
+          "neuVersiegelt": 870,
+          "wieNeu": 715,
+          "sehrGut": 670,
+          "gut": 580,
+          "schlecht": 435,
           "defekt": 215
         },
         "preisQuelle": "auto"
@@ -1821,10 +1821,10 @@
         "uvpDelta": 200,
         "preise": {
           "neuVersiegelt": 1065,
-          "wieNeu": 885,
-          "sehrGut": 820,
-          "gut": 715,
-          "schlecht": 535,
+          "wieNeu": 860,
+          "sehrGut": 805,
+          "gut": 700,
+          "schlecht": 525,
           "defekt": 260
         },
         "preisQuelle": "auto"
@@ -3259,7 +3259,7 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 730,
+          "neuVersiegelt": 705,
           "wieNeu": 555,
           "sehrGut": 505,
           "gut": 405,
