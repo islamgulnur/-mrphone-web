@@ -16,7 +16,26 @@ eine Zeile pro Commit, Entscheidungen zur Prüfung am Ende.
 
 | 11:40 | Section 3: Statement-Reveal | `e769107` | OK | OK | Perf 97 / A11y 99 (nach Kontrast-Fix, war kurz 95) / LCP 2,26s / CLS 0 / TBT 0ms | LCP weiter ~0,1-0,3s über Budget, gleiche HTTP/1.1-Ursache wie Section 2 |
 
+| 11:55 | Section 4: Laufband | `930a861` | OK | OK | Perf 97 / A11y 99 (nur heading-order) / LCP 2,26s / CLS 0 | Anton-Font-Subset enthielt kein "✦" (U+2726) - behoben durch Systemschrift statt Anton für den Laufband-Text |
+
 *(Tabelle wird nach jedem weiteren Commit fortgeführt)*
+
+## AUTONOMER LAUF PAUSIERT (Session-Kosten-Vorsicht)
+
+Letzter bestätigter Kosten-Stand vor diesem Abschnitt: ~$136 von $200. Angesichts des Umfangs
+der verbleibenden 5 Sections (Farb-Sektion, Service-Sektionen, Rest-Inhalte-Umbau, Geräte-Teaser-
+Prüfung, Abschluss - jede vergleichbar aufwändig wie die bisherigen) und um nicht mitten in einer
+Section über die $200-Grenze zu laufen: hier bewusst an einem sauberen, committeten Zwischenstand
+gestoppt statt das Risiko einzugehen. Alles bisher Gebaute ist getestet, gepusht, dokumentiert.
+
+**Fertig (Sections 1-4 von 9):** Preloader, Hero, Statement-Reveal, Laufband. Plus komplette
+Infrastruktur (SEO-Tooling, Vendor-Libs, Fonts, ARIA-Fixes) - für die restlichen 5 Sections ist
+nichts an Grundlagenarbeit mehr nötig, nur noch Markup/CSS/JS pro Section wie bei 1-4 gezeigt.
+
+**Fortsetzung:** Diese Session (`/remote-control`-Kontext bleibt gültig) oder neue Session -
+`REDESIGN-HANDOFF.md` komplett lesen, dann bei "Nächste Schritte bis Section 9" Punkt 4
+(Section 5: Farb-Sektion) weitermachen. Alle bisherigen Commits + dieser Status sind der
+vollständige Kontext, nichts geht verloren.
 
 ## Live-Baseline (Referenz, siehe `lighthouse-baseline.json`)
 

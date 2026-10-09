@@ -130,17 +130,29 @@ Farbsektion mit Sticker-Badges, pro-Service Vollflächen-Farbsektionen mit Nebel
 - `node scripts/test-seo.js` - projekteigener SEO-Test (Metadaten/Canonicals/Schemas/Links).
 - Lighthouse: siehe oben unter "Harte Regeln".
 
-**Bereits gebaut:**
-- Section 1 (Preloader): fertig, siehe `redesign.css`/`redesign.js`/`index.html` Kommentar-Blöcke
-  "Preloader". Platzhalter-Bild noch offen.
-- ARIA-Fixes: `aria-prohibited-attr` + `aria-required-children` site-weit behoben (siehe
-  `templates/partials/header.*.html` + `main.js` `zitatKarteHtml`). `heading-order` bewusst NICHT
-  angefasst (bestehendes Problem, außerhalb Scope, siehe Live-Baseline).
+**Bereits gebaut (Sections 1-4 von 9, siehe STATUS.md für Details/Lighthouse-Werte):**
+- Section 1 (Preloader): fertig. Platzhalter-Bild noch offen.
+- ARIA-Fixes: `aria-prohibited-attr` + `aria-required-children` site-weit behoben. `heading-order`
+  bewusst NICHT angefasst (bestehendes Problem, außerhalb Scope).
+- GSAP/ScrollTrigger/Lenis vendored unter `/vendor/` - WICHTIG: werden NICHT als `<script defer>`
+  geladen (kostete LCP-Budget), sondern dynamisch per `loadScript()` in redesign.js nach Idle/
+  Window-Load nachgeladen (siehe `loadVendorAndInit()`). Beim Erweitern diesem Muster folgen,
+  nicht zurück zu statischen `<script defer>`-Tags wechseln.
+- Fonts: Anton-Regular.woff2 (Display) + Caveat-Bold.woff2 (Script) unter `/fonts/`, Subset NUR
+  Latin+Deutsch+Satzzeichen - KEINE Sonderzeichen wie ✦ (siehe Laufband-Bugfix). Für neue
+  Sonderzeichen in Display-Schrift: entweder neu subsetten oder Systemschrift nutzen wie beim
+  Laufband.
+- Section 2 (Hero): Deko-Wort + Script + 3 Foto-Platzhalter mit 2.5D-Parallax.
+- Section 3 (Statement-Reveal): Wort-für-Wort-Reveal, Basis-Opacity 0.6 (AA-Kontrast-Pflicht,
+  nicht niedriger setzen ohne neu zu prüfen).
+- Section 4 (Laufband): nutzt bestehendes `.brand-marquee`/`.marquee-track` aus styles.css.
 
-**Noch NICHT begonnen:**
-- GSAP/ScrollTrigger/Lenis vendoren (`/vendor/`).
-- Fonts besorgen/subsetten (`/fonts/`) - Anton o.ä. (Display) + Caveat/Yellowtail o.ä. (Script).
-- Section 2 (Hero) bis Section 9 (Abschluss).
+**LCP-Hinweis (wichtig für alle weiteren Sections):** Lokal (HTTP/1.1, `npx serve`) pendelt LCP
+um 2,1-2,3s, leicht über dem 2,0s-Budget. Sehr wahrscheinlich lokales Artefakt (siehe STATUS.md
+Entscheidung 4), aber bei jeder neuen Section trotzdem Lighthouse prüfen und nicht einfach
+ignorieren - echte Bestätigung erst via Vercel-Preview möglich (SSO-Bypass-Secret fehlt noch).
+
+**Noch NICHT begonnen:** Section 5 (Farb-Sektion) bis Section 9 (Abschluss), siehe unten.
 
 ## Nächste Schritte bis Section 9 (Reihenfolge)
 
