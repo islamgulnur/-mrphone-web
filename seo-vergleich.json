@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T09:48:38.780Z",
+  "generatedAt": "2026-10-09T09:53:51.500Z",
   "allOk": true,
   "results": [
     {
@@ -8,7 +8,36 @@
       "headingDiffs": [],
       "linkDiff": {
         "missing": [],
-        "added": []
+        "added": [
+          {
+            "href": "iphone-display-reparatur-frankfurt.html",
+            "text": "Display-Reparatur ansehen →",
+            "type": "internal",
+            "rel": null,
+            "target": null
+          },
+          {
+            "href": "iphone-akku-wechsel-frankfurt.html",
+            "text": "Akku-Wechsel ansehen →",
+            "type": "internal",
+            "rel": null,
+            "target": null
+          },
+          {
+            "href": "handy-ankauf-frankfurt.html#ankaufsrechner",
+            "text": "Sofort-Ankauf ansehen →",
+            "type": "internal",
+            "rel": null,
+            "target": null
+          },
+          {
+            "href": "sortiment.html?kategorie=zubehoer",
+            "text": "Zubehör ansehen →",
+            "type": "internal",
+            "rel": null,
+            "target": null
+          }
+        ]
       },
       "imageDiff": {
         "missing": [],
@@ -18,7 +47,11 @@
         "missing": [],
         "added": [
           "WIR REPARIEREN NICHT EINFACH HANDYS – WIR HOLEN DEIN ALLTAG ZURÜCK.",
-          "Kaputt? Kein Drama."
+          "Kaputt? Kein Drama.",
+          "Rissiges Display? Bei Mr. Phone meist noch am selben Tag getauscht – original oder hochwertige Alternative, Sie entscheiden.",
+          "Akku schlapp statt den ganzen Tag durchzuhalten? Schneller Wechsel, faire Preise, direkt auf der Zeil.",
+          "Altes Handy übrig? Preis berechnen, per WhatsApp 24 h sichern und im Laden bar auszahlen lassen.",
+          "Hüllen, Panzergläser, Ladegeräte und Kopfhörer – inklusive individuellem Hüllendruck nach Ihrem Wunsch."
         ]
       },
       "faqMissing": [],
@@ -26,7 +59,7 @@
       "jsonLdMissing": [],
       "jsonLdAdded": [],
       "wordCountBaseline": 1254,
-      "wordCountCurrent": 1313,
+      "wordCountCurrent": 1394,
       "ok": true
     },
     {

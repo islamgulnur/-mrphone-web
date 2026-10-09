@@ -1,6 +1,6 @@
 # SEO-Vergleich: redesign/scroll-story gegen seo-baseline.json
 
-Generiert: 2026-10-09T09:48:38.780Z
+Generiert: 2026-10-09T09:53:51.501Z
 
 **Gesamtergebnis: OK – nichts verloren**
 
@@ -12,11 +12,21 @@ Nichts entfernt oder geändert.
 
 ### HINZUGEFÜGT (nur zur Info, kein Fehler)
 
+**Neue Links:**
+- `iphone-display-reparatur-frankfurt.html` ("Display-Reparatur ansehen →")
+- `iphone-akku-wechsel-frankfurt.html` ("Akku-Wechsel ansehen →")
+- `handy-ankauf-frankfurt.html#ankaufsrechner` ("Sofort-Ankauf ansehen →")
+- `sortiment.html?kategorie=zubehoer` ("Zubehör ansehen →")
+
 **Neue Textabsätze (z. B. Slogans, Badges):**
 - "WIR REPARIEREN NICHT EINFACH HANDYS – WIR HOLEN DEIN ALLTAG ZURÜCK."
 - "Kaputt? Kein Drama."
+- "Rissiges Display? Bei Mr. Phone meist noch am selben Tag getauscht – original oder hochwertige Alternative, Sie entscheiden."
+- "Akku schlapp statt den ganzen Tag durchzuhalten? Schneller Wechsel, faire Preise, direkt auf der Zeil."
+- "Altes Handy übrig? Preis berechnen, per WhatsApp 24 h sichern und im Laden bar auszahlen lassen."
+- "Hüllen, Panzergläser, Ladegeräte und Kopfhörer – inklusive individuellem Hüllendruck nach Ihrem Wunsch."
 
-Wortanzahl: 1254 → 1313
+Wortanzahl: 1254 → 1394
 
 ## en/index.html — ✅ OK
 

@@ -309,6 +309,65 @@ html.rs-preloader-pending .rs-preloader-bar-fill { width: 100%; }
 .sticker-badge--c { transform: rotate(-2deg); }
 .sticker-badge--d { transform: rotate(3deg); }
 
-/* ---------- Service-Sektionen (Vollflächen-Farbe + Nebel) ---------- */
+/* ---------- Service-Sektionen (Vollflächen-Farbe + Nebel) ----------
+   4 Pillar-Blöcke (Display/Akku/Ankauf/Zubehör), nutzen .rs-color-section-Basis von oben.
+   Nebel = zwei radiale Blur-Blobs per Pseudo-Element, Inhalt per z-index darüber. Fließender
+   Farbwechsel beim Scrollen entsteht allein durch Aufeinanderfolge der Vollflächen-Sektionen
+   (kein JS-Crossfade nötig, hält TBT bei 0). */
+.rs-color-section--blue { background: var(--rs-blue); color: #fff; }
+.rs-color-section--orange { background: var(--rs-orange); color: #fff; }
+.rs-color-section--green { background: var(--rs-green); color: var(--ink, #0a0c08); }
+.rs-color-section--violet { background: var(--rs-violet); color: #fff; }
+
+.rs-color-fog {
+  position: absolute;
+  inset: -15%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 25% 20%, rgba(255, 255, 255, 0.16), transparent 60%),
+    radial-gradient(circle at 78% 82%, rgba(255, 255, 255, 0.12), transparent 55%);
+  filter: blur(40px);
+}
+.rs-color-section--green .rs-color-fog,
+.rs-color-section--lime .rs-color-fog {
+  background:
+    radial-gradient(circle at 25% 20%, rgba(10, 12, 8, 0.1), transparent 60%),
+    radial-gradient(circle at 78% 82%, rgba(10, 12, 8, 0.08), transparent 55%);
+}
+
+.rs-service-block {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: clamp(2rem, 6vw, 4rem);
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .rs-service-block { grid-template-columns: 1fr 1fr; }
+  .rs-service-block--reverse { direction: rtl; }
+  .rs-service-block--reverse > * { direction: ltr; }
+}
+.rs-service-photo .rs-img-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  font-size: 0.75rem;
+}
+.rs-color-word {
+  font-family: var(--rs-font-display);
+  font-size: clamp(2.2rem, 7vw, 4.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+.rs-service-copy p { max-width: 32ch; margin: 0 0 1.25rem; }
+.rs-service-copy .btn { background: #fff; color: var(--ink, #0a0c08); border-color: #fff; }
+.rs-color-section--green .rs-service-copy .btn {
+  background: var(--ink, #0a0c08);
+  color: var(--rs-green);
+  border-color: var(--ink, #0a0c08);
+}
 
 /* ---------- Abschluss ---------- */

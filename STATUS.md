@@ -19,7 +19,8 @@ eine Zeile pro Commit, Entscheidungen zur Prüfung am Ende.
 | 11:55 | Section 4: Laufband | `930a861` | OK | OK | Perf 97 / A11y 99 (nur heading-order) / LCP 2,26s / CLS 0 | Anton-Font-Subset enthielt kein "✦" (U+2726) - behoben durch Systemschrift statt Anton für den Laufband-Text |
 
 | *(neue Session)* | LCP-Verifikation (main vs Branch, siehe Entscheidung 5) | - | - | - | main 1,75s / Branch 1,95s (Delta +0,20s) | Artefakt-Annahme bestätigt, Details s.u. |
-| *(folgt)* | Section 5: Farb-Sektion "Kaputt? Kein Drama." | *(nach Commit ergänzen)* | OK | OK | Perf 99 (Median aus 3) / LCP 1,95s / CLS 0 / TBT 0 / A11y 99 | Einzelmessung 1 von 3 Läufen bei 2,25s (Ausreißer, nicht reproduzierbar - Median entscheidend) |
+| Session 2 | Section 5: Farb-Sektion "Kaputt? Kein Drama." | `fc3dbcf` | OK | OK | Perf 99 (Median aus 3) / LCP 1,95s / CLS 0 / TBT 0 / A11y 99 | Einzelmessung 1 von 3 Läufen bei 2,25s (Ausreißer, nicht reproduzierbar - Median entscheidend) |
+| Session 2 | Section 6: 4 Service-Vollflächensektionen (Display/Akku/Ankauf/Zubehör, Farbe+Nebel) | *(nach Commit ergänzen)* | OK | OK | Perf 99 (Median aus 3) / LCP 1,955s / CLS 0 / TBT 0 / A11y 99 | - |
 
 *(Tabelle wird nach jedem weiteren Commit fortgeführt)*
 
@@ -88,7 +89,22 @@ Alles, was im autonomen Lauf ohne Rückfrage entschieden wurde:
      automatisch als Artefakt abzutun.
    - Worktree danach entfernt (`git worktree remove`), temporärer main-Server (PID-gezielt)
      beendet.
-6. *(wird nach jeder weiteren Section-Entscheidung ergänzt)*
+6. **Section 6 als additive Showcase statt Umbau bestehender Inhalte:** HANDOFF nennt für
+   Section 6 "BESTEHENDE Inhalte aus 'Alles rund um Ihr Smartphone'" mit einer Liste (Verkauf,
+   Express-Reparatur, Sofort-Ankauf, Zubehör&Hüllendruck, Mobilfunk&SIM, Geldtransfer), die
+   nicht 1:1 mit den tatsächlichen 6 Tiles übereinstimmt (dort heißt ein Tile "6 Monate
+   Garantie" statt "Sofort-Ankauf") und nur 4 Farben definiert sind (Blau/Orange/Grün/Violett).
+   Entscheidung: die 4 Farben passen exakt zu den 4 Pillars aus dem Laufband (DISPLAY, AKKU,
+   ANKAUF, ZUBEHÖR) und zu den 4 Bildordnern aus der Bilderliste (display/akku/ankauf/
+   zubehoer) - deutliches Signal, dass Section 6 diese 4 Pillars als NEUE, zusätzliche
+   Vollflächen-Showcase-Blöcke bekommt (Deko-Wort + neuer Kurztext + Link zum bestehenden Ziel),
+   statt bestehende H2/H3 aus dem Leistungen-Tile-Grid oder dem Ankauf-Teaser physisch zu
+   verschieben. Grund: Verschieben bestehender Headings würde das Risiko bergen, die von
+   seo-compare geprüfte Heading-Reihenfolge zu verändern (nicht nur Inhalt, auch Position),
+   und widerspricht dem bisherigen additiven Muster aus Sections 1-5. Alle 6 bestehenden Tiles
+   bleiben unverändert an ihrer Stelle im `#leistungen`-Block weiter unten auf der Seite - sie
+   werden in Section 7 im neuen Look eingebettet, nicht entfernt.
+7. *(wird nach jeder weiteren Section-Entscheidung ergänzt)*
 
 ## Nächste Schritte
 
