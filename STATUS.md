@@ -20,7 +20,10 @@ eine Zeile pro Commit, Entscheidungen zur Prüfung am Ende.
 
 | *(neue Session)* | LCP-Verifikation (main vs Branch, siehe Entscheidung 5) | - | - | - | main 1,75s / Branch 1,95s (Delta +0,20s) | Artefakt-Annahme bestätigt, Details s.u. |
 | Session 2 | Section 5: Farb-Sektion "Kaputt? Kein Drama." | `fc3dbcf` | OK | OK | Perf 99 (Median aus 3) / LCP 1,95s / CLS 0 / TBT 0 / A11y 99 | Einzelmessung 1 von 3 Läufen bei 2,25s (Ausreißer, nicht reproduzierbar - Median entscheidend) |
-| Session 2 | Section 6: 4 Service-Vollflächensektionen (Display/Akku/Ankauf/Zubehör, Farbe+Nebel) | *(nach Commit ergänzen)* | OK | OK | Perf 99 (Median aus 3) / LCP 1,955s / CLS 0 / TBT 0 / A11y 99 | - |
+| Session 2 | Section 6: 4 Service-Vollflächensektionen (Display/Akku/Ankauf/Zubehör, Farbe+Nebel) | `af21c66` | OK | OK | Perf 99 (Median aus 3) / LCP 1,955s / CLS 0 / TBT 0 / A11y 99 | - |
+| Session 2 | Section 7: geprüft, keine Änderung nötig (siehe Entscheidung 7) | - | OK | OK | unverändert | - |
+| Session 2 | Section 8: Geräte-Teaser geprüft, weggelassen (siehe Entscheidung 8) | - | OK | OK | unverändert | - |
+| Session 2 | Section 9: Abschluss (Slogan, Script, CTAs, Adresse/Öffnungszeiten, Karte per Klick) | *(nach Commit ergänzen)* | OK | OK | Perf 99 (Median aus 3) / LCP 1,955s / CLS 0 / TBT 0 / A11y 99 | - |
 
 *(Tabelle wird nach jedem weiteren Commit fortgeführt)*
 
@@ -104,7 +107,27 @@ Alles, was im autonomen Lauf ohne Rückfrage entschieden wurde:
    und widerspricht dem bisherigen additiven Muster aus Sections 1-5. Alle 6 bestehenden Tiles
    bleiben unverändert an ihrer Stelle im `#leistungen`-Block weiter unten auf der Seite - sie
    werden in Section 7 im neuen Look eingebettet, nicht entfernt.
-7. *(wird nach jeder weiteren Section-Entscheidung ergänzt)*
+7. **Section 7 ("restliche bestehende Abschnitte im neuen Look") ohne Datei-Änderung erledigt:**
+   `index-styles.css` (bereits auf `main` committet/freigegeben, siehe Commit `d5b4519`
+   "Schwarz+Grün-Glassmorphism-Redesign (Optik freigegeben)", lange vor diesem Branch) stylt
+   bereits ALLE 12 im Auftrag genannten Themen im einheitlichen Dark-Glass-Look: Kundenbewertungen
+   (`.bewertungen-section`/`.zitat-karte`), Häufig gesuchte Reparaturen (`.service-card`),
+   Kategorien (`.kategorie-tile`), Fachhändler-/Innenstadt-Text (`.split-content`), seit 2014
+   (`.bg-dark`/`.bg-light`), Smartphones (`.tile`), Gebrauchtgeräte mit Garantie
+   (`.badge-inline`), Tablets (`.tile`), Hüllen&Zubehör (`.gallery-grid`), Google-Bewertung
+   (`.review-cta`), Anfahrt (`.info-box`), FAQ (`.faq-item`). Alle 12 Headings/Links an Ort und
+   Stelle geprüft (unverändert, siehe `grep -n "<h2"` oben) - "neuer Look" ist für diese Abschnitte
+   bereits erfüllt, eine komplette Neuentwicklung hätte nur Risiko (Heading-Reihenfolge,
+   Link-Ziele) ohne echten Mehrwert gebracht. Keine Datei geändert, nur verifiziert.
+8. **Section 8 (Geräte-Teaser) weggelassen, Vorbedingung aus HANDOFF nicht erfüllt:**
+   `grep -rn "bestand.json\|data-bestand-grid"` in `main.js`/`index.html` zeigt: `bestand.json`
+   wird nur für das bestehende Sortiment-/Angebote-Grid (`initAktuelleAngebote`/`initSortiment`
+   in `main.js`) geladen, `data-bestand-grid` taucht nur als einer von mehreren Selektoren im
+   generischen Klick-Tracking auf (Zeile 31), es existiert KEIN eigenes `[data-bestand-grid]`-
+   Element/Komponente im Markup. Vorbedingung aus HANDOFF Punkt 7 ("nur falls es schon eine
+   bestand.json-Komponente gibt") nicht erfüllt - wie angewiesen weggelassen, keine neue
+   Datenabhängigkeit gebaut.
+9. *(wird nach jeder weiteren Section-Entscheidung ergänzt)*
 
 ## Nächste Schritte
 

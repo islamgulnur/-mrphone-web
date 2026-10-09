@@ -183,8 +183,29 @@
       });
   }
 
+  /* ---------- Abschluss: Karte nur per Klick (Consent) ----------
+     Kein automatischer iframe-Load/Drittanbieter-Request - Google-Maps-Embed wird erst bei
+     Klick auf "Karte anzeigen" ins DOM eingefügt. Läuft unabhängig von reduceMotion (reiner
+     Klick-Handler, keine Animation). */
+  function initMapConsent() {
+    var wrap = document.querySelector("[data-rs-map-consent]");
+    var btn = wrap && wrap.querySelector("[data-rs-map-btn]");
+    if (!wrap || !btn) return;
+    btn.addEventListener("click", function () {
+      var iframe = document.createElement("iframe");
+      iframe.src = "https://www.google.com/maps?q=Zeil+115-117,+60313+Frankfurt+am+Main&output=embed";
+      iframe.loading = "lazy";
+      iframe.title = "Karte: Mr. Phone, Zeil 115-117, Frankfurt am Main";
+      iframe.referrerPolicy = "no-referrer-when-downgrade";
+      iframe.className = "rs-map-frame";
+      wrap.innerHTML = "";
+      wrap.appendChild(iframe);
+    });
+  }
+
   initPreloader();
   initStatementReveal();
+  initMapConsent();
 
   if (!reduceMotion) {
     if ("requestIdleCallback" in window) {

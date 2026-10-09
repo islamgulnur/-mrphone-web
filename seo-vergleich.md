@@ -1,6 +1,6 @@
 # SEO-Vergleich: redesign/scroll-story gegen seo-baseline.json
 
-Generiert: 2026-10-09T09:53:51.501Z
+Generiert: 2026-10-09T09:58:58.202Z
 
 **Gesamtergebnis: OK – nichts verloren**
 
@@ -25,8 +25,13 @@ Nichts entfernt oder geändert.
 - "Akku schlapp statt den ganzen Tag durchzuhalten? Schneller Wechsel, faire Preise, direkt auf der Zeil."
 - "Altes Handy übrig? Preis berechnen, per WhatsApp 24 h sichern und im Laden bar auszahlen lassen."
 - "Hüllen, Panzergläser, Ladegeräte und Kopfhörer – inklusive individuellem Hüllendruck nach Ihrem Wunsch."
+- "Dein Handy ist kein Gerät. Es ist dein Alltag."
+- "wir kümmern uns"
+- "Zeil 115–117, 60313 Frankfurt am Main"
+- "Mo–Fr 9:30–21:00 Uhr · Sa 9:30–21:30 Uhr · So geschlossen"
+- "Lädt eine Karte von Google Maps (externer Dienst) erst nach Klick."
 
-Wortanzahl: 1254 → 1394
+Wortanzahl: 1254 → 1441
 
 ## en/index.html — ✅ OK
 

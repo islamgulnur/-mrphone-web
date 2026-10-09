@@ -825,6 +825,31 @@
     </div>
   </section>
 
+  <!-- ABSCHLUSS (neu, dunkel). Slogan + Script-Flourish als p/span (keine Heading). CTAs/
+       Adresse/Öffnungszeiten sind neue Textinstanzen derselben Fakten, die bereits im Hero
+       (Zeile ~216-217) bzw. in der Anfahrt-Infobox (Zeile ~772-776) stehen - dort unverändert.
+       Karte: echtes neues Feature, aber per Klick-Consent (kein automatischer iframe-Load,
+       kein Tracking vor Interaktion) - siehe initMapConsent in redesign.js. -->
+  <section class="rs-closing">
+    <div class="rs-color-fog" aria-hidden="true"></div>
+    <div class="container rs-closing-inner">
+      <p class="rs-closing-slogan reveal">Dein Handy ist kein Gerät. Es ist dein Alltag.</p>
+      <p class="rs-closing-script reveal" aria-hidden="true">wir kümmern uns</p>
+      <div class="cta-row reveal" style="justify-content: center;">
+        <a href="tel:+496995632281" class="btn btn-outline-dark">069 95632281 anrufen</a>
+        <a href="https://wa.me/496995632281?text=Hallo%20Mr.%20Phone%2C%20ich%20habe%20eine%20Frage%3A%20" class="btn btn-primary" target="_blank" rel="noopener">Per WhatsApp anfragen</a>
+      </div>
+      <div class="rs-closing-info reveal">
+        <p>Zeil 115–117, 60313 Frankfurt am Main</p>
+        <p>Mo–Fr 9:30–21:00 Uhr · Sa 9:30–21:30 Uhr · So geschlossen</p>
+      </div>
+      <div class="rs-map-consent reveal" data-rs-map-consent>
+        <button type="button" class="btn btn-outline-dark" data-rs-map-btn>Karte anzeigen</button>
+        <p class="rs-map-hint">Lädt eine Karte von Google Maps (externer Dienst) erst nach Klick.</p>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer" data-track="footer">
