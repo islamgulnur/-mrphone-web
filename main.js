@@ -356,7 +356,7 @@
 
   function zitatKarteHtml(z) {
     return (
-      '<figure class="zitat-karte">' +
+      '<figure class="zitat-karte" role="listitem">' +
       sterneHtml(z.sterne) +
       "<blockquote>„" + escapeHtml(z.text) + "“</blockquote>" +
       "<figcaption>" + escapeHtml(z.name) + "</figcaption>" +
