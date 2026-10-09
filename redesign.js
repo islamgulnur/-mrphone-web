@@ -49,8 +49,104 @@
     timer = window.setTimeout(dismiss, BAR_MS);
   }
 
-  /* ---------- Hero-Parallax ---------- */
-  /* siehe Commit "Section 2: Hero" */
+  /* ---------- Lenis Smooth Scroll (nur Desktop, nie bei reduced-motion) ---------- */
+  function initLenis() {
+    if (reduceMotion) return;
+    if (!window.Lenis || !window.gsap) return;
+    var isDesktop = window.matchMedia && window.matchMedia("(min-width: 900px)").matches;
+    if (!isDesktop) return;
+
+    var lenis = new window.Lenis({ duration: 1.1, smoothWheel: true });
+    if (window.ScrollTrigger) lenis.on("scroll", window.ScrollTrigger.update);
+    window.gsap.ticker.add(function (time) {
+      lenis.raf(time * 1000);
+    });
+    window.gsap.ticker.lagSmoothing(0);
+  }
+
+  /* ---------- Hero-Parallax (echte Gerätefotos, 2.5D) ----------
+     Nur translate/scale/Tilt, max ±15° rotateX/rotateY - laut Vorgabe KEINE volle 3D-Drehung
+     (ein flaches Foto sieht dabei falsch aus). "Handy fliegt durch" entsteht durch die 3
+     verschiedenen Foto-Slots (vorne/schräg/hinten), nicht durch Rotation eines einzelnen Fotos. */
+  function initHeroParallax() {
+    if (reduceMotion) return;
+    if (!window.gsap || !window.ScrollTrigger) return;
+
+    var hero = document.querySelector("[data-hero-scroll]");
+    if (!hero) return;
+    var floaters = hero.querySelectorAll("[data-hero-floater]");
+    if (!floaters.length) return;
+
+    window.gsap.registerPlugin(window.ScrollTrigger);
+
+    var KEYFRAMES = [
+      { x: 6, y: -16, rx: 7, ry: -9, scale: 1.04 },
+      { x: -14, y: 14, rx: -5, ry: 7, scale: 0.97 },
+      { x: 10, y: -8, rx: 9, ry: -11, scale: 1.02 },
+    ];
+
+    floaters.forEach(function (el, i) {
+      var kf = KEYFRAMES[i % KEYFRAMES.length];
+      window.gsap.set(el, { y: 36, rotateX: 0, rotateY: 0, scale: 0.92, opacity: 0 });
+      window.gsap.to(el, {
+        x: kf.x,
+        y: kf.y,
+        rotateX: kf.rx,
+        rotateY: kf.ry,
+        scale: kf.scale,
+        opacity: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: hero,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.6,
+        },
+      });
+    });
+  }
+
+  /* ---------- Vendor-Libs dynamisch nachladen (GSAP/ScrollTrigger/Lenis) ----------
+     Nicht als <script defer> im HTML - deren reines Parsen/Ausführen (~137KB unminifiziert)
+     kostet Hauptthread-Zeit synchron vor DOMContentLoaded und verzögerte dadurch LCP messbar
+     (2.0s-Budget gerissen). Keins der 3 Skripte wird für den ersten Paint gebraucht (nur für
+     späteres Scroll-Verhalten) - also komplett aus dem kritischen Pfad, erst nach Window-Load/
+     Idle nachladen. */
+  function loadScript(src) {
+    return new Promise(function (resolve, reject) {
+      var s = document.createElement("script");
+      s.src = src;
+      s.onload = resolve;
+      s.onerror = reject;
+      document.body.appendChild(s);
+    });
+  }
+
+  function loadVendorAndInit() {
+    Promise.all([
+      loadScript("vendor/gsap/gsap.min.js"),
+      loadScript("vendor/gsap/ScrollTrigger.min.js"),
+      loadScript("vendor/lenis/lenis.min.js"),
+    ])
+      .then(function () {
+        initLenis();
+        initHeroParallax();
+      })
+      .catch(function () {
+        /* Vendor-Skripte nicht erreichbar: Seite bleibt vollständig nutzbar, nur ohne
+           Scroll-Parallax/Smooth-Scroll - Progressive Enhancement, kein Fehlerzustand. */
+      });
+  }
 
   initPreloader();
+
+  if (!reduceMotion) {
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(loadVendorAndInit, { timeout: 1500 });
+    } else {
+      window.addEventListener("load", function () {
+        window.setTimeout(loadVendorAndInit, 0);
+      });
+    }
+  }
 })();

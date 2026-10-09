@@ -1,6 +1,6 @@
 # SEO-Vergleich: redesign/scroll-story gegen seo-baseline.json
 
-Generiert: 2026-10-09T08:56:26.690Z
+Generiert: 2026-10-09T09:06:01.817Z
 
 **Gesamtergebnis: OK – nichts verloren**
 
@@ -14,7 +14,7 @@ Nichts entfernt oder geändert.
 
 Nichts Neues hinzugefügt.
 
-Wortanzahl: 1254 → 1258
+Wortanzahl: 1254 → 1266
 
 ## en/index.html — ✅ OK
 
