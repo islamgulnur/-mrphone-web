@@ -185,7 +185,63 @@ html.rs-preloader-pending .rs-preloader-bar-fill { width: 100%; }
   .hero-floater { opacity: 1 !important; transform: none !important; }
 }
 
-/* ---------- Statement-Reveal ---------- */
+/* ---------- Statement-Reveal ----------
+   Bewusst heller Hintergrund (Kontrast zum dunklen Rest der Seite, siehe Vorgabe).
+   Wort-für-Wort-Highlight per GSAP ScrollTrigger (initStatementReveal in redesign.js) - Basis-
+   Deckkraft 0.25 (nicht 0: Text bleibt ohne JS/bei reduced-motion voll lesbar, kein verstecker
+   Inhalt), volle Deckkraft beim Scrollen. Gleiches Opacity-Pattern wie das bestehende .reveal
+   sitewide, nur mit höherer Basis-Deckkraft als zusätzliche Sicherheit. */
+.statement-reveal {
+  position: relative;
+  background: var(--paper, #edf1e6);
+  color: var(--ink, #0a0c08);
+  padding-block: clamp(4rem, 10vw, 8rem);
+  overflow: clip;
+}
+.statement-text {
+  font-family: var(--rs-font-display);
+  font-size: clamp(1.8rem, 5.5vw, 4.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  max-width: 18ch;
+  margin: 0 auto;
+  text-align: center;
+}
+.statement-word {
+  display: inline-block;
+  opacity: 0.6; /* AA-Kontrast gegen --paper geprüft (4.97:1), nicht niedriger setzen */
+  transition: opacity 0.2s linear;
+}
+@media (prefers-reduced-motion: reduce) {
+  .statement-word { opacity: 1 !important; }
+}
+
+/* "Handy fliegt durch": ein Foto-Slot wechselt Position/Skalierung beim Scrollen durch die
+   Sektion (2.5D, kein Rotieren eines Fotos - siehe Hero-Kommentar für Begründung). */
+.statement-photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(90px, 11vw, 140px);
+  aspect-ratio: 3 / 4;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  will-change: transform;
+  z-index: 1;
+}
+.statement-photo .rs-img-placeholder {
+  width: 100%;
+  height: 100%;
+  font-size: 0.55rem;
+  background: repeating-linear-gradient(45deg, #d8dcd0, #d8dcd0 10px, #cfd3c7 10px, #cfd3c7 20px);
+  color: #5c5c59;
+}
+@media (prefers-reduced-motion: reduce) {
+  .statement-photo { display: none; }
+}
 
 /* ---------- Laufband ---------- */
 

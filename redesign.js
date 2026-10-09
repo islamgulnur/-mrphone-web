@@ -49,6 +49,51 @@
     timer = window.setTimeout(dismiss, BAR_MS);
   }
 
+  /* ---------- Statement-Reveal (Wort-für-Wort + "Handy fliegt durch") ----------
+     Bewusst ohne GSAP: läuft sofort (nicht erst nach Idle/Vendor-Laden gegated), reiner
+     Scroll-Listener analog initParallax3D oben. Basis-Deckkraft 0.25 ist per CSS gesetzt
+     (ohne JS/bei reduced-motion voll lesbar), hier nur die Progressive-Enhancement-Animation. */
+  function initStatementReveal() {
+    if (reduceMotion) return;
+    var section = document.querySelector("[data-statement-reveal]");
+    if (!section) return;
+    var words = section.querySelectorAll(".statement-word");
+    var photo = section.querySelector("[data-statement-photo]");
+    if (!words.length) return;
+
+    var ticking = false;
+
+    function update() {
+      ticking = false;
+      var rect = section.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var total = rect.height + vh;
+      var progress = Math.min(1, Math.max(0, (vh - rect.top) / total));
+      var n = words.length;
+      words.forEach(function (w, i) {
+        var wordProgress = Math.min(1, Math.max(0, progress * n - i));
+        w.style.opacity = (0.6 + wordProgress * 0.4).toFixed(2);
+      });
+      if (photo) {
+        var x = (progress - 0.5) * 220;
+        var tilt = (progress - 0.5) * 18; // bleibt unter dem ±15°-Limit (max ±9° hier)
+        photo.style.transform =
+          "translate(-50%,-50%) translateX(" + x.toFixed(1) + "%) rotateY(" + tilt.toFixed(1) + "deg) scale(" + (0.85 + progress * 0.3).toFixed(2) + ")";
+      }
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    update();
+  }
+
   /* ---------- Lenis Smooth Scroll (nur Desktop, nie bei reduced-motion) ---------- */
   function initLenis() {
     if (reduceMotion) return;
@@ -139,6 +184,7 @@
   }
 
   initPreloader();
+  initStatementReveal();
 
   if (!reduceMotion) {
     if ("requestIdleCallback" in window) {

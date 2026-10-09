@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T09:06:01.816Z",
+  "generatedAt": "2026-10-09T09:10:39.198Z",
   "allOk": true,
   "results": [
     {
@@ -16,14 +16,16 @@
       },
       "paragraphDiff": {
         "missing": [],
-        "added": []
+        "added": [
+          "WIR REPARIEREN NICHT EINFACH HANDYS – WIR HOLEN DEIN ALLTAG ZURÜCK."
+        ]
       },
       "faqMissing": [],
       "faqAdded": [],
       "jsonLdMissing": [],
       "jsonLdAdded": [],
       "wordCountBaseline": 1254,
-      "wordCountCurrent": 1266,
+      "wordCountCurrent": 1278,
       "ok": true
     },
     {
