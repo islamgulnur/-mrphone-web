@@ -50,6 +50,8 @@
      Systemschriften statt Google Fonts, deshalb kein Inter-Link mehr auf dieser Seite. -->
 <link rel="stylesheet" href="index-styles.css">
 <link rel="stylesheet" href="redesign.css">
+<link rel="stylesheet" href="vendor/lenis/lenis.css">
+<link rel="preload" as="font" href="/fonts/Anton-Regular.woff2" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="/videos/hero/hero-home-poster.webp" type="image/webp" fetchpriority="high">
 
 <script type="application/ld+json" id="schema-localbusiness">
@@ -756,6 +758,9 @@
 <script defer src="hero-video.js"></script>
 <!-- phone-bg.js deaktiviert, siehe Kommentar bei phone-bg.css im <head>.
      <script src="phone-bg.js" defer></script> -->
+<script defer src="vendor/gsap/gsap.min.js"></script>
+<script defer src="vendor/gsap/ScrollTrigger.min.js"></script>
+<script defer src="vendor/lenis/lenis.min.js"></script>
 <script defer src="redesign.js"></script>
 <script src="admin-zugriff.js" defer></script>
 <!-- GoatCounter Analytics (privacy-freundlich, keine Cookies) – Setup: siehe ANALYTICS-SETUP.md -->

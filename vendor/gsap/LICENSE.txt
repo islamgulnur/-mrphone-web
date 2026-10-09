@@ -1,0 +1,13 @@
+GSAP (GreenSock Animation Platform) + ScrollTrigger
+Version vendored: 3.15.0
+
+License: GreenSock Standard "No Charge" License
+https://gsap.com/standard-license
+
+As of GSAP 3.13, the GreenSock core library and all bonus plugins
+(including ScrollTrigger) are free to use, including in commercial
+projects, under the GreenSock Standard License. See the URL above for
+full terms. Do not redistribute these files as a standalone library
+product; they are vendored here solely for use within this website.
+
+Source: https://www.npmjs.com/package/gsap

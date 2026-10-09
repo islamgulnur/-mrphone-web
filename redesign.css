@@ -18,10 +18,24 @@
   --rs-font-script: "RSScript", var(--font);
 }
 
-/* ---------- Fonts (self-hosted, siehe /fonts/, Task "Fonts" folgt) ---------- */
-/* @font-face-Deklarationen kommen mit dem Hero-Commit, sobald die WOFF2-Dateien
-   unter /fonts/ liegen. Bis dahin fällt --rs-font-display/--rs-font-script auf
-   die bestehende Systemschrift zurück (kein FOUT/FOIT-Risiko in der Zwischenzeit). */
+/* ---------- Fonts (self-hosted unter /fonts/, kein Google-CDN) ----------
+   Anton (Display, Subset Latin+Deutsch inkl. ÄÖÜß) + Caveat Bold (Script, gleiches Subset).
+   Nur die Anton-Datei wird im <head> preloaded (Hero-Wort ist LCP-kritisch), Caveat lädt
+   normal mit font-display:swap - kein FOUT-Risiko, da Fallback (var(--font)) sofort da ist. */
+@font-face {
+  font-family: "RSDisplay";
+  src: url("/fonts/Anton-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RSScript";
+  src: url("/fonts/Caveat-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ---------- Bild-Platzhalter (bis echte Fotos geliefert werden) ---------- */
 /* Keine Fake-Bilder: neutraler grauer Kasten mit Dateiname, austauschbar sobald
