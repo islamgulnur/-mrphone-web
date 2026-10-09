@@ -1,0 +1,40 @@
+/* =========================================================
+   redesign.css - Scroll-Story-Redesign (Branch redesign/scroll-story)
+   NUR auf index.html eingebunden. Lädt NACH styles.css/index-styles.css
+   und überschreibt/ergänzt gezielt - alle anderen Seiten unangetastet.
+   Baut auf den bestehenden Dark/Glass-Tokens aus index-styles.css auf
+   (--ink, --signal #8dc63f, --paper, --steel, --hairline).
+   ========================================================= */
+
+:root {
+  /* Sektionsfarben (WCAG-AA-geprüft, siehe seo-vergleich/Chat) */
+  --rs-lime: #c6ff33;       /* "Kaputt? Kein Drama."-Sektion, IMMER dunkler Text (16.61:1 auf --ink) */
+  --rs-blue: #13235e;       /* Display-Sektion, weißer Text (14.69:1) */
+  --rs-orange: #c23f0a;     /* Akku-Sektion, weißer Text (5.24:1) */
+  --rs-violet: #5b2a9e;     /* Zubehör-Sektion, weißer Text (9.25:1) */
+  --rs-green: var(--signal); /* Ankauf-Sektion = Markengrün, dunkler Text (9.62:1) */
+
+  --rs-font-display: "RSDisplay", var(--font);
+  --rs-font-script: "RSScript", var(--font);
+}
+
+/* ---------- Fonts (self-hosted, siehe /fonts/, Task "Fonts" folgt) ---------- */
+/* @font-face-Deklarationen kommen mit dem Hero-Commit, sobald die WOFF2-Dateien
+   unter /fonts/ liegen. Bis dahin fällt --rs-font-display/--rs-font-script auf
+   die bestehende Systemschrift zurück (kein FOUT/FOIT-Risiko in der Zwischenzeit). */
+
+/* ---------- Preloader ---------- */
+/* siehe Commit "Section 1: Preloader" */
+
+/* ---------- Hero ---------- */
+/* siehe Commit "Section 2: Hero" */
+
+/* ---------- Statement-Reveal ---------- */
+
+/* ---------- Laufband ---------- */
+
+/* ---------- Farb-Sektion "Kaputt? Kein Drama." ---------- */
+
+/* ---------- Service-Sektionen (Vollflächen-Farbe + Nebel) ---------- */
+
+/* ---------- Abschluss ---------- */

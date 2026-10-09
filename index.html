@@ -27,10 +27,15 @@
 <meta name="twitter:image" content="https://mrphone-frankfurt.de/images/mr-phone-zeil-frankfurt-aussenansicht.jpg">
 
 <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="phone-bg.css">
+<!-- phone-bg.css ist hier deaktiviert (redesign/scroll-story, 2026-10-09): das CSS-3D-Phone
+     wird im neuen Hero durch echte freigestellte Gerätefotos ersetzt. Datei bleibt unverändert
+     auf der Platte, auf allen anderen Seiten nicht eingebunden (war ohnehin index-only) -
+     einfach die Zeile unten wieder einkommentieren, um es zurückzuholen:
+     <link rel="stylesheet" href="phone-bg.css"> -->
 <!-- Nur auf index.html: Schwarz+Grün-Glassmorphism-Reskin, siehe .design-preview/homepage-prototype.html.
      Systemschriften statt Google Fonts, deshalb kein Inter-Link mehr auf dieser Seite. -->
 <link rel="stylesheet" href="index-styles.css">
+<link rel="stylesheet" href="redesign.css">
 <link rel="preload" as="image" href="/videos/hero/hero-home-poster.webp" type="image/webp" fetchpriority="high">
 
 <script type="application/ld+json" id="schema-localbusiness">
@@ -722,7 +727,9 @@
 
 <script defer src="main.js"></script>
 <script defer src="hero-video.js"></script>
-<script src="phone-bg.js" defer></script>
+<!-- phone-bg.js deaktiviert, siehe Kommentar bei phone-bg.css im <head>.
+     <script src="phone-bg.js" defer></script> -->
+<script defer src="redesign.js"></script>
 <script src="admin-zugriff.js" defer></script>
 <!-- GoatCounter Analytics (privacy-freundlich, keine Cookies) – Setup: siehe ANALYTICS-SETUP.md -->
 <script data-goatcounter="https://mr-phone-frankfurt.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>

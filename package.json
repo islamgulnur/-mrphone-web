@@ -15,11 +15,16 @@
     "build:reparaturseiten": "node scripts/build-reparatur-landingpages.js",
     "test:reparaturseiten": "node scripts/build-reparatur-landingpages.js --check",
     "test:seo": "node scripts/test-seo.js",
-    "indexnow:check": "node scripts/submit-indexnow.js --all --dry-run"
+    "indexnow:check": "node scripts/submit-indexnow.js --all --dry-run",
+    "seo-audit": "node scripts/seo-audit.js",
+    "seo-compare": "node scripts/seo-audit.js --compare seo-baseline.json"
   },
   "dependencies": {
     "express": "^4.19.2",
     "multer": "^2.0.0",
     "sharp": "^0.33.4"
+  },
+  "devDependencies": {
+    "cheerio": "^1.2.0"
   }
 }
