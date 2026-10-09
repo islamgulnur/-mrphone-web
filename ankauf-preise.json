@@ -35,7 +35,10 @@
           "schlecht": 35,
           "defekt": 15
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "auto",
+        "preisStatus": "anfrage",
+        "preisStatusGrund": "Preise zu stark gestreut (71% > 55%)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -52,7 +55,7 @@
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 245,
+          "neuVersiegelt": 250,
           "wieNeu": 65,
           "sehrGut": 65,
           "gut": 55,
@@ -102,7 +105,7 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
         "preise": {
-          "neuVersiegelt": 310,
+          "neuVersiegelt": 245,
           "wieNeu": 75,
           "sehrGut": 75,
           "gut": 65,
@@ -140,7 +143,7 @@
         "uvpDelta": 50,
         "preise": {
           "neuVersiegelt": 165,
-          "wieNeu": 85,
+          "wieNeu": 80,
           "sehrGut": 80,
           "gut": 70,
           "schlecht": 50,
@@ -162,7 +165,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "Datenfehler: marktwertNeu (200 €) <= marktwertGebraucht (207 €)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -179,7 +182,7 @@
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 175,
+          "neuVersiegelt": 185,
           "wieNeu": 55,
           "sehrGut": 55,
           "gut": 50,
@@ -192,7 +195,7 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
         "preise": {
-          "neuVersiegelt": 175,
+          "neuVersiegelt": 185,
           "wieNeu": 85,
           "sehrGut": 80,
           "gut": 70,
@@ -205,7 +208,7 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 350,
         "preise": {
-          "neuVersiegelt": 670,
+          "neuVersiegelt": 735,
           "wieNeu": 135,
           "sehrGut": 125,
           "gut": 110,
@@ -242,7 +245,7 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
         "preise": {
-          "neuVersiegelt": 205,
+          "neuVersiegelt": 200,
           "wieNeu": 120,
           "sehrGut": 115,
           "gut": 100,
@@ -279,7 +282,7 @@
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 230,
+          "neuVersiegelt": 220,
           "wieNeu": 70,
           "sehrGut": 70,
           "gut": 60,
@@ -329,11 +332,11 @@
         "bezeichnung": "64 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 230,
+          "neuVersiegelt": 235,
           "wieNeu": 120,
           "sehrGut": 110,
-          "gut": 90,
-          "schlecht": 65,
+          "gut": 95,
+          "schlecht": 70,
           "defekt": 35
         },
         "preisQuelle": "auto"
@@ -342,9 +345,9 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
         "preise": {
-          "neuVersiegelt": 230,
-          "wieNeu": 140,
-          "sehrGut": 130,
+          "neuVersiegelt": 250,
+          "wieNeu": 135,
+          "sehrGut": 125,
           "gut": 110,
           "schlecht": 80,
           "defekt": 40
@@ -355,11 +358,11 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 350,
         "preise": {
-          "neuVersiegelt": 230,
-          "wieNeu": 165,
-          "sehrGut": 155,
-          "gut": 135,
-          "schlecht": 100,
+          "neuVersiegelt": 250,
+          "wieNeu": 175,
+          "sehrGut": 160,
+          "gut": 140,
+          "schlecht": 105,
           "defekt": 50
         },
         "preisQuelle": "auto"
@@ -380,26 +383,26 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 265,
-          "wieNeu": 165,
-          "sehrGut": 155,
-          "gut": 135,
-          "schlecht": 100,
+          "wieNeu": 155,
+          "sehrGut": 145,
+          "gut": 125,
+          "schlecht": 90,
           "defekt": 45
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "Preise zu stark gestreut (56% > 55%)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "Preise zu stark gestreut (58% > 55%)",
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
         "preise": {
           "neuVersiegelt": 265,
-          "wieNeu": 165,
-          "sehrGut": 155,
-          "gut": 135,
-          "schlecht": 100,
+          "wieNeu": 155,
+          "sehrGut": 145,
+          "gut": 125,
+          "schlecht": 90,
           "defekt": 45
         },
         "preisQuelle": "auto"
@@ -415,7 +418,10 @@
           "schlecht": 110,
           "defekt": 55
         },
-        "preisQuelle": "auto"
+        "preisQuelle": "auto",
+        "preisStatus": "anfrage",
+        "preisStatusGrund": "Preise zu stark gestreut (68% > 55%)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -465,10 +471,7 @@
           "schlecht": 50,
           "defekt": 25
         },
-        "preisQuelle": "auto",
-        "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (6 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisQuelle": "auto"
       }
     ]
   },
@@ -487,7 +490,7 @@
         "preise": {
           "neuVersiegelt": 185,
           "wieNeu": 100,
-          "sehrGut": 95,
+          "sehrGut": 90,
           "gut": 80,
           "schlecht": 60,
           "defekt": 30
@@ -520,8 +523,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "Preise zu stark gestreut (71% > 55%)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "Preise zu stark gestreut (72% > 55%)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -552,8 +555,8 @@
         "uvpDelta": 50,
         "preise": {
           "neuVersiegelt": 210,
-          "wieNeu": 115,
-          "sehrGut": 105,
+          "wieNeu": 120,
+          "sehrGut": 110,
           "gut": 95,
           "schlecht": 70,
           "defekt": 35
@@ -564,7 +567,7 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 150,
         "preise": {
-          "neuVersiegelt": 210,
+          "neuVersiegelt": 215,
           "wieNeu": 145,
           "sehrGut": 135,
           "gut": 115,
@@ -602,10 +605,10 @@
         "uvpDelta": 100,
         "preise": {
           "neuVersiegelt": 265,
-          "wieNeu": 175,
+          "wieNeu": 170,
           "sehrGut": 160,
-          "gut": 140,
-          "schlecht": 105,
+          "gut": 135,
+          "schlecht": 100,
           "defekt": 50
         },
         "preisQuelle": "auto"
@@ -614,11 +617,11 @@
         "bezeichnung": "512 GB",
         "uvpDelta": 300,
         "preise": {
-          "neuVersiegelt": 290,
-          "wieNeu": 210,
-          "sehrGut": 200,
-          "gut": 170,
-          "schlecht": 125,
+          "neuVersiegelt": 315,
+          "wieNeu": 225,
+          "sehrGut": 210,
+          "gut": 185,
+          "schlecht": 135,
           "defekt": 65
         },
         "preisQuelle": "auto"
@@ -639,11 +642,11 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 295,
-          "wieNeu": 225,
-          "sehrGut": 210,
-          "gut": 185,
-          "schlecht": 135,
-          "defekt": 65
+          "wieNeu": 195,
+          "sehrGut": 185,
+          "gut": 160,
+          "schlecht": 120,
+          "defekt": 55
         },
         "preisQuelle": "auto"
       },
@@ -652,11 +655,11 @@
         "uvpDelta": 100,
         "preise": {
           "neuVersiegelt": 295,
-          "wieNeu": 235,
-          "sehrGut": 215,
-          "gut": 190,
-          "schlecht": 140,
-          "defekt": 70
+          "wieNeu": 195,
+          "sehrGut": 185,
+          "gut": 160,
+          "schlecht": 120,
+          "defekt": 55
         },
         "preisQuelle": "auto"
       },
@@ -665,11 +668,11 @@
         "uvpDelta": 300,
         "preise": {
           "neuVersiegelt": 375,
-          "wieNeu": 255,
-          "sehrGut": 240,
-          "gut": 205,
-          "schlecht": 150,
-          "defekt": 75
+          "wieNeu": 220,
+          "sehrGut": 205,
+          "gut": 175,
+          "schlecht": 130,
+          "defekt": 65
         },
         "preisQuelle": "auto"
       }
@@ -1714,12 +1717,12 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 655,
-          "wieNeu": 545,
-          "sehrGut": 505,
-          "gut": 440,
-          "schlecht": 330,
-          "defekt": 160
+          "neuVersiegelt": 700,
+          "wieNeu": 570,
+          "sehrGut": 525,
+          "gut": 460,
+          "schlecht": 345,
+          "defekt": 165
         },
         "preisQuelle": "auto"
       },
@@ -1737,7 +1740,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (3 < 8)",
-        "preisStatusSeit": "2026-10-08"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -1804,11 +1807,11 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 870,
-          "wieNeu": 715,
-          "sehrGut": 670,
-          "gut": 580,
-          "schlecht": 435,
+          "neuVersiegelt": 910,
+          "wieNeu": 735,
+          "sehrGut": 685,
+          "gut": 595,
+          "schlecht": 445,
           "defekt": 215
         },
         "preisQuelle": "auto"
@@ -1818,11 +1821,11 @@
         "uvpDelta": 200,
         "preise": {
           "neuVersiegelt": 1065,
-          "wieNeu": 860,
-          "sehrGut": 805,
-          "gut": 700,
-          "schlecht": 525,
-          "defekt": 265
+          "wieNeu": 885,
+          "sehrGut": 820,
+          "gut": 715,
+          "schlecht": 535,
+          "defekt": 260
         },
         "preisQuelle": "auto"
       },
@@ -1855,11 +1858,11 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 930,
-          "wieNeu": 810,
-          "sehrGut": 750,
-          "gut": 655,
-          "schlecht": 490,
-          "defekt": 240
+          "wieNeu": 790,
+          "sehrGut": 735,
+          "gut": 640,
+          "schlecht": 480,
+          "defekt": 235
         },
         "preisQuelle": "auto"
       },
@@ -1868,10 +1871,10 @@
         "uvpDelta": 200,
         "preise": {
           "neuVersiegelt": 1170,
-          "wieNeu": 920,
-          "sehrGut": 855,
-          "gut": 745,
-          "schlecht": 555,
+          "wieNeu": 925,
+          "sehrGut": 860,
+          "gut": 750,
+          "schlecht": 560,
           "defekt": 275
         },
         "preisQuelle": "auto"
@@ -1895,10 +1898,10 @@
         "preise": {
           "neuVersiegelt": 1520,
           "wieNeu": 1155,
-          "sehrGut": 1085,
-          "gut": 940,
-          "schlecht": 705,
-          "defekt": 360
+          "sehrGut": 1075,
+          "gut": 935,
+          "schlecht": 700,
+          "defekt": 340
         },
         "preisQuelle": "auto"
       }
@@ -3183,11 +3186,11 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 500,
-          "wieNeu": 450,
-          "sehrGut": 410,
-          "gut": 330,
-          "schlecht": 245,
-          "defekt": 120
+          "wieNeu": 435,
+          "sehrGut": 395,
+          "gut": 320,
+          "schlecht": 240,
+          "defekt": 115
         },
         "preisQuelle": "auto"
       },
@@ -3220,11 +3223,11 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 560,
-          "wieNeu": 450,
-          "sehrGut": 410,
-          "gut": 330,
-          "schlecht": 245,
-          "defekt": 120
+          "wieNeu": 435,
+          "sehrGut": 395,
+          "gut": 320,
+          "schlecht": 240,
+          "defekt": 115
         },
         "preisQuelle": "auto"
       },
@@ -3256,12 +3259,12 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 705,
-          "wieNeu": 600,
-          "sehrGut": 545,
-          "gut": 440,
-          "schlecht": 330,
-          "defekt": 160
+          "neuVersiegelt": 730,
+          "wieNeu": 555,
+          "sehrGut": 505,
+          "gut": 405,
+          "schlecht": 300,
+          "defekt": 145
         },
         "preisQuelle": "auto"
       },
@@ -3270,8 +3273,8 @@
         "uvpDelta": 200,
         "preise": {
           "neuVersiegelt": 855,
-          "wieNeu": 685,
-          "sehrGut": 620,
+          "wieNeu": 680,
+          "sehrGut": 615,
           "gut": 500,
           "schlecht": 375,
           "defekt": 180
@@ -3283,11 +3286,11 @@
         "uvpDelta": 450,
         "preise": {
           "neuVersiegelt": 1090,
-          "wieNeu": 790,
-          "sehrGut": 715,
-          "gut": 580,
-          "schlecht": 435,
-          "defekt": 210
+          "wieNeu": 815,
+          "sehrGut": 740,
+          "gut": 595,
+          "schlecht": 445,
+          "defekt": 215
         },
         "preisQuelle": "auto"
       }
@@ -19423,8 +19426,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (4 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (2 < 8)",
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "512 GB",
@@ -19439,8 +19442,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (6 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (4 < 8)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -19466,8 +19469,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (5 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (4 < 8)",
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "512 GB",
@@ -19482,8 +19485,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (2 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (4 < 8)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -19523,7 +19526,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (5 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -19547,10 +19550,7 @@
           "schlecht": 75,
           "defekt": 35
         },
-        "preisQuelle": "auto",
-        "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (6 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisQuelle": "auto"
       },
       {
         "bezeichnung": "512 GB",
@@ -19565,8 +19565,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (4 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (5 < 8)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -19592,8 +19592,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "512 GB",
@@ -19608,8 +19608,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (2 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -19635,8 +19635,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (3 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (2 < 8)",
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "512 GB",
@@ -19652,7 +19652,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (2 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -19679,23 +19679,20 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (6 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "256 GB",
         "uvpDelta": 50,
         "preise": {
-          "neuVersiegelt": 235,
-          "wieNeu": 185,
-          "sehrGut": 170,
-          "gut": 135,
-          "schlecht": 100,
+          "neuVersiegelt": 255,
+          "wieNeu": 195,
+          "sehrGut": 175,
+          "gut": 140,
+          "schlecht": 105,
           "defekt": 50
         },
-        "preisQuelle": "auto",
-        "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (7 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisQuelle": "auto"
       }
     ]
   },
@@ -19721,8 +19718,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (5 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (7 < 8)",
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "512 GB",
@@ -19737,8 +19734,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -19765,7 +19762,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "256 GB",
@@ -19781,7 +19778,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -19808,7 +19805,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "256 GB",
@@ -19824,7 +19821,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -19851,7 +19848,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -19891,7 +19888,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -19918,7 +19915,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "256 GB",
@@ -19934,7 +19931,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -19961,7 +19958,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "1 TB",
@@ -19977,7 +19974,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20004,7 +20001,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "512 GB",
@@ -20020,7 +20017,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20046,8 +20043,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (2 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (3 < 8)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20073,8 +20070,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (3 < 8)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20100,8 +20097,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20127,8 +20124,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20155,7 +20152,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20182,7 +20179,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20209,7 +20206,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20236,7 +20233,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20263,7 +20260,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (2 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20289,8 +20286,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20317,7 +20314,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (3 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20344,7 +20341,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (2 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20371,7 +20368,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (3 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20397,8 +20394,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (3 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20425,7 +20422,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (2 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20452,7 +20449,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20479,7 +20476,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20506,7 +20503,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20533,7 +20530,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (3 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20560,7 +20557,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20610,8 +20607,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (2 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "46mm",
@@ -20626,8 +20623,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (7 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (6 < 8)",
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "46mm Titanarmband",
@@ -20643,7 +20640,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20669,8 +20666,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "46mm",
@@ -20686,7 +20683,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20713,7 +20710,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "46mm Titanarmband",
@@ -20729,7 +20726,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20756,7 +20753,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20782,8 +20779,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20810,7 +20807,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20836,8 +20833,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (2 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (3 < 8)",
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "47mm",
@@ -20852,8 +20849,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (7 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "Datenfehler: marktwertNeu (99 €) <= marktwertGebraucht (463 €)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20880,7 +20877,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20906,8 +20903,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "45mm",
@@ -20922,8 +20919,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (3 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (7 < 8)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20950,7 +20947,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -20977,7 +20974,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21004,7 +21001,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21031,7 +21028,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21058,7 +21055,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21085,7 +21082,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21112,7 +21109,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21139,7 +21136,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21166,7 +21163,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21193,7 +21190,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21220,7 +21217,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21246,8 +21243,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
-        "preisStatusSeit": "2026-10-08"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (3 < 8)",
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "512 GB",
@@ -21263,7 +21260,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-08"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "1 TB",
@@ -21279,7 +21276,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
-        "preisStatusSeit": "2026-10-08"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "2 TB",
@@ -21295,7 +21292,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-08"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21321,8 +21318,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (2 < 8)",
-        "preisStatusSeit": "2026-10-08"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "512 GB",
@@ -21338,7 +21335,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
-        "preisStatusSeit": "2026-10-08"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "1 TB",
@@ -21354,7 +21351,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-08"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "2 TB",
@@ -21370,7 +21367,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-08"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21396,8 +21393,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (2 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "256 GB",
@@ -21413,7 +21410,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "512 GB",
@@ -21429,7 +21426,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21455,8 +21452,8 @@
         },
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
-        "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusGrund": "zu wenige Gebraucht-Treffer (2 < 8)",
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21483,7 +21480,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21510,7 +21507,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21537,7 +21534,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "46 mm · Aluminium · GPS",
@@ -21554,7 +21551,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "42 mm · Aluminium · GPS + Cellular",
@@ -21571,7 +21568,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "46 mm · Aluminium · GPS + Cellular",
@@ -21588,7 +21585,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "42 mm · Titan · GPS + Cellular",
@@ -21605,7 +21602,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "46 mm · Titan · GPS + Cellular",
@@ -21622,7 +21619,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "42 mm · Keramik · GPS + Cellular",
@@ -21639,7 +21636,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "46 mm · Keramik · GPS + Cellular",
@@ -21656,7 +21653,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21683,7 +21680,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (1 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21710,7 +21707,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "Kabelloses Ladecase",
@@ -21726,7 +21723,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21753,7 +21750,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "Andere Konfiguration",
@@ -21770,7 +21767,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   },
@@ -21797,7 +21794,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       },
       {
         "bezeichnung": "Andere Konfiguration",
@@ -21814,7 +21811,7 @@
         "preisQuelle": "auto",
         "preisStatus": "anfrage",
         "preisStatusGrund": "zu wenige Gebraucht-Treffer (0 < 8)",
-        "preisStatusSeit": "2026-10-02"
+        "preisStatusSeit": "2026-10-09"
       }
     ]
   }
