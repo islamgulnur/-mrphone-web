@@ -1431,10 +1431,10 @@
         "uvpDelta": 0,
         "preise": {
           "neuVersiegelt": 555,
-          "wieNeu": 405,
-          "sehrGut": 380,
-          "gut": 330,
-          "schlecht": 245,
+          "wieNeu": 395,
+          "sehrGut": 370,
+          "gut": 320,
+          "schlecht": 240,
           "defekt": 120
         },
         "preisQuelle": "auto"
@@ -1714,7 +1714,7 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 700,
+          "neuVersiegelt": 655,
           "wieNeu": 590,
           "sehrGut": 545,
           "gut": 475,
@@ -1807,11 +1807,11 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 910,
-          "wieNeu": 735,
-          "sehrGut": 680,
-          "gut": 595,
-          "schlecht": 445,
+          "neuVersiegelt": 870,
+          "wieNeu": 715,
+          "sehrGut": 670,
+          "gut": 580,
+          "schlecht": 435,
           "defekt": 215
         },
         "preisQuelle": "auto"
@@ -1821,10 +1821,10 @@
         "uvpDelta": 200,
         "preise": {
           "neuVersiegelt": 1075,
-          "wieNeu": 885,
-          "sehrGut": 820,
-          "gut": 715,
-          "schlecht": 535,
+          "wieNeu": 860,
+          "sehrGut": 805,
+          "gut": 700,
+          "schlecht": 525,
           "defekt": 260
         },
         "preisQuelle": "auto"
@@ -1871,10 +1871,10 @@
         "uvpDelta": 200,
         "preise": {
           "neuVersiegelt": 1170,
-          "wieNeu": 930,
-          "sehrGut": 865,
-          "gut": 755,
-          "schlecht": 565,
+          "wieNeu": 915,
+          "sehrGut": 860,
+          "gut": 745,
+          "schlecht": 555,
           "defekt": 275
         },
         "preisQuelle": "auto"
@@ -3265,7 +3265,7 @@
         "bezeichnung": "256 GB",
         "uvpDelta": 0,
         "preise": {
-          "neuVersiegelt": 730,
+          "neuVersiegelt": 705,
           "wieNeu": 555,
           "sehrGut": 505,
           "gut": 405,

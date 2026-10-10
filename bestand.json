@@ -462,20 +462,6 @@
     "datum": "2026-10-10"
   },
   {
-    "id": "cdfb74f7-55d4-4abc-a5c7-978d6c709ae7",
-    "marke": "Apple",
-    "modell": "iPhone 14 Plus",
-    "speicher": "256 GB",
-    "farbe": "",
-    "kategorie": "smartphones",
-    "zustand": "gebraucht",
-    "preis": 419.99,
-    "menge": 1,
-    "bild": "",
-    "aktiv": true,
-    "datum": "2026-10-10"
-  },
-  {
     "id": "pos-e7a52dcf92348ebd7dd8",
     "marke": "Apple",
     "modell": "iPhone 14 Pro",
